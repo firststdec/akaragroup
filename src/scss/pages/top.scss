@@ -500,7 +500,9 @@
   position: relative;
 
   @media (min-width: 1600px) {
-    padding-top: 52.43%;
+    padding-top: 42.43%;
+    // max-width: 1600px;
+    // margin: auto;
   }
 
   .mv-swiper-pagination {
@@ -509,10 +511,14 @@
 
   .box-swiper-content {
     position: absolute;
-    left: 10%;
+    left: 190px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+
+    @media (min-width: 1600px) {
+      left: calc((100% - 1440px) / 2);
+    }
 
     svg {
       width: 100%;
@@ -655,7 +661,7 @@
         left: 0;
 
         @media (min-width: 1600px) {
-          padding-top: 75.43%;
+          padding-top: 66.43%;
         }
 
         img {
