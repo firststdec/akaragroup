@@ -7,5 +7,5 @@ npm install
 ## run website
 gulp dev
 
-## buld production
+## build production
 gulp build
