@@ -1,0 +1,27 @@
+@import '_variables';
+
+/* list-recruit
+---------------------------------------------------------- */
+.c-list-recruit{
+  &-01{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-02{
+    display: flex;
+    flex-wrap: wrap;
+    .c-list-recruit__item{
+      width: 100%;
+    }
+  }
+  &-03{
+    display: flex;
+    flex-wrap: wrap;
+    .c-list-recruit__item{
+      width: 50%;
+    }
+  }
+  &__item{
+    width: 50%;
+  }
+}

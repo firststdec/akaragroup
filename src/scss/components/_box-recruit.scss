@@ -1,0 +1,91 @@
+@import '_variables';
+
+/* box-recruit
+---------------------------------------------------------- */
+.c-box-recruit{
+  background: #fff;
+  &__inner{
+
+  }
+  &-list{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 5;
+    margin: -328px auto 0;
+
+    @include mq-max-sp{
+      margin: -236px auto 0;
+    }
+
+    .c-image{
+      width: 100%;
+      img{ 
+        width: 100%;
+      }
+    }
+
+    &__inner{
+      width: 50%;
+
+      @include mq-max-sp{
+        width: 100%;
+      }
+      &:nth-child(1){
+        @include mq-max-sp{
+          order: 2;
+        }
+      }
+      &:nth-child(2){
+        @include mq-max-sp{
+          order: 1;
+        }
+        .c-list-recruit{
+          &-01{
+            display: flex;
+            flex-wrap: wrap;
+            .c-list-recruit__item{
+              &:nth-child(1){
+                @include mq-max-sp{
+                  order: 2;
+                }
+              }
+              &:nth-child(2){
+                @include mq-max-sp{
+                  order: 1;
+                }
+              }
+              .c-list-recruit-02{
+                .c-list-recruit__item{
+                  &:nth-child(1){
+                    @include mq-max-sp{
+                      order: 1;
+                    }
+                  }
+                  &:nth-child(2){
+                    @include mq-max-sp{
+                      order: 2;
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+  &__heading{
+    // background: #0EE99C;
+    background-image: linear-gradient(#00d394, #0ee99c);
+  }
+  &__link{
+    max-width: 200px;
+    margin: 50px auto 80px;
+
+    @include mq-max-sp{
+      margin: 28px auto 50px;
+    }
+  }
+}

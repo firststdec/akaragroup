@@ -1,0 +1,14 @@
+@import '_variables';
+
+/* heading
+---------------------------------------------------------- */
+.c-heading-cmn {
+  &-01 {
+    font-weight: 500;
+    font-size: 2.8rem;
+    line-height: 1.6;
+    color: $baseColor;
+    text-align: left;
+  }
+}
+

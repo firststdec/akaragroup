@@ -1,0 +1,187 @@
+extends ../../layouts/master.pug
+
+block variables
+  -
+    const meta = {
+      title: 'Akara Groupのシゴト｜株式会社Akara Group',
+      keyword: 'Akara Group、輸送、配送、保管、出荷、流通加工、電線ドラム製造、木製ドラム製造、木製パレット製造、物流機器販売',
+      description: 'Akara Groupのシゴトを紹介するページです。株式会社Akara Groupは、ドラム・パレットなどの物流機器製造や工場管理をはじめ、大口輸送・小口輸送のサービスネットワークを国内外に展開し、製品受入から最終ユーザーへの納入まで一貫したサービスを提供する総合物流会社です。',
+      goTitle: 'Akara Groupのシゴト｜株式会社Akara Group',
+      goDescription: 'Akara Groupのシゴトを紹介するページです。株式会社Akara Groupは、ドラム・パレットなどの物流機器製造や工場管理をはじめ、大口輸送・小口輸送のサービスネットワークを国内外に展開し、製品受入から最終ユーザーへの納入まで一貫したサービスを提供する総合物流会社です。',
+      goImage: '/assets/img/ogp.png',
+      goUrl: 'https://www.logis-works.co.jp/about/works.html',
+      twitterTitle: 'Akara Groupのシゴト｜株式会社Akara Group',
+      twitterDescription: 'Akara Groupのシゴトを紹介するページです。株式会社Akara Groupは、ドラム・パレットなどの物流機器製造や工場管理をはじめ、大口輸送・小口輸送のサービスネットワークを国内外に展開し、製品受入から最終ユーザーへの納入まで一貫したサービスを提供する総合物流会社です。',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: 'https://www.logis-works.co.jp/about/works.html'
+    }
+
+block prepend css
+  link(rel='stylesheet', href='/assets/css/libs/slick.css')
+  link(rel='stylesheet', href='/assets/css/libs/magnific-popup.css')
+block append scripts
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+  script(src='/assets/js/libs/jquery.magnific-popup.min.js')
+  script(src='/assets/js/libs/slick.min.js')
+  script(src='/assets/js/slick.js')
+  script(src='/assets/js/popup.js')
+
+block outside
+
+block content
+  .c-box-mainvisual-subpage
+    figure.c-box-mainvisual-subpage__figure
+      img.c-box-mainvisual-subpage__image.js-fit.u-no-sp(src="/assets/img/about/hero_about_03.jpg", alt="Akara Groupとは")
+      img.c-box-mainvisual-subpage__image.u-no-tb.u-no-pc(src="/assets/img/about/hero_about_03_sp.jpg", alt="Akara Groupとは")
+    .c-box-mainvisual-subpage__body
+      .c-box-mainvisual-subpage__inner
+        figure.c-box-mainvisual-subpage__title
+          img.c-box-mainvisual-subpage__title-image(src="/assets/img/svg/txt_about_01.svg", alt="ABOUT")
+        .c-box-mainvisual-subpage__text Akara Groupとは
+
+  nav.p-breadcrumb.l-block-md
+    ol.p-breadcrumb__group
+      li.p-breadcrumb__item
+        a.p-breadcrumb__link(href="/") TOP
+      li.p-breadcrumb__item
+        a.p-breadcrumb__link(href="/about") Akara Groupとは
+      li.p-breadcrumb__item Akara Groupのシゴト
+
+  article
+    section.l-block-md
+      .p-works-main
+        .p-works-main__in
+          .p-works-main__content.js-content-animated.u-delay-300
+            h1.p-works-main__title Akara Groupの<br class="u-no-tb u-no-pc">シゴト
+            p.p-works-main__text Akara Groupにはどのようなシゴトがあるのか。<br class="u-no-sp">それぞれのこだわりポイントを交えて業務内容をご紹介いたします。
+
+          figure.p-works-main__figure.js-content-animated.u-delay-500
+            img.p-works-main__image(src="/assets/img/about/img_works_01.png", alt="")
+      
+    .p-works.l-block-md
+      .p-works-slider.js-works-slider.js-content-animated
+        .p-works-slider__item.popup-modal(href='#modal-drum')
+          .p-card-work
+            .p-card-works__title
+              .p-card-works__title-en DRUM
+              .p-card-works__title-jp ドラム製造
+            figure.p-card-works__figure
+              img.p-card-works__image(src="/assets/img/about/img_works_02.png", alt="DRUM ドラム製造")
+            .p-card-works__trigger
+              a.c-button-middle.c-button--green
+                span.c-button__text 詳しく見る
+                span.c-button__icon.c-icon--arrow
+        .p-works-slider__item.popup-modal(href='#modal-pallet')
+          .p-card-work
+            .p-card-works__title
+              .p-card-works__title-en PALLET
+              .p-card-works__title-jp パレット製造
+            figure.p-card-works__figure
+              img.p-card-works__image(src="/assets/img/about/img_works_03.png", alt="PALLET パレット製造")
+            .p-card-works__trigger
+              a.c-button-middle.c-button--green
+                span.c-button__text 詳しく見る
+                span.c-button__icon.c-icon--arrow
+        .p-works-slider__item.popup-modal(href='#modal-dispatch')
+          .p-card-works
+            .p-card-works__title
+              .p-card-works__title-en DISPATCH
+              .p-card-works__title-jp 配車
+            figure.p-card-works__figure
+              img.p-card-works__image(src="/assets/img/about/img_works_04.png", alt="DISPATCH 配車")
+            .p-card-works__trigger
+              a.c-button-middle.c-button--green 
+                span.c-button__text 詳しく見る
+                span.c-button__icon.c-icon--arrow
+        .p-works-slider__item.popup-modal(href='#modal-transport')
+          .p-card-work
+            .p-card-works__title
+              .p-card-works__title-en TRANSPORT
+              .p-card-works__title-jp 輸送・配送
+            figure.p-card-works__figure
+              img.p-card-works__image(src="/assets/img/about/img_works_05.png", alt="TRANSPORT 輸送・配送")
+            .p-card-works__trigger
+              a.c-button-middle.c-button--green
+                span.c-button__text 詳しく見る
+                span.c-button__icon.c-icon--arrow
+
+    .l-center
+      .p-crosstalk__trigger.js-content-animated
+        .c-trigger-group
+          .c-trigger__item
+            a.c-trigger(href="/about/")
+              span.c-trigger__text Akara Groupとは
+          .c-trigger__item
+            a.c-trigger(href="/employ/job-description.html")
+              span.c-trigger__text 仕事内容
+
+    .popup-block.mfp-hide#modal-drum
+      .l-row
+        .l-col-12.l-col-6-md
+          .popup-in
+            h3.popup-title
+              span.popup-title-en DRUM
+              span.popup-title-jp ドラムのシゴト
+            p.popup-ttl.u-fw-bold 社会基盤を支える製品を確かな技術力でお届けします。
+            p.popup-txt 電線ドラムと呼ばれる、電線を荷役するのに必要な製品を製造しています。<br>鍔(つば)と呼ばれる２枚の円盤と胴のパーツを上手く組み上げるためには、ボルトの締め具合や鍔同士のバランス調整など、経験やコツが必要になります。出荷時の検品には特に気を遣っていて、釘の飛び出しや表面の毛羽立ち、欠けや汚れがないかなど、電線を傷つけないための多くの確認作業をしております。また、水分量の変化により木材が収縮してボルトが緩むこともあるので、ボルトの締め直しも出荷前の大事な作業の一つです。<br>電線が巻かれたドラムを国内外に出荷するための輸送条件に応じた荷造り梱包作業もしております。出荷形態ごとのお客様のご要望に確実に応えられるよう、正確な作業を心がけています。<br>電線ドラムというと一般的にはあまり馴染みがないものだと思いますが、自分の造ったものが、電線という社会基盤を支える製品を運ぶために使われていると考えると、とてもやりがいのある仕事に携わっていると感じます。
+
+
+        .l-col-12.l-col-6-md
+          figure.popup-figure
+            img.popup-image(src="/assets/img/about/img_works_drum.jpg", alt="")
+      a.popup-close.popup-top.popup-modal-dismiss(href='#')
+        span ✕
+      a.popup-close.popup-btm.popup-modal-dismiss(href='#')
+        span 閉じる
+
+    .popup-block.mfp-hide#modal-pallet
+      .l-row
+        .l-col-12.l-col-6-md
+          .popup-in
+            h3.popup-title
+              span.popup-title-en PALLET
+              span.popup-title-jp パレットのシゴト
+            p.popup-ttl.u-fw-bold モノづくりの効率は、事前準備で決まる！
+            p.popup-txt 木製及び、木材とダンボールを組み合わせたパレットを主に製造しています。パレットは輸送や荷役作業など、物流全般において欠かせない存在です。メーカーとしてパレットを安定供給し、お客様の物流に貢献するために、効率的な製造を心掛けています。<br>そのため、材料入荷の際は受注状況や営業マンからの客先情報をもとに、どの材料を一番早く使うのか、その次に使う材料はどれかを判断し、取り出しやすい場所にまとめて配置することで、作業に入るまでの準備時間が短くなるようにしています。<br>受注状況の変化や納期・工程の管理、実際の打ち立て作業と、常に気を張っていなければいけませんが、計画通りに納入が完了した際の達成感はひとしおです。
+        .l-col-12.l-col-6-md
+          figure.popup-figure
+            img.popup-image(src="/assets/img/about/img_works_pallet.jpg", alt="")
+      a.popup-close.popup-top.popup-modal-dismiss(href='#')
+        span ✕
+      a.popup-close.popup-btm.popup-modal-dismiss(href='#')
+        span 閉じる
+
+    .popup-block.mfp-hide#modal-dispatch
+      .l-row
+        .l-col-12.l-col-6-md
+          .popup-in
+            h3.popup-title
+              span.popup-title-en DISPATCH
+              span.popup-title-jp 配車のシゴト
+            p.popup-ttl.u-fw-bold 荷物を円滑に運ぶための司令塔
+            p.popup-txt 配車の仕事は、どの荷物をどの車両で輸送するかを決めることです。納入先も形も異なる製品をどのように車両へ積み込むか、どのドライバーに運んでもらうか、どのようなルートで配送するか、荷物を円滑に納入先まで運ぶためにそれぞれを決定する、司令塔の役割を担っています。<br>それ以外にも、配車内容をドライバーに指示すること、交通状況の確認、お客様の対応、他社の配車係との連携、納入先までの距離や時間を計算することも配車係の仕事です。<br>社内外を問わず調整や交渉を行うことが多いため、仕事を快く引き受けてもらえるよう日ごろから周囲の人とのコミュニケーションを大事にしています。<br>配車の仕事で最も重要なのは、依頼された荷物が無事に届くことです。そのためには、多くの人とうまく連携を取り合う必要がありますが、無事に仕事を終えられたときは苦労した分大きな達成感が得られます。
+        .l-col-12.l-col-6-md
+          figure.popup-figure
+            img.popup-image(src="/assets/img/about/img_works_dispatch.jpg", alt="")
+      a.popup-close.popup-top.popup-modal-dismiss(href='#')
+        span ✕
+      a.popup-close.popup-btm.popup-modal-dismiss(href='#')
+        span 閉じる
+
+    .popup-block.mfp-hide#modal-transport
+      .l-row
+        .l-col-12.l-col-6-md
+          .popup-in
+            h3.popup-title
+              span.popup-title-en TRANSPORT
+              span.popup-title-jp 輸送・配送のシゴト
+            p.popup-ttl.u-fw-bold ドライバーは会社の顔
+            p.popup-txt トラックによる荷物の輸配送を行っています。<br>お預かりした荷物を無事に届けるためには、トラックや固縛器具の点検、適切な荷物の固定はもちろん、当日の天候確認などといった様々な準備が必要です。運行中も、安全な車間距離の確保、人や車の飛び出しに備えるための危険予測など、様々な事柄に気を配る必要があります。<br>また、荷主様、納入先様に伺い、直接顔を合わせる仕事なので、日頃から身だしなみにも気を付け、荷物も丁寧に扱うよう心がけています。<br>気を付けなくてはいけない事柄が多く、やっていて大変に思うこともありますが、無事に納品できた時は、ほっとするのと同時にやりがいも感じます。
+        .l-col-12.l-col-6-md
+          figure.popup-figure
+            img.popup-image(src="/assets/img/about/img_works_transport.jpg", alt="")
+      a.popup-close.popup-top.popup-modal-dismiss(href='#')
+        span ✕
+      a.popup-close.popup-btm.popup-modal-dismiss(href='#')
+        span 閉じる

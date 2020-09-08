@@ -1,0 +1,273 @@
+extends ../layouts/master.pug
+
+block variables
+  -
+    const index = true
+    const meta = {
+      title: 'Akara Group',
+      keyword: 'Akara Group',
+      description: '',
+      goTitle: 'Akara Group',
+      goDescription: '',
+      goImage: '/assets/img/ogp.png',
+      goUrl: '',
+      twitterTitle: 'Akara Group',
+      twitterDescription: '',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: ''
+    }
+
+    const topPage = true
+
+block prepend css
+  link(rel='stylesheet', href='/assets/css/libs/slick.css')
+block append scripts
+  script(src='/assets/js/libs/slick.min.js')
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+
+block outside
+  // loader
+  .c-loader
+    .c-loader__icon
+      p.c-loader__text
+        img(src="/assets/img/common/logo@2x.png", alt="")
+      .loader.simple-circle
+  // /loader
+
+block content
+  .p-top
+    .l-sec-cmn-02
+      .inner
+        .c-box-swiper-mv
+          .box-swiper-content
+            .heading
+              .text-black EVERYDAY
+              .text-yellow
+                svg
+                  symbol#text-copy
+                    text.text--line(text-anchor='center', x='0', y='50%') with akara
+                  g.g-ants
+                    use#outline.text-copy(xlink:href='#text-copy')
+                    use#fill.text-copy(xlink:href='#text-copy')
+
+            .text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years
+            .mv-swiper-nav-custom
+              // Add Arrows
+              .mv-swiper-button-prev
+                i.fas.fa-chevron-left
+              .mv-swiper-button-next
+                i.fas.fa-chevron-right
+
+          .box-swiper-mv-js
+            .swiper-wrapper
+              .swiper-slide
+                .mainvisual-content
+                  .box-image-wrapper
+                    figure.box-image
+                      img.image(src="/assets/img/top/img_mainvisual_01.png", alt="Akara Group", data-object-fit="cover")
+                      //- img.image.-lg(src="/assets/img/top/img_mainvisual_01@2x.png", alt="Akara Group", data-object-fit="cover")
+              .swiper-slide
+                .mainvisual-content
+                  .box-image-wrapper
+                    figure.box-image
+                      img.image(src="/assets/img/top/img_mainvisual_02.png", alt="Akara Group", data-object-fit="cover")
+                      //- img.image.-lg(src="/assets/img/top/img_mainvisual_02@2x.png", alt="Akara Group", data-object-fit="cover")
+
+            // Add Pagination
+            .mv-swiper-pagination
+
+    .l-sec-cmn-01
+      .inner
+        .c-box-card-row-01.-reverse.-yellow-egg
+          figure.box-image
+            img.image(src="/assets/img/top/img_product_01.png", alt="Akara")
+          .box-content
+            .c-egg
+            .c-heading-cmn-01
+              figure.box-image-heading
+                img.image(src="/assets/img/top/img_logo_01.png", alt="Akara")
+            .c-text-cmn-01 These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.
+            .c-box-cmn-button
+              a.c-button-cmn-01
+                span.text READ MORE
+                span.arrow
+                  i.fa.fa-arrow-right
+        .c-box-card-row-01.-green-egg
+          figure.box-image
+            img.image(src="/assets/img/top/img_product_02.png", alt="Akara Group")
+          .box-content
+            .c-egg
+            .c-egg-deco-top
+            .c-egg-deco-bottom
+            .c-heading-cmn-01
+              figure.box-image-heading
+                img.image(src="/assets/img/top/img_logo_02.png", alt="Akara")
+            .c-text-cmn-01.-white These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.
+            .c-box-cmn-button
+              a.c-button-cmn-01
+                span.text READ MORE
+                span.arrow
+                  i.fa.fa-arrow-right
+        .c-box-card-row-01.-reverse.-orange-egg
+          figure.box-image
+            .c-hen-deco-orange
+            .c-egg-deco-orange
+            .c-line-deco-orange
+            img.image(src="/assets/img/top/img_product_03.png", alt="Akaragroup")
+          .box-content
+            .c-egg
+            .c-mori-tama-egg
+            figure.box-image-heading
+              img.image(src="/assets/img/top/img_logo_03.png", alt="Akara")
+            .c-text-cmn-01.-white These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.
+            .c-box-cmn-button
+              a.c-button-cmn-01
+                span.text READ MORE
+                span.arrow
+                  i.fa.fa-arrow-right
+
+    .l-sec-cmn-01.-story-about-top
+      .inner
+        .c-box-card-row-01
+          figure.box-image
+            img.image(src="/assets/img/top/img_akara_story.png", alt="akara Story")
+          .box-content
+            .c-orange-egg
+            .c-heading-cmn-01
+              span.text-white akara
+              span  Story
+            .c-text-cmn-01 These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
+            .c-box-cmn-button
+              a.c-button-cmn-01
+                span.text READ MORE
+                span.arrow
+                  i.fa.fa-arrow-right
+        .c-box-card-row-01.-reverse
+          figure.box-image
+            img.image(src="/assets/img/top/img_about_akara.png", alt="About akara")
+          .box-content
+            .c-about-akara-egg
+            .c-line-dotted-about-akara
+            .c-heading-cmn-01
+              span About
+              span.text-white  akara
+            .c-text-cmn-01 These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
+            .c-box-cmn-button
+              a.c-button-cmn-01
+                span.text READ MORE
+                span.arrow
+                  i.fa.fa-arrow-right
+
+    .l-sec-cmn-01.-recipes-top-heading
+      .inner
+        .c-box-heading-center-text
+          .inner
+            .box-heading
+              .c-line-deco
+              .title
+                span RECIPIE
+                span.text-yellow S
+            .box-text
+              .text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either!
+
+    .l-sec-cmn-01.l-sec-box-swiper-voice
+      .inner
+        .box-swiper-01
+          .box-swiper-js
+            .swiper-wrapper.js-slick-center
+              .swiper-slide
+                .article-content
+                  .c-shadow
+                  .c-box-card-01.-full
+                    .c-overlay
+                    figure.box-image
+                      img.image(src="/assets/img/top/img_recipes_top_01.jpg", alt="Akaragroup")
+                    .box-content
+                      .c-heading-cmn-01 Heading 1
+                      .c-text-cmn-01 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              .swiper-slide
+                .article-content
+                  .c-shadow
+                  .c-box-card-01.-full
+                    .c-overlay
+                    figure.box-image
+                      img.image(src="/assets/img/top/img_recipes_top_02.jpg", alt="Akaragroup")
+                    .box-content
+                      .c-heading-cmn-01 Heading 1
+                      .c-text-cmn-01 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              .swiper-slide
+                .article-content
+                  .c-shadow
+                  .c-box-card-01.-full
+                    .c-overlay
+                    figure.box-image
+                      img.image(src="/assets/img/top/img_recipes_top_03.jpg", alt="Akaragroup")
+                    .box-content
+                      .c-heading-cmn-01 Heading 1
+                      .c-text-cmn-01 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              .swiper-slide
+                .article-content
+                  .c-shadow
+                  .c-box-card-01.-full
+                    .c-overlay
+                    figure.box-image
+                      img.image(src="/assets/img/top/img_recipes_top_04.jpg", alt="Akaragroup")
+                    .box-content
+                      .c-heading-cmn-01 Heading 1
+                      .c-text-cmn-01 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              .swiper-slide
+                .article-content
+                  .c-shadow
+                  .c-box-card-01.-full
+                    .c-overlay
+                    figure.box-image
+                      img.image(src="/assets/img/top/img_recipes_top_05.jpg", alt="Akaragroup")
+                    .box-content
+                      .c-heading-cmn-01 Heading 1
+                      .c-text-cmn-01 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              .swiper-slide
+                .article-content
+                  .c-shadow
+                  .c-box-card-01.-full
+                    .c-overlay
+                    figure.box-image
+                      img.image(src="/assets/img/top/img_recipes_top_06.jpg", alt="Akaragroup")
+                    .box-content
+                      .c-heading-cmn-01 Heading 1
+                      .c-text-cmn-01 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              .swiper-slide
+                .article-content
+                  .c-shadow
+                  .c-box-card-01.-full
+                    .c-overlay
+                    figure.box-image
+                      img.image(src="/assets/img/top/img_recipes_top_07.jpg", alt="Akaragroup")
+                    .box-content
+                      .c-heading-cmn-01 Heading 1
+                      .c-text-cmn-01 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+    .l-sec-cmn-01.-box-subscribe
+      .inner
+        .c-box-subscribe
+          .item.-signup-text
+            .box-sign-up
+              .icon_envelope
+                img(src="/assets/img/common/envelope-regular.svg", alt="")
+              span SIGN
+              span UP
+          .item
+            .box-heading
+              .heading FOR RECIPES, COUPONS AND OTHER NEWS
+            .box-form
+              .c-input-row
+                input.c-input.-text(type="email", name="email", placeholder="Your E-Mail Address")
+                //- button.c-input.-submit(type="submit", value="")
+                //-   | SUBSCRIBE
+                //-   i.fas.fa-paper-plane
+
+                .c-box-cmn-button
+                  button.c-button-cmn-01(type="submit", value="")
+                    span.text SUBSCRIBE
+                    span.arrow
+                      i.fa.fa-arrow-right

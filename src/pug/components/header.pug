@@ -1,0 +1,142 @@
+header.l-header
+  .l-header__in.l-block
+    if category === true
+      h1.l-header__logo
+    else
+      p.l-header__logo
+        a.l-header__logo-link(href='/')
+          img.l-header__logo-image(src='/assets/img/common/logo@2x.png', alt='Akara Group')
+    a.l-header__menu-trigger.js-hambuger(href='#', data-delay='300')
+      span.l-header__menu-trigger-mark
+    .l-header__utility.l-header__utility--top
+      .l-header__utility-wrap
+        .l-header__utility-in
+          nav.l-header__menu
+            .l-header__menu-cover
+            ul.l-header__menu-list
+              li.l-header__menu-item
+                a.l-header__menu-link.js-gnavi(data-group='menu', href='#')
+                  span.l-header__menu-mark PRODUCTS
+                  span.fas.fa-chevron-down
+                  span.fas.fa-chevron-up
+                .l-header__submenu
+                  .l-header__submenu-in
+                    //- .l-header__submenu-trigger.u-no-sp
+                    //-   a.l-header__submenu-trigger-link.c-link.c-link-arrow.c-link-arrow__green(href='#') PRODUCTS
+                    ul.l-header__submenu-list
+                      li.l-header__submenu-item
+                        a.l-header__submenu-link(href='#')
+                          figure.image(data-match-height="mega-menu")
+                            img(src="/assets/img/common/img_akara_eggs.png", alt="akara Eggs")
+                          span.l-header__submenu-text akara Eggs
+                        ul.l-header__submenu-list-02
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | FRESH EGGS
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | EGG TOFU CUP
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | EGG TOFU TUBE
+                      li.l-header__submenu-item
+                        a.l-header__submenu-link(href='#')
+                          figure.image(data-match-height="mega-menu")
+                            img(src="/assets/img/common/img_eggology.png", alt="akara EGGOLOGY")
+                          span.l-header__submenu-text akara EGGOLOGY
+                        ul.l-header__submenu-list-02
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | ORGANIC
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | FREE RANGE
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | CAGE FREE
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | OMEGA 3 &amp; VITAMIN E
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | VEGGIE
+                      li.l-header__submenu-item
+                        a.l-header__submenu-link(href='#')
+                          figure.image(data-match-height="mega-menu")
+                            img(src="/assets/img/common/img_akara_ise.png", alt="akara ISE")
+                          span.l-header__submenu-text akara ISE
+                        ul.l-header__submenu-list-02
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | MORI-TAMA
+              li.l-header__menu-item
+                a.l-header__menu-link(href='#')
+                  span.l-header__menu-mark OUR STORY
+              li.l-header__menu-item
+                a.l-header__menu-link(href='#')
+                  span.l-header__menu-mark RECIPES
+              li.l-header__menu-item.nav-about
+                a.l-header__menu-link.js-gnavi(data-group='menu', href='#')
+                  span.l-header__menu-mark ABOUT US
+                  span.fas.fa-chevron-down
+                  span.fas.fa-chevron-up
+                .l-header__submenu.-about-us
+                  .l-header__submenu-in
+                    //- .l-header__submenu-trigger.u-no-sp
+                    //-   a.l-header__submenu-trigger-link.c-link.c-link-arrow.c-link-arrow__green(href='/trans/') 物流サービスTOP
+                    ul.l-header__submenu-list
+                      //- li.l-header__submenu-item.u-no-pc.u-no-tb
+                      //-   a.l-header__submenu-link(href='#')
+                      //-     span.l-header__submenu-text 物流サービスTOP
+                      li.l-header__submenu-item
+                        ul.l-header__submenu-list-02
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | AKARA GROUP
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | FAQ
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | MEDIA
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | NEWS, ACTIVITIES, &amp; EVENT
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | CAREERS
+                          li.l-header__submenu-list-02-item
+                            a.l-header__submenu-list-02-link
+                              i.circle
+                              | CONTACT US
+
+          .l-lanugae-bar
+            a.c-link(href="#")
+              span.text ไทย
+            a.c-link.is-active(href="#")
+              span.text ENG
+            .c-link.no-separate.c-search
+              span.fas.fa-search
+
+          .l-header__nav-trigger
+            a.l-header__nav-link.c-button-middle.c-button--orange(href='#dummy')
+              span.c-button__text.u-pr-5 WHERE TO BUY
+              span.fas.fa-map-marker-alt
+              span.c-button__icon.c-icon--arrow
+          .l-header__utility-trigger
+            a.l-header__utility-link.js-hambuger(href='#')
+              span.l-header__utility-icon.c-icon--plus CLOSE

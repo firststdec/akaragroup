@@ -1,0 +1,54 @@
+extends ../../layouts/contact.pug
+
+block variables
+  -
+    const meta = {
+      title: '送信完了｜株式会社Akara Group',
+      keyword: 'Akara Group、輸送、配送、保管、出荷、流通加工、電線ドラム製造、木製ドラム製造、木製パレット製造、物流機器販売',
+      description: '送信完了を紹介するページです。株式会社Akara Groupは、ドラム・パレットなどの物流機器製造や工場管理をはじめ、大口輸送・小口輸送のサービスネットワークを国内外に展開し、製品受入から最終ユーザーへの納入まで一貫したサービスを提供する総合物流会社です。',
+      goTitle: '送信完了｜株式会社Akara Group',
+      goDescription: '送信完了を紹介するページです。株式会社Akara Groupは、ドラム・パレットなどの物流機器製造や工場管理をはじめ、大口輸送・小口輸送のサービスネットワークを国内外に展開し、製品受入から最終ユーザーへの納入まで一貫したサービスを提供する総合物流会社です。',
+      goImage: '/assets/img/ogp.png',
+      goUrl: 'https://www.logis-works.co.jp/contact/complete/',
+      twitterTitle: '送信完了｜株式会社Akara Group',
+      twitterDescription: '送信完了を紹介するページです。株式会社Akara Groupは、ドラム・パレットなどの物流機器製造や工場管理をはじめ、大口輸送・小口輸送のサービスネットワークを国内外に展開し、製品受入から最終ユーザーへの納入まで一貫したサービスを提供する総合物流会社です。',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: 'https://www.logis-works.co.jp/contact/complete/'
+    }
+block prepend css
+  
+block append scripts
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+block outside
+
+block content
+  .c-box-mainvisual-subpage.c-box-mainvisual-subpage--noimg
+    .c-box-mainvisual-subpage__inner
+      figure.c-box-mainvisual-subpage__title
+        img.c-box-mainvisual-subpage__title-image(src="/assets/img/svg/ttl-contact.svg", alt="CONTACT お問い合わせ")
+      .c-box-mainvisual-subpage__text お問い合わせ
+
+  nav.p-breadcrumb.p-breadcrumb__md.l-block
+    ol.p-breadcrumb__group
+      li.p-breadcrumb__item
+        a.p-breadcrumb__link(href="/") TOP
+      li.p-breadcrumb__item
+        a.p-breadcrumb__link(href="/contact/") お問い合わせ
+      li.p-breadcrumb__item 送信完了
+
+  article.c-box-article.l-center
+    .c-box-article__inner
+      h2.c-title-01 送信完了
+    
+      .c-box-form.is-complete
+        p.c-text.u-ta-center 
+          |担当者への送信が完了しました。
+          br.u-no-pc.u-no-tb
+          |お問い合わせいただきありがとうございました。
+
+        .c-box-contact-button.u-ta-center.u-mt-50.u-mt-30-sp
+          .c-box-button-cmn-01.u-d-inline-block.u-width-200-px
+            a.c-button-middle.c-button--green(href='#')
+              span.c-button__text サイトTOPへ
+              span.c-button__icon.c-icon--arrow

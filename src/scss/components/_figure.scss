@@ -1,0 +1,24 @@
+.c-figure {
+  text-align: center;
+  &__in {
+    max-width: 100%;
+    display: inline-block;
+  }
+  &__image {
+    // transition: transform $transition;
+  }
+  &__caption {
+    position: relative;
+    z-index: 2;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    text-align: left;
+    @include mq-min-tb {
+      margin-top: 10px;
+    }
+  }
+  //marging
+  * + & {
+    @include component;
+  }
+}

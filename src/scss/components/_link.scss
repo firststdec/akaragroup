@@ -1,0 +1,92 @@
+@import '_variables';
+
+/* link
+---------------------------------------------------------- */
+.c-link {
+  $this: #{&};
+  display: inline-block;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  color: $darkGreen;
+
+  @include mq-max-sp {
+    font-size: 1.4rem;
+  }
+
+  &--base {
+    @extend #{$this};
+    @include hoverOpacity;
+    color: #333;
+  }
+
+  &-arrow {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    &__green {
+      color: $darkGreen;
+
+      &:hover {
+        opacity: 0.7;
+
+        &:after {
+          right: -10px;
+        }
+      }
+
+    }
+  }
+
+  &-windows {
+    transition: all .3s;
+
+    span {
+      display: inline-block;
+      order: 1;
+    }
+
+    &:after {
+      order: 3;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &-underline {
+    text-decoration: underline;
+    transition: all .3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &-c2a {
+    .c-figure {
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        transition: all .3s;
+      }
+    }
+
+    &:hover {
+
+      // opacity: 0.7;
+      img {
+        transform: scale(1.1);
+      }
+
+      .c-link-arrow__green {
+        &:after {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,220 @@
+@import '_variables';
+
+/* form
+---------------------------------------------------------- */
+.c-box-form{
+  margin: 85px 0 80px;
+
+  @include mq-max-sp{
+    margin: 80px 0 60px;
+  }
+  &.is-confirm{
+    .c-heading{
+      span{
+        margin-top: 0;
+      }
+    }
+    .c-box-contact-button .u-width-200-px{
+      @include mq-max-sp{
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+      }
+    }
+  }
+  .c-box-table-responsive-02{
+    margin: 20px 0;
+    tr{
+      @include mq-max-sp{
+        display: block;
+      }
+    }
+    th{
+      vertical-align: top;
+      padding: 29px 10px 29px 0;
+
+      @include mq-max-sp{
+        padding: 27px 10px 22px 0;
+      }
+    }
+    td{
+      padding: 29px 0 29px 0;
+      @include mq-max-sp{
+        padding-top: 0;
+      }
+      
+      .u-width-195-px{
+        @include mq-max-sp{
+          width: 30.145% !important; 
+        }
+      }
+
+      .u-ma-width-270-px{
+        @include mq-max-sp{
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  .c-heading{
+    font-size: 1.6rem;
+    width: 230px !important;
+    
+    @include mq-max-sp{
+      width: 100% !important;
+      font-size: 1.4rem;
+    }
+
+    &-sub{
+      font-size: 1.4rem;
+      font-weight: normal !important;
+      @include mq-max-sp{
+        width: 100% !important;
+        font-size: 1.3rem;
+      }
+
+      span{
+        display: inline-block;
+        margin-top: 10px;
+
+        @include mq-max-sp{
+          margin-top: 0;
+          font-size: 1.3rem;
+        }
+      }
+    }
+    &__is-required{
+      &::after{
+        content: '※';
+        color: #FF0000;
+        font-size: 1.2rem;
+        display: inline-block;
+        position: relative;
+        top: -5px;
+        margin-left: 3px;
+      }
+    }
+    span {
+      display: inline-block;
+      margin-top: 10px;
+      @include mq-max-sp{
+        margin-top: 0;
+      }
+    }
+  }
+  .c-box-dash{
+    width: 30px;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+
+    @include mq-max-sp{
+      width: 4.637%;
+    }
+  }
+  .c-box-input{
+    &__radio{
+      &:not(:first-of-type){
+        margin-top: 15px;
+      }
+    }
+  }
+  .c-box-space{
+    width: 30px;
+    @include mq-max-sp{
+      width: 4.637%;
+    }
+  }
+  .c-table-responsive-02__no-border{
+    .c-table-responsive-02{
+      th, td{
+        padding: 5px 0 25px 0;
+      }
+      th{
+        width: 27% !important;
+        
+        @include mq-max-sp{
+          width: 100% !important;
+        }
+      }
+
+      td{
+        .u-width-120-px{
+          @include mq-max-sp{
+            width: 30.145% !important; 
+          }
+        }
+        .u-ma-width-270-px{
+          @include mq-max-sp{
+            width: 100% !important;
+            max-width: inherit !important;
+          }
+        }
+      }
+    }
+  }
+  .u-flex-between{
+    @include mq-max-sp{
+      width: 100%;
+    }
+  }
+  &.is-complete{
+    .c-text{
+      &.u-ta-center{
+        @include mq-max-sp{
+          text-align: left !important;
+        }
+      }
+    }
+  }
+  .c-input-submit__bg-gray{
+    border-color: #C5C7CB;
+    height: 50px;
+  }
+}
+
+.c-box-contact-note{
+  .c-box-border{
+    @include mq-max-sp{
+      padding: 30px;
+    }
+  }
+  .c-heading-03{
+    @include mq-max-sp{
+      margin-top: 40px;
+    }
+  }
+  .c-button-middle[disabled]{
+    opacity: 0.6;
+  }
+}
+
+.c-box-button-cmn-01{
+  opacity: 1 !important;
+  cursor: pointer;
+  &.is-no-hover{
+    &:hover{
+      &::after{
+        display: none;
+      }
+    }
+  }
+  #c-step-02{
+    position: relative;
+    z-index: 5;
+    color: #fff;
+    appearance: none;
+    border: 0;
+    background: none;
+  }
+  &.is-disabled{
+    opacity: 0.7 !important;
+    pointer-events: none;
+  }
+  .c-button__icon{
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,73 @@
+/* p-card
+---------------------------------------------------------- */
+.p-card {
+  padding: 0 15px;
+  @include mq-min-tb {
+  }
+  &__in {
+    position: relative;
+    box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.03);
+  }
+  &__figure {
+    overflow: hidden;
+    // height: 162px;
+    @include mq-min-tb {
+      height: 269px;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    transition: all .3s;
+  }
+  &__content {
+    background-color: #fff;
+  }
+  &__content-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    @include mq-min-tb {
+      height: 130px;
+    }
+  }
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    @include mq-min-tb {
+      font-size: 2.2rem;
+    }
+  }
+  &__text {
+    color: #333;
+  }
+  &__num {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #00A564;
+    line-height: 1.25;
+    @include mq-min-tb {
+      top: -30px;
+      font-size: 5.2rem;
+    }
+  }
+  &__trigger {
+    margin-top: 20px;
+    @include mq-min-tb {
+      margin-top: 30px;
+    }
+  }
+  &__link:hover img {
+    transform: scale(1.1);
+  }
+}

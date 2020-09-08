@@ -1,0 +1,52 @@
+@import '_variables';
+
+/* button
+---------------------------------------------------------- */
+.c-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  background: #fff;
+  border-radius: 100px;
+  padding: 13px;
+  line-height: 1.6;
+  transition: all 3s;
+
+  &__sm{
+    max-width: 200px;
+
+    @include mq-max-sp{
+      padding: 14px 10px!important;
+    }
+  }
+
+  &__transparent{
+    background: transparent!important;
+    border: 1px solid #fff!important;
+
+    span{
+      z-index: 10;
+    }
+
+    &:hover{
+      background: #fff!important;
+      border: 1px solid #fff!important;
+
+
+      span{
+        color: #333;
+      }
+    }
+  }
+  &__green{
+    background: rgb(6,212,150);
+    border: 0 !important;
+    background: linear-gradient(90deg, rgba(6,212,150,1) 0%, rgba(0,189,123,1) 100%);
+    
+    &:hover{
+      background: rgb(80,225,181);
+      background: linear-gradient(90deg, rgba(80,225,181,1) 0%, rgba(77,209,163,1) 100%);
+    }
+  }
+}

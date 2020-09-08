@@ -1,0 +1,123 @@
+extends ../../layouts/contact.pug
+
+block variables
+  -
+    const meta = {
+      title: 'お問い合わせ｜株式会社Akara Group',
+      keyword: 'Akara Group、輸送、配送、保管、出荷、流通加工、電線ドラム製造、木製ドラム製造、木製パレット製造、物流機器販売',
+      description: 'お問い合わせを紹介するページです。株式会社Akara Groupは、ドラム・パレットなどの物流機器製造や工場管理をはじめ、大口輸送・小口輸送のサービスネットワークを国内外に展開し、製品受入から最終ユーザーへの納入まで一貫したサービスを提供する総合物流会社です。',
+      goTitle: 'お問い合わせ｜株式会社Akara Group',
+      goDescription: 'お問い合わせを紹介するページです。株式会社Akara Groupは、ドラム・パレットなどの物流機器製造や工場管理をはじめ、大口輸送・小口輸送のサービスネットワークを国内外に展開し、製品受入から最終ユーザーへの納入まで一貫したサービスを提供する総合物流会社です。',
+      goImage: '/assets/img/ogp.png',
+      goUrl: '',
+      twitterTitle: 'お問い合わせ｜株式会社Akara Group',
+      twitterDescription: 'お問い合わせを紹介するページです。株式会社Akara Groupは、ドラム・パレットなどの物流機器製造や工場管理をはじめ、大口輸送・小口輸送のサービスネットワークを国内外に展開し、製品受入から最終ユーザーへの納入まで一貫したサービスを提供する総合物流会社です。',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: ''
+    }
+
+block prepend css
+  
+block append scripts
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+block outside
+
+block content
+  .c-box-mainvisual-subpage.c-box-mainvisual-subpage--noimg
+    .c-box-mainvisual-subpage__inner
+      figure.c-box-mainvisual-subpage__title
+        img.c-box-mainvisual-subpage__title-image(src="/assets/img/svg/ttl-contact.svg", alt="CONTACT お問い合わせ")
+      .c-box-mainvisual-subpage__text お問い合わせ
+
+  nav.p-breadcrumb.p-breadcrumb__md.l-block
+    ol.p-breadcrumb__group
+      li.p-breadcrumb__item
+        a.p-breadcrumb__link(href="/") TOP
+      li.p-breadcrumb__item
+        a.p-breadcrumb__link(href="/contact/") お問い合わせ
+      li.p-breadcrumb__item 入力内容の確認
+
+  article.c-box-article.l-center
+    .c-box-article__inner
+      h2.c-title-01 入力内容の確認
+    
+      .c-box-form.is-confirm
+        p.c-text-required 内容をご確認の上、問題なければ送信ボタンを押してください。
+        form.c-form(action="#", method="post")
+          .c-box-table-responsive-02.u-mt-15-sp
+            table.c-table-responsive-02
+              tr
+                th.c-heading.u-pb-15-sp
+                  span.u-mt-0 お問い合わせ種別
+                td 
+                  p.c-text.u-fz-16 機器・サービスに関するお問い合わせ
+
+              tr
+                th.c-heading 
+                  span お名前
+                td 
+                  p.c-text.u-fz-16 昭和　太郎
+              tr
+                th.c-heading 
+                  span フリガナ（全角）
+                td 
+                  p.c-text.u-fz-16 ショウワ　タロウ
+              tr
+                th.c-heading
+                  span 会社名 / 学校名
+                td 
+                  p.c-text.u-fz-16 株式会社ロジスワークス
+              tr
+                th.c-heading 
+                  span 部署名
+                td 
+                  p.c-text.u-fz-16 営業部
+              tr
+                th.c-heading 
+                  span 役職
+                td 
+                  p.c-text.u-fz-16 部長
+              tr
+                th.c-heading 
+                  span お電話番号（半角）
+                td 
+                  p.c-text.u-fz-16 012-3456-7890
+              tr
+                th.c-heading 
+                  span FAX番号（半角）
+                td 
+                  p.c-text.u-fz-16 012-3456-7890
+              tr
+                th.c-heading
+                  span メールアドレス（半角）
+                td 
+                  p.c-text.u-fz-16 syowa@logis.swcc.co.jp
+              tr
+                th.c-heading.u-pb-10-sp
+                  span 住所
+                td.u-pr-0
+                  p.c-text.u-fz-16 201-0004
+                  p.c-text.u-fz-16 東京都
+                  p.c-text.u-fz-16 渋谷区代々木3-9-5
+
+              tr
+                th.c-heading
+                  span お問い合わせ内容
+                td 
+                  p.c-text.u-fz-16 テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+
+        .c-box-contact-button.u-ta-center.u-mt-50
+          .c-box-button-cmn-01.u-d-inline-block.u-width-200-px
+            a.c-button-middle.c-button--green(href='/contact/complete.html')
+              span.c-button__text 送信
+              span.c-button__icon.c-icon--arrow
+          .c-box-button-cmn-01.u-d-inline-block.u-ml-20.u-width-200-px
+            a.c-button-middle.c-button--gray(href='/contact/')
+              span.c-button__text 入力画面へ戻る
+              span.c-button__icon.c-icon--arrow
+
+              
+
+      
+  

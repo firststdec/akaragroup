@@ -1,0 +1,32 @@
+@import '_variables';
+
+.c-box-heading-center-text {
+  max-width: 930px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .box-heading {
+      border-left: 5px solid #333;
+      padding: 20px 30px;
+
+      .title {
+        font-size: 3rem;
+        font-weight: 500;
+      }
+    }
+
+    .box-text {
+      width: 70%;
+
+      .text {
+        color: #999;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

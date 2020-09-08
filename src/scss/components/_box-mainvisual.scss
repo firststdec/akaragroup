@@ -1,0 +1,211 @@
+@import '_variables';
+
+/* box-mainvisual
+---------------------------------------------------------- */
+.c-box-mainvisual{
+  width: calc(100vw - 80px);
+  height: calc(100vh - 140px);
+  background: #fff;
+  margin: auto;
+  position: relative;
+  z-index: 25;
+  overflow: hidden;
+
+  @include mq-max-sp{
+    width: calc(100vw - 30px);
+    height: 522px;
+  }
+  
+  &__link{
+    position: relative;
+    width: 170px;
+    padding-left: 110px;
+    position: absolute;
+    right: 4px;
+    bottom: 40px;
+    z-index: 999;
+    transform: rotate(-90deg);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1;
+    letter-spacing: 0.15em;
+    color: #fff;
+    transition: all .3s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 100px;
+      height: 1px;
+      background-color: #fff;
+    }
+
+    @include mq-max-sp{
+      display: none;
+    }
+
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+
+  .c-image{
+    position: relative;
+    img{
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      position: relative;
+    }
+  }
+
+  .c-box-detail{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+    width: 100%;
+
+    @include mq-max-sp{
+      text-align: left;
+      width: 100%;
+      margin-top: 33px;
+      padding: 0 20px;
+    }
+    &__text{
+
+      .c-title{
+        font-size: 5.6rem;
+        font-weight: bold;
+        line-height: 1.2;
+        @include textShadow();
+
+        @include mq-max-sp{
+          font-size: 3.6rem;
+          line-height: 1.5;
+          letter-spacing: normal;
+        }
+      }
+
+      .c-text{
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 30px 0 40px;
+        margin-top: -50px;
+        opacity: 0;
+        transition: opacity 1s;
+        transition-delay: 2s;
+        @include textShadow();
+
+        @include mq-max-sp{
+          font-size: 1.3rem;
+          line-height: 2;
+          padding: 10px 0 20px;
+          margin-top: -23px;
+        }
+
+        &.is-animated{
+          opacity: 1;
+        }
+      }
+    }
+    
+    .c-button{
+      max-width: 200px;
+      margin: auto;
+      opacity: 0;
+      transition: opacity 1s;
+      transition-delay: 2s;
+
+
+      &.is-animated{
+        opacity: 1;
+      }
+    }
+
+    .c-only-ie11{
+      display: none !important;
+      @media all and (-ms-high-contrast:none){
+        display: block !important;
+        position: relative;
+        margin-bottom: 40px;
+        // top: -40px;
+      }
+    }
+
+    .c-no-ie11 {
+      @media all and (-ms-high-contrast:none){
+        display: none !important;
+      }
+    }
+  }
+
+  $backgroundColor: #2E2633;
+  $fontColor: #fff;
+  $initalGapSize: 250;
+  $animationTime: 5s;
+
+  .stroke {
+    stroke: lighten($fontColor, 20%);
+    stroke-width: .5px;
+    stroke-dasharray: 0 $initalGapSize;
+    stroke-opacity: 1;
+    fill: none;
+    animation: stroke_offset $animationTime;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+  }
+
+  @keyframes stroke_offset {
+    25% {stroke-dasharray: 0 $initalGapSize;  stroke-opacity: 1; }
+    50% {stroke-dasharray: $initalGapSize 0;  stroke-opacity: .75; }
+    100% {stroke-dasharray: $initalGapSize 0;  stroke-opacity: 0; }
+  }
+
+  .fill {
+    fill: $fontColor;
+    fill-opacity: 0;
+    animation: fill_offset $animationTime;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+  }
+
+
+  @keyframes fill_offset {
+    25% {fill-opacity: 0;}
+    50% {fill-opacity: 0.5;}
+    100% {fill-opacity: 1;}
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    &.is-sp{
+      visibility: hidden;
+      position: absolute;
+
+      @include mq-max-sp{
+        max-width: 305px;
+        position: relative;
+        visibility: visible;
+      }
+    }
+
+    &.is-no-sp{
+      max-width: 870px;
+
+      @include mq-max-sp{
+        visibility: hidden;
+        position: absolute;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import '_variables';
+
+.l-sec-cmn {
+  &-01 {
+    > .inner {
+      max-width: 1440px;
+      margin: auto;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 100px;
+    }
+  }
+  &-02 {
+    > .inner {
+
+    }
+
+    &:not(:first-of-type) {
+
+    }
+  }
+}
+
+.l-sec-box-swiper-voice {
+  min-height: 400px;
+  position: relative;
+}

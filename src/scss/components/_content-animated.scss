@@ -1,0 +1,39 @@
+.js-content-animated.is-animated {
+  opacity: 1;
+  filter: none;
+  transition: opacity 560ms cubic-bezier(0.455, 0.03, 0.515, 0.955), -webkit-transform 0.5s;
+  transition: opacity 560ms cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 0.5s;
+  transition: opacity 560ms cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 0.5s, -webkit-transform 0.5s;
+  transform: translateY(0);
+  
+  &.u-delay-300{
+    transition-delay: 300ms;
+  }
+  &.u-delay-500{
+    transition-delay: 500ms;
+  }
+}
+.js-content-animated {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.js-heading-animated.is-animated {
+  opacity: 1;
+  filter: none;
+  -webkit-transition: opacity 2500ms cubic-bezier(0.455, 0.03, 0.515, 0.955), -webkit-transform 0.5s;
+  transition: opacity 2500ms cubic-bezier(0.455, 0.03, 0.515, 0.955), -webkit-transform 0.5s;
+  transition: opacity 2500ms cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 0.5s;
+  transition: opacity 2500ms cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 0.5s, -webkit-transform 0.5s;
+  transition-delay: 300ms;
+  
+  &.u-delay-300{
+    transition-delay: 300ms;
+  }
+  &.u-delay-500{
+    transition-delay: 500ms;
+  }
+}
+.js-heading-animated {
+  opacity: 0;
+}

@@ -1,0 +1,75 @@
+.c-trigger {
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+  height: 70px;
+  padding: 10px 20px;
+  margin-bottom: -1px;
+  line-height: 1.2;
+  font-weight: bold;
+  align-items: center;
+  text-align: left;
+  border: 1px solid #1EAA69;
+  background-color: #fff;
+  color: #1EAA69;
+  @include hoverOpacity;
+  @include mq-min-tb {
+    height: 76px;
+    padding: 15px 30px;
+    // width: 420px;
+    // margin: 15px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    width: 52px;
+    height: 10px;
+    transform: translateY(-50%);
+    // background: url(/assets/img/common/ico_arrow_green.png) 0 0 no-repeat;
+    transition: all 0.3s;
+  }
+
+  &--windows {
+    &::after {
+      content: '';
+      display: inline-block;
+      margin-left: 10px;
+      width: 10px;
+      height: 10px;
+      // background: url(/assets/img/common/ico_windows.png) center center no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  &__text {
+    display: inline-flex;
+    font-size: 1.6rem;
+    @include mq-min-tb {
+      font-size: 1.8rem;
+    }
+  }
+
+  //arrow
+  &:hover::before {
+    right: 15px;
+  }
+
+  // group
+  &-group {
+    @include mq-min-tb {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 -30px -30px 0;
+    }
+  }
+  &__item {
+    @include mq-min-tb {
+      width: 50%;
+      padding: 0 30px 30px 0;
+    }
+  }
+}

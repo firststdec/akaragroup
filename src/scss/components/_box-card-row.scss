@@ -1,0 +1,58 @@
+@import '_variables';
+
+.c-box-card-row {
+  &-01 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+
+    &:not(:first-of-type) {
+      margin-top: 100px;
+    }
+
+    &.-reverse {
+      flex-direction: row-reverse;
+
+      .box-content {
+        padding-left: 0;
+        padding-right: 100px;
+      }
+    }
+
+    .box-image {
+      width: 50%;
+
+      .image {
+        width: 100%;
+      }
+    }
+
+    .box-content {
+      width: 50%;
+      padding-left: 100px;
+      padding-right: 0;
+
+      .c-text-cmn-01 {
+        margin-top: 20px;
+
+        &.-white {
+          color: #fff;
+        }
+      }
+
+      .c-button-cmn-01 {
+        margin-top: 20px;
+
+        >.arrow {
+          position: relative;
+
+          .fas {
+            display: inline-block;
+            font-size: 2.4rem;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+}

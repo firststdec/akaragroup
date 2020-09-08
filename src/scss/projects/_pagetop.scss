@@ -1,0 +1,51 @@
+.p-pagetop {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity $transition;
+
+  @include mq-min-tb {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  &__trigger {
+    display: block;
+    position: relative;
+    width: 36px;
+    height: 36px;
+    background-color: $yellow;
+    // background-image: url('/assets/img/common/svg/pagetop.svg');
+    background-size: 18px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+
+    @include mq-min-tb {
+      width: 50px;
+      height: 50px;
+      background-size: 22px auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      @include hoverOpacity;
+    }
+
+    .fas {
+      font-size: 3rem;
+      color: $baseColor;
+    }
+
+    &::before {
+      min-width: 30px;
+      min-height: 30px;
+      margin-right: 0;
+    }
+  }
+
+  &.is-active {
+    opacity: 1;
+  }
+}

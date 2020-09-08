@@ -1,0 +1,224 @@
+extends ../../layouts/contact.pug
+
+block variables
+  -
+    const meta = {
+      title: 'お問い合わせ｜株式会社Akara Group',
+      keyword: 'Akara Group、輸送、配送、保管、出荷、流通加工、電線ドラム製造、木製ドラム製造、木製パレット製造、物流機器販売',
+      description: 'お問い合わせを紹介するページです。株式会社Akara Groupは、ドラム・パレットなどの物流機器製造や工場管理をはじめ、大口輸送・小口輸送のサービスネットワークを国内外に展開し、製品受入から最終ユーザーへの納入まで一貫したサービスを提供する総合物流会社です。',
+      goTitle: 'お問い合わせ｜株式会社Akara Group',
+      goDescription: 'お問い合わせを紹介するページです。株式会社Akara Groupは、ドラム・パレットなどの物流機器製造や工場管理をはじめ、大口輸送・小口輸送のサービスネットワークを国内外に展開し、製品受入から最終ユーザーへの納入まで一貫したサービスを提供する総合物流会社です。',
+      goImage: '/assets/img/ogp.png',
+      goUrl: '',
+      twitterTitle: 'お問い合わせ｜株式会社Akara Group',
+      twitterDescription: 'お問い合わせを紹介するページです。株式会社Akara Groupは、ドラム・パレットなどの物流機器製造や工場管理をはじめ、大口輸送・小口輸送のサービスネットワークを国内外に展開し、製品受入から最終ユーザーへの納入まで一貫したサービスを提供する総合物流会社です。',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: ''
+    }
+
+block prepend css
+  
+block append scripts
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+  script(src='/assets/js/libs/jquery.jpostal.js')
+  script(src='/assets/js/contact.js')
+block outside
+
+block content
+  .c-box-mainvisual-subpage.c-box-mainvisual-subpage--noimg
+    .c-box-mainvisual-subpage__inner
+      figure.c-box-mainvisual-subpage__title
+        img.c-box-mainvisual-subpage__title-image(src="/assets/img/svg/ttl-contact.svg", alt="CONTACT お問い合わせ")
+      .c-box-mainvisual-subpage__text お問い合わせ
+
+  nav.p-breadcrumb.p-breadcrumb__md.l-block
+    ol.p-breadcrumb__group
+      li.p-breadcrumb__item
+        a.p-breadcrumb__link(href="/") TOP
+      li.p-breadcrumb__item お問い合わせ
+
+  article.c-box-article.l-center
+    .c-box-article__inner
+      h2.c-title-01 内容を入力
+    
+      .c-box-form
+        p.c-text-required.c-text--red ※は入力必須になります。
+        form.c-form(action="#", method="post")
+          .c-box-table-responsive-02.u-mt-15-sp
+            table.c-table-responsive-02
+              tr
+                th.c-heading.c-heading__is-required.u-pb-15-sp
+                  span.u-mt-0 お問い合わせ種別
+                td 
+                  .c-box-input.c-box-input__radio
+                    input.c-input-radio#c-input-radio-01(type="radio", checked="checked", name="c-input")
+                    label(for="c-input-radio-01")
+                      | 
+                      span 物流機器・物流サービスに関するお問い合わせ
+                    
+                  .c-box-input.c-box-input__radio
+                    input.c-input-radio#c-input-radio-02(type="radio", name="c-input")
+                    label(for="c-input-radio-02")
+                      |
+                      span 採用に関するお問い合わせ
+
+                  .c-box-input.c-box-input__radio
+                    input.c-input-radio#c-input-radio-03(type="radio", name="c-input")
+                    label(for="c-input-radio-03")
+                      |
+                      span その他のお問い合わせ
+                  .c-error-box.u-mt-10
+                    .c-text-required.c-text--red ※お問い合わせ種別が正しく入力されていません。
+
+              tr
+                th.c-heading.c-heading__is-required 
+                  span お名前
+                td 
+                  input.c-input-text.c-input-text__error(type="text", placeholder="お名前を入力してください")
+                  .c-error-box.u-mt-10
+                    .c-text-required.c-text--red ※お名前が正しく入力されていません。
+              tr
+                th.c-heading.c-heading__is-required 
+                  span フリガナ（全角）
+                td 
+                  input.c-input-text.c-input-text__error(type="text", placeholder="フリガナを入力してください")
+                  .c-error-box.u-mt-10
+                    .c-text-required.c-text--red ※フリガナが正しく入力されていません。
+              tr
+                th.c-heading
+                  span 会社名 / 学校名
+                td 
+                  input.c-input-text(type="text", placeholder="会社名/学校名を入力してください")
+              tr
+                th.c-heading 
+                  span 部署名
+                td 
+                  input.c-input-text(type="text", placeholder="部署名を入力してください")
+              tr
+                th.c-heading 
+                  span 役職
+                td 
+                  input.c-input-text(type="text", placeholder="役職を入力してください")
+              tr
+                th.c-heading.c-heading__is-required 
+                  span お電話番号（半角）
+                td 
+                  .c-box-flex.u-d-inline-flex.u-flex-between
+                    div.u-width-195-px
+                      input.c-input-text.c-input-text__error(type="text", placeholder="")
+                    div.c-box-dash -
+                    div.u-width-195-px
+                      input.c-input-text.c-input-text__error(type="text", placeholder="")
+                    div.c-box-dash -
+                    div.u-width-195-px
+                      input.c-input-text.c-input-text__error(type="text", placeholder="")
+                  .c-error-box.u-mt-10
+                    .c-text-required.c-text--red ※お問い合わせ種別が正しく入力されていません。
+              tr
+                th.c-heading 
+                  span FAX番号（半角）
+                td 
+                  .c-box-flex.u-d-inline-flex.u-flex-between
+                    div.u-width-195-px
+                      input.c-input-text(type="text", placeholder="")
+                    div.c-box-dash -
+                    div.u-width-195-px
+                      input.c-input-text(type="text", placeholder="")
+                    div.c-box-dash -
+                    div.u-width-195-px
+                      input.c-input-text(type="text", placeholder="")
+              tr
+                th.c-heading.c-heading__is-required
+                  span メールアドレス（半角）
+                td 
+                  input.c-input-text.c-input-text__error(type="text", placeholder="メールアドレスを入力してください")
+                  .c-error-box.u-mt-10
+                    .c-text-required.c-text--red ※メールアドレスを入力してください。
+              tr
+                th.c-heading.c-heading__is-required.u-pb-10-sp
+                  span 住所
+                td.u-pb-0.u-pr-0
+                  .c-box-table-responsive-02.c-table-responsive-02__no-border.u-mt-0.u-mb-0
+                    table.c-table-responsive-02
+                      tr
+                        th.c-heading-sub.u-pb-10-sp
+                          span 郵便番号（半角）
+                        td.u-pb-15-sp
+                          .c-box-flex.u-d-inline-flex.u-flex-between
+                            div.u-width-120-px
+                              input.c-input-text(type="text", placeholder="")
+                            div.c-box-dash -
+                            div.u-width-120-px
+                              input.c-input-text(type="text", placeholder="")
+                            div.c-box-space
+                            div.u-width-120-px
+                              input.c-input-submit.c-input-submit__bg-gray(type="submit", value="住所検索")
+                      tr
+                        th.c-heading-sub.c-heading__is-required.u-pb-10-sp
+                          span 都道府県
+                        td.u-pb-15-sp
+                          .c-input-selectbox.c-input-selectbox__error.u-ma-width-270-px
+                            select
+                              option(value='') 選択してください
+                              option(value='value') ダミーテキスト
+                              option(value='value') ダミーテキスト
+                              option(value='value') ダミーテキスト
+                              option(value='value') ダミーテキスト
+                              option(value='value') ダミーテキスト
+                      tr
+                        th.c-heading-sub.c-heading__is-required.u-pb-10-sp
+                          span 住所
+                        td.u-pb-15-sp
+                          input.c-input-text.c-input-text__error(type="text", placeholder="住所を入力してください")
+                          .c-error-box.u-mt-10
+                            .c-text-required.c-text--red ※住所を入力してください。
+                      tr
+                        th.c-heading-sub.u-pb-10-sp
+                          span ビル名・部屋番号等
+                        td.u-pb-30-sp
+                          input.c-input-text(type="text", placeholder="ビル名・部屋番号等を入力してください")
+
+              tr
+                th.c-heading.c-heading__is-required
+                  span お問い合わせ内容
+                td 
+                  textarea.c-input-textarea.c-input-textarea__error(name="message", cols="30", rows="10", placeholder="お問い合わせ内容を入力してください")
+                  .c-error-box.u-mt-10
+                    .c-text-required.c-text--red ※お問い合わせ内容を入力してください。
+
+      .c-box-contact-note
+        .c-box-contact-note__inner
+          h2.c-heading-03 お問い合わせいただく前の注意
+
+          ul.c-list-02
+            li.c-list-02__item
+              p.c-text-01 お客様からいただく個人情報は、お問い合せ・ご質問への回答、情報提供のために使用させていただきます。 List
+            li.c-list-02__item
+              p.c-text-01 利用目的範囲内でお客様の個人情報を弊社が使用することがございます。
+            li.c-list-02__item
+              p.c-text-01 お客様は、お客様ご本人の個人情報について、開示、訂正、削除をご請求いただけます。その際はこの入力フォームからご連絡ください。
+            li.c-list-02__item
+              p.c-text-01 お問い合せの内容によっては、電子メール以外の方法で回答を差し上げる場合がございますので、個人情報を正しくご記入いただけない場合は、お問い合せ・ご質問に回答できない場合がございます。
+            li.c-list-02__item
+              p.c-text-01 
+                |お客様の個人情報の取扱全般に関する弊社の考え方をご覧になりたい方は、弊社の 
+                a.c-text--green.c-link-underline(href="/privacy.html") 個人情報保護方針ページ
+                |をご覧ください。
+            li.c-list-02__item
+              p.c-text-01 土曜、日曜、祝日、年末年始他、弊社休業日にいただいたお問い合せについては、翌営業日以降の回答となります。
+            li.c-list-02__item
+              p.c-text-01 弊社からお客様へ送信するe-mailは、お客様個人宛にお送りするものです。回答の内容の一部または全部を転載、二次利用することはご遠慮ください。
+          
+        .c-box-border.c-box-contact-agree.u-mt-45
+          p.c-text 【お問い合わせいただく前の注意】に同意いただける場合は、【同意する】にチェックを付け、以下の入力に進んでください。チェックがない（同意していただけない）場合はフォームに入力していただくことができません。
+          .c-box-checkbox.u-ta-center.u-mt-20
+            input.c-input-checkbox#c-input-checkbox-01(name="c-checkbox", type="checkbox")
+            label.c-input-checkbox-01(for="c-input-checkbox-01")
+              |
+              span.u-fz-16 同意する
+
+        .c-box-contact-button.u-ta-center.u-mt-50
+          .c-box-button-cmn-01.u-margin-auto.c-button-middle.c-button--green.is-disabled.is-no-hover
+            input#c-step-02.u-ta-center(type='submit', name='send', value='確認', disabled)
+            span.c-button__icon.c-icon--arrow

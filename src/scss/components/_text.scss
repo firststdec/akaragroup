@@ -1,0 +1,48 @@
+.c-text {
+  $this: #{&};
+  // line-height: $lineheight-text;
+  line-height: 1.8;
+  &--small,
+  &--large {
+    @extend #{$this};
+  }
+  &--small {
+    font-size: 1rem;
+    @include mq-min-tb {
+      font-size: 1.2rem;
+    }
+  }
+  &--large {
+    font-size: 1.4rem;
+    @include mq-min-tb {
+      font-size: 1.6rem;
+    }
+  }
+  &--largest {
+    font-size: 1.6rem;
+    @include mq-min-tb {
+      font-size: 1.8rem;
+    }
+  }
+
+  // 余白
+  * + & {
+    margin-top: 10px;
+    @include mq-min-tb {
+      margin-top: 20px;
+    }
+  }
+
+  &-cmn {
+    &-01 {
+      font-size: 1.6rem;
+    }
+  }
+
+  &--red{
+    color: #FF0000;
+  }
+  &--green{
+    color: $darkGreen;
+  }
+}

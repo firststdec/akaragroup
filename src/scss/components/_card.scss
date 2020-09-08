@@ -1,0 +1,56 @@
+@import '_variables';
+
+/* card-01
+---------------------------------------------------------- */
+.c-card-01{
+  background: #fff;
+
+  .c-title{
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: $darkGreen;
+
+    @include mq-max-sp{
+      font-size: 2rem;
+    }
+  }
+  .c-box-detail{
+    padding: 45px 60px;
+
+    @include mq-max-sp{
+      padding: 20px 20px 25px;
+    }
+    
+    .c-text{
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .c-link{
+      margin-top: 20px;
+    }
+  }
+  
+  .c-image{
+    width: 100%;
+    overflow: hidden;
+
+    img{
+      width: 100%;
+      transition: all .3s;
+    }
+  }
+  &:hover{
+    // opacity: 0.7;
+    img{
+      transform: scale(1.1);
+    }
+    
+    .c-link-arrow__green{
+      opacity: 0.7;
+      &:after{
+        right: -10px;
+      }
+    }
+  }
+}

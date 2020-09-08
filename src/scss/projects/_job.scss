@@ -1,0 +1,63 @@
+
+/* l-job
+---------------------------------------------------------- */
+.l-job {
+  padding-top: 75px;
+  @include mq-min-tb {
+    padding-top: 93px;
+  }
+
+  &-figure {
+    @include mq-min-tb {
+      margin-top: 50px;
+    }
+  }
+
+  //marging
+  & + & {
+    border-top: 1px solid #DFDFDF;
+    margin-top: 95px;
+    @include mq-min-tb {
+      margin-top: 130px;
+    }
+  }
+
+}
+
+/* p-job
+---------------------------------------------------------- */
+.p-job {
+
+  @include mq-min-tb {
+    margin-top: 50px;
+  }
+  
+  &__item {
+    background-color: #F5F7F8;
+    margin-bottom: -15px;
+    @include mq-min-tb {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__ttl {
+    margin-bottom: 15px;
+    font-size: 2rem !important;
+    @include mq-min-tb {
+      margin-bottom: 18px;
+      font-size: 2.2rem;
+    }
+  }
+  
+  &__content {
+    padding: 26px 20px;
+    @include mq-min-tb {
+      padding: 35px 30px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+ 
+}

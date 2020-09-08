@@ -1,0 +1,63 @@
+block variables
+
+doctype html
+html(lang='en')
+  head
+    include ../components/gtag-script.pug
+    meta(charset='utf-8')
+    meta(name='viewport', content=(meta && meta.viewport ? meta.viewport : 'width=device-width,initial-scale=1.0,minimum-scale=1.0'))
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='format-detection' content='telephone=no')
+
+    title= (meta && meta.title ? meta.title : '')
+    meta(name='keyword', content=(meta && meta.keyword ? meta.keyword : ''))
+    meta(name='description', content=(meta && meta.description ? meta.description : ''))
+
+    meta(property='go:title', content=(meta && meta.goTitle ? meta.goTitle : ''))
+    meta(property='go:description', content=(meta && meta.goDescription ? meta.goDescription : ''))
+    meta(property='og:image', content=(meta && meta.goImage ? meta.goImage : ''))
+    meta(property='og:url', content=(meta && meta.goUrl ? meta.goUrl : ''))
+
+    meta(name='twitter:title', content=(meta && meta.twitterTitle ? meta.twitterTitle : ''))
+    meta(name='twitter:description', content=(meta && meta.twitterDescription ? meta.twitterDescription : ''))
+    meta(name='twitter:image', content=(meta && meta.twitterImage ? meta.twitterImage : ''))
+    meta(name='twitter:url', content=(meta && meta.twitterUrl ? meta.twitterUrl : ''))
+
+    link(rel="shortcut icon" type="image/x-icon" href="/favicon.ico")
+    link(rel="apple-touch-icon" href="/apple-touch-icon.png")
+    meta(property="og:image" content="/assets/img/ogp.png")
+
+    //- CSS
+    block css
+      link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap&subset=japanese")
+      link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap")
+      link(rel="stylesheet" href="/assets/css/libs/font-awesome/scss/fontawesome.css" )
+      link(rel="stylesheet" href="/assets/css/libs/font-awesome/scss/brands.css" )
+      link(rel="stylesheet" href="/assets/css/libs/font-awesome/scss/solid.css" )
+      link(rel="stylesheet" href="/assets/css/libs/swiper.css" )
+      link(rel='stylesheet', href='/assets/css/style.css')
+
+  body(class=topPage ? 'topPage' : 'subPage')
+    include ../components/fb-script.pug
+
+    block outside
+
+    .l-wrapper
+      //- Header
+      include ../components/header.pug
+
+      //- block content
+      main.l-container
+        .l-container__inner
+          block content
+
+      //- Footer
+      include ../components/footer.pug
+
+    //- JS
+    script(src='/assets/js/libs/jquery.min.js')
+    script(src='/assets/js/libs/objectFitPolyfill.min.js')
+    script(src='/assets/js/libs/mobile-detect.min.js')
+    script(src='/assets/js/libs/swiper.js')
+    script(src='/assets/js/common.js')
+    block scripts

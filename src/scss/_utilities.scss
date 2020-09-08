@@ -1,0 +1,140 @@
+@import '_mixin';
+
+/* ==========================================================
+  utilities & helper
+========================================================== */
+@include mq-max-sp {
+  .u-no-sp { display: none !important; }
+}
+
+@include mq-min-max-tb {
+  .u-no-tb { display: none !important; }
+}
+
+@include mq-min-pc {
+  .u-no-pc { display: none !important; }
+}
+
+/* display
+---------------------------------------------------------- */
+.u-d-none { display: none !important; }
+.u-d-flex { display: flex !important; }
+.u-d-inline-block { display: inline-block !important; }
+.u-d-inline-flex { display: inline-flex !important; }
+.u-flex-between{ justify-content: space-between !important; }
+
+.u-no-shrink { flex-shrink: 0 !important; }
+
+.u-width-auto { width: auto !important; }
+
+/* font style
+---------------------------------------------------------- */
+.u-fw-bold {
+  font-weight: bold !important;
+}
+
+.u-fw-medium {
+  font-weight: 500 !important;
+}
+
+.u-fw-normal {
+  font-weight: normal !important;
+}
+
+/* alignment
+---------------------------------------------------------- */
+.u-ta-center { text-align: center !important; }
+.u-ta-left { text-align: left !important; }
+.u-ta-right { text-align: right !important; }
+.u-margin-auto { margin: 0 auto !important; }
+
+/* font-size
+---------------------------------------------------------- */
+@for $i from 10 through 80 {
+  .u-fz-#{$i} {
+    font-size:($i/10) +rem!important;
+  }
+}
+
+/* hidden
+---------------------------------------------------------- */
+.u-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  overflow: hidden;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* spacing
+---------------------------------------------------------- */
+//$spaceValue: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+$sides: (top, bottom, left, right);
+
+@for $space from 0 through 200 {
+  @each $side in $sides {
+    .u-m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+  
+    .u-p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+@include mq-max-tb {
+  @for $space from 0 through 200 {
+    @each $side in $sides {
+      .u-m#{str-slice($side, 0, 1)}-#{$space}-tb {
+        margin-#{$side}: #{$space}px !important;
+      }
+    
+      .u-p#{str-slice($side, 0, 1)}-#{$space}-tb {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+}
+
+@include mq-max-sp {
+  @for $space from 0 through 200 {
+    @each $side in $sides {
+      .u-m#{str-slice($side, 0, 1)}-#{$space}-sp {
+        margin-#{$side}: #{$space}px !important;
+      }
+    
+      .u-p#{str-slice($side, 0, 1)}-#{$space}-sp {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+}
+
+/* width percent
+---------------------------------------------------------- */
+@for $i from 0 through 100 {
+  .u-width-#{$i}-per {
+    width : #{percentage($i/100)};
+  }
+}
+
+@include mq-min-tb{
+  $widthValues: (100, 120, 195, 200, 270, 300, 400, 500, 870);
+  @each $widthValue in $widthValues {
+    .u-ma-width-#{$widthValue}-px{
+      max-width: #{$widthValue}px !important;
+    }
+  }
+}
+
+
+$widthValues: (100, 120, 195, 200, 300, 400, 500);
+@each $widthValue in $widthValues {
+  .u-width-#{$widthValue}-px{
+    width: #{$widthValue}px !important;
+  }
+}

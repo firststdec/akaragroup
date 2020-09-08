@@ -1,0 +1,189 @@
+@import '_variables';
+
+@mixin inputStyled {
+  border: 2px solid #fff;
+  background-color: #fff;
+  font-family: inherit;
+  font-size: 1.6rem;
+  color: $baseColor;
+  outline: none;
+  appearance: none;
+  border-radius: 26px;
+
+  &::placeholder {
+    color: #cecece;
+  }
+}
+
+.-box-subscribe {
+  margin-top: 0 !important;
+
+  // @include mq-min-max-tb {
+  //   padding-top: get-vw(150px);
+  // }
+
+  .inner {
+    padding: 150px 0 50px;
+    background: url(/assets/img/common/bg_subscribe_icons.png) no-repeat center top;
+    background-size: contain;
+  }
+}
+
+.c-box-subscribe {
+  background: #fff;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  background: url(/assets/img/common/bg_subscribe.png) no-repeat center top;
+  background-size: contain;
+  max-width: 1090px;
+  min-height: 300px;
+  padding: 74px 85px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mq-min-max-tb {
+    max-width: get-vw(1090px);
+    min-height: get-vw(300px);
+    padding: get-vw(74px) get-vw(85px);
+  }
+
+  .item {
+    width: calc(100% - 187px);
+    padding-left: 20px;
+
+    @include mq-min-max-tb {
+      width: auto;
+    }
+
+    &.-signup-text {
+      width: 187px;
+      padding-left: 0;
+
+      @include mq-min-max-tb {
+        width: get-vw(187px);
+      }
+
+      .box-sign-up {
+        width: 188px;
+        height: 173px;
+        background: url(/assets/img/common/bg_egg_subscribe.png) no-repeat center top;
+        background-size: 100%;
+        padding-top: 40px;
+        padding-left: 30px;
+        position: relative;
+
+        @include mq-min-max-tb {
+          width: get-vw(188px);
+          height: get-vw(173px);
+          padding-top: get-vw(40px);
+          padding-left: get-vw(30px);
+        }
+
+        > .icon_envelope {
+          width: get-vw(54px);
+          height: get-vw(51px);
+          position: absolute;
+          right: get-vw(40px);
+          bottom: get-vw(35px);
+        }
+
+        span {
+          color: #FFC416;
+          display: block;
+          font-size: 4.6rem;
+          line-height: 1.1;
+
+          @include mq-min-max-tb {
+            font-size: get-vw(46px);
+          }
+        }
+      }
+    }
+  }
+
+  .box-heading {
+    >.heading {
+      font-size: 2.8rem;
+      font-weight: 600;
+      text-align: left;
+
+      @include mq-min-max-tb {
+        font-size: get-vw(28px);
+      }
+    }
+  }
+
+  .box-form {
+    .c-input-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 30px;
+
+      .c-input {
+        &.-text {
+          width: 460px;
+          height: 50px;
+          padding: 12px;
+          @include inputStyled;
+          line-height: 1.6;
+          border-radius: 26px;
+          margin-right: 15px;
+
+          @include mq-min-max-tb {
+            width: get-vw(460px);
+            height: get-vw(50px);
+          }
+        }
+
+        &.-error {
+          background: #FFF5F5;
+        }
+
+        &.-submit {
+          padding: 0 30px;
+          display: block;
+          background: radial-gradient(#fceabb, #f8b500);
+          border-radius: 10px;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+
+      .fa {
+        color: #211E1F;
+        position: relative;
+      }
+
+      .c-button-cmn-01 {
+        border: 1px solid #fff;
+
+        &::before {
+          box-shadow: none;
+          background: transparent;
+        }
+
+        &::after {
+          box-shadow: none;
+        }
+
+        &:hover {
+          border: 1px solid #211E1F;
+
+          &::before {
+            background: #211E1F;
+            color: $yellow
+          }
+
+          .text {
+            color: $yellow;
+          }
+
+          .fa {
+            color: $yellow;
+          }
+        }
+      }
+    }
+  }
+}

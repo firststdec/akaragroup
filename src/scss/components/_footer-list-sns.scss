@@ -1,0 +1,20 @@
+@import '_variables';
+
+/* footer-list-sns
+---------------------------------------------------------- */
+.c-footer-list-sns {
+  display: flex;
+
+  &__item {
+    margin-right: 20px;
+
+    .fab {
+      font-size: 3rem;
+      color: #333;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

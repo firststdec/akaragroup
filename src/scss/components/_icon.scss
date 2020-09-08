@@ -1,0 +1,123 @@
+.c-icon {
+  $this: #{&};
+  &::before,
+  &::after {
+    display: inline-block;
+    min-width: 1.62rem;
+    min-height: 1.62rem;
+    vertical-align: -.13em;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  &::after {
+    content: '';
+    margin-left: .5rem;
+  }
+  &:empty::after {
+    margin-right: 0;
+  }
+  //before
+  &--before {
+    &::after {
+      content: none;
+    }
+    &::before {
+      content: '';
+      margin-right: 5px;
+    }
+  }
+  //矢印（右）
+  &--arrow {
+    @extend #{$this};
+    &::before,
+    &::after {
+      // background-image: url('/assets/img/common/svg/ico_arrow_right_01.svg');
+      background-size: 24px;
+      min-width: 2.4rem;
+      min-height: 2.4rem;
+    }
+  }
+  &--arrow-green {
+    @extend #{$this};
+    &::before,
+    &::after {
+      // background-image: url('/assets/img/common/svg/ico_arrow_right_01.svg');
+    }
+  }
+
+  //矢印（左）
+  &--arrow-left {
+    @extend #{$this};
+    &::before,
+    &::after {
+      // background-image: url('/assets/img/common/svg/ico_arrow_left_01.svg');
+    }
+  }
+
+  //丸矢印（上）
+  &--arrow-circle-top {
+    @extend #{$this};
+    &::before,
+    &::after {
+      // background-image: url('/assets/img/common/svg/ico_arrow_circle_top.svg');
+    }
+  }
+
+  //別窓
+  &--window {
+    @extend #{$this};
+    &::before,
+    &::after {
+      // background-image: url('/assets/img/common/svg/ico_window_03.svg');
+      background-size: 11px;
+      min-width: 11px;
+      min-height: 11px;
+    }
+  }
+  &--window-grey {
+    @extend #{$this};
+    &::before,
+    &::after {
+      // background-image: url('/assets/img/common/svg/ico_window_02.svg');
+      background-size: 11px;
+      min-width: 11px;
+      min-height: 11px;
+      margin-left: 10px;
+    }
+  }
+  &--window-black {
+    @extend #{$this};
+    &::before,
+    &::after {
+      // background-image: url('/assets/img/common/svg/ico_window_01.svg');
+      background-size: 11px;
+      min-width: 11px;
+      min-height: 11px;
+      margin-left: 10px;
+    }
+  }
+
+  //PDF
+  &--pdf {
+    @extend #{$this};
+    &::before,
+    &::after {
+      // background-image: url('/assets/img/common/svg/ico_pdf_01.svg');
+    }
+  }
+
+  //Plus
+  &--plus {
+    @extend #{$this};
+    &::before,
+    &::after {
+      // background-image: url('/assets/img/common/svg/ico_plus_01.svg');
+      background-size: 13px;
+      min-width: 1.3rem;
+      min-height: 1.3rem;
+    }
+  }
+
+}
