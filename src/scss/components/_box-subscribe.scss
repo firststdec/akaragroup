@@ -81,11 +81,19 @@
         }
 
         > .icon_envelope {
-          width: get-vw(54px);
-          height: get-vw(51px);
+          width: 54px;
+          height: 51px;
           position: absolute;
-          right: get-vw(40px);
-          bottom: get-vw(35px);
+          right: 40px;
+          bottom: 35px;
+
+          @include mq-min-max-tb {
+            width: get-vw(54px);
+            height: get-vw(51px);
+            position: absolute;
+            right: get-vw(40px);
+            bottom: get-vw(35px);
+          }
         }
 
         span {
