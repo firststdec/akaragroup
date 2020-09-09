@@ -21,6 +21,17 @@
       margin: auto;
       left: -75px;
 
+      @include mq-min-max-tb {
+        width: get-vw(486px);
+        left: get-vw(-75px);
+      }
+
+      @include mq-max-sp {
+        width: 100%;
+        left: auto;
+        padding: 0 20px;
+      }
+
       .c-egg {
         content: '';
         width: 824px;
@@ -91,6 +102,12 @@
       margin-top: get-vw(400px);
     }
 
+    @include mq-max-sp {
+      width: 100%;
+      left: auto;
+      padding: 0 20px;
+    }
+
     .box-image {
       position: relative;
       z-index: 3;
@@ -105,6 +122,16 @@
       padding-left: 0;
       width: 486px;
       margin: auto;
+
+      @include mq-min-max-tb {
+        width: get-vw(486px);
+      }
+
+      @include mq-max-sp {
+        width: 100%;
+        left: auto;
+        padding: 0 20px;
+      }
 
       .c-egg {
         content: '';
@@ -201,6 +228,10 @@
       margin-top: get-vw(200px);
     }
 
+    @include mq-max-sp {
+      padding: 0 20px;
+    }
+
     .box-image {
       position: relative;
       z-index: 3;
@@ -260,6 +291,16 @@
       // padding: 0 100px 0 50px;
       width: 486px;
       margin: auto;
+
+      @include mq-min-max-tb {
+        width: get-vw(486px);
+      }
+
+      @include mq-max-sp {
+        width: 100%;
+        left: auto;
+        padding: 0 20px;
+      }
 
       .c-egg {
         content: '';
@@ -372,6 +413,10 @@
       padding-top: 0;
     }
 
+    @include mq-max-sp {
+      padding: 0 20px;
+    }
+
     &.-reverse {
       margin-top: 0;
 
@@ -382,10 +427,21 @@
       }
     }
 
+    .box-image {
+      @include mq-max-sp {
+        width: 100%;
+      }
+    }
+
     .box-content {
       position: relative;
       padding-top: 100px;
       padding-left: 20px;
+
+      @include mq-max-sp {
+        width: 100%;
+        padding: 0;
+      }
 
       .c-orange-egg {
         width: 422px;
@@ -396,6 +452,13 @@
         right: 0;
 
         @include mq-min-max-tb {
+          width: get-vw(422px);
+          height: get-vw(468px);
+          background-size: get-vw(422px) get-vw(468px);
+          top: get-vw(-400px);
+        }
+
+        @include mq-max-sp {
           width: get-vw(422px);
           height: get-vw(468px);
           background-size: get-vw(422px) get-vw(468px);
