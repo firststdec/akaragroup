@@ -22,6 +22,7 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 25px;
+    text-align: center;
 
     @include mq-min-tb {
       width: 50px;
@@ -36,6 +37,11 @@
     .fas {
       font-size: 3rem;
       color: $baseColor;
+
+      @include mq-max-sp {
+        padding-top: 5px;
+        font-size: 2rem;
+      }
     }
 
     &::before {

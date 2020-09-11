@@ -269,82 +269,6 @@ var headerFixed = function () {
 };
 
 /* ----------------------------------------------------------
-  navGlobalPC
----------------------------------------------------------- */
-var navGlobalPC = function () {
-  $('.tpl-1-nav-global-sub').each(function () {
-    var $self = $(this);
-
-    $self.closest('.tpl-1-nav-global-main__item')
-      .on('mouseenter', function () {
-        if (MQ !== 'PC') return;
-
-        $('.tpl-1-nav-global-main__list').addClass('is-sub-open');
-        $self
-          .stop()
-          .addClass('is-visible')
-          .delay(100)
-          .queue(function () {
-            $(this).addClass('is-animated').dequeue();
-          });
-      })
-      .on('mouseleave', function () {
-        if (MQ !== 'PC') return;
-
-        $('.tpl-1-nav-global-main__list').removeClass('is-sub-open');
-        $self
-          .stop()
-          .removeClass('is-animated')
-          .delay(300)
-          .queue(function () {
-            $(this).removeClass('is-visible').dequeue();
-          });
-      });
-  });
-};
-
-/* ----------------------------------------------------------
-  navGlobalSP
----------------------------------------------------------- */
-var navGlobalSP = function () {
-  var $nav = $('.tpl-1-nav-global');
-
-  $('.l-header__in-btn-menu').on('click', function () {
-    if (MQ === 'PC') return;
-
-    if (!$(this).hasClass('is-active')) {
-      lockScreen();
-      $(this).addClass('is-active');
-      $nav
-        .stop()
-        .addClass('is-visible')
-        .delay(100)
-        .queue(function (next) {
-          $(this).find('.tpl-1-nav-global-bg').addClass('is-animated');
-          next();
-        })
-        .delay(500)
-        .queue(function () {
-          $(this).addClass('is-animated').dequeue();
-        });
-    }
-    else {
-      unlockScreen();
-      $(this).removeClass('is-active');
-      $nav
-        .stop()
-        .removeClass('is-animated')
-        .find('.tpl-1-nav-global-bg').removeClass('is-animated')
-        .delay(300)
-        .queue(function () {
-          $nav.removeClass('is-visible');
-          $(this).dequeue();
-        });
-    }
-  });
-};
-
-/* ----------------------------------------------------------
   videoModal
 ---------------------------------------------------------- */
 var videoModal = function () {
@@ -408,6 +332,7 @@ var hambuger =  function(){
     // デフォルトの挙動を無効化
     e.preventDefault();
     $('.js-hambuger').toggleClass(activeClass);
+    $('.l-header__logo').toggleClass(activeClass);
   });
 }
 /* ----------------------------------------------------------
@@ -696,12 +621,12 @@ var jsSlickCenter = function () {
           }
         },
         {
-          breakpoint: 896,
+          breakpoint: 897,
           settings: {
             arrows: false,
             centerMode: true,
             centerPadding: '40px',
-            slidesToShow: 3
+            slidesToShow: 1
           }
         },
         {

@@ -241,6 +241,10 @@ a {
       padding-bottom: 25px;
     }
 
+    @include mq-max-sp {
+      padding: 20px 30px !important;
+    }
+
     &.l-block {
       @media (min-width: 1440px) {
         padding-left: calc((100% - 1310px) / 2);
@@ -252,12 +256,37 @@ a {
   &__logo {
     position: relative;
     z-index: 10;
+    transition: all .3s ease-out;
+
+    &.is-active {
+      .l-header__logo-image {
+        @include mq-max-sp {
+          display: none;
+        }
+
+        &-sp {
+          @include mq-max-sp {
+            display: block;
+          }
+        }
+      }
+    }
 
     &-image {
       width: 124px;
+      transition: all .3s ease-out;
 
       @include mq-max-sp {
-        width: 74px;
+        width: 106px;
+      }
+
+      &-sp {
+        display: none;
+        transition: all .3s ease-out;
+
+        @include mq-min-tb {
+          display: none;
+        }
       }
     }
   }
@@ -277,7 +306,7 @@ a {
   }
 
   &__utility-wrap {
-    padding: 50px 0 0;
+    padding: 90px 0 0;
 
     @include mq-min-tb {
       padding: 0;
@@ -285,7 +314,7 @@ a {
   }
 
   &__utility-in {
-    max-height: calc(100vh - 50px);
+    max-height: calc(100vh - 90px);
     overflow-y: auto;
 
     @include mq-min-tb {
@@ -398,6 +427,11 @@ a {
     padding: 13px 30px;
     font-weight: bold;
     color: rgba(17, 17, 17, 0.5);
+    position: relative;
+
+    @include mq-max-sp {
+      padding: 10px 30px;
+    }
 
     @include mq-min-tb {
       position: relative;
@@ -425,12 +459,28 @@ a {
         display: none;
       }
     }
+
+    > .fas {
+      @include mq-max-sp {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
   }
 
   &__menu-mark {
     font-size: 1.6rem;
     font-weight: 500;
     padding-right: 10px;
+
+    @include mq-max-sp {
+      font-size: 2.2rem;
+      line-height: 1.3;
+      font-weight: 400;
+      color: #211E1F;
+    }
 
     &::after {
       display: none;
@@ -448,10 +498,14 @@ a {
   &__submenu {
     display: none;
     background-color: #fff;
-    box-shadow: 0px 0px 20px 0px rgba(185, 190, 194, 0.75);
-    border-radius: 20px;
+
+    @include mq-max-sp {
+      padding-bottom: 20px;
+    }
 
     @include mq-min-tb {
+      border-radius: 20px;
+      box-shadow: 0px 0px 20px 0px rgba(185, 190, 194, 0.75);
       position: absolute;
       left: 20px;
       right: 20px;
@@ -464,11 +518,20 @@ a {
       transform: none;
     }
 
+    .l-header__submenu-list-02-link {
+      @include mq-max-sp {
+        font-size: 1.5rem;
+        color: #777;
+      }
+    }
+
     &.-about-us {
-      transform: translateX(-50%);
-      left: 50%;
-      width: 300px;
-      padding: 10px 0;
+      @include mq-min-tb {
+        transform: translateX(-50%);
+        left: 50%;
+        width: 300px;
+        padding: 10px 0;
+      }
 
       .l-header {
         &__submenu-item {
@@ -488,6 +551,12 @@ a {
           &::before {
             display: none;
           }
+        }
+      }
+
+      .l-header__submenu-item:nth-child(1) .l-header__submenu-list-02-link {
+        @include mq-max-sp {
+          margin-left: 20px;
         }
       }
     }
@@ -531,18 +600,17 @@ a {
       flex-wrap: wrap;
       margin: 20px 0;
 
+      @include mq-max-sp {
+        margin: 0;
+      }
+
       @include mq-min-max-tb {
         justify-content: flex-start !important;
       }
 
       &-item {
-        width: 50%;
+        width: 100%;
         padding-left: 30px;
-
-        @media (min-width: 897px) and (max-width: 1280px) {
-          padding-left: 30px !important;
-          text-align: left !important;
-        }
 
         @include mq-min-max-tb {
           width: 100%;
@@ -570,7 +638,9 @@ a {
     }
 
     &:not(:first-of-type) {
-      border-left: 2px dotted #999;
+      @include mq-min-tb {
+        border-left: 2px dotted #999;
+      }
     }
 
     &:nth-child(1) {
@@ -580,7 +650,21 @@ a {
             padding-left: 75px;
             position: relative;
 
+            @include mq-max-sp {
+              padding-left: 80px;
+            }
+
             &:nth-child(1) {
+              @include mq-max-sp {
+                position: relative;
+              }
+
+              @include mq-min-max-tb {
+                &::before {
+                  display: none;
+                }
+              }
+
               &::before {
                 content: '';
                 width: 72px;
@@ -590,16 +674,31 @@ a {
                 position: absolute;
                 left: 0;
                 top: -7px;
+
+                @include mq-max-sp {
+                  display: none;
+                }
               }
 
-              @include mq-min-max-tb {
-                &::before {
-                  display: none;
+              .c-mobile-float-text {
+                display: none;
+
+                @include mq-max-sp {
+                  display: block;
+                  font-size: 1.5rem;
+                  color: #777;
+                  font-weight: 500;
                 }
               }
             }
 
             &:nth-child(2) {
+              @include mq-min-max-tb {
+                &::before {
+                  display: none;
+                }
+              }
+
               &::before {
                 content: '';
                 width: 73px;
@@ -609,11 +708,22 @@ a {
                 position: absolute;
                 left: 0;
                 top: -5px;
-              }
 
-              @include mq-min-max-tb {
-                &::before {
+                @include mq-max-sp {
                   display: none;
+                }
+              }
+            }
+
+            &:nth-child(3) {
+              .c-mobile-float-text {
+                display: none;
+
+                @include mq-max-sp {
+                  display: block;
+                  font-size: 1.5rem;
+                  color: #777;
+                  font-weight: 500;
                 }
               }
             }
@@ -624,6 +734,11 @@ a {
             padding-left: 20px;
             background: url(/assets/img/svg/circle-yellow.svg) no-repeat center left;
             background-size: 14px;
+
+            @include mq-max-sp {
+              background-size: 8px;
+              margin-left: 15px;
+            }
           }
         }
       }
@@ -637,6 +752,11 @@ a {
             padding-left: 20px;
             background: url(/assets/img/svg/circle-green.svg) no-repeat center left;
             background-size: 14px;
+
+            @include mq-max-sp {
+              background-size: 8px;
+              margin-left: 55px;
+            }
           }
         }
       }
@@ -650,6 +770,10 @@ a {
           &-item {
             padding-left: 0;
             text-align: center;
+
+            @include mq-max-sp {
+              text-align: left;
+            }
           }
 
           &-link {
@@ -657,6 +781,11 @@ a {
             padding-left: 20px;
             background: url(/assets/img/svg/circle-red.svg) no-repeat center left;
             background-size: 14px;
+
+            @include mq-max-sp {
+              background-size: 8px;
+              margin-left: 85px;
+            }
           }
         }
       }
@@ -673,6 +802,13 @@ a {
     font-size: 1.2rem;
     color: rgba(17, 17, 17, 0.5);
 
+    @include mq-max-sp {
+      font-size: 2rem;
+      line-height: 1.3;
+      padding: 10px 30px 10px 50px;
+      color: #777;
+    }
+
     @include mq-min-tb {
       border: none;
       padding: 0;
@@ -682,6 +818,10 @@ a {
 
     .image {
       padding: 0 20px 20px;
+
+      @include mq-max-sp {
+        display: none;
+      }
     }
   }
 
@@ -716,7 +856,7 @@ a {
   &__menu-trigger {
     position: absolute;
     z-index: 10;
-    top: 16px;
+    top: 30px;
     right: 15px;
     width: 28px;
     height: 19px;
@@ -800,6 +940,8 @@ a {
   &__menu-trigger.is-active+&__utility--top {
     @include mq-max-sp {
       max-height: 100vh;
+      height: 100vh;
+      background: #fff;
     }
   }
 
@@ -892,6 +1034,13 @@ a {
     display: flex;
     padding: 0 40px;
 
+    @include mq-max-sp {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+      z-index: 2;
+    }
+
     .c-link {
       color: $baseColor;
 
@@ -922,34 +1071,7 @@ a {
   nav-global
 ========================================================== */
 a[data-group="menu"] {
-  @include mq-max-sp {
-    position: relative;
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      background-color: rgba(17, 17, 17, 0.5);
-      transform: translateY(-50%);
-    }
-
-    &::before {
-      right: 16px;
-      width: 13px;
-      height: 1px;
-    }
-
-    &::after {
-      right: 22px;
-      width: 1px;
-      height: 13px;
-    }
-
-    &.is-active::after {
-      opacity: 0;
-    }
-  }
 }
 
 /* ==========================================================
@@ -964,7 +1086,7 @@ a[data-group="menu"] {
     border-top: 1px solid #F0F0F0;
   }
 
-  > .inner {
+  >.inner {
     position: relative;
 
     .bg-footer {
@@ -1153,6 +1275,10 @@ a[data-group="menu"] {
 
     &-list {
       margin: 0 -15px;
+
+      @include mq-max-sp {
+        margin: 0;
+      }
 
       @include mq-min-tb {
         margin: 0;

@@ -85,6 +85,10 @@
           opacity: 1;
           animation: vertical 1.5s ease-in-out infinite alternate;
 
+          @include mq-max-sp {
+            display: none;
+          }
+
           @include mq-min-max-tb {
             width: get-vw(62px);
             height: get-vw(65px);
@@ -152,6 +156,10 @@
           top: get-vw(-580px);
           left: get-vw(-24px);
         }
+
+        @include mq-max-sp {
+          display: none;
+        }
       }
 
       .c-deco-yellow-egg-bg {
@@ -164,6 +172,10 @@
         z-index: 1;
         backface-visibility: hidden;
         position: absolute;
+
+        @include mq-max-sp {
+          display: none;
+        }
 
         @include mq-min-max-tb {
           width: get-vw(274px);
@@ -276,6 +288,10 @@
         backface-visibility: hidden;
         position: absolute;
 
+        @include mq-max-sp {
+          display: none;
+        }
+
         @include mq-min-max-tb {
           width: get-vw(404px);
           height: get-vw(238px);
@@ -324,7 +340,6 @@
       }
 
       .c-egg-deco-top {
-        content: '';
         width: 68px;
         height: 77px;
         top: -280px;
@@ -334,6 +349,10 @@
         z-index: 1;
         backface-visibility: hidden;
         position: absolute;
+
+        @include mq-max-sp {
+          display: none;
+        }
 
         @include mq-min-max-tb {
           width: get-vw(68px);
@@ -354,6 +373,10 @@
         z-index: 1;
         backface-visibility: hidden;
         position: absolute;
+
+        @include mq-max-sp {
+          display: none;
+        }
 
         @include mq-min-max-tb {
           width: get-vw(100px);
@@ -482,6 +505,10 @@
         left: 50%;
         transform: translateX(-50%);
 
+        @include mq-max-sp {
+          display: none;
+        }
+
         @include mq-min-max-tb {
           width: get-vw(138px);
           height: get-vw(182px);
@@ -540,6 +567,10 @@
         backface-visibility: hidden;
         left: 10px;
         top: -30px;
+
+        @include mq-max-sp {
+          display: none;
+        }
 
         @include mq-min-max-tb {
           width: get-vw(622px);
@@ -611,8 +642,20 @@
     font-size: 8.5rem;
     font-weight: 500;
 
+    @include mq-max-sp {
+      font-size: 5.6rem;
+      line-height: 1.3;
+    }
+
     @include mq-min-max-tb {
       font-size: 6rem;
+    }
+
+    span {
+      @include mq-max-sp {
+        display: block;
+        text-align: center;
+      }
     }
 
     .text-white {
@@ -640,6 +683,10 @@
       padding-bottom: 30px;
       margin-top: -150px;
 
+      @include mq-max-sp {
+        margin-top: 0;
+      }
+
       @include mq-min-max-tb {
         margin-top: get-vw(-30px);
         padding-bottom: get-vw(30px);
@@ -659,6 +706,11 @@
         padding-left: 0;
         padding-right: 20px;
         width: 40%;
+
+        @include mq-max-sp {
+          width: 100%;
+          padding-top: 0;
+        }
 
         @include mq-min-max-tb {
           padding-top: get-vw(150px);
@@ -741,6 +793,10 @@
         top: -80px;
         left: 0;
 
+        @include mq-max-sp {
+          display: none;
+        }
+
         @include mq-min-max-tb {
           width: get-vw(184px);
           height: get-vw(198px);
@@ -793,6 +849,10 @@
             left: 50%;
             transform: translateX(-105%);
 
+            @include mq-max-sp {
+              display: none;
+            }
+
             @include mq-min-max-tb {
               width: get-vw(104px);
               height: get-vw(116px);
@@ -804,6 +864,10 @@
             font-size: 8.5rem;
             font-weight: 500;
             line-height: 1.2;
+
+            @include mq-max-sp {
+              font-size: 5.6rem;
+            }
 
             .text-yellow {
               color: #FFC416;
@@ -855,16 +919,27 @@
     // margin: auto;
   }
 
+  @include mq-max-sp {
+    padding-top: 180%;
+  }
+
   .mv-swiper-pagination {
     display: none;
   }
 
   .box-swiper-content {
     position: absolute;
-    left: 190px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+
+    @include mq-max-sp {
+      padding: 0 35px 30px;
+    }
+
+    @include mq-min-tb {
+      left: 190px;
+    }
 
     @include mq-min-max-tb {
       left: get-vw(190px);
@@ -937,6 +1012,10 @@
         color: #211E1F;
         line-height: 1.1;
 
+        @include mq-max-sp {
+          font-size: 6rem;
+        }
+
         @include mq-min-max-tb {
           font-size: get-vw(100px);
         }
@@ -947,6 +1026,10 @@
         font-weight: 500;
         color: #FFC416;
         line-height: 1.1;
+
+        @include mq-max-sp {
+          font-size: 5.6rem;
+        }
 
         @include mq-min-max-tb {
           font-size: get-vw(100px);
@@ -961,6 +1044,12 @@
       padding: 20px 0 0 10px;
       font-weight: 400;
 
+      @include mq-max-sp {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        padding: 40px 0 0 0;
+      }
+
       @include mq-min-max-tb {
         padding: get-vw(20px) 0 0 get-vw(10px);
       }
@@ -970,6 +1059,10 @@
       display: flex;
       margin-top: 40px;
       margin-left: 10px;
+
+      @include mq-max-sp {
+        margin-left: 0;
+      }
 
       @include mq-min-max-tb {
         margin-top: get-vw(40px);
@@ -995,6 +1088,10 @@
 
       .mv-swiper-button-prev {
         margin-right: 20px;
+
+        @include mq-max-sp {
+          margin-right: 10px;
+        }
       }
     }
 
@@ -1026,6 +1123,13 @@
         top: 0;
         right: 0;
         position: absolute;
+
+        @include mq-max-sp {
+          width: 340px;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+        }
       }
 
       .box-image {
@@ -1036,18 +1140,27 @@
         bottom: 0;
         left: 0;
 
+        @include mq-max-sp {
+          padding-top: 0;
+        }
+
         @media (min-width: 1600px) {
           padding-top: 66.43%;
         }
 
         img {
           position: absolute;
-          left: 0;
-          bottom: 0;
-          max-width: fit-content;
           width: auto;
           height: auto;
-          object-fit: none;
+          bottom: 50px;
+          right: -130px;
+
+          @include mq-min-tb {
+            left: 0;
+            bottom: 0;
+            max-width: fit-content;
+            object-fit: none;
+          }
         }
       }
     }

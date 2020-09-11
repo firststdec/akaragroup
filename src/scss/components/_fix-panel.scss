@@ -6,6 +6,10 @@
   right: 15px;
   z-index: 40;
 
+  @include mq-max-sp {
+    display: none;
+  }
+
   .inner {
     display: flex;
     flex-wrap: wrap;
