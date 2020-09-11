@@ -503,7 +503,7 @@
 .-recipes-top-heading {
   margin-top: 0 !important;
 
-  .inner {
+  > .inner {
     background: url(/assets/img/common/recipes-icon-pattern.jpg) no-repeat center center;
     background-size: contain;
     padding: 100px 0 80px;
@@ -547,6 +547,17 @@
         .text {
           font-size: 1.6rem;
         }
+      }
+    }
+  }
+
+  .c-box-cmn-button {
+    margin-top: 60px;
+    text-align: center;
+
+    .c-button-cmn-01 {
+      .arrow {
+        position: relative;
       }
     }
   }
