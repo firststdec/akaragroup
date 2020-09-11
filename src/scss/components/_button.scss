@@ -1,6 +1,6 @@
 .c-button-cmn {
   &-01 {
-    padding: 10px 30px;
+    padding: 10px 20px;
     cursor: pointer;
     position: relative;
     display: inline-block;
@@ -56,11 +56,12 @@
       }
     }
 
-    > .text {
+    >.text {
       font-weight: 500;
       font-size: 1.4rem;
       color: $baseColor;
       position: relative;
+      padding-left: 15px;
       padding-right: 10px;
       display: none;
       transition: all .3s ease-out;
@@ -80,13 +81,13 @@
   align-items: center;
   text-align: left;
   border: none;
-  background-image: linear-gradient(to right, #06d496 , #00bd7b);
+  background-image: linear-gradient(to right, #06d496, #00bd7b);
   border-radius: 30px;
   font-size: 1.4rem;
   color: #fff;
   letter-spacing: normal;
   color: #fff;
-  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
 
   &::after {
     position: absolute;
@@ -99,19 +100,24 @@
     transition: opacity 0.3s;
     z-index: 2;
     opacity: 0;
-    background-image: linear-gradient(to right, #fff , #fff);
+    background-image: linear-gradient(to right, #fff, #fff);
   }
+
   &:hover::after {
     opacity: 1;
   }
+
   &__text {
     display: inline-flex;
     position: relative;
     z-index: 3;
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
       transform: translateY(-1px);
     }
   }
+
   &__icon::before,
   &__icon::after {
     position: absolute;
@@ -120,21 +126,25 @@
     z-index: 3;
     transform: translateY(-50%);
   }
+
   //margin
   &-margin {
     margin-left: 5px;
     margin-right: 5px;
+
     @include mq-min-tb {
       margin-left: 10px;
       margin-right: 10px;
       max-width: 200px;
     }
   }
+
   // size
   &-auto {
     @extend #{$this};
     width: auto;
   }
+
   &-small {
     @extend #{$this};
     // max-width: 100px;
@@ -144,6 +154,7 @@
     padding: 10px;
     height: 40px;
   }
+
   &-middle {
     @extend #{$this};
     // min-width: 200px;
@@ -153,6 +164,7 @@
     line-height: 1.45;
     height: 50px;
   }
+
   &-large {
     @extend #{$this};
     // max-width: 300px;
@@ -162,62 +174,88 @@
     line-height: 1.25;
     height: 60px;
   }
+
   // colors
   &--green {
-    background-image: linear-gradient(to right, #06d496 , #00bd7b);
+    background-image: linear-gradient(to right, #06d496, #00bd7b);
   }
+
   &--green::after {
-    background-image: linear-gradient(to right, #50e1b5 , #4dd1a3);
+    background-image: linear-gradient(to right, #50e1b5, #4dd1a3);
   }
+
   &--orange {
-    background-image: linear-gradient(to right, #f8b500 , #f8b500);
+    background-image: linear-gradient(to right, #f8b500, #f8b500);
   }
+
   &--orange::after {
-    background-image: linear-gradient(to right, #f8b900 , #f8b900);
+    background-image: linear-gradient(to right, #f8b900, #f8b900);
   }
-  &--weak {
-    border-color: #999;
-    background-color: #999;
+}
+
+$primary-color: #00489F;
+$dark-nuetral: #2f2f2f;
+$primary-color-hover: tint($primary-color, 50%);
+$timing: 0.6s;
+$easing: cubic-bezier(.6, .15, .51, 1);
+$reverse-easing: cubic-bezier(1, .51, .15, .6);
+
+.-button {
+  $spacing: 13px;
+  line-height: 1.2;
+  font-weight: 300;
+  $timing: 600ms;
+  $easing: cubic-bezier(.6, .15, .51, 1.25);
+  padding: 0 17px 0 03px;
+  $icon-width: 18px;
+  overflow: hidden;
+  position: relative;
+  transition:
+    background-color $timing $easing,
+    border-color $timing $easing,
+    color $timing $easing;
+
+  &:focus {
+    outline: none;
   }
 
-  &--gray {
-    border-color: #C5C7CB;
-    background-color: #C5C7CB;
-    background-image: none;
+  &:active {
+    background-color: shade($primary-color-hover, 20%);
+    border-color: shade($primary-color-hover, 20%);
+  }
 
-    &:hover{
-      opacity: 0.7;
-      border-color: #C5C7CB;
-      background-color: #C5C7CB
-    }
-    &:after{
-      display: none;
-    }
+  .fa {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    opacity: 1;
+    color: #fff;
+    transition:
+      transform $timing * .718 $easing,
+      opacity $timing $easing;
+      transform: translateY(-50%);
   }
-  // 非活性
-  &[disabled] {
-    @extend #{$this};
-    opacity: .3;
+
+  .fa--bottom {
+    transform: translateY(-25px);
+    color: #211E1F;
   }
-  // group
-  &-group {
-    display: flex;
-    justify-content: center;
-    margin-left: -5px;
-    margin-right: -5px;
-    @include mq-min-tb {
-      margin-left: -10px;
-      margin-right: -10px;
+}
+
+.-btn-where-to-buy {
+  &:hover {
+    background-color: $primary-color-hover;
+    border-color: $primary-color-hover;
+    color: $dark-nuetral;
+
+    .fa {
+      transform: translateY(50px);
+      opacity: 0;
     }
-  }
-  // 余白
-  * + &-group {
-    margin-top: 10px;
-    @include mq-min-tb {
-      margin-top: 20px;
+
+    .fa--bottom {
+      transform: translateY(-7px);
+      opacity: 1;
     }
-  }
-  .is-transparent{
-    background: transparent;
   }
 }

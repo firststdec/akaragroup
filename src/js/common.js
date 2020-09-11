@@ -24,6 +24,7 @@ $(function () {
   jsMainvisual();
   jsSlickCenter()
   headerHideSP()
+  elementInviewTop()
 });
 
 $(window).on('load', function () {
@@ -198,13 +199,19 @@ var headerHideSP = function() {
     if(spDevices.mobile()) {
       height = MQ == 'PC' ? 200 : 70
     } else {
-      height = MQ == 'PC' ? 80 : 70
+      height = MQ == 'PC' ? 200 : 70
     }
 
     if (newTop > oldTop && newTop > height) {
       $header.addClass('is-hidden-sp')
+      $header.removeClass('is-active-bg')
     } else if (newTop < oldTop) {
       $header.removeClass('is-hidden-sp')
+      $header.addClass('is-active-bg')
+    }
+
+    if($(window).scrollTop() <= height){
+      $header.removeClass('is-active-bg')
     }
 
     oldTop = newTop
@@ -235,7 +242,7 @@ var headerFixed = function () {
     if (MQ === 'PC') {
       scrollTop = $(this).scrollTop();
       holderHeight = $header.innerHeight();
-  
+
       if (scrollTop > holderHeight && !$container.hasClass('is-fixed') && !$container.hasClass('is-before-fixed')) {
         $header.css({ height: holderHeight })
         $container
@@ -515,7 +522,7 @@ var topSlider = function(){
         .addClass('on');
       //$('.c-box-mainvisual .c-text, .c-box-mainvisual .c-button').addClass('is-animated');
     });
-  
+
     $imgSlider.slick({
       arrows: false,
       autoplay: true,
@@ -525,13 +532,13 @@ var topSlider = function(){
       infinite: true,
       swipe: false,
       useCSS: false,
-      
+
     }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
       $('.current').text(nextSlide + 1);
-    
+
       var _current = $imgSlider.find('.slick-slide').eq(currentSlide);
       var _next = $imgSlider.find('.slick-slide').eq(nextSlide);
-      
+
       _next.addClass('on');
     }).on('afterChange', function(event, slick, currentSlide){
       $imgSlider
@@ -590,7 +597,7 @@ var selectAddClass = function(){
       $(this).removeClass('selected');
     }
   });
-} 
+}
 /* ----------------------------------------------------------
   js-fit
 ---------------------------------------------------------- */
@@ -709,4 +716,32 @@ var jsSlickCenter = function () {
       ]
     });
   }
+}
+
+var elementInviewTop = function () {
+  var $animation_elements = $('.animation-element')
+  var $window = $(window)
+
+  function check_if_in_view() {
+    var window_height = $window.height()
+    var window_top_position = $window.scrollTop()
+    var window_bottom_position = (window_top_position + window_height)
+
+    $.each($animation_elements, function() {
+      var offsetTop = MQ == 'PC' ? 200 : 70
+      var $element = $(this)
+      var element_height = $element.outerHeight()
+      var element_top_position = $element.offset().top + offsetTop
+      var element_bottom_position = (element_top_position + element_height)
+
+      //check to see if this current container is within viewport
+      if ((element_bottom_position >= window_top_position) &&
+          (element_top_position <= window_bottom_position)) {
+        $element.addClass('in-view')
+      }
+    });
   }
+
+  $window.on('scroll resize', check_if_in_view)
+  $window.trigger('scroll')
+}

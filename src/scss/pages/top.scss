@@ -10,6 +10,39 @@
       z-index: 3;
       display: inline-flex;
       align-items: flex-end;
+      max-width: 610px;
+
+      @include mq-min-max-tb {
+        max-width: get-vw(610px);
+      }
+
+      .c-deco-yellow-egg {
+        width: 75px;
+        height: 88px;
+        bottom: -200px;
+        right: 80px;
+        background: url(/assets/img/top/ico_deco_egg_yellow.svg) no-repeat;
+        background-size: cover;
+        z-index: 1;
+        backface-visibility: hidden;
+        position: absolute;
+
+        @include mq-min-max-tb {
+          width: get-vw(75px);
+          height: get-vw(88px);
+          bottom: get-vw(-200px);
+          right: get-vw(80px);
+        }
+      }
+
+      .image {
+        position: relative;
+        right: 150px;
+
+        @include mq-min-max-tb {
+          right: get-vw(150px);
+        }
+      }
     }
 
     .box-content {
@@ -30,6 +63,114 @@
         width: 100%;
         left: auto;
         padding: 0 20px;
+      }
+
+      .c-scroll-down-button {
+        $this: &;
+
+        position: relative;
+
+        &::before {
+          content: '';
+          width: 62px;
+          height: 65px;
+          top: -680px;
+          left: -245px;
+          background: url(/assets/img/top/scroll_down.svg) no-repeat;
+          background-size: cover;
+          z-index: 1;
+          backface-visibility: hidden;
+          position: absolute;
+          transition: all .3s ease-in-out;
+          opacity: 1;
+          animation: vertical 1.5s ease-in-out infinite alternate;
+
+          @include mq-min-max-tb {
+            width: get-vw(62px);
+            height: get-vw(65px);
+            top: get-vw(-680px);
+            left: get-vw(-245px);
+          }
+
+          @media (max-width: 1024px) {
+            left: get-vw(-230px);
+          }
+        }
+
+        &::after {
+          content: '';
+          width: 66px;
+          height: 81px;
+          top: -680px;
+          left: -245px;
+          background: url(/assets/img/top/scroll_down_hover.svg) no-repeat;
+          background-size: cover;
+          z-index: 1;
+          backface-visibility: hidden;
+          position: absolute;
+          transition: all .3s ease-in-out;
+          opacity: 0;
+          transform: translateY(10px);
+
+          @include mq-min-max-tb {
+            width: get-vw(66px);
+            height: get-vw(81px);
+            top: get-vw(-680px);
+            left: get-vw(-245px);
+          }
+
+          @media (max-width: 1024px) {
+            left: get-vw(-230px);
+          }
+        }
+
+        &:hover {
+          &::before {
+            opacity: 0;
+          }
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+
+      .c-scroll-down-line {
+        width: 230px;
+        height: 350px;
+        top: -580px;
+        left: -24px;
+        background: url(/assets/img/top/ico_line_scroll_down.svg) no-repeat;
+        background-size: cover;
+        z-index: 1;
+        backface-visibility: hidden;
+        position: absolute;
+
+        @include mq-min-max-tb {
+          width: get-vw(230px);
+          height: get-vw(350px);
+          top: get-vw(-580px);
+          left: get-vw(-24px);
+        }
+      }
+
+      .c-deco-yellow-egg-bg {
+        width: 274px;
+        height: 566px;
+        bottom: -130px;
+        left: -25px;
+        background: url(/assets/img/top/ico_deco_two_egg_yellow.svg) no-repeat;
+        background-size: cover;
+        z-index: 1;
+        backface-visibility: hidden;
+        position: absolute;
+
+        @include mq-min-max-tb {
+          width: get-vw(274px);
+          height: get-vw(566px);
+          bottom: get-vw(-130px);
+          left: get-vw(-25px);
+        }
       }
 
       .c-egg {
@@ -57,8 +198,8 @@
         width: 403px;
         height: 379px;
         position: absolute;
-        left: 40%;
-        bottom: -50%;
+        left: 220px;
+        bottom: -130px;
         transform: translateY(50%);
         background: url(/assets/img/top/img_product_01-2.png) no-repeat;
         background-size: cover;
@@ -69,6 +210,8 @@
           width: get-vw(403px);
           height: get-vw(379px);
           background-size: get-vw(403px) get-vw(379px);
+          left: get-vw(220px);
+          bottom: get-vw(-130px);
         }
       }
 
@@ -86,7 +229,7 @@
         }
       }
 
-      * {
+      > * {
         position: relative;
         z-index: 2;
       }
@@ -96,10 +239,11 @@
   &.-green-egg {
     position: relative;
     padding-right: 180px;
-    margin-top: 400px;
+    margin-top: 350px;
 
     @include mq-min-max-tb {
-      margin-top: get-vw(400px);
+      padding-right: get-vw(180px);
+      margin-top: get-vw(350px);
     }
 
     @include mq-max-sp {
@@ -113,6 +257,32 @@
       z-index: 3;
       display: inline-flex;
       align-items: flex-end;
+      max-width: 635px;
+      margin-top: 50px;
+
+      @include mq-min-max-tb {
+        max-width: get-vw(635px);
+        margin-top: get-vw(50px);
+      }
+
+      .c-deco-green-hen {
+        width: 404px;
+        height: 238px;
+        top: -160px;
+        left: 40px;
+        background: url(/assets/img/top/ico_hen_green_line.svg) no-repeat;
+        background-size: cover;
+        z-index: 1;
+        backface-visibility: hidden;
+        position: absolute;
+
+        @include mq-min-max-tb {
+          width: get-vw(404px);
+          height: get-vw(238px);
+          top: get-vw(-160px);
+          left: get-vw(40px);
+        }
+      }
     }
 
     .box-content {
@@ -120,7 +290,7 @@
       z-index: 2;
       text-align: center;
       padding-left: 0;
-      width: 486px;
+      max-width: 486px;
       margin: auto;
 
       @include mq-min-max-tb {
@@ -157,26 +327,40 @@
         content: '';
         width: 68px;
         height: 77px;
-        top: -250px;
+        top: -280px;
         left: 150px;
         background: url(/assets/img/top/img_eggology_top_deco.png) no-repeat;
         background-size: cover;
         z-index: 1;
         backface-visibility: hidden;
         position: absolute;
+
+        @include mq-min-max-tb {
+          width: get-vw(68px);
+          height: get-vw(77px);
+          top: get-vw(-280px);
+          left: get-vw(150px);
+        }
       }
 
       .c-egg-deco-bottom {
         content: '';
         width: 100px;
         height: 126px;
-        bottom: -80px;
-        left: 100px;
+        bottom: -100px;
+        left: 20px;
         background: url(/assets/img/top/img_eggology_egg_deco.png) no-repeat;
         background-size: cover;
         z-index: 1;
         backface-visibility: hidden;
         position: absolute;
+
+        @include mq-min-max-tb {
+          width: get-vw(100px);
+          height: get-vw(126px);
+          bottom: get-vw(-100px);
+          left: get-vw(20px);
+        }
       }
 
       &::after {
@@ -184,8 +368,8 @@
         width: 403px;
         height: 379px;
         position: absolute;
-        right: -20%;
-        bottom: -30%;
+        right: -200px;
+        bottom: -90px;
         transform: translateY(50%);
         background: url(/assets/img/top/img_product_02-2.png) no-repeat;
         background-size: cover;
@@ -196,6 +380,8 @@
           width: get-vw(403px);
           height: get-vw(379px);
           background-size: get-vw(403px) get-vw(379px);
+          right: get-vw(-200px);
+          bottom: get-vw(-90px);
         }
       }
 
@@ -207,9 +393,13 @@
           display: block;
           width: 100%;
           height: 5px;
-          margin-top: 20px;
+          margin-top: 30px;
           background: url(/assets/img/top/img_line.png) no-repeat center top;
           backface-visibility: hidden;
+
+          @include mq-min-max-tb {
+            margin-top: get-vw(30px);
+          }
         }
       }
 
@@ -225,7 +415,7 @@
     margin-top: 200px;
 
     @include mq-min-max-tb {
-      margin-top: get-vw(200px);
+      margin-top: get-vw(100px);
     }
 
     @include mq-max-sp {
@@ -237,6 +427,11 @@
       z-index: 3;
       display: inline-flex;
       align-items: flex-end;
+      max-width: 600px;
+
+      @include mq-min-max-tb {
+        max-width: get-vw(600px);
+      }
 
       .c-hen-deco-orange {
         width: 146px;
@@ -254,6 +449,7 @@
           width: get-vw(146px);
           height: get-vw(151px);
           background-size: get-vw(146px) get-vw(151px);
+          bottom: get-vw(-152px);
         }
       }
 
@@ -265,8 +461,13 @@
         background-size: cover;
         z-index: 1;
         backface-visibility: hidden;
-        top: 20px;
+        top: 90px;
         right: 25px;
+
+        @include mq-min-max-tb {
+          top: get-vw(90px);
+          right: get-vw(25px);
+        }
       }
 
       .c-line-deco-orange {
@@ -280,6 +481,11 @@
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+
+        @include mq-min-max-tb {
+          width: get-vw(138px);
+          height: get-vw(182px);
+        }
       }
     }
 
@@ -294,6 +500,7 @@
 
       @include mq-min-max-tb {
         width: get-vw(486px);
+        left: get-vw(-120px);
       }
 
       @include mq-max-sp {
@@ -331,13 +538,15 @@
         background-size: cover;
         z-index: 1;
         backface-visibility: hidden;
-        left: 110px;
+        left: 10px;
         top: -30px;
 
         @include mq-min-max-tb {
           width: get-vw(622px);
           height: get-vw(544px);
           background-size: get-vw(622px) get-vw(544px);
+          left: get-vw(10px);
+          top: get-vw(-30px);
         }
       }
 
@@ -357,6 +566,7 @@
           width: get-vw(403px);
           height: get-vw(379px);
           background-size: get-vw(403px) get-vw(379px);
+          right: get-vw(-350px);
         }
       }
 
@@ -385,14 +595,16 @@
 .-story-about-top {
   background: url(/assets/img/top/bg_story_about_yellow.svg) no-repeat center top;
   margin-top: 300px !important;
-  padding: 100px 0 60px;
+  padding: 100px 0 0;
   backface-visibility: hidden;
+  background-size: 1440px 1533px;
 
   @include mq-min-max-tb {
     background-size: 100%;
     padding: 50px 0;
     background-position: center center;
     margin-top: get-vw(300px) !important;
+    background-size: get-vw(1440px) get-vw(1533px);
   }
 
   .c-heading-cmn-01 {
@@ -409,6 +621,12 @@
   }
 
   .c-box-card-row-01 {
+    margin-top: -50px;
+
+    @include mq-min-max-tb {
+      margin-top: get-vw(-50px);
+    }
+
     &:not(:first-of-type) {
       padding-top: 0;
     }
@@ -418,16 +636,41 @@
     }
 
     &.-reverse {
-      margin-top: 0;
+      margin-top: -30px;
+      padding-bottom: 30px;
+      margin-top: -150px;
+
+      @include mq-min-max-tb {
+        margin-top: get-vw(-30px);
+        padding-bottom: get-vw(30px);
+        margin-top: get-vw(-50px);
+      }
+
+      .box-image {
+        width: 60%;
+
+        @include mq-max-sp {
+          width: 100%;
+        }
+      }
 
       .box-content {
-        padding-top: 120px;
+        padding-top: 150px;
         padding-left: 0;
         padding-right: 20px;
+        width: 40%;
+
+        @include mq-min-max-tb {
+          padding-top: get-vw(150px);
+          padding-left: 0;
+          padding-right: get-vw(20px);
+        }
       }
     }
 
     .box-image {
+      width: 60%;
+
       @include mq-max-sp {
         width: 100%;
       }
@@ -435,12 +678,18 @@
 
     .box-content {
       position: relative;
-      padding-top: 100px;
+      padding-top: 150px;
       padding-left: 20px;
+      width: 40%;
 
       @include mq-max-sp {
         width: 100%;
         padding: 0;
+      }
+
+      @include mq-min-max-tb {
+        padding-top: get-vw(150px);
+        padding-left: get-vw(20px);
       }
 
       .c-orange-egg {
@@ -448,14 +697,15 @@
         height: 468px;
         background: url(/assets/img/top/img_orange_egg.png) no-repeat;
         position: absolute;
-        top: -400px;
-        right: 0;
+        top: -300px;
+        right: 100px;
 
         @include mq-min-max-tb {
           width: get-vw(422px);
           height: get-vw(468px);
           background-size: get-vw(422px) get-vw(468px);
-          top: get-vw(-400px);
+          top: get-vw(-300px);
+          right: get-vw(100px);
         }
 
         @include mq-max-sp {
@@ -471,15 +721,15 @@
         height: 555px;
         background: url(/assets/img/top/img_about_akara_egg.png) no-repeat;
         position: absolute;
-        bottom: -320px;
-        right: -180px;
+        bottom: -280px;
+        right: -200px;
 
         @include mq-min-max-tb {
           width: get-vw(636px);
           height: get-vw(555px);
           background-size: get-vw(636px) get-vw(555px);
-          bottom: get-vw(-320px);
-          right: get-vw(-180px);
+          bottom: get-vw(-280px);
+          right: get-vw(-200px);
         }
       }
 
@@ -488,8 +738,14 @@
         height: 198px;
         background: url(/assets/img/top/img_line_dotted_about_akara.png) no-repeat;
         position: absolute;
-        top: -120px;
+        top: -80px;
         left: 0;
+
+        @include mq-min-max-tb {
+          width: get-vw(184px);
+          height: get-vw(198px);
+          top: get-vw(-80px);
+        }
       }
 
       .c-text-cmn-01 {
@@ -500,64 +756,84 @@
 }
 
 // -recipes-top-heading
-.-recipes-top-heading {
-  margin-top: 0 !important;
+.l-sec-cmn-01 {
+  &.-recipes-top-heading {
+    margin-top: 80px;
 
-  > .inner {
-    background: url(/assets/img/common/recipes-icon-pattern.jpg) no-repeat center center;
-    background-size: contain;
-    padding: 100px 0 80px;
-  }
+    @include mq-min-max-tb {
+      margin-top: get-vw(80px);
+    }
 
-  .c-box-heading-center-text {
-    .inner {
-      display: block;
+    > .inner {
+      background: url(/assets/img/common/recipes-icon-pattern.jpg) no-repeat center center;
+      background-size: contain;
+      padding: 100px 0 80px;
 
-      .box-heading {
-        text-align: center;
-        border-left: 0;
-        position: relative;
+      @include mq-min-max-tb {
+        padding: get-vw(100px) 0 get-vw(80px);
+      }
+    }
 
-        .c-line-deco {
-          width: 104px;
-          height: 116px;
-          background: url(/assets/img/common/ico_dotline_recipes.jpg) no-repeat center center;
-          background-size: contain;
-          position: absolute;
-          top: -116px;
-          left: 50%;
-          transform: translateX(-50%);
+    .c-box-heading-center-text {
+      .inner {
+        display: block;
+
+        .box-heading {
+          text-align: center;
+          border-left: 0;
+          position: relative;
+
+          .c-line-deco {
+            width: 104px;
+            height: 116px;
+            background: url(/assets/img/common/ico_dotline_recipes.png) no-repeat center center;
+            background-size: contain;
+            position: absolute;
+            top: -110px;
+            left: 50%;
+            transform: translateX(-105%);
+
+            @include mq-min-max-tb {
+              width: get-vw(104px);
+              height: get-vw(116px);
+              top: get-vw(-110px);
+            }
+          }
+
+          .title {
+            font-size: 8.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+
+            .text-yellow {
+              color: #FFC416;
+            }
+          }
         }
 
-        .title {
-          font-size: 8.5rem;
-          font-weight: 500;
-          line-height: 1.2;
+        .box-text {
+          width: 100%;
+          text-align: center;
 
-          .text-yellow {
-            color: #FFC416;
+          .text {
+            font-size: 1.6rem;
           }
         }
       }
-
-      .box-text {
-        width: 100%;
-        text-align: center;
-
-        .text {
-          font-size: 1.6rem;
-        }
-      }
     }
-  }
 
-  .c-box-cmn-button {
-    margin-top: 60px;
-    text-align: center;
+    .c-box-cmn-button {
+      margin-top: 60px;
+      text-align: center;
 
-    .c-button-cmn-01 {
-      .arrow {
-        position: relative;
+      @include mq-min-max-tb {
+        margin-top: get-vw(60px);
+      }
+
+      .c-button-cmn-01 {
+        .arrow {
+          position: relative;
+        }
       }
     }
   }
@@ -590,8 +866,13 @@
     transform: translateY(-50%);
     z-index: 10;
 
+    @include mq-min-max-tb {
+      left: get-vw(190px);
+    }
+
     @media (min-width: 1600px) {
       left: calc((100% - 1440px) / 2);
+      margin-left: 200px;
     }
 
     svg {
@@ -601,6 +882,10 @@
     .text--line {
       font-size: 10rem;
       font-weight: 600;
+
+      @include mq-min-max-tb {
+        font-size: get-vw(100px);
+      }
     }
 
     #outline {
@@ -651,6 +936,10 @@
         font-weight: 500;
         color: #211E1F;
         line-height: 1.1;
+
+        @include mq-min-max-tb {
+          font-size: get-vw(100px);
+        }
       }
 
       .text-yellow {
@@ -658,6 +947,10 @@
         font-weight: 500;
         color: #FFC416;
         line-height: 1.1;
+
+        @include mq-min-max-tb {
+          font-size: get-vw(100px);
+        }
       }
     }
 
@@ -667,12 +960,21 @@
       font-size: 2rem;
       padding: 20px 0 0 10px;
       font-weight: 400;
+
+      @include mq-min-max-tb {
+        padding: get-vw(20px) 0 0 get-vw(10px);
+      }
     }
 
     .mv-swiper-nav-custom {
       display: flex;
       margin-top: 40px;
       margin-left: 10px;
+
+      @include mq-min-max-tb {
+        margin-top: get-vw(40px);
+        margin-left: ge-vw(10px);
+      }
 
       .mv-swiper-button-next,
       .mv-swiper-button-prev {

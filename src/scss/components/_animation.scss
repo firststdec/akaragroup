@@ -1,0 +1,10 @@
+
+@keyframes horizontal {
+  0% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes vertical {
+  0% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
