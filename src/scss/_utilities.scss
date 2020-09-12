@@ -89,11 +89,11 @@ $sides: (top, bottom, left, right);
 @include mq-max-tb {
   @for $space from 0 through 200 {
     @each $side in $sides {
-      .u-m#{str-slice($side, 0, 1)}-#{$space}-tb {
+      .u-m#{str-slice($side, 0, 1)}-tb-#{$space} {
         margin-#{$side}: #{$space}px !important;
       }
     
-      .u-p#{str-slice($side, 0, 1)}-#{$space}-tb {
+      .u-p#{str-slice($side, 0, 1)}-tb-#{$space} {
         padding-#{$side}: #{$space}px !important;
       }
     }
@@ -103,11 +103,11 @@ $sides: (top, bottom, left, right);
 @include mq-max-sp {
   @for $space from 0 through 200 {
     @each $side in $sides {
-      .u-m#{str-slice($side, 0, 1)}-#{$space}-sp {
+      .u-m#{str-slice($side, 0, 1)}-sp-#{$space} {
         margin-#{$side}: #{$space}px !important;
       }
     
-      .u-p#{str-slice($side, 0, 1)}-#{$space}-sp {
+      .u-p#{str-slice($side, 0, 1)}-sp-#{$space} {
         padding-#{$side}: #{$space}px !important;
       }
     }

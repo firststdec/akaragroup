@@ -3,11 +3,39 @@
     padding: 10px 20px;
     cursor: pointer;
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     border-radius: 30px;
     overflow: hidden;
     backface-visibility: hidden;
     transition: all 0.3s ease;
+    border: 1px solid #fff;
+    transition: all .5s;
+
+    &:hover {
+      padding-right: 40px;
+      border: 0;
+      box-shadow: 3px 5px 15px 0px rgba(0,0,0,0.16);
+
+      .arrow {
+        opacity: 1;
+      }
+
+      &::before {
+        width: 100%;
+        background: radial-gradient(#FCE279, #FFC416);
+      }
+
+      &::after {
+
+      }
+
+      .text {
+        opacity: 1;
+        font-size: 1.4rem;
+        padding: 0 10px 0 15px;
+      }
+    }
 
     &::before,
     &::after {
@@ -22,38 +50,15 @@
     }
 
     &::before {
-      background: radial-gradient(#fceabb, #f8b500);
-      box-shadow: inset 0 0 0 60px #fff;
+      width: 0;
     }
 
-    &::after {
-      box-shadow: inset 0 0 0 1px #333;
+    &.--border-base {
+      border-color: $baseColor;
     }
 
     .arrow {
       transition: all .3s ease 0s;
-    }
-
-    &:hover {
-      padding-right: 40px;
-
-      .arrow {
-        opacity: 1;
-      }
-
-      &::before {
-        box-shadow: inset 0 0 0 1px #f8b500;
-        // background: radial-gradient(#fceabb, #f8b500);
-      }
-
-      &::after {
-        box-shadow: inset 0 0 0 1px #f8b500;
-        // background: radial-gradient(#fceabb, #f8b500);
-      }
-
-      .text {
-        display: inline-block;
-      }
     }
 
     >.text {
@@ -61,10 +66,35 @@
       font-size: 1.4rem;
       color: $baseColor;
       position: relative;
-      padding-left: 15px;
-      padding-right: 10px;
-      display: none;
+      font-size: 0;
+      opacity: 0;
       transition: all .3s ease-out;
+    }
+
+    &.--green {
+      .arrow,
+      .text {
+        color: $white;
+      }
+
+      &:hover {
+        padding-right: 40px;
+        border: 0;
+        box-shadow: 3px 5px 15px 0px rgba(0,0,0,0.16);
+
+        .arrow {
+          opacity: 1;
+        }
+
+        &::before {
+          width: 100%;
+          background: radial-gradient(#43AB3F, #245D38);
+        }
+
+        .text {
+          display: inline-block;
+        }
+      }
     }
   }
 }
@@ -243,6 +273,8 @@ $reverse-easing: cubic-bezier(1, .51, .15, .6);
 }
 
 .-btn-where-to-buy {
+  background-image: radial-gradient(#FCE279, #FFC416);
+
   &:hover {
     background-color: $primary-color-hover;
     border-color: $primary-color-hover;

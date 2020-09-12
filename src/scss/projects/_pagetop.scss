@@ -39,7 +39,7 @@
       color: $baseColor;
 
       @include mq-max-sp {
-        padding-top: 5px;
+        padding-top: 8px;
         font-size: 2rem;
       }
     }

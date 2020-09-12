@@ -40,42 +40,43 @@ block content
     .l-sec-cmn-02
       .inner
         .c-box-swiper-mv
-          .box-swiper-content
-            .heading
-              .text-black EVERYDAY
-              .text-yellow with akara
-                //- svg
-                //-   symbol#text-copy
-                //-     text.text--line(text-anchor='center', x='0', y='50%') with akara
-                //-   g.g-ants
-                //-     use#outline.text-copy(xlink:href='#text-copy')
-                //-     use#fill.text-copy(xlink:href='#text-copy')
+          .slider-inner
+            .box-swiper-content
+              .heading
+                .text-black EVERYDAY
+                .text-yellow with akara
+                  //- svg
+                  //-   symbol#text-copy
+                  //-     text.text--line(text-anchor='center', x='0', y='50%') with akara
+                  //-   g.g-ants
+                  //-     use#outline.text-copy(xlink:href='#text-copy')
+                  //-     use#fill.text-copy(xlink:href='#text-copy')
 
-            .text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years
-            .mv-swiper-nav-custom
-              // Add Arrows
-              .mv-swiper-button-prev
-                i.fas.fa-chevron-left
-              .mv-swiper-button-next
-                i.fas.fa-chevron-right
+              .text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years
+              .mv-swiper-nav-custom
+                // Add Arrows
+                .mv-swiper-button-prev
+                  i.fas.fa-chevron-left
+                .mv-swiper-button-next
+                  i.fas.fa-chevron-right
 
-          .box-swiper-mv-js
-            .swiper-wrapper
-              .swiper-slide
-                .mainvisual-content
-                  .box-image-wrapper
-                    figure.box-image
-                      img.image(src="/assets/img/top/img_mainvisual_01.png", alt="Akara Group", data-object-fit="cover")
-                      //- img.image.-lg(src="/assets/img/top/img_mainvisual_01@2x.png", alt="Akara Group", data-object-fit="cover")
-              .swiper-slide
-                .mainvisual-content
-                  .box-image-wrapper
-                    figure.box-image
-                      img.image(src="/assets/img/top/img_mainvisual_02.png", alt="Akara Group", data-object-fit="cover")
-                      //- img.image.-lg(src="/assets/img/top/img_mainvisual_02@2x.png", alt="Akara Group", data-object-fit="cover")
+            .box-swiper-mv-js
+              .swiper-wrapper
+                .swiper-slide
+                  .mainvisual-content
+                    .box-image-wrapper
+                      figure.box-image
+                        img.image(src="/assets/img/top/img_mainvisual_01.png", alt="Akara Group", data-object-fit="cover")
+                        //- img.image.-lg(src="/assets/img/top/img_mainvisual_01@2x.png", alt="Akara Group", data-object-fit="cover")
+                .swiper-slide
+                  .mainvisual-content
+                    .box-image-wrapper
+                      figure.box-image
+                        img.image(src="/assets/img/top/img_mainvisual_02.png", alt="Akara Group", data-object-fit="cover")
+                        //- img.image.-lg(src="/assets/img/top/img_mainvisual_02@2x.png", alt="Akara Group", data-object-fit="cover")
 
-            // Add Pagination
-            .mv-swiper-pagination
+              // Add Pagination
+              .mv-swiper-pagination
 
     .l-sec-cmn-01
       .inner
@@ -83,9 +84,10 @@ block content
           figure.box-image
             .c-deco-yellow-egg
             img.image.animation-element.slide-right(src="/assets/img/top/img_product_01.png", alt="Akara")
+            .c-open-package.--yellow
           .box-content
             a.js-scroll(href="#scroll_yellow_egg").c-scroll-down-button
-            .c-scroll-down-line
+              .c-scroll-down-line
             .c-egg#scroll_yellow_egg
             .c-deco-yellow-egg-bg
             .c-heading-cmn-01.animation-element.slide-left
@@ -101,6 +103,7 @@ block content
           figure.box-image
             .c-deco-green-hen
             img.image.animation-element.slide-left(src="/assets/img/top/img_product_02.png", alt="Akara Group")
+            .c-open-package.--green
           .box-content
             .c-egg
             .c-egg-deco-top
@@ -110,7 +113,7 @@ block content
                 img.image(src="/assets/img/top/img_logo_02.png", alt="Akara")
             .c-text-cmn-01.-white.animation-element.slide-right These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.
             .c-box-cmn-button.animation-element.slide-right
-              a.c-button-cmn-01
+              a.c-button-cmn-01.--green
                 span.text READ MORE
                 span.arrow
                   i.fa.fa-arrow-right
@@ -120,6 +123,7 @@ block content
             .c-egg-deco-orange
             .c-line-deco-orange
             img.image.animation-element.slide-right(src="/assets/img/top/img_product_03.png", alt="Akaragroup")
+            .c-open-package.--orange
           .box-content
             .c-egg
             .c-mori-tama-egg
@@ -136,7 +140,8 @@ block content
       .inner
         .c-box-card-row-01
           figure.box-image.animation-element.slide-top
-            img.image(src="/assets/img/top/img_akara_story.png", alt="akara Story")
+            img.image.u-no-sp(src="/assets/img/top/img_akara_story.png", alt="akara Story")
+            img.image.u-no-tb.u-no-pc(src="/assets/img/top/BlackOak.svg", alt="akara Story")
           .box-content
             .c-orange-egg
             .c-heading-cmn-01.animation-element.slide-top
@@ -150,7 +155,8 @@ block content
                   i.fa.fa-arrow-right
         .c-box-card-row-01.-reverse
           figure.box-image.animation-element.slide-top
-            img.image(src="/assets/img/top/img_about_akara.png", alt="About akara")
+            img.image.u-no-sp(src="/assets/img/top/img_about_akara.png", alt="About akara")
+            img.image.u-no-tb.u-no-pc(src="/assets/img/top/everyday-with-akara2.svg", alt="About akara")
           .box-content
             .c-about-akara-egg
             .c-line-dotted-about-akara
@@ -176,7 +182,7 @@ block content
             .box-text.animation-element.slide-top
               .text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either!
             .c-box-cmn-button.animation-element.slide-top
-              a.c-button-cmn-01
+              a.c-button-cmn-01.--border-base
                 span.text READ MORE
                 span.arrow
                   i.fa.fa-arrow-right

@@ -8,13 +8,30 @@
   &__item {
     margin-right: 20px;
 
+    @include mq-max-sp {
+      margin-right: 15px;
+    }
+
     .fab {
       font-size: 3rem;
       color: #333;
+      transition: all .3s;
+
+      @include mq-max-sp {
+        font-size: 2.1rem;
+      }
     }
 
     &:last-of-type {
       margin-right: 0;
+    }
+  }
+
+  &__link {
+    &:hover {
+      .fab {
+        transform: translateY(-10px);
+      }
     }
   }
 }

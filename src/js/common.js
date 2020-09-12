@@ -621,16 +621,16 @@ var jsSlickCenter = function () {
           }
         },
         {
-          breakpoint: 897,
+          breakpoint: 896,
           settings: {
             arrows: false,
             centerMode: true,
             centerPadding: '40px',
-            slidesToShow: 1
+            slidesToShow: 3
           }
         },
         {
-          breakpoint: 375,
+          breakpoint: 426,
           settings: {
             arrows: false,
             centerMode: true,

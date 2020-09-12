@@ -26,7 +26,7 @@
 }
 
 @mixin mq-max-sp {
-  @media (max-width: #{$tbBreakpoint - 1px}) {
+  @media (max-width: #{$spBreakpoint}) {
     @content;
   }
 }
@@ -38,13 +38,13 @@
   }
 }
 
-@mixin mq-custom--max($maxWidth) {
+@mixin mq-custom-max($maxWidth) {
   @media (max-width: #{$maxWidth}) {
     @content;
   }
 }
 
-@mixin mq-custom--min-max($minWidth, $maxWidth) {
+@mixin mq-custom-min-max($minWidth, $maxWidth) {
   @media screen and (min-width: #{$minWidth}) and (max-width: #{$maxWidth}) {
     @content;
   }
