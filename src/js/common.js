@@ -571,9 +571,9 @@ var jsMainvisual = function() {
     slidesPerView: 1,
     centeredSlides: false,
     loop: true,
-    // autoplay: {
-    //   delay: 5000,
-    // },
+    autoplay: {
+      delay: 5000,
+    },
     pagination: {
       el: '.mv-swiper-pagination',
       clickable: true,
