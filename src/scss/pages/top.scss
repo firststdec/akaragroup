@@ -9,6 +9,328 @@
   }
 }
 
+.c-box-swiper-mv {
+  // padding-top: 72.43%;
+  width: 100vw;
+  min-height: 1043px;
+  position: relative;
+
+  @include mq-min-max-tb {
+    min-height: get-vw(1043px);
+  }
+
+  @include mq-max-sp {
+    padding-top: 0;
+    min-height: 475px;
+    background: url(/assets/img/top/bg_mainvisual_sp.svg) no-repeat center bottom;
+    background-size: cover;
+    position: relative;
+    z-index: 10;
+  }
+
+  .slider-inner{
+    max-width: 1440px;
+    margin: auto;
+
+    @include mq-min-max-tb {
+      max-width: get-vw(1440px);
+    }
+  }
+
+  .mv-swiper-pagination {
+    display: none;
+  }
+
+  .box-swiper-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    @include mq-max-sp {
+      padding: 0 35px 30px;
+      margin-top: 95px;
+    }
+
+    @include mq-min-tb {
+      left: 190px;
+    }
+
+    @include mq-min-max-tb {
+      left: get-vw(190px);
+    }
+
+    @media (min-width: 1600px) {
+      left: calc((100% - 1440px) / 2);
+      margin-left: 200px;
+    }
+
+    .heading {
+      padding-bottom: 40px;
+      background: url(/assets/img/top/ico_border_mv.svg) no-repeat 10px bottom;
+
+      @include mq-max-sp {
+        padding-bottom: 20px;
+      }
+
+      @include mq-min-max-tb {
+        padding-bottom: get-vw(50px);
+      }
+    }
+
+    svg {
+      width: 100%;
+    }
+
+    .text--line {
+      font-size: 10rem;
+      font-weight: 600;
+
+      @include mq-min-max-tb {
+        font-size: get-vw(100px);
+      }
+    }
+
+    #outline {
+      fill: none;
+      stroke: #FFC416;
+      stroke-dasharray: 100%;
+      stroke-dashoffset: 0;
+      animation-name: outline;
+      animation-duration: 2.5s;
+      animation-timing-function: ease-in;
+      animation-fill-mode: forwards;
+    }
+
+    #fill {
+      fill-opacity: 0;
+      fill: none;
+      animation-name: fill;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
+      animation-fill-mode: forwards;
+      animation-delay: 1s;
+    }
+
+
+    @keyframes outline {
+      from {
+        stroke-dashoffset: 100%;
+      }
+
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes fill {
+      from {
+        fill-opacity: 0;
+      }
+
+      to {
+        fill-opacity: 1;
+      }
+    }
+
+    .heading {
+      .text-black {
+        font-size: 10rem;
+        font-weight: 500;
+        color: #211E1F;
+        line-height: 1.1;
+
+        @include mq-max-sp {
+          font-size: 6rem;
+        }
+
+        @include mq-min-max-tb {
+          font-size: get-vw(100px);
+        }
+      }
+
+      .text-yellow {
+        font-size: 10rem;
+        font-weight: 500;
+        color: #FFC416;
+        line-height: 1.1;
+
+        @include mq-max-sp {
+          font-size: 5.6rem;
+        }
+
+        @include mq-min-max-tb {
+          font-size: get-vw(100px);
+        }
+      }
+    }
+
+    .text {
+      width: 55%;
+      color: #777;
+      font-size: 2rem;
+      padding: 30px 0 0 10px;
+      font-weight: 400;
+
+      @include mq-max-sp {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        padding: 20px 0 0 0;
+      }
+
+      @include mq-min-max-tb {
+        padding: get-vw(20px) 0 0 get-vw(10px);
+      }
+    }
+
+    .mv-swiper-nav-custom {
+      display: flex;
+      margin-top: 40px;
+      margin-left: 10px;
+
+      @include mq-max-sp {
+        margin-left: 0;
+      }
+
+      @include mq-min-max-tb {
+        margin-top: get-vw(40px);
+        margin-left: ge-vw(10px);
+      }
+
+      .mv-swiper-button-next,
+      .mv-swiper-button-prev {
+        outline: none;
+        width: 34px;
+        height: 34px;
+        background: #fff;
+        border-radius: 100%;
+        box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.16);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s;
+
+        .fas {
+          color: #777;
+          transition: all .3s;
+        }
+
+        &:hover {
+          transform: scale(0.8);
+          background: $baseColor;
+
+          .fas {
+            transform: scale(0.9);
+            color: $yellow;
+          }
+        }
+      }
+
+      .mv-swiper-button-prev {
+        margin-right: 15px;
+
+        @include mq-max-sp {
+          margin-right: 10px;
+        }
+      }
+    }
+
+  }
+
+  .box-swiper-mv-js {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    .swiper-slide {
+      background: transparent;
+
+      @include mq-max-sp {
+        top: 150px;
+      }
+    }
+
+    .mainvisual-content {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      overflow: hidden;
+
+      .box-image-wrapper {
+        width: 63.19%;
+        top: 0;
+        right: 0;
+        position: absolute;
+
+        @include mq-max-sp {
+          width: 340px;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+        }
+        @include mq-custom-min-max(426px, 896px) {
+          width: 500px;
+          height: auto;
+        }
+      }
+
+      .box-image {
+        // padding-top: 114.74%;
+        width: 910px;
+        height: 1044px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        @include mq-min-max-tb {
+          width: get-vw(910px);
+          height: get-vw(1044px);
+        }
+
+        @include mq-max-sp {
+          padding-top: 0;
+          width: 340px;
+          height: 314px;
+          top: auto;
+        }
+
+        @include mq-custom-min-max(426px, 896px) {
+          width: 500px;
+          height: auto;
+        }
+
+        img {
+          position: absolute;
+          width: auto;
+          height: auto;
+          bottom: 50px;
+          right: -130px;
+
+          @include mq-min-pc {
+            left: 0;
+            bottom: 0;
+            max-width: fit-content;
+            object-fit: none;
+          }
+
+          @include mq-min-max-tb {
+            right: get-vw(-250px);
+          }
+        }
+      }
+    }
+
+  }
+}
+
 .c-box-card-row-01 {
   &.-yellow-egg {
     position: relative;
@@ -1153,442 +1475,5 @@
         font-size: 1.8rem;
       }
     }
-  }
-}
-
-.l-sec-cmn-01 {
-  &.-recipes-top-heading {
-    margin-top: 80px;
-
-    @include mq-max-sp {
-      margin-top: 0;
-    }
-
-    @include mq-min-max-tb {
-      margin-top: get-vw(80px);
-    }
-
-    > .inner {
-      background: url(/assets/img/common/recipes-icon-pattern.jpg) no-repeat center center;
-      background-size: contain;
-      padding: 100px 0 80px;
-
-      @include mq-max-sp {
-        background: none;
-        padding: 80px 0 40px;
-      }
-
-      @include mq-min-max-tb {
-        padding: get-vw(100px) 0 get-vw(80px);
-      }
-    }
-
-    .c-box-heading-center-text {
-      .inner {
-        display: block;
-
-        .box-heading {
-          text-align: center;
-          border-left: 0;
-          position: relative;
-
-          .c-line-deco {
-            width: 104px;
-            height: 116px;
-            background: url(/assets/img/common/ico_dotline_recipes.png) no-repeat center center;
-            background-size: contain;
-            position: absolute;
-            top: -110px;
-            left: 50%;
-            transform: translateX(-105%);
-
-            @include mq-max-sp {
-              display: none;
-            }
-
-            @include mq-min-max-tb {
-              width: get-vw(104px);
-              height: get-vw(116px);
-              top: get-vw(-110px);
-            }
-          }
-
-          .title {
-            font-size: 8.5rem;
-            font-weight: 500;
-            line-height: 1.2;
-
-            @include mq-max-sp {
-              font-size: 5.6rem;
-            }
-
-            .text-yellow {
-              color: #FFC416;
-            }
-          }
-        }
-
-        .box-text {
-          width: 100%;
-          text-align: center;
-
-          .text {
-            font-size: 1.6rem;
-
-            @include mq-max-sp {
-              font-size: 1.4rem;
-              color: $baseColor;
-            }
-          }
-        }
-      }
-    }
-
-    .c-box-cmn-button {
-      margin-top: 60px;
-      text-align: center;
-
-      @include mq-max-sp {
-        margin-top: 30px;
-      }
-
-      @include mq-min-max-tb {
-        margin-top: get-vw(60px);
-      }
-
-      .c-button-cmn-01 {
-        .arrow {
-          position: relative;
-        }
-      }
-    }
-  }
-}
-
-.l-sec-box-swiper-voice {
-  margin-top: 0 !important;
-
-  .inner {}
-}
-
-.c-box-swiper-mv {
-  // padding-top: 72.43%;
-  width: 100vw;
-  min-height: 1043px;
-  position: relative;
-
-  @include mq-min-max-tb {
-    min-height: get-vw(1043px);
-  }
-
-  @include mq-max-sp {
-    padding-top: 0;
-    min-height: 475px;
-    background: url(/assets/img/top/bg_mainvisual_sp.svg) no-repeat center bottom;
-    background-size: cover;
-    position: relative;
-    z-index: 10;
-  }
-
-  .slider-inner{
-    max-width: 1440px;
-    margin: auto;
-
-    @include mq-min-max-tb {
-      max-width: get-vw(1440px);
-    }
-  }
-
-  .mv-swiper-pagination {
-    display: none;
-  }
-
-  .box-swiper-content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-
-    @include mq-max-sp {
-      padding: 0 35px 30px;
-      margin-top: 95px;
-    }
-
-    @include mq-min-tb {
-      left: 190px;
-    }
-
-    @include mq-min-max-tb {
-      left: get-vw(190px);
-    }
-
-    @media (min-width: 1600px) {
-      left: calc((100% - 1440px) / 2);
-      margin-left: 200px;
-    }
-
-    .heading {
-      padding-bottom: 40px;
-      background: url(/assets/img/top/ico_border_mv.svg) no-repeat 10px bottom;
-
-      @include mq-max-sp {
-        padding-bottom: 20px;
-      }
-
-      @include mq-min-max-tb {
-        padding-bottom: get-vw(50px);
-      }
-    }
-
-    svg {
-      width: 100%;
-    }
-
-    .text--line {
-      font-size: 10rem;
-      font-weight: 600;
-
-      @include mq-min-max-tb {
-        font-size: get-vw(100px);
-      }
-    }
-
-    #outline {
-      fill: none;
-      stroke: #FFC416;
-      stroke-dasharray: 100%;
-      stroke-dashoffset: 0;
-      animation-name: outline;
-      animation-duration: 2.5s;
-      animation-timing-function: ease-in;
-      animation-fill-mode: forwards;
-    }
-
-    #fill {
-      fill-opacity: 0;
-      fill: none;
-      animation-name: fill;
-      animation-duration: 0.5s;
-      animation-timing-function: ease-in;
-      animation-fill-mode: forwards;
-      animation-delay: 1s;
-    }
-
-
-    @keyframes outline {
-      from {
-        stroke-dashoffset: 100%;
-      }
-
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-
-    @keyframes fill {
-      from {
-        fill-opacity: 0;
-      }
-
-      to {
-        fill-opacity: 1;
-      }
-    }
-
-    .heading {
-      .text-black {
-        font-size: 10rem;
-        font-weight: 500;
-        color: #211E1F;
-        line-height: 1.1;
-
-        @include mq-max-sp {
-          font-size: 6rem;
-        }
-
-        @include mq-min-max-tb {
-          font-size: get-vw(100px);
-        }
-      }
-
-      .text-yellow {
-        font-size: 10rem;
-        font-weight: 500;
-        color: #FFC416;
-        line-height: 1.1;
-
-        @include mq-max-sp {
-          font-size: 5.6rem;
-        }
-
-        @include mq-min-max-tb {
-          font-size: get-vw(100px);
-        }
-      }
-    }
-
-    .text {
-      width: 55%;
-      color: #777;
-      font-size: 2rem;
-      padding: 30px 0 0 10px;
-      font-weight: 400;
-
-      @include mq-max-sp {
-        font-size: 1.4rem;
-        line-height: 1.5;
-        padding: 20px 0 0 0;
-      }
-
-      @include mq-min-max-tb {
-        padding: get-vw(20px) 0 0 get-vw(10px);
-      }
-    }
-
-    .mv-swiper-nav-custom {
-      display: flex;
-      margin-top: 40px;
-      margin-left: 10px;
-
-      @include mq-max-sp {
-        margin-left: 0;
-      }
-
-      @include mq-min-max-tb {
-        margin-top: get-vw(40px);
-        margin-left: ge-vw(10px);
-      }
-
-      .mv-swiper-button-next,
-      .mv-swiper-button-prev {
-        outline: none;
-        width: 34px;
-        height: 34px;
-        background: #fff;
-        border-radius: 100%;
-        box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.16);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        transition: all .3s;
-
-        .fas {
-          color: #777;
-          transition: all .3s;
-        }
-
-        &:hover {
-          transform: scale(0.8);
-          background: $baseColor;
-
-          .fas {
-            transform: scale(0.9);
-            color: $yellow;
-          }
-        }
-      }
-
-      .mv-swiper-button-prev {
-        margin-right: 15px;
-
-        @include mq-max-sp {
-          margin-right: 10px;
-        }
-      }
-    }
-
-  }
-
-  .box-swiper-mv-js {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-
-    .swiper-slide {
-      background: transparent;
-
-      @include mq-max-sp {
-        top: 150px;
-      }
-    }
-
-    .mainvisual-content {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      overflow: hidden;
-
-      .box-image-wrapper {
-        width: 63.19%;
-        top: 0;
-        right: 0;
-        position: absolute;
-
-        @include mq-max-sp {
-          width: 340px;
-          bottom: 0;
-          right: 0;
-          position: absolute;
-        }
-        @include mq-custom-min-max(426px, 896px) {
-          width: 500px;
-          height: auto;
-        }
-      }
-
-      .box-image {
-        // padding-top: 114.74%;
-        width: 910px;
-        height: 1044px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        left: 0;
-
-        @include mq-min-max-tb {
-          width: get-vw(910px);
-          height: get-vw(1044px);
-        }
-
-        @include mq-max-sp {
-          padding-top: 0;
-          width: 340px;
-          height: 314px;
-          top: auto;
-        }
-
-        @include mq-custom-min-max(426px, 896px) {
-          width: 500px;
-          height: auto;
-        }
-
-        img {
-          position: absolute;
-          width: auto;
-          height: auto;
-          bottom: 50px;
-          right: -130px;
-
-          @include mq-min-pc {
-            left: 0;
-            bottom: 0;
-            max-width: fit-content;
-            object-fit: none;
-          }
-
-          @include mq-min-max-tb {
-            right: get-vw(-250px);
-          }
-        }
-      }
-    }
-
   }
 }

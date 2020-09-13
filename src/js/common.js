@@ -22,9 +22,11 @@ $(function () {
   selectAddClass();
   heroFit();
   jsMainvisual();
-  jsSlickCenter()
-  headerHideSP()
-  elementInviewTop()
+  jsSlickCenter();
+  jsSlickNormal();
+  headerHideSP();
+  elementInviewTop();
+  fakeTrigger();
 });
 
 $(window).on('load', function () {
@@ -295,7 +297,7 @@ var commonAccordion = function () {
   $('.js-cmn-accordion').each(function () {
     $(this).on('click', function (e) {
       e.preventDefault();
-      
+
       if(!$(this).hasClass('is-active')){
         $(this).addClass('is-active');
         $(this).next().stop().slideDown();
@@ -643,6 +645,50 @@ var jsSlickCenter = function () {
   }
 }
 
+var jsSlickNormal = function () {
+  let $thisElement = $('.js-slick-normal');
+
+  if ( $thisElement ) {
+    $thisElement.slick({
+      centerMode: false,
+      slidesToShow: 4,
+      swipeToSlide: true,
+      arrows: false,
+      dotted: false,
+      // infinity: false,
+      responsive: [
+        {
+          breakpoint: 1080,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 896,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 426,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  }
+}
+
 var elementInviewTop = function () {
   var $animation_elements = $('.animation-element')
   var $window = $(window)
@@ -669,4 +715,109 @@ var elementInviewTop = function () {
 
   $window.on('scroll resize', check_if_in_view)
   $window.trigger('scroll')
+}
+
+if($('.js-recipes-swiper').length){
+  var mySwiper = new Swiper('.js-recipes-swiper', {
+    // Optional parameters
+    slidesPerView: 4,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  
+    breakpoints: {
+      896: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+      },
+    }
+  });
+}
+
+if($('.js-recipes-swiper-normal').length){
+  var mySwiperNormal = new Swiper('.js-recipes-swiper-normal', {
+    // Optional parameters
+    slidesPerView: 'auto',
+    centeredSlides: false,
+    loop: true,
+    spaceBetween: 30,
+
+    breakpoints: {
+      896: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+      },
+    }
+  });
+}
+
+if($('.js-swiper-voice').length){
+  var mySwiperVoice = new Swiper('.js-swiper-voice', {
+    // Optional parameters
+    slidesPerView: 1,
+    centeredSlides: false,
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.js-swiper-voice .swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.js-swiper-voice .swiper-button-next',
+      prevEl: '.js-swiper-voice .swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.js-swiper-voice .swiper-scrollbar',
+    },
+
+  });
+}
+
+var fakeTrigger = function () {
+  if($('.swiper-box-control-trigger').length) {
+    var prevBtn = $('.swiper-box-control-trigger .swiper-button-prev');
+    var nextBtn = $('.swiper-box-control-trigger .swiper-button-next');
+
+    if(prevBtn.length){
+      prevBtn.on('click', function(){
+        $('.js-swiper-voice .swiper-button-prev').click();
+      });
+    }
+
+    if(nextBtn.length){
+      nextBtn.on('click', function(){
+        $('.js-swiper-voice .swiper-button-next').click();
+      });
+    }
+  }
 }

@@ -1,0 +1,116 @@
+@import '../_mixin';
+
+.l-sec-cmn-01 {
+  &.-recipes-top-heading {
+    margin-top: 80px;
+
+    @include mq-max-sp {
+      margin-top: 0;
+    }
+
+    @include mq-min-max-tb {
+      margin-top: get-vw(80px);
+    }
+
+    > .inner {
+      background: url(/assets/img/common/recipes-icon-pattern.jpg) no-repeat center center;
+      background-size: contain;
+      padding: 100px 0 80px;
+
+      @include mq-max-sp {
+        background: none;
+        padding: 80px 0 40px;
+      }
+
+      @include mq-min-max-tb {
+        padding: get-vw(100px) 0 get-vw(80px);
+      }
+    }
+
+    .c-box-heading-center-text {
+      .inner {
+        display: block;
+
+        .box-heading {
+          text-align: center;
+          border-left: 0;
+          position: relative;
+
+          .c-line-deco {
+            width: 104px;
+            height: 116px;
+            background: url(/assets/img/common/ico_dotline_recipes.png) no-repeat center center;
+            background-size: contain;
+            position: absolute;
+            top: -110px;
+            left: 50%;
+            transform: translateX(-105%);
+
+            @include mq-max-sp {
+              display: none;
+            }
+
+            @include mq-min-max-tb {
+              width: get-vw(104px);
+              height: get-vw(116px);
+              top: get-vw(-110px);
+            }
+          }
+
+          .title {
+            font-size: 8.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+
+            @include mq-max-sp {
+              font-size: 5.6rem;
+            }
+
+            .text-yellow {
+              color: #FFC416;
+            }
+          }
+        }
+
+        .box-text {
+          width: 100%;
+          text-align: center;
+
+          .text {
+            font-size: 1.6rem;
+
+            @include mq-max-sp {
+              font-size: 1.4rem;
+              color: $baseColor;
+            }
+          }
+        }
+      }
+    }
+
+    .c-box-cmn-button {
+      margin-top: 60px;
+      text-align: center;
+
+      @include mq-max-sp {
+        margin-top: 30px;
+      }
+
+      @include mq-min-max-tb {
+        margin-top: get-vw(60px);
+      }
+
+      .c-button-cmn-01 {
+        .arrow {
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+.l-sec-box-swiper-voice {
+  margin-top: 0 !important;
+
+  .inner {}
+}

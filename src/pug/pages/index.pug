@@ -188,9 +188,12 @@ block content
                   i.fa.fa-arrow-right
     .l-sec-cmn-01.l-sec-box-swiper-voice
       .inner
-        .box-swiper-01.animation-element.slide-top
-          .box-swiper-js
-            .swiper-wrapper.js-slick-center
+        .l-swiper-recipes
+          // Slider main container
+          .product-swiper-container.js-recipes-swiper
+            // Additional required wrapper
+            .swiper-wrapper
+              // Slides
               .swiper-slide
                 .article-content
                   .c-shadow
@@ -209,7 +212,7 @@ block content
                     figure.box-image
                       img.image(src="/assets/img/top/img_recipes_top_02.jpg", alt="Akaragroup")
                     .box-content
-                      .c-heading-cmn-01 Heading 1
+                      .c-heading-cmn-01 Heading 2
                       .c-text-cmn-01 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               .swiper-slide
                 .article-content
@@ -219,7 +222,7 @@ block content
                     figure.box-image
                       img.image(src="/assets/img/top/img_recipes_top_03.jpg", alt="Akaragroup")
                     .box-content
-                      .c-heading-cmn-01 Heading 1
+                      .c-heading-cmn-01 Heading 3
                       .c-text-cmn-01 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               .swiper-slide
                 .article-content
@@ -229,7 +232,7 @@ block content
                     figure.box-image
                       img.image(src="/assets/img/top/img_recipes_top_04.jpg", alt="Akaragroup")
                     .box-content
-                      .c-heading-cmn-01 Heading 1
+                      .c-heading-cmn-01 Heading 4
                       .c-text-cmn-01 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               .swiper-slide
                 .article-content
@@ -239,7 +242,7 @@ block content
                     figure.box-image
                       img.image(src="/assets/img/top/img_recipes_top_05.jpg", alt="Akaragroup")
                     .box-content
-                      .c-heading-cmn-01 Heading 1
+                      .c-heading-cmn-01 Heading 5
                       .c-text-cmn-01 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               .swiper-slide
                 .article-content
@@ -249,19 +252,17 @@ block content
                     figure.box-image
                       img.image(src="/assets/img/top/img_recipes_top_06.jpg", alt="Akaragroup")
                     .box-content
-                      .c-heading-cmn-01 Heading 1
-                      .c-text-cmn-01 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              .swiper-slide
-                .article-content
-                  .c-shadow
-                  .c-box-card-01.-full
-                    .c-overlay
-                    figure.box-image
-                      img.image(src="/assets/img/top/img_recipes_top_07.jpg", alt="Akaragroup")
-                    .box-content
-                      .c-heading-cmn-01 Heading 1
+                      .c-heading-cmn-01 Heading 6
                       .c-text-cmn-01 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
+
+            //- // If we need pagination
+            //- .swiper-pagination
+            //- // If we need navigation buttons
+            //- .swiper-button-prev
+            //- .swiper-button-next
+            //- // If we need scrollbar
+            //- .swiper-scrollbar
     .l-sec-cmn-01.-box-subscribe
       .inner
         .c-box-subscribe.animation-element.slide-top
