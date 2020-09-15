@@ -764,12 +764,46 @@ if($('.js-recipes-swiper-normal').length){
     slidesPerView: 'auto',
     centeredSlides: false,
     loop: true,
-    spaceBetween: 30,
 
     breakpoints: {
       896: {
         slidesPerView: 2,
         spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+      },
+    }
+  });
+}
+
+if($('.js-product-slide-show').length) {
+  var mySwiperProduct = new Swiper('.js-product-slide-show', {
+    // Optional parameters
+    slidesPerView: 1,
+    centeredSlides: false,
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    breakpoints: {
+      896: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
         centeredSlides: true,
         loop: true,
       },
@@ -820,4 +854,16 @@ var fakeTrigger = function () {
       });
     }
   }
+}
+
+if($('.js-product-detail-custom-scroll-bar').length){
+  var swiperScrollBar = new Swiper('.js-product-detail-custom-scroll-bar', {
+    direction: 'vertical',
+    slidesPerView: 'auto',
+    freeMode: true,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    mousewheel: true,
+  });
 }

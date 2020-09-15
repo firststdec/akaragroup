@@ -11,7 +11,7 @@
   outline: none;
   appearance: none;
   border-radius: 4px;
-  
+
   &::placeholder {
     color: #cecece;
   }
@@ -50,14 +50,14 @@
     position: relative;
 
     &::after {
+      content: '';
       position: absolute;
       top: 50%;
       right: 23px;
-      width: 12px;
-      height: 8px;
-      margin-top: -4px;
-      // background: url(/assets/img/common/ico_arrow_down.png) no-repeat;
-      content: '';
+      width: 14px;
+      height: 9px;
+      transform: translateY(-50%);
+      background: url(/assets/img/common/ico_dropdown.png) no-repeat;
     }
     &__error{
       select{
