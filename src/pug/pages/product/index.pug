@@ -74,15 +74,17 @@ block content
     .sec-cmn-01.c-product-list
       .c-product-list__inner
         .c-product-list__box-product-show
-          .c-product-list__box-product-show-heading.animation-element.slide-top เลือกผลิตภัณฑ์
+          .c-product-list__box-product-show-heading.animation-element.slide-top
+            .c-product-list__box-product-show-heading-text เลือกผลิตภัณฑ์
           .c-product-list__box-product-show-dropdown.animation-element.slide-top
-            .c-input-selectbox.is-active
+            .c-input-selectbox
               select#select-product(name="select-product")
-                option akara Jumbo
-                option akara Jumbo
-                option akara Jumbo
-                option akara Jumbo
-                option akara Jumbo
+                option(value="akara Jumbo", selected="selected") akara Jumbo
+                option(value="akara Jumbo2") akara Jumbo 2
+                option(value="akara Jumbo3") akara Jumbo 3
+                option(value="akara Jumbo4") akara Jumbo 4
+                option(value="akara Jumbo5") akara Jumbo 5
+              .c-input-selectbox__display-text
 
           .c-product-slider-show.animation-element.slide-top
             // Slider main container
@@ -108,74 +110,68 @@ block content
                 i.fas.fa-chevron-right
 
         .c-product-list__box-product-detail
-          // Swiper
-          .swiper-container.js-product-detail-custom-scroll-bar
-            .swiper-wrapper
-              .swiper-slide
-                .c-product-list__box-product-content.animation-element.slide-top
-                  .c-product-list__box-product-content-heading
-                    .c-product-list__box-product-content-icon
-                    | Product Story
-                  .c-product-list__box-product-content-text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
-                .c-product-list__box-product-content.animation-element.slide-top
-                  .c-product-list__box-product-content-heading
-                    .c-product-list__box-product-content-icon
-                    | Product Detail
-                  .c-product-list__nutrient-table
-                    dl.c-product-list__nutrient-table-list
-                      dt.c-product-list__nutrient-table-heading Name
-                      dd.c-product-list__nutrient-table-detail %DV
-                    dl.c-product-list__nutrient-table-list
-                      dt.c-product-list__nutrient-table-heading Calories
-                      dd.c-product-list__nutrient-table-detail 150
-                    dl.c-product-list__nutrient-table-list
-                      dt.c-product-list__nutrient-table-heading Total Fat
-                      dd.c-product-list__nutrient-table-detail 3.5g	4%
-                    dl.c-product-list__nutrient-table-list
-                      dt.c-product-list__nutrient-table-heading Saturated Fat
-                      dd.c-product-list__nutrient-table-detail 2.5g	13%
-                    dl.c-product-list__nutrient-table-list
-                      dt.c-product-list__nutrient-table-heading Trans Fat 0g
-                      dd.c-product-list__nutrient-table-detail -
-                    dl.c-product-list__nutrient-table-list
-                      dt.c-product-list__nutrient-table-heading Cholesterol
-                      dd.c-product-list__nutrient-table-detail 20mg	7%
-                    dl.c-product-list__nutrient-table-list
-                      dt.c-product-list__nutrient-table-heading Sodium
-                      dd.c-product-list__nutrient-table-detail 85mg	4%
-                    dl.c-product-list__nutrient-table-list
-                      dt.c-product-list__nutrient-table-heading Total Carbs
-                      dd.c-product-list__nutrient-table-detail 19g		7%
+          .c-product-list__box-product-detail-inner
+            .c-product-list__box-product-content
+              .c-product-list__box-product-content-heading
+                .c-product-list__box-product-content-icon
+                | Product Story
+              .c-product-list__box-product-content-text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
+            .c-product-list__box-product-content
+              .c-product-list__box-product-content-heading
+                .c-product-list__box-product-content-icon
+                | Product Detail
+              .c-product-list__nutrient-table
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Name
+                  dd.c-product-list__nutrient-table-detail %DV
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Calories
+                  dd.c-product-list__nutrient-table-detail 150
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Total Fat
+                  dd.c-product-list__nutrient-table-detail 3.5g	4%
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Saturated Fat
+                  dd.c-product-list__nutrient-table-detail 2.5g	13%
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Trans Fat 0g
+                  dd.c-product-list__nutrient-table-detail -
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Cholesterol
+                  dd.c-product-list__nutrient-table-detail 20mg	7%
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Sodium
+                  dd.c-product-list__nutrient-table-detail 85mg	4%
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Total Carbs
+                  dd.c-product-list__nutrient-table-detail 19g		7%
 
-                .c-product-list__box-product-badge.animation-element.slide-top
-                  .c-product-list__box-product-badge-list
-                    .c-product-list__box-product-badge-item
-                      figure.c-product-list__box-product-badge-image
-                        img(src="/assets/img/recipes/Bug_UD_Kosher.png", alt="")
-                    .c-product-list__box-product-badge-item
-                      figure.c-product-list__box-product-badge-image
-                        img(src="/assets/img/recipes/Bug_No_Artificial_Flavor_Outlined.png", alt="")
-                    .c-product-list__box-product-badge-item
-                      figure.c-product-list__box-product-badge-image
-                        img(src="/assets/img/recipes/Bug_Non-GMO_Ingredients_Outlined.png", alt="")
+            .c-product-list__box-product-badge
+              .c-product-list__box-product-badge-list
+                .c-product-list__box-product-badge-item
+                  figure.c-product-list__box-product-badge-image
+                    img(src="/assets/img/recipes/Bug_UD_Kosher.png", alt="")
+                .c-product-list__box-product-badge-item
+                  figure.c-product-list__box-product-badge-image
+                    img(src="/assets/img/recipes/Bug_No_Artificial_Flavor_Outlined.png", alt="")
+                .c-product-list__box-product-badge-item
+                  figure.c-product-list__box-product-badge-image
+                    img(src="/assets/img/recipes/Bug_Non-GMO_Ingredients_Outlined.png", alt="")
 
-                .c-product-list__box-product-content.animation-element.slide-top
-                  .c-product-list__box-product-content-heading
-                    .c-product-list__box-product-content-icon
-                    | Benefits
-                  .c-product-list__box-product-content-text
-                    |Made with milk from cows not treated with rBST*<br>
-                    |Excellent source of protein<br>
-                    |Includes live & active cultures, and three types of probiotics<br>
-                    |No modified cornstarch or high fructose corn syrup<br>
-                    |Less than 5% lactose—a perfect part of a very low lactose diet<br>
-                    |Naturally low in sodium<br>
-                    |Contains live and active cultures: S. Thermophilus, L. Bulgaricus,<br>
-                    |L. Acidophilus, Bifidus and L. Casei<br>
-                    |*Milk from rBST-treated cows is not significantly different.
-
-            // Add Scroll Bar
-            .swiper-scrollbar
+            .c-product-list__box-product-content
+              .c-product-list__box-product-content-heading
+                .c-product-list__box-product-content-icon
+                | Benefits
+              .c-product-list__box-product-content-text
+                |Made with milk from cows not treated with rBST*<br>
+                |Excellent source of protein<br>
+                |Includes live & active cultures, and three types of probiotics<br>
+                |No modified cornstarch or high fructose corn syrup<br>
+                |Less than 5% lactose—a perfect part of a very low lactose diet<br>
+                |Naturally low in sodium<br>
+                |Contains live and active cultures: S. Thermophilus, L. Bulgaricus,<br>
+                |L. Acidophilus, Bifidus and L. Casei<br>
+                |*Milk from rBST-treated cows is not significantly different.
 
     .c-recipes-box
       .l-sec-cmn-01.-recipes-top-heading

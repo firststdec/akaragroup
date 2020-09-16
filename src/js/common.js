@@ -27,6 +27,7 @@ $(function () {
   headerHideSP();
   elementInviewTop();
   fakeTrigger();
+  customSelect();
 });
 
 $(window).on('load', function () {
@@ -793,21 +794,6 @@ if($('.js-product-slide-show').length) {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  
-    breakpoints: {
-      896: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-        centeredSlides: true,
-        loop: true,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        centeredSlides: true,
-        loop: true,
-      },
-    }
   });
 }
 
@@ -856,14 +842,20 @@ var fakeTrigger = function () {
   }
 }
 
-if($('.js-product-detail-custom-scroll-bar').length){
-  var swiperScrollBar = new Swiper('.js-product-detail-custom-scroll-bar', {
-    direction: 'vertical',
-    slidesPerView: 'auto',
-    freeMode: true,
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-    mousewheel: true,
-  });
+const customSelect = function() {
+  const $customSelect = $('.c-input-selectbox select');
+
+  if($customSelect.length){
+    const textSelected = $customSelect.find('option:selected').text();
+    setTextSelected(textSelected);
+
+    $customSelect.on('change', function(){
+      const textSelected = $(this).find('option:selected').text();
+      setTextSelected(textSelected);
+    });
+
+    function setTextSelected(text) {
+      $customSelect.next().text(text);
+    }
+  }
 }

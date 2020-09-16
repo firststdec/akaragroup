@@ -17,6 +17,10 @@
     position: relative;
     z-index: 5;
 
+    @include mq-max-sp {
+      min-height: 700px;
+    }
+
     @include mq-min-max-tb {
       min-height: get-vw(970px);
     }
@@ -30,16 +34,37 @@
     padding-left: calc((100% - 1310px) / 2);
     padding-right: calc((100% - 1310px) / 2);
 
+    @include mq-max-sp {
+      padding: 100px 20px 20px;
+    }
+
+    @include mq-min-max-tb {
+      padding: get-vw(160px) 20px 0;
+      max-width: 1300px;
+    }
+
     .c-product-category {
       width: 500px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
 
+      @include mq-max-sp {
+        justify-content: center;
+      }
+
+      @include mq-min-max-tb {
+        width: get-vw(500px);
+      }
+
       &__name {
         font-size: 4rem;
         color: $baseColor;
         line-height: 1.3;
+
+        @include mq-max-sp {
+          font-size: 3rem;
+        }
       }
 
       &__icon {
@@ -54,6 +79,14 @@
       justify-content: flex-end;
       margin-right: -40px;
 
+      @include mq-max-sp {
+        justify-content: center;
+      }
+
+      @include mq-min-max-tb {
+        margin-right: get-vw(-40px);
+      }
+
       &__item {
         width: 183px;
         height: 175px;
@@ -64,6 +97,18 @@
         background: url(/assets/img/recipes/bg_egg_local_nav.svg) no-repeat center center;
         background-size: cover;
         margin-left: -50px;
+
+        @include mq-max-sp {
+          width: 120px;
+          height: 110px;
+          margin-left: -40px;
+        }
+
+        @include mq-min-max-tb {
+          width: get-vw(183px);
+          height: get-vw(175px);
+          margin-left: get-vw(-50px);
+        }
       }
 
       &__link {
@@ -76,15 +121,33 @@
         justify-content: center;
         flex-direction: column;
 
+        @include mq-min-max-tb {
+          width: get-vw(108px);
+          height: get-vw(110px);
+          font-size: 1.1rem;
+        }
+
         &-icon {
           margin-top: 10px;
           text-align: center;
+
+          @include mq-min-max-tb {
+            margin-top: 5px;
+          }
+
+          @include mq-max-sp {
+            margin-top: 3px;
+          }
         }
 
         &-text {
           margin-top: 5px;
           line-height: 1.2;
           text-align: center;
+
+          @include mq-max-sp {
+            font-size: 1.1rem;
+          }
         }
       }
     }
@@ -98,8 +161,18 @@
     position: relative;
     z-index: 5;
 
+
+    @include mq-min-max-tb {
+      margin-top: get-vw(50px);
+    }
+
     &__frame {
       text-align: center;
+      margin: auto;
+
+      @include mq-min-max-tb {
+        width: get-vw(500px);
+      }
     }
 
     &__heading {
@@ -107,6 +180,11 @@
       line-height: 1.3;
       text-align: center;
       margin-top: -20px;
+
+      @include mq-max-sp {
+        font-size: 3rem;
+        margin-top: 0;
+      }
     }
 
     &__text {
@@ -114,6 +192,10 @@
       color: $baseColor;
       text-align: center;
       margin-top: 10px;
+
+      @include mq-max-sp {
+        font-size: 1.6rem;
+      }
     }
   }
 
@@ -126,8 +208,29 @@
     margin: -270px auto 0;
     max-width: 1440px;
 
+    @include mq-max-sp {
+      padding: 300px 0 60px;
+    }
+
+    .c-box-card-row-01 {
+      @include mq-max-sp {
+        padding: 20px;
+      }
+    }
+
     .box-content {
       padding-left: 50px;
+
+      @include mq-max-sp {
+        padding: 20px 0;
+        width: 100%;
+      }
+    }
+
+    .box-image {
+      @include mq-max-sp {
+        width: 100%;
+      }
     }
 
     .c-heading-cmn-01 {
@@ -144,17 +247,34 @@
   .c-product-list {
     padding: 200px 0 100px;
 
+    @include mq-max-sp {
+      padding: 80px 0;
+    }
+
+    @include mq-min-max-tb {
+      padding: get-vw(200px) 0 get-vw(100px);
+    }
+
     &__inner {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       max-width: 1300px;
       margin: auto;
-      min-height: 500px;
     }
 
     &__box-product-show {
       width: 640px;
+
+      @include mq-max-sp {
+        width: 100%;
+        padding: 0 20px;
+      }
+
+      @include mq-min-max-tb {
+        width: get-vw(640px);
+        padding-left: 20px;
+      }
 
       &-heading {
         position: relative;
@@ -182,6 +302,14 @@
         &::after {
           right: 0;
         }
+
+        &-text {
+          display: inline-block;
+          background: #fff;
+          position: relative;
+          z-index: 3;
+          padding: 0 10px;
+        }
       }
 
       .c-input-selectbox {
@@ -193,23 +321,35 @@
         display: flex;
         align-items: center;
         margin-top: 30px;
+        position: relative;
 
         > select {
-          border: 0;
-          font-size: 4rem;
-          line-height: 1.1;
-          height: auto;
-          color: $baseColor;
-          padding: 0;
+          opacity: 0;
+          position: absolute;
+          z-index: 2;
+        }
 
-          option {
-            font-size: 3rem;
+        &__display-text {
+          font-size: 4rem;
+          position: absolute;
+          z-index: 1;
+
+          @include mq-max-sp {
+            font-size: 2.8rem;
           }
         }
       }
 
       .js-product-slide-show {
         margin-top: 100px;
+
+        @include mq-max-sp {
+          margin-top: 60px;
+        }
+
+        @include mq-min-max-tb {
+          margin-top: get-vw(100px);
+        }
 
         .swiper-button-prev {
           left: 0;
@@ -242,7 +382,7 @@
           &:hover {
             // transform: scale(0.8);
             background: $baseColor;
- 
+
             .fas {
               // transform: scale(0.9);
               color: $yellow;
@@ -273,11 +413,58 @@
 
     &__box-product-detail {
       width: 520px;
-      text-align: left;
+      padding-right: 20px;
+      position: relative;
+
+      @include mq-max-sp {
+        width: 100%;
+        padding-left: 20px;
+        margin-top: 60px;
+      }
+
+      @include mq-min-max-tb {
+        width: 40%;
+      }
+
+      &-inner {
+        height: 750px;
+        overflow-y: scroll;
+
+        /* width */
+        &::-webkit-scrollbar {
+          width: 22px;
+          position: relative;
+          background: url(/assets/img/svg/bg_track.svg) repeat-y center center;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          width: 5px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: url(/assets/img/svg/ico_scroll_egg.svg) no-repeat;
+          width: 22px;
+          height: 22px;
+          position: absolute;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+
+        }
+      }
 
       .js-product-detail-custom-scroll-bar {
+        &.swiper-container {
+          width: 100%;
+          height: 100%;
+        }
+
         .swiper-slide {
           text-align: left;
+
         }
       }
     }
@@ -285,8 +472,20 @@
     &__box-product-content {
       max-width: 436px;
 
+      @include mq-max-sp {
+        max-width: 100%;
+      }
+
+      @include mq-min-max-tb {
+        max-width: get-vw(436px);
+      }
+
       &:not(:first-of-type) {
         margin-top: 50px;
+
+        @include mq-min-max-tb {
+          margin-top: get-vw(50px);
+        }
       }
 
       &-heading {
@@ -294,6 +493,15 @@
         color: $baseColor;
         padding-left: 70px;
         position: relative;
+
+        @include mq-max-sp {
+          font-size: 2.2rem;
+          padding-left: 40px;
+        }
+
+        @include mq-min-max-tb {
+          padding-left: get-vw(70px);
+        }
       }
 
       &-icon {
@@ -304,6 +512,19 @@
         position: absolute;
         left: 0;
         top: 0;
+
+        @include mq-max-sp {
+          width: 30px;
+          height: 27px;
+          margin-top: 5px;
+        }
+
+        @include mq-min-max-tb {
+          width: get-vw(52px);
+          height: get-vw(48px);
+          top: 50%;
+          transform: translateY(-50%);
+        }
       }
 
       &-text {
@@ -316,6 +537,14 @@
     &__nutrient-table {
       margin-top: 20px;
       max-width: 436px;
+
+      @include mq-max-sp {
+        max-width: 100%;
+      }
+
+      @include mq-min-max-tb {
+        max-width: get-vw(436px);
+      }
 
       &-list {
         display: flex;
@@ -339,6 +568,14 @@
     &__box-product-badge {
       max-width: 436px;
       margin-top: 30px;
+
+      @include mq-max-sp {
+        max-width: 100%;
+      }
+
+      @include mq-min-max-tb {
+        max-width: get-vw(436px);
+      }
 
       &-list {
         display: flex;
@@ -365,6 +602,10 @@
     padding: 100px 0 150px;
     max-width: 1440px;
     margin: auto;
+
+    @include mq-min-max-tb {
+      padding: get-vw(100px) 0 get-vw(150px);
+    }
 
     .-recipes-top-heading {
       margin-top: 0;
@@ -418,6 +659,12 @@
     width: 300px;
     height: 415px;
     margin-left: 30px;
+
+    @include mq-min-max-tb {
+      width: get-vw(300px);
+      height: get-vw(415px);
+      margin-left: get-vw(30px);
+    }
   }
 
   .article-content {

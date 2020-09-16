@@ -44,6 +44,12 @@
         left: -60px;
         top: 0;
 
+        @include mq-min-max-tb {
+          width: get-vw(52px);
+          height: get-vw(48px);
+          top: 10px;
+        }
+
         @include mq-max-sp {
           width: 30px;
           height: 27px;
@@ -168,11 +174,15 @@
         background: url(/assets/img/recipes/ico_man_yellow.svg) no-repeat center center;
         background-size: cover;
 
+        @include mq-min-max-tb {
+          width: get-vw(52px);
+          height: get-vw(48px);
+        }
+
         @include mq-max-sp {
           width: 30px;
           height: 27px;
           margin-top: 2px;
-          background-size: get-vw(1442px) get-vw(970px);
         }
       }
 
