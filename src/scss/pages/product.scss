@@ -60,6 +60,10 @@
       &__box-product-detail {
         padding-right: 0;
         width: auto;
+        
+        @include mq-max-sp {
+          padding-right: 20px;
+        }
 
         &-inner {
           height: auto;
@@ -76,11 +80,15 @@
 
       &__box-product-content {
         &-text {
-          padding-left: 70px;
+          @include mq-min-tb {
+            padding-left: 70px;
+          }
         }
 
         .c-product-list__nutrient-table {
-          padding-left: 70px;
+          @include mq-min-tb {
+            padding-left: 70px;
+          }
         }
 
         &-icon {
@@ -90,14 +98,37 @@
       }
 
       &__box-product-badge {
-        padding-left: 70px;
         position: relative;
 
+        @include mq-max-sp {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        @include mq-min-tb {
+          padding-left: 70px;
+        }
+
+        &-list {
+          @include mq-max-sp {
+            justify-content: center;
+            width: 100%;
+          }
+        }
+
         &-image-deco {
-          position: absolute;
-          left: -380px;
-          top: 50%;
-          transform: translateY(-50%);
+          position: relative;
+
+          @include mq-max-sp {
+            order: 2;
+          }
+
+          @include mq-min-tb {
+            position: absolute;
+            left: -380px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
         }
       }
     }
@@ -371,7 +402,7 @@
       position: relative;
 
       @include mq-max-sp {
-        font-size: 3rem;
+        font-size: 2.2rem;
       }
 
       > .icon {
