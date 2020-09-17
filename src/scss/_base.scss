@@ -227,15 +227,21 @@ a {
 
   &.whiteTheme{
     #{$this}__menu-mark {
-      color: $white;
+      @include mq-min-tb{
+        color: $white;
+      }
     }
 
     .fas {
-      color: $white;
+      @include mq-min-tb{
+        color: $white;
+      }
     }
 
     .l-lanugae-bar .c-link, .l-header .l-lanugae-bar .c-link--base {
-      color: $white;
+      @include mq-min-tb{
+        color: $white;
+      }
     }
 
     #{$this}__logo-image{

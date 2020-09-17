@@ -370,6 +370,10 @@
       padding-left: 60px;
       position: relative;
 
+      @include mq-max-sp {
+        font-size: 3rem;
+      }
+
       > .icon {
         width: 52px;
         height: 48px;
