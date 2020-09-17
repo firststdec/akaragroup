@@ -1,0 +1,311 @@
+extends ../../layouts/master.pug
+
+block variables
+  -
+    const index = true
+    const meta = {
+      title: 'Product | Akara Group',
+      keyword: 'Akara Group',
+      description: '',
+      goTitle: 'Akara Group',
+      goDescription: '',
+      goImage: '/assets/img/ogp.png',
+      goUrl: '',
+      twitterTitle: 'Akara Group',
+      twitterDescription: '',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: ''
+    }
+
+    const topPage = false
+    const whiteTheme = true
+
+block prepend css
+  link(rel='stylesheet', href='/assets/css/libs/slick.css')
+block append scripts
+  script(src='/assets/js/libs/slick.min.js')
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+
+block outside
+  //- // loader
+  //- .c-loader
+  //-   .c-loader__icon
+  //-     p.c-loader__text
+  //-       img(src="/assets/img/common/logo@2x.png", alt="")
+  //-     .loader.simple-circle
+  //- // /loader
+
+block content
+  .p-product.-green
+    .sec-cmn-01.c-product-mv
+      .inner
+        .c-product-heading
+          .c-product-category.animation-element.slide-left
+            .c-product-category__name akara Eggology
+          .c-product-local-nav.animation-element.slide-right
+            .c-product-local-nav__item
+              a.c-product-local-nav__link(href="#")
+                .c-product-local-nav__link-icon
+                  img(src="/assets/img/recipes/img_akara_egg_green_nav_active.svg", alt="Organic")
+                .c-product-local-nav__link-text Organic
+            .c-product-local-nav__item
+              a.c-product-local-nav__link(href="#")
+                .c-product-local-nav__link-icon
+                  img(src="/assets/img/recipes/img_akara_egg_green_nav.svg", alt="Free Range")
+                .c-product-local-nav__link-text Free Range
+            .c-product-local-nav__item
+              a.c-product-local-nav__link(href="#")
+                .c-product-local-nav__link-icon
+                  img(src="/assets/img/recipes/img_akara_egg_green_nav.svg", alt="Cage Free")
+                .c-product-local-nav__link-text Cage Free
+            .c-product-local-nav__item
+              a.c-product-local-nav__link(href="#")
+                .c-product-local-nav__link-icon
+                  img(src="/assets/img/recipes/img_akara_egg_green_nav.svg", alt="Omega 3 &amp; Vitamin E")
+                .c-product-local-nav__link-text Omega 3 &amp; Vitamin E
+            .c-product-local-nav__item
+              a.c-product-local-nav__link(href="#")
+                .c-product-local-nav__link-icon
+                  img(src="/assets/img/recipes/img_akara_egg_green_nav.svg", alt="Veggie")
+                .c-product-local-nav__link-text Veggie
+
+        .c-product-image.animation-element.slide-top
+          figure.c-product-image__frame
+            img(src="/assets/img/recipes/img_product_green_01.png", alt="")
+          .c-product-image__heading Organic Eggs
+          .c-product-image__text เราเข้าใจว่าทุกคนมีสิ่งที่ให้คุณค่าแตกต่างกัน <br>ทั้งคุณค่ากับตัวคุณเอง คุณค่ากับคนที่คุณรัก คุณค่าต่อสิ่งแวดล้อม
+
+    .sec-cmn-01.c-product-content
+      .c-product-content__inner
+        .c-box-card-row-01.-reverse
+          figure.box-image.animation-element.slide-top
+            img.image(src="/assets/img/recipes/img_product_green_02.png", alt="Akaragroup")
+          .box-content.animation-element.slide-top
+            .c-heading-cmn-01
+              .icon
+              |How is it good?
+            .c-text-cmn-01 These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
+
+    .sec-cmn-01.c-product-list
+      .c-product-list__inner
+        .c-product-list__box-product-show
+          .c-product-list__box-product-content.animation-element.slide-top
+            .c-product-list__box-product-content-heading
+              .c-product-list__box-product-content-icon
+              | Product Story
+            .c-product-list__box-product-content-text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
+
+          .c-product-list__box-product-content.animation-element.slide-top
+            .c-product-list__box-product-content-heading
+              .c-product-list__box-product-content-icon
+              | Benefits
+            .c-product-list__box-product-content-text
+              |Made with milk from cows not treated with rBST*<br>
+              |Excellent source of protein<br>
+              |Includes live & active cultures, and three types of probiotics<br>
+              |No modified cornstarch or high fructose corn syrup<br>
+              |Less than 5% lactose—a perfect part of a very low lactose diet<br>
+              |Naturally low in sodium<br>
+              |Contains live and active cultures: S. Thermophilus, L. Bulgaricus,<br>
+              |L. Acidophilus, Bifidus and L. Casei<br>
+              |*Milk from rBST-treated cows is not significantly different.
+
+        .c-product-list__box-product-detail.animation-element.slide-top
+          .c-product-list__box-product-detail-inner
+
+            .c-product-list__box-product-content
+              .c-product-list__box-product-content-heading
+                .c-product-list__box-product-content-icon
+                | Product Detail
+              .c-product-list__nutrient-table
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Name
+                  dd.c-product-list__nutrient-table-detail %DV
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Calories
+                  dd.c-product-list__nutrient-table-detail 150
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Total Fat
+                  dd.c-product-list__nutrient-table-detail 3.5g	4%
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Saturated Fat
+                  dd.c-product-list__nutrient-table-detail 2.5g	13%
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Trans Fat 0g
+                  dd.c-product-list__nutrient-table-detail -
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Cholesterol
+                  dd.c-product-list__nutrient-table-detail 20mg	7%
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Sodium
+                  dd.c-product-list__nutrient-table-detail 85mg	4%
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Total Carbs
+                  dd.c-product-list__nutrient-table-detail 19g		7%
+
+            .c-product-list__box-product-badge
+              .c-product-list__box-product-badge-image-deco
+                img(src="/assets/img/recipes/img_product_green_03.svg", alt="")
+
+              .c-pr oduct-list__box-product-badge-list
+                .c-product-list__box-product-badge-item
+                  figure.c-product-list__box-product-badge-image
+                    img(src="/assets/img/recipes/Bug_UD_Kosher.png", alt="")
+                .c-product-list__box-product-badge-item
+                  figure.c-product-list__box-product-badge-image
+                    img(src="/assets/img/recipes/Bug_No_Artificial_Flavor_Outlined.png", alt="")
+                .c-product-list__box-product-badge-item
+                  figure.c-product-list__box-product-badge-image
+                    img(src="/assets/img/recipes/Bug_Non-GMO_Ingredients_Outlined.png", alt="")
+
+    .c-recipes-box
+      .l-sec-cmn-01.-recipes-top-heading
+        .inner
+          .c-box-heading-center-text
+            .inner
+              .box-heading.animation-element.slide-top
+                .title
+                  span RECIPIE
+                  span.text-yellow S
+              .box-text.animation-element.slide-top
+                .text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either!
+              .c-box-cmn-button.animation-element.slide-top
+                a.c-button-cmn-01.--green
+                  span.text READ MORE
+                  span.arrow
+                    i.fa.fa-arrow-right
+
+      .l-sec-cmn-01.l-sec-box-swiper-voice.--product-yellow
+        .inner
+          .l-swiper-recipes.animation-element.slide-top
+            // Slider main container
+            .product-swiper-container.js-recipes-swiper-normal
+              // Additional required wrapper
+              .swiper-wrapper
+                // Slides
+                .swiper-slide
+                  .article-content
+                    .c-shadow
+                    .c-box-card-01.-full
+                      .c-overlay
+                      figure.box-image
+                        img.image(src="/assets/img/top/img_recipes_top_02.jpg", alt="Cheesy Breaks")
+                      .box-content
+                        .c-heading-cmn-01 Cheesy Breaks
+                        .c-text-cmn-01 Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt
+                .swiper-slide
+                  .article-content
+                    .c-shadow
+                    .c-box-card-01.-full
+                      .c-overlay
+                      figure.box-image
+                        img.image(src="/assets/img/top/img_recipes_top_03.jpg", alt="Italian Fried Egg")
+                      .box-content
+                        .c-heading-cmn-01 Italian Fried Egg
+                        .c-text-cmn-01 Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt
+                .swiper-slide
+                  .article-content
+                    .c-shadow
+                    .c-box-card-01.-full
+                      .c-overlay
+                      figure.box-image
+                        img.image(src="/assets/img/top/img_recipes_top_04.jpg", alt="Rocky Egg Sunrise")
+                      .box-content
+                        .c-heading-cmn-01 Rocky Egg Sunrise
+                        .c-text-cmn-01 Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt
+                .swiper-slide
+                  .article-content
+                    .c-shadow
+                    .c-box-card-01.-full
+                      .c-overlay
+                      figure.box-image
+                        img.image(src="/assets/img/top/img_recipes_top_01.jpg", alt="Rocky Egg Salad")
+                      .box-content
+                        .c-heading-cmn-01 Rocky Egg Salad
+                        .c-text-cmn-01 Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt
+
+              //- // If we need pagination
+              //- .swiper-pagination
+              //- // If we need navigation buttons
+              //- .swiper-button-prev
+              //- .swiper-button-next
+              //- // If we need scrollbar
+              //- .swiper-scrollbar
+
+    .c-voice-box
+      .c-voice-box__inner
+        .c-voice-box__fix-box.animation-element.slide-top
+          .c-voice-box__fix-box-inner
+            .c-voice-box__fix-box-heading
+              .c-voice-box__fix-box-heading-icon
+              |เสียงจากคนทานไข่อัครา
+            .c-voice-box__fix-box-text These tasty certified USDA Organic eggs come from farms that have been pesticide-free.
+        .c-voice-box__slider-box.animation-element.slide-top
+          // Slider main container
+          .swiper-container.js-swiper-voice
+            // Additional required wrapper
+            .swiper-wrapper
+              // Slides
+              .swiper-slide
+                .c-card-voice
+                  .c-card-voice__heading THE FLAVOR WAS AMAZING!
+                  .c-card-voice__text “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris”
+                  .c-card-voice__author
+                    .c-card-voice__author-icon
+                    .c-card-voice__author-staff
+                      .c-card-voice__author-staff-name Ahmed Elsayed
+                      .c-card-voice__author-staff-position EMPLOYEE 1
+              .swiper-slide
+                .c-card-voice
+                  .c-card-voice__heading THE FLAVOR WAS AMAZING!
+                  .c-card-voice__text “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris”
+                  .c-card-voice__author
+                    .c-card-voice__author-icon
+                    .c-card-voice__author-staff
+                      .c-card-voice__author-staff-name Ahmed Elsayed
+                      .c-card-voice__author-staff-position EMPLOYEE 2
+              .swiper-slide
+                .c-card-voice
+                  .c-card-voice__heading THE FLAVOR WAS AMAZING!
+                  .c-card-voice__text “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris”
+                  .c-card-voice__author
+                    .c-card-voice__author-icon
+                    .c-card-voice__author-staff
+                      .c-card-voice__author-staff-name Ahmed Elsayed
+                      .c-card-voice__author-staff-position EMPLOYEE 3
+
+            // If we need navigation buttons
+            .swiper-box-control
+              .swiper-button-prev.-voice
+              .swiper-button-next.-voice
+          .swiper-box-control-trigger
+            .swiper-button-prev
+              i.fas.fa-chevron-left
+            .swiper-button-next
+              i.fas.fa-chevron-right
+
+    .l-sec-cmn-01.-box-subscribe
+      .inner
+        .c-box-subscribe.animation-element.slide-top
+          .item.-signup-text
+            .box-sign-up
+              .icon_envelope
+                img(src="/assets/img/common/envelope-regular.svg", alt="")
+              span SIGN
+              span UP
+          .item
+            .box-heading
+              .heading FOR RECIPES, COUPONS AND OTHER NEWS
+            .box-form
+              .c-input-row
+                input.c-input.-text(type="email", name="email", placeholder="Your E-Mail Address")
+                //- button.c-input.-submit(type="submit", value="")
+                //-   | SUBSCRIBE
+                //-   i.fas.fa-paper-plane
+
+                .c-box-cmn-button
+                  button.c-button-cmn-01(type="submit", value="")
+                    span.text SUBSCRIBE
+                    span.arrow
+                      i.fa.fa-arrow-right

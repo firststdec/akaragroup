@@ -1,11 +1,142 @@
 @import '../_mixin';
 
 .p-product {
+  .is-product-opacity {
+    opacity: 0;
+    position: absolute;
+    z-index: 4;
+  }
+
   &.-yellow {
     .c-product-mv {
       // max-width: 1440px;
       margin: auto;
       background: url(/assets/img/recipes/bg_product_yellow.svg) no-repeat center bottom;
+      background-size: cover;
+    }
+  }
+
+  &.-green {
+    .c-product-mv {
+      // max-width: 1440px;
+      margin: auto;
+      background: url(/assets/img/recipes/bg_product_green.svg) no-repeat center bottom;
+      background-size: cover;
+    }
+
+    .c-product-image {
+      &__heading {
+        color: $white;
+      }
+
+      &__text {
+        color: $white;
+      }
+    }
+
+    .c-product-heading {
+      .c-product-category {
+        &__name {
+          color: $white;
+        }
+      }
+    }
+
+    .c-product-content {
+      .c-heading-cmn-01 {
+        > .icon {
+          background: url(/assets/img/recipes/ico_egg_green.svg) no-repeat center center;
+          background-size: cover;
+        }
+      }
+    }
+
+    .c-product-list {
+      &__inner {
+        max-width: 1260px;
+        margin: 0 auto;
+      }
+
+      &__box-product-detail {
+        padding-right: 0;
+        width: auto;
+
+        &-inner {
+          height: auto;
+          overflow: visible;
+
+                  /* width */
+          &::-webkit-scrollbar {
+            width: auto;
+            position: relative;
+            background: none;
+          }
+        }
+      }
+
+      &__box-product-content {
+        &-text {
+          padding-left: 70px;
+        }
+
+        .c-product-list__nutrient-table {
+          padding-left: 70px;
+        }
+
+        &-icon {
+          background: url(/assets/img/recipes/ico_egg_green.svg) no-repeat center center;
+          background-size: cover;
+        }
+      }
+
+      &__box-product-badge {
+        padding-left: 70px;
+        position: relative;
+
+        &-image-deco {
+          position: absolute;
+          left: -380px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    .c-recipes-box {
+      background: url(/assets/img/recipes/bg_recipes_product_green.svg) no-repeat center center;
+
+      .-recipes-top-heading > .inner .box-heading .title span.text-yellow {
+        color: $white;
+      }
+
+      .-recipes-top-heading > .inner .box-heading .title span {
+        color: $white;
+      }
+
+      .-recipes-top-heading .c-box-heading-center-text .inner .box-text .text {
+        color: $white;
+      }
+    }
+
+    .c-button-cmn-01.--green {
+      border-color: $white;
+
+      .fa {
+        color: $white;
+      }
+    }
+
+    .swiper-slide .c-card-voice__heading {
+      color: $green;
+    }
+
+    .c-voice-box__fix-box-heading-icon {
+      background: url(/assets/img/recipes/ico_egg_green.svg) no-repeat center center;
+      background-size: cover;
+    }
+
+    .swiper-slide .c-card-voice__author-icon {
+      background: url(/assets/img/recipes/ico_man_green.svg) no-repeat center center;
       background-size: cover;
     }
   }
@@ -236,11 +367,24 @@
     .c-heading-cmn-01 {
       font-size: 4rem;
       line-height: 1.3;
+      padding-left: 60px;
+      position: relative;
+
+      > .icon {
+        width: 52px;
+        height: 48px;
+        background: url(/assets/img/recipes/ico_product_yellow.svg) no-repeat center center;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
     }
 
     .c-text-cmn-01 {
       font-size: 1.6rem;
       color: #777;
+      padding-left: 60px;
     }
   }
 
@@ -349,6 +493,18 @@
 
         @include mq-min-max-tb {
           margin-top: get-vw(100px);
+        }
+
+        .swiper-slide {
+          padding: 0 40px;
+
+          @include mq-min-max-tb{
+            padding: 0 get-vw(40px);
+          }
+
+          @include mq-max-sp {
+            padding: 0 20px;
+          }
         }
 
         .swiper-button-prev {
@@ -507,7 +663,7 @@
       &-icon {
         width: 52px;
         height: 48px;
-        background: url(/assets/img/recipes/ico_man_yellow.svg) no-repeat center center;
+        background: url(/assets/img/recipes/ico_product_yellow.svg) no-repeat center center;
         background-size: cover;
         position: absolute;
         left: 0;

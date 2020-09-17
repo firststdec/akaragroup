@@ -847,11 +847,26 @@ const customSelect = function() {
 
   if($customSelect.length){
     const textSelected = $customSelect.find('option:selected').text();
+    // const currentSelected = $customSelect.find('option:selected').val();
+    // $target = '.js-' + currentSelected + '__detail';
     setTextSelected(textSelected);
 
     $customSelect.on('change', function(){
       const textSelected = $(this).find('option:selected').text();
+      const valSelected = $(this).find('option:selected').val();
       setTextSelected(textSelected);
+
+      $targetSlider = '.js-' + valSelected;
+      $targetDetail = '.js-' + valSelected + '__detail';
+      console.log($targetSlider);
+
+      $('.c-product-list__box-product-detail-inner').addClass('is-product-opacity').fadeOut();
+      $('.js-product-slide-show').addClass('is-product-opacity').fadeOut();
+
+      $($targetSlider)
+        .fadeIn().removeClass('is-product-opacity');
+      $($targetDetail)
+        .fadeIn().removeClass('is-product-opacity');;
     });
 
     function setTextSelected(text) {

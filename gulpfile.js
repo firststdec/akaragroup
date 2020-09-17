@@ -223,6 +223,7 @@ gulp.task('compile', gulp.parallel(
 gulp.task('build', gulp.series(
   'config:build',
   'clean',
+  'copy-webfonts',
   'compile'
 ));
 

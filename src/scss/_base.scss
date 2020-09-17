@@ -225,6 +225,58 @@ a {
 
   @include mq-min-tb {}
 
+  &.whiteTheme{
+    #{$this}__menu-mark {
+      color: $white;
+    }
+
+    .fas {
+      color: $white;
+    }
+
+    .l-lanugae-bar .c-link, .l-header .l-lanugae-bar .c-link--base {
+      color: $white;
+    }
+
+    #{$this}__logo-image{
+      @include mq-min-tb {
+        display: none;
+      }
+
+      &.white {
+        @include mq-min-tb {
+          display: block;
+        }
+      }
+    }
+
+    &.is-active-bg {
+      #{$this}__menu-mark {
+        color: $baseColor;
+      }
+  
+      .fas {
+        color: $baseColor;
+      }
+  
+      .l-lanugae-bar .c-link, .l-header .l-lanugae-bar .c-link--base {
+        color: $baseColor;
+      }
+
+      .l-header__logo-image {
+        @include mq-min-tb {
+          display: block;
+        }
+
+        &.white {
+          @include mq-min-tb {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
   &__in {
     position: fixed;
     width: 100%;
@@ -278,6 +330,10 @@ a {
 
       @include mq-max-sp {
         width: 106px;
+      }
+
+      &.white {
+        display: none;
       }
 
       &-sp {

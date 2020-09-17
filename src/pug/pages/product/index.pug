@@ -68,7 +68,9 @@ block content
           figure.box-image.animation-element.slide-top
             img.image(src="/assets/img/recipes/img_product_02.png", alt="Akaragroup")
           .box-content.animation-element.slide-top
-            .c-heading-cmn-01 How is it good?
+            .c-heading-cmn-01
+              .icon
+              |How is it good?
             .c-text-cmn-01 These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
 
     .sec-cmn-01.c-product-list
@@ -79,16 +81,16 @@ block content
           .c-product-list__box-product-show-dropdown.animation-element.slide-top
             .c-input-selectbox
               select#select-product(name="select-product")
-                option(value="akara Jumbo", selected="selected") akara Jumbo
-                option(value="akara Jumbo2") akara Jumbo 2
-                option(value="akara Jumbo3") akara Jumbo 3
-                option(value="akara Jumbo4") akara Jumbo 4
-                option(value="akara Jumbo5") akara Jumbo 5
+                option(value="product-01", selected="selected") akara Jumbo
+                option(value="product-02") akara Jumbo 2
+                option(value="product-03") akara Jumbo 3
+                option(value="product-04") akara Jumbo 4
+                option(value="product-05") akara Jumbo 5
               .c-input-selectbox__display-text
 
           .c-product-slider-show.animation-element.slide-top
             // Slider main container
-            .swiper-container.js-product-slide-show
+            .swiper-container.js-product-slide-show.js-product-01
               // Additional required wrapper
               .swiper-wrapper
                 // Slides
@@ -109,12 +111,95 @@ block content
               .swiper-button-next
                 i.fas.fa-chevron-right
 
-        .c-product-list__box-product-detail
-          .c-product-list__box-product-detail-inner
+            // Slider main container
+            .swiper-container.js-product-slide-show.js-product-02.is-product-opacity
+              // Additional required wrapper
+              .swiper-wrapper
+                // Slides
+                .swiper-slide
+                  img(src="/assets/img/recipes/img_product_01.png", alt="")
+                .swiper-slide
+                  img(src="/assets/img/recipes/img_product_01.png", alt="")
+                .swiper-slide
+                  img(src="/assets/img/recipes/img_product_01.png", alt="")
+
+              // If we need pagination
+              .swiper-pagination
+              // If we need navigation buttons
+              .swiper-button-prev
+                i.fas.fa-chevron-left
+              .swiper-button-next
+                i.fas.fa-chevron-right
+
+        .c-product-list__box-product-detail.animation-element.slide-top
+          .c-product-list__box-product-detail-inner.js-product-01__detail
             .c-product-list__box-product-content
               .c-product-list__box-product-content-heading
                 .c-product-list__box-product-content-icon
                 | Product Story
+              .c-product-list__box-product-content-text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
+            .c-product-list__box-product-content
+              .c-product-list__box-product-content-heading
+                .c-product-list__box-product-content-icon
+                | Product Detail
+              .c-product-list__nutrient-table
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Name
+                  dd.c-product-list__nutrient-table-detail %DV
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Calories
+                  dd.c-product-list__nutrient-table-detail 150
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Total Fat
+                  dd.c-product-list__nutrient-table-detail 3.5g	4%
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Saturated Fat
+                  dd.c-product-list__nutrient-table-detail 2.5g	13%
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Trans Fat 0g
+                  dd.c-product-list__nutrient-table-detail -
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Cholesterol
+                  dd.c-product-list__nutrient-table-detail 20mg	7%
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Sodium
+                  dd.c-product-list__nutrient-table-detail 85mg	4%
+                dl.c-product-list__nutrient-table-list
+                  dt.c-product-list__nutrient-table-heading Total Carbs
+                  dd.c-product-list__nutrient-table-detail 19g		7%
+
+            .c-product-list__box-product-badge
+              .c-product-list__box-product-badge-list
+                .c-product-list__box-product-badge-item
+                  figure.c-product-list__box-product-badge-image
+                    img(src="/assets/img/recipes/Bug_UD_Kosher.png", alt="")
+                .c-product-list__box-product-badge-item
+                  figure.c-product-list__box-product-badge-image
+                    img(src="/assets/img/recipes/Bug_No_Artificial_Flavor_Outlined.png", alt="")
+                .c-product-list__box-product-badge-item
+                  figure.c-product-list__box-product-badge-image
+                    img(src="/assets/img/recipes/Bug_Non-GMO_Ingredients_Outlined.png", alt="")
+
+            .c-product-list__box-product-content
+              .c-product-list__box-product-content-heading
+                .c-product-list__box-product-content-icon
+                | Benefits
+              .c-product-list__box-product-content-text
+                |Made with milk from cows not treated with rBST*<br>
+                |Excellent source of protein<br>
+                |Includes live & active cultures, and three types of probiotics<br>
+                |No modified cornstarch or high fructose corn syrup<br>
+                |Less than 5% lactose—a perfect part of a very low lactose diet<br>
+                |Naturally low in sodium<br>
+                |Contains live and active cultures: S. Thermophilus, L. Bulgaricus,<br>
+                |L. Acidophilus, Bifidus and L. Casei<br>
+                |*Milk from rBST-treated cows is not significantly different.
+
+          .c-product-list__box-product-detail-inner.js-product-02__detail.is-product-opacity
+            .c-product-list__box-product-content
+              .c-product-list__box-product-content-heading
+                .c-product-list__box-product-content-icon
+                | Product Story 2
               .c-product-list__box-product-content-text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
             .c-product-list__box-product-content
               .c-product-list__box-product-content-heading

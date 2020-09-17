@@ -38,11 +38,11 @@
       &-icon {
         width: 52px;
         height: 48px;
-        background: url(/assets/img/recipes/ico_man_yellow.svg) no-repeat center center;
+        background: url(/assets/img/recipes/ico_product_yellow.svg) no-repeat center center;
         background-size: cover;
         position: absolute;
         left: -60px;
-        top: 0;
+        top: -5px;
 
         @include mq-min-max-tb {
           width: get-vw(52px);

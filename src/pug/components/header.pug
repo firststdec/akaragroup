@@ -1,4 +1,4 @@
-header.l-header
+header.l-header(class=whiteTheme ? 'whiteTheme' : '')
   .l-header__in.l-block
     if category === true
       h1.l-header__logo
@@ -6,6 +6,7 @@ header.l-header
       p.l-header__logo
         a.l-header__logo-link(href='/')
           img.l-header__logo-image(src='/assets/img/common/logo@2x.png', alt='Akara Group')
+          img.l-header__logo-image.white(src='/assets/img/common/logo_white.svg', alt='Akara Group')
           img.l-header__logo-image-sp(src='/assets/img/common/logo_sp.svg', alt='Akara Group')
     a.l-header__menu-trigger.js-hambuger(href='#', data-delay='300')
       span.l-header__menu-trigger-mark
