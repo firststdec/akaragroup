@@ -1,0 +1,25 @@
+@import '_variables';
+
+.c-box-certificate {
+  margin-top: 80px;
+
+  &__inner {
+    max-width: 940px;
+    margin: 70px auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+
+  }
+
+  &__image{
+
+  }
+}

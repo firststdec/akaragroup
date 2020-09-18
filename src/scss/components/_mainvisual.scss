@@ -33,3 +33,82 @@
     }
   }
 }
+
+
+// c-mv-sub-page
+.c-mv-sub-page {
+  background: url(/assets/img/common/bg_static_banner.png) no-repeat center bottom;
+  background-size: cover;
+
+  &__inner {
+    max-width: 1130px;
+    min-height: 928px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include mq-min-max-tb {
+      max-width: get-vw(1130px);
+      min-height: get-vw(928px);
+    }
+  }
+
+  &__box-content {
+    text-align: center;
+    width: 50%;
+  }
+
+  &__box-image {
+    width: 50%;
+    height: 939px;
+    position: relative;
+
+    @include mq-min-max-tb {
+      height: get-vw(939px);
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    &-frame {
+      position: absolute;
+      width: 1080px;
+      height: 939px;
+      top: -53px;
+      left: 50px;
+
+      @include mq-min-max-tb {
+        width: get-vw(1080px);
+        height: get-vw(939px);
+        top: get-vw(-53px);
+        left: get-vw(50px);
+      }
+
+      > img {
+
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 4.8rem;
+    color: $baseColor;
+  }
+
+  &__sub-heading {
+    font-size: 2.2rem;
+    color: #777;
+  }
+
+  &__text {
+
+  }
+
+  &__anchor {
+    &-icon {
+
+    }
+  }
+}

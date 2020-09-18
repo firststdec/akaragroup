@@ -1,0 +1,158 @@
+@import '../_mixin';
+
+.p-our-story {
+  .c-box-time-line {
+    $this: #{&};
+
+    &__inner {
+      max-width: 1140px;
+      margin: auto;
+      position: relative;
+
+      @include mq-min-max-tb {
+        padding: 0 20px;
+        max-width: get-vw(1140px);
+      }
+    }
+
+    &__line {
+      width: 689px;
+      height: 1693px;
+      background: url(/assets/img/our-story/bg_line_connect.png) no-repeat center center;
+      background-size: cover;
+      position: absolute;
+      left: 42%;
+      transform: translateX(-50%);
+      z-index: 1;
+      top: -300px;
+
+      @include mq-min-max-tb {
+        width: get-vw(689px);
+        height: get-vw(1693px);
+        top: get-vw(-300px);
+      }
+    }
+
+    &__list {
+      margin-top: 100px;
+      position: relative;
+      z-index: 2;
+
+      @include mq-min-max-tb {
+        margin-top: get-vw(100px);
+      }
+    }
+
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 120px;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &:nth-child(even) {
+        .c-box-time-line__image {
+          order: 2;
+        }
+
+        .c-box-time-line__content {
+          order: 1;
+        }
+      }
+
+      &:nth-child(odd) {
+        .c-box-time-line__content {
+          padding-top: 100px;
+
+          @include mq-min-max-tb {
+            padding-top: get-vw(100px);
+          }
+        }
+      }
+    }
+
+    &__image {
+      width: 500px;
+
+      @include mq-min-max-tb {
+        width: get-vw(500px);
+      }
+    }
+
+    &__content {
+      width: 520px;
+
+      @include mq-min-max-tb {
+        width: get-vw(520px);
+      }
+
+      &-heading {
+        font-size: 4.8rem;
+        color: $baseColor;
+      }
+
+      &-text {
+        margin-top: 20px;
+        font-size: 1.6rem;
+        color: #777;
+      }
+    }
+  }
+
+  // c-faq
+  .c-faq {
+    .c-box-cmn-button {
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    &__list {
+      margin-top: 50px;
+    }
+  }
+
+  .-box-subscribe {
+    > .inner {
+      background: none;
+    }
+  }
+
+  .c-box-video {
+    &__inner {
+      padding: 150px 0;
+    }
+
+    &__box-text {
+      max-width: 850px;
+      margin: auto;
+
+      .c-heading-egg-content {
+        color: #777;
+        margin-top: 20px;
+      }
+    }
+
+    &__box-iframe {
+      max-width: 1131px;
+      margin: 45px auto 0;
+
+      &-inner {
+        padding-top: 56.145%;
+        position: relative;
+
+        > iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

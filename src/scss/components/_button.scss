@@ -59,6 +59,7 @@
 
     .arrow {
       transition: all .3s ease 0s;
+      position: relative;
     }
 
     >.text {
@@ -84,6 +85,7 @@
 
         .arrow {
           opacity: 1;
+          position: relative;
         }
 
         &::before {
@@ -110,6 +112,7 @@
 
         .arrow {
           opacity: 1;
+          position: relative;
         }
 
         &::before {
