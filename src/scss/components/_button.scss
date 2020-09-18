@@ -96,6 +96,37 @@
         }
       }
     }
+
+    &.--orange {
+      .arrow,
+      .text {
+        color: $white;
+      }
+
+      &:hover {
+        padding-right: 40px;
+        border: 0;
+        box-shadow: 3px 5px 15px 0px rgba(0,0,0,0.16);
+
+        .arrow {
+          opacity: 1;
+        }
+
+        &::before {
+          width: 100%;
+          background: radial-gradient(#000, #000);
+        }
+
+        .text {
+          display: inline-block;
+        }
+
+        .arrow,
+        .text {
+          color: $yellow;
+        }
+      }
+    }
   }
 }
 

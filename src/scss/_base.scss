@@ -238,7 +238,7 @@ a {
       }
     }
 
-    .l-lanugae-bar .c-link, .l-header .l-lanugae-bar .c-link--base {
+    .l-language-bar .c-link, .l-header .l-language-bar .c-link--base {
       @include mq-min-tb{
         color: $white;
       }
@@ -265,7 +265,7 @@ a {
         color: $baseColor;
       }
   
-      .l-lanugae-bar .c-link, .l-header .l-lanugae-bar .c-link--base {
+      .l-language-bar .c-link, .l-header .l-language-bar .c-link--base {
         color: $baseColor;
       }
 
@@ -1092,7 +1092,7 @@ a {
     }
   }
 
-  .l-lanugae-bar {
+  .l-language-bar {
     display: flex;
     padding: 0 40px;
 

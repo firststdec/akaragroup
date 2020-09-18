@@ -55,12 +55,16 @@
       &__inner {
         max-width: 1260px;
         margin: 0 auto;
+
+        @include mq-min-max-tb {
+          padding-right: 20px;
+        }
       }
 
       &__box-product-detail {
         padding-right: 0;
         width: auto;
-        
+
         @include mq-max-sp {
           padding-right: 20px;
         }
@@ -80,14 +84,26 @@
 
       &__box-product-content {
         &-text {
-          @include mq-min-tb {
-            padding-left: 70px;
+          padding-left: 70px;
+
+          @include mq-min-max-tb {
+            padding-left: get-vw(70px);
+          }
+
+          @include mq-max-sp {
+            padding-left: 0;
           }
         }
 
         .c-product-list__nutrient-table {
-          @include mq-min-tb {
-            padding-left: 70px;
+          padding-left: 70px;
+
+          @include mq-min-max-tb {
+            padding-left: get-vw(70px);
+          }
+
+          @include mq-max-sp {
+            padding-left: 0;
           }
         }
 
@@ -99,14 +115,16 @@
 
       &__box-product-badge {
         position: relative;
+        padding-left: 70px;
 
         @include mq-max-sp {
           display: flex;
           flex-wrap: wrap;
+          padding-left: 0;
         }
 
-        @include mq-min-tb {
-          padding-left: 70px;
+        @include mq-min-max-tb {
+          padding-left: get-vw(70px);
         }
 
         &-list {
@@ -128,6 +146,8 @@
             left: -380px;
             top: 50%;
             transform: translateY(-50%);
+            width: get-vw(397px);
+            height: get-vw(396px);
           }
         }
       }
@@ -172,6 +192,218 @@
     }
   }
 
+  &.-orange {
+    .c-product-mv {
+      // max-width: 1440px;
+      margin: auto;
+      background: url(/assets/img/recipes/bg_product_orange.svg) no-repeat center bottom;
+      background-size: cover;
+    }
+
+    .c-product-image {
+      padding-bottom: 200px;
+
+      @include mq-min-max-tb {
+        padding-bottom: get-vw(200px);
+      }
+
+      &__heading {
+        color: $white;
+        margin-top: -150px;
+
+        @include mq-max-sp {
+          margin-top: 0;
+        }
+
+        @include mq-min-max-tb {
+          margin-top: 0;
+        }
+      }
+
+      &__text {
+        color: $white;
+      }
+    }
+
+    .c-product-heading {
+      .c-product-category {
+        &__name {
+          color: $white;
+        }
+      }
+    }
+
+    .c-product-content {
+      padding: 300px 0 100px;
+
+      @include mq-min-max-tb {
+        padding: get-vw(350px) 0 0;
+      }
+
+      .c-heading-cmn-01 {
+        > .icon {
+          background: url(/assets/img/recipes/ico_egg_orange.svg) no-repeat center center;
+          background-size: cover;
+        }
+      }
+    }
+
+    .c-product-list {
+      &__inner {
+        max-width: 1260px;
+        margin: 0 auto;
+
+        @include mq-min-max-tb {
+          padding-right: 20px;
+        }
+      }
+
+      &__box-product-detail {
+        padding-right: 0;
+        width: auto;
+
+        @include mq-max-sp {
+          padding-right: 20px;
+        }
+
+        &-inner {
+          height: auto;
+          overflow: visible;
+
+                  /* width */
+          &::-webkit-scrollbar {
+            width: auto;
+            position: relative;
+            background: none;
+          }
+        }
+      }
+
+      &__box-product-content {
+        &-text {
+          padding-left: 70px;
+
+          @include mq-max-sp {
+            padding-left: 0;
+          }
+
+          @include mq-min-max-tb {
+            padding-left: get-vw(70px);
+          }
+        }
+
+        .c-product-list__nutrient-table {
+          padding-left: 70px;
+
+          @include mq-max-sp {
+            padding-left: 0;
+          }
+
+          @include mq-min-max-tb {
+            padding-left: get-vw(70px);
+          }
+        }
+
+        &-icon {
+          background: url(/assets/img/recipes/ico_egg_orange.svg) no-repeat center center;
+          background-size: cover;
+        }
+      }
+
+      &__box-product-badge {
+        position: relative;
+        padding-left: 70px;
+
+        @include mq-max-sp {
+          display: flex;
+          flex-wrap: wrap;
+          padding-left: 0;
+        }
+
+        @include mq-min-max-tb {
+          padding-left: get-vw(70px);
+        }
+
+        &-list {
+          @include mq-max-sp {
+            justify-content: center;
+            width: 100%;
+          }
+        }
+
+        &-image {
+          @include mq-min-max-tb {
+            width: get-vw(88px);
+            height: get-vw(88px);
+          }
+        }
+
+        &-image-deco {
+          position: relative;
+
+          @include mq-max-sp {
+            order: 2;
+          }
+
+          @include mq-min-pc {
+            position: absolute;
+            left: -380px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          @include mq-min-max-tb {
+            position: absolute;
+            left: get-vw(-380px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: get-vw(397px);
+            height: get-vw(396px);
+          }
+        }
+      }
+    }
+
+    .c-recipes-box {
+      background: url(/assets/img/recipes/bg_recipes_product_orange.svg) no-repeat center center;
+
+      .-recipes-top-heading > .inner .box-heading .title span.text-yellow {
+        color: $white;
+      }
+
+      .-recipes-top-heading > .inner .box-heading .title span {
+        color: $white;
+      }
+
+      .-recipes-top-heading .c-box-heading-center-text .inner .box-text .text {
+        color: $white;
+      }
+    }
+
+    .c-button-cmn-01.--green {
+      border-color: $white;
+
+      .fa {
+        color: $white;
+      }
+    }
+
+    .swiper-slide .c-card-voice__heading {
+      color: $orange;
+    }
+
+    .c-voice-box__fix-box-heading-icon {
+      background: url(/assets/img/recipes/ico_egg_orange.svg) no-repeat center center;
+      background-size: cover;
+    }
+
+    .swiper-slide .c-card-voice__author-icon {
+      background: url(/assets/img/recipes/ico_man_orange.svg) no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  // c-product-mv
   .c-product-mv {
     width: 100%;
     max-width: 1440px;
@@ -403,6 +635,7 @@
 
       @include mq-max-sp {
         font-size: 2.2rem;
+        padding-left: 40px;
       }
 
       > .icon {
@@ -413,6 +646,17 @@
         position: absolute;
         left: 0;
         top: 0;
+
+        @include mq-min-max-tb {
+          width: get-vw(52px);
+          height: get-vw(48px);
+        }
+
+        @include mq-max-sp {
+          width: 30px;
+          height: 27px;
+          margin-top: 3px;
+        }
       }
     }
 
@@ -420,6 +664,10 @@
       font-size: 1.6rem;
       color: #777;
       padding-left: 60px;
+
+      @include mq-max-sp {
+        padding-left: 0;
+      }
     }
   }
 
@@ -840,6 +1088,10 @@
 .product-swiper-container {
   margin-left: -30px;
 
+  @include mq-max-sp {
+    margin-left: 0;
+  }
+
   &.js-recipes-swiper-normal {
     .article-content {
 
@@ -855,6 +1107,11 @@
       width: get-vw(300px);
       height: get-vw(415px);
       margin-left: get-vw(30px);
+    }
+
+    @include mq-max-sp {
+      margin-left: 0;
+      height: auto;
     }
   }
 
