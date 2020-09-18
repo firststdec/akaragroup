@@ -1,0 +1,107 @@
+.p-faq .-box-subscribe > .inner {
+  background: none;
+}
+
+.c-faq__inner {
+  max-width: 850px;
+  margin: 65px auto 0;
+}
+
+.c-faq__item {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.c-faq__item:first-of-type {
+  border-top: 0;
+}
+
+.c-faq__item:not(:first-of-type) {
+  margin-top: 50px;
+}
+
+.c-faq__item.is-active .c-faq__icon {
+  background: #211E1F;
+}
+
+.c-faq__item.is-active .c-faq__icon .fas.fa-chevron-down {
+  opacity: 1;
+  position: relative;
+  color: #FFC416;
+}
+
+.c-faq__item.is-active .c-faq__icon .fas.fa-chevron-right {
+  opacity: 0;
+  position: absolute;
+}
+
+.c-faq__box-heading {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.c-faq__box-heading .c-faq__heading {
+  max-width: 770px;
+  font-size: 2.2rem;
+  color: #211E1F;
+}
+
+.c-faq__box-heading .c-faq__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 12px 33px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 12px 33px 0px rgba(0, 0, 0, 0.1);
+  color: #211E1F;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c-faq__box-heading .c-faq__icon .fas.fa-chevron-down {
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.c-faq__box-heading .c-faq__icon .fas.fa-chevron-right {
+  opacity: 1;
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: #211E1F;
+}
+
+.c-faq__box-text {
+  display: none;
+}
+
+.c-faq__box-text .c-faq__text {
+  max-width: 770px;
+  font-size: 1.6rem;
+  color: #777777;
+  padding-top: 20px;
+}

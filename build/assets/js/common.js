@@ -28,6 +28,7 @@ $(function () {
   elementInviewTop();
   fakeTrigger();
   customSelect();
+  jsFaqAccording();
 });
 
 $(window).on('load', function () {
@@ -872,5 +873,18 @@ const customSelect = function() {
     function setTextSelected(text) {
       $customSelect.next().text(text);
     }
+  }
+}
+
+const jsFaqAccording = function () {
+  const $jsFaq = $('.js-faq-accordian');
+
+  if($jsFaq.length) {
+    const $jsFaqHeading = $('.js-faq-accordian').find('.c-faq__box-heading');
+
+    $($jsFaqHeading).on('click', function(){
+      $(this).next().slideToggle();
+      $(this).closest('.c-faq__item').toggleClass('is-active');
+    });
   }
 }
