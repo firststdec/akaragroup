@@ -1214,6 +1214,11 @@
     background-size: get-vw(1440px) get-vw(1533px);
   }
 
+  @include mq-custom-min(1441px) {
+    background: url(/assets/img/top/bg_story_about_yellow.svg) no-repeat center center;
+    background-size: cover;
+  }
+
   .c-heading-cmn-01 {
     font-size: 8.5rem;
     font-weight: 500;

@@ -13,6 +13,11 @@
       margin: auto;
       background: url(/assets/img/recipes/bg_product_yellow.svg) no-repeat center bottom;
       background-size: cover;
+
+      @include mq-custom-min(1441px) {
+        background: url(/assets/img/recipes/bg_product_yellow.svg) no-repeat center center;
+        background-size: cover;
+      }
     }
   }
 
@@ -22,6 +27,11 @@
       margin: auto;
       background: url(/assets/img/recipes/bg_product_green.svg) no-repeat center bottom;
       background-size: cover;
+
+      @include mq-custom-min(1441px) {
+        background: url(/assets/img/recipes/bg_product_green.svg) no-repeat center center;
+        background-size: cover;
+      }
     }
 
     .c-product-image {
@@ -155,6 +165,7 @@
 
     .c-recipes-box {
       background: url(/assets/img/recipes/bg_recipes_product_green.svg) no-repeat center center;
+      background-size: cover;
 
       .-recipes-top-heading > .inner .box-heading .title span.text-yellow {
         color: $white;
@@ -198,6 +209,11 @@
       margin: auto;
       background: url(/assets/img/recipes/bg_product_orange.svg) no-repeat center bottom;
       background-size: cover;
+
+      @include mq-custom-min(1441px) {
+        background: url(/assets/img/recipes/bg_product_orange.svg) no-repeat center center;
+        background-size: cover;;
+      }
     }
 
     .c-product-image {
@@ -205,6 +221,12 @@
 
       @include mq-min-max-tb {
         padding-bottom: get-vw(200px);
+      }
+
+      @include mq-custom-min(1441px) {
+        padding-bottom: 20px;
+        top: -100px;
+        position: relative;
       }
 
       &__heading {
@@ -238,6 +260,11 @@
 
       @include mq-min-max-tb {
         padding: get-vw(350px) 0 0;
+      }
+
+      @include mq-custom-min(1441px) {
+        margin: -70px auto 0;
+        padding: 200px 0 0;
       }
 
       .c-heading-cmn-01 {
@@ -366,6 +393,7 @@
 
     .c-recipes-box {
       background: url(/assets/img/recipes/bg_recipes_product_orange.svg) no-repeat center center;
+      background-size: cover;
 
       .-recipes-top-heading > .inner .box-heading .title span.text-yellow {
         color: $white;
@@ -406,17 +434,21 @@
   // c-product-mv
   .c-product-mv {
     width: 100%;
-    max-width: 1440px;
-    min-height: 970px;
     position: relative;
     z-index: 5;
 
-    @include mq-max-sp {
-      min-height: 700px;
-    }
+    .inner {
+      max-width: 1440px;
+      min-height: 970px;
+      margin: auto;
 
-    @include mq-min-max-tb {
-      min-height: get-vw(970px);
+      @include mq-max-sp {
+        min-height: 700px;
+      }
+
+      @include mq-min-max-tb {
+        min-height: get-vw(970px);
+      }
     }
   }
 
@@ -600,10 +632,19 @@
     background-size: cover;
     padding: 400px 0 100px;
     margin: -270px auto 0;
-    max-width: 1440px;
 
     @include mq-max-sp {
       padding: 300px 0 60px;
+    }
+
+    @include mq-custom-min(1441px) {
+      background: url(/assets/img/recipes/bg_product_gray.svg) no-repeat center center;
+      background-size: cover;
+    }
+
+    &__inner {
+      max-width: 1440px;
+      margin: auto;
     }
 
     .c-box-card-row-01 {
@@ -1039,7 +1080,6 @@
     background: url(/assets/img/recipes/bg_recipes_product_yellow.svg) no-repeat center center;
     background-size: cover;
     padding: 100px 0 150px;
-    max-width: 1440px;
     margin: auto;
 
     @include mq-min-max-tb {
