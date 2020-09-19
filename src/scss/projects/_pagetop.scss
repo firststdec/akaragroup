@@ -1,14 +1,13 @@
 .p-pagetop {
   position: fixed;
   right: 10px;
-  bottom: 10px;
+  bottom: 100px;
   z-index: 999;
   opacity: 0;
   transition: opacity $transition;
 
   @include mq-min-tb {
     right: 20px;
-    bottom: 20px;
   }
 
   &__trigger {

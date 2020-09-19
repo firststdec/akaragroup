@@ -128,11 +128,7 @@ header.l-header(class=whiteTheme ? 'whiteTheme' : '')
                               i.circle
                               | CONTACT US
 
-          .l-language-bar
-            a.c-link(href="#")
-              span.text ไทย
-            a.c-link.is-active(href="#")
-              span.text ENG
+          .l-search-bar
             .c-link.no-separate.c-search
               span.fas.fa-search
 
@@ -142,3 +138,12 @@ header.l-header(class=whiteTheme ? 'whiteTheme' : '')
                 i.fa.fa-map-marker-alt
                 i.fa.fa-map-marker-alt.fa--bottom
                 | WHERE TO BUY
+          .l-language-bar
+            a.c-link(href="#")
+              span.icon.-th
+                img(src="/assets/img/common/flag-thai.svg", alt="")
+
+            a.c-link.is-active(href="#")
+              span.icon.-eng
+                img(src="/assets/img/common/flag-eng.svg", alt="")
+

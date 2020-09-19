@@ -2,7 +2,12 @@
 
 .c-box-video {
   background: url(/assets/img/common/bg_box_video.svg) no-repeat center center;
-  background-size: cover;;
+  background-size: cover;
+
+  @include mq-min-max-tb {
+    padding: 0 20px;
+  }
+
   &__inner {
     max-width: 1440px;
     min-height: 1090px;

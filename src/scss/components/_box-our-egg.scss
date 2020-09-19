@@ -7,6 +7,7 @@
 
   @include mq-min-max-tb {
     margin-top: get-vw(150px);
+    padding: 0 20px;
   }
 
   &__inner {
