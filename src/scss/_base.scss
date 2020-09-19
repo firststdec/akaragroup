@@ -362,8 +362,7 @@ a {
     @include mq-min-tb {
       display: block;
       position: static;
-      max-width: 1000px;
-      margin-left: auto;
+      margin-left: 80px;
     }
   }
 
@@ -444,7 +443,6 @@ a {
 
     @include mq-min-tb {
       display: flex;
-      justify-content: space-between;
       border: none;
       margin: -25px 0;
     }

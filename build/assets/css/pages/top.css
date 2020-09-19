@@ -1524,6 +1524,13 @@
   }
 }
 
+@media (min-width: 1441px) {
+  .-story-about-top {
+    background: url(/assets/img/top/bg_story_about_yellow.svg) no-repeat center center;
+    background-size: cover;
+  }
+}
+
 .-story-about-top .c-heading-cmn-01 {
   font-size: 8.5rem;
   font-weight: 500;
