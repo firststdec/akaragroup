@@ -5,7 +5,7 @@
     margin-top: 80px;
 
     @include mq-max-sp {
-      margin-top: 0;
+      margin-top: 0 !important;
     }
 
     @include mq-min-max-tb {

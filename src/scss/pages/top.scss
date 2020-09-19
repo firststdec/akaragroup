@@ -202,7 +202,7 @@
 
       @include mq-min-max-tb {
         margin-top: get-vw(40px);
-        margin-left: ge-vw(10px);
+        margin-left: get-vw(10px);
       }
 
       .mv-swiper-button-next,
@@ -219,7 +219,7 @@
         transition: all .3s;
 
         .fas {
-          color: #777;
+          color: #DCDCDC;
           transition: all .3s;
         }
 
@@ -235,103 +235,10 @@
       }
 
       .mv-swiper-button-prev {
-        margin-right: 15px;
+        margin-right: 10px;
 
         @include mq-max-sp {
           margin-right: 10px;
-        }
-      }
-    }
-
-  }
-
-  .box-swiper-mv-js {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-
-    .swiper-slide {
-      background: transparent;
-
-      @include mq-max-sp {
-        top: 150px;
-      }
-    }
-
-    .mainvisual-content {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      overflow: hidden;
-
-      .box-image-wrapper {
-        width: 63.19%;
-        top: 0;
-        right: 0;
-        position: absolute;
-
-        @include mq-max-sp {
-          width: 340px;
-          bottom: 0;
-          right: 0;
-          position: absolute;
-        }
-        @include mq-custom-min-max(426px, 896px) {
-          width: 500px;
-          height: auto;
-        }
-      }
-
-      .box-image {
-        // padding-top: 114.74%;
-        width: 910px;
-        height: 1044px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        left: 0;
-
-        @include mq-min-max-tb {
-          width: get-vw(910px);
-          height: get-vw(1044px);
-        }
-
-        @include mq-max-sp {
-          padding-top: 0;
-          width: 340px;
-          height: 314px;
-          top: auto;
-        }
-
-        @include mq-custom-min-max(426px, 896px) {
-          width: 500px;
-          height: auto;
-        }
-
-        img {
-          position: absolute;
-          width: auto;
-          height: auto;
-          bottom: 50px;
-          right: -130px;
-
-          @include mq-min-pc {
-            left: 0;
-            bottom: 0;
-            max-width: fit-content;
-            object-fit: none;
-          }
-
-          @include mq-min-max-tb {
-            right: get-vw(-250px);
-          }
         }
       }
     }
@@ -440,80 +347,6 @@
       .c-box-cmn-button {
         @include mq-max-sp {
           margin-bottom: 20px;
-        }
-      }
-
-      .c-scroll-down-button {
-        $this: &;
-
-        position: relative;
-
-        &::before {
-          content: '';
-          width: 62px;
-          height: 65px;
-          top: -680px;
-          left: -245px;
-          background: url(/assets/img/top/scroll_down.svg) no-repeat;
-          background-size: cover;
-          z-index: 1;
-          backface-visibility: hidden;
-          position: absolute;
-          transition: all .3s ease-in-out;
-          opacity: 1;
-          animation: vertical 1.5s ease-in-out infinite alternate;
-
-          @include mq-max-sp {
-            display: none;
-          }
-
-          @include mq-min-max-tb {
-            width: get-vw(62px);
-            height: get-vw(65px);
-            top: get-vw(-680px);
-            left: get-vw(-245px);
-          }
-
-          @media (max-width: 1024px) {
-            left: get-vw(-230px);
-          }
-        }
-
-        &::after {
-          content: '';
-          width: 66px;
-          height: 81px;
-          top: -680px;
-          left: -245px;
-          background: url(/assets/img/top/scroll_down_hover.svg) no-repeat;
-          background-size: cover;
-          z-index: 1;
-          backface-visibility: hidden;
-          position: absolute;
-          transition: all .3s ease-in-out;
-          opacity: 0;
-
-          @include mq-min-max-tb {
-            width: get-vw(66px);
-            height: get-vw(81px);
-            top: get-vw(-680px);
-            left: get-vw(-245px);
-          }
-
-          @media (max-width: 1024px) {
-            left: get-vw(-230px);
-          }
-        }
-
-        &:hover {
-          &::before {
-            opacity: 0;
-          }
-
-          &::after {
-            opacity: 1;
-            transform: translateY(10px);
-          }
         }
       }
 
@@ -810,7 +643,7 @@
         @include mq-min-max-tb {
           width: get-vw(100px);
           height: get-vw(126px);
-          bottom: get-vw(-100px);
+          bottom: get-vw(-120px);
           left: get-vw(20px);
         }
       }
@@ -870,6 +703,18 @@
       * {
         position: relative;
         z-index: 2;
+      }
+    }
+
+    .c-button-cmn-01 {
+      &:hover {
+        .arrow {
+          color: $yellow;
+        }
+      }
+
+      .arrow {
+        color: $white;
       }
     }
   }

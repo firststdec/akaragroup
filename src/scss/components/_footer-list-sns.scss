@@ -5,6 +5,10 @@
 .c-footer-list-sns {
   display: flex;
 
+  @include mq-max-sp {
+    justify-content: center;
+  }
+
   &__item {
     margin-right: 20px;
 

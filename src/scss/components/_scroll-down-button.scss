@@ -1,0 +1,149 @@
+
+.c-scroll-down-button {
+  $this: &;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 62px;
+    height: 65px;
+    top: -680px;
+    left: -245px;
+    background: url(/assets/img/common/scroll_down.svg) no-repeat;
+    background-size: cover;
+    z-index: 1;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: all .3s ease-in-out;
+    opacity: 1;
+    animation: vertical 1.5s ease-in-out infinite alternate;
+
+    @include mq-max-sp {
+      display: none;
+    }
+
+    @include mq-min-max-tb {
+      width: get-vw(62px);
+      height: get-vw(65px);
+      top: get-vw(-680px);
+      left: get-vw(-245px);
+    }
+
+    @media (max-width: 1024px) {
+      left: get-vw(-230px);
+    }
+  }
+
+  &::after {
+    content: '';
+    width: 66px;
+    height: 81px;
+    top: -680px;
+    left: -245px;
+    background: url(/assets/img/common/scroll_down_hover.svg) no-repeat;
+    background-size: cover;
+    z-index: 1;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+
+    @include mq-min-max-tb {
+      width: get-vw(66px);
+      height: get-vw(81px);
+      top: get-vw(-680px);
+      left: get-vw(-245px);
+    }
+
+    @media (max-width: 1024px) {
+      left: get-vw(-230px);
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+  }
+}
+
+
+.c-scroll-down-button__static-page {
+  $this: &;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 62px;
+    height: 65px;
+    top: 65px;
+    left: -35px;
+    background: url(/assets/img/common/scroll_down.svg) no-repeat;
+    background-size: cover;
+    z-index: 1;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: all .3s ease-in-out;
+    opacity: 1;
+    animation: vertical 1.5s ease-in-out infinite alternate;
+
+    @include mq-max-sp {
+      display: none;
+    }
+
+    @include mq-min-max-tb {
+      width: get-vw(62px);
+      height: get-vw(65px);
+      left: get-vw(-35px);
+      top: 0;
+    }
+
+    @media (max-width: 1024px) {
+
+    }
+  }
+
+  &::after {
+    content: '';
+    width: 66px;
+    height: 81px;
+    top: 65px;
+    left: -35px;
+    background: url(/assets/img/common/scroll_down_hover.svg) no-repeat;
+    background-size: cover;
+    z-index: 1;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+
+    @include mq-min-max-tb {
+      width: get-vw(66px);
+      height: get-vw(81px);
+      left: get-vw(-35px);
+      top: 0;
+    }
+
+    @media (max-width: 1024px) {
+
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+  }
+}

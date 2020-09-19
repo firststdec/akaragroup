@@ -1,0 +1,153 @@
+@import '../_mixin';
+
+.c-our-brand {
+  $this: #{&};
+
+  &__inner {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  &__list {
+    margin-top: 100px;
+  }
+
+  &__item {
+    &:nth-child(odd) {
+      .c-our-brand__card {
+        &-image {
+          order: 2;
+        }
+
+        &-content {
+          order: 1;
+        }
+      }
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 100px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-image {
+      width: 520px;
+    }
+
+    &-frame {
+      border-radius: 30px;
+      box-shadow: 10px 15px 35px 0px rgba(0,0,0,0.25);
+      position: relative;
+    }
+
+    &-content {
+      width: 520px;
+    }
+
+    &-content-heading-logo {
+
+    }
+
+    &-content-heading-sub {
+      font-size: 3.2rem;
+      line-height: 1.3;
+      color: $baseColor;
+      margin-top: 20px;
+    }
+
+    &-content-text {
+      margin-top: 20px;
+      font-size: 1.6rem;
+      color: #777;
+    }
+    
+  }
+
+  .js-slider-multi{
+    img {
+      border-radius: 30px;
+    }
+
+    .swiper-slide {
+      border-radius: 30px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      outline: none;
+      width: 34px;
+      height: 34px;
+      background: #fff;
+      border-radius: 100%;
+      box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.16);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .3s;
+      opacity: 0;
+
+      .fas {
+        color: #777;
+        transition: all .3s;
+        position: relative;
+      }
+
+      &:hover {
+        transform: scale(0.8);
+        background: $baseColor;
+
+        .fas {
+          transform: scale(0.9);
+          color: $yellow;
+        }
+      }
+    }
+  }
+
+  .c-fake-nav-control{
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      outline: none;
+      width: 34px;
+      height: 34px;
+      background: #fff;
+      border-radius: 100%;
+      box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.16);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .3s;
+
+      .fas {
+        color: #DCDCDC;
+        transition: all .3s;
+        position: relative;
+      }
+
+      &:hover {
+        transform: scale(0.8);
+        background: $baseColor;
+
+        .fas {
+          transform: scale(0.9);
+          color: $yellow;
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      left: -20px
+    }
+
+    .swiper-button-next {
+      right: -20px;
+    }
+  }
+}

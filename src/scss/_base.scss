@@ -260,11 +260,11 @@ a {
       #{$this}__menu-mark {
         color: $baseColor;
       }
-  
+
       .fas {
         color: $baseColor;
       }
-  
+
       .l-language-bar .c-link, .l-header .l-language-bar .c-link--base {
         color: $baseColor;
       }
@@ -362,7 +362,7 @@ a {
     @include mq-min-tb {
       display: block;
       position: static;
-      margin-left: 80px;
+      margin-left: 60px;
     }
   }
 
@@ -668,11 +668,23 @@ a {
         justify-content: flex-start !important;
       }
 
+      &:nth-child(2) {
+
+        @include mq-min-pc {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
       &-item {
-        width: 100%;
+        width: 50%;
         padding-left: 30px;
 
         @include mq-min-max-tb {
+          width: 100%;
+        }
+
+        @include mq-max-sp {
           width: 100%;
         }
       }
@@ -1097,16 +1109,23 @@ a {
 
     @include mq-max-sp {
       position: absolute;
-      top: 25px;
-      right: 30px;
+      top: 26px;
+      right: 60px;
       z-index: 2;
     }
 
     .c-link {
+      @include mq-max-sp {
+        margin-left: 10px;
+      }
+
       .icon {
         border-radius: 100%;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-        display: none;
+
+        @include mq-min-tb {
+          display: none;
+        }
 
         &.-th {
 
@@ -1120,11 +1139,15 @@ a {
       &.is-active {
         .icon {
           &.-th {
-            display: block;
+            @include mq-min-tb {
+              display: block;
+            }
           }
 
           &.-eng {
-            display: block;
+            @include mq-min-tb {
+              display: block;
+            }
           }
         }
       }
@@ -1137,13 +1160,17 @@ a {
 
     @include mq-max-sp {
       position: absolute;
-      top: 25px;
-      right: 30px;
+      top: 32px;
+      right: 125px;
       z-index: 2;
     }
 
     .c-search {
       color: $baseColor;
+
+      @include mq-max-sp {
+        font-size: 2rem;
+      }
     }
   }
 }
@@ -1748,7 +1775,6 @@ a[data-group="menu"] {
 
       &:nth-child(1) {
         @include mq-max-sp {
-          margin-top: 30px;
           padding: 0;
         }
       }

@@ -19,11 +19,13 @@
 
       .arrow {
         opacity: 1;
+        color: $yellow;
       }
 
       &::before {
         width: 100%;
-        background: radial-gradient(#FCE279, #FFC416);
+        background: $baseColor;
+        color: $yellow;
       }
 
       &::after {
@@ -34,6 +36,7 @@
         opacity: 1;
         font-size: 1.4rem;
         padding: 0 10px 0 15px;
+        color: $yellow;
       }
     }
 

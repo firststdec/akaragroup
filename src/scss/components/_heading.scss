@@ -27,6 +27,7 @@
     height: 48px;
     background: url(/assets/img/common/ico_product_yellow.svg) no-repeat center center;
     background-size: cover;
+    margin-right: 10px;
 
     &.-white {
       background: url(/assets/img/common/ico_product_white.svg) no-repeat center center;
@@ -35,7 +36,6 @@
 
   &__text {
     font-size: 4.8rem;
-    padding-left: 10px;
 
     &.-small {
       font-size: 4rem;

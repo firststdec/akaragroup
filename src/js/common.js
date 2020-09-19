@@ -22,13 +22,13 @@ $(function () {
   selectAddClass();
   heroFit();
   jsMainvisual();
-  jsSlickCenter();
-  jsSlickNormal();
+  jsSwiperMulti();
   headerHideSP();
   elementInviewTop();
   fakeTrigger();
   customSelect();
-  jsFaqAccording();
+  jsFaqAccordian();
+  fakeSwiperMultiControl();
 });
 
 $(window).on('load', function () {
@@ -603,94 +603,6 @@ var jsMainvisual = function() {
   });
 }
 
-var jsSlickCenter = function () {
-  let $thisElement = $('.js-slick-center');
-
-  if ( $thisElement ) {
-    $thisElement.slick({
-      centerMode: true,
-      centerPadding: '60px',
-      slidesToShow: 4,
-      swipeToSlide: true,
-      arrows: false,
-      dotted: false,
-      responsive: [
-        {
-          breakpoint: 1080,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 896,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 426,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
-  }
-}
-
-var jsSlickNormal = function () {
-  let $thisElement = $('.js-slick-normal');
-
-  if ( $thisElement ) {
-    $thisElement.slick({
-      centerMode: false,
-      slidesToShow: 4,
-      swipeToSlide: true,
-      arrows: false,
-      dotted: false,
-      // infinity: false,
-      responsive: [
-        {
-          breakpoint: 1080,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 896,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 426,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
-  }
-}
-
 var elementInviewTop = function () {
   var $animation_elements = $('.animation-element')
   var $window = $(window)
@@ -876,7 +788,7 @@ const customSelect = function() {
   }
 }
 
-const jsFaqAccording = function () {
+const jsFaqAccordian = function () {
   const $jsFaq = $('.js-faq-accordian');
 
   if($jsFaq.length) {
@@ -888,3 +800,41 @@ const jsFaqAccording = function () {
     });
   }
 }
+
+const jsSwiperMulti = function (){
+  const $jsSwiperMuliElement = $('.js-slider-multi');
+
+  if($jsSwiperMuliElement.length) {
+    const mySwiperMulti = new Swiper('.js-slider-multi', {
+      // Optional parameters
+      slidesPerView: 1,
+      centeredSlides: false,
+      loop: true,
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.js-slider-multi .swiper-button-next',
+        prevEl: '.js-slider-multi .swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.js-slider-multi .swiper-scrollbar',
+      },
+
+    });
+  }
+}
+
+const fakeSwiperMultiControl = function (){
+  if($('.js-slider-multi').length) {
+    $('.c-fake-nav-control .swiper-button-prev').on('click', function(){
+      $(this).closest('.c-our-brand__card-frame').find('.js-slider-multi .swiper-button-prev').click();
+    });
+
+    $('.c-fake-nav-control .swiper-button-next').on('click', function(){
+      $(this).closest('.c-our-brand__card-frame').find('.js-slider-multi .swiper-button-next').click();
+    });
+  }
+}
+
