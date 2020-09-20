@@ -1,10 +1,14 @@
 .c-hero-faq {
   &__inner {
-    max-width: 1440px;
     min-height: 496px;
     margin: auto;
-    background: url(/assets/img/faq/bg_faq.png) no-repeat center top;
+    background: url(/assets/img/faq/bg_faq.png) no-repeat center bottom;
+    background-size: cover;
     position: relative;
+
+    @include mq-min-max-tb {
+      min-height: get-vw(496px);
+    }
   }
 
   &__text {

@@ -52,9 +52,22 @@
     }
 
     &-content {
-      margin-top: 10px;
+      margin-top: 15px;
       font-size: 1.6rem;
-      color: #777;
+      color: $baseColor;
+    }
+  }
+
+  .c-heading-egg__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    > .c-egg-solid {
+      width: 22px;
+      height: 29px;
+      background: url(/assets/img/svg/egg-solid.svg) no-repeat center center;
+      background-size: cover;
     }
   }
 }

@@ -1,0 +1,170 @@
+extends ../../layouts/master.pug
+
+block variables
+  -
+    const index = true
+    const meta = {
+      title: 'Contact Us | Akara Group',
+      keyword: 'Akara Group',
+      description: '',
+      goTitle: 'Akara Group',
+      goDescription: '',
+      goImage: '/assets/img/ogp.png',
+      goUrl: '',
+      twitterTitle: 'Akara Group',
+      twitterDescription: '',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: ''
+    }
+
+    const topPage = false
+    const whiteTheme = false
+
+block prepend css
+  link(rel='stylesheet', href='/assets/css/libs/slick.css')
+block append scripts
+  script(src='/assets/js/libs/slick.min.js')
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+
+block outside
+  //- // loader
+  //- .c-loader
+  //-   .c-loader__icon
+  //-     p.c-loader__text
+  //-       img(src="/assets/img/common/logo@2x.png", alt="")
+  //-     .loader.simple-circle
+  //- // /loader
+
+block content
+  .p-contact-us
+    .c-mv-sub-page
+      .c-mv-sub-page__inner
+        .c-mv-sub-page__box-content
+          .c-mv-sub-page__heading Contact Us
+          .c-mv-sub-page__sub-heading Grow with us at Akara
+          .c-mv-sub-page__text We encourage all employees to improve their effectiveness that would create true understanding of job responsibility which leads to the achievement of both ind ividual and team success.
+          a.c-mv-sub-page__anchor-icon.js-scroll.c-scroll-down-button__static-page(href="#scroll_timeline")
+            .c-scroll-down-line
+        .c-mv-sub-page__box-image
+          figure.c-mv-sub-page__image-frame
+            img(src="/assets/img/contact-us/img_mv_contact_us.png", alt="")
+
+    .c-box-time-line
+      .c-box-time-line__inner
+        .c-box-time-line__line
+        .c-box-time-line__list#scroll_timeline
+          .c-box-time-line__item
+            .c-box-time-line__image
+              .c-box-time-line__image-frame
+                img(src="/assets/img/contact-us/img_contact_us_01.png", alt="บริษัท อัครากรุ๊ป จำกัด")
+            .c-box-time-line__content
+              .c-box-time-line__content-heading.-small บริษัท อัครากรุ๊ป จำกัด
+              ul.c-box-time-line__content-list
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  .c-box-detail
+                    .heading วันและเวลาทำการ
+                    .detail วันจันทร์-วันเสาร์ : 8.00 น. –  17.00 น.
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  .c-box-detail
+                    .heading ที่อยู่ | คลิกดูแผนที่
+                    .detail 211 หมู่ 10 ต.ป่าขะ อ.บ้านนา จ.นครนายก 26110
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  .c-box-detail.-full
+                    .heading Email
+                    .detail webadmin@akaragroup.co.th
+                  .c-box-detail.-full
+                    .heading เบอร์โทรศัพท์
+                    .detail 037-349-885, 092-3807771-3
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  .c-box-detail
+                    .heading เบอร์แฟกซ์
+                    .detail 037-349-886
+
+          .c-box-time-line__item
+            .c-box-time-line__image
+              .c-box-time-line__image-frame
+                img(src="/assets/img/contact-us/img_contact_us_01.png", alt="บริษัท แสงทองสหฟาร์ม จำกัด")
+            .c-box-time-line__content
+              .c-box-time-line__content-heading.-small บริษัท แสงทองสหฟาร์ม จำกัด
+              ul.c-box-time-line__content-list
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  .c-box-detail
+                    .heading วันและเวลาทำการ
+                    .detail วันจันทร์-วันเสาร์ : 8.00 น. –  17.00 น.
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  .c-box-detail
+                    .heading ที่อยู่ | คลิกดูแผนที่
+                    .detail 211 หมู่ 10 ต.ป่าขะ อ.บ้านนา จ.นครนายก 26110
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  .c-box-detail.-full
+                    .heading Email
+                    .detail webadmin@akaragroup.co.th
+                  .c-box-detail.-full
+                    .heading เบอร์โทรศัพท์
+                    .detail 037-349-885, 092-3807771-3
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  .c-box-detail
+                    .heading เบอร์แฟกซ์
+                    .detail 037-349-886
+
+    .c-box-contact-form
+      .c-box-contact-form__inner
+        .c-box-contact-form__form
+          .c-box-contact-form__form-row
+            .c-box-contact-form__form-heading ติดต่อเรา
+          .c-box-contact-form__form-row
+            input.c-input-text(type="text", name="name", placeholder="Name")
+          .c-box-contact-form__form-row
+            input.c-input-text(type="email", name="email", placeholder="Email")
+          .c-box-contact-form__form-row
+            input.c-input-text(type="text", name="subject", placeholder="Subject")
+          .c-box-contact-form__form-row
+            textarea.c-input-textarea(name="message", cols="30", rows="10", placeholder="write your message here...")
+          .c-box-contact-form__form-row
+            input.c-input-button(type="button", value="SEND")
+
+    .c-connect-with-us
+      .c-connect-with-us__heading Connect with us:
+      .c-list-sns
+        .c-list-sns__item
+          a.c-list-sns__link(href="#")
+            i.fab.fa-facebook
+        .c-list-sns__item
+          a.c-list-sns__link(href="#")
+            i.fab.fa-twitter
+        .c-list-sns__item
+          a.c-list-sns__link(href="#")
+            i.fab.fa-instagram
+    .l-sec-cmn-01.-box-subscribe
+      .inner
+        .c-box-subscribe.animation-element.slide-top
+          .item.-signup-text
+            .box-sign-up
+              .icon_envelope
+                img(src="/assets/img/common/envelope-regular.svg", alt="")
+              span SIGN
+              span UP
+          .item
+            .box-heading
+              .heading FOR RECIPES, COUPONS AND OTHER NEWS
+            .box-form
+              .c-input-row
+                input.c-input.-text(type="email", name="email", placeholder="Your E-Mail Address")
+                //- button.c-input.-submit(type="submit", value="")
+                //-   | SUBSCRIBE
+                //-   i.fas.fa-paper-plane
+
+                .c-box-cmn-button
+                  button.c-button-cmn-01(type="submit", value="")
+                    span.text SUBSCRIBE
+                    span.arrow
+                      i.fa.fa-arrow-right

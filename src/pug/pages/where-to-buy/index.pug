@@ -1,0 +1,107 @@
+extends ../../layouts/master.pug
+
+block variables
+  -
+    const index = true
+    const meta = {
+      title: 'Where to Buy | Akara Group',
+      keyword: 'Akara Group',
+      description: '',
+      goTitle: 'Akara Group',
+      goDescription: '',
+      goImage: '/assets/img/ogp.png',
+      goUrl: '',
+      twitterTitle: 'Akara Group',
+      twitterDescription: '',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: ''
+    }
+
+    const topPage = false
+    const whiteTheme = true
+
+block prepend css
+  link(rel='stylesheet', href='/assets/css/libs/slick.css')
+block append scripts
+  script(src='/assets/js/libs/slick.min.js')
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+
+block outside
+  //- // loader
+  //- .c-loader
+  //-   .c-loader__icon
+  //-     p.c-loader__text
+  //-       img(src="/assets/img/common/logo@2x.png", alt="")
+  //-     .loader.simple-circle
+  //- // /loader
+
+block content
+  .p-where-to-buy
+    .c-hero-where-to-buy
+      .c-hero-where-to-buy__inner
+        .c-hero-where-to-buy__text
+          .c-hero-where-to-buy__heading Where to buy
+          .c-hero-where-to-buy__sub-text You can find Akara products by selecting your nearby distributors and supermarket from the list below.
+    .c-where-to-buy__list-tab
+      .c-where-to-buy__list-tab-item.is-active
+        .icon
+          .c-icon-building
+        .text Modern Trade
+      .c-where-to-buy__list-tab-item
+        .icon
+          .c-icon-building
+        .text Our Store
+      .c-where-to-buy__list-tab-item
+        .icon
+          .c-icon-building
+        .text Point of <br>Purchase
+      .c-where-to-buy__list-tab-item
+        .icon
+          .c-icon-building
+        .text Online
+
+    .c-where-to-buy__list-tab-content
+      .c-where-to-buy__list-tab-content-box
+        .c-triangle.-tab-01
+        .c-where-to-buy__list-tab-content-box-list
+          .c-where-to-buy__list-shop
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_01.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_02.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_03.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_04.svg", alt="")
+
+
+
+    .l-sec-cmn-01.-box-subscribe
+      .inner
+        .c-box-subscribe.animation-element.slide-top
+          .item.-signup-text
+            .box-sign-up
+              .icon_envelope
+                img(src="/assets/img/common/envelope-regular.svg", alt="")
+              span SIGN
+              span UP
+          .item
+            .box-heading
+              .heading FOR RECIPES, COUPONS AND OTHER NEWS
+            .box-form
+              .c-input-row
+                input.c-input.-text(type="email", name="email", placeholder="Your E-Mail Address")
+                //- button.c-input.-submit(type="submit", value="")
+                //-   | SUBSCRIBE
+                //-   i.fas.fa-paper-plane
+
+                .c-box-cmn-button
+                  button.c-button-cmn-01(type="submit", value="")
+                    span.text SUBSCRIBE
+                    span.arrow
+                      i.fa.fa-arrow-right

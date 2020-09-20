@@ -16,7 +16,6 @@
   &__fix-box {
     width: 38.88%;
     padding-right: 30px;
-    padding-left: 50px;
 
     @include mq-max-sp {
       width: 100%;
@@ -29,6 +28,8 @@
       font-weight: 400;
       color: $baseColor;
       position: relative;
+      display: flex;
+      flex-wrap: wrap;
 
       @include mq-max-sp {
         font-size: 2.2rem;
@@ -40,9 +41,11 @@
         height: 48px;
         background: url(/assets/img/recipes/ico_product_yellow.svg) no-repeat center center;
         background-size: cover;
-        position: absolute;
-        left: -60px;
-        top: -5px;
+        position: relative;
+        margin-right: 15px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
 
         @include mq-min-max-tb {
           width: get-vw(52px);
@@ -54,6 +57,13 @@
           width: 30px;
           height: 27px;
           left: -40px;
+        }
+
+        > .c-comment-icon {
+          width: 25px;
+          height: 25px;
+          background: url(/assets/img/svg/comment-dots-regular.svg) no-repeat center center;
+          background-size: cover;
         }
       }
     }

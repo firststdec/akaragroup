@@ -8,6 +8,7 @@
   }
 
 }
+
 .c-faq {
   $this : #{&};
 
@@ -73,6 +74,8 @@
       justify-content: center;
       align-items: center;
 
+
+
       .fas.fa-chevron-down {
         opacity: 0;
         position: absolute;
@@ -96,6 +99,19 @@
       font-size: 1.6rem;
       color: #777777;
       padding-top: 20px;
+    }
+  }
+
+  .c-heading-egg__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    > .c-comments-regular {
+      width: 25px;
+      height: 22px;
+      background: url(/assets/img/svg/comments-regular.svg) no-repeat center center;
+      background-size: cover;
     }
   }
 }

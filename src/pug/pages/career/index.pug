@@ -1,0 +1,189 @@
+extends ../../layouts/master.pug
+
+block variables
+  -
+    const index = true
+    const meta = {
+      title: 'Career | Akara Group',
+      keyword: 'Akara Group',
+      description: '',
+      goTitle: 'Akara Group',
+      goDescription: '',
+      goImage: '/assets/img/ogp.png',
+      goUrl: '',
+      twitterTitle: 'Akara Group',
+      twitterDescription: '',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: ''
+    }
+
+    const topPage = false
+    const whiteTheme = false
+
+block prepend css
+  link(rel='stylesheet', href='/assets/css/libs/slick.css')
+block append scripts
+  script(src='/assets/js/libs/slick.min.js')
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+
+block outside
+  //- // loader
+  //- .c-loader
+  //-   .c-loader__icon
+  //-     p.c-loader__text
+  //-       img(src="/assets/img/common/logo@2x.png", alt="")
+  //-     .loader.simple-circle
+  //- // /loader
+
+block content
+  .p-career
+    .c-mv-sub-page
+      .c-mv-sub-page__inner
+        .c-mv-sub-page__box-content
+          .c-mv-sub-page__heading Be part of Our Success
+          .c-mv-sub-page__sub-heading Grow with us at Akara
+          .c-mv-sub-page__text We encourage all employees to improve their effectiveness that would create true understanding of job responsibility which leads to the achievement of both ind ividual and team success.
+          a.c-mv-sub-page__anchor-icon.js-scroll.c-scroll-down-button__static-page(href="#scroll_timeline")
+            .c-scroll-down-line
+        .c-mv-sub-page__box-image
+          figure.c-mv-sub-page__image-frame
+            img(src="/assets/img/career/img_mv_career.png", alt="")
+
+    .c-box-time-line
+      .c-box-time-line__inner
+        .c-box-time-line__line
+        .c-box-time-line__list#scroll_timeline
+          .c-box-time-line__item
+            .c-box-time-line__image
+              .c-box-time-line__image-frame
+                img(src="/assets/img/career/img_career_01.png", alt="")
+            .c-box-time-line__content
+              .c-heading-egg
+                .c-heading-egg__icon
+                  .c-clipboard-icon
+                .c-heading-egg__text.-small Jobs Opening
+              ul.c-box-time-line__content-list
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  span ช่างซ่อมบำรุง (ประจำฟาร์ม)
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  span เจ้าหน้าที่ฝ่ายทรัพยากรบุคคล (ปทุมธานี)
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  span เจ้าหน้าที่บัญชี (วุฒิปริญญาตรี 1อัตรา)
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  span พนักงานบัญชีรายวัน 2 อัตรา
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  span แม่บ้าน หลายอัตรา
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  span พนักงาน R&D 1 อัตรา
+                li.c-box-time-line__content-list-item
+                  i.fas.fa-chevron-right
+                  span พนักงานบันทึกข้อมูลการผลิต 3 อัตรา
+
+              .c-box-time-line__link
+                .c-hand-icon
+                .c-box-time-line__link-text คลิกที่ตำแหน่งเพื่อกดส่งใบสมัคร หรือติดต่อเราตามข้อมูลด้านล่าง
+
+              .c-box-contact
+                .c-box-contact__heading ติดต่อฝ่ายบุคคล:  โทร. 037-349-885
+                .c-box-contact__list
+                  .c-box-contact__list-item
+                    .heading บริษัท อัครากรุ๊ป จำกัด
+                    .text 88 หมู่ 2 ต.ป่าขะ อ.บ้านนา จ.นครนายก 26110
+                  .c-box-contact__list-item
+                    .heading วันและเวลาทำการ
+                    .text วันจันทร์ – วันเสาร์ 08.00 – 17.00
+
+          .c-box-time-line__item
+            .c-box-time-line__image
+              .c-box-time-line__image-frame
+                img(src="/assets/img/career/img_career_02.png", alt="")
+            .c-box-time-line__content
+              .c-box-time-line__content-heading.-small Work @Akara
+              .c-box-time-line__content-sub-heading Lorem ipsum dolor sit amet, consetetur
+              .c-box-time-line__content-text.-strong We encourage all employees to improve their effectiveness that would create true understanding of job responsibility which leads to the achievement of both individual and team success.
+              .c-box-time-line__content-text Working environment at Akara promote good work relationship in all aspects. We treat each other the way we want to be treated and we believe that people work best when there is a foundation of trust. We encourage two-way communication throughout the organization and provide our employees good opportunity in their career paths.
+
+    .c-voice-box
+      .c-voice-box__inner
+        .c-voice-box__fix-box.animation-element.slide-top
+          .c-voice-box__fix-box-inner
+            .c-voice-box__fix-box-heading
+              .c-voice-box__fix-box-heading-icon
+                .c-comment-icon
+              .c-voice-box__fix-box-heading-text เสียงจากคนทานไข่อัครา
+            .c-voice-box__fix-box-text These tasty certified USDA Organic eggs come from farms that have been pesticide-free.
+        .c-voice-box__slider-box.animation-element.slide-top
+          // Slider main container
+          .swiper-container.js-swiper-voice
+            // Additional required wrapper
+            .swiper-wrapper
+              // Slides
+              .swiper-slide
+                .c-card-voice
+                  .c-card-voice__heading THE FLAVOR WAS AMAZING!
+                  .c-card-voice__text “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris”
+                  .c-card-voice__author
+                    .c-card-voice__author-icon
+                    .c-card-voice__author-staff
+                      .c-card-voice__author-staff-name Ahmed Elsayed
+                      .c-card-voice__author-staff-position EMPLOYEE 1
+              .swiper-slide
+                .c-card-voice
+                  .c-card-voice__heading THE FLAVOR WAS AMAZING!
+                  .c-card-voice__text “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris”
+                  .c-card-voice__author
+                    .c-card-voice__author-icon
+                    .c-card-voice__author-staff
+                      .c-card-voice__author-staff-name Ahmed Elsayed
+                      .c-card-voice__author-staff-position EMPLOYEE 2
+              .swiper-slide
+                .c-card-voice
+                  .c-card-voice__heading THE FLAVOR WAS AMAZING!
+                  .c-card-voice__text “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris”
+                  .c-card-voice__author
+                    .c-card-voice__author-icon
+                    .c-card-voice__author-staff
+                      .c-card-voice__author-staff-name Ahmed Elsayed
+                      .c-card-voice__author-staff-position EMPLOYEE 3
+
+            // If we need navigation buttons
+            .swiper-box-control
+              .swiper-button-prev.-voice
+              .swiper-button-next.-voice
+          .swiper-box-control-trigger
+            .swiper-button-prev
+              i.fas.fa-chevron-left
+            .swiper-button-next
+              i.fas.fa-chevron-right
+
+    .l-sec-cmn-01.-box-subscribe
+      .inner
+        .c-box-subscribe.animation-element.slide-top
+          .item.-signup-text
+            .box-sign-up
+              .icon_envelope
+                img(src="/assets/img/common/envelope-regular.svg", alt="")
+              span SIGN
+              span UP
+          .item
+            .box-heading
+              .heading FOR RECIPES, COUPONS AND OTHER NEWS
+            .box-form
+              .c-input-row
+                input.c-input.-text(type="email", name="email", placeholder="Your E-Mail Address")
+                //- button.c-input.-submit(type="submit", value="")
+                //-   | SUBSCRIBE
+                //-   i.fas.fa-paper-plane
+
+                .c-box-cmn-button
+                  button.c-button-cmn-01(type="submit", value="")
+                    span.text SUBSCRIBE
+                    span.arrow
+                      i.fa.fa-arrow-right
