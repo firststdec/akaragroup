@@ -23,6 +23,9 @@
 }
 
 .l-sec-box-swiper-voice {
-  min-height: 400px;
   position: relative;
+
+  @include mq-min-pc {
+    min-height: 400px;
+  }
 }

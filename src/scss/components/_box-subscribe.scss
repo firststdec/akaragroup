@@ -29,7 +29,7 @@
 
     @include mq-max-sp {
       background: none;
-      padding: 50px 0 50px;
+      padding: 100px 0 50px;
     }
   }
 
@@ -82,7 +82,6 @@
 
     &:nth-child(2) {
       @include mq-max-sp {
-        margin-top: -80px;
         padding-bottom: 200px;
         background: #FFC416;
       }
@@ -107,55 +106,22 @@
       .box-sign-up {
         width: 188px;
         height: 173px;
-        background: url(/assets/img/common/bg_egg_subscribe.png) no-repeat center top;
+        background: url(/assets/img/svg/signup-icon.svg) no-repeat center top;
         background-size: 100%;
-        padding-top: 40px;
-        padding-left: 30px;
         position: relative;
 
         @include mq-min-max-tb {
           width: get-vw(188px);
           height: get-vw(173px);
-          padding-top: get-vw(40px);
-          padding-left: get-vw(30px);
         }
 
         @include mq-max-sp {
-          width: 361px;
-          height: 349px;
-          padding-top: 130px;
-          padding-left: 90px;
+          width: 188px;
+          height: 173px;
           background-size: cover;
-          background: url(/assets/img/common/bg_egg_subscribe_sp.svg) no-repeat center top;
-          margin-top: -170px;
-        }
-
-        @include mq-custom-min-max(426px, 896px) {
-          padding-left: 120px;
-        }
-
-
-        > .icon_envelope {
-          width: 54px;
-          height: 51px;
-          position: absolute;
-          right: 40px;
-          bottom: 35px;
-
-          @include mq-max-sp {
-            width: 46px;
-            height: 46px;
-            left: 50%;
-            top: 50%;
-          }
-
-          @include mq-min-max-tb {
-            width: get-vw(54px);
-            height: get-vw(51px);
-            position: absolute;
-            right: get-vw(40px);
-            bottom: get-vw(35px);
-          }
+          background: url(/assets/img/svg/signup-icon.svg) no-repeat center top;
+          margin-top: -120px;
+          margin-bottom: 30px;
         }
 
         span {
