@@ -1169,6 +1169,66 @@
     position: relative;
     background: transparent;
 
+    .c-badge {
+      &__list {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        z-index: 6;
+        display: flex;
+        justify-content: space-between;
+        transition: all .3s ease-in;
+        opacity: 0;
+      }
+
+      &__item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+
+        &.-level > .icon {
+          background: $yellow;
+
+          .fa-cook {
+            color: $baseColor;
+          }
+        }
+
+        &.-time > .icon {
+          background: #43AB3F;
+
+          .fa-clock {
+            color: $white;
+          }
+        }
+
+        &:first-of-type {
+          margin-right: 10px;
+        }
+
+        > .icon {
+          width: 40px;
+          height: 40px;
+          display: inline-flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100%;
+          position: relative;
+        }
+
+        > .text {
+          font-size: 1.2rem;
+          line-height: 1.3;
+          color: $white;
+          text-align: center;
+          margin-top: 5px;
+        }
+      }
+    }
+
     .c-shadow {
       top: 0;
       left: 0;
@@ -1205,6 +1265,11 @@
       &:hover {
         .box-content {
           bottom: 40px;
+        }
+
+        .c-badge__list {
+          opacity: 1;
+          top: 20px;
         }
 
         .c-overlay {
