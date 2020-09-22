@@ -15,7 +15,7 @@
       background-size: cover;
 
       @include mq-custom-min(1441px) {
-        background: url(/assets/img/recipes/bg_product_yellow.svg) no-repeat center center;
+        background: url(/assets/img/recipes/bg_product_yellow.svg) no-repeat center bottom;
         background-size: cover;
       }
     }
@@ -29,7 +29,7 @@
       background-size: cover;
 
       @include mq-custom-min(1441px) {
-        background: url(/assets/img/recipes/bg_product_green.svg) no-repeat center center;
+        background: url(/assets/img/recipes/bg_product_green.svg) no-repeat center bottom;
         background-size: cover;
       }
     }
@@ -211,7 +211,7 @@
       background-size: cover;
 
       @include mq-custom-min(1441px) {
-        background: url(/assets/img/recipes/bg_product_orange.svg) no-repeat center center;
+        background: url(/assets/img/recipes/bg_product_orange.svg) no-repeat center bottom;
         background-size: cover;;
       }
     }
