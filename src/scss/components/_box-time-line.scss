@@ -79,6 +79,7 @@
 
   &__image {
     width: 500px;
+    position: relative;
 
     @include mq-min-max-tb {
       width: get-vw(500px);

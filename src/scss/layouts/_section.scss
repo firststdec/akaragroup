@@ -28,4 +28,8 @@
   @include mq-min-pc {
     min-height: 400px;
   }
+
+  .inner {
+    max-width: 100%;
+  }
 }

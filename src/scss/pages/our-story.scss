@@ -71,4 +71,32 @@
   .c-box-our-egg__card-content {
     color: #777;
   }
+
+  .c-box-time-line {
+    &__item {
+      margin-top: 50px;
+    }
+
+    &__image {
+      .c-deco-story {
+        width: 941px;
+        height: 778px;
+        position: absolute;
+        right: 0;
+        top: -80px;
+        background: url(/assets/img/our-story/ico_deco_our_story_01.svg) no-repeat center center;
+        opacity: 0.3;
+
+        @include mq-min-max-tb {
+          width: get-vw(941px);
+          height: get-vw(778px);
+          top: get-vw(-80px);
+        }
+
+        @include mq-max-sp {
+          display: none;
+        }
+      }
+    }
+  }
 }
