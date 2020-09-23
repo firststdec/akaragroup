@@ -1040,11 +1040,14 @@
 
 // -story-about-top
 .-story-about-top {
-  background: url(/assets/img/top/bg_story_about_yellow.svg) no-repeat center top;
-  margin-top: 300px !important;
+  // background: url(/assets/img/top/bg_story_about_yellow.svg) no-repeat center top;
+  background: rgb(255,196,22);
+  background: linear-gradient(0deg, rgba(255,196,22,1) 0%, rgba(252,226,121,1) 50%, rgba(255,196,22,1) 100%);
+  margin-top: 400px !important;
   padding: 100px 0 0;
   backface-visibility: hidden;
   background-size: 1440px 1533px;
+  position: relative;
 
   @include mq-max-sp {
     background: none;
@@ -1064,9 +1067,39 @@
     background-size: get-vw(1440px) get-vw(1533px);
   }
 
-  @include mq-custom-min(1441px) {
-    background: url(/assets/img/top/bg_story_about_yellow.svg) no-repeat center center;
-    background-size: cover;
+  // @include mq-custom-min(1441px) {
+  //   background: url(/assets/img/top/bg_story_about_yellow.svg) no-repeat center center;
+  //   background-size: cover;
+  // }
+
+  .inner {
+    position: relative;
+  }
+
+  .c-wave-yellow {
+    max-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    transform: translateY(-50%);
+    top: -60px;
+
+    canvas {
+      display: block;
+    }
+  }
+
+  .c-wave-yellow-bottom{
+    max-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    transform: translateY(-50%);
+    bottom: -120px;
+    transform: rotate(180deg);
+    z-index: 1;
+
+    canvas {
+      display: block;
+    }
   }
 
   .c-heading-cmn-01 {
@@ -1260,7 +1293,7 @@
         height: 468px;
         background: url(/assets/img/top/img_orange_egg.png) no-repeat;
         position: absolute;
-        top: -300px;
+        top: -400px;
         right: 100px;
 
         @include mq-min-max-tb {
@@ -1287,6 +1320,7 @@
         position: absolute;
         bottom: -280px;
         right: -200px;
+        z-index: 5;
 
         @include mq-max-sp {
           width: 234px;

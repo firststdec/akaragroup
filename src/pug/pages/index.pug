@@ -25,6 +25,8 @@ block append scripts
   script(src='/assets/js/libs/slick.min.js')
   script(src='/assets/js/libs/jquery.matchHeight.js')
   script(src='/assets/js/libs/jquery.waypoints.js')
+  script(src='/assets/js/topWaveYellow.js')
+  script(src='/assets/js/bottomWaveYellow.js')
 
 block outside
   // loader
@@ -140,6 +142,8 @@ block content
             .c-product-akara-orange.animation-element.slide-top
 
     .l-sec-cmn-01.-story-about-top
+      .c-wave-yellow
+        canvas#canvas-yellow
       .inner
         .c-box-card-row-01
           figure.box-image.animation-element.slide-top
@@ -172,7 +176,8 @@ block content
                 span.text READ MORE
                 span.arrow
                   i.fa.fa-arrow-right
-
+      .c-wave-yellow-bottom
+        canvas#canvas-yellow-bottom
     .l-sec-cmn-01.-recipes-top-heading
       .inner
         .c-box-heading-center-text
