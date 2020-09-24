@@ -1089,32 +1089,6 @@
     position: relative;
   }
 
-  .c-wave-yellow {
-    max-width: 100%;
-    overflow: hidden;
-    position: absolute;
-    transform: translateY(-50%);
-    top: -60px;
-
-    canvas {
-      display: block;
-    }
-  }
-
-  .c-wave-yellow-bottom{
-    max-width: 100%;
-    overflow: hidden;
-    position: absolute;
-    transform: translateY(-50%);
-    bottom: -120px;
-    transform: rotate(180deg);
-    z-index: 1;
-
-    canvas {
-      display: block;
-    }
-  }
-
   .c-heading-cmn-01 {
     font-size: 8.5rem;
     font-weight: 500;

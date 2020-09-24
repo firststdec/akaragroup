@@ -219,6 +219,8 @@ a {
     #{$this}__in {
       @include mq-min-tb() {
         background: $yellow;
+        padding-top: 10px;
+        padding-bottom: 10px;
       }
     }
 
@@ -252,29 +254,92 @@ a {
       }
     }
 
-    &.is-active-bg {
-      #{$this}__menu-mark {
-        color: $baseColor;
+    #{$this}__menu-mark {
+      color: $baseColor;
+    }
+
+    .fas {
+      color: $baseColor;
+    }
+
+    .l-language-bar .c-link, .l-header .l-language-bar .c-link--base {
+      color: $baseColor;
+    }
+
+    .l-header__logo-image {
+      @include mq-min-tb {
+        display: none;
       }
 
-      .fas {
-        color: $baseColor;
-      }
-
-      .l-language-bar .c-link, .l-header .l-language-bar .c-link--base {
-        color: $baseColor;
-      }
-
-      .l-header__logo-image {
+      &-sp {
         @include mq-min-tb {
           display: block;
+          margin-left: 20px;
+        }
+      }
+
+      &.white {
+        @include mq-min-tb {
+          display: none;
+        }
+      }
+    }
+
+    .-btn-where-to-buy {
+      @include mq-min-tb {
+        background-color: $baseColor;
+        border-color: $baseColor;
+        color: $yellow;
+        background-image: none;
+        transition: all .5s ease-out;
+      }
+
+      .c-button__text{
+        @include mq-min-tb {
+          color: $yellow;
         }
 
-        &.white {
+        .fa {
           @include mq-min-tb {
-            display: none;
+            color: $yellow;
           }
         }
+      }
+
+      &:hover {
+        @include mq-min-tb {
+          background-image: radial-gradient(#FCE279, #FFC416);
+        }
+
+        &::after {
+          @include mq-min-tb {
+            background-image: radial-gradient(#FCE279, #FFC416);
+          }
+        }
+
+        .c-button__text{
+          @include mq-min-tb {
+            color: $baseColor;
+          }
+
+          .fa {
+            @include mq-min-tb {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .l-header__submenu{
+      @include mq-min-tb {
+        top: 70px;
+      }
+    }
+
+    .l-header__submenu.-about-us {
+      @include mq-min-tb {
+        margin-top: 15px;
       }
     }
   }
@@ -327,7 +392,7 @@ a {
 
       .l-header__logo-image {
         @include mq-min-tb {
-          display: block;
+          display: none;
         }
 
         &.white {
@@ -349,6 +414,7 @@ a {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: transparent;
+    transition: all .5s ease-in;
 
     @include mq-min-tb {
       padding-top: 25px;
@@ -525,12 +591,32 @@ a {
 
     @include mq-min-tb {
       border: none;
+      min-height: 100px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    &:not(:first-of-type) {
+      @include mq-min-tb {
+        margin-left: 50px;
+      }
     }
 
     &.nav-about {
       @include mq-min-tb {
         position: relative;
       }
+    }
+
+    &.is-active {
+      .fa-chevron-down {
+        @include mq-min-tb {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .fa-chevron-down{
+      transition: all .3s ease-out;
     }
 
     .fa-chevron-up {
@@ -540,7 +626,6 @@ a {
 
   &__menu-link {
     display: block;
-    padding: 13px 30px;
     font-weight: bold;
     color: rgba(17, 17, 17, 0.5);
     position: relative;
@@ -555,7 +640,6 @@ a {
       align-items: center;
       justify-content: center;
       width: 100%;
-      height: 100px;
       white-space: nowrap;
       color: #111;
       font-weight: 500;
@@ -563,7 +647,7 @@ a {
     }
 
     @include mq-min-max-tb {
-      padding: 25px 15px;
+
     }
 
     &.is-active {
@@ -626,6 +710,7 @@ a {
       left: 20px;
       right: 20px;
       padding: 40px 0;
+      top: 100px;
     }
 
     @media (min-width: 1600px) {
@@ -646,7 +731,7 @@ a {
         transform: translateX(-50%);
         left: 50%;
         width: 300px;
-        padding: 10px 0;
+        padding: 0;
       }
 
       .l-header {

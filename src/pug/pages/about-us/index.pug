@@ -26,6 +26,8 @@ block append scripts
   script(src='/assets/js/libs/slick.min.js')
   script(src='/assets/js/libs/jquery.matchHeight.js')
   script(src='/assets/js/libs/jquery.waypoints.js')
+  script(src='/assets/js/topWaveYellow.js')
+  script(src='/assets/js/bottomWaveYellow.js')
 
 block outside
   //- // loader
@@ -70,6 +72,8 @@ block content
               .c-box-time-line__content-text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
 
     .c-box-our-egg
+      .c-wave-yellow
+        canvas#canvas-yellow
       .c-box-our-egg__inner
         .c-heading-box-egg.animation-element.slide-top
           .c-heading-egg
@@ -102,7 +106,8 @@ block content
                 img(src="/assets/img/about-us/img_about_us_06.png", alt="Social Impact")
               .c-box-our-egg__card-heading Social Impact
               .c-box-our-egg__card-content These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.
-
+      .c-wave-yellow-bottom
+        canvas#canvas-yellow-bottom
     .c-our-brand
       .c-our-brand__inner
         .c-heading-box-egg.animation-element.slide-top

@@ -99,10 +99,10 @@
     }
 
     @include mq-min-max-tb {
-      width: get-vw(62px);
-      height: get-vw(65px);
-      left: get-vw(-35px);
-      top: 0;
+      // width: get-vw(62px);
+      // height: get-vw(65px);
+      // left: get-vw(-35px);
+      // top: 0;
     }
 
     @media (max-width: 1024px) {

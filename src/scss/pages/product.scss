@@ -164,8 +164,11 @@
     }
 
     .c-recipes-box {
-      background: url(/assets/img/recipes/bg_recipes_product_green.svg) no-repeat center center;
-      background-size: cover;
+      margin: 150px 0;
+      background: rgb(36,93,56);
+      background: linear-gradient(0deg, rgba(36,93,56,1) 0%, rgba(51,132,59,1) 50%, rgba(36,93,56,1) 100%);
+      position: relative;
+      padding: 80px 0;
 
       .-recipes-top-heading > .inner .box-heading .title span.text-yellow {
         color: $white;
@@ -392,8 +395,10 @@
     }
 
     .c-recipes-box {
-      background: url(/assets/img/recipes/bg_recipes_product_orange.svg) no-repeat center center;
-      background-size: cover;
+      background: rgb(241,96,37);
+      background: linear-gradient(0deg, rgba(241,96,37,1) 0%, rgba(241,155,37,1) 50%, rgba(241,96,37,1) 100%);
+      position: relative;
+      margin: 150px 0;
 
       .-recipes-top-heading > .inner .box-heading .title span.text-yellow {
         color: $white;
@@ -1077,10 +1082,13 @@
   }
 
   .c-recipes-box {
-    background: url(/assets/img/recipes/bg_recipes_product_yellow.svg) no-repeat center center;
+    // background: url(/assets/img/recipes/bg_recipes_product_yellow.svg) no-repeat center center;
+    background: rgb(255,196,22);
+    background: linear-gradient(0deg, rgba(255,196,22,1) 0%, rgba(252,226,121,1) 50%, rgba(255,196,22,1) 100%);
     background-size: cover;
-    padding: 100px 0 150px;
+    padding: 100px 0 100px;
     margin: auto;
+    position: relative;
 
     @include mq-min-max-tb {
       padding: get-vw(100px) 0 get-vw(150px);
@@ -1091,6 +1099,7 @@
 
       > .inner {
         background: none;
+        padding-top: 0;
 
         .box-heading {
           .title {
@@ -1110,6 +1119,32 @@
             color: #777;
           }
         }
+      }
+    }
+
+    .c-wave-yellow {
+      max-width: 100%;
+      overflow: hidden;
+      position: absolute;
+      transform: translateY(-50%);
+      top: -55px;
+
+      canvas {
+        display: block;
+      }
+    }
+
+    .c-wave-yellow-bottom{
+      max-width: 100%;
+      overflow: hidden;
+      position: absolute;
+      transform: translateY(-50%);
+      bottom: -110px;
+      transform: rotate(180deg);
+      z-index: 1;
+
+      canvas {
+        display: block;
       }
     }
   }

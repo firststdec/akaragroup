@@ -1,8 +1,9 @@
 @import '_variables';
 
 .c-box-video {
-  background: url(/assets/img/common/bg_box_video.svg) no-repeat center center;
-  background-size: cover;
+  background: rgb(255,196,22);
+  background: linear-gradient(0deg, rgba(255,196,22,1) 0%, rgba(252,226,121,1) 50%, rgba(255,196,22,1) 100%);
+  position: relative;
 
   @include mq-min-max-tb {
     padding: 0 20px;
@@ -10,12 +11,10 @@
 
   &__inner {
     max-width: 1440px;
-    min-height: 1090px;
     margin: auto;
 
     @include mq-min-max-tb {
       max-width: get-vw(1440px);
-      min-height: get-vw(1090px);
     }
   }
 }

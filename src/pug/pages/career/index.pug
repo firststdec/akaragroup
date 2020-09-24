@@ -26,6 +26,8 @@ block append scripts
   script(src='/assets/js/libs/slick.min.js')
   script(src='/assets/js/libs/jquery.matchHeight.js')
   script(src='/assets/js/libs/jquery.waypoints.js')
+  script(src='/assets/js/waveCreamTop.js')
+  script(src='/assets/js/waveCreamBottom.js')
 
 block outside
   //- // loader
@@ -111,6 +113,8 @@ block content
               .c-box-time-line__content-text Working environment at Akara promote good work relationship in all aspects. We treat each other the way we want to be treated and we believe that people work best when there is a foundation of trust. We encourage two-way communication throughout the organization and provide our employees good opportunity in their career paths.
 
     .c-voice-box
+      .c-wave-cream
+        canvas#canvas-cream
       .c-voice-box__inner
         .c-voice-box__fix-box.animation-element.slide-top
           .c-voice-box__fix-box-inner
@@ -162,7 +166,8 @@ block content
               i.fas.fa-chevron-left
             .swiper-button-next
               i.fas.fa-chevron-right
-
+      .c-wave-cream-bottom
+        canvas#canvas-cream-bottom
     .l-sec-cmn-01.-box-subscribe
       .inner
         .c-box-subscribe.animation-element.slide-top

@@ -3,6 +3,7 @@
 .p-our-story {
   // c-faq
   .c-faq {
+    margin-top: 150px;
     .c-box-cmn-button {
       text-align: center;
       margin-top: 80px;
@@ -20,8 +21,9 @@
   }
 
   .c-box-video {
+    margin-top: 200px;
     &__inner {
-      padding: 150px 0;
+      padding: 50px 0;
     }
 
     &__box-text {

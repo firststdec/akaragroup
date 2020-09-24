@@ -26,6 +26,10 @@ block append scripts
   script(src='/assets/js/libs/slick.min.js')
   script(src='/assets/js/libs/jquery.matchHeight.js')
   script(src='/assets/js/libs/jquery.waypoints.js')
+  script(src='/assets/js/topWaveYellow.js')
+  script(src='/assets/js/bottomWaveYellow.js')
+  script(src='/assets/js/topWaveYellow02.js')
+  script(src='/assets/js/bottomWaveYellow02.js')
 
 block outside
   //- // loader
@@ -78,6 +82,8 @@ block content
               .c-box-time-line__content-text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
 
     .c-box-our-egg
+      .c-wave-yellow
+        canvas#canvas-yellow
       .c-box-our-egg__inner
         .c-heading-box-egg.animation-element.slide-top
           .c-heading-egg
@@ -111,6 +117,8 @@ block content
                 img(src="/assets/img/our-story/img_our_egg_04.png", alt="พนักงานที่ใส่ใจ")
               .c-box-our-egg__card-heading พนักงานที่ใส่ใจ
               .c-box-our-egg__card-content These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.
+      .c-wave-yellow-bottom
+        canvas#canvas-yellow-bottom
 
     .c-box-our-farm
       .c-box-our-farm__inner
@@ -170,6 +178,8 @@ block content
               img(src="/assets/img/common/img_certification_06.svg", alt="")
 
     .sec-cmn-01.c-box-video
+      .c-wave-yellow
+        canvas#canvas-yellow-02
       .c-box-video__inner
         .c-box-video__box-text
           .c-heading-box-egg.animation-element.slide-top
@@ -182,7 +192,8 @@ block content
         .c-box-video__box-iframe.animation-element.slide-top
           .c-box-video__box-iframe-inner
             iframe(width='560', height='315', src='https://www.youtube.com/embed/ps3kWOQRQnY', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
-
+      .c-wave-yellow-bottom
+        canvas#canvas-yellow-bottom-02
     .sec-cmn-01.c-faq
       .c-faq__inner
         .c-heading-box-egg.animation-element.slide-top

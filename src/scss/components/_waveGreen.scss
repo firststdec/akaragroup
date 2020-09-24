@@ -1,0 +1,25 @@
+.c-wave-green {
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-50%);
+  top: -55px;
+
+  canvas {
+    display: block;
+  }
+}
+
+.c-wave-green-bottom{
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-50%);
+  bottom: -110px;
+  transform: rotate(180deg);
+  z-index: 1;
+
+  canvas {
+    display: block;
+  }
+}

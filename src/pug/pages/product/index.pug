@@ -25,6 +25,8 @@ block append scripts
   script(src='/assets/js/libs/slick.min.js')
   script(src='/assets/js/libs/jquery.matchHeight.js')
   script(src='/assets/js/libs/jquery.waypoints.js')
+  script(src='/assets/js/topWaveYellow.js')
+  script(src='/assets/js/bottomWaveYellow.js')
 
 block outside
   //- // loader
@@ -259,6 +261,8 @@ block content
                 |*Milk from rBST-treated cows is not significantly different.
 
     .c-recipes-box
+      .c-wave-yellow
+        canvas#canvas-yellow
       .l-sec-cmn-01.-recipes-top-heading
         .inner
           .c-box-heading-center-text
@@ -358,6 +362,8 @@ block content
                       .box-content
                         .c-heading-cmn-01 Rocky Egg Salad
                         .c-text-cmn-01 Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt
+      .c-wave-yellow-bottom
+        canvas#canvas-yellow-bottom
 
     .c-voice-box
       .c-voice-box__inner
@@ -365,7 +371,8 @@ block content
           .c-voice-box__fix-box-inner
             .c-voice-box__fix-box-heading
               .c-voice-box__fix-box-heading-icon
-              |เสียงจากคนทานไข่อัครา
+                .c-comment-icon
+              .c-voice-box__fix-box-heading-text เสียงจากคนทานไข่อัครา
             .c-voice-box__fix-box-text These tasty certified USDA Organic eggs come from farms that have been pesticide-free.
         .c-voice-box__slider-box.animation-element.slide-top
           // Slider main container
