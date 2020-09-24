@@ -201,17 +201,17 @@ var headerHideSP = function() {
     if(screenFixed) return false
 
     if(spDevices.mobile()) {
-      height = MQ == 'PC' ? 200 : 70
+      height = MQ == 'PC' ? 20 : 70
     } else {
-      height = MQ == 'PC' ? 200 : 70
+      height = MQ == 'PC' ? 20 : 70
     }
 
     if (newTop > oldTop && newTop > height) {
-      $header.addClass('is-hidden-sp')
-      $header.removeClass('is-active-bg')
-    } else if (newTop < oldTop) {
       $header.removeClass('is-hidden-sp')
       $header.addClass('is-active-bg')
+    } else if (newTop < oldTop) {
+      // $header.removeClass('is-hidden-sp')
+      // $header.addClass('is-active-bg')
     }
 
     if($(window).scrollTop() <= height){

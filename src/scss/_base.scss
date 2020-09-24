@@ -218,7 +218,63 @@ a {
   &.is-active-bg {
     #{$this}__in {
       @include mq-min-tb() {
-        background: #fff;
+        background: $yellow;
+      }
+    }
+
+    #{$this}__menu-mark {
+      @include mq-min-tb{
+        color: $white;
+      }
+    }
+
+    .fas {
+      @include mq-min-tb{
+        color: $white;
+      }
+    }
+
+    .l-language-bar .c-link, .l-header .l-language-bar .c-link--base {
+      @include mq-min-tb{
+        color: $white;
+      }
+    }
+
+    #{$this}__logo-image{
+      @include mq-min-tb {
+        display: none;
+      }
+
+      &.white {
+        @include mq-min-tb {
+          display: block;
+        }
+      }
+    }
+
+    &.is-active-bg {
+      #{$this}__menu-mark {
+        color: $baseColor;
+      }
+
+      .fas {
+        color: $baseColor;
+      }
+
+      .l-language-bar .c-link, .l-header .l-language-bar .c-link--base {
+        color: $baseColor;
+      }
+
+      .l-header__logo-image {
+        @include mq-min-tb {
+          display: block;
+        }
+
+        &.white {
+          @include mq-min-tb {
+            display: none;
+          }
+        }
       }
     }
   }

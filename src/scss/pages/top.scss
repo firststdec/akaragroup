@@ -170,6 +170,19 @@
         @include mq-min-max-tb {
           font-size: get-vw(100px);
         }
+
+        .text-copy{
+          transition: all 1s ease-in-out;
+        }
+      }
+
+      .g-ants {
+        &:hover {
+          #outline {
+            fill: #FFC416;
+            stroke: #FFC416;
+          }
+        }
       }
     }
 
