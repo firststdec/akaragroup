@@ -551,8 +551,7 @@
   }
 }
 
-.c-box-card-row-01.-yellow-egg .box-content::after {
-  content: '';
+.c-box-card-row-01.-yellow-egg .box-content .c-product-akara-yellow {
   width: 403px;
   height: 379px;
   position: absolute;
@@ -569,7 +568,7 @@
 }
 
 @media (max-width: 896px) {
-  .c-box-card-row-01.-yellow-egg .box-content::after {
+  .c-box-card-row-01.-yellow-egg .box-content .c-product-akara-yellow {
     width: 210px;
     height: 200px;
     bottom: -90px;
@@ -578,7 +577,7 @@
 }
 
 @media (min-width: 897px) and (max-width: 1439px) {
-  .c-box-card-row-01.-yellow-egg .box-content::after {
+  .c-box-card-row-01.-yellow-egg .box-content .c-product-akara-yellow {
     width: 27.98611vw;
     height: 26.31944vw;
     background-size: 27.98611vw 26.31944vw;
@@ -834,8 +833,7 @@
   }
 }
 
-.c-box-card-row-01.-green-egg .box-content::after {
-  content: '';
+.c-box-card-row-01.-green-egg .box-content .c-product-akara-green {
   width: 403px;
   height: 379px;
   position: absolute;
@@ -852,7 +850,7 @@
 }
 
 @media (max-width: 896px) {
-  .c-box-card-row-01.-green-egg .box-content::after {
+  .c-box-card-row-01.-green-egg .box-content .c-product-akara-green {
     width: 285px;
     height: 269px;
     right: -100px;
@@ -861,7 +859,7 @@
 }
 
 @media (min-width: 897px) and (max-width: 1439px) {
-  .c-box-card-row-01.-green-egg .box-content::after {
+  .c-box-card-row-01.-green-egg .box-content .c-product-akara-green {
     width: 27.98611vw;
     height: 26.31944vw;
     background-size: 27.98611vw 26.31944vw;
@@ -1145,8 +1143,7 @@
   }
 }
 
-.c-box-card-row-01.-orange-egg .box-content::after {
-  content: '';
+.c-box-card-row-01.-orange-egg .box-content .c-product-akara-orange {
   width: 403px;
   height: 379px;
   position: absolute;
@@ -1161,7 +1158,7 @@
 }
 
 @media (max-width: 896px) {
-  .c-box-card-row-01.-orange-egg .box-content::after {
+  .c-box-card-row-01.-orange-egg .box-content .c-product-akara-orange {
     width: 285px;
     height: 269px;
     right: auto;
@@ -1172,7 +1169,7 @@
 }
 
 @media (min-width: 897px) and (max-width: 1439px) {
-  .c-box-card-row-01.-orange-egg .box-content::after {
+  .c-box-card-row-01.-orange-egg .box-content .c-product-akara-orange {
     width: 27.98611vw;
     height: 26.31944vw;
     background-size: 27.98611vw 26.31944vw;
@@ -1308,12 +1305,17 @@
 }
 
 .-story-about-top {
-  background: url(/assets/img/top/bg_story_about_yellow.svg) no-repeat center top;
-  margin-top: 300px !important;
+  background: #ffc416;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffc416), color-stop(50%, #fce279), to(#ffc416));
+  background: -webkit-linear-gradient(bottom, #ffc416 0%, #fce279 50%, #ffc416 100%);
+  background: -o-linear-gradient(bottom, #ffc416 0%, #fce279 50%, #ffc416 100%);
+  background: linear-gradient(0deg, #ffc416 0%, #fce279 50%, #ffc416 100%);
+  margin-top: 400px !important;
   padding: 100px 0 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-size: 1440px 1533px;
+  position: relative;
 }
 
 @media (max-width: 896px) {
@@ -1340,11 +1342,40 @@
   }
 }
 
-@media (min-width: 1441px) {
-  .-story-about-top {
-    background: url(/assets/img/top/bg_story_about_yellow.svg) no-repeat center center;
-    background-size: cover;
-  }
+.-story-about-top .inner {
+  position: relative;
+}
+
+.-story-about-top .c-wave-yellow {
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: -60px;
+}
+
+.-story-about-top .c-wave-yellow canvas {
+  display: block;
+}
+
+.-story-about-top .c-wave-yellow-bottom {
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  bottom: -120px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  z-index: 1;
+}
+
+.-story-about-top .c-wave-yellow-bottom canvas {
+  display: block;
 }
 
 .-story-about-top .c-heading-cmn-01 {
@@ -1575,7 +1606,7 @@
   height: 468px;
   background: url(/assets/img/top/img_orange_egg.png) no-repeat;
   position: absolute;
-  top: -300px;
+  top: -400px;
   right: 100px;
 }
 
@@ -1606,6 +1637,7 @@
   position: absolute;
   bottom: -280px;
   right: -200px;
+  z-index: 5;
 }
 
 @media (max-width: 896px) {

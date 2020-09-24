@@ -12,7 +12,7 @@
 
 @media (min-width: 1441px) {
   .p-product.-yellow .c-product-mv {
-    background: url(/assets/img/recipes/bg_product_yellow.svg) no-repeat center center;
+    background: url(/assets/img/recipes/bg_product_yellow.svg) no-repeat center bottom;
     background-size: cover;
   }
 }
@@ -25,7 +25,7 @@
 
 @media (min-width: 1441px) {
   .p-product.-green .c-product-mv {
-    background: url(/assets/img/recipes/bg_product_green.svg) no-repeat center center;
+    background: url(/assets/img/recipes/bg_product_green.svg) no-repeat center bottom;
     background-size: cover;
   }
 }
@@ -225,7 +225,7 @@
 
 @media (min-width: 1441px) {
   .p-product.-orange .c-product-mv {
-    background: url(/assets/img/recipes/bg_product_orange.svg) no-repeat center center;
+    background: url(/assets/img/recipes/bg_product_orange.svg) no-repeat center bottom;
     background-size: cover;
   }
 }
@@ -782,7 +782,7 @@
 
 @media (min-width: 1441px) {
   .p-product .c-product-content {
-    background: url(/assets/img/recipes/bg_product_gray.svg) no-repeat center center;
+    background: url(/assets/img/recipes/bg_product_gray.svg) no-repeat center bottom;
     background-size: cover;
   }
 }
@@ -1378,14 +1378,12 @@
 
 .product-swiper-container .swiper-slide {
   width: 300px;
-  height: 415px;
   margin-left: 30px;
 }
 
 @media (min-width: 897px) and (max-width: 1439px) {
   .product-swiper-container .swiper-slide {
     width: 20.83333vw;
-    height: 28.81944vw;
     margin-left: 2.08333vw;
   }
 }
@@ -1423,6 +1421,94 @@
   transition: all .3s ease .3;
   position: relative;
   background: transparent;
+}
+
+.product-swiper-container .article-content .c-badge__list {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  opacity: 0;
+}
+
+.product-swiper-container .article-content .c-badge__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50px;
+}
+
+.product-swiper-container .article-content .c-badge__item.-level > .icon {
+  background: #FFC416;
+}
+
+.product-swiper-container .article-content .c-badge__item.-level > .icon .fa-cook {
+  color: #211E1F;
+}
+
+.product-swiper-container .article-content .c-badge__item.-time > .icon {
+  background: #43AB3F;
+}
+
+.product-swiper-container .article-content .c-badge__item.-time > .icon .fa-clock {
+  color: #fff;
+}
+
+.product-swiper-container .article-content .c-badge__item:first-of-type {
+  margin-right: 10px;
+}
+
+.product-swiper-container .article-content .c-badge__item > .icon {
+  width: 40px;
+  height: 40px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100%;
+  position: relative;
+}
+
+.product-swiper-container .article-content .c-badge__item > .text {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: #fff;
+  text-align: center;
+  margin-top: 5px;
 }
 
 .product-swiper-container .article-content .c-shadow {
@@ -1466,6 +1552,11 @@
 
 .product-swiper-container .article-content .c-box-card-01.-full:hover .box-content {
   bottom: 40px;
+}
+
+.product-swiper-container .article-content .c-box-card-01.-full:hover .c-badge__list {
+  opacity: 1;
+  top: 20px;
 }
 
 .product-swiper-container .article-content .c-box-card-01.-full:hover .c-overlay {

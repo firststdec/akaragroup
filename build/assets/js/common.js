@@ -337,6 +337,8 @@ var hambuger =  function(){
     e.preventDefault();
     $('.js-hambuger').toggleClass(activeClass);
     $('.l-header__logo').toggleClass(activeClass);
+    $('.l-header__utility').toggleClass(activeClass);
+    $('.c-search-bar-sp').toggleClass(activeClass);
   });
 }
 /* ----------------------------------------------------------
@@ -837,4 +839,7 @@ const fakeSwiperMultiControl = function (){
     });
   }
 }
+
+
+
 
