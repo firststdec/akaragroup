@@ -1379,6 +1379,19 @@ a[data-group="menu"] {
     margin-top: -70px;
   }
 
+  .c-wave-footer {
+    max-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    transform: translateY(-50%);
+    top: -55px;
+
+    canvas {
+      display: block;
+    }
+  }
+
+
   &.is-border-top {
     border-top: 1px solid #F0F0F0;
   }
