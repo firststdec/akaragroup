@@ -11,10 +11,14 @@
 
 .c-faq {
   $this : #{&};
+  margin-top: 50px;
+  z-index: 2;
+  position: relative;
 
   &__inner {
     max-width: 850px;
-    margin: 65px auto 0;
+    margin: 0 auto;
+    padding-top: 40px;
   }
 
   &__list {

@@ -9,29 +9,28 @@
 
   &.-yellow {
     .c-product-mv {
-      // max-width: 1440px;
       margin: auto;
-      background: url(/assets/img/recipes/bg_product_yellow.svg) no-repeat center bottom;
-      background-size: cover;
-
-      @include mq-custom-min(1441px) {
-        background: url(/assets/img/recipes/bg_product_yellow.svg) no-repeat center bottom;
-        background-size: cover;
-      }
+      background-color: $yellow01;
+      background-image:
+        radial-gradient(
+          circle at top left,
+          $yellow01,
+          $yellow02 50%
+        );
+      padding-bottom: 100px;
     }
   }
 
   &.-green {
     .c-product-mv {
-      // max-width: 1440px;
       margin: auto;
-      background: url(/assets/img/recipes/bg_product_green.svg) no-repeat center bottom;
-      background-size: cover;
-
-      @include mq-custom-min(1441px) {
-        background: url(/assets/img/recipes/bg_product_green.svg) no-repeat center bottom;
-        background-size: cover;
-      }
+      background-color: $green_01;
+      background-image:
+        radial-gradient(
+          $green_01,
+          $green_02
+        );
+      padding-bottom: 100px;
     }
 
     .c-product-image {
@@ -208,15 +207,14 @@
 
   &.-orange {
     .c-product-mv {
-      // max-width: 1440px;
       margin: auto;
-      background: url(/assets/img/recipes/bg_product_orange.svg) no-repeat center bottom;
-      background-size: cover;
-
-      @include mq-custom-min(1441px) {
-        background: url(/assets/img/recipes/bg_product_orange.svg) no-repeat center bottom;
-        background-size: cover;;
-      }
+      background-color: $orange_01;
+      background-image:
+        radial-gradient(
+          $orange_01,
+          $orange_02
+        );
+      padding-bottom: 100px;
     }
 
     .c-product-image {
@@ -259,15 +257,10 @@
     }
 
     .c-product-content {
-      padding: 300px 0 100px;
+      padding: 100px 0 0;
 
       @include mq-min-max-tb {
-        padding: get-vw(350px) 0 0;
-      }
 
-      @include mq-custom-min(1441px) {
-        margin: -70px auto 0;
-        padding: 200px 0 0;
       }
 
       .c-heading-cmn-01 {
@@ -440,7 +433,7 @@
   .c-product-mv {
     width: 100%;
     position: relative;
-    z-index: 5;
+    z-index: 2;
 
     .inner {
       max-width: 1440px;
@@ -633,19 +626,7 @@
   .c-product-content {
     position: relative;
     z-index: 4;
-    background: url(/assets/img/recipes/bg_product_gray.svg) no-repeat center bottom;
-    background-size: cover;
-    padding: 400px 0 100px;
-    margin: -270px auto 0;
-
-    @include mq-max-sp {
-      padding: 300px 0 60px;
-    }
-
-    @include mq-custom-min(1441px) {
-      background: url(/assets/img/recipes/bg_product_gray.svg) no-repeat center bottom;
-      background-size: cover;
-    }
+    background: #FCFBF2;
 
     &__inner {
       max-width: 1440px;

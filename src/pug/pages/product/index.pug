@@ -27,6 +27,8 @@ block append scripts
   script(src='/assets/js/libs/jquery.waypoints.js')
   script(src='/assets/js/topWaveYellow.js')
   script(src='/assets/js/bottomWaveYellow.js')
+  script(src='/assets/js/waveCreamTop.js')
+  script(src='/assets/js/waveCreamBottom.js')
 
 block outside
   //- // loader
@@ -65,6 +67,8 @@ block content
           .c-product-image__text เราเข้าใจว่าทุกคนมีสิ่งที่ให้คุณค่าแตกต่างกัน <br>ทั้งคุณค่ากับตัวคุณเอง คุณค่ากับคนที่คุณรัก คุณค่าต่อสิ่งแวดล้อม
 
     .sec-cmn-01.c-product-content
+      .c-wave-cream
+        canvas#canvas-cream
       .c-product-content__inner
         .c-box-card-row-01.-reverse
           figure.box-image.animation-element.slide-top
@@ -74,7 +78,8 @@ block content
               .icon
               |How is it good?
             .c-text-cmn-01 These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
-
+      .c-wave-cream-bottom
+        canvas#canvas-cream-bottom
     .sec-cmn-01.c-product-list
       .c-product-list__inner
         .c-product-list__box-product-show

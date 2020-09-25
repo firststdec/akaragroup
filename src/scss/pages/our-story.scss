@@ -87,6 +87,7 @@
         right: 0;
         top: -80px;
         background: url(/assets/img/our-story/ico_deco_our_story_01.svg) no-repeat center center;
+        background-size: cover;
         opacity: 0.3;
 
         @include mq-min-max-tb {

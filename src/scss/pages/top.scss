@@ -1,13 +1,6 @@
 @import '../_mixin';
 
 .topPage {
-  background: url(/assets/img/svg/bg_main_heading.svg) no-repeat center top;
-  background-size: contain;
-
-  @include mq-max-sp {
-    background: none;
-  }
-
   .product-swiper-container {
     margin-left: 0;
 

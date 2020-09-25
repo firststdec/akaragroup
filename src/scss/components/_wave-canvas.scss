@@ -1,0 +1,161 @@
+.c-bg-wave-mainvisual {
+  width: 100%;
+  min-height: 800px;
+  background: #FCFBF2;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  .c-bg-wave-mainvisual-solid {
+    max-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    transform: translateY(-50%);
+    bottom: -300px;
+    transform: rotate(180deg);
+    z-index: 1;
+
+    canvas {
+      display: block;
+    }
+  }
+}
+
+.c-bg-wave-mainvisual-sub {
+  width: 100%;
+  min-height: 700px;
+  background: #FCFBF2;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  .c-bg-wave-mainvisual-solid {
+    max-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    transform: translateY(-50%);
+    bottom: -200px;
+    transform: rotate(180deg);
+    z-index: 1;
+
+    canvas {
+      display: block;
+    }
+  }
+}
+
+.c-wave-yellow {
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-50%);
+  top: -55px;
+  left: 0;
+
+  canvas {
+    display: block;
+  }
+}
+
+.c-wave-yellow-bottom{
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-50%);
+  bottom: -110px;
+  left: 0;
+  transform: rotate(180deg);
+  z-index: 1;
+
+  canvas {
+    display: block;
+  }
+}
+
+.c-wave-cream {
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-50%);
+  top: -55px;
+
+  canvas {
+    display: block;
+  }
+}
+
+.c-wave-cream-bottom{
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-50%);
+  bottom: -110px;
+  transform: rotate(180deg);
+  z-index: 1;
+
+  canvas {
+    display: block;
+  }
+}
+
+.c-wave-green {
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-50%);
+  top: -55px;
+
+  canvas {
+    display: block;
+  }
+}
+
+.c-wave-green-bottom{
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-50%);
+  bottom: -110px;
+  transform: rotate(180deg);
+  z-index: 1;
+
+  canvas {
+    display: block;
+  }
+}
+
+.c-wave-orange {
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-50%);
+  top: -55px;
+
+  canvas {
+    display: block;
+  }
+}
+
+.c-wave-orange-bottom{
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-50%);
+  bottom: -110px;
+  transform: rotate(180deg);
+  z-index: 1;
+
+  canvas {
+    display: block;
+  }
+}
+
+.c-bg-wave-white-solid{
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: -117px;
+  transform: translateY(-50%);
+}

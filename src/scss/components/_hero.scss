@@ -1,14 +1,17 @@
 .c-hero-faq {
   &__inner {
-    min-height: 496px;
+    min-height: 550px;
     margin: auto;
-    background: url(/assets/img/faq/bg_faq.png) no-repeat center bottom;
+    background-color: $orange_01;
+    background-image:
+      radial-gradient(
+        circle at top left,
+        $orange_01,
+        $orange_02 50%
+      );
+    // background: url(/assets/img/faq/bg_faq.png) no-repeat center bottom;
     background-size: cover;
     position: relative;
-
-    @include mq-min-max-tb {
-      min-height: get-vw(496px);
-    }
   }
 
   &__text {
