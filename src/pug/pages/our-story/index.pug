@@ -31,6 +31,7 @@ block append scripts
   script(src='/assets/js/topWaveYellow02.js')
   script(src='/assets/js/bottomWaveYellow02.js')
   script(src='/assets/js/waveMainVisualSub.js')
+  script(src='/assets/js/our-story.js')
 
 block outside
   //- // loader
@@ -40,12 +41,28 @@ block outside
   //-       img(src="/assets/img/common/logo@2x.png", alt="")
   //-     .loader.simple-circle
   //- // /loader
+  .c-box-scroll-spy
+    .c-box-scroll-spy__inner
+      .c-box-scroll-spy__list
+        .c-box-scroll-spy__item.is-active
+          a.c-box-scroll-spy__link(href="#our-story", data-scroll="our-story") Our Story
+        .c-box-scroll-spy__item
+          a.c-box-scroll-spy__link(href="#timeline", data-scroll="timeline") Timeline
+        .c-box-scroll-spy__item
+          a.c-box-scroll-spy__link(href="#our-egg", data-scroll="our-egg") Our Egg
+        .c-box-scroll-spy__item
+          a.c-box-scroll-spy__link(href="#our-farm", data-scroll="our-farm") Our Farm
+        .c-box-scroll-spy__item
+          a.c-box-scroll-spy__link(href="#vdo", data-scroll="vdo") VDO
+        .c-box-scroll-spy__item
+          a.c-box-scroll-spy__link(href="#faq", data-scroll="faq") FAQ
+
   .c-bg-wave-mainvisual-sub
     .c-bg-wave-mainvisual-solid
       canvas#canvas-mainvisual
 block content
   .p-our-story
-    .c-mv-sub-page
+    #our-story.c-mv-sub-page.section-spy
       .c-mv-sub-page__inner
         .c-mv-sub-page__box-content
           .c-mv-sub-page__heading Our Story
@@ -57,7 +74,7 @@ block content
           figure.c-mv-sub-page__image-frame
             img(src="/assets/img/our-story/mv_our_story.png", alt="")
 
-    .c-box-time-line
+    #timeline.c-box-time-line.section-spy
       .c-box-time-line__inner
         .c-box-time-line__line
         .c-box-time-line__list#scroll_timeline
@@ -84,7 +101,7 @@ block content
               .c-box-time-line__content-heading ปี พ.ศ. 2547
               .c-box-time-line__content-text These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
 
-    .c-box-our-egg
+    #our-egg.c-box-our-egg.section-spy
       .c-wave-yellow
         canvas#canvas-yellow
       .c-box-our-egg__inner
@@ -123,7 +140,7 @@ block content
       .c-wave-yellow-bottom
         canvas#canvas-yellow-bottom
 
-    .c-box-our-farm
+    #our-farm.c-box-our-farm.section-spy
       .c-box-our-farm__inner
         .c-heading-box-egg.animation-element.slide-top
           .c-heading-egg
@@ -157,7 +174,6 @@ block content
               .c-box-our-farm__card-heading เพื่อสุขภาพที่ดีของคนไทย
               .c-box-our-farm__card-content These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.
 
-
     .c-box-certificate
       .c-box-certificate__inner
         .c-box-certificate__list.animation-element.slide-top
@@ -180,7 +196,7 @@ block content
             figure.c-box-certificate__image
               img(src="/assets/img/common/img_certification_06.svg", alt="")
 
-    .sec-cmn-01.c-box-video
+    #vdo.sec-cmn-01.c-box-video.section-spy
       .c-wave-yellow
         canvas#canvas-yellow-02
       .c-box-video__inner
@@ -197,7 +213,7 @@ block content
             iframe(width='560', height='315', src='https://www.youtube.com/embed/ps3kWOQRQnY', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
       .c-wave-yellow-bottom
         canvas#canvas-yellow-bottom-02
-    .sec-cmn-01.c-faq
+    #faq.sec-cmn-01.c-faq.section-spy
       .c-faq__inner
         .c-heading-box-egg.animation-element.slide-top
           .c-heading-egg
