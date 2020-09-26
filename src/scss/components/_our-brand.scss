@@ -63,6 +63,10 @@
 
     &-content {
       width: 520px;
+
+      @include mq-max-sp {
+        width: 100%;
+      }
     }
 
     &-content-heading-logo {
@@ -97,6 +101,10 @@
   .js-slider-multi{
     img {
       border-radius: 30px;
+
+      @include mq-max-sp {
+        width: 100%;
+      }
     }
 
     .swiper-slide {
