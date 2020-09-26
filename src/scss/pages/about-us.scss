@@ -12,6 +12,11 @@
   .c-box-certificate {
     margin-top: 200px;
 
+    @include mq-max-sp {
+      margin-top: 0;
+      margin-bottom: 60px;
+    }
+
     .c-heading-egg__text {
       padding-left: 0;
     }
@@ -31,6 +36,10 @@
   .c-box-time-line {
     $this: #{&};
 
+    @include mq-max-sp {
+      margin-top: 150px;
+    }
+
     &__inner {
       max-width: 1140px;
       margin: auto;
@@ -39,6 +48,10 @@
       @include mq-min-max-tb {
         padding: 0 20px;
         max-width: get-vw(1140px);
+      }
+
+      @include mq-max-sp {
+        padding: 0 30px;
       }
     }
 
@@ -107,6 +120,10 @@
     &__image {
       width: 500px;
 
+      @include mq-max-sp {
+        width: 50%;
+      }
+
       @include mq-min-max-tb {
         width: get-vw(500px);
       }
@@ -114,6 +131,11 @@
 
     &__content {
       width: 520px;
+
+      @include mq-max-sp {
+        width: 50%;
+        flex: 1;
+      }
 
       @include mq-min-max-tb {
         width: get-vw(520px);
@@ -130,6 +152,10 @@
         font-size: 1.6rem;
         color: #777;
 
+        @include mq-max-sp {
+          font-size: 1.4rem;
+        }
+
         &:first-of-type {
           margin-top: 0;
         }
@@ -143,5 +169,13 @@
 
   .c-our-brand {
     margin-top: 200px;
+
+    @include mq-max-sp {
+      margin-top: 150px;
+    }
+
+    &__inner {
+      padding: 0 30px;
+    }
   }
 }

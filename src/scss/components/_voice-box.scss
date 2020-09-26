@@ -7,6 +7,10 @@
   position: relative;
   z-index: 10;
 
+  @include mq-max-sp {
+    padding: 100px 30px 0;
+  }
+
   &__inner {
     display: flex;
     flex-wrap: wrap;
@@ -39,8 +43,9 @@
       }
 
       @include mq-max-sp {
-        font-size: 2.2rem;
-        font-weight: 500;
+        font-size: 3.2rem;
+        flex-direction: column;
+        text-align: center;
       }
 
       &-icon {
@@ -62,9 +67,7 @@
         }
 
         @include mq-max-sp {
-          width: 30px;
-          height: 27px;
-          left: -40px;
+          margin: auto;
         }
 
         > .c-comment-icon {
@@ -89,6 +92,7 @@
 
       @include mq-max-sp {
         font-size: 1.4rem;
+        text-align: center;
       }
     }
   }
@@ -101,6 +105,8 @@
     @include mq-max-sp {
       width: 100%;
       margin: 50px 0 150px;
+      border-radius: 20px;
+      text-align: center;
     }
 
     .swiper-box-control-trigger {
@@ -162,7 +168,8 @@
     text-align: left;
 
     @include mq-max-sp {
-      padding: 20px;
+      padding: 40px 20px;
+      text-align: center;
     }
 
     &__heading {
@@ -192,6 +199,10 @@
       flex-wrap: wrap;
       margin-top: 20px;
 
+      @include mq-max-sp {
+        flex-direction: column;
+      }
+
       &-icon {
         width: 52px;
         height: 48px;
@@ -204,9 +215,7 @@
         }
 
         @include mq-max-sp {
-          width: 30px;
-          height: 27px;
-          margin-top: 2px;
+          margin: auto;
         }
       }
 
