@@ -58,6 +58,11 @@
 
     &.--border-base {
       border-color: $baseColor;
+
+      @include mq-max-sp {
+        border-color: #DCDCDC;
+        border-width: 2px;
+      }
     }
 
     .arrow {
@@ -230,6 +235,7 @@
     font-size: 1.4rem;
     line-height: 1.45;
     height: 50px;
+    box-shadow: 3px 5px 15px 0px rgba(0,0,0,0.16);
   }
 
   &-large {
@@ -253,6 +259,10 @@
 
   &--orange {
     background-image: linear-gradient(to right, #f8b500, #f8b500);
+  }
+
+  &--yellow {
+    background-image: linear-gradient(to right, #FCE279, #FFC416);
   }
 
   &--orange::after {

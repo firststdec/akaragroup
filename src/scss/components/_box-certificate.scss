@@ -3,9 +3,18 @@
 .c-box-certificate {
   margin-top: 80px;
 
+  @include mq-max-sp {
+    margin-top: 60px;
+    padding: 0 30px;
+  }
+
   &__inner {
     max-width: 940px;
     margin: 70px auto;
+
+    @include mq-max-sp {
+      margin: 0 auto;
+    }
   }
 
   &__list {
@@ -13,13 +22,34 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
+    @include mq-max-sp {
+      margin: 0 -15px;
+    }
   }
 
   &__item {
+    @include mq-max-sp {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
+    &:nth-child(n+4) {
+      @include mq-max-sp {
+        margin-top: 20px;
+      }
+    }
+
+    @include mq-max-sp {
+      width: 33.33%;
+      display: inline-flex;
+      justify-content: center;
+    }
   }
 
   &__image{
-
+    @include mq-max-sp {
+      width: auto;
+    }
   }
 }

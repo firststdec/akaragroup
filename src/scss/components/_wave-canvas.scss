@@ -31,6 +31,10 @@
   top: 0;
   left: 0;
 
+  @include mq-max-sp {
+    min-height: 500px;
+  }
+
   .c-bg-wave-mainvisual-solid {
     max-width: 100%;
     overflow: hidden;
@@ -39,6 +43,10 @@
     bottom: -200px;
     transform: rotate(180deg);
     z-index: 1;
+
+    @include mq-max-sp {
+      bottom: -100px;
+    }
 
     canvas {
       display: block;

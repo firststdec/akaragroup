@@ -116,10 +116,9 @@
         }
 
         @include mq-max-sp {
-          width: 188px;
-          height: 173px;
+          width: 166px;
+          height: 154px;
           background-size: cover;
-          background: url(/assets/img/svg/signup-icon.svg) no-repeat center top;
           margin-top: -120px;
           margin-bottom: 30px;
         }

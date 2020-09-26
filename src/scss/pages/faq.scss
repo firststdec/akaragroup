@@ -2,6 +2,10 @@
 
 .p-faq {
   .-box-subscribe {
+    @include mq-max-sp {
+      margin-top: 60px !important;
+    }
+
     > .inner {
       background: none;
     }
@@ -19,15 +23,25 @@
     max-width: 850px;
     margin: 0 auto;
     padding-top: 40px;
+
+    @include mq-max-sp {
+      padding-top: 0;
+    }
   }
 
   &__list {
-
+    @include mq-max-sp {
+      padding: 0 30px;
+    }
   }
 
   &__item {
     padding-bottom: 50px;
     border-bottom: 1px solid #DCDCDC;
+
+    @include mq-max-sp {
+      padding-bottom: 30px;
+    }
 
     &:first-of-type {
       border-top: 0;
@@ -35,6 +49,10 @@
 
     &:not(:first-of-type) {
       margin-top: 50px;
+
+      @include mq-max-sp {
+        margin-top: 30px;
+      }
     }
 
     &.is-active {
@@ -64,7 +82,13 @@
     #{$this}__heading {
       max-width: 770px;
       font-size: 2.2rem;
+      line-height: 1.4;
       color: $baseColor;
+
+      @include mq-max-sp {
+        font-size: 1.8rem;
+        max-width: 80%;
+      }
     }
 
     #{$this}__icon {
@@ -103,6 +127,10 @@
       font-size: 1.6rem;
       color: #777777;
       padding-top: 20px;
+
+      @include mq-max-sp {
+        font-size: 1.4rem;
+      }
     }
   }
 

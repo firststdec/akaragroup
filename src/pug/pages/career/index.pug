@@ -22,10 +22,12 @@ block variables
 
 block prepend css
   link(rel='stylesheet', href='/assets/css/libs/slick.css')
+  link(rel='stylesheet', href='/assets/css/libs/modaal.css')
 block append scripts
   script(src='/assets/js/libs/slick.min.js')
   script(src='/assets/js/libs/jquery.matchHeight.js')
   script(src='/assets/js/libs/jquery.waypoints.js')
+  script(src='/assets/js/libs/modaal.min.js')
   script(src='/assets/js/waveCreamTop.js')
   script(src='/assets/js/waveCreamBottom.js')
   script(src='/assets/js/waveMainVisualSub.js')
@@ -70,30 +72,38 @@ block content
                 .c-heading-egg__text.-small Jobs Opening
               ul.c-box-time-line__content-list
                 li.c-box-time-line__content-list-item
-                  i.fas.fa-chevron-right
-                  span ช่างซ่อมบำรุง (ประจำฟาร์ม)
+                  a.modaal(href="#job-01", data-modaal-type="inline",data-modaal-animation="fade")
+                    i.fas.fa-chevron-right
+                    span.text ช่างซ่อมบำรุง (ประจำฟาร์ม)
                 li.c-box-time-line__content-list-item
-                  i.fas.fa-chevron-right
-                  span เจ้าหน้าที่ฝ่ายทรัพยากรบุคคล (ปทุมธานี)
+                  a.modaal(href="#job-02", data-modaal-type="inline",data-modaal-animation="fade")
+                    i.fas.fa-chevron-right
+                    span.text เจ้าหน้าที่ฝ่ายทรัพยากรบุคคล (ปทุมธานี)
                 li.c-box-time-line__content-list-item
-                  i.fas.fa-chevron-right
-                  span เจ้าหน้าที่บัญชี (วุฒิปริญญาตรี 1อัตรา)
+                  a.modaal(href="#job-03", data-modaal-type="inline",data-modaal-animation="fade")
+                    i.fas.fa-chevron-right
+                    span.text เจ้าหน้าที่บัญชี (วุฒิปริญญาตรี 1อัตรา)
                 li.c-box-time-line__content-list-item
-                  i.fas.fa-chevron-right
-                  span พนักงานบัญชีรายวัน 2 อัตรา
+                  a.modaal(href="#job-04", data-modaal-type="inline",data-modaal-animation="fade")
+                    i.fas.fa-chevron-right
+                    span.text พนักงานบัญชีรายวัน 2 อัตรา
                 li.c-box-time-line__content-list-item
-                  i.fas.fa-chevron-right
-                  span แม่บ้าน หลายอัตรา
+                  a.modaal(href="#job-05", data-modaal-type="inline",data-modaal-animation="fade")
+                    i.fas.fa-chevron-right
+                    span.text แม่บ้าน หลายอัตรา
                 li.c-box-time-line__content-list-item
-                  i.fas.fa-chevron-right
-                  span พนักงาน R&D 1 อัตรา
+                  a.modaal(href="#job-06", data-modaal-type="inline",data-modaal-animation="fade")
+                    i.fas.fa-chevron-right
+                    span.text พนักงาน R&D 1 อัตรา
                 li.c-box-time-line__content-list-item
-                  i.fas.fa-chevron-right
-                  span พนักงานบันทึกข้อมูลการผลิต 3 อัตรา
+                  a.modaal(href="#job-07", data-modaal-type="inline",data-modaal-animation="fade")
+                    i.fas.fa-chevron-right
+                    span.text พนักงานบันทึกข้อมูลการผลิต 3 อัตรา
 
               .c-box-time-line__link
-                .c-hand-icon
-                .c-box-time-line__link-text คลิกที่ตำแหน่งเพื่อกดส่งใบสมัคร หรือติดต่อเราตามข้อมูลด้านล่าง
+                .c-box-time-line__link-text
+                  .c-hand-icon
+                  | คลิกที่ตำแหน่งเพื่อกดส่งใบสมัคร หรือติดต่อเราตามข้อมูลด้านล่าง
 
               .c-box-contact
                 .c-box-contact__heading ติดต่อฝ่ายบุคคล:  โทร. 037-349-885
@@ -114,6 +124,210 @@ block content
               .c-box-time-line__content-sub-heading Lorem ipsum dolor sit amet, consetetur
               .c-box-time-line__content-text.-strong We encourage all employees to improve their effectiveness that would create true understanding of job responsibility which leads to the achievement of both individual and team success.
               .c-box-time-line__content-text Working environment at Akara promote good work relationship in all aspects. We treat each other the way we want to be treated and we believe that people work best when there is a foundation of trust. We encourage two-way communication throughout the organization and provide our employees good opportunity in their career paths.
+
+    .c-box-jobs
+      .c-box-jobs__detail#job-01
+        .c-box-jobs__inner
+          .c-box-jobs__heading
+            .title.c-heading-03 ช่างซ่อมบำรุง (ประจำฟาร์ม)
+            .location นครนายก
+          .c-box-jobs__content
+            .sub-title.c-heading-04 รายละเอียดงาน
+            .text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.
+          .c-box-jobs__apply
+            .c-box-cmn-button
+              a.c-button-cmn-01(href="#form-job-01")
+                span.text Apply for this position
+                span.arrow
+                  i.fa.fa-arrow-right
+            .c-box-form
+              .c-box-contact-form
+                .c-box-contact-form__inner
+                  .c-box-contact-form__form#form-job-01
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="name", placeholder="Name")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="email", name="email", placeholder="Email")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="subject", placeholder="Subject")
+                    .c-box-contact-form__form-row
+                      textarea.c-input-textarea(name="message", cols="30", rows="10", placeholder="write your message here...")
+                    .c-box-contact-form__form-row
+                      input.c-input-button(type="button", value="Apply")
+
+      .c-box-jobs__detail#job-02
+        .c-box-jobs__inner
+          .c-box-jobs__heading
+            .title.c-heading-03 เจ้าหน้าที่ฝ่ายทรัพยากรบุคคล (ปทุมธานี)
+            .location ปทุมธานี
+          .c-box-jobs__content
+            .sub-title.c-heading-04 รายละเอียดงาน
+            .text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.
+          .c-box-jobs__apply
+            .c-box-cmn-button
+              a.c-button-cmn-01(href="#form-job-02")
+                span.text Apply for this position
+                span.arrow
+                  i.fa.fa-arrow-right
+            .c-box-form
+              .c-box-contact-form
+                .c-box-contact-form__inner
+                  .c-box-contact-form__form#form-job-02
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="name", placeholder="Name")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="email", name="email", placeholder="Email")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="subject", placeholder="Subject")
+                    .c-box-contact-form__form-row
+                      textarea.c-input-textarea(name="message", cols="30", rows="10", placeholder="write your message here...")
+                    .c-box-contact-form__form-row
+                      input.c-input-button(type="button", value="Apply")
+
+      .c-box-jobs__detail#job-03
+        .c-box-jobs__inner
+          .c-box-jobs__heading
+            .title.c-heading-03 เจ้าหน้าที่บัญชี (วุฒิปริญญาตรี 1อัตรา)
+            .location ปทุมธานี
+          .c-box-jobs__content
+            .sub-title.c-heading-04 รายละเอียดงาน
+            .text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.
+          .c-box-jobs__apply
+            .c-box-cmn-button
+              a.c-button-cmn-01(href="#form-job-03")
+                span.text Apply for this position
+                span.arrow
+                  i.fa.fa-arrow-right
+            .c-box-form
+              .c-box-contact-form
+                .c-box-contact-form__inner
+                  .c-box-contact-form__form#form-job-03
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="name", placeholder="Name")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="email", name="email", placeholder="Email")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="subject", placeholder="Subject")
+                    .c-box-contact-form__form-row
+                      textarea.c-input-textarea(name="message", cols="30", rows="10", placeholder="write your message here...")
+                    .c-box-contact-form__form-row
+                      input.c-input-button(type="button", value="Apply")
+
+      .c-box-jobs__detail#job-04
+        .c-box-jobs__inner
+          .c-box-jobs__heading
+            .title.c-heading-03 พนักงานบัญชีรายวัน 2 อัตรา
+            .location ปทุมธานี
+          .c-box-jobs__content
+            .sub-title.c-heading-04 รายละเอียดงาน
+            .text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.
+          .c-box-jobs__apply
+            .c-box-cmn-button
+              a.c-button-cmn-01(href="#form-job-04")
+                span.text Apply for this position
+                span.arrow
+                  i.fa.fa-arrow-right
+            .c-box-form
+              .c-box-contact-form
+                .c-box-contact-form__inner
+                  .c-box-contact-form__form#form-job-04
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="name", placeholder="Name")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="email", name="email", placeholder="Email")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="subject", placeholder="Subject")
+                    .c-box-contact-form__form-row
+                      textarea.c-input-textarea(name="message", cols="30", rows="10", placeholder="write your message here...")
+                    .c-box-contact-form__form-row
+                      input.c-input-button(type="button", value="Apply")
+
+      .c-box-jobs__detail#job-05
+        .c-box-jobs__inner
+          .c-box-jobs__heading
+            .title.c-heading-03 แม่บ้าน หลายอัตรา
+            .location ปทุมธานี
+          .c-box-jobs__content
+            .sub-title.c-heading-04 รายละเอียดงาน
+            .text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.
+          .c-box-jobs__apply
+            .c-box-cmn-button
+              a.c-button-cmn-01(href="#form-job-05")
+                span.text Apply for this position
+                span.arrow
+                  i.fa.fa-arrow-right
+            .c-box-form
+              .c-box-contact-form
+                .c-box-contact-form__inner
+                  .c-box-contact-form__form#form-job-05
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="name", placeholder="Name")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="email", name="email", placeholder="Email")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="subject", placeholder="Subject")
+                    .c-box-contact-form__form-row
+                      textarea.c-input-textarea(name="message", cols="30", rows="10", placeholder="write your message here...")
+                    .c-box-contact-form__form-row
+                      input.c-input-button(type="button", value="Apply")
+
+      .c-box-jobs__detail#job-06
+        .c-box-jobs__inner
+          .c-box-jobs__heading
+            .title.c-heading-03 พนักงาน R&D 1 อัตรา
+            .location ปทุมธานี
+          .c-box-jobs__content
+            .sub-title.c-heading-04 รายละเอียดงาน
+            .text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.
+          .c-box-jobs__apply
+            .c-box-cmn-button
+              a.c-button-cmn-01(href="#form-job-06")
+                span.text Apply for this position
+                span.arrow
+                  i.fa.fa-arrow-right
+            .c-box-form
+              .c-box-contact-form
+                .c-box-contact-form__inner
+                  .c-box-contact-form__form#form-job-06
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="name", placeholder="Name")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="email", name="email", placeholder="Email")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="subject", placeholder="Subject")
+                    .c-box-contact-form__form-row
+                      textarea.c-input-textarea(name="message", cols="30", rows="10", placeholder="write your message here...")
+                    .c-box-contact-form__form-row
+                      input.c-input-button(type="button", value="Apply")
+
+      .c-box-jobs__detail#job-07
+        .c-box-jobs__inner
+          .c-box-jobs__heading
+            .title.c-heading-03 พนักงานบันทึกข้อมูลการผลิต 3 อัตรา
+            .location ปทุมธานี
+          .c-box-jobs__content
+            .sub-title.c-heading-04 รายละเอียดงาน
+            .text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.
+          .c-box-jobs__apply
+            .c-box-cmn-button
+              a.c-button-cmn-01(href="#form-job-07")
+                span.text Apply for this position
+                span.arrow
+                  i.fa.fa-arrow-right
+            .c-box-form
+              .c-box-contact-form
+                .c-box-contact-form__inner
+                  .c-box-contact-form__form#form-job-07
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="name", placeholder="Name")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="email", name="email", placeholder="Email")
+                    .c-box-contact-form__form-row
+                      input.c-input-text(type="text", name="subject", placeholder="Subject")
+                    .c-box-contact-form__form-row
+                      textarea.c-input-textarea(name="message", cols="30", rows="10", placeholder="write your message here...")
+                    .c-box-contact-form__form-row
+                      input.c-input-button(type="button", value="Apply")
 
     .c-voice-box
       .c-wave-cream
@@ -171,6 +385,7 @@ block content
               i.fas.fa-chevron-right
       .c-wave-cream-bottom
         canvas#canvas-cream-bottom
+
     .l-sec-cmn-01.-box-subscribe
       .inner
         .c-box-subscribe.animation-element.slide-top

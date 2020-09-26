@@ -38,12 +38,12 @@ body {
   font-family: $fontBase;
   font-size: 1.6rem;
   background: #fff;
-  color: #333333;
+  color: $baseColor;
   line-height: 1.75;
   text-size-adjust: 100%;
 
   @include mq-max-sp {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -221,6 +221,11 @@ a {
         background: $yellow;
         padding-top: 10px;
         padding-bottom: 10px;
+      }
+
+      @include mq-max-sp {
+        background: #fff;
+        transition: all .3s ease-in;
       }
     }
 
@@ -422,7 +427,7 @@ a {
     }
 
     @include mq-max-sp {
-      padding: 20px 30px !important;
+      padding: 15px 30px !important;
     }
 
     &.l-block {
@@ -519,6 +524,10 @@ a {
       color: $baseColor;
       font-size: 1.5rem;
       font-weight: 500;
+
+      @include mq-min-max-tb {
+        font-size: 1.3rem;
+      }
     }
   }
 
@@ -674,6 +683,10 @@ a {
     font-size: 1.6rem;
     font-weight: 500;
     padding-right: 10px;
+
+    @include mq-min-max-tb {
+      font-size: 1.3rem;
+    }
 
     @include mq-max-sp {
       font-size: 2.2rem;
@@ -947,10 +960,16 @@ a {
             padding-left: 20px;
             background: url(/assets/img/svg/circle-yellow.svg) no-repeat center left;
             background-size: 14px;
+            color: $baseColor;
+            transition: all .3s ease-in;
 
             @include mq-max-sp {
               background-size: 8px;
               margin-left: 15px;
+            }
+
+            &:hover {
+              opacity: 0.7;
             }
           }
         }

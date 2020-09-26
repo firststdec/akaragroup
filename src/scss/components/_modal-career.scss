@@ -1,0 +1,23 @@
+@import '_variables';
+
+.c-modal-career {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000f2;
+  z-index: 150;
+  display: none;
+
+  &__inner {
+    min-width: 650px;
+    min-height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: $white;
+    border-radius: 30px;
+  }
+}

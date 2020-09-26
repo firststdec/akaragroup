@@ -42,7 +42,6 @@ $(function() {
           offset = $(this).offset().top - 300,
           height = $(this).height();
       if(sTop >= offset && sTop < offset + height) {
-        link.removeClass('active');
         $('.c-box-scroll-spy__item').removeClass('is-active');
         $('.c-box-scroll-spy').find('[data-scroll="' + id + '"]').closest('.c-box-scroll-spy__item').addClass('is-active');
       }

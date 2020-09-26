@@ -4,9 +4,18 @@
   // c-faq
   .c-faq {
     margin-top: 150px;
+
+    @include mq-max-sp {
+      margin-bottom: 30px;
+    }
+
     .c-box-cmn-button {
       text-align: center;
       margin-top: 80px;
+
+      @include mq-max-sp {
+        margin-top: 40px;
+      }
     }
 
     &__list {
@@ -24,6 +33,10 @@
     margin-top: 200px;
     &__inner {
       padding: 50px 0;
+
+      @include mq-max-sp {
+        padding: 25px 30px 80px;
+      }
     }
 
     &__box-text {
@@ -75,11 +88,81 @@
   }
 
   .c-box-time-line {
+    @include mq-max-sp {
+      padding: 0 30px;
+    }
+
     &__item {
-      margin-top: 50px;
+      &:not(:first-of-type) {
+        margin-top: 50px;
+
+        @include mq-max-sp {
+          margin-top: 0;
+        }
+
+        .c-box-time-line {
+          &__image-frame{
+            @include mq-max-sp {
+              padding-top: 40px;
+            }
+          }
+
+          &__content{
+            @include mq-max-sp {
+              padding-top: 40px;
+            }
+          }
+        }
+      }
+
+      &:last-of-type {
+        &::before {
+          @include mq-max-sp {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        .c-box-time-line__image {
+          @include mq-max-sp {
+            order: 1;
+          }
+        }
+
+        .c-box-time-line__content {
+          @include mq-max-sp {
+            order: 2;
+          }
+        }
+      }
+
+      &::before {
+        @include mq-max-sp {
+          content: '';
+          width: 5px;
+          height: 100%;
+          position: absolute;
+          border-left: 5px dotted #DCDCDC;
+          left: 58px;
+          top: 60px;
+        }
+      }
+    }
+
+    &__content {
+      @include mq-max-sp {
+        width: auto;
+        flex: 1;
+        padding-left: 20px;
+      }
     }
 
     &__image {
+      @include mq-max-sp {
+        width: 120px;
+        height: 120px;
+      }
       .c-deco-story {
         width: 941px;
         height: 778px;

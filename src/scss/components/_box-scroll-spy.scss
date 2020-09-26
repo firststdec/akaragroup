@@ -9,6 +9,10 @@
   transform: translateY(-50%);
   z-index: 5;
 
+  @include mq-max-sp {
+    display: none;
+  }
+
   &.-white {
     #{$this}__link {
       color: $white;

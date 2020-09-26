@@ -17,6 +17,10 @@
     width: 38.88%;
     padding-right: 30px;
 
+    @include mq-min-max-tb {
+      padding-left: 20px;
+    }
+
     @include mq-max-sp {
       width: 100%;
       padding-right: 0;
@@ -29,7 +33,10 @@
       color: $baseColor;
       position: relative;
       display: flex;
-      flex-wrap: wrap;
+
+      @include mq-min-max-tb {
+        font-size: 3.2rem;
+      }
 
       @include mq-max-sp {
         font-size: 2.2rem;
@@ -50,6 +57,7 @@
         @include mq-min-max-tb {
           width: get-vw(52px);
           height: get-vw(48px);
+          background-size: get-vw(52px) get-vw(48px);
           top: 10px;
         }
 
@@ -64,6 +72,12 @@
           height: 25px;
           background: url(/assets/img/svg/comment-dots-regular.svg) no-repeat center center;
           background-size: cover;
+
+          @include mq-min-max-tb {
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+          }
         }
       }
     }

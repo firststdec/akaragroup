@@ -1,10 +1,22 @@
 (function () {
 	"use strict";
 
+  var winWidth = $(window).outerWidth();
+  if (winWidth > 1080) {
+    MQ = 'PC';
+  }
+  else if (winWidth > 869) { //768
+    MQ = 'PC';
+  }
+  else {
+    MQ = 'SP';
+	}
+	console.log(MQ);
+
 	var cvs, ctx;
 	var nodes = 6;
 	var waves = [];
-	var waveHeight = 200;
+	var waveHeight = MQ == 'PC' ? 200 : 100
 	var colours = ["#FCFBF2"];
 
 	// Initiator function
