@@ -50,6 +50,10 @@
     &-image {
       width: 520px;
 
+      @include mq-min-max-tb {
+        width: 48%;
+      }
+
       @include mq-max-sp {
         width: 100%;
       }
@@ -63,6 +67,10 @@
 
     &-content {
       width: 520px;
+
+      @include mq-min-max-tb {
+        width: 48%;
+      }
 
       @include mq-max-sp {
         width: 100%;
@@ -101,10 +109,7 @@
   .js-slider-multi{
     img {
       border-radius: 30px;
-
-      @include mq-max-sp {
-        width: 100%;
-      }
+      width: 100%;
     }
 
     .swiper-slide {

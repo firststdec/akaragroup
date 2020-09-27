@@ -1,6 +1,12 @@
 @import '../_mixin';
 
 .p-about-us {
+  .c-mv-sub-page__inner {
+    @include mq-max-sp {
+      min-height: 700px;
+    }
+  }
+
   .c-box-time-line__line {
     width: 689px;
     height: 1693px;
@@ -13,7 +19,7 @@
     margin-top: 200px;
 
     @include mq-max-sp {
-      margin-top: 0;
+      margin-top: 150px;
       margin-bottom: 60px;
     }
 
@@ -176,6 +182,46 @@
 
     &__inner {
       padding: 0 30px;
+    }
+  }
+
+  .c-voice-box {
+    background: linear-gradient(0deg, #ffc416 0%, #fce279 50%, #ffc416 100%);
+    position: relative;
+    margin-top: 200px;
+
+    @include mq-max-sp {
+      padding: 20px 30px 0px;
+    }
+
+    &__inner {
+      padding: 40px 0 100px;
+
+      @include mq-max-sp {
+        padding: 0;
+      }
+    }
+
+    &__slider-box {
+      border-radius: 20px;
+    }
+
+    &__fix-box-heading {
+      @include mq-min-max-tb {
+        font-size: 2.8rem;
+      }
+    }
+
+    &__fix-box-heading-icon {
+      @include mq-min-max-tb {
+        top: 0;
+      }
+    }
+  }
+
+  .c-box-time-line {
+    @include mq-min-max-tb {
+      margin-top: get-vw(-200px);
     }
   }
 }

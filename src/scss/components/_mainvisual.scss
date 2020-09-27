@@ -216,6 +216,12 @@
 
   &__text {
     color: #777;
+    padding-bottom: 100px;
+    position: relative;
+
+    @include mq-min-max-tb {
+      padding-bottom: 80px;
+    }
 
     @include mq-max-sp {
       width: 65%;
