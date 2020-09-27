@@ -2,7 +2,21 @@
 
 .p-career {
   .c-box-time-line {
+    @include mq-max-sp {
+      padding: 0 30px;
+    }
+
+    .c-heading-egg {
+      @include mq-max-sp {
+        width: 100%;
+      }
+    }
+
     &__item {
+      @include mq-max-sp {
+        margin-top: 0;
+      }
+
       &:nth-child(odd){
         .c-box-time-line__content {
           padding-top: 0;
@@ -38,15 +52,7 @@
             }
           }
         }
-      }
-      &:nth-child(even){
-        align-items: center;
 
-        .c-box-time-line__content {
-          padding-top: 0;
-        }
-      }
-      &:nth-child(odd){
         .c-box-time-line__content {
           padding-top: 0;
 
@@ -54,6 +60,30 @@
             padding: 25px 40px;
             border: 1px solid $yellow;
             border-radius: 15px;
+          }
+        }
+
+        .c-box-time-line__image {
+          @include mq-max-sp {
+            order: 2;
+            width: 50%;
+            margin-top: 30px;
+          }
+        }
+      }
+
+      &:nth-child(even){
+        align-items: center;
+        justify-content: flex-end;
+
+        .c-box-time-line__content {
+          padding-top: 0;
+        }
+
+        .c-box-time-line__image {
+          @include mq-max-sp {
+            order: 1;
+            width: 80%;
           }
         }
       }
@@ -92,6 +122,10 @@
       }
 
       &-list {
+        @include mq-max-sp {
+          margin-top: 20px;
+        }
+
         &-item {
           padding-left: 20px;
           color: #777;
@@ -100,6 +134,10 @@
           align-items: center;
           position: relative;
           line-height: 2;
+
+          @include mq-max-sp {
+            padding-left: 0;
+          }
 
           .fas, i {
             padding-right: 20px;
@@ -119,6 +157,10 @@
       display: flex;
       flex-wrap: wrap;
 
+      @include mq-max-sp {
+        padding-left: 0;
+      }
+
       .c-hand-icon {
         width: 22px;
         height: 25px;
@@ -133,6 +175,12 @@
       }
 
     }
+
+    &__list {
+      @include mq-max-sp {
+        margin-top: 0;
+      }
+    }
   }
 
   .c-voice-box {
@@ -142,9 +190,17 @@
     position: relative;
     margin: 150px 0 100px;
 
+    @include mq-max-sp {
+      padding: 30px 0 0;
+    }
+
     &__inner {
       max-width: 1300px;
       margin: auto;
+
+      @include mq-max-sp {
+        padding: 0 30px;
+      }
     }
   }
 

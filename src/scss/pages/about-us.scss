@@ -2,9 +2,7 @@
 
 .p-about-us {
   .c-mv-sub-page__inner {
-    @include mq-max-sp {
-      min-height: 700px;
-    }
+
   }
 
   .c-box-time-line__line {
