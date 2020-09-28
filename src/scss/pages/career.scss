@@ -217,7 +217,11 @@
     border-bottom: 3px dotted #DCDCDC;
 
     > .location {
-      color: #777
+      color: #777;
+
+      @include mq-max-sp() {
+        font-size: 1.6rem;
+      }
     }
   }
 
@@ -228,11 +232,16 @@
 
     > .sub-title {
       margin-top: 20px;
+
+      @include mq-max-sp {
+        font-size: 1.6rem !important;
+      }
     }
 
     > .text {
       margin-top: 10px;
     }
+
   }
 
   &__apply {
@@ -262,6 +271,13 @@
         .arrow {
           color: $baseColor;
         }
+      }
+    }
+
+    .c-box-contact-form__inner {
+      @include mq-max-sp {
+        width: 100%;
+        margin: 0;
       }
     }
 

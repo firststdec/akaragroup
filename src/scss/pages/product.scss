@@ -637,6 +637,12 @@
       @include mq-max-sp {
         padding: 20px;
       }
+
+      &.-reverse {
+        @include mq-max-sp {
+          flex-direction: row;
+        }
+      }
     }
 
     .box-content {
@@ -645,12 +651,14 @@
       @include mq-max-sp {
         padding: 20px 0;
         width: 100%;
+        order: 1;
       }
     }
 
     .box-image {
       @include mq-max-sp {
         width: 100%;
+        order: 2;
       }
     }
 
@@ -662,7 +670,8 @@
 
       @include mq-max-sp {
         font-size: 2.2rem;
-        padding-left: 40px;
+        padding-left: 0;
+        text-align: center;
       }
 
       > .icon {
@@ -680,9 +689,11 @@
         }
 
         @include mq-max-sp {
-          width: 30px;
-          height: 27px;
-          margin-top: 3px;
+          display: block;
+          position: relative;
+          top: auto;
+          left: auto;
+          margin: auto;
         }
       }
     }
@@ -1070,8 +1081,10 @@
     padding: 100px 0 100px;
     margin: auto;
     position: relative;
+    margin-top: 50px;
 
     @include mq-min-max-tb {
+      margin-top: get-vw(50px);
       padding: get-vw(100px) 0 get-vw(150px);
     }
 

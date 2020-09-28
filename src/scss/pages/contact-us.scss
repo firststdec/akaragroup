@@ -3,6 +3,12 @@
 
 .p-contact-us {
   .c-box-time-line {
+    &__inner {
+      @include mq-max-sp {
+        padding: 0 30px;
+      }
+    }
+
     &__list {
       margin-top: -50px;
     }
@@ -20,13 +26,47 @@
     }
 
     &__item {
+      .fa-chevron-right {
+        @include mq-max-sp {
+          display: none;
+        }
+      }
+      
+      .c-box-time-line__image {
+        @include mq-max-sp {
+          width: 80%;
+          margin: auto;
+        }
+      }
+
       &:first-of-type {
         padding-top: 30px;
+      }
+
+      &:not(:first-of-type) {
+        @include mq-max-sp {
+          margin-top: 40px;
+          padding-top: 40px;
+          border-top: 5px dotted #DCDCDC;
+        }
+
+
+        .c-box-time-line__image {
+          @include mq-max-sp {
+            order: 1;
+          }
+        }
       }
     }
 
     &__content {
       padding-top: 50px !important;
+
+      @include mq-max-sp {
+        text-align: center;
+        width: 100%;
+        padding-top: 20px !important;
+      }
 
       &-list {
         margin-top: 10px;
@@ -35,6 +75,10 @@
           display: flex;
           flex-wrap: wrap;
           justify-content: flex-start;
+
+          @include mq-max-sp {
+            justify-content: center;
+          }
 
           &:not(:first-of-type) {
             margin-top: 5px;
@@ -69,6 +113,10 @@
       &-heading {
         &.-small {
           font-size: 3.2rem !important;
+
+          @include mq-max-sp {
+            font-size: 2.2rem !important;
+          }
         }
       }
     }
@@ -80,16 +128,31 @@
     flex-wrap: wrap;
     justify-content: center;
 
+    @include mq-max-sp {
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+
     &__heading {
       font-size: 3.2rem;
       line-height: 1.3;
       margin-right: 40px;
+
+      @include mq-max-sp {
+        font-size: 2.2rem;
+        margin-right: 0;
+      }
     }
 
     .c-list-sns {
       display: inline-flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
+
+      @include mq-max-sp {
+        margin-top: 20px;
+      }
 
       &__item {
         &:not(:first-of-type) {
@@ -101,6 +164,10 @@
         > .fab {
           font-size: 3.4rem;
           color: $baseColor;
+
+          @include mq-max-sp {
+            font-size: 2rem;
+          }
         }
       }
     }
