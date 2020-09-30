@@ -1,9 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="175" height="162.031" viewBox="0 0 175 162.031">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="237.031" viewBox="0 0 250 237.031">
   <defs>
     <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#fce279"/>
       <stop offset="1" stop-color="#ffc416"/>
     </radialGradient>
+    <filter id="ico_big_yellow_egg" x="0" y="0" width="250" height="237.031" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
   </defs>
-  <path id="ico_big_yellow_egg" d="M823.914,913.772c95.3-72.174,220.822,133.966,64.161,146.483-31.068,1.76-63.948-5.147-84.183-26.915C771.39,998.185,791.2,938.541,823.914,913.772Z" transform="translate(-787.29 -898.485)" fill="url(#radial-gradient)"/>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#ico_big_yellow_egg)">
+    <path id="ico_big_yellow_egg-2" data-name="ico_big_yellow_egg" d="M823.914,913.772c95.3-72.174,220.822,133.966,64.161,146.483-31.068,1.76-63.948-5.147-84.183-26.915C771.39,998.185,791.2,938.541,823.914,913.772Z" transform="translate(-750.79 -865.99)" fill="url(#radial-gradient)"/>
+  </g>
 </svg>

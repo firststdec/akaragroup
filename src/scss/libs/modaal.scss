@@ -139,6 +139,8 @@ $modaal-grey: #afb7bc;
 	box-shadow: $modaal-shadow;
 	cursor: auto;
 	border-radius: 30px;
+	max-width: 650px;
+	padding: 10px 20px;
 
 	// while loading
 	&.is_loading {
