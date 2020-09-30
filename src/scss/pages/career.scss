@@ -15,6 +15,7 @@
     &__item {
       @include mq-max-sp {
         margin-top: 0;
+        width: 100%;
       }
 
       &:nth-child(odd){
@@ -56,6 +57,10 @@
         .c-box-time-line__content {
           padding-top: 0;
 
+          @include mq-max-sp {
+            width: 100%;
+          }
+
           .c-box-contact {
             padding: 25px 40px;
             border: 1px solid $yellow;
@@ -66,6 +71,8 @@
         .c-box-time-line__image {
           @include mq-max-sp {
             margin-bottom: 30px;
+            width: 100%;
+            text-align: center;
           }
         }
       }
@@ -76,6 +83,10 @@
 
         .c-box-time-line__content {
           padding-top: 0;
+
+          @include mq-max-sp {
+            width: 100%;
+          }
         }
 
         .c-box-time-line__image {
@@ -84,6 +95,7 @@
             width: 100%;
             margin-top: 80px;
             margin-bottom: 30px;
+            text-align: center;
           }
         }
       }
