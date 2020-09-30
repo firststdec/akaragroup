@@ -65,9 +65,7 @@
 
         .c-box-time-line__image {
           @include mq-max-sp {
-            order: 2;
-            width: 50%;
-            margin-top: 30px;
+            margin-bottom: 30px;
           }
         }
       }
@@ -83,7 +81,9 @@
         .c-box-time-line__image {
           @include mq-max-sp {
             order: 1;
-            width: 80%;
+            width: 100%;
+            margin-top: 80px;
+            margin-bottom: 30px;
           }
         }
       }
