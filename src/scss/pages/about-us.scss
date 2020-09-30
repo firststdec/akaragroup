@@ -41,7 +41,7 @@
     $this: #{&};
 
     @include mq-max-sp {
-      margin-top: 150px;
+      margin-top: 50px;
     }
 
     &__inner {
@@ -98,6 +98,10 @@
         margin-top: get-vw(120px);
       }
 
+      @include mq-max-sp {
+        margin-top: 80px;
+      }
+
       &:first-of-type {
         margin-top: 0;
       }
@@ -107,10 +111,18 @@
 
         .c-box-time-line__image {
           order: 2;
+
+          @include mq-max-sp {
+            order: 1;
+          }
         }
 
         .c-box-time-line__content {
           order: 1;
+
+          @include mq-max-sp {
+            order: 2;
+          }
         }
       }
 
@@ -125,7 +137,7 @@
       width: 500px;
 
       @include mq-max-sp {
-        width: 50%;
+        width: 100%;
       }
 
       @include mq-min-max-tb {
@@ -137,8 +149,9 @@
       width: 520px;
 
       @include mq-max-sp {
-        width: 50%;
+        width: 100%;
         flex: 1;
+        margin-top: 20px;
       }
 
       @include mq-min-max-tb {
