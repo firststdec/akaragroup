@@ -1,3 +1,4 @@
+@import '../_mixin';
 /*!
 	Modaal - accessible modals - v0.4.4
 	by Humaan, for all humans.
@@ -141,6 +142,10 @@ $modaal-grey: #afb7bc;
 	border-radius: 30px;
 	max-width: 650px;
 	padding: 10px 20px;
+
+	@include mq-max-sp {
+		padding: 10px 0;
+	}
 
 	// while loading
 	&.is_loading {
