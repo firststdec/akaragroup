@@ -91,4 +91,19 @@
       transform: scale(1.2);
     }
   }
+
+  .c-heading-egg__icon {
+    position: relative;
+
+    .i-barn-yellow {
+      width: 20px;
+      height: 20px;
+      background: url(/assets/img/svg/icon-barn-yellow.svg) no-repeat center center;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }

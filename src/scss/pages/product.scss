@@ -695,6 +695,16 @@
           left: auto;
           margin: auto;
         }
+          .i-thumb-white {
+            width: 17px;
+            height: 18px;
+            background: url(/assets/img/svg/icon-thumbup-white.svg) no-repeat center center;
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
       }
     }
 
@@ -1002,6 +1012,39 @@
           top: 50%;
           transform: translateY(-50%);
         }
+
+        > .i-book-white {
+          width: 16px;
+          height: 20px;
+          background: url(/assets/img/svg/icon-book-white.svg) no-repeat center center;
+          background-size: cover;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        > .i-list-white {
+          width: 14px;
+          height: 15px;
+          background: url(/assets/img/svg/icon-list-white.svg) no-repeat center center;
+          background-size: cover;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        > .i-handheart-white {
+          width: 18px;
+          height: 18px;
+          background: url(/assets/img/svg/icon-handheart-white.svg) no-repeat center center;
+          background-size: cover;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
       }
 
       &-text {
@@ -1218,18 +1261,20 @@
         width: 50px;
 
         &.-level > .icon {
-          background: $yellow;
+          background: url(/assets/img/svg/icon-chef-hat.svg) no-repeat center center $yellow;
+          background-size: 20px;
 
           .fa-cook {
-            color: $baseColor;
+
           }
         }
 
         &.-time > .icon {
-          background: #43AB3F;
+          background: url(/assets/img/svg/icon-clock.svg) no-repeat center center #43AB3F;
+          background-size: 20px;
 
           .fa-clock {
-            color: $white;
+
           }
         }
 
@@ -1316,6 +1361,10 @@
           opacity: 1;
           font-size: 1.6rem;
 
+          @include mq-min-max-tb {
+            font-size: 1.5rem;
+          }
+
           @include mq-max-sp {
             font-size: 1.4rem;
           }
@@ -1362,6 +1411,10 @@
         font-size: 3rem;
         line-height: 1.1;
 
+        @include mq-min-max-tb {
+          font-size: 2.6rem;
+        }
+
         @include mq-max-sp {
           font-size: 2.2rem;
         }
@@ -1373,6 +1426,10 @@
         font-weight: 300;
         line-height: 1.6;
         margin-top: 10px;
+
+        @include mq-min-max-tb {
+
+        }
       }
     }
   }

@@ -148,9 +148,9 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
 
       @include mq-max-sp {
+        width: 100%;
         margin-top: 20px;
       }
 
