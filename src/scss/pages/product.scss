@@ -65,6 +65,10 @@
           background: url(/assets/img/recipes/ico_egg_green.svg) no-repeat center center;
           background-size: cover;
 
+          @include mq-min-max-tb {
+            margin-top: 5px;
+          }
+
           @include mq-max-sp {
             margin-bottom: 10px;
           }
@@ -143,6 +147,7 @@
           display: flex;
           flex-wrap: wrap;
           padding-left: 0;
+          justify-content: center;
         }
 
         @include mq-min-max-tb {
@@ -349,6 +354,10 @@
         > .icon {
           background: url(/assets/img/recipes/ico_egg_orange.svg) no-repeat center center;
           background-size: cover;
+
+          @include mq-min-max-tb {
+            margin-top: 5px;
+          }
 
           @include mq-max-sp {
             margin-bottom: 10px;
@@ -570,6 +579,7 @@
     @include mq-min-max-tb {
       padding: get-vw(160px) 20px 0;
       max-width: 1300px;
+      margin: auto;
     }
 
     .c-product-category {
@@ -580,6 +590,7 @@
 
       @include mq-max-sp {
         justify-content: center;
+        width: 100%;
       }
 
       @include mq-min-max-tb {
@@ -815,6 +826,7 @@
         @include mq-min-max-tb {
           width: get-vw(52px);
           height: get-vw(48px);
+          margin-top: 5px;
         }
 
         @include mq-max-sp {
