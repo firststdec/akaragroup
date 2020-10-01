@@ -27,6 +27,7 @@ $(function () {
   elementInviewTop();
   fakeTrigger();
   customSelect();
+  customSelectProductGreen();
   jsFaqAccordian();
   fakeSwiperMultiControl();
 });
@@ -800,7 +801,6 @@ const customSelect = function() {
 
       $targetSlider = '.js-' + valSelected;
       $targetDetail = '.js-' + valSelected + '__detail';
-      console.log($targetSlider);
 
       $('.c-product-list__box-product-detail-inner').addClass('is-product-opacity').fadeOut();
       $('.js-product-slide-show').addClass('is-product-opacity').fadeOut();
@@ -808,7 +808,26 @@ const customSelect = function() {
       $($targetSlider)
         .fadeIn().removeClass('is-product-opacity');
       $($targetDetail)
-        .fadeIn().removeClass('is-product-opacity');;
+        .fadeIn().removeClass('is-product-opacity');
+    });
+
+    function setTextSelected(text) {
+      $customSelect.next().text(text);
+    }
+  }
+}
+
+const customSelectProductGreen = function() {
+  const $customSelect = $('.c-product-local-nav__sp select');
+
+  if($customSelect.length){
+    const textSelected = $customSelect.find('option:selected').text();
+    setTextSelected(textSelected);
+
+    $customSelect.on('change', function(){
+      const textSelected = $(this).find('option:selected').text();
+      const valSelected = $(this).find('option:selected').val();
+      setTextSelected(textSelected);
     });
 
     function setTextSelected(text) {

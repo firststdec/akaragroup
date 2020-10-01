@@ -60,7 +60,7 @@
       border-color: $baseColor;
 
       @include mq-max-sp {
-        border-color: #DCDCDC;
+        border-color: #fff;
         border-width: 2px;
       }
     }

@@ -2,8 +2,16 @@
 
 .p-career {
   .c-box-time-line {
+    @include mq-custom-min (1440px) {
+      margin-top: -100px;
+    }
+
     @include mq-max-sp {
       padding: 0 30px;
+    }
+
+    @include mq-min-max-tb {
+    
     }
 
     .c-heading-egg {
@@ -107,7 +115,7 @@
       background: url(/assets/img/career/bg_line_connect.png) no-repeat center center;
       background-size: cover;
       position: absolute;
-      left: 50%;
+      left: 51%;
       transform: translateX(-50%);
       z-index: 1;
       top: -250px;
