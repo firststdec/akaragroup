@@ -5,11 +5,26 @@
     margin-top: 80px;
 
     @include mq-max-sp {
+      position: relative;
       margin-top: 0 !important;
     }
 
     @include mq-min-max-tb {
       margin-top: get-vw(80px);
+    }
+
+    .c-wave-white {
+      display: none;
+
+      @include mq-max-sp {
+        display: block;
+      }
+    }
+
+    .c-box-heading-center-text {
+      @include mq-max-sp {
+        padding: 0 30px;
+      }
     }
 
     > .inner {

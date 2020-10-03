@@ -15,6 +15,10 @@
       mask-repeat: no-repeat;
       mask-position: center;
 
+      @include mq-max-sp {
+        mask-image: url(/assets/img/svg/mobile-banner-mask.svg);
+      }
+
       &::before {
         width: 200px;
         height: 200px;
