@@ -8,6 +8,21 @@
       margin-left: 0;
     }
   }
+
+  .c-bg-wave-mainvisual {
+    @include mq-max-sp {
+      display: none;
+    }
+  }
+
+  .-recipes-top-heading {
+    .c-button-cmn-01.--border-base {
+      @include mq-max-sp {
+        border-color: #DCDCDC;
+        border-width: 1px;
+      }
+    }
+  }
 }
 
 .c-box-swiper-mv {
@@ -22,8 +37,8 @@
 
   @include mq-max-sp {
     padding-top: 0;
-    min-height: 475px;
-    background: url(/assets/img/top/bg_mainvisual_sp.svg) no-repeat center bottom;
+    min-height: 450px;
+    // background: url(/assets/img/top/bg_mainvisual_sp.svg) no-repeat center bottom;
     background-size: cover;
     position: relative;
     z-index: 10;
@@ -259,11 +274,19 @@
     // padding: 0 !important;
 
     @include mq-max-sp {
-      background: url(/assets/img/svg/bg_yellow_egg_sp.svg) no-repeat center bottom;
-      background-size: cover;
-      padding: 50px 0 150px;
-      top: -200px;
-      z-index: 5;
+      background: rgb(255,196,22);
+      background: linear-gradient(0deg, rgba(255,196,22,1) 0%, rgba(252,226,121,1) 50%, rgba(255,196,22,1) 100%);
+      padding: 0;
+      z-index: 6;
+    }
+
+    .c-wave-yellow,
+    .c-wave-yellow-bottom {
+      display: none;
+
+      @include mq-max-sp {
+        display: block;
+      }
     }
 
     .box-image {
@@ -278,10 +301,17 @@
       }
 
       @include mq-max-sp {
-        width: 100%;
-        max-width: 100%;
+        width: 210px;
         order: 2;
         justify-content: flex-end;
+        position: absolute;
+        bottom: -130px;
+        right: 53%;
+        transform: translateX(100%);
+      }
+
+      @include mq-custom-max (425px) {
+        right: 56%;
       }
 
       .c-deco-yellow-egg {
@@ -313,8 +343,7 @@
 
         @include mq-max-sp {
           width: 260px;
-          right: 0;
-          bottom: -190px;
+          right: auto;
         }
 
         @include mq-min-max-tb {
@@ -335,19 +364,19 @@
       @include mq-min-max-tb {
         width: get-vw(486px);
         left: get-vw(-75px);
+        padding-right: get-vw(100px);
       }
 
       @include mq-max-sp {
         width: 100%;
         left: auto;
-        padding: 0 20px;
-        top: 160px;
+        padding: 100px 0 50px;
       }
 
       .c-text-cmn-01 {
         @include mq-max-sp {
           font-size: 1.4rem;
-          padding: 20px 20px;
+          padding: 20px 30px;
         }
       }
 
@@ -442,8 +471,9 @@
         @include mq-max-sp {
           width: 210px;
           height: 200px;
-          bottom: -90px;
-          left: -60px;
+          bottom: -180px;
+          left: 50%;
+          transform: translateX(-100%);
         }
 
         @include mq-min-max-tb {
@@ -499,16 +529,21 @@
     @include mq-max-sp {
       width: 100%;
       left: auto;
-      padding: 0 20px;
+      padding: 0;
       margin-top: 0;
-      background: url(/assets/img/svg/bg_green_egg_sp.svg) no-repeat center bottom;
       background-size: cover;
-      top: -230px;
-      z-index: 4;
+      background: rgb(36,93,56);
+      background: linear-gradient(0deg, rgba(36,93,56,1) 0%, rgba(67,171,63,1) 50%, rgba(36,93,56,1) 100%);
+      z-index: 5;
+      flex-direction: row-reverse;
     }
 
-    @include mq-custom-min-max(426px, 896px) {
-      top: -250px;
+    .c-wave-green-bottom {
+      display: none;
+
+      @include mq-max-sp {
+        display: block;
+      }
     }
 
     .box-image {
@@ -524,9 +559,11 @@
         width: 293px;
         height: 194px;
         order: 2;
-        left: -60px;
+        left: 53%;
+        transform: translateX(-100%);
         margin-top: 0;
-        bottom: -60px;
+        bottom: -150px;
+        position: absolute;
       }
 
       @include mq-min-max-tb {
@@ -572,14 +609,15 @@
 
       @include mq-max-sp {
         width: 100%;
+        max-width: 100%;
         left: auto;
-        padding: 150px 20px 0;
+        padding: 200px 0 100px;
       }
 
       .c-text-cmn-01 {
         @include mq-max-sp {
           font-size: 1.4rem;
-          padding: 20px 20px;
+          padding: 20px 30px;
         }
       }
 
@@ -669,8 +707,13 @@
         @include mq-max-sp {
           width: 285px;
           height: 269px;
-          right: -100px;
-          bottom: -140px;
+          right: auto;
+          left: 46%;
+          bottom: -50px;
+        }
+
+        @include mq-custom-max(425px) {
+          left: 40%;
         }
 
         @include mq-min-max-tb {
@@ -684,6 +727,11 @@
 
       .box-image-heading {
         text-align: center;
+
+        @include mq-min-max-tb {
+          width: get-vw(305px);
+          margin: auto;
+        }
 
         &::after {
           content: '';
@@ -733,16 +781,23 @@
     }
 
     @include mq-max-sp {
-      padding: 0 20px 150px;
-      background: url(/assets/img/svg/bg_orange_egg_sp.svg) no-repeat center bottom;
+      padding: 200px 0 100px;
+      background: rgb(241,96,37);
+      background: linear-gradient(0deg, rgba(241,96,37,1) 0%, rgba(241,155,37,1) 50%, rgba(241,96,37,1) 100%);
       background-size: cover;
       margin-top: 0;
-      top: -280px;
       z-index: 3;
+      flex-direction: row-reverse;
     }
 
-    @include mq-custom-min-max(426px, 896px) {
-      top: -380px;
+    .c-wave-orange-bottom {
+      display: none;
+
+      @include mq-max-sp {
+        display: block;
+        width: 100%;
+        z-index: -1;
+      }
     }
 
     .box-image {
@@ -757,8 +812,15 @@
         height: 120px;
         max-width: 100%;
         order: 2;
-        top: 170px;
-        right: -20px;
+        bottom: -120px;
+        right: auto;
+        left: 50%;
+        z-index: 4;
+        position: absolute;
+      }
+
+      @include mq-custom-max (425px){
+        left: 45%;
       }
 
       @include mq-min-max-tb {
@@ -845,13 +907,14 @@
       @include mq-min-max-tb {
         width: get-vw(486px);
         left: get-vw(-120px);
+        padding-right: get-vw(100px);
       }
 
       @include mq-max-sp {
         width: 100%;
         left: auto;
-        padding: 0 20px;
-        top: 150px;
+        padding: 0;
+        z-index: 5;
       }
 
       .c-egg {
@@ -918,9 +981,15 @@
           width: 285px;
           height: 269px;
           right: auto;
-          left: -100px;
+          left: 52%;
           background: url(/assets/img/top/img_product_03-01_sp.svg) no-repeat;
-          bottom: -70px;
+          bottom: -270px;
+          z-index: 5;
+          transform: translateX(-90%);
+        }
+
+        @include mq-custom-max (425px) {
+          left: 50%;
         }
 
         @include mq-min-max-tb {
@@ -933,6 +1002,11 @@
 
       .box-image-heading {
         text-align: center;
+
+        @include mq-min-max-tb {
+          width: get-vw(200px);
+          margin: auto;
+        }
 
         &::after {
           content: '';
@@ -960,10 +1034,23 @@
         font-size: 4rem;
         line-height: 1.3;
         margin: 10px 0;
+
+        @include mq-min-max-tb {
+          font-size: 3.2rem;
+        }
       }
 
       .c-text-cmn-01 {
         margin-top: 0;
+        padding: 0 30px;
+
+        @include mq-min-max-tb {
+          padding: 0;
+        }
+
+        @include mq-max-sp {
+          color: $baseColor;
+        }
       }
     }
   }
@@ -998,8 +1085,9 @@
     bottom: -50px;
 
     @include mq-max-sp {
-      left: 280px;
-      bottom: -205px;
+      left: auto;
+      bottom: -30px;
+      right: 50px;
     }
 
     @include mq-custom-min-max(426px, 896px) {
@@ -1068,12 +1156,8 @@
 
   @include mq-max-sp {
     background: none;
-    margin-top: -350px !important;
-    padding-top: 0 !important;
-  }
-
-  @include mq-custom-min-max(426px, 896px) {
-    margin-top: -450px !important;
+    padding-top: 100px !important;
+    margin-top: 0 !important;
   }
 
   @include mq-min-max-tb {
@@ -1084,10 +1168,33 @@
     background-size: get-vw(1440px) get-vw(1533px);
   }
 
-  // @include mq-custom-min(1441px) {
-  //   background: url(/assets/img/top/bg_story_about_yellow.svg) no-repeat center center;
-  //   background-size: cover;
-  // }
+  .c-wave-white-bottom {
+    display: none;
+
+    @include mq-max-sp {
+      display: block;
+      left: 0;
+    }
+  }
+
+  .c-button-cmn-01 {
+    @include mq-max-sp {
+      border-color: #DCDCDC;
+      border-width: 1px;
+    }
+  }
+
+   > .c-wave-yellow {
+    @include mq-max-sp {
+      display: none;
+    }
+  }
+
+   > .c-wave-yellow-bottom {
+    @include mq-max-sp {
+      display: none;
+    }
+  }
 
   .inner {
     position: relative;
@@ -1151,9 +1258,8 @@
 
     &:nth-child(1) {
       @include mq-max-sp {
-        background: url(/assets/img/top/bg_story_sp.svg) no-repeat center bottom;
         background-size: cover;
-        padding: 120px 40px 100px;
+        padding: 120px 0 50px;
         text-align: center;
         z-index: 2;
       }
@@ -1162,11 +1268,19 @@
         @include mq-max-sp {
           position: absolute;
           left: -130px;
-          bottom: -155px;
+          bottom: -210px;
+          z-index: 5;
         }
 
         @include mq-custom-min-max(426px, 896px) {
           width: 350px;
+          z-index: 3;
+        }
+      }
+
+      .c-text-cmn-01 {
+        @include mq-max-sp {
+          padding: 0 30px;
         }
       }
 
@@ -1179,8 +1293,15 @@
 
     &:nth-child(2) {
       @include mq-max-sp {
-        background: url(/assets/img/top/bg_about_sp.svg) no-repeat center bottom;
-        background-size: cover;
+        // background: url(/assets/img/top/bg_about_sp.svg) no-repeat center bottom;
+        background: linear-gradient(0deg, rgba(255,196,22,1) 0%, rgba(252,226,121,1) 50%, rgba(255,196,22,1) 100%);
+      }
+
+      .c-button-cmn-01 {
+        @include mq-max-sp {
+          border-color: #fff;
+          border-width: 1px;
+        }
       }
     }
 
@@ -1190,12 +1311,12 @@
       margin-top: -150px;
 
       @include mq-max-sp {
-        margin-top: -130px;
+        margin-top: 0;
+        padding: 0 0px;
       }
 
       @include mq-custom-min-max(426px, 896px) {
-        margin-top: -330px;
-        padding-top: 200px;
+
       }
 
       @include mq-min-max-tb {
@@ -1212,6 +1333,7 @@
           right: -130px;
           bottom: -165px;
           width: 100%;
+          z-index: 3;
         }
 
         @include mq-custom-min-max(426px, 896px) {
@@ -1227,7 +1349,7 @@
 
         @include mq-max-sp {
           width: 100%;
-          padding: 150px 30px 30px;
+          padding: 100px 30px 150px;
           text-align: center;
         }
 
@@ -1272,6 +1394,7 @@
       @include mq-max-sp {
         width: 100%;
         padding: 0;
+        z-index: 5;
       }
 
       @include mq-min-max-tb {
@@ -1296,7 +1419,7 @@
         }
 
         @include mq-max-sp {
-          right: -40px;
+          right: 0;
           top: 20px;
           width: 103px;
           height: 120px;
@@ -1359,6 +1482,6 @@
 
   .c-button-cmn-01.--border-base {
     border-color: #DCDCDC;
-    border-width: 2px;
+    border-width: 1px;
   }
 }

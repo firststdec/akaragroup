@@ -27,6 +27,12 @@ block append scripts
   script(src='/assets/js/libs/jquery.waypoints.js')
   script(src='/assets/js/topWaveYellow.js')
   script(src='/assets/js/bottomWaveYellow.js')
+  script(src='/assets/js/topWaveYellow02.js')
+  script(src='/assets/js/bottomWaveYellow02.js')
+  script(src='/assets/js/waveGreenBottom.js')
+  script(src='/assets/js/waveWhiteTop.js')
+  script(src='/assets/js/waveWhiteBottom.js')
+  script(src='/assets/js/waveOrangeBottom.js')
   script(src='/assets/js/waveMainVisual.js')
 
 block outside
@@ -87,6 +93,8 @@ block content
     .l-sec-cmn-01
       .inner
         .c-box-card-row-01.-reverse.-yellow-egg
+          .c-wave-yellow
+            canvas#canvas-yellow-02
           figure.box-image
             .c-deco-yellow-egg.animation-element.slide-top
             img.image.animation-element.slide-right(src="/assets/img/top/img_product_01.png", alt="Akara")
@@ -106,6 +114,8 @@ block content
                 span.arrow
                   i.fa.fa-arrow-right
             .c-product-akara-yellow.animation-element.slide-top
+          .c-wave-yellow-bottom
+            canvas#canvas-yellow-bottom-02
         .c-box-card-row-01.-green-egg
           figure.box-image
             .c-deco-green-hen.animation-element.slide-top
@@ -125,6 +135,8 @@ block content
                 span.arrow
                   i.fa.fa-arrow-right
             .c-product-akara-green.animation-element.slide-top
+          .c-wave-green-bottom
+            canvas#canvas-green-bottom
         .c-box-card-row-01.-reverse.-orange-egg
           figure.box-image
             .c-hen-deco-orange.animation-element.slide-top
@@ -145,7 +157,8 @@ block content
                 span.arrow
                   i.fa.fa-arrow-right
             .c-product-akara-orange.animation-element.slide-top
-
+          .c-wave-orange-bottom
+            canvas#canvas-orange-bottom
     .l-sec-cmn-01.-story-about-top
       .c-wave-yellow
         canvas#canvas-yellow
@@ -165,6 +178,8 @@ block content
                 span.text READ MORE
                 span.arrow
                   i.fa.fa-arrow-right
+          .c-wave-white-bottom
+            canvas#canvas-white-bottom
         .c-box-card-row-01.-reverse
           figure.box-image.animation-element.slide-top
             img.image.u-no-sp(src="/assets/img/top/img_about_akara.png", alt="About akara")
@@ -184,6 +199,8 @@ block content
       .c-wave-yellow-bottom
         canvas#canvas-yellow-bottom
     .l-sec-cmn-01.-recipes-top-heading
+      .c-wave-white
+        canvas#canvas-white-top
       .inner
         .c-box-heading-center-text
           .inner

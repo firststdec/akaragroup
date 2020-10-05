@@ -15,6 +15,10 @@
       mask-repeat: no-repeat;
       mask-position: center;
 
+      @include mq-max-sp {
+        mask-image: url(/assets/img/svg/mobile-banner-mask.svg);
+      }
+
       &::before {
         width: 200px;
         height: 200px;
@@ -52,8 +56,12 @@
   @include mq-max-sp {
     width: 340px;
     height: 314px;
-    right: -124px;
+    right: -70px;
     top: 252px;
+  }
+
+  @include mq-custom-max (425px) {
+    right: -124px;
   }
 
   .swiper-slide {

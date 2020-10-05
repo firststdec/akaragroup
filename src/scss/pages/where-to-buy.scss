@@ -45,6 +45,13 @@
       justify-content: center;
       margin: auto;
 
+      @include mq-max-sp {
+        display: block;
+        width: 1200px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+      }
+
       &-item {
         width: 250px;
         height: 237px;
@@ -57,6 +64,10 @@
         flex-direction: column;
         transition:  all .3s ease-in;
         cursor: pointer;
+
+        @include mq-max-sp {
+          float: left;
+        }
 
         &:hover {
           opacity: 0.7;
