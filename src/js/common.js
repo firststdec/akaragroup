@@ -466,14 +466,14 @@ var topSlider = function(){
     $imgSlider.find('.p-main-slider__image').each( function(idx, el){
       var imgPc = $(el).data('src-pc').split(',');
       var imgSp = $(el).data('src-sp');
-  
+
       var htmlPc = '<div class="p-main-slider__bg u-no-sp" style="background-image: url(' + imgPc[0] +');"></div>';
       var htmlSp = '<div class="p-main-slider__bg u-no-pc u-no-tb" style="background-image: url(' + imgSp + ')"></div>';
-  
+
       $(el).hide()
         .parent().append(htmlPc, htmlSp);
     });
-  
+
     $imgSlider.on('init', function(event, slick, x, y, z){
       $(event.currentTarget)
         .addClass('is-active')
@@ -516,8 +516,6 @@ var elementAnimated = function () {
     triggerOnce: true
   });
 }
-
-
 $(window).on('breakpointChange', function (){
   elementAnimated();
 });
@@ -531,12 +529,9 @@ var elementHeadingAnimated = function () {
     triggerOnce: true
   });
 }
-
-
 $(window).on('breakpointChange', function (){
   elementHeadingAnimated();
 });
-
 
 var selectAddClass = function(){
   $('.c-form select, .c-input-selectbox select').change(function(){
@@ -726,12 +721,12 @@ if($('.js-product-slide-show').length) {
     slidesPerView: 1,
     centeredSlides: false,
     loop: true,
-  
+
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
     },
-  
+
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
@@ -790,8 +785,6 @@ const customSelect = function() {
 
   if($customSelect.length){
     const textSelected = $customSelect.find('option:selected').text();
-    // const currentSelected = $customSelect.find('option:selected').val();
-    // $target = '.js-' + currentSelected + '__detail';
     setTextSelected(textSelected);
 
     $customSelect.on('change', function(){
