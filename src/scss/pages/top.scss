@@ -301,13 +301,17 @@
       }
 
       @include mq-max-sp {
-        width: auto;
+        width: 210px;
         order: 2;
         justify-content: flex-end;
         position: absolute;
         bottom: -130px;
         right: 53%;
         transform: translateX(100%);
+      }
+
+      @include mq-custom-max (425px) {
+        right: 56%;
       }
 
       .c-deco-yellow-egg {
