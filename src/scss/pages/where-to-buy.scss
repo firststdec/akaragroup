@@ -103,21 +103,63 @@
           }
         }
 
-        > .icon {
-          width: 36px;
-          height: 41px;
+        &.is-active {
+          .icon {
+            .c-icon-building {
+              background: url(/assets/img/svg/icon-modern-trade-active.svg) no-repeat center center;
+              background-size: cover;
+            }
 
+            .c-icon-online-store {
+              background: url(/assets/img/svg/icon-online-store-active.svg) no-repeat center center;
+              background-size: cover;
+            }
+
+            .c-icon-our-store {
+              background: url(/assets/img/svg/icon-store-active.svg) no-repeat center center;
+              background-size: cover;
+            }
+
+            .c-icon-point {
+              background: url(/assets/img/svg/icon-point-of-purchase-active.svg) no-repeat center center;
+              background-size: cover;
+            }
+          }
+        }
+
+        > .icon {
           .c-icon-building {
             width: 36px;
             height: 41px;
-            background: url(/assets/img/svg/building-regular.svg) no-repeat center center;
+            background: url(/assets/img/svg/icon-modern-trade.svg) no-repeat center center;
+            background-size: cover;
+          }
+
+          .c-icon-online-store {
+            width: 36px;
+            height: 41px;
+            background: url(/assets/img/svg/icon-online-store.svg) no-repeat center center;
+            background-size: cover;
+          }
+
+          .c-icon-our-store {
+            width: 43px;
+            height: 41px;
+            background: url(/assets/img/svg/icon-store.svg) no-repeat center center;
+            background-size: cover;
+          }
+
+          .c-icon-point {
+            width: 43px;
+            height: 41px;
+            background: url(/assets/img/svg/icon-point-of-purchase.svg) no-repeat center center;
             background-size: cover;
           }
         }
 
         > .text {
           font-size: 2rem;
-          line-height: 1.3;
+          line-height: 1.2;
           color: #777;
           margin-top: 10px;
           padding: 0 10px;

@@ -36,12 +36,13 @@
       }
 
       .c-input-text {
-        padding-left: 40px;
+        padding-left: 50px;
+        border-radius: 26px;
       }
 
       > i {
         position: absolute;
-        left: 10px;
+        left: 20px;
         top: 50%;
         transform: translateY(-50%);
         color: $yellow;
