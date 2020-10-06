@@ -1,15 +1,27 @@
 (function () {
 	"use strict";
 
+  var winWidth = $(window).outerWidth();
+  if (winWidth > 1080) {
+    MQ = 'PC';
+  }
+  else if (winWidth > 869) { //768
+    MQ = 'PC';
+  }
+  else {
+    MQ = 'SP';
+	}
+	console.log(MQ);
+
 	var cvs, ctx;
 	var nodes = 6;
 	var waves = [];
-	var waveHeight = 120;
-	var colours = ["#FFC416"];
+	var waveHeight = MQ == 'PC' ? 200 : 100
+	var colours = ["#FCFBF2"];
 
 	// Initiator function
 	function init() {
-		cvs = document.getElementById("canvas-yellow-bottom");
+		cvs = document.getElementById("canvas-mainvisual");
 		ctx = cvs.getContext("2d");
 
 		resizeCanvas(cvs);
@@ -25,7 +37,7 @@
 
 	function update() {
 		// var fill = window.getComputedStyle(document.querySelector(".sec-cmn-01"),null).getPropertyValue("background-color");
-		var fill = '#FFC416';
+		var fill = '#FCFBF2';
 		ctx.fillStyle = fill;
 		ctx.globalCompositeOperation = "copy";
 		ctx.fillRect(0, 0, cvs.width, cvs.height);
@@ -57,7 +69,7 @@
 	}
 
 	function bounce(nodeArr) {
-		nodeArr[1] = waveHeight / 2 * Math.sin(nodeArr[2] / 25) + cvs.height / 2;
+		nodeArr[1] = waveHeight / 2 * Math.sin(nodeArr[2] / 40) + cvs.height / 2;
 		nodeArr[2] = nodeArr[2] + nodeArr[3];
 
 	}
@@ -87,6 +99,7 @@
 		}
 		ctx.closePath();
 		ctx.fill();
+
 	}
 
 	function drawNodes(array) {

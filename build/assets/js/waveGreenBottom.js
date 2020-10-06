@@ -5,11 +5,11 @@
 	var nodes = 6;
 	var waves = [];
 	var waveHeight = 120;
-	var colours = ["#FFC416"];
+	var colours = ["#245D38"];
 
 	// Initiator function
 	function init() {
-		cvs = document.getElementById("canvas-yellow-bottom");
+		cvs = document.getElementById("canvas-green-bottom");
 		ctx = cvs.getContext("2d");
 
 		resizeCanvas(cvs);
@@ -25,7 +25,7 @@
 
 	function update() {
 		// var fill = window.getComputedStyle(document.querySelector(".sec-cmn-01"),null).getPropertyValue("background-color");
-		var fill = '#FFC416';
+		var fill = '#245D38';
 		ctx.fillStyle = fill;
 		ctx.globalCompositeOperation = "copy";
 		ctx.fillRect(0, 0, cvs.width, cvs.height);
@@ -87,6 +87,7 @@
 		}
 		ctx.closePath();
 		ctx.fill();
+
 	}
 
 	function drawNodes(array) {

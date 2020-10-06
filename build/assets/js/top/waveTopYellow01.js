@@ -9,7 +9,7 @@
 
 	// Initiator function
 	function init() {
-		cvs = document.getElementById("canvas-yellow-bottom");
+		cvs = document.getElementById("canvas-wave-top-yellow-01");
 		ctx = cvs.getContext("2d");
 
 		resizeCanvas(cvs);
@@ -87,6 +87,7 @@
 		}
 		ctx.closePath();
 		ctx.fill();
+
 	}
 
 	function drawNodes(array) {

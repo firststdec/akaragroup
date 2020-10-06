@@ -2,14 +2,14 @@
 	"use strict";
 
 	var cvs, ctx;
-	var nodes = 6;
+	var nodes = 4;
 	var waves = [];
-	var waveHeight = 120;
-	var colours = ["#FFC416"];
+	var waveHeight = 150;
+	var colours = ["#fff"];
 
 	// Initiator function
 	function init() {
-		cvs = document.getElementById("canvas-yellow-bottom");
+		cvs = document.getElementById("canvas-white-top");
 		ctx = cvs.getContext("2d");
 
 		resizeCanvas(cvs);
@@ -25,7 +25,7 @@
 
 	function update() {
 		// var fill = window.getComputedStyle(document.querySelector(".sec-cmn-01"),null).getPropertyValue("background-color");
-		var fill = '#FFC416';
+		var fill = '#fff';
 		ctx.fillStyle = fill;
 		ctx.globalCompositeOperation = "copy";
 		ctx.fillRect(0, 0, cvs.width, cvs.height);
@@ -57,7 +57,7 @@
 	}
 
 	function bounce(nodeArr) {
-		nodeArr[1] = waveHeight / 2 * Math.sin(nodeArr[2] / 25) + cvs.height / 2;
+		nodeArr[1] = waveHeight / 2 * Math.sin(nodeArr[2] / 40) + cvs.height / 2;
 		nodeArr[2] = nodeArr[2] + nodeArr[3];
 
 	}
@@ -87,6 +87,7 @@
 		}
 		ctx.closePath();
 		ctx.fill();
+
 	}
 
 	function drawNodes(array) {
