@@ -1,0 +1,85 @@
+@import '../_mixin';
+
+.c-box-search__detail {
+  display: none;
+}
+
+
+.modaal-container {
+  background: transparent;
+  box-shadow: none;
+}
+
+
+.c-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+
+  @include mq-max-sp {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .c-box-search {
+    &__inner {
+      width: 100%;
+    }
+
+    &__input {
+      width: 70%;
+      position: relative;
+
+      @include mq-max-sp {
+        width: 100%;
+      }
+
+      .c-input-text {
+        padding-left: 40px;
+      }
+
+      > i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $yellow;
+        font-size: 2rem;
+      }
+    }
+
+    &__apply {
+      margin-left: 20px;
+      width: auto;
+
+      @include mq-max-sp {
+        width: auto;
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .c-button-cmn-01 {
+        border: 1px solid $yellow;
+
+        @include mq-max-sp {
+          padding-right: 30px;
+        }
+
+        .arrow {
+          color: $yellow;
+        }
+
+        .text {
+          @include mq-max-sp {
+            font-size: 1.4rem;
+            opacity: 1;
+            color: $yellow;
+            padding: 0 10px 0 15px;
+          }
+        }
+      }
+    }
+  }
+}

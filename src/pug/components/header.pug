@@ -124,8 +124,21 @@ header.l-header(class=whiteTheme ? 'whiteTheme' : '')
                               | CONTACT US
 
           .l-search-bar
-            .c-link.no-separate.c-search
+            a.c-link.no-separate.c-search.modaal(href="#box-search", data-modaal-type="inline",data-modaal-animation="fade" ,data-modaal-overlay-opacity="0.9", data-custom-class='modal-search')
               span.fas.fa-search
+
+          .c-box-search__detail#box-search
+            .c-box-search__inner
+              form.c-search-form(action="", method="post")
+                .c-box-search__input
+                  i.fas.fa-search
+                  input.c-input-text(type="text", placeholder="Type your keyword")
+                .c-box-search__apply
+                  .c-box-cmn-button
+                    button.c-button-cmn-01(type="submit")
+                      span.text Search
+                      span.arrow
+                        i.fa.fa-arrow-right
 
           .l-header__nav-trigger
             a.l-header__nav-link.c-button-middle.c-button--orange.-btn-where-to-buy(href='/where-to-buy/index.html')
@@ -142,5 +155,5 @@ header.l-header(class=whiteTheme ? 'whiteTheme' : '')
               span.icon.-eng
                 img(src="/assets/img/common/flag-eng.svg", alt="")
 
-    .c-search-bar-sp.u-no-tb.u-no-pc
+    a.c-search-bar-sp.u-no-tb.u-no-pc.modaal(href="#box-search", data-modaal-type="inline",data-modaal-animation="fade" ,data-modaal-overlay-opacity="0.9", data-custom-class='modal-search')
       i.fas.fa-search

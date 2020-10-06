@@ -23,7 +23,6 @@ block variables
 block prepend css
   link(rel='stylesheet', href='/assets/css/libs/slick.css')
 block append scripts
-  script(src='/assets/js/libs/slick.min.js')
   script(src='/assets/js/libs/jquery.matchHeight.js')
   script(src='/assets/js/libs/jquery.waypoints.js')
 
@@ -43,29 +42,42 @@ block content
         .c-hero-where-to-buy__text
           .c-hero-where-to-buy__heading Where to buy
           .c-hero-where-to-buy__sub-text You can find Akara products by selecting your nearby distributors and supermarket from the list below.
-    .c-where-to-buy__list-tab.animation-element.slide-top
-      .c-where-to-buy__list-tab-item.is-active
-        .icon
-          .c-icon-building
-        .text Modern Trade
-      .c-where-to-buy__list-tab-item
-        .icon
-          .c-icon-building
-        .text Our Store
-      .c-where-to-buy__list-tab-item
-        .icon
-          .c-icon-building
-        .text Point of <br>Purchase
-      .c-where-to-buy__list-tab-item
-        .icon
-          .c-icon-building
-        .text Online
+    .c-where-to-buy__box-list-tab
+      .c-where-to-buy__list-tab.animation-element.slide-top
+        .c-where-to-buy__list-tab-item.is-active.c-trgger-01(data-tab='c-tab-01')
+          .icon
+            .c-icon-building
+          .text Modern Trade
+        .c-where-to-buy__list-tab-item.c-trgger-02(data-tab='c-tab-02')
+          .icon
+            .c-icon-building
+          .text Our Store
+        .c-where-to-buy__list-tab-item.c-trgger-03(data-tab='c-tab-03')
+          .icon
+            .c-icon-building
+          .text Point of <br>Purchase
+        .c-where-to-buy__list-tab-item.c-trgger-04(data-tab='c-tab-04')
+          .icon
+            .c-icon-building
+          .text Online
 
     .c-where-to-buy__list-tab-content.animation-element.slide-top
-      .c-where-to-buy__list-tab-content-box
+      .c-where-to-buy__list-tab-content-box.c-tab-01.is-active
         .c-triangle.-tab-01
         .c-where-to-buy__list-tab-content-box-list
-          .c-where-to-buy__list-shop
+          .c-where-to-buy__list-shop.js-swiper-shop
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_01.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_02.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_03.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_04.svg", alt="")
             .c-where-to-buy__list-shop-item
               a.c-where-to-buy__list-shop-link(href="#")
                 img(src="/assets/img/where-to-buy/img_where_to_buy_01.svg", alt="")
@@ -79,7 +91,68 @@ block content
               a.c-where-to-buy__list-shop-link(href="#")
                 img(src="/assets/img/where-to-buy/img_where_to_buy_04.svg", alt="")
 
+      .c-where-to-buy__list-tab-content-box.c-tab-02
+        .c-triangle.-tab-02
+        .c-where-to-buy__list-tab-content-box-list
+          .c-where-to-buy__list-shop.js-swiper-shop
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_02.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_03.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_04.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_01.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_02.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_03.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_04.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_01.svg", alt="")
 
+      .c-where-to-buy__list-tab-content-box.c-tab-03
+        .c-triangle.-tab-03
+        .c-where-to-buy__list-tab-content-box-list
+          .c-where-to-buy__list-shop.js-swiper-shop
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_03.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_04.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_01.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_02.svg", alt="")
+
+      .c-where-to-buy__list-tab-content-box.c-tab-04
+        .c-triangle.-tab-04
+        .c-where-to-buy__list-tab-content-box-list
+          .c-where-to-buy__list-shop.js-swiper-shop
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_04.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_01.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_02.svg", alt="")
+            .c-where-to-buy__list-shop-item
+              a.c-where-to-buy__list-shop-link(href="#")
+                img(src="/assets/img/where-to-buy/img_where_to_buy_03.svg", alt="")
 
     .l-sec-cmn-01.-box-subscribe
       .inner

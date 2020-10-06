@@ -234,6 +234,14 @@
 .c-box-jobs {
   display: none;
 
+  &__inner {
+    background: $white;
+    border-radius: 30px;
+    padding: 40px;
+    max-width: 650px;
+    margin: auto;
+  }
+
   &__heading {
     padding: 0 0 20px;
     border-bottom: 3px dotted #DCDCDC;

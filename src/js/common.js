@@ -30,6 +30,8 @@ $(function () {
   customSelectProductGreen();
   jsFaqAccordian();
   fakeSwiperMultiControl();
+  jsTabWhereToBuy();
+  jsShopList();
 });
 
 $(window).on('load', function () {
@@ -879,6 +881,51 @@ const fakeSwiperMultiControl = function (){
   }
 }
 
+const jsTabWhereToBuy = function() {
+  const $tabWhereToBuy = $('.c-where-to-buy__list-tab-item');
+  if($tabWhereToBuy.length) {
+    $tabWhereToBuy.each(function(){
+      $(this).on('click', function(){
+        $('.c-where-to-buy__list-tab-item').removeClass('is-active');
+        $(this).addClass('is-active');
+        $thisContent = $(this).data('tab');
+        $showTrigger = '.c-where-to-buy__list-tab-content-box.' + $thisContent;
+        // console.log($showTrigger);
+        $('.c-where-to-buy__list-tab-content-box').removeClass('is-active');
+        $($showTrigger).addClass('is-active');
+        if( MQ == 'SP') {
+          $('.js-swiper-shop').slick('setPosition');
+        }
+      });
+    });
+  }
+}
 
-
+const jsShopList = function() {
+  if($('.js-swiper-shop').length){
+    $('.js-swiper-shop').each(function(){
+      if( MQ == 'SP') {
+        if(!$(this).hasClass('slick-initialized')) {
+          $(this).slick({
+            rows: 2,
+            dots: false,
+            arrows: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></button>',
+          });
+        }
+        $(this).slick('setPosition');
+      } else {
+        if($(this).hasClass('slick-initialized')) {
+          $(this).slick('destroy');
+        }
+      }
+    });
+  }
+}
+$(window).on('resize', jsShopList);
 
