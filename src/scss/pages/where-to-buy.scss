@@ -3,14 +3,14 @@
 .p-where-to-buy {
   .c-hero-where-to-buy {
     &__inner {
-      min-height: 466px;
+      min-height: 566px;
       margin: auto;
       background: url(/assets/img/where-to-buy/img_mv_where_to_buy.png) no-repeat center bottom;
       background-size: cover;
       position: relative;
 
       @include mq-min-max-tb {
-        min-height: get-vw(466px);
+        min-height: get-vw(566px);
       }
     }
 
@@ -50,6 +50,12 @@
   }
 
   .c-where-to-buy {
+    position: relative;
+
+    .c-bg-wave-white-solid {
+      top: -70px;
+    }
+
     &__box-list-tab {
       @include mq-max-sp {
         overflow-x: scroll;
