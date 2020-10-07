@@ -1517,7 +1517,7 @@
             font-size: 1.5rem;
           }
 
-          @include mq-max-sp {
+          @include mq-custom-max (425px) {
             font-size: 1.1rem;
           }
         }
@@ -1571,7 +1571,7 @@
           font-size: 2.6rem;
         }
 
-        @include mq-max-sp {
+        @include mq-custom-max (425px) {
           font-size: 2rem;
         }
       }

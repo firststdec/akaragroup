@@ -1858,7 +1858,7 @@
   }
 }
 
-@media (max-width: 896px) {
+@media (max-width: 425px) {
   .product-swiper-container .article-content .c-box-card-01.-full:hover .c-text-cmn-01 {
     font-size: 1.1rem;
   }
@@ -1921,7 +1921,7 @@
   }
 }
 
-@media (max-width: 896px) {
+@media (max-width: 425px) {
   .product-swiper-container .article-content .box-content .c-heading-cmn-01 {
     font-size: 2rem;
   }
