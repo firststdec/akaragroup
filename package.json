@@ -1,5 +1,5 @@
 {
-  "name": "monosus_tpl",
+  "name": "akara",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "android >= 4"
   ],
   "keywords": [],
-  "author": "Monosus",
+  "author": "akara",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.5.5",
