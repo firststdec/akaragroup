@@ -1,0 +1,72 @@
+extends ../../layouts/master.pug
+
+block variables
+  -
+    const index = true
+    const meta = {
+      title: 'Search Result | Akara Group',
+      keyword: 'Akara Group',
+      description: '',
+      goTitle: 'Akara Group',
+      goDescription: '',
+      goImage: '/assets/img/ogp.png',
+      goUrl: '',
+      twitterTitle: 'Akara Group',
+      twitterDescription: '',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: ''
+    }
+
+    const topPage = false
+    const whiteTheme = false
+
+block prepend css
+  link(rel='stylesheet', href='/assets/css/libs/slick.css')
+block append scripts
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+  script(src='/assets/js/waveWhiteTop.js')
+
+block outside
+  //- // loader
+  //- .c-loader
+  //-   .c-loader__icon
+  //-     p.c-loader__text
+  //-       img(src="/assets/img/common/logo@2x.png", alt="")
+  //-     .loader.simple-circle
+  //- // /loader
+
+block content
+  .p-search
+    .c-search
+      .c-search__heading SEARCH RESULTS FOR
+      .c-search__subheading
+        span.c-keyword Fresh eggs
+        span.c-search-result-number (99 results)
+      .c-search__list
+        - for (var i = 0; i < 9; ++i)
+          .c-search__list-item.animation-element.slide-top
+            a.c-search__list-link(href="#")
+              .c-search-card
+                figure.c-search-card__frame
+                  img.c-search-card__image(src="/assets/img/search/img_search_dummy@2x.png", alt="")
+                .c-search-card__heading The quick, brown fox jumps over a lazy
+                .c-search-card__content
+                  p These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive.
+
+    .l-sec-cmn-01.-box-subscribe
+      .inner
+        .c-box-subscribe.animation-element.slide-top
+          .item.-signup-text
+            .box-sign-up
+          .item
+            .box-heading
+              .heading FOR RECIPES, COUPONS AND OTHER NEWS
+            .box-form
+              .c-input-row
+                input.c-input.-text(type="email", name="email", placeholder="Your E-Mail Address")
+                .c-box-cmn-button
+                  button.c-button-cmn-01(type="submit", value="")
+                    span.text SUBSCRIBE
+                    span.arrow
+                      i.fa.fa-arrow-right
