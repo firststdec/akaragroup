@@ -1,1 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="376.138" height="417.747" viewBox="0 0 376.138 417.747"><path d="M0 44.963S95.064 0 189.064 0 375.99 44.963 375.99 44.963l.148 372.784H.611z" fill="#ffc416"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="376.138" height="417.747" viewBox="0 0 376.138 417.747">
+  <path id="bg_box_subscribe_sp" d="M-2.064-42.429S93-87.392,187-87.392,373.926-42.429,373.926-42.429l.148,372.784H-1.453Z" transform="translate(2.064 87.392)" fill="#ffc416"/>
+</svg>

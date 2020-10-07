@@ -169,11 +169,6 @@ gulp.task('images', function () {
           progressive: true
         }),
         imagemin.gifsicle(),
-        imagemin.svgo({
-          plugins: [{
-            removeViewBox: false
-          }]
-        })
       ], {
         verbose: true
       })))
