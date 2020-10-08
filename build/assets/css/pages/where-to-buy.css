@@ -225,6 +225,10 @@
   background: #FCFBF2;
   opacity: 0;
   position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   -webkit-transition: all .4s ease-in;
   -o-transition: all .4s ease-in;
   transition: all .4s ease-in;

@@ -201,6 +201,8 @@
           background: #FCFBF2;
           opacity: 0;
           position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
           transition: all .4s ease-in;
           padding: 110px 50px 80px;
           width: 100%;
