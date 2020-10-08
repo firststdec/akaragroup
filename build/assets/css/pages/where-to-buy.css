@@ -207,8 +207,15 @@
 }
 
 .p-where-to-buy .c-where-to-buy__list-tab-content {
-  margin-top: 40px;
+  margin: 40px auto 0;
   position: relative;
+  max-width: 1074px;
+}
+
+@media (min-width: 897px) and (max-width: 1439px) {
+  .p-where-to-buy .c-where-to-buy__list-tab-content {
+    max-width: 74.58333vw;
+  }
 }
 
 @media (max-width: 896px) {
@@ -225,10 +232,6 @@
   background: #FCFBF2;
   opacity: 0;
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
   -webkit-transition: all .4s ease-in;
   -o-transition: all .4s ease-in;
   transition: all .4s ease-in;
