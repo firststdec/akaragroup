@@ -2,6 +2,7 @@
 /**
  * The template for displaying single posts and pages.
  *
+ *  * Template Name: Our Story Template
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
@@ -25,10 +26,16 @@ get_header();
         <div class="c-mv-sub-page section-spy" id="our-story">
           <div class="c-mv-sub-page__inner">
             <div class="c-mv-sub-page__box-content">
-              <div class="c-mv-sub-page__heading">Our Story</div>
-              <div class="c-mv-sub-page__sub-heading">เพราะทุกคำคือธรรมชาติ</div>
-              <div class="c-mv-sub-page__text">เป็นผลิตภัณฑ์ ที่มีการควบคุมกระบวนการผลิตตั้งแต่ต้นกระบวนการให้ปลอดภัย ปลอดสารเร่งและปลอดยาปฏิชีวนะ จนได้ผลผลิต “ไข่ไก่ออร์แกนิค ปลอดภัย” ได้การรับรองมาตรฐาน GMP/HACCP และ DLD Certificate 2016 ของกรมปศุสัตว์ รายแรกของประเทศไทย<a class="c-mv-sub-page__anchor-icon js-scroll c-scroll-down-button__static-page" href="#scroll_timeline">
-                  <div class="c-scroll-down-line"></div></a></div>
+            <?php if(get_field('main_visual_subpage_heading')!=''): ?>
+            <div class="c-mv-sub-page__heading"><?php echo get_field('main_visual_subpage_heading'); ?></div>
+            <?php endif; ?>
+            <?php if(get_field('main_visual_subpage_sub_heading')!=''): ?>
+            <div class="c-mv-sub-page__sub-heading"><?php echo get_field('main_visual_subpage_sub_heading'); ?></div>
+            <?php endif; ?>
+            <?php if(get_field('main_visual_subpage_content')!=''): ?>
+            <div class="c-mv-sub-page__text"><?php echo get_field('main_visual_subpage_content'); ?></div>
+            <?php endif; ?>
+                <a class="c-mv-sub-page__anchor-icon js-scroll c-scroll-down-button__static-page" href="#scroll_timeline"><div class="c-scroll-down-line"></div></a>
             </div>
             <div class="c-mv-sub-page__box-image">
               <figure class="c-mv-sub-page__image-frame"><img src="/assets/img/our-story/mv_our_story.png" alt=""></figure>
@@ -43,29 +50,50 @@ get_header();
                 <div class="c-box-time-line__image">
                   <div class="c-box-time-line__image-frame"><img src="/assets/img/our-story/img_our_story_01.png" alt=""></div>
                 </div>
+                <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
                 <div class="c-box-time-line__content">
                   <div class="c-box-time-line__content-heading">ปี พ.ศ. 2522</div>
                   <div class="c-box-time-line__content-text">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.</div>
                 </div>
+                <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
+                <div class="c-box-time-line__content">
+                  <div class="c-box-time-line__content-heading">ปี พ.ศ. 2522</div>
+                  <div class="c-box-time-line__content-text">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 เมื่อเครื่องพิมพ์โนเนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง Lorem Ipsum อยู่ยงคงกระพันมาไม่ใช่แค่เพียงห้าศตวรรษ</div>
+                </div>
+                <?php endif; ?>
               </div>
               <div class="c-box-time-line__item animation-element slide-top">
                 <div class="c-box-time-line__image">
                   <div class="c-deco-story"></div>
                   <div class="c-box-time-line__image-frame"><img src="/assets/img/our-story/img_our_story_02.png" alt=""></div>
                 </div>
+                <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
                 <div class="c-box-time-line__content">
                   <div class="c-box-time-line__content-heading">ปี พ.ศ. 2538</div>
                   <div class="c-box-time-line__content-text">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.</div>
                 </div>
+                <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
+                <div class="c-box-time-line__content">
+                  <div class="c-box-time-line__content-heading">ปี พ.ศ. 2538</div>
+                  <div class="c-box-time-line__content-text">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 เมื่อเครื่องพิมพ์โนเนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง Lorem Ipsum อยู่ยงคงกระพันมาไม่ใช่แค่เพียงห้าศตวรรษ</div>
+                </div>
+                <?php endif; ?>
               </div>
               <div class="c-box-time-line__item animation-element slide-top">
                 <div class="c-box-time-line__image">
                   <div class="c-box-time-line__image-frame"><img src="/assets/img/our-story/img_our_story_03.png" alt=""></div>
                 </div>
+                <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
                 <div class="c-box-time-line__content">
                   <div class="c-box-time-line__content-heading">ปี พ.ศ. 2547</div>
                   <div class="c-box-time-line__content-text">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.</div>
                 </div>
+                <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
+                <div class="c-box-time-line__content">
+                  <div class="c-box-time-line__content-heading">ปี พ.ศ. 2547</div>
+                  <div class="c-box-time-line__content-text">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 เมื่อเครื่องพิมพ์โนเนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง Lorem Ipsum อยู่ยงคงกระพันมาไม่ใช่แค่เพียงห้าศตวรรษ</div>
+                </div>
+                <?php endif; ?>
               </div>
             </div>
           </div>
@@ -222,36 +250,48 @@ get_header();
                 <div class="c-heading-egg__text">FAQ</div>
               </div>
             </div>
-            <div class="c-faq__list js-faq-accordian">
-              <div class="c-faq__item animation-element slide-top">
-                <div class="c-faq__box-heading">
-                  <div class="c-faq__heading">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy tempor invidunt ut labore et dolore?</div>
-                  <div class="c-faq__icon"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></div>
-                </div>
-                <div class="c-faq__box-text">
-                  <div class="c-faq__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</div>
-                </div>
-              </div>
-              <div class="c-faq__item animation-element slide-top">
-                <div class="c-faq__box-heading">
-                  <div class="c-faq__heading">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy tempor invidunt ut labore et dolore?</div>
-                  <div class="c-faq__icon"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></div>
-                </div>
-                <div class="c-faq__box-text">
-                  <div class="c-faq__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</div>
-                </div>
-              </div>
-              <div class="c-faq__item animation-element slide-top">
-                <div class="c-faq__box-heading">
-                  <div class="c-faq__heading">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy tempor invidunt ut labore et dolore?</div>
-                  <div class="c-faq__icon"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></div>
-                </div>
-                <div class="c-faq__box-text">
-                  <div class="c-faq__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</div>
-                </div>
-              </div>
+            <?php
+            if(ICL_LANGUAGE_CODE == 'en'):
+              $faq_id = 37;
+            elseif(ICL_LANGUAGE_CODE == 'th'):
+              $faq_id = 122;
+            endif;
+            ?>
+						<?php
+							// Check rows exists.
+              if( have_rows('faq_rpt', $faq_id) ):
+              $i = 0;
+						?>
+						<div class="c-faq__list js-faq-accordian">
+							<?php
+								// Loop through rows.
+                while( have_rows('faq_rpt', $faq_id) ) : the_row();
+                $i++;
+
+                if( $i > 4 )
+                {
+                  break;
+                }
+							?>
+							<div class="c-faq__item animation-element slide-top">
+								<div class="c-faq__box-heading">
+									<div class="c-faq__heading"><?php echo get_sub_field('faq_heading', $faq_id); ?></div>
+									<div class="c-faq__icon"><i class="fas fa-chevron-right"></i><i class="fas fa-chevron-down"></i></div>
+								</div>
+								<div class="c-faq__box-text">
+									<div class="c-faq__text"><?php echo get_sub_field('faq_content', $faq_id); ?></div>
+								</div>
+							</div>
+							<?php endwhile; ?>
+						</div>
+						<?php endif; ?>
+            <div class="c-box-cmn-button animation-element slide-top --center">
+              <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
+              <a class="c-button-cmn-01 --border-base" href="/faq/"><span class="text">SEE MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+              <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
+              <a class="c-button-cmn-01 --border-base" href="/th/faq/"><span class="text">อ่านเพิ่มเติม</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+              <?php endif; ?>
             </div>
-            <div class="c-box-cmn-button animation-element slide-top --center"><a class="c-button-cmn-01 --border-base"><span class="text">SEE MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
           </div>
         </div>
         <div class="l-sec-cmn-01 -box-subscribe">

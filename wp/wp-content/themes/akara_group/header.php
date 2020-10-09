@@ -17,15 +17,43 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="format-detection" content="telephone=no">
-	<title>Akara Group</title>
+  <meta name="format-detection" content="telephone=no">
+  <?php 
+    $title = 'Akara Group';
+    $kwd = '';
+    $desc = '';
+    if(is_page('faq')) {
+      $title = 'FAQ | Akara Group';
+      $kwd = '';
+      $desc = '';
+    } elseif (is_page('about-us')) {
+      $title = 'About Us | Akara Group';
+      $kwd = '';
+      $desc = '';
+    } elseif (is_page('careers')) {
+      $title = 'Careers | Akara Group';
+      $kwd = '';
+      $desc = '';
+    } elseif (is_page('our-story')) {
+      $title = 'Our Story | Akara Group';
+      $kwd = '';
+      $desc = '';
+    } elseif (is_page('contact-us')) {
+      $title = 'Contact Us | Akara Group';
+      $kwd = '';
+      $desc = '';
+    }
+
+    // echo 'lang=>' .ICL_LANGUAGE_CODE;
+  ?>
+	<title><?php echo $title; ?></title>
 	<meta name="keyword" content="Akara Group">
 	<meta name="description" content="">
-	<meta property="go:title" content="Akara Group">
+	<meta property="go:title" content="<?php echo $title; ?>">
 	<meta property="go:description" content="">
 	<meta property="og:image" content="/assets/img/ogp.png">
 	<meta property="og:url" content="">
-	<meta name="twitter:title" content="Akara Group">
+	<meta name="twitter:title" content="<?php echo $title; ?>">
 	<meta name="twitter:description" content="">
 	<meta name="twitter:image" content="/assets/img/ogp.png">
 	<meta name="twitter:url" content="">
@@ -65,7 +93,7 @@
     </div>
   </div>
 <?php else: ?>
-  <?php if(is_page('our-story')): ?>
+  <?php if(is_page_template('page-our-story.php')): ?>
   <div class="c-box-scroll-spy">
     <div class="c-box-scroll-spy__inner">
       <div class="c-box-scroll-spy__list">
@@ -79,20 +107,35 @@
     </div>
   </div>
   <?php endif; ?>
+  <?php if(!is_page_template('page-faq.php') && !is_page_template('page-where-to-buy.php')): ?>
   <div class="c-bg-wave-mainvisual-sub">
     <div class="c-bg-wave-mainvisual-solid">
       <canvas id="canvas-mainvisual"></canvas>
     </div>
   </div>
+  <?php endif; ?>
 <?php endif; ?>
+<?php
+  $white_theme = '';
 
+  if(is_page(array('faq', 'where-to-buy'))) {
+    $white_theme = 'whiteTheme';
+  }
+
+?>
   <div class="l-wrapper">
-    <header class="l-header">
+    <header class="l-header <?php echo $white_theme; ?>">
       <div class="l-header__in l-block">
-        <p class="l-header__logo"><a class="l-header__logo-link" href="/"><img class="l-header__logo-image" src="/assets/img/common/logo.svg" alt="Akara Group"><img class="l-header__logo-image white" src="/assets/img/common/logo_white.svg" alt="Akara Group"><img class="l-header__logo-image-sp" src="/assets/img/common/logo_sp.svg" alt="Akara Group"></a></p><a class="l-header__menu-trigger js-hambuger" href="#" data-delay="300"><span class="l-header__menu-trigger-mark"></span></a>
+      <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
+        <div class="l-header__logo"><a class="l-header__logo-link" href="/"><img class="l-header__logo-image" src="/assets/img/common/logo.svg" alt="Akara Group"><img class="l-header__logo-image white" src="/assets/img/common/logo_white.svg" alt="Akara Group"><img class="l-header__logo-image-sp" src="/assets/img/common/logo_sp.svg" alt="Akara Group"></a></div>
+      <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
+        <div class="l-header__logo"><a class="l-header__logo-link" href="/th/"><img class="l-header__logo-image" src="/assets/img/common/logo.svg" alt="Akara Group"><img class="l-header__logo-image white" src="/assets/img/common/logo_white.svg" alt="Akara Group"><img class="l-header__logo-image-sp" src="/assets/img/common/logo_sp.svg" alt="Akara Group"></a></div>
+      <?php endif; ?>
+        <a class="l-header__menu-trigger js-hambuger" href="#" data-delay="300"><span class="l-header__menu-trigger-mark"></span></a>
         <div class="l-header__utility l-header__utility--top">
           <div class="l-header__utility-wrap">
             <div class="l-header__utility-in">
+              <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
               <nav class="l-header__menu">
                 <div class="l-header__menu-cover"></div>
                 <ul class="l-header__menu-list">
@@ -132,7 +175,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="l-header__menu-item"><a class="l-header__menu-link" href="/our-story/index.html"><span class="l-header__menu-mark">OUR STORY</span></a></li>
+                  <li class="l-header__menu-item"><a class="l-header__menu-link" href="/our-story/"><span class="l-header__menu-mark">OUR STORY</span></a></li>
                   <li class="l-header__menu-item"><a class="l-header__menu-link" href="#"><span class="l-header__menu-mark">RECIPES</span></a></li>
                   <li class="l-header__menu-item nav-about js-gnavi"><a class="l-header__menu-link" data-group="menu" href="#"><span class="l-header__menu-mark">ABOUT US</span><span class="fas fa-chevron-down"></span><span class="fas fa-chevron-up"></span></a>
                     <div class="l-header__submenu -about-us">
@@ -140,12 +183,12 @@
                         <ul class="l-header__submenu-list">
                           <li class="l-header__submenu-item">
                             <ul class="l-header__submenu-list-02">
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/about-us/index.html"><i class="circle"></i>AKARA GROUP</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/faq/index.html"><i class="circle"></i>FAQ</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>MEDIA</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>NEWS, ACTIVITIES, &amp; EVENT</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/career/index.html"><i class="circle"></i>CAREERS</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/contact-us/index.html"><i class="circle"></i>CONTACT US</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/about-us/"><i class="circle"></i>AKARA GROUP</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/faq/"><i class="circle"></i>FAQ</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="#dummy"><i class="circle"></i>MEDIA</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="#dummy"><i class="circle"></i>NEWS, ACTIVITIES, &amp; EVENT</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/career/"><i class="circle"></i>CAREERS</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/contact-us/"><i class="circle"></i>CONTACT US</a></li>
                             </ul>
                           </li>
                         </ul>
@@ -154,6 +197,69 @@
                   </li>
                 </ul>
               </nav>
+              <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
+              <nav class="l-header__menu">
+                <div class="l-header__menu-cover"></div>
+                <ul class="l-header__menu-list">
+                  <li class="l-header__menu-item js-gnavi"><a class="l-header__menu-link" data-group="menu" href="#"><span class="l-header__menu-mark">สินค้า</span><span class="fas fa-chevron-down"></span><span class="fas fa-chevron-up"></span></a>
+                    <div class="l-header__submenu">
+                      <div class="l-header__submenu-in">
+                        <ul class="l-header__submenu-list">
+                          <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-egg.html">
+                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara Eggs</span></a>
+                            <ul class="l-header__submenu-list-02">
+                              <li class="l-header__submenu-list-02-item">
+                                <div class="c-mobile-float-text">READY TO COOK</div><a class="l-header__submenu-list-02-link"><i class="circle"></i>FRESH EGGS</a>
+                              </li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>EGG TOFU CUP</a></li>
+                              <li class="l-header__submenu-list-02-item">
+                                <div class="c-mobile-float-text">READY TO EAT</div><a class="l-header__submenu-list-02-link"><i class="circle"></i>EGG TOFU TUBE</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-eggology.html">
+                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_eggology.png" alt="akara EGGOLOGY"></figure><span class="l-header__submenu-text">akara EGGOLOGY</span></a>
+                            <ul class="l-header__submenu-list-02">
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>ORGANIC</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>FREE RANGE</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>CAGE FREE</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>OMEGA 3 &amp; VITAMIN E</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>VEGGIE</a></li>
+                            </ul>
+                          </li>
+                          <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-ise.html">
+                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_ise.png" alt="akara ISE"></figure><span class="l-header__submenu-text">akara ISE</span></a>
+                            <ul class="l-header__submenu-list-02">
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>MORI-TAMA</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="l-header__menu-item"><a class="l-header__menu-link" href="/th/our-story/"><span class="l-header__menu-mark">เรื่องราวของเรา</span></a></li>
+                  <li class="l-header__menu-item"><a class="l-header__menu-link" href="#"><span class="l-header__menu-mark">สูตรอาหาร</span></a></li>
+                  <li class="l-header__menu-item nav-about js-gnavi"><a class="l-header__menu-link" data-group="menu" href="#"><span class="l-header__menu-mark">เกี่ยวกับเรา</span><span class="fas fa-chevron-down"></span><span class="fas fa-chevron-up"></span></a>
+                    <div class="l-header__submenu -about-us">
+                      <div class="l-header__submenu-in">
+                        <ul class="l-header__submenu-list">
+                          <li class="l-header__submenu-item">
+                            <ul class="l-header__submenu-list-02">
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/th/about-us/"><i class="circle"></i>เกี่ยวกับอัครากรุ๊ป</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/th/faq/"><i class="circle"></i>คำถามที่พบบ่อย</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="#dummy"><i class="circle"></i>สื่อ</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="#dummy"><i class="circle"></i>ข่าวสาร, กิจกรรม, &amp; อีเวนท์</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/th/career/"><i class="circle"></i>ตำแหน่งงาน</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/th/contact-us/"><i class="circle"></i>ติดต่อเรา</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <?php endif; ?>
               <div class="l-search-bar"><a class="c-link no-separate c-search modaal" href="#box-search" data-modaal-type="inline" data-modaal-animation="fade" data-modaal-overlay-opacity="0.9" data-custom-class="modal-search"><span class="fas fa-search"></span></a></div>
               <div class="c-box-search__detail" id="box-search">
                 <div class="c-box-search__inner">
@@ -169,9 +275,20 @@
                   </form>
                 </div>
               </div>
-              <div class="l-header__nav-trigger"><a class="l-header__nav-link c-button-middle c-button--orange -btn-where-to-buy" href="/where-to-buy/index.html">
+              <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
+              <div class="l-header__nav-trigger"><a class="l-header__nav-link c-button-middle c-button--orange -btn-where-to-buy" href="/where-to-buy/">
                   <div class="c-button__text -button"><i class="fa fa-map-marker-alt"></i><i class="fa fa-map-marker-alt fa--bottom"></i>WHERE TO BUY</div></a></div>
-              <div class="l-language-bar"><a class="c-link" href="#"><span class="icon -th"><img src="/assets/img/common/flag-thai.svg" alt=""></span></a><a class="c-link is-active" href="#"><span class="icon -eng"><img src="/assets/img/common/flag-eng.svg" alt=""></span></a></div>
+              <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
+              <div class="l-header__nav-trigger"><a class="l-header__nav-link c-button-middle c-button--orange -btn-where-to-buy" href="/th/where-to-buy/">
+                  <div class="c-button__text -button"><i class="fa fa-map-marker-alt"></i><i class="fa fa-map-marker-alt fa--bottom"></i>สถานที่จำหน่ายสินค้า</div></a></div>
+              <?php endif; ?>
+              <div class="l-language-bar">
+                <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
+                <a class="c-link is-active" href="/th"><span class="icon -th"><img src="/assets/img/common/flag-thai.svg" alt=""></span></a>
+                <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
+                <a class="c-link is-active" href="/"><span class="icon -eng"><img src="/assets/img/common/flag-eng.svg" alt=""></span></a>
+                <?php endif; ?>
+              </div>
             </div>
           </div>
         </div><a class="c-search-bar-sp u-no-tb u-no-pc modaal" href="#box-search" data-modaal-type="inline" data-modaal-animation="fade" data-modaal-overlay-opacity="0.9" data-custom-class="modal-search"><i class="fas fa-search"></i></a>

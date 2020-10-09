@@ -11,6 +11,7 @@
     transition: all 0.3s ease;
     border: 1px solid #fff;
     transition: all .5s;
+    color: $baseColor;
 
     &:hover {
       padding-right: 30px;

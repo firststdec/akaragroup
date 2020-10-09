@@ -2,6 +2,7 @@
 /**
  * The main template file
  *
+ * Template Name: Homepage
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
@@ -39,37 +40,48 @@ get_header();
                   </div>
                   <div class="text-yellow u-no-tb u-no-pc">with akara</div>
                 </div>
-                <div class="text">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years</div>
+                <?php if(get_field('main_visual_content')!=''): ?>
+                <div class="text"><?php echo get_field('main_visual_content'); ?></div>
+                <?php endif; ?>
                 <div class="mv-swiper-nav-custom">
                   <!-- Add Arrows-->
                   <div class="mv-swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
                   <div class="mv-swiper-button-next"><i class="fas fa-chevron-right"></i></div>
                 </div>
               </div>
+              <?php if(have_rows('mainvisual_slider_rpt')): ?>
               <div class="box-swiper-mv-js">
                 <div class="swiper-wrapper">
+                <?php
+                  // Loop through rows.
+                  while( have_rows('mainvisual_slider_rpt') ) : the_row();
+                    $mainvisual_slider_rpt_image = get_sub_field('mainvisual_slider_rpt_image');
+                ?>
+                  <?php if($mainvisual_slider_rpt_image['url']!=''): ?>
                   <div class="swiper-slide">
                     <div class="mainvisual-content">
                       <div class="box-image-wrapper">
-                        <figure class="box-image"><img class="image" src="/assets/img/top/banner-cooking.jpg" alt="Akara Group" data-object-fit="cover"></figure>
+                        <figure class="box-image"><img class="image" src="<?php echo $mainvisual_slider_rpt_image['url']; ?>" alt="<?php echo $mainvisual_slider_rpt_image['alt']; ?>" data-object-fit="cover"></figure>
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="mainvisual-content">
-                      <div class="box-image-wrapper">
-                        <figure class="box-image"><img class="image" src="/assets/img/top/banner-fresh-egg.jpg" alt="Akara Group" data-object-fit="cover"></figure>
-                      </div>
-                    </div>
-                  </div>
+                  <?php endif; ?>
+                <?php endwhile; ?>
                 </div>
                 <!-- Add Pagination-->
                 <div class="mv-swiper-pagination"></div>
               </div>
+              <?php endif; ?>
             </div>
           </div>
         </div>
       </div>
+      <?php
+        if(ICL_LANGUAGE_CODE == 'en'):
+          $readmore_text = 'READMORE';
+        elseif(ICL_LANGUAGE_CODE == 'th'):
+          $readmore_text = 'อ่านเพิ่มเติม';
+        endif; ?>
       <div class="l-sec-cmn-01">
         <div class="inner">
           <div class="c-box-card-row-01 -reverse -yellow-egg">
@@ -87,8 +99,10 @@ get_header();
               <div class="c-heading-cmn-01 animation-element slide-left">
                 <figure class="box-image-heading"><img class="image" src="/assets/img/top/img_logo_01.svg" alt="Akara Egg"></figure>
               </div>
-              <div class="c-text-cmn-01 animation-element slide-left">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.</div>
-              <div class="c-box-cmn-button animation-element slide-left"><a class="c-button-cmn-01"><span class="text">READ MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+              <?php if(get_field('yellow_egg_content')!=''): ?>
+              <div class="c-text-cmn-01 animation-element slide-left"><?php echo get_field('yellow_egg_content'); ?></div>
+              <?php endif; ?>
+              <div class="c-box-cmn-button animation-element slide-left"><a class="c-button-cmn-01"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
               <div class="c-product-akara-yellow animation-element slide-top"></div>
             </div>
             <div class="c-wave-yellow-bottom">
@@ -107,8 +121,10 @@ get_header();
               <div class="c-heading-cmn-01 animation-element slide-right">
                 <figure class="box-image-heading"><img class="image" src="/assets/img/top/img_logo_02.svg" alt="Akara Eggology"></figure>
               </div>
-              <div class="c-text-cmn-01 -white animation-element slide-right">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.</div>
-              <div class="c-box-cmn-button animation-element slide-right"><a class="c-button-cmn-01 animation-element slide-top"><span class="text">READ MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+              <?php if(get_field('green_egg_content')!=''): ?>
+              <div class="c-text-cmn-01 -white animation-element slide-right"><?php echo get_field('green_egg_content'); ?></div>
+              <?php endif;?>
+              <div class="c-box-cmn-button animation-element slide-right"><a class="c-button-cmn-01 animation-element slide-top"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
               <div class="c-product-akara-green animation-element slide-top"></div>
             </div>
             <div class="c-wave-green-bottom">
@@ -127,8 +143,10 @@ get_header();
               <div class="c-mori-tama-egg animation-element slide-top"></div>
               <figure class="box-image-heading animation-element slide-left"><img class="image" src="/assets/img/top/img_logo_03.svg" alt="Akara ISE"></figure>
               <div class="heading-orange">Mori-Tama</div>
-              <div class="c-text-cmn-01 -white animation-element slide-left">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.</div>
-              <div class="c-box-cmn-button animation-element slide-left"><a class="c-button-cmn-01"><span class="text">READ MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+              <?php if(get_field('orange_egg_content')!=''): ?>
+              <div class="c-text-cmn-01 -white animation-element slide-left"><?php echo get_field('orange_egg_content'); ?></div>
+              <?php endif; ?>
+              <div class="c-box-cmn-button animation-element slide-left"><a class="c-button-cmn-01"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
               <div class="c-product-akara-orange animation-element slide-top"></div>
             </div>
             <div class="c-wave-orange-bottom">
@@ -147,8 +165,10 @@ get_header();
             <div class="box-content">
               <div class="c-orange-egg animation-element slide-top"></div>
               <div class="c-heading-cmn-01 animation-element slide-top"><span class="text-white">akara</span><span> Story</span></div>
-              <div class="c-text-cmn-01 animation-element slide-top">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.</div>
-              <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01"><span class="text">READ MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+              <?php if(get_field('akara_story_content')!=''): ?>
+              <div class="c-text-cmn-01 animation-element slide-top"><?php echo get_field('akara_story_content'); ?></div>
+              <?php endif; ?>
+              <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01" href="<?php echo site_url('/our-story'); ?>"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
             </div>
             <div class="c-wave-white-bottom">
               <canvas id="canvas-white-bottom"></canvas>
@@ -160,8 +180,10 @@ get_header();
               <div class="c-about-akara-egg animation-element slide-top"></div>
               <div class="c-line-dotted-about-akara animation-element slide-top"></div>
               <div class="c-heading-cmn-01 animation-element slide-top"><span>About</span><span class="text-white"> akara</span></div>
-              <div class="c-text-cmn-01 animation-element slide-top">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.</div>
-              <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01"><span class="text">READ MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+              <?php if(get_field('about_akara_content')!=''): ?>
+              <div class="c-text-cmn-01 animation-element slide-top"><?php echo get_field('about_akara_content'); ?></div>
+              <?php endif; ?>
+              <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01" href="<?php echo site_url('/about-us'); ?>"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
             </div>
           </div>
         </div>
@@ -180,10 +202,12 @@ get_header();
                 <div class="c-line-deco"></div>
                 <div class="title"><span>RECIPIE</span><span class="text-yellow">S</span></div>
               </div>
+              <?php if(get_field('recipes_text')!=''): ?>
               <div class="box-text animation-element slide-top">
-                <div class="text">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either!</div>
+                <div class="text"><?php echo get_field('recipes_text'); ?></div>
               </div>
-              <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01 --border-base"><span class="text">READ MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+              <?php endif; ?>
+              <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01 --border-base"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
             </div>
           </div>
         </div>

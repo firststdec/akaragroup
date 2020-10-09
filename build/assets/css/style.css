@@ -4618,6 +4618,7 @@ a {
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
+  color: #211E1F;
 }
 
 .c-button-cmn-01:hover {

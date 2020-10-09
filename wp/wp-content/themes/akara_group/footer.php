@@ -109,13 +109,31 @@
     <script src="/assets/js/waveOrangeBottom.js"></script>
     <script src="/assets/js/waveMainVisual.js"></script>
 	<?php endif; ?>
-	<?php if(is_page("our-story")): ?>
+	<?php if(is_page_template("page-our-story.php")): ?>
     <script src="/assets/js/topWaveYellow.js"></script>
     <script src="/assets/js/bottomWaveYellow.js"></script>
     <script src="/assets/js/topWaveYellow02.js"></script>
     <script src="/assets/js/bottomWaveYellow02.js"></script>
     <script src="/assets/js/waveMainVisualSub.js"></script>
 		<script src="/assets/js/our-story.js"></script>
+	<?php endif; ?>
+	<?php if(is_page_template('page-faq.php') || is_page_template('page-where-to-buy.php')): ?>
+	<script src="/assets/js/waveWhiteTop.js"></script>
+	<?php endif; ?>
+	<?php if(is_page_template('page-about-us.php')): ?>
+	<script src="/assets/js/topWaveYellow.js"></script>
+	<script src="/assets/js/bottomWaveYellow.js"></script>
+	<script src="/assets/js/topWaveYellow02.js"></script>
+	<script src="/assets/js/bottomWaveYellow02.js"></script>
+	<script src="/assets/js/waveMainVisualSub.js"></script>
+	<?php endif; ?>
+	<?php if(is_page_template('page-careers.php')): ?>
+	<script src="/assets/js/waveCreamTop.js"></script>
+	<script src="/assets/js/waveCreamBottom.js"></script>
+	<script src="/assets/js/waveMainVisualSub.js"></script>
+	<?php endif; ?>
+	<?php if(is_page_template('page-contact-us.php')): ?>
+	<script src="/assets/js/waveMainVisualSub.js"></script>
 	<?php endif; ?>
 	</body>
 </html>

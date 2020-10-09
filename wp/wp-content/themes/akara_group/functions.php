@@ -243,7 +243,7 @@ function twentytwenty_non_latin_languages() {
 	$custom_css = TwentyTwenty_Non_Latin_Languages::get_non_latin_css( 'front-end' );
 
 	if ( $custom_css ) {
-		wp_add_inline_style( 'twentytwenty-style', $custom_css );
+		// wp_add_inline_style( 'twentytwenty-style', $custom_css );
 	}
 }
 
