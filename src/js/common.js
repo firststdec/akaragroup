@@ -19,7 +19,6 @@ $(function () {
   accordianClose();
   elementAnimated();
   elementHeadingAnimated();
-  selectAddClass();
   heroFit();
   jsMainvisual();
   jsSwiperMulti();
@@ -823,6 +822,9 @@ const customSelectProductGreen = function() {
       const textSelected = $(this).find('option:selected').text();
       const valSelected = $(this).find('option:selected').val();
       setTextSelected(textSelected);
+      const url = window.location.protocol + '//' + window.location.hostname + valSelected;
+      // console.log(url);
+      window.location = url;
     });
 
     function setTextSelected(text) {

@@ -10342,10 +10342,23 @@ variables above and don't change anything in the actual loader code
   }
 }
 
-@media (min-width: 897px) {
+@media (min-width: 1440px) {
   .p-product.-green .c-product-list__box-product-badge-image-deco {
     position: absolute;
     left: -380px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 27.56944vw;
+    height: 27.5vw;
+  }
+}
+
+@media (min-width: 897px) and (max-width: 1439px) {
+  .p-product.-green .c-product-list__box-product-badge-image-deco {
+    position: absolute;
+    left: -26.38889vw;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -10461,6 +10474,7 @@ variables above and don't change anything in the actual loader code
     position: absolute;
     left: 0;
     z-index: 2;
+    width: 100%;
   }
 }
 
@@ -10937,18 +10951,10 @@ variables above and don't change anything in the actual loader code
 
 @media (max-width: 896px) {
   .p-product .c-product-heading .c-product-local-nav__item {
-    width: 120px;
+    width: auto;
     height: auto;
-    margin: 20px 0;
+    margin: 20px 5px;
     background: none;
-  }
-}
-
-@media (min-width: 897px) and (max-width: 1439px) {
-  .p-product .c-product-heading .c-product-local-nav__item {
-    width: 12.70833vw;
-    height: 12.15278vw;
-    margin-left: -3.47222vw;
   }
 }
 
@@ -10984,14 +10990,13 @@ variables above and don't change anything in the actual loader code
 
 @media (min-width: 897px) and (max-width: 1439px) {
   .p-product .c-product-heading .c-product-local-nav__link {
-    width: 7.5vw;
-    height: 7.63889vw;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 896px) {
   .p-product .c-product-heading .c-product-local-nav__link {
+    width: auto;
     height: auto;
   }
 }
@@ -11018,6 +11023,7 @@ variables above and don't change anything in the actual loader code
   margin-top: 5px;
   line-height: 1.2;
   text-align: center;
+  padding: 0 5px;
 }
 
 @media (max-width: 896px) {
@@ -11039,10 +11045,17 @@ variables above and don't change anything in the actual loader code
   }
 }
 
+@media (max-width: 896px) {
+  .p-product .c-product-heading .c-product-local-nav__link.is-active .c-product-local-nav__link-text {
+    background: #211E1F;
+    color: #FFC416;
+  }
+}
+
 .p-product .c-product-image {
   margin-top: 50px;
   max-width: 1440px;
-  padding: 0 20px;
+  padding: 0 20px 50px;
   margin: auto;
   position: relative;
   z-index: 5;
@@ -11069,13 +11082,13 @@ variables above and don't change anything in the actual loader code
   font-size: 4.8rem;
   line-height: 1.3;
   text-align: center;
-  margin-top: -20px;
+  margin-top: 50px;
 }
 
 @media (max-width: 896px) {
   .p-product .c-product-image__heading {
     font-size: 3rem;
-    margin-top: 0;
+    margin-top: 30px;
   }
 }
 
@@ -11720,6 +11733,12 @@ variables above and don't change anything in the actual loader code
 
 .p-product .c-product-list__box-product-badge-item {
   width: auto;
+}
+
+@media (min-width: 897px) and (max-width: 1439px) {
+  .p-product .c-product-list__box-product-badge-item {
+    width: 27%;
+  }
 }
 
 .p-product .c-product-list__box-product-badge-item:not(:first-of-type) {

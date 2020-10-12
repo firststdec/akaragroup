@@ -988,6 +988,17 @@ a {
                 }
               }
             }
+
+            .c-mobile-float-text {
+              display: none;
+
+              @include mq-max-sp {
+                display: block;
+                font-size: 1.5rem;
+                color: #777;
+                font-weight: 500;
+              }
+            }
           }
 
           &-link {
