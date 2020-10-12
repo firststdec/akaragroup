@@ -754,3 +754,14 @@ function twentytwenty_get_elements_array() {
 	*/
 	return apply_filters( 'twentytwenty_get_elements_array', $elements );
 }
+
+function upload_svg_files( $allowed ) {
+	if ( !current_user_can( 'manage_options' ) )
+			return $allowed;
+	$allowed['svg'] = 'image/svg+xml';
+	return $allowed;
+}
+add_filter( 'upload_mimes', 'upload_svg_files');
+
+// Custom CSS.
+require get_template_directory() . '/inc/custom-functions.php';

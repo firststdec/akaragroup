@@ -1012,6 +1012,7 @@ a {
             @include mq-max-sp {
               background-size: 8px;
               margin-left: 15px;
+              display: block;
             }
 
             &:hover {
@@ -1030,6 +1031,8 @@ a {
             padding-left: 20px;
             background: url(/assets/img/svg/circle-green.svg) no-repeat center left;
             background-size: 14px;
+            color: $baseColor;
+            text-transform: uppercase;
 
             @include mq-max-sp {
               background-size: 8px;
@@ -1059,6 +1062,8 @@ a {
             padding-left: 20px;
             background: url(/assets/img/svg/circle-red.svg) no-repeat center left;
             background-size: 14px;
+            color: $baseColor;
+            text-transform: uppercase;
 
             @include mq-max-sp {
               background-size: 8px;

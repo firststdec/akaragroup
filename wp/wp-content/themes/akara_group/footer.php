@@ -87,53 +87,92 @@
 		</div>
 	</footer>
 </div>
-		<?php wp_footer(); ?>
-		<script src="/assets/js/libs/jquery.min.js"></script>
-    <script src="/assets/js/libs/objectFitPolyfill.min.js"></script>
-    <script src="/assets/js/libs/mobile-detect.min.js"></script>
-    <script src="/assets/js/libs/swiper.js"></script>
-    <script src="/assets/js/waveFooter.js"></script>
-    <script src="/assets/js/libs/slick.min.js"></script>
-    <script src="/assets/js/libs/modaal.min.js"></script>
-    <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/libs/jquery.matchHeight.js"></script>
-    <script src="/assets/js/libs/jquery.waypoints.js"></script>
-	<?php if(is_front_page()): ?>
-    <script src="/assets/js/topWaveYellow.js"></script>
-    <script src="/assets/js/bottomWaveYellow.js"></script>
-    <script src="/assets/js/topWaveYellow02.js"></script>
-    <script src="/assets/js/bottomWaveYellow02.js"></script>
-    <script src="/assets/js/waveGreenBottom.js"></script>
-    <script src="/assets/js/waveWhiteTop.js"></script>
-    <script src="/assets/js/waveWhiteBottom.js"></script>
-    <script src="/assets/js/waveOrangeBottom.js"></script>
-    <script src="/assets/js/waveMainVisual.js"></script>
-	<?php endif; ?>
-	<?php if(is_page_template("page-our-story.php")): ?>
-    <script src="/assets/js/topWaveYellow.js"></script>
-    <script src="/assets/js/bottomWaveYellow.js"></script>
-    <script src="/assets/js/topWaveYellow02.js"></script>
-    <script src="/assets/js/bottomWaveYellow02.js"></script>
-    <script src="/assets/js/waveMainVisualSub.js"></script>
-		<script src="/assets/js/our-story.js"></script>
-	<?php endif; ?>
-	<?php if(is_page_template('page-faq.php') || is_page_template('page-where-to-buy.php')): ?>
-	<script src="/assets/js/waveWhiteTop.js"></script>
-	<?php endif; ?>
-	<?php if(is_page_template('page-about-us.php')): ?>
-	<script src="/assets/js/topWaveYellow.js"></script>
-	<script src="/assets/js/bottomWaveYellow.js"></script>
-	<script src="/assets/js/topWaveYellow02.js"></script>
-	<script src="/assets/js/bottomWaveYellow02.js"></script>
-	<script src="/assets/js/waveMainVisualSub.js"></script>
-	<?php endif; ?>
-	<?php if(is_page_template('page-careers.php')): ?>
-	<script src="/assets/js/waveCreamTop.js"></script>
-	<script src="/assets/js/waveCreamBottom.js"></script>
-	<script src="/assets/js/waveMainVisualSub.js"></script>
-	<?php endif; ?>
-	<?php if(is_page_template('page-contact-us.php')): ?>
-	<script src="/assets/js/waveMainVisualSub.js"></script>
-	<?php endif; ?>
+<?php wp_footer(); ?>
+<script src="/assets/js/libs/jquery.min.js"></script>
+<script src="/assets/js/libs/objectFitPolyfill.min.js"></script>
+<script src="/assets/js/libs/mobile-detect.min.js"></script>
+<script src="/assets/js/libs/swiper.js"></script>
+<script src="/assets/js/waveFooter.js"></script>
+<script src="/assets/js/libs/slick.min.js"></script>
+<script src="/assets/js/libs/modaal.min.js"></script>
+<script src="/assets/js/libs/jquery.matchHeight.js"></script>
+<script src="/assets/js/libs/jquery.waypoints.js"></script>
+<script src="/assets/js/common.js"></script>
+<?php if(is_front_page()): ?>
+<script src="/assets/js/topWaveYellow.js"></script>
+<script src="/assets/js/bottomWaveYellow.js"></script>
+<script src="/assets/js/topWaveYellow02.js"></script>
+<script src="/assets/js/bottomWaveYellow02.js"></script>
+<script src="/assets/js/waveGreenBottom.js"></script>
+<script src="/assets/js/waveWhiteTop.js"></script>
+<script src="/assets/js/waveWhiteBottom.js"></script>
+<script src="/assets/js/waveOrangeBottom.js"></script>
+<script src="/assets/js/waveMainVisual.js"></script>
+<?php endif; ?>
+<?php if(is_page_template("page-our-story.php")): ?>
+<script src="/assets/js/topWaveYellow.js"></script>
+<script src="/assets/js/bottomWaveYellow.js"></script>
+<script src="/assets/js/topWaveYellow02.js"></script>
+<script src="/assets/js/bottomWaveYellow02.js"></script>
+<script src="/assets/js/waveMainVisualSub.js"></script>
+<script src="/assets/js/our-story.js"></script>
+<?php endif; ?>
+<?php if(is_page_template('page-faq.php') || is_page_template('page-where-to-buy.php')): ?>
+<script src="/assets/js/waveWhiteTop.js"></script>
+<?php endif; ?>
+<?php if(is_page_template('page-about-us.php')): ?>
+<script src="/assets/js/topWaveYellow.js"></script>
+<script src="/assets/js/bottomWaveYellow.js"></script>
+<script src="/assets/js/topWaveYellow02.js"></script>
+<script src="/assets/js/bottomWaveYellow02.js"></script>
+<script src="/assets/js/waveMainVisualSub.js"></script>
+<?php endif; ?>
+<?php if(is_page_template('page-careers.php')): ?>
+<script src="/assets/js/waveCreamTop.js"></script>
+<script src="/assets/js/waveCreamBottom.js"></script>
+<script src="/assets/js/waveMainVisualSub.js"></script>
+<?php endif; ?>
+<?php if(is_page_template('page-contact-us.php')): ?>
+<script src="/assets/js/waveMainVisualSub.js"></script>
+<?php endif; ?>
+<?php
+	if(is_singular('product')):
+		$terms = get_the_terms( $post->ID, 'product_category' );
+		if ( $terms && ! is_wp_error( $terms ) ){
+			foreach ( $terms as $term ) {
+				$term_links[] = $term->name;
+			}
+		}
+?>
+<?php if(in_array('akara Eggs', $term_links)): ?>
+<script src="/assets/js/topWaveYellow.js"></script>
+<script src="/assets/js/bottomWaveYellow.js"></script>
+<script src="/assets/js/waveCreamTop.js"></script>
+<script src="/assets/js/waveCreamBottom.js"></script>
+<?php elseif(in_array('akara Eggology', $term_links)): ?>
+<script src="/assets/js/waveGreenTop.js"></script>
+<script src="/assets/js/waveGreenBottom.js"></script>
+<script src="/assets/js/waveCreamTop.js"></script>
+<script src="/assets/js/waveCreamBottom.js"></script>
+<?php elseif(in_array('akara ISE', $term_links)): ?>
+<script src="/assets/js/waveOrangeTop.js"></script>
+<script src="/assets/js/waveOrangeBottom.js"></script>
+<script src="/assets/js/waveCreamTop.js"></script>
+<script src="/assets/js/waveCreamBottom.js"></script>
+<?php endif; ?>
+<?php endif; //if(is_singular('product')): ?>
+<?php
+	if(is_tax('product_category')):
+		$term_obj = get_queried_object();
+		if($term_obj->parent == 3) :
+?>
+<script src="/assets/js/topWaveYellow.js"></script>
+<script src="/assets/js/bottomWaveYellow.js"></script>
+<script src="/assets/js/waveCreamTop.js"></script>
+<script src="/assets/js/waveCreamBottom.js"></script>
+<?php
+		endif; // if($term_obj->parent == 3)
+	endif; // if(is_tax('product_category')):
+?>
 	</body>
 </html>

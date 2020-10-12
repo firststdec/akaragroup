@@ -122,6 +122,25 @@
     $white_theme = 'whiteTheme';
   }
 
+
+
+  if(is_singular('product')) {
+    $terms = get_the_terms( $post->ID, 'product_category' );
+    if ( $terms && ! is_wp_error( $terms ) ){
+      foreach ( $terms as $term ) {
+        $term_links[] = $term->name;
+      }
+    }
+
+    if(in_array('akara Eggs', $term_links)) {
+      $white_theme = '';
+    } elseif(in_array('akara Eggology', $term_links)) {
+      $white_theme = 'whiteTheme';
+    } elseif(in_array('akara ISE', $term_links)) {
+      $white_theme = 'whiteTheme';
+    }
+  }
+
 ?>
   <div class="l-wrapper">
     <header class="l-header <?php echo $white_theme; ?>">
@@ -146,31 +165,108 @@
                           <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-egg.html">
                               <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara Eggs</span></a>
                             <ul class="l-header__submenu-list-02">
+                            <?php
+                              $args = array(
+                                'hide_empty' => 0,
+                                'child_of' => 3,
+                              );
+                              $cate = 'product_category';
+
+                              $terms = get_terms( $cate, $args );
+                              // print "<pre>"; print_r($terms);
+                              if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
+                            ?>
                               <li class="l-header__submenu-list-02-item">
-                                <div class="c-mobile-float-text">READY TO COOK</div><a class="l-header__submenu-list-02-link"><i class="circle"></i>FRESH EGGS</a>
+                                <div class="c-mobile-float-text">READY TO COOK</div>
+                              <?php
+                                foreach ( $terms as $term ) :
+                                  $term_type = get_field('product_category_type', $term->taxonomy . '_' . $term->term_id);
+                                  if($term_type == 'ready-to-cook'):
+                              ?>
+                                <a class="l-header__submenu-list-02-link" href="/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
+                                <?php endif; // if($term_type == $product_category_type):?>
+                              <?php endforeach; ?>
                               </li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>EGG TOFU CUP</a></li>
+                            <?php endif; ?>
+                            <?php
+                              if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
+                            ?>
                               <li class="l-header__submenu-list-02-item">
-                                <div class="c-mobile-float-text">READY TO EAT</div><a class="l-header__submenu-list-02-link"><i class="circle"></i>EGG TOFU TUBE</a>
+                                <div class="c-mobile-float-text">READY TO EAT</div>
+                                <?php
+                                foreach ( $terms as $term ) :
+                                  $term_type = get_field('product_category_type', $term->taxonomy . '_' . $term->term_id);
+                                  if($term_type == 'ready-to-eat'):
+                                ?>
+                                <a class="l-header__submenu-list-02-link" href="/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
+                                <?php endif; // if($term_type == $product_category_type):?>
+                              <?php endforeach; ?>
                               </li>
+                            <?php endif; ?>
                             </ul>
                           </li>
+                          <?php
+                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                            $args = array(
+                              'post_type' => 'product',
+                              'post_status' => 'publish',
+                              'posts_per_page' => -1,
+                              'orderby' => 'date',
+                              'paged' => $paged,
+                              'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'product_category',
+                                    'field'    => 'id',
+                                    'terms'    => 14,
+                                ),
+                              ),
+                            );
+
+                            $the_query = new WP_Query( $args );
+                            // print "<pre>"; print_r($the_query); die();
+                            if ( $the_query->have_posts() ) :
+                          ?>
                           <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-eggology.html">
                               <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_eggology.png" alt="akara EGGOLOGY"></figure><span class="l-header__submenu-text">akara EGGOLOGY</span></a>
                             <ul class="l-header__submenu-list-02">
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>ORGANIC</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>FREE RANGE</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>CAGE FREE</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>OMEGA 3 &amp; VITAMIN E</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>VEGGIE</a></li>
+                            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
+                            <?php endwhile; ?>
                             </ul>
                           </li>
+                          <?php endif; ?>
+                          <?php wp_reset_query(); ?>
+                          <?php
+                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                            $args = array(
+                              'post_type' => 'product',
+                              'post_status' => 'publish',
+                              'posts_per_page' => -1,
+                              'orderby' => 'date',
+                              'paged' => $paged,
+                              'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'product_category',
+                                    'field'    => 'id',
+                                    'terms'    => 15,
+                                ),
+                              ),
+                            );
+
+                            $the_query = new WP_Query( $args );
+                            // print "<pre>"; print_r($the_query); die();
+                            if ( $the_query->have_posts() ) :
+                          ?>
                           <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-ise.html">
                               <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_ise.png" alt="akara ISE"></figure><span class="l-header__submenu-text">akara ISE</span></a>
                             <ul class="l-header__submenu-list-02">
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>MORI-TAMA</a></li>
+                            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
+                            <?php endwhile; ?>
                             </ul>
                           </li>
+                          <?php endif; ?>
+                          <?php wp_reset_query(); ?>
                         </ul>
                       </div>
                     </div>
@@ -206,33 +302,110 @@
                       <div class="l-header__submenu-in">
                         <ul class="l-header__submenu-list">
                           <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-egg.html">
-                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara Eggs</span></a>
+                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara Eggs</span></a>
                             <ul class="l-header__submenu-list-02">
+                            <?php
+                              $args = array(
+                                'hide_empty' => 0,
+                                'child_of' => 3,
+                              );
+                              $cate = 'product_category';
+
+                              $terms = get_terms( $cate, $args );
+                              // print "<pre>"; print_r($terms);
+                              if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
+                            ?>
                               <li class="l-header__submenu-list-02-item">
-                                <div class="c-mobile-float-text">READY TO COOK</div><a class="l-header__submenu-list-02-link"><i class="circle"></i>FRESH EGGS</a>
+                                <div class="c-mobile-float-text">READY TO COOK</div>
+                              <?php
+                                foreach ( $terms as $term ) :
+                                  $term_type = get_field('product_category_type', $term->taxonomy . '_' . $term->term_id);
+                                  if($term_type == 'ready-to-cook'):
+                              ?>
+                                <a class="l-header__submenu-list-02-link" href="/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
+                                <?php endif; // if($term_type == $product_category_type):?>
+                              <?php endforeach; ?>
                               </li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>EGG TOFU CUP</a></li>
+                            <?php endif; ?>
+                            <?php
+                              if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
+                            ?>
                               <li class="l-header__submenu-list-02-item">
-                                <div class="c-mobile-float-text">READY TO EAT</div><a class="l-header__submenu-list-02-link"><i class="circle"></i>EGG TOFU TUBE</a>
+                                <div class="c-mobile-float-text">READY TO EAT</div>
+                                <?php
+                                foreach ( $terms as $term ) :
+                                  $term_type = get_field('product_category_type', $term->taxonomy . '_' . $term->term_id);
+                                  if($term_type == 'ready-to-eat'):
+                                ?>
+                                <a class="l-header__submenu-list-02-link" href="/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
+                                <?php endif; // if($term_type == $product_category_type):?>
+                              <?php endforeach; ?>
                               </li>
+                            <?php endif; ?>
                             </ul>
                           </li>
+                          <?php
+                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                            $args = array(
+                              'post_type' => 'product',
+                              'post_status' => 'publish',
+                              'posts_per_page' => -1,
+                              'orderby' => 'date',
+                              'paged' => $paged,
+                              'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'product_category',
+                                    'field'    => 'id',
+                                    'terms'    => 14,
+                                ),
+                              ),
+                            );
+
+                            $the_query = new WP_Query( $args );
+                            // print "<pre>"; print_r($the_query); die();
+                            if ( $the_query->have_posts() ) :
+                          ?>
                           <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-eggology.html">
-                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_eggology.png" alt="akara EGGOLOGY"></figure><span class="l-header__submenu-text">akara EGGOLOGY</span></a>
+                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_eggology.png" alt="akara EGGOLOGY"></figure><span class="l-header__submenu-text">akara EGGOLOGY</span></a>
                             <ul class="l-header__submenu-list-02">
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>ORGANIC</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>FREE RANGE</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>CAGE FREE</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>OMEGA 3 &amp; VITAMIN E</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>VEGGIE</a></li>
+                            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
+                            <?php endwhile; ?>
                             </ul>
                           </li>
+                          <?php endif; ?>
+                          <?php wp_reset_query(); ?>
+                          <?php
+                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                            $args = array(
+                              'post_type' => 'product',
+                              'post_status' => 'publish',
+                              'posts_per_page' => -1,
+                              'orderby' => 'date',
+                              'paged' => $paged,
+                              'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'product_category',
+                                    'field'    => 'id',
+                                    'terms'    => 15,
+                                ),
+                              ),
+                            );
+
+                            $the_query = new WP_Query( $args );
+                            // print "<pre>"; print_r($the_query); die();
+                            if ( $the_query->have_posts() ) :
+                          ?>
                           <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-ise.html">
-                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_ise.png" alt="akara ISE"></figure><span class="l-header__submenu-text">akara ISE</span></a>
+                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_ise.png" alt="akara ISE"></figure><span class="l-header__submenu-text">akara ISE</span></a>
                             <ul class="l-header__submenu-list-02">
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link"><i class="circle"></i>MORI-TAMA</a></li>
+                            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
+                            <?php endwhile; ?>
                             </ul>
                           </li>
+                          <?php endif; ?>
+                          <?php wp_reset_query(); ?>
                         </ul>
                       </div>
                     </div>
@@ -263,9 +436,9 @@
               <div class="l-search-bar"><a class="c-link no-separate c-search modaal" href="#box-search" data-modaal-type="inline" data-modaal-animation="fade" data-modaal-overlay-opacity="0.9" data-custom-class="modal-search"><span class="fas fa-search"></span></a></div>
               <div class="c-box-search__detail" id="box-search">
                 <div class="c-box-search__inner">
-                  <form class="c-search-form" action="" method="post">
+                  <form class="c-search-form" action="/" method="post">
                     <div class="c-box-search__input"><i class="fas fa-search"></i>
-                      <input class="c-input-text" type="text" placeholder="Type your keyword">
+                      <input class="c-input-text" name="s" type="text" placeholder="Type your keyword">
                     </div>
                     <div class="c-box-search__apply">
                       <div class="c-box-cmn-button">

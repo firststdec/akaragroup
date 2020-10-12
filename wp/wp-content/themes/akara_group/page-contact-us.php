@@ -132,26 +132,9 @@ get_header();
             </div>
             <div class="c-box-contact-form">
               <div class="c-box-contact-form__inner">
-                <div class="c-box-contact-form__form animation-element slide-top">
-                  <div class="c-box-contact-form__form-row">
-                    <div class="c-box-contact-form__form-heading">ติดต่อเรา</div>
-                  </div>
-                  <div class="c-box-contact-form__form-row">
-                    <input class="c-input-text" type="text" name="name" placeholder="Name">
-                  </div>
-                  <div class="c-box-contact-form__form-row">
-                    <input class="c-input-text" type="email" name="email" placeholder="Email">
-                  </div>
-                  <div class="c-box-contact-form__form-row">
-                    <input class="c-input-text" type="text" name="subject" placeholder="Subject">
-                  </div>
-                  <div class="c-box-contact-form__form-row">
-                    <textarea class="c-input-textarea" name="message" cols="30" rows="10" placeholder="write your message here..."></textarea>
-                  </div>
-                  <div class="c-box-contact-form__form-row">
-                    <input class="c-input-button" type="button" value="SEND">
-                  </div>
-                </div>
+                <?php if(get_field('contact_form')!=''): ?>
+                  <?php echo do_shortcode(get_field('contact_form')); ?>
+                <?php endif; ?>
               </div>
             </div>
             <div class="c-connect-with-us animation-element slide-top">

@@ -7,7 +7,7 @@ define("TERMID", 83); //大切にしたいことばたち
 define("TERMNAME", "大切にしたいことばたち");
 // シゴトヒト文庫|65 その後どうですか|67 大切にしたいことばたち|75 移り住む人たち|111 
 /****************************** AJAX LOAD MORE FUNCTIONS  ********************************/
-function shikoto_my_load_more_scripts(){
+function akara_my_load_more_scripts(){
   //global $wp_query; 
   $args_banner = array(
     'post_type' => 'banner',
@@ -60,7 +60,7 @@ function shikoto_my_load_more_scripts(){
 	// we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP
 	// you can define variables directly in your HTML but I decided that the most proper way is wp_localize_script()
 	wp_localize_script( 
-    'my_loadmore', 'shikoto_loadmore_params', array(
+    'my_loadmore', 'akara_loadmore_params', array(
       'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
       'posts' => json_encode( $the_query->query_vars ), // everything about your loop is here
       'posts_banner' => json_encode( $the_query_banner->query_vars ), // everything about your loop is here
@@ -71,9 +71,9 @@ function shikoto_my_load_more_scripts(){
   );
   wp_enqueue_script( 'my_loadmore', 'my_loadmore_dynamic' );
 }
-add_action( 'wp_enqueue_scripts', 'shikoto_my_load_more_scripts' );
+add_action( 'wp_enqueue_scripts', 'akara_my_load_more_scripts' );
 
-function shikoto_my_load_more_scripts_dynamic(){
+function akara_my_load_more_scripts_dynamic(){
   //global $wp_query;
   //if($wp_query->query_vars)
   $obj = get_queried_object();
@@ -232,7 +232,7 @@ function shikoto_my_load_more_scripts_dynamic(){
 	wp_register_script( 'my_loadmore_dynamic', '' ,array());
  
 	wp_localize_script( 
-    'my_loadmore_dynamic', 'shikoto_loadmore_params_dynamic', array(
+    'my_loadmore_dynamic', 'akara_loadmore_params_dynamic', array(
       'ajaxurl_dynamic' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
       'posts' => json_encode( $the_query->query_vars ), // everything about your loop is here
       'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
@@ -242,9 +242,9 @@ function shikoto_my_load_more_scripts_dynamic(){
   );
   wp_enqueue_script( 'my_loadmore_dynamic', 'my_loadmore_dynamic' );
 }
-add_action( 'wp_enqueue_scripts', 'shikoto_my_load_more_scripts_dynamic' );
+add_action( 'wp_enqueue_scripts', 'akara_my_load_more_scripts_dynamic' );
 
-function shikoto_loadmore_ajax_handler(){
+function akara_loadmore_ajax_handler(){
   // prepare our arguments for the query
   // banner
   session_start();
@@ -448,10 +448,10 @@ function shikoto_loadmore_ajax_handler(){
 	endif;
 	die; // here we exit the script and even no wp_reset_query() required!
 }
-add_action('wp_ajax_loadmore', 'shikoto_loadmore_ajax_handler'); // wp_ajax_{action}
-add_action('wp_ajax_nopriv_loadmore', 'shikoto_loadmore_ajax_handler'); // wp_ajax_nopriv_{action}
+add_action('wp_ajax_loadmore', 'akara_loadmore_ajax_handler'); // wp_ajax_{action}
+add_action('wp_ajax_nopriv_loadmore', 'akara_loadmore_ajax_handler'); // wp_ajax_nopriv_{action}
 
-function shikoto_loadmore_ajax_handler_dynamic(){
+function akara_loadmore_ajax_handler_dynamic(){
   // prepare our arguments for the query
   //normal post
   $obj = get_queried_object();
@@ -548,16 +548,16 @@ function shikoto_loadmore_ajax_handler_dynamic(){
 	endif; //if( $the_query_ajax->have_posts() && $args['term_id'] != TERMID) :
 	die; // here we exit the script and even no wp_reset_query() required!
 }
-add_action('wp_ajax_loadmore_dynamic', 'shikoto_loadmore_ajax_handler_dynamic'); // wp_ajax_{action}
-add_action('wp_ajax_nopriv_loadmore_dynamic', 'shikoto_loadmore_ajax_handler_dynamic'); // wp_ajax_nopriv_{action}
+add_action('wp_ajax_loadmore_dynamic', 'akara_loadmore_ajax_handler_dynamic'); // wp_ajax_{action}
+add_action('wp_ajax_nopriv_loadmore_dynamic', 'akara_loadmore_ajax_handler_dynamic'); // wp_ajax_nopriv_{action}
 
 /****************************** CUSTOM FUNCTIONS  ********************************/
 /**
  * Define Post Per Page for Custom Post Type
  */
 
-add_action( 'pre_get_posts','shikoto_pre_get_posts' );
-function shikoto_pre_get_posts( $q )
+add_action( 'pre_get_posts','akara_pre_get_posts' );
+function akara_pre_get_posts( $q )
 {
   //print "<pre>"; print_r($q);
   //print_r($q->query_vars['post_type']);
@@ -570,39 +570,39 @@ function shikoto_pre_get_posts( $q )
  * Replace Taxonomy slug with Post Type slug in url
  * Version: 1.1
  */
-// function taxonomy_slug_rewrite($wp_rewrite) {
-//   $rules = array();
-//   // get all custom taxonomies
-//   $taxonomies = get_taxonomies(array('_builtin' => false), 'objects');
-//   // get all custom post types
-//   $post_types = get_post_types(array('public' => true, '_builtin' => false), 'objects');
+function taxonomy_slug_rewrite($wp_rewrite) {
+  $rules = array();
+  // get all custom taxonomies
+  $taxonomies = get_taxonomies(array('_builtin' => false), 'objects');
+  // get all custom post types
+  $post_types = get_post_types(array('public' => true, '_builtin' => false), 'objects');
 
-//   foreach ($post_types as $post_type) {
-//       foreach ($taxonomies as $taxonomy) {
+  foreach ($post_types as $post_type) {
+      foreach ($taxonomies as $taxonomy) {
 
-//           // go through all post types which this taxonomy is assigned to
-//           foreach ($taxonomy->object_type as $object_type) {
+          // go through all post types which this taxonomy is assigned to
+          foreach ($taxonomy->object_type as $object_type) {
 
-//               // check if taxonomy is registered for this custom type
-//               if ($object_type == $post_type->rewrite['slug']) {
+              // check if taxonomy is registered for this custom type
+              if ($object_type == $post_type->rewrite['slug']) {
 
-//                   // get category objects
-//                   $terms = get_categories(array('type' => $object_type, 'taxonomy' => $taxonomy->name, 'hide_empty' => 0));
+                  // get category objects
+                  $terms = get_categories(array('type' => $object_type, 'taxonomy' => $taxonomy->name, 'hide_empty' => 0));
 
-//                   // make rules
-//                   foreach ($terms as $term) {
-//                       $rules[$object_type . '/' . $term->slug . '/?$'] = 'index.php?' . $term->taxonomy . '=' . $term->slug;
-//                       $rules[$object_type . '/' . $term->slug . '/page/?([0-9]{1,})/?'] = 'index.php?' . $term->taxonomy . '=' . $term->slug . '&paged=$matches[1]'; //FIX PAGINATION ISSUE
-//                   }
-//               }
-//           }
-//       }
-//   }
-//   // merge with global rules
-//   $wp_rewrite->rules = $rules + $wp_rewrite->rules;
-//   //print "<pre>"; print_r($wp_rewrite->rules);
-// }
-// add_filter('generate_rewrite_rules', 'taxonomy_slug_rewrite');
+                  // make rules
+                  foreach ($terms as $term) {
+                      $rules[$object_type . '/' . $term->slug . '/?$'] = 'index.php?' . $term->taxonomy . '=' . $term->slug;
+                      $rules[$object_type . '/' . $term->slug . '/page/?([0-9]{1,})/?'] = 'index.php?' . $term->taxonomy . '=' . $term->slug . '&paged=$matches[1]'; //FIX PAGINATION ISSUE
+                  }
+              }
+          }
+      }
+  }
+  // merge with global rules
+  $wp_rewrite->rules = $rules + $wp_rewrite->rules;
+  // print "<pre>"; print_r($wp_rewrite->rules); die();
+}
+add_filter('generate_rewrite_rules', 'taxonomy_slug_rewrite');
 
 /**
  * Custom Excerpt
@@ -1214,8 +1214,8 @@ function my_custom_fonts() {
   endif;
 }
 
-add_action( 'init', 'shikoto_register_taxonomy_for_object_type' );
-function shikoto_register_taxonomy_for_object_type() {
+add_action( 'init', 'akara_register_taxonomy_for_object_type' );
+function akara_register_taxonomy_for_object_type() {
   register_taxonomy_for_object_type( 'post_tag', 'event' );
   register_taxonomy_for_object_type( 'post_tag', 'shopping' );
   register_taxonomy_for_object_type( 'post_tag', 'column' );
@@ -1224,13 +1224,13 @@ function shikoto_register_taxonomy_for_object_type() {
 /**
  * change tinymce's paste-as-text functionality
  */
-function shikoto_enable_paste_text($mceInit, $editor_id){
+function akara_enable_paste_text($mceInit, $editor_id){
 	//turn on paste_as_text by default
 	//NB this has no effect on the browser's right-click context menu's paste!
   //$mceInit['paste_as_text'] = true;
 	return $mceInit;
 }
-add_filter('tiny_mce_before_init', 'shikoto_enable_paste_text', 1, 2);
+add_filter('tiny_mce_before_init', 'akara_enable_paste_text', 1, 2);
 
 add_filter('get_the_terms', 'order_terms_by_slug', 10, 3);
 function order_terms_by_slug($terms, $id, $taxonomy) {
@@ -1264,8 +1264,8 @@ function dateDiff($start, $end) {
  * 
  * @return array
  */
-add_filter( 'terms_clauses', 'shikoto_post_type_terms_clauses', 10, 3 );
-function shikoto_post_type_terms_clauses( $clauses, $taxonomy, $args ) {
+add_filter( 'terms_clauses', 'akara_post_type_terms_clauses', 10, 3 );
+function akara_post_type_terms_clauses( $clauses, $taxonomy, $args ) {
   // Make sure we have a post_type argument to run with.
   if( !isset( $args['post_type'] ) || empty( $args['post_type'] ) )
   return $clauses;
@@ -1330,22 +1330,22 @@ function remove_yoast_meta_desc_specific_page ( $myfilter ) {
 add_filter('jpeg_quality', function($arg){ return 100; });
 
 // REMOVE PARENT CATEGORY
-add_action( 'init', 'build_taxonomies', 0 );  
-function build_taxonomies() {
+// add_action( 'init', 'build_taxonomies', 0 );  
+// function build_taxonomies() {
 
-  register_taxonomy( 'category', 'post', array(
-        'hierarchical' => true,
-        'update_count_callback' => '_update_post_term_count',
-        'query_var' => 'category_name',
-        'rewrite' => did_action( 'init' ) ? array(
-                    'hierarchical' => false,
-                    'slug' => get_option('category_base') ? get_option('category_base') : 'category',
-                    'with_front' => false) : false,
-        'public' => true,
-        'show_ui' => true,
-        '_builtin' => true,
-    ) );
-}
+//   register_taxonomy( 'category', 'post', array(
+//         'hierarchical' => true,
+//         'update_count_callback' => '_update_post_term_count',
+//         'query_var' => 'category_name',
+//         'rewrite' => did_action( 'init' ) ? array(
+//                     'hierarchical' => false,
+//                     'slug' => get_option('category_base') ? get_option('category_base') : 'category',
+//                     'with_front' => false) : false,
+//         'public' => true,
+//         'show_ui' => true,
+//         '_builtin' => true,
+//     ) );
+// }
 /*
 //Remove Taxonomy Slug
 function remove_tax_slug_link( $link, $term, $taxonomy ) {
@@ -1410,16 +1410,16 @@ if(sizeof($cats))
 }
 add_action('init', 'custom_tax_rewrite_rule_store', 10, 0);
 */
-if( function_exists('acf_add_options_page') ) {
+// if( function_exists('acf_add_options_page') ) {
 	
-	acf_add_options_page(array(
-		'page_title' 	=> 'トップ＞ピックアップ',
-		'menu_title'	=> 'トップ＞ピックアップ',
-		'menu_slug' 	=> 'theme-general-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
-}
+// 	acf_add_options_page(array(
+// 		'page_title' 	=> 'トップ＞ピックアップ',
+// 		'menu_title'	=> 'トップ＞ピックアップ',
+// 		'menu_slug' 	=> 'theme-general-settings',
+// 		'capability'	=> 'edit_posts',
+// 		'redirect'		=> false
+// 	));
+// }
 
 remove_action( 'wp_head', '_wp_render_title_tag', 1 );
 
@@ -1440,9 +1440,9 @@ function custom_email_confirmation_validation_filter( $result, $tag ) {
 function my_init() {
 	if (!is_admin()) {
 		// comment out the next two lines to load the local copy of jQuery
-		wp_deregister_script('jquery'); 
-		wp_register_script('jquery', '', false, ''); 
-    wp_enqueue_script('jquery');
+		// wp_deregister_script('jquery'); 
+		// wp_register_script('jquery', '', false, ''); 
+    // wp_enqueue_script('jquery');
   }
 }
 add_action('init', 'my_init');
@@ -1477,7 +1477,7 @@ function shigoto_change_post_object() {
 add_action( 'admin_menu', 'shigoto_change_post_label' );
 add_action( 'init', 'shigoto_change_post_object' );
 
-add_action( 'edit_form_after_title', 'add_content_before_editor' );
+// add_action( 'edit_form_after_title', 'add_content_before_editor' );
 function add_content_before_editor() {
 	echo '<div class="notice notice-info">';
   echo '<p>タイトルを入力してください。最大15文字✕3行。改行位置には&#x3C;br&#x3E;タグをいれてください。</p>';
@@ -1499,7 +1499,7 @@ function my_acf_modify_wysiwyg_height() {
     <style type="text/css">
         .acf-editor-wrap iframe{
             height: inherit !important;
-            min-height: 90px !important;
+            min-height: 200px !important;
         }
     </style>
     <?php
@@ -1521,7 +1521,7 @@ add_filter( 'pre_get_posts', 'show_all_posttypes' );
 function show_all_posttypes_link() {
     add_submenu_page('edit.php?post_type=page', '', 'All Post Types', 'edit_posts', '/edit.php?post_type=page&showall=true');
 }
-add_action( 'admin_menu', 'show_all_posttypes_link' );
+// add_action( 'admin_menu', 'show_all_posttypes_link' );
 
 function my_custom_pages_columns( $columns ) {
     /** Add a Thumbnail Column **/
@@ -1538,9 +1538,9 @@ function my_custom_pages_columns( $columns ) {
     );
     return $columns;
 }
-if( isset( $_GET, $_GET['showall'] ) && true == $_GET['showall'] ) {
-  add_filter( 'manage_pages_columns', 'my_custom_pages_columns' );
-}
+// if( isset( $_GET, $_GET['showall'] ) && true == $_GET['showall'] ) {
+//   add_filter( 'manage_pages_columns', 'my_custom_pages_columns' );
+// }
 
 function set_post_order_in_admin( $wp_query ) {
   global $pagenow;
@@ -1552,28 +1552,28 @@ function set_post_order_in_admin( $wp_query ) {
   }
 }
   
-  add_filter('pre_get_posts', 'set_post_order_in_admin', 5 );
+add_filter('pre_get_posts', 'set_post_order_in_admin', 5 );
 
-  function catch_that_image() {
-    global $post, $posts;
-    $first_img = '';
-    ob_start();
-    ob_end_clean();
-    $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-    $first_img = $matches [1] [0];
-  
-    if(empty($first_img)){ //Defines a default image
-      $first_img = "";
-    }
-    return $first_img;
+function catch_that_image() {
+  global $post, $posts;
+  $first_img = '';
+  ob_start();
+  ob_end_clean();
+  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+  $first_img = $matches [1] [0];
+
+  if(empty($first_img)){ //Defines a default image
+    $first_img = "";
   }
+  return $first_img;
+}
 
   //管理画面の「見出し１」等を削除する
 function custom_editor_settings( $initArray ){
   $initArray['block_formats'] = "段落=p; 見出し2=h2; 見出し3=h3;";
   return $initArray;
   }
-add_filter( 'tiny_mce_before_init', 'custom_editor_settings' );
+// add_filter( 'tiny_mce_before_init', 'custom_editor_settings' );
 
 add_filter('xmlrpc_enabled', '__return_false');
 
@@ -1628,7 +1628,6 @@ add_filter('flamingo_inbound_channel_row_actions', 'add_facebook_link', 10, 2);
 function add_facebook_link($actions, $page_object)
 {
     $actions['facebook_link'] = '<a href="https://facebook.com" class="facebook_link">' . __('Go to Facebook') . '</a>';
- 
    return $actions;
 }
 

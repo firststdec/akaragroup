@@ -142,7 +142,7 @@ get_header();
               <div class="c-egg animation-element slide-top"></div>
               <div class="c-mori-tama-egg animation-element slide-top"></div>
               <figure class="box-image-heading animation-element slide-left"><img class="image" src="/assets/img/top/img_logo_03.svg" alt="Akara ISE"></figure>
-              <div class="heading-orange">Mori-Tama</div>
+              <div class="heading-orange animation-element slide-left">Mori-Tama</div>
               <?php if(get_field('orange_egg_content')!=''): ?>
               <div class="c-text-cmn-01 -white animation-element slide-left"><?php echo get_field('orange_egg_content'); ?></div>
               <?php endif; ?>
@@ -212,7 +212,7 @@ get_header();
           </div>
         </div>
       </div>
-      <div class="l-sec-cmn-01 l-sec-box-swiper-voice">
+      <div class="l-sec-cmn-01 l-sec-box-swiper-voice animation-element slide-top">
         <div class="inner">
           <div class="l-swiper-recipes">
             <!-- Slider main container-->
