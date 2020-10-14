@@ -78,7 +78,7 @@ gulp.task('config:build', function (done) {
       dist: 'build/'
     },
     option: {
-      cssMin: false,
+      cssMin: true,
       cssSourcemaps: false,
       useBabel: false,
       jsMin: false,

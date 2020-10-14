@@ -17,8 +17,6 @@ $(function () {
   accordion();
   responsiveAccordion();
   accordianClose();
-  elementAnimated();
-  elementHeadingAnimated();
   heroFit();
   jsMainvisual();
   jsSwiperMulti();
@@ -162,31 +160,31 @@ var btnPagetop = function () {
   detect SP
 ---------------------------------------------------------- */
 //var spDevices = /android|blackberry|iemobile|iphone|ipod|opera mini|webos/.test(navigator.userAgent.toLowerCase())
-var spDevices = new MobileDetect(window.navigator.userAgent)
+// var spDevices = new MobileDetect(window.navigator.userAgent)
 
 /* ----------------------------------------------------------
   header small
 ---------------------------------------------------------- */
-var headerSmall = function() {
-  var top = 0
-  var barHidden = 0
-  var $header = $('.header')
-  var clsSmall = 'is-small'
+// var headerSmall = function() {
+//   var top = 0
+//   var barHidden = 0
+//   var $header = $('.header')
+//   var clsSmall = 'is-small'
 
-  if(!spDevices.mobile() || spDevices.tablet()) {
-    barHidden = 220
-  }
+//   if(!spDevices.mobile() || spDevices.tablet()) {
+//     barHidden = 220
+//   }
 
-  $window.on('scroll', function() {
-    top = $(this).scrollTop()
-    if(top > barHidden && !$header.hasClass(clsSmall)) {
-      $header.addClass(clsSmall)
-    }
-    else if(top == 0 && !screenFixed) {
-      $header.removeClass(clsSmall)
-    }
-  })
-}
+//   $window.on('scroll', function() {
+//     top = $(this).scrollTop()
+//     if(top > barHidden && !$header.hasClass(clsSmall)) {
+//       $header.addClass(clsSmall)
+//     }
+//     else if(top == 0 && !screenFixed) {
+//       $header.removeClass(clsSmall)
+//     }
+//   })
+// }
 
 /* ----------------------------------------------------------
   header hide SP
@@ -202,11 +200,11 @@ var headerHideSP = function() {
 
     if(screenFixed) return false
 
-    if(spDevices.mobile()) {
-      height = MQ == 'PC' ? 20 : 70
-    } else {
-      height = MQ == 'PC' ? 20 : 70
-    }
+    // if(spDevices.mobile()) {
+    //   height = MQ == 'PC' ? 20 : 70
+    // } else {
+    // }
+    height = MQ == 'PC' ? 20 : 70
 
     if (newTop > oldTop && newTop > height) {
       $header.removeClass('is-hidden-sp')
@@ -236,7 +234,6 @@ var pageLoaderOff = function () {
     $('.c-box-mainvisual .c-box-detail .c-text, .c-box-mainvisual .c-box-detail .c-button').addClass('is-animated');
   });
 };
-
 /* ----------------------------------------------------------
   headerFixed
 ---------------------------------------------------------- */
@@ -508,31 +505,31 @@ var topSlider = function(){
   }
 }
 
-var elementAnimated = function () {
-  $('.js-content-animated').removeClass('is-animated');
-  var waypointsTop = $('.js-content-animated').waypoint(function () {
-    $(this.element).addClass('is-animated');
-  }, {
-    offset: '80%',
-    triggerOnce: true
-  });
-}
-$(window).on('breakpointChange', function (){
-  elementAnimated();
-});
+// var elementAnimated = function () {
+//   $('.js-content-animated').removeClass('is-animated');
+//   var waypointsTop = $('.js-content-animated').waypoint(function () {
+//     $(this.element).addClass('is-animated');
+//   }, {
+//     offset: '80%',
+//     triggerOnce: true
+//   });
+// }
+// $(window).on('breakpointChange', function (){
+//   elementAnimated();
+// });
 
-var elementHeadingAnimated = function () {
-  $('.js-heading-animated').removeClass('is-animated');
-  var waypointsTop = $('.js-heading-animated').waypoint(function () {
-    $(this.element).delay(1500).addClass('is-animated');
-  }, {
-    offset: '80%',
-    triggerOnce: true
-  });
-}
-$(window).on('breakpointChange', function (){
-  elementHeadingAnimated();
-});
+// var elementHeadingAnimated = function () {
+//   $('.js-heading-animated').removeClass('is-animated');
+//   var waypointsTop = $('.js-heading-animated').waypoint(function () {
+//     $(this.element).delay(1500).addClass('is-animated');
+//   }, {
+//     offset: '80%',
+//     triggerOnce: true
+//   });
+// }
+// $(window).on('breakpointChange', function (){
+//   elementHeadingAnimated();
+// });
 
 var selectAddClass = function(){
   $('.c-form select, .c-input-selectbox select').change(function(){
@@ -685,12 +682,6 @@ if($('.js-recipes-swiper').length){
       896: {
         slidesPerView: 2,
         spaceBetween: 10,
-        centeredSlides: true,
-        loop: true,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 30,
         centeredSlides: true,
         loop: true,
       },

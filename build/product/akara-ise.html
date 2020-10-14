@@ -22,14 +22,31 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta property="og:image" content="/assets/img/ogp.png">
     <link rel="stylesheet" href="/assets/css/libs/slick.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&amp;display=swap&amp;subset=japanese">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/fontawesome.css">
     <link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/brands.css">
     <link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/solid.css">
     <link rel="stylesheet" href="/assets/css/libs/swiper.css">
     <link rel="stylesheet" href="/assets/css/libs/modaal.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <script>
+      WebFontConfig = {
+      google: {
+      families: [
+      'Kanit:300,400,500,600&display=swap'
+      ]
+      }
+      };
+      (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+      })();
+      
+    </script>
   </head>
   <body class="subPage">
     <!-- facebook SDK -->
@@ -560,11 +577,11 @@
     </div>
     <script src="/assets/js/libs/jquery.min.js"></script>
     <script src="/assets/js/libs/objectFitPolyfill.min.js"></script>
-    <script src="/assets/js/libs/mobile-detect.min.js"></script>
     <script src="/assets/js/libs/swiper.js"></script>
     <script src="/assets/js/waveFooter.js"></script>
     <script src="/assets/js/libs/slick.min.js"></script>
     <script src="/assets/js/libs/modaal.min.js"></script>
+    <script src="/assets/js/libs/lazysizes.min.js"></script>
     <script src="/assets/js/common.js"></script>
     <script src="/assets/js/libs/slick.min.js"></script>
     <script src="/assets/js/libs/jquery.matchHeight.js"></script>

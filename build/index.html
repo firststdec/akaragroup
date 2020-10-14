@@ -22,14 +22,31 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta property="og:image" content="/assets/img/ogp.png">
     <link rel="stylesheet" href="/assets/css/libs/slick.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&amp;display=swap&amp;subset=japanese">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/fontawesome.css">
     <link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/brands.css">
     <link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/solid.css">
     <link rel="stylesheet" href="/assets/css/libs/swiper.css">
     <link rel="stylesheet" href="/assets/css/libs/modaal.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <script>
+      WebFontConfig = {
+      google: {
+      families: [
+      'Kanit:300,400,500,600&display=swap'
+      ]
+      }
+      };
+      (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+      })();
+      
+    </script>
   </head>
   <body class="topPage">
     <!-- facebook SDK -->
@@ -246,7 +263,7 @@
                   <div class="box-content">
                     <div class="c-egg animation-element slide-top"></div>
                     <div class="c-mori-tama-egg animation-element slide-top"></div>
-                    <figure class="box-image-heading animation-element slide-left"><img class="image" src="/assets/img/top/img_logo_03.svg" alt="Akara ISE"></figure>
+                    <figure class="box-image-heading animation-element slide-left"><img class="image" src="/assets/img/top/img_logo_03.png" alt="Akara ISE"></figure>
                     <div class="heading-orange">Mori-Tama</div>
                     <div class="c-text-cmn-01 -white animation-element slide-left">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.</div>
                     <div class="c-box-cmn-button animation-element slide-left"><a class="c-button-cmn-01"><span class="text">READ MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
@@ -264,7 +281,7 @@
               </div>
               <div class="inner">
                 <div class="c-box-card-row-01">
-                  <figure class="box-image animation-element slide-top"><img class="image u-no-sp" src="/assets/img/top/img_akara_story.png" alt="akara Story"><img class="image u-no-tb u-no-pc" src="/assets/img/top/BlackOak.svg" alt="akara Story"></figure>
+                  <figure class="box-image animation-element slide-top"><img class="image u-no-sp" src="/assets/img/top/img_akara_story.png" alt="akara Story"><img class="image u-no-tb u-no-pc" src="/assets/img/top/BlackOak.png" alt="akara Story"></figure>
                   <div class="box-content">
                     <div class="c-orange-egg animation-element slide-top"></div>
                     <div class="c-heading-cmn-01 animation-element slide-top"><span class="text-white">akara</span><span> Story</span></div>
@@ -276,7 +293,7 @@
                   </div>
                 </div>
                 <div class="c-box-card-row-01 -reverse">
-                  <figure class="box-image animation-element slide-top"><img class="image u-no-sp" src="/assets/img/top/img_about_akara.png" alt="About akara"><img class="image u-no-tb u-no-pc" src="/assets/img/top/everyday-with-akara2.svg" alt="About akara"></figure>
+                  <figure class="box-image animation-element slide-top"><img class="image u-no-sp" src="/assets/img/top/img_about_akara.png" alt="About akara"><img class="image u-no-tb u-no-pc" src="/assets/img/top/everyday-with-akara2.png" alt="About akara"></figure>
                   <div class="box-content">
                     <div class="c-about-akara-egg animation-element slide-top"></div>
                     <div class="c-line-dotted-about-akara animation-element slide-top"></div>
@@ -516,11 +533,11 @@
     </div>
     <script src="/assets/js/libs/jquery.min.js"></script>
     <script src="/assets/js/libs/objectFitPolyfill.min.js"></script>
-    <script src="/assets/js/libs/mobile-detect.min.js"></script>
     <script src="/assets/js/libs/swiper.js"></script>
     <script src="/assets/js/waveFooter.js"></script>
     <script src="/assets/js/libs/slick.min.js"></script>
     <script src="/assets/js/libs/modaal.min.js"></script>
+    <script src="/assets/js/libs/lazysizes.min.js"></script>
     <script src="/assets/js/common.js"></script>
     <script src="/assets/js/libs/slick.min.js"></script>
     <script src="/assets/js/libs/jquery.matchHeight.js"></script>
