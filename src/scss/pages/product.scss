@@ -611,6 +611,7 @@
         font-size: 4rem;
         color: $baseColor;
         line-height: 1.3;
+        font-weight: 400;
 
         @include mq-max-sp {
           font-size: 3rem;
