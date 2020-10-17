@@ -23,7 +23,7 @@ get_header();
   <main class="l-container">
     <div class="l-container__inner">
       <div class="p-our-story">
-        <div class="c-mv-sub-page section-spy" id="our-story">
+        <div class="c-mv-sub-page section-spy is-active" id="our-story">
           <div class="c-mv-sub-page__inner">
             <div class="c-mv-sub-page__box-content">
             <?php if(get_field('main_visual_subpage_heading')!=''): ?>

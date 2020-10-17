@@ -5,73 +5,7 @@ define("EVENT_POSTPERPAGE", 30);
 define("TOPPAGE_ID", 88645);
 define("TERMID", 83); //大切にしたいことばたち
 define("TERMNAME", "大切にしたいことばたち");
-// シゴトヒト文庫|65 その後どうですか|67 大切にしたいことばたち|75 移り住む人たち|111 
 /****************************** AJAX LOAD MORE FUNCTIONS  ********************************/
-function akara_my_load_more_scripts(){
-  //global $wp_query; 
-  $args_banner = array(
-    'post_type' => 'banner',
-    'post_status' => 'publish',
-    'posts_per_page' => 1,
-    'paged' => 1,
-    'orderby' => 'date',
-    'order' => 'DESC',
-    'has_password'   => FALSE, // NO PASSWORD POST SHOW
-  );
-  $the_query_banner = new WP_Query( $args_banner );
-  //print "<pre>"; print_r($the_query_banner);
-  if ( $the_query_banner->have_posts() ) :  
-    while ( $the_query_banner->have_posts() ) : $the_query_banner->the_post();
-      $banner_id = get_the_ID();
-    endwhile;
-  endif;
-
-  $args = array(
-    'post_type' => array('event', 'post', 'column', 'shopping'),
-    'post_status' => 'publish',
-    'posts_per_page' => 23,
-    'paged' => 1,
-    'orderby' => 'date',
-    'order' => 'DESC',
-    'has_password'   => FALSE, // NO PASSWORD POST SHOW
-    'meta_query'	=> array(
-      'relation'		=> 'OR',
-      array(
-        'key'	  	=> 'not_show_post_on_top',
-        'value'	  	=> '',
-        'compare' 	=> 'NOT EXISTS',
-      ),
-      array(
-        'key'	  	=> 'not_show_post_on_top',
-        'value'	  	=> 0,
-        'compare' 	=> '=',
-      ),
-    ),
-  );
-  
-  $the_query = new WP_Query( $args );
-  //print "<pre>"; print_r($the_query);
-	// In most cases it is already included on the page and this line can be removed
-	wp_enqueue_script('jquery');
-	// register our main script but do not enqueue it yet
-	wp_register_script( 'my_loadmore', get_stylesheet_directory_uri() . '/js/loadmore.js', array('jquery') );
- 
-	// now the most interesting part
-	// we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP
-	// you can define variables directly in your HTML but I decided that the most proper way is wp_localize_script()
-	wp_localize_script( 
-    'my_loadmore', 'akara_loadmore_params', array(
-      'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
-      'posts' => json_encode( $the_query->query_vars ), // everything about your loop is here
-      'posts_banner' => json_encode( $the_query_banner->query_vars ), // everything about your loop is here
-      'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
-      'max_page' => $the_query->max_num_pages,
-      'current_banner_id' => $banner_id,
-    )
-  );
-  wp_enqueue_script( 'my_loadmore', 'my_loadmore_dynamic' );
-}
-add_action( 'wp_enqueue_scripts', 'akara_my_load_more_scripts' );
 
 function akara_my_load_more_scripts_dynamic(){
   //global $wp_query;
@@ -94,7 +28,7 @@ function akara_my_load_more_scripts_dynamic(){
   } elseif($obj->query_var == 'shopping' || is_tax('cate_shopping')){
     $post_type = 'shopping';
   }
-  // print "<pre>"; print_r($obj); 
+  // print "<pre>"; print_r($obj);
   $args = array(
     'post_type' => $post_type,
     'post_status' => 'publish',
@@ -104,6 +38,7 @@ function akara_my_load_more_scripts_dynamic(){
     'order' => 'DESC',
     'has_password'   => FALSE, // NO PASSWORD POST SHOW    
   );
+
   if($obj->query_var == 'event' || $obj->post_name == 'event-end'){
     $args['meta_key'] = 'eventdate';
   }
@@ -129,11 +64,12 @@ function akara_my_load_more_scripts_dynamic(){
             'value' => $tdd,
             'compare' => '>='
         )
-      ),      
+      ),
       'has_password'   => FALSE, // NO PASSWORD POST SHOW
     );
 
   }
+
   if(is_tax('cate_colunm')){
     $args = array(
       'post_type' => $post_type,
@@ -152,6 +88,7 @@ function akara_my_load_more_scripts_dynamic(){
       'has_password'   => FALSE, // NO PASSWORD POST SHOW
     );
   }
+
   if(is_category()){
     $args = array(
       'post_type' => $post_type,
@@ -170,6 +107,7 @@ function akara_my_load_more_scripts_dynamic(){
       'has_password'   => FALSE, // NO PASSWORD POST SHOW
     );
   }
+
   if($obj->post_name == 'eventtop'){
     $args = array(
       'post_type' => 'event',
@@ -196,8 +134,9 @@ function akara_my_load_more_scripts_dynamic(){
         'terms' => $category,
         )
       );
-    }    
+    }
   }
+
   if($obj->post_name == 'event-end'){
     $args = array(
       'post_type' => 'event',
@@ -224,14 +163,14 @@ function akara_my_load_more_scripts_dynamic(){
         'terms' => $category,
         )
       );
-    }    
+    }
   }
 
-  //print "<pre>"; 
+  //print "<pre>";
   $the_query = new WP_Query( $args );
 	wp_register_script( 'my_loadmore_dynamic', '' ,array());
- 
-	wp_localize_script( 
+
+	wp_localize_script(
     'my_loadmore_dynamic', 'akara_loadmore_params_dynamic', array(
       'ajaxurl_dynamic' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
       'posts' => json_encode( $the_query->query_vars ), // everything about your loop is here
@@ -243,213 +182,6 @@ function akara_my_load_more_scripts_dynamic(){
   wp_enqueue_script( 'my_loadmore_dynamic', 'my_loadmore_dynamic' );
 }
 add_action( 'wp_enqueue_scripts', 'akara_my_load_more_scripts_dynamic' );
-
-function akara_loadmore_ajax_handler(){
-  // prepare our arguments for the query
-  // banner
-  session_start();
-	$args_banner = json_decode( stripslashes( $_POST['query_banner'] ), true );
-	$args_banner['paged'] = $_POST['banner_page'] + 1; // we need next page to be loaded
-  $args_banner['post_status'] = 'publish';
-	$args_banner['post_type'] = 'banner';
-  $args_banner['posts_per_page'] = 2;
-  $args_banner['orderby'] = 'date';
-  $args_banner['order'] = 'DESC';
-  $args_banner['has_password'] = FALSE;
-  $args_banner['post__not_in'] = array($_POST['current_banner_id']); // NO Current ID
-  $the_query_banner_ajax = new WP_Query( $args_banner );
-  $num_banner = $the_query_banner_ajax->post_count; // Count Banner
-  //echo $num_banner;
-  if ( $the_query_banner_ajax->have_posts() ) :  
-    while ( $the_query_banner_ajax->have_posts() ) : $the_query_banner_ajax->the_post();
-      $id_banner[] = get_the_ID();
-    endwhile; //while ( $the_query_banner_ajax->have_posts() ) : $the_query_banner_ajax->the_post();
-    
-  endif; //if ( $the_query_banner->have_posts() ) :
-  wp_reset_query();
-  //normal post
-	$args = json_decode( stripslashes( $_POST['query'] ), true );
-	$args['paged'] = $_POST['page'] + 1; // we need next page to be loaded
-  $args['post_status'] = 'publish';
-  $args['posts_per_page'] = 30 - $num_banner;
-  //echo  $args['posts_per_page'] . "banner" . $num_banner;
-  $_SESSION['num_banner'] = $num_banner;
-  if($_POST['page'] == 1){
-    $_SESSION['offset'] = 23;
-    $args['offset'] = 23;
-  } else {
-    $_SESSION['offset'] = $_SESSION['offset'] + $args['posts_per_page'];
-    $args['offset'] = $_SESSION['offset'];
-    if($_SESSION['num_banner'] == 0){
-      $args['offset'] = $_SESSION['offset'] - 2;
-    } else {
-      if($_SESSION['num_banner'] == 2){
-        $args['offset'] = $_SESSION['offset'];
-      } else {
-        $args['offset'] = $_SESSION['offset'] - 1;
-      }
-    }
-  }
-	$args['post_type'] = array('event', 'post', 'column', 'shopping');
-	$args['orderby'] = 'date';
-  $args['order'] = 'DESC';
-  $args['has_password'] = FALSE;
-  //echo $args['offset'];
-  if(is_front_page()){
-    $args['meta_query'] = array(
-      'relation'		=> 'OR',
-      array(
-        'key'	  	=> 'not_show_post_on_top',
-        'value'	  	=> '',
-        'compare' 	=> 'NOT EXISTS',
-      ),
-      array(
-        'key'	  	=> 'not_show_post_on_top',
-        'value'	  	=> 0,
-        'compare' 	=> '=',
-      ),
-    );
-  }
-
-  $the_query_ajax = new WP_Query( $args );
-  //var_dump($the_query_ajax->request);
-  //print "<pre>"; print_r($the_query_ajax);
-
-  $cnt_ajax = 1;
-	if( $the_query_ajax->have_posts() ) :
-  ?>
-  <div class="mod-recommend-in" data-test="<?php echo $args['offset']; ?>" data-banner="<?php echo $num_banner; ?>">
-  <!-- <div class="mod-recommend-in"> -->
-  <?php 
-    //print_r($id_banner);
-    // run the loop
-    while( $the_query_ajax->have_posts() ): $the_query_ajax->the_post();
-      $icon_cate = '';
-      if(get_post_type(get_the_ID()) == 'event'){
-        $cate = 'cate_event';
-        $icon_cate = 'ico_status_event';
-        $bg = 'white';
-        $alt = 'エベント';
-        $thumb_ctf = 'eventpickimg';
-        $lead_top = 'eventlead';
-        $date = '';
-      } elseif(get_post_type(get_the_ID()) == 'column'){
-        $cate = 'cate_colunm';
-        $icon_cate = 'ico_status_column';
-        $bg = 'white';
-        $alt = 'コラム';
-        $thumb_ctf = 'columnimg';
-        $lead_top = 'columnlead';
-        $date = '';
-      } elseif(get_post_type(get_the_ID()) == 'post'){
-        $dd = get_post_meta(get_the_ID(), 'boshuenddate', true);
-        $dd = date('Y-m-d', strtotime($dd));
-        $date = date('Y.n.j', strtotime($dd));
-        $today = date("Y-m-d");
-        
-        //最新かの判定
-        //$nn = $today - get_the_time("Y-m-d");
-        //print $today;
-        
-        $nn  = (strtotime($today) - strtotime(get_the_time("Y-m-d"))) / ( 60 * 60 * 24);
-        $intday = (strtotime($dd) - strtotime($today)) / ( 60 * 60 * 24);
-                  
-        if($nn < 3){
-          $icon_cate = 'ico_status_new';
-        } else {
-          if($intday == 2){
-            $icon_cate = 'ico_status_2day';
-          } elseif($intday == 1){
-            $icon_cate = 'ico_status_1day';
-          } elseif($intday == 0){
-            $icon_cate = 'ico_status_today';
-          } elseif($intday < 0){
-            $icon_cate = 'ico_status_end';
-          } else {
-            $icon_cate = 'ico_status_open';
-          }
-        }
-      
-        $cate = 'category';
-        $bg = 'red';
-        $alt = '求人 NEW';
-        $thumb_ctf = 'img_thumb';
-        $lead_top = 'lead';
-      }
-      //echo $cate;
-      if(get_post_type(get_the_ID()) == 'shopping'){
-        $categories = array();
-      } else {
-        $categories = get_the_terms( get_the_ID(), $cate );
-      }
-      
-      //募集開始日の修正
-      $bs = get_post_meta(get_the_ID(), "boshustartdate", $single = true);
-      $bs = date('Y.n.j', strtotime($bs));
-
-      //募集開始日の修正
-      $be = get_post_meta(get_the_ID(), "boshuenddate", $single = true);
-      $be = date('Y.n.j', strtotime($be));
-
-    if($id_banner[0] != ''):
-        if($cnt_ajax == 3):
-          $banner_img = (get_field('top_banner_img', $id_banner[0]))? get_field('top_banner_img', $id_banner[0]) : '';
-          $banner_id = $id_banner[0];
-          $banner_link = (get_field('top_banner_link', $id_banner[0]))? get_field('top_banner_link', $id_banner[0]) : '#';
-          $banner_target = (get_field('top_banner_target', $id_banner[0]))? get_field('top_banner_target', $id_banner[0]) : '#';
-          $banner_title = get_the_title();
-          $target = ($banner_target)? " target='_blank'": "";
- ?>
-        <div class="item-recommend">
-          <div class="box-post-card-01">
-            <a href="<?php echo $banner_link; ?>" class="link-group"<?php echo $target; ?>>
-            <?php if ( $banner_img != ''):  ?>
-              <figure class="box-image"><img class="image" src="<?php echo $banner_img; ?>" alt="<?php echo $banner_title; ?>"></figure>
-            <?php else: ?>
-              <figure class="box-image"><img class="image" src="http://via.placeholder.com/286x380" alt="<?php echo get_the_title(); ?>"></figure>
-            <?php endif; ?>
-            </a>
-          </div><!-- /box-post-card-01 -->
-        </div><!-- /item-recommend -->
- <?php
-        endif; // if($cnt_ajax == 3):
-    endif; //if($id_banner[0] != ''):
-
-    if($id_banner[1] != ''):
-        if($cnt_ajax == 12):
-          $banner_img = (get_field('top_banner_img', $id_banner[1]))? get_field('top_banner_img', $id_banner[1]) : '';
-          $banner_id = $id_banner[1];
-          $banner_link = (get_field('top_banner_link', $id_banner[1]))? get_field('top_banner_link', $id_banner[1]) : '#';
-          $banner_target = (get_field('top_banner_target', $id_banner[1]))? get_field('top_banner_target', $id_banner[1]) : '#';
-          $banner_title = get_the_title();
-          $target = ($banner_target)? " target='_blank'": "";
- ?>
-        <div class="item-recommend">
-          <div class="box-post-card-01">
-            <a href="<?php echo $banner_link; ?>" class="link-group"<?php echo $target; ?>>
-            <?php if ( $banner_img != ''):  ?>
-              <figure class="box-image"><img class="image" src="<?php echo $banner_img; ?>" alt="<?php echo $banner_title; ?>"></figure>
-            <?php else: ?>
-              <figure class="box-image"><img class="image" src="http://via.placeholder.com/286x380" alt="<?php echo get_the_title(); ?>"></figure>
-            <?php endif; ?>
-            </a>
-          </div><!-- /box-post-card-01 -->
-        </div><!-- /item-recommend -->
- <?php
-        endif; // if($cnt_ajax == 3):
-    endif; //if($id_banner[1] != ''):
-
-      get_template_part( 'template-parts/shigoto/content', 'top' );
-      $cnt_ajax++;
-    endwhile; //while( $the_query_ajax->have_posts() ): $the_query_ajax->the_post();
-  ?>
-    </div><!-- /mod-recommend-in -->
-    <?php
-	endif;
-	die; // here we exit the script and even no wp_reset_query() required!
-}
-add_action('wp_ajax_loadmore', 'akara_loadmore_ajax_handler'); // wp_ajax_{action}
-add_action('wp_ajax_nopriv_loadmore', 'akara_loadmore_ajax_handler'); // wp_ajax_nopriv_{action}
 
 function akara_loadmore_ajax_handler_dynamic(){
   // prepare our arguments for the query
@@ -534,15 +266,15 @@ function akara_loadmore_ajax_handler_dynamic(){
     </div><!-- /mod-recommend-in -->
 
   <?php
-      else : // if($args['term_id'] != TERMID):
+    else : // if($args['term_id'] != TERMID):
   ?>
-    <ul class="list-column-quote">
-    <?php 
-      while ( $the_query_ajax->have_posts() ) : $the_query_ajax->the_post(); 
-        get_template_part( 'template-parts/shigoto/content', 'column-01' ); 
-      endwhile; 
-    ?>
-    </ul><!-- list-column-quote -->
+  <ul class="list-column-quote">
+  <?php 
+    while ( $the_query_ajax->have_posts() ) : $the_query_ajax->the_post(); 
+      get_template_part( 'template-parts/shigoto/content', 'column-01' ); 
+    endwhile; 
+  ?>
+  </ul><!-- list-column-quote -->
   <?php
     endif;
 	endif; //if( $the_query_ajax->have_posts() && $args['term_id'] != TERMID) :
@@ -592,6 +324,7 @@ function taxonomy_slug_rewrite($wp_rewrite) {
                   // make rules
                   foreach ($terms as $term) {
                       $rules[$object_type . '/' . $term->slug . '/?$'] = 'index.php?' . $term->taxonomy . '=' . $term->slug;
+                      $rules[$object_type . '/' . $term->slug . '-th/?$'] = 'index.php?' . $term->taxonomy . '=' . $term->slug.'-th';
                       $rules[$object_type . '/' . $term->slug . '/page/?([0-9]{1,})/?'] = 'index.php?' . $term->taxonomy . '=' . $term->slug . '&paged=$matches[1]'; //FIX PAGINATION ISSUE
                   }
               }
@@ -782,7 +515,7 @@ function remove_menu()
 if ( ! function_exists( 'my_theme_setup' ) )
 {
   function my_theme_setup() {
-    add_image_size('camp_gallery_img', 780, 403, array( 'center', 'center' ));
+    // add_image_size('camp_gallery_img', 780, 403, array( 'center', 'center' ));
   }
 }
 add_action( 'after_setup_theme', 'my_theme_setup' );
@@ -1440,7 +1173,7 @@ function custom_email_confirmation_validation_filter( $result, $tag ) {
 function my_init() {
 	if (!is_admin()) {
 		// comment out the next two lines to load the local copy of jQuery
-		// wp_deregister_script('jquery'); 
+		wp_deregister_script('jquery'); 
 		// wp_register_script('jquery', '', false, ''); 
     // wp_enqueue_script('jquery');
   }

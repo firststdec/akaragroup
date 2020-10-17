@@ -59,11 +59,43 @@
 	<meta name="twitter:url" content="">
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	<meta property="og:image" content="/assets/img/ogp.png">
+  <meta property="og:image" content="/assets/img/ogp.png">
+  <?php
+    if(ICL_LANGUAGE_CODE == 'en') {
+      $front_page_id = 31;
+    } elseif(ICL_LANGUAGE_CODE == 'th') {
+      $front_page_id = 98;
+    }
+  ?>
+  <?php if(have_rows('mainvisual_slider_rpt', $front_page_id)): ?>
+    <?php
+      // Loop through rows.
+      while( have_rows('mainvisual_slider_rpt', $front_page_id) ) : the_row();
+        $mainvisual_slider_rpt_image = get_sub_field('mainvisual_slider_rpt_image', $front_page_id);
+    ?>
+    <link rel="preload" as="image" href="<?php echo $mainvisual_slider_rpt_image['url']; ?>">
+    <?php endwhile; ?>
+  <?php endif; ?>
+  <script>
+    WebFontConfig = {
+      google: {
+        families: [
+          'Kanit:300,400,500,600&display=swap'
+        ]
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
 	<link rel="stylesheet" href="/assets/css/libs/slick.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&amp;display=swap&amp;subset=japanese">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&amp;display=swap">
-	<link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/fontawesome.css">
+  <link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/fontawesome.css">
 	<link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/brands.css">
 	<link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/solid.css">
 	<link rel="stylesheet" href="/assets/css/libs/swiper.css">
@@ -94,7 +126,7 @@
   </div>
 <?php else: ?>
   <?php if(is_page_template('page-our-story.php')): ?>
-  <div class="c-box-scroll-spy">
+  <div class="c-box-scroll-spy -white">
     <div class="c-box-scroll-spy__inner">
       <div class="c-box-scroll-spy__list">
         <div class="c-box-scroll-spy__item is-active"><a class="c-box-scroll-spy__link" href="#our-story" data-scroll="our-story">Our Story</a></div>
@@ -121,8 +153,6 @@
   if(is_page(array('faq', 'where-to-buy'))) {
     $white_theme = 'whiteTheme';
   }
-
-
 
   if(is_singular('product')) {
     $terms = get_the_terms( $post->ID, 'product_category' );
@@ -162,8 +192,8 @@
                     <div class="l-header__submenu">
                       <div class="l-header__submenu-in">
                         <ul class="l-header__submenu-list">
-                          <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-egg.html">
-                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara Eggs</span></a>
+                          <li class="l-header__submenu-item"><div class="l-header__submenu-link">
+                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara Eggs</span></div>
                             <ul class="l-header__submenu-list-02">
                             <?php
                               $args = array(
@@ -226,8 +256,8 @@
                             // print "<pre>"; print_r($the_query); die();
                             if ( $the_query->have_posts() ) :
                           ?>
-                          <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-eggology.html">
-                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_eggology.png" alt="akara EGGOLOGY"></figure><span class="l-header__submenu-text">akara EGGOLOGY</span></a>
+                          <li class="l-header__submenu-item"><div class="l-header__submenu-link">
+                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_eggology.png" alt="akara EGGOLOGY"></figure><span class="l-header__submenu-text">akara EGGOLOGY</span></div>
                             <ul class="l-header__submenu-list-02">
                             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
@@ -257,8 +287,8 @@
                             // print "<pre>"; print_r($the_query); die();
                             if ( $the_query->have_posts() ) :
                           ?>
-                          <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-ise.html">
-                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_ise.png" alt="akara ISE"></figure><span class="l-header__submenu-text">akara ISE</span></a>
+                          <li class="l-header__submenu-item"><div class="l-header__submenu-link">
+                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_ise.png" alt="akara ISE"></figure><span class="l-header__submenu-text">akara ISE</span></div>
                             <ul class="l-header__submenu-list-02">
                             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
@@ -301,13 +331,13 @@
                     <div class="l-header__submenu">
                       <div class="l-header__submenu-in">
                         <ul class="l-header__submenu-list">
-                          <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-egg.html">
-                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara Eggs</span></a>
+                          <li class="l-header__submenu-item"><div class="l-header__submenu-link">
+                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara Eggs</span></div>
                             <ul class="l-header__submenu-list-02">
                             <?php
                               $args = array(
                                 'hide_empty' => 0,
-                                'child_of' => 3,
+                                'child_of' => 16,
                               );
                               $cate = 'product_category';
 
@@ -322,7 +352,7 @@
                                   $term_type = get_field('product_category_type', $term->taxonomy . '_' . $term->term_id);
                                   if($term_type == 'ready-to-cook'):
                               ?>
-                                <a class="l-header__submenu-list-02-link" href="/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
+                                <a class="l-header__submenu-list-02-link" href="/th/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
                                 <?php endif; // if($term_type == $product_category_type):?>
                               <?php endforeach; ?>
                               </li>
@@ -337,7 +367,7 @@
                                   $term_type = get_field('product_category_type', $term->taxonomy . '_' . $term->term_id);
                                   if($term_type == 'ready-to-eat'):
                                 ?>
-                                <a class="l-header__submenu-list-02-link" href="/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
+                                <a class="l-header__submenu-list-02-link" href="/th/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
                                 <?php endif; // if($term_type == $product_category_type):?>
                               <?php endforeach; ?>
                               </li>
@@ -365,8 +395,8 @@
                             // print "<pre>"; print_r($the_query); die();
                             if ( $the_query->have_posts() ) :
                           ?>
-                          <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-eggology.html">
-                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_eggology.png" alt="akara EGGOLOGY"></figure><span class="l-header__submenu-text">akara EGGOLOGY</span></a>
+                          <li class="l-header__submenu-item"><div class="l-header__submenu-link">
+                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_eggology.png" alt="akara EGGOLOGY"></figure><span class="l-header__submenu-text">akara EGGOLOGY</span></div>
                             <ul class="l-header__submenu-list-02">
                             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
@@ -396,8 +426,8 @@
                             // print "<pre>"; print_r($the_query); die();
                             if ( $the_query->have_posts() ) :
                           ?>
-                          <li class="l-header__submenu-item"><a class="l-header__submenu-link" href="/product/akara-ise.html">
-                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_ise.png" alt="akara ISE"></figure><span class="l-header__submenu-text">akara ISE</span></a>
+                          <li class="l-header__submenu-item"><div class="l-header__submenu-link">
+                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_ise.png" alt="akara ISE"></figure><span class="l-header__submenu-text">akara ISE</span></div>
                             <ul class="l-header__submenu-list-02">
                             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
@@ -436,7 +466,7 @@
               <div class="l-search-bar"><a class="c-link no-separate c-search modaal" href="#box-search" data-modaal-type="inline" data-modaal-animation="fade" data-modaal-overlay-opacity="0.9" data-custom-class="modal-search"><span class="fas fa-search"></span></a></div>
               <div class="c-box-search__detail" id="box-search">
                 <div class="c-box-search__inner">
-                  <form class="c-search-form" action="/" method="post">
+                  <form class="c-search-form" action="/search" method="get">
                     <div class="c-box-search__input"><i class="fas fa-search"></i>
                       <input class="c-input-text" name="s" type="text" placeholder="Type your keyword">
                     </div>

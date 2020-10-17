@@ -90,16 +90,16 @@
 <?php wp_footer(); ?>
 <script src="/assets/js/libs/jquery.min.js"></script>
 <script src="/assets/js/libs/objectFitPolyfill.min.js"></script>
-<script src="/assets/js/libs/mobile-detect.min.js"></script>
 <script src="/assets/js/libs/swiper.js"></script>
 <script src="/assets/js/waveFooter.js"></script>
 <script src="/assets/js/libs/slick.min.js"></script>
 <script src="/assets/js/libs/modaal.min.js"></script>
 <script src="/assets/js/libs/jquery.matchHeight.js"></script>
-<script src="/assets/js/libs/jquery.waypoints.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
 <script src="/assets/js/common.js"></script>
 <?php if(is_front_page()): ?>
-<script src="/assets/js/topWaveYellow.js"></script>
+<script src="/assets/js/top.js"></script>
+<!-- <script src="/assets/js/topWaveYellow.js"></script>
 <script src="/assets/js/bottomWaveYellow.js"></script>
 <script src="/assets/js/topWaveYellow02.js"></script>
 <script src="/assets/js/bottomWaveYellow02.js"></script>
@@ -107,7 +107,7 @@
 <script src="/assets/js/waveWhiteTop.js"></script>
 <script src="/assets/js/waveWhiteBottom.js"></script>
 <script src="/assets/js/waveOrangeBottom.js"></script>
-<script src="/assets/js/waveMainVisual.js"></script>
+<script src="/assets/js/waveMainVisual.js"></script> -->
 <?php endif; ?>
 <?php if(is_page_template("page-our-story.php")): ?>
 <script src="/assets/js/topWaveYellow.js"></script>
@@ -136,7 +136,7 @@
 <script src="/assets/js/waveMainVisualSub.js"></script>
 <?php endif; ?>
 <?php
-	if(is_singular('product')):
+	if(is_singular('product') || is_tax('product_category')):
 		$terms = get_the_terms( $post->ID, 'product_category' );
 		if ( $terms && ! is_wp_error( $terms ) ){
 			foreach ( $terms as $term ) {

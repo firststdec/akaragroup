@@ -29,7 +29,7 @@ get_header();
 						<?php if(ICL_LANGUAGE_CODE == 'en'): ?>
 							<div class="c-hero-faq__heading">FAQ</div>
 						<?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
-							<div class="c-hero-faq__heading">คำถามที่พบบ่อย</div>
+							<div class="c-hero-faq__heading">FAQ</div>
 						<?php endif; ?>
 							<?php if(get_field('faq_main_visual_text')!=''): ?>
 							<div class="c-hero-faq__sub-text"><?php echo get_field('faq_main_visual_text'); ?></div>

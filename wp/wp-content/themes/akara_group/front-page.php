@@ -61,7 +61,7 @@ get_header();
                   <div class="swiper-slide">
                     <div class="mainvisual-content">
                       <div class="box-image-wrapper">
-                        <figure class="box-image"><img class="image" src="<?php echo $mainvisual_slider_rpt_image['url']; ?>" alt="<?php echo $mainvisual_slider_rpt_image['alt']; ?>" data-object-fit="cover"></figure>
+                        <figure class="box-image"><img class="image lazy" src="<?php echo $mainvisual_slider_rpt_image['url']; ?>" alt="<?php echo $mainvisual_slider_rpt_image['alt']; ?>" data-object-fit="cover"></figure>
                       </div>
                     </div>
                   </div>
@@ -79,8 +79,10 @@ get_header();
       <?php
         if(ICL_LANGUAGE_CODE == 'en'):
           $readmore_text = 'READMORE';
+          $page_id = 31;
         elseif(ICL_LANGUAGE_CODE == 'th'):
           $readmore_text = 'อ่านเพิ่มเติม';
+          $page_id = 98;
         endif; ?>
       <div class="l-sec-cmn-01">
         <div class="inner">
@@ -89,7 +91,7 @@ get_header();
               <canvas id="canvas-yellow-02"></canvas>
             </div>
             <figure class="box-image">
-              <div class="c-deco-yellow-egg animation-element slide-top"></div><img class="image animation-element slide-right" src="/assets/img/top/img_product_01.png" alt="Akara">
+              <div class="c-deco-yellow-egg animation-element slide-top"></div><img class="image lazy animation-element slide-right" src="/assets/img/top/img_product_01.png" alt="Akara">
               <div class="c-open-package --yellow"></div>
             </figure>
             <div class="box-content"><a class="js-scroll c-scroll-down-button" href="#scroll_yellow_egg">
@@ -97,10 +99,10 @@ get_header();
               <div class="c-egg animation-element slide-top"></div>
               <div class="c-deco-yellow-egg-bg"></div>
               <div class="c-heading-cmn-01 animation-element slide-left">
-                <figure class="box-image-heading"><img class="image" src="/assets/img/top/img_logo_01.svg" alt="Akara Egg"></figure>
+                <figure class="box-image-heading"><img class="image lazy" src="/assets/img/top/img_logo_01.svg" alt="Akara Egg"></figure>
               </div>
               <?php if(get_field('yellow_egg_content')!=''): ?>
-              <div class="c-text-cmn-01 animation-element slide-left"><?php echo get_field('yellow_egg_content'); ?></div>
+              <div class="c-text-cmn-01 animation-element slide-left"><?php echo get_field('yellow_egg_content', $page_id); ?></div>
               <?php endif; ?>
               <div class="c-box-cmn-button animation-element slide-left"><a class="c-button-cmn-01"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
               <div class="c-product-akara-yellow animation-element slide-top"></div>
@@ -111,7 +113,7 @@ get_header();
           </div>
           <div class="c-box-card-row-01 -green-egg">
             <figure class="box-image">
-              <div class="c-deco-green-hen animation-element slide-top"></div><img class="image animation-element slide-left" src="/assets/img/top/img_product_02.png" alt="Akara Group">
+              <div class="c-deco-green-hen animation-element slide-top"></div><img class="lazy image animation-element slide-left" src="/assets/img/top/img_product_02.png" alt="Akara Group">
               <div class="c-open-package --green animation-element slide-top"></div>
             </figure>
             <div class="box-content">
@@ -119,10 +121,10 @@ get_header();
               <div class="c-egg-deco-top animation-element slide-top"></div>
               <div class="c-egg-deco-bottom animation-element slide-top"></div>
               <div class="c-heading-cmn-01 animation-element slide-right">
-                <figure class="box-image-heading"><img class="image" src="/assets/img/top/img_logo_02.svg" alt="Akara Eggology"></figure>
+                <figure class="box-image-heading"><img class="lazy image" src="/assets/img/top/img_logo_02.svg" alt="Akara Eggology"></figure>
               </div>
               <?php if(get_field('green_egg_content')!=''): ?>
-              <div class="c-text-cmn-01 -white animation-element slide-right"><?php echo get_field('green_egg_content'); ?></div>
+              <div class="c-text-cmn-01 -white animation-element slide-right"><?php echo get_field('green_egg_content', $page_id); ?></div>
               <?php endif;?>
               <div class="c-box-cmn-button animation-element slide-right"><a class="c-button-cmn-01 animation-element slide-top"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
               <div class="c-product-akara-green animation-element slide-top"></div>
@@ -135,16 +137,16 @@ get_header();
             <figure class="box-image">
               <div class="c-hen-deco-orange animation-element slide-top"></div>
               <div class="c-egg-deco-orange animation-element slide-top"></div>
-              <div class="c-line-deco-orange animation-element slide-top"></div><img class="image animation-element slide-right" src="/assets/img/top/img_product_03.png" alt="Akaragroup">
+              <div class="c-line-deco-orange animation-element slide-top"></div><img class="image lazy animation-element slide-right" src="/assets/img/top/img_product_03.png" alt="Akaragroup">
               <div class="c-open-package --orange animation-element slide-top"></div>
             </figure>
             <div class="box-content">
               <div class="c-egg animation-element slide-top"></div>
               <div class="c-mori-tama-egg animation-element slide-top"></div>
-              <figure class="box-image-heading animation-element slide-left"><img class="image" src="/assets/img/top/img_logo_03.svg" alt="Akara ISE"></figure>
+              <figure class="box-image-heading animation-element slide-left"><img class="image lazy" src="/assets/img/top/img_logo_03.png" alt="Akara ISE"></figure>
               <div class="heading-orange animation-element slide-left">Mori-Tama</div>
               <?php if(get_field('orange_egg_content')!=''): ?>
-              <div class="c-text-cmn-01 -white animation-element slide-left"><?php echo get_field('orange_egg_content'); ?></div>
+              <div class="c-text-cmn-01 -white animation-element slide-left"><?php echo get_field('orange_egg_content', $page_id); ?></div>
               <?php endif; ?>
               <div class="c-box-cmn-button animation-element slide-left"><a class="c-button-cmn-01"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
               <div class="c-product-akara-orange animation-element slide-top"></div>
@@ -161,12 +163,12 @@ get_header();
         </div>
         <div class="inner">
           <div class="c-box-card-row-01">
-            <figure class="box-image animation-element slide-top"><img class="image u-no-sp" src="/assets/img/top/img_akara_story.png" alt="akara Story"><img class="image u-no-tb u-no-pc" src="/assets/img/top/BlackOak.svg" alt="akara Story"></figure>
+            <figure class="box-image animation-element slide-top"><img class="image lazy u-no-sp" src="/assets/img/top/img_akara_story.png" alt="akara Story"><img class="lazy image u-no-tb u-no-pc" src="/assets/img/top/BlackOak.png" alt="akara Story"></figure>
             <div class="box-content">
               <div class="c-orange-egg animation-element slide-top"></div>
               <div class="c-heading-cmn-01 animation-element slide-top"><span class="text-white">akara</span><span> Story</span></div>
               <?php if(get_field('akara_story_content')!=''): ?>
-              <div class="c-text-cmn-01 animation-element slide-top"><?php echo get_field('akara_story_content'); ?></div>
+              <div class="c-text-cmn-01 animation-element slide-top"><?php echo get_field('akara_story_content', $page_id); ?></div>
               <?php endif; ?>
               <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01" href="<?php echo site_url('/our-story'); ?>"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
             </div>
@@ -175,13 +177,13 @@ get_header();
             </div>
           </div>
           <div class="c-box-card-row-01 -reverse">
-            <figure class="box-image animation-element slide-top"><img class="image u-no-sp" src="/assets/img/top/img_about_akara.png" alt="About akara"><img class="image u-no-tb u-no-pc" src="/assets/img/top/everyday-with-akara2.svg" alt="About akara"></figure>
+            <figure class="box-image animation-element slide-top"><img class="lazy image u-no-sp" src="/assets/img/top/img_about_akara.png" alt="About akara"><img class="lazy image u-no-tb u-no-pc" src="/assets/img/top/everyday-with-akara2.png" alt="About akara"></figure>
             <div class="box-content">
               <div class="c-about-akara-egg animation-element slide-top"></div>
               <div class="c-line-dotted-about-akara animation-element slide-top"></div>
               <div class="c-heading-cmn-01 animation-element slide-top"><span>About</span><span class="text-white"> akara</span></div>
               <?php if(get_field('about_akara_content')!=''): ?>
-              <div class="c-text-cmn-01 animation-element slide-top"><?php echo get_field('about_akara_content'); ?></div>
+              <div class="c-text-cmn-01 animation-element slide-top"><?php echo get_field('about_akara_content', $page_id); ?></div>
               <?php endif; ?>
               <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01" href="<?php echo site_url('/about-us'); ?>"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
             </div>
@@ -204,7 +206,7 @@ get_header();
               </div>
               <?php if(get_field('recipes_text')!=''): ?>
               <div class="box-text animation-element slide-top">
-                <div class="text"><?php echo get_field('recipes_text'); ?></div>
+                <div class="text"><?php echo get_field('recipes_text', $page_id); ?></div>
               </div>
               <?php endif; ?>
               <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01 --border-base"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
@@ -235,7 +237,7 @@ get_header();
                         </div>
                       </div>
                       <div class="c-overlay"></div>
-                      <figure class="box-image"><img class="image" src="/assets/img/top/img_recipes_top_02.jpg" alt="Cheesy Breaks"></figure>
+                      <figure class="box-image"><img class="image lazy" src="/assets/img/top/img_recipes_top_02.jpg" alt="Cheesy Breaks"></figure>
                       <div class="box-content">
                         <div class="c-heading-cmn-01">Cheesy Breaks</div>
                         <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
@@ -258,7 +260,7 @@ get_header();
                         </div>
                       </div>
                       <div class="c-overlay"></div>
-                      <figure class="box-image"><img class="image" src="/assets/img/top/img_recipes_top_03.jpg" alt="Italian Fried Egg"></figure>
+                      <figure class="box-image"><img class="image lazy" src="/assets/img/top/img_recipes_top_03.jpg" alt="Italian Fried Egg"></figure>
                       <div class="box-content">
                         <div class="c-heading-cmn-01">Italian Fried Egg</div>
                         <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
@@ -281,7 +283,7 @@ get_header();
                         </div>
                       </div>
                       <div class="c-overlay"></div>
-                      <figure class="box-image"><img class="image" src="/assets/img/top/img_recipes_top_04.jpg" alt="Rocky Egg Sunrise"></figure>
+                      <figure class="box-image"><img class="image lazy" src="/assets/img/top/img_recipes_top_04.jpg" alt="Rocky Egg Sunrise"></figure>
                       <div class="box-content">
                         <div class="c-heading-cmn-01">Rocky Egg Sunrise</div>
                         <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
@@ -304,7 +306,7 @@ get_header();
                         </div>
                       </div>
                       <div class="c-overlay"></div>
-                      <figure class="box-image"><img class="image" src="/assets/img/top/img_recipes_top_01.jpg" alt="Rocky Egg Salad"></figure>
+                      <figure class="box-image"><img class="image lazy" src="/assets/img/top/img_recipes_top_01.jpg" alt="Rocky Egg Salad"></figure>
                       <div class="box-content">
                         <div class="c-heading-cmn-01">Rocky Egg Salad</div>
                         <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>

@@ -25,7 +25,7 @@ if ( have_posts() ) {
     // print_r( get_queried_object() );
     $term_obj = get_queried_object();
 
-    if($term_obj->parent == 3) {
+    if($term_obj->parent == 3 || $term_obj->parent == 16) {
       get_template_part( 'templates/akara_egg');
       break;
     } else {

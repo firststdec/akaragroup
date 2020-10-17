@@ -81,11 +81,13 @@
             <figure class="box-image animation-element slide-top"><img class="image" src="<?php echo $product_hows_it_good_content['url']; ?>" alt="<?php echo $product_hows_it_good_content['alt']; ?>"></figure>
             <?php endif; ?>
             <div class="box-content animation-element slide-top">
+              <?php if(get_field('product_hows_it_good_heading')!=''): ?>
               <div class="c-heading-cmn-01">
                 <div class="icon">
                   <div class="i-thumb-white"></div>
-                </div>How is it good?
+                </div><?php echo get_field('product_hows_it_good_heading'); ?>
               </div>
+              <?php endif; ?>
               <?php if(get_field('product_hows_it_good_content')!=''): ?>
               <div class="c-text-cmn-01"><?php echo get_field('product_hows_it_good_content'); ?></div>
               <?php endif; ?>

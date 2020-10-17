@@ -4,6 +4,7 @@
   $main_visual_heading = get_field('main_visual_heading', $term_obj->taxonomy . '_' . $term_obj->term_id);
   $main_visual_content = get_field('main_visual_content', $term_obj->taxonomy . '_' . $term_obj->term_id);
   $product_category_type = get_field('product_category_type', $term_obj->taxonomy . '_' . $term_obj->term_id);
+  $how_is_it_good_heading = get_field('how_is_it_good_heading', $term_obj->taxonomy . '_' . $term_obj->term_id);
   $how_is_it_good_content = get_field('how_is_it_good_content', $term_obj->taxonomy . '_' . $term_obj->term_id);
   $how_is_it_good_image = get_field('how_is_it_good_image', $term_obj->taxonomy . '_' . $term_obj->term_id);
 ?>
@@ -39,10 +40,17 @@
                   if($term_type == $product_category_type):
             ?>
               <div class="c-product-local-nav__item">
+              <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
                 <a class="c-product-local-nav__link <?php echo ($term_obj->slug == $term->slug)? 'is-active':''; ?>" href="<?php echo esc_url( '/product/' . $term->slug ); ?>">
                   <div class="c-product-local-nav__link-icon"><img src="/assets/img/recipes/img_akara_egg<?php echo ($term_obj->slug == $term->slug)? '_active':''; ?>.svg" alt="<?php echo $term->name; ?>"></div>
                   <div class="c-product-local-nav__link-text"><?php echo $term->name; ?></div>
                 </a>
+              <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
+                <a class="c-product-local-nav__link <?php echo ($term_obj->slug == $term->slug)? 'is-active':''; ?>" href="<?php echo esc_url( '/th/product/' . $term->slug ); ?>">
+                  <div class="c-product-local-nav__link-icon"><img src="/assets/img/recipes/img_akara_egg<?php echo ($term_obj->slug == $term->slug)? '_active':''; ?>.svg" alt="<?php echo $term->name; ?>"></div>
+                  <div class="c-product-local-nav__link-text"><?php echo $term->name; ?></div>
+                </a>
+              <?php endif; ?>
               </div>
             <?php
                   endif; // if($term_type == $product_category_type):
@@ -76,12 +84,16 @@
             <figure class="box-image animation-element slide-top"><img class="image" src="<?php echo $how_is_it_good_image['url']; ?>" alt="<?php echo $how_is_it_good_image['alt']; ?>"></figure>
             <?php endif; ?>
             <div class="box-content animation-element slide-top">
+              <?php if($how_is_it_good_heading!=''): ?>
               <div class="c-heading-cmn-01">
                 <div class="icon">
                   <div class="i-thumb-white"></div>
-                </div>How is it good?
+                </div><?php echo $how_is_it_good_heading; ?>
               </div>
+              <?php endif; ?>
+              <?php if($how_is_it_good_content!=''): ?>
               <div class="c-text-cmn-01"><?php echo $how_is_it_good_content; ?></div>
+              <?php endif; ?>
             </div>
           </div>
         </div>
