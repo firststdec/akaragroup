@@ -561,7 +561,7 @@ a {
       font-weight: 500;
 
       @include mq-min-max-tb {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -911,6 +911,10 @@ a {
             padding-left: 75px;
             position: relative;
 
+            @include mq-min-max-tb {
+              padding-left: 30px;
+            }
+
             @include mq-max-sp {
               padding-left: 80px;
             }
@@ -1009,6 +1013,10 @@ a {
             color: $baseColor;
             transition: all .3s ease-in;
 
+            @include mq-min-max-tb {
+              display: block;
+            }
+
             @include mq-max-sp {
               background-size: 8px;
               margin-left: 15px;
@@ -1034,6 +1042,10 @@ a {
             color: $baseColor;
             text-transform: uppercase;
 
+            @include mq-min-max-tb {
+              display: block;
+            }
+
             @include mq-max-sp {
               background-size: 8px;
               margin-left: 55px;
@@ -1052,6 +1064,11 @@ a {
             padding-left: 0;
             text-align: center;
 
+            @include mq-min-max-tb {
+              text-align: left;
+              padding-left: 30px;
+            }
+
             @include mq-max-sp {
               text-align: left;
             }
@@ -1064,6 +1081,10 @@ a {
             background-size: 14px;
             color: $baseColor;
             text-transform: uppercase;
+
+            @include mq-min-max-tb {
+              display: block;
+            }
 
             @include mq-max-sp {
               background-size: 8px;

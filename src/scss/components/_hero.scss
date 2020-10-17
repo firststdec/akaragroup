@@ -4,14 +4,7 @@
   &__inner {
     min-height: 550px;
     margin: auto;
-    background-color: $orange_01;
-    background-image:
-      radial-gradient(
-        circle at top left,
-        $orange_01,
-        $orange_02 50%
-      );
-    // background: url(/assets/img/faq/bg_faq.png) no-repeat center bottom;
+    background: url(/assets/img/faq/bg_faq.png) no-repeat center bottom;
     background-size: cover;
     position: relative;
   }
