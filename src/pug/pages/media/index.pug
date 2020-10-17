@@ -1,0 +1,113 @@
+extends ../../layouts/master.pug
+
+block variables
+  -
+    const index = true
+    const meta = {
+      title: 'Media | Akara Group',
+      keyword: 'Akara Group',
+      description: '',
+      goTitle: 'Akara Group',
+      goDescription: '',
+      goImage: '/assets/img/ogp.png',
+      goUrl: '',
+      twitterTitle: 'Akara Group',
+      twitterDescription: '',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: ''
+    }
+
+    const topPage = false
+    const whiteTheme = true
+
+block prepend css
+  link(rel='stylesheet', href='/assets/css/libs/slick.css')
+block append scripts
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+  script(src='/assets/js/waveWhiteTop.js')
+
+block outside
+
+block content
+  .p-media
+    .c-hero-media
+      .c-hero-media__inner
+        .c-hero-media__text
+          .c-hero-media__heading Media Center
+          .c-hero-media__sub-text Follow us for all the latest AKARA news, photos, videos, event coverage, new products, and much more.
+    .c-media
+      .c-bg-wave-white-solid
+        canvas#canvas-white-top
+      nav.c-media-category
+        .c-media-category__list
+          .c-media-category__item.is-active
+            a.c-media-category__link(href="#")
+              .text All Media
+          .c-media-category__item
+            a.c-media-category__link(href="#")
+              .icon.-press
+               svg(xmlns='http://www.w3.org/2000/svg' width='18' height='17' viewBox='0 0 18 17')
+                text#ico_press(transform='translate(9 14)' fill='#777' font-size='16' font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'")
+                  tspan(x='-8' y='0') 
+              .text Press Release
+          .c-media-category__item
+            a.c-media-category__link(href="#")
+              .icon.-print
+                svg(xmlns='http://www.w3.org/2000/svg' width='19' height='16' viewBox='0 0 19 16')
+                  text#ico_print(transform='translate(9 14)' fill='#777' font-size='16' font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'")
+                    tspan(x='-9' y='0') 
+
+              .text Print Media
+          .c-media-category__item
+            a.c-media-category__link(href="#")
+              .icon.-tv
+                svg(xmlns='http://www.w3.org/2000/svg' width='21' height='17' viewBox='0 0 21 17')
+                  text#ico_tv(transform='translate(10 14)' fill='#777' font-size='16' font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'")
+                    tspan(x='-10' y='0') 
+              .text TV Commercial
+          .c-media-category__item
+            a.c-media-category__link(href="#")
+              .icon.-article
+                svg(xmlns='http://www.w3.org/2000/svg' width='13' height='17' viewBox='0 0 13 17')
+                  text#ico_article(transform='translate(6 14)' fill='#777' font-size='16' font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'")
+                    tspan(x='-6' y='0') 
+              .text Article
+
+      .c-media-list
+        - for (var i = 0; i < 9; ++i)
+          .c-media-list__item.animation-element.slide-top
+            .c-media-list__link
+              .c-media-list__card
+                .c-media-list__frame
+                  img.c-media-list__image(src="/assets/img/media/img_media_01.png", alt="Meida")
+                  .c-media-list__category
+                    .icon.press
+                      svg(xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18')
+                        text#ico_press(transform='translate(9 14)' fill='#fff' font-size='16' font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'")
+                          tspan(x='-8' y='0') 
+                    .text Press Release
+                .c-media-list__heading Heading Media
+                .c-media-list__text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+
+      .c-box-cmn-button.animation-element.slide-top.--center
+        a.c-button-cmn-01.--border-base
+          span.text SEE MORE
+          span.arrow
+            i.fa.fa-arrow-right
+    .l-sec-cmn-01.-box-subscribe
+      .inner
+        .c-box-subscribe.animation-element.slide-top
+          .item.-signup-text
+            .box-sign-up
+          .item
+            .box-heading
+              .heading FOR RECIPES, COUPONS AND OTHER NEWS
+            .box-form
+              .c-input-row
+                input.c-input.-text(type="email", name="email", placeholder="Your E-Mail Address")
+                .c-box-cmn-button
+                  button.c-button-cmn-01(type="submit", value="")
+                    span.text SUBSCRIBE
+                    span.arrow
+                      i.fa.fa-arrow-right

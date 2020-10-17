@@ -1,0 +1,130 @@
+extends ../../layouts/master.pug
+
+block variables
+  -
+    const index = true
+    const meta = {
+      title: 'Detail Page | Media | Akara Group',
+      keyword: 'Akara Group',
+      description: '',
+      goTitle: 'Akara Group',
+      goDescription: '',
+      goImage: '/assets/img/ogp.png',
+      goUrl: '',
+      twitterTitle: 'Akara Group',
+      twitterDescription: '',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: ''
+    }
+
+    const topPage = false
+    const whiteTheme = false
+
+block prepend css
+  link(rel='stylesheet', href='/assets/css/libs/slick.css')
+block append scripts
+  script(src='/assets/js/libs/slick.min.js')
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+  script(src='/assets/js/waveMainVisualSub.js')
+
+block outside
+  //- // loader
+  //- .c-loader
+  //-   .c-loader__icon
+  //-     p.c-loader__text
+  //-       img(src="/assets/img/common/logo@2x.png", alt="")
+  //-     .loader.simple-circle
+  //- // /loader
+  .c-bg-wave-mainvisual-sub
+    .c-bg-wave-mainvisual-solid
+      canvas#canvas-mainvisual
+
+block content
+  .p-media-detail
+    .c-mv-sub-page
+      .c-mv-sub-page__inner
+        .c-mv-sub-page__box-content
+          .c-mv-sub-page__catagory Press Release
+          .c-mv-sub-page__heading Heading Media
+          .c-mv-sub-page__author
+            .date 6 January 2020
+            .separate |
+            .author By Admin
+          a.c-mv-sub-page__anchor-icon.js-scroll.c-scroll-down-button__static-page(href="#scroll_timeline")
+            .c-scroll-down-line
+              .line
+        .c-mv-sub-page__box-image
+          figure.c-mv-sub-page__image-frame
+            img(src="/assets/img/media/img_media_detail.png", alt="")
+    .c-media-detail__content
+      .c-media-detail__content-inner#scroll_timeline
+        p.animation-element.slide-top Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.
+
+        p.animation-element.slide-top In rhoncus luctus dolor a feugiat. Maecenas in suscipit sapien. Vestibulum quis orci sagittis mi vulputate posuere a ac mauris. Integer nunc lacus, egestas ut tellus blandit, congue aliquam mi. Morbi gravida interdum malesuada. Proin vehicula aliquet rhoncus. Cras vitae sem viverra dolor egestas egestas sed porttitor nisl. Morbi porta lorem sapien, at pellentesque felis convallis at. Donec interdum a tellus sed faucibus. Nullam ac mi neque. Nulla ultricies mi quam, eu blandit nisl dignissim pellentesque.
+
+        img.animation-element.slide-top(src="/assets/img/media/img_media_detail_dummy.png", alt="")
+
+        p.animation-element.slide-top Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.
+
+        p.animation-element.slide-top In rhoncus luctus dolor a feugiat. Maecenas in suscipit sapien. Vestibulum quis orci sagittis mi vulputate posuere a ac mauris. Integer nunc lacus, egestas ut tellus blandit, congue aliquam mi. Morbi gravida interdum malesuada. Proin vehicula aliquet rhoncus. Cras vitae sem viverra dolor egestas egestas sed porttitor nisl. Morbi porta lorem sapien, at pellentesque felis convallis at. Donec interdum a tellus sed faucibus. Nullam ac mi neque. Nulla ultricies mi quam, eu blandit nisl dignissim pellentesque.
+
+        p.animation-element.slide-top Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor.
+
+    .c-share-this.animation-element.slide-top
+      .c-share-this__heading SHARE THIS:
+      .c-list-sns
+        .c-list-sns__item
+          a.c-list-sns__link(href="#")
+            .icon
+              svg(xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30')
+                text#_(data-name='' transform='translate(0 26)' fill='#211e1f' font-size='30' font-family="FontAwesome5Brands-Regular, 'Font Awesome 5 Brands'")
+                  tspan(x='0' y='0') 
+        .c-list-sns__item
+          a.c-list-sns__link(href="#")
+            .icon
+              svg(xmlns='http://www.w3.org/2000/svg' width='31' height='30' viewBox='0 0 31 30')
+                text#_(data-name='' transform='translate(0 26)' fill='#211e1f' font-size='30' font-family="FontAwesome5Brands-Regular, 'Font Awesome 5 Brands'")
+                  tspan(x='0' y='0') 
+        .c-list-sns__item
+          a.c-list-sns__link(href="#")
+            .icon
+              svg(xmlns='http://www.w3.org/2000/svg' width='28' height='30' viewBox='0 0 28 30')
+                text#_(data-name='' transform='translate(1 26)' fill='#211e1f' font-size='30' font-family="FontAwesome5Brands-Regular, 'Font Awesome 5 Brands'")
+                  tspan(x='0' y='0') 
+
+    .c-relate-post
+      .c-relate-post__inner
+        .c-relate-post__heading.animation-element.slide-top Related Media
+        .c-media-list
+          - for (var i = 0; i < 4; ++i)
+            .c-media-list__item.animation-element.slide-top
+              .c-media-list__link
+                .c-media-list__card
+                  .c-media-list__frame
+                    img.c-media-list__image(src="/assets/img/media/img_media_01.png", alt="Meida")
+                    .c-media-list__category
+                      .icon.press
+                        svg(xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18')
+                          text#ico_press(transform='translate(9 14)' fill='#fff' font-size='16' font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'")
+                            tspan(x='-8' y='0') 
+                      .text Press Release
+                  .c-media-list__heading Heading Media
+                  .c-media-list__text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+
+    .l-sec-cmn-01.-box-subscribe
+      .inner
+        .c-box-subscribe.animation-element.slide-top
+          .item.-signup-text
+            .box-sign-up
+          .item
+            .box-heading
+              .heading FOR RECIPES, COUPONS AND OTHER NEWS
+            .box-form
+              .c-input-row
+                input.c-input.-text(type="email", name="email", placeholder="Your E-Mail Address")
+                .c-box-cmn-button
+                  button.c-button-cmn-01(type="submit", value="")
+                    span.text SUBSCRIBE
+                    span.arrow
+                      i.fa.fa-arrow-right
