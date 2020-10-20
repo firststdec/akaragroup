@@ -28,6 +28,7 @@ $(function () {
   jsFaqAccordian();
   fakeSwiperMultiControl();
   jsTabWhereToBuy();
+  jsRelatePost();
   jsShopList();
 });
 
@@ -921,4 +922,31 @@ const jsShopList = function() {
   }
 }
 $(window).on('resize', jsShopList);
+
+const jsRelatePost = function() {
+  if($('.js-relate-post-sp').length){
+    if( MQ == 'SP') {
+      if(!$('.js-relate-post-sp').hasClass('slick-initialized')) {
+        $('.js-relate-post-sp').slick({
+          dots: false,
+          arrows: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></button>',
+          nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></button>',
+        });
+      }
+      $('.js-relate-post-sp').slick('setPosition');
+    } else {
+      if($('.js-relate-post-sp').hasClass('slick-initialized')) {
+        $('.js-relate-post-sp').slick('destroy');
+      }
+    }
+  }
+}
+
+
+$(window).on('resize', jsRelatePost);
 

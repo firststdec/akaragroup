@@ -4,7 +4,7 @@ block variables
   -
     const index = true
     const meta = {
-      title: 'Where to Buy | Akara Group',
+      title: 'News | Akara Group',
       keyword: 'Akara Group',
       description: '',
       goTitle: 'Akara Group',
@@ -28,136 +28,75 @@ block append scripts
   script(src='/assets/js/waveWhiteTop.js')
 
 block outside
-  //- // loader
-  //- .c-loader
-  //-   .c-loader__icon
-  //-     p.c-loader__text
-  //-       img(src="/assets/img/common/logo@2x.png", alt="")
-  //-     .loader.simple-circle
-  //- // /loader
 
 block content
-  .p-where-to-buy
-    .c-hero-where-to-buy
-      .c-hero-where-to-buy__inner
-        .c-hero-where-to-buy__text
-          .c-hero-where-to-buy__heading Where to buy
-          .c-hero-where-to-buy__sub-text You can find Akara products by selecting your nearby distributors and supermarket from the list below.
-    .c-where-to-buy
+  .p-media
+    .c-hero-media
+      .c-hero-media__inner.-news
+        .c-hero-media__text
+          .c-hero-media__heading News, Activity, and Event
+          .c-hero-media__sub-text Follow us for all the latest AKARA news, photos, videos, event coverage, new products, and much more.
+    .c-media
       .c-bg-wave-white-solid
         canvas#canvas-white-top
-      .c-where-to-buy__box-list-tab
-        .c-where-to-buy__list-tab.animation-element.slide-top
-          .c-where-to-buy__list-tab-item.is-active.c-trgger-01(data-tab='c-tab-01')
-            .icon
-              .c-icon-building
-            .text Modern Trade
-          .c-where-to-buy__list-tab-item.c-trgger-02(data-tab='c-tab-02')
-            .icon
-              .c-icon-our-store
-            .text Our Store
-          .c-where-to-buy__list-tab-item.c-trgger-03(data-tab='c-tab-03')
-            .icon
-              .c-icon-point
-            .text Point of <br>Purchase
-          .c-where-to-buy__list-tab-item.c-trgger-04(data-tab='c-tab-04')
-            .icon
-              .c-icon-online-store
-            .text Online
+      nav.c-media-category.u-no-sp
+        .c-media-category__list
+          .c-media-category__item.is-active
+            a.c-media-category__link(href="#")
+              .text.u-ml-0 All
+          .c-media-category__item
+            a.c-media-category__link(href="#")
+              .icon.-press
+               svg(xmlns='http://www.w3.org/2000/svg' width='19' height='16' viewBox='0 0 19 16')
+                text#_(data-name='' transform='translate(9 14)' fill='#777' font-size='16' font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'")
+                  tspan(x='-9' y='0') 
+              .text News
+          .c-media-category__item
+            a.c-media-category__link(href="#")
+              .icon.-print
+                svg(xmlns='http://www.w3.org/2000/svg' width='14' height='17' viewBox='0 0 14 17')
+                  text#_(data-name='' transform='translate(7 14)' fill='#777' font-size='16' font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'")
+                    tspan(x='-6.5' y='0') 
+              .text Activities
+          .c-media-category__item
+            a.c-media-category__link(href="#")
+              .icon.-tv
+                svg(xmlns='http://www.w3.org/2000/svg' width='22' height='18' viewBox='0 0 22 18')
+                  text#_(data-name='' transform='translate(11 15)' fill='#777' font-size='16' font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'")
+                    tspan(x='-10' y='0') 
+              .text Events
 
-      .c-where-to-buy__list-tab-content.animation-element.slide-top
-        .c-where-to-buy__list-tab-content-box.c-tab-01.is-active
-          .c-triangle.-tab-01
-          .c-where-to-buy__list-tab-content-box-list
-            .c-where-to-buy__list-shop.js-swiper-shop
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_01.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_02.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_03.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_04.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_01.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_02.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_03.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_04.svg", alt="")
+      .c-media-category-dropdown.u-no-tb.u-no-pc
+        svg(xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8')
+          path#Polygon_2(data-name='Polygon 2' d='M6,0l6,8H0Z' transform='translate(12 8) rotate(180)' fill='#777')
 
-        .c-where-to-buy__list-tab-content-box.c-tab-02
-          .c-triangle.-tab-02
-          .c-where-to-buy__list-tab-content-box-list
-            .c-where-to-buy__list-shop.js-swiper-shop
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_02.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_03.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_04.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_01.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_02.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_03.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_04.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_01.svg", alt="")
+        select.c-media-category-select(name="category")
+          option(value="") All
+          option(value="") News
+          option(value="") Activities
+          option(value="") Events
 
-        .c-where-to-buy__list-tab-content-box.c-tab-03
-          .c-triangle.-tab-03
-          .c-where-to-buy__list-tab-content-box-list
-            .c-where-to-buy__list-shop.js-swiper-shop
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_03.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_04.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_01.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_02.svg", alt="")
+      .c-media-list
+        - for (var i = 0; i < 9; ++i)
+          .c-media-list__item.animation-element.slide-top
+            a.c-media-list__link(href="/news/detail.html")
+              .c-media-list__card
+                .c-media-list__frame
+                  img.c-media-list__image(src="/assets/img/news/img_news_dummy.png", alt="News")
+                  .c-media-list__category
+                    .icon.press
+                      svg(xmlns='http://www.w3.org/2000/svg' width='19' height='16' viewBox='0 0 19 16')
+                        text#_(data-name='' transform='translate(9 14)' fill='#777' font-size='16' font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'")
+                          tspan(x='-9' y='0') 
+                    .text News
+                .c-media-list__heading Heading News & Activity
+                .c-media-list__text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 
-        .c-where-to-buy__list-tab-content-box.c-tab-04
-          .c-triangle.-tab-04
-          .c-where-to-buy__list-tab-content-box-list
-            .c-where-to-buy__list-shop.js-swiper-shop
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_04.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_01.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_02.svg", alt="")
-              .c-where-to-buy__list-shop-item
-                a.c-where-to-buy__list-shop-link(href="#")
-                  img(src="/assets/img/where-to-buy/img_where_to_buy_03.svg", alt="")
-
+      .c-box-cmn-button.animation-element.slide-top.--center
+        a.c-button-cmn-01.--border-base
+          span.text SEE MORE
+          span.arrow
+            i.fa.fa-arrow-right
     .l-sec-cmn-01.-box-subscribe
       .inner
         .c-box-subscribe.animation-element.slide-top

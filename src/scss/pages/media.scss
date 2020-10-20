@@ -12,6 +12,10 @@
       @include mq-min-max-tb {
         min-height: get-vw(566px);
       }
+
+      &.-news {
+        background: url(/assets/img/news/img_news_activites_mv.png) no-repeat center bottom;
+      }
     }
 
     &__text {
@@ -54,11 +58,45 @@
 
     .c-bg-wave-white-solid {
       top: -70px;
+
+      @include mq-max-sp {
+        top: -140px;
+      }
     }
 
     .c-box-cmn-button {
-      margin: 100px auto 0;
+      margin: 100px auto 50px;
       text-align: center;
+
+      .c-button-cmn-01 {
+        @include mq-max-sp {
+          padding-right: 30px;
+        }
+
+        &::before {
+          @include mq-max-sp {
+            width: 100%;
+            background: #211E1F;
+            color: #FFC416;
+          }
+        }
+
+        .text {
+          @include mq-max-sp {
+            opacity: 1;
+            font-size: 1.4rem;
+            padding: 0 10px 0 15px;
+            color: #FFC416;
+          }
+        }
+
+        .arrow {
+          @include mq-max-sp {
+            opacity: 1;
+            color: #FFC416;
+          }
+        }
+      }
     }
   }
 
@@ -110,6 +148,10 @@
       align-items: center;
       transition: border 0.3s ease-in;
 
+      @include mq-min-max-tb {
+        padding: 10px get-vw(40px);
+      }
+
       > .icon {
         display: flex;
         flex-wrap: wrap;
@@ -153,11 +195,29 @@
       padding: 0 20px;
     }
 
+    @include mq-max-sp {
+      margin-top: 50px;
+      padding: 0 30px;
+    }
+
     &__item {
       width: 31.78%;
 
+      @include mq-max-sp {
+        width: 100%;
+        text-align: center;
+      }
+
+      &:not(:first-of-type) {
+        @include mq-max-sp {
+          margin-top: 40px;
+        }
+      }
+
       &:nth-of-type(n+4) {
-        margin-top: 50px;
+        @include mq-min-tb {
+          margin-top: 50px;
+        }
       }
 
       &:hover {
@@ -259,16 +319,59 @@
       font-size: 3.2rem;
       line-height: 1.3;
       transition: color 0.3s ease-out;
+
+      @include mq-max-sp {
+        margin: 20px auto 0;
+        font-size: 2.2rem;
+        width: 100%;
+      }
     }
 
     &__text {
       margin-top: 10px;
       color: #777777;
+
+      @include mq-max-sp {
+        font-size: 1.4rem;
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 
   .-box-subscribe .inner {
     background: none;
+  }
+
+  .c-media-category-dropdown {
+    @include mq-max-sp {
+      width: calc(100% - 60px);
+      margin: 80px auto 0;
+      position: relative;
+    }
+
+    svg {
+      @include mq-max-sp {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .c-media-category-select {
+    @include mq-max-sp {
+      padding: 0 30px;
+      width: 100%;
+      min-height: 45px;
+      padding: 10px 30px;
+      line-height: 1.3;
+      border: 2px solid $baseColor;
+      border-radius: 36px;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
   }
 
   &-detail {
@@ -284,6 +387,10 @@
           position: absolute;
           left: 30px;
           top: 90px;
+
+          @include mq-max-sp {
+            display: none;
+          }
         }
       }
     }
@@ -295,23 +402,52 @@
       font-size: 1.4rem;
       color: #777777;
 
+      @include mq-max-sp {
+        display: block;
+      }
+
       .separate {
         padding: 0 10px;
+
+        @include mq-max-sp {
+          padding: 0;
+          display: inline-block;
+        }
+      }
+
+      .author {
+        @include mq-max-sp {
+          display: inline-block;
+        }
+      }
+    }
+
+    .c-mv-sub-page__inner {
+      @include mq-max-sp {
+        min-height: 600px;
       }
     }
 
     .c-media-detail {
       &__content {
+        @include mq-max-sp {
+          padding: 0 30px;
+        }
+
         &-inner {
           color: #777777;
           max-width: 1070px;
           margin: 0 auto;
           padding-top: 20px;
-  
+
           :not(img) {
             max-width: 850px;
             margin: 50px auto 0;
-  
+
+            @include mq-max-sp {
+              margin: 30px auto 0;
+            }
+
             &:first-of-type {
               margin-top: 0;
             }
@@ -319,6 +455,10 @@
 
           * + img {
             margin-top: 50px;
+
+            @include mq-max-sp {
+              margin-top: 30px;;
+            }
           }
 
           img {
@@ -336,6 +476,10 @@
       justify-content: center;
       margin-top: 100px;
 
+      @include mq-max-sp {
+        margin-top: 50px;
+      }
+
       &__heading {
         margin-right: 15px;
       }
@@ -344,11 +488,25 @@
     .c-relate-post {
       margin-top: 100px;
 
+      @include mq-min-max-tb {
+        padding: 0 20px;
+      }
+
+      @include mq-max-sp {
+        margin-top: 50px;
+        padding: 0 30px;
+      }
+
       &__inner {
         max-width: 1290px;
         margin: 0 auto;
         border-top: 5px dotted #DCDCDC;
         padding-top: 100px;
+
+        @include mq-max-sp {
+          padding-top: 50px;
+          border-top: 2px dotted #DCDCDC;
+        }
 
         .c-media-list {
           display: flex;
@@ -356,8 +514,23 @@
           justify-content: space-between;
           margin-top: 50px;
 
+          @include mq-max-sp {
+            margin-top: 30px;
+            margin-bottom: 100px;
+          }
+
           &__item {
             width: 24%;
+
+            @include mq-max-sp {
+              width: 100%;
+            }
+
+            &:not(:first-of-type) {
+              @include mq-max-sp {
+                margin-top: 40px;
+              }
+            }
 
             &:hover {
               cursor: pointer;
@@ -457,11 +630,24 @@
             font-size: 3.2rem;
             line-height: 1.3;
             transition: color 0.3s ease-out;
+            width: 100%;
+
+            @include mq-max-sp {
+              font-size: 2.2rem;
+              margin: 20px auto 0;
+              text-align: center;
+            }
           }
 
           &__text {
             margin-top: 10px;
             color: #777777;
+
+            @include mq-max-sp {
+              width: 100%;
+              text-align: center;
+              font-size: 1.4rem;
+            }
           }
         }
       }
@@ -471,6 +657,77 @@
         text-align: center;
         line-height: 1.3;
         padding: 0 20px;
+
+        @include mq-max-sp {
+          font-size: 2.4rem;
+        }
+      }
+    }
+
+    .js-relate-post-sp {
+      position: relative;
+
+      .slick-list {
+        @include mq-max-sp {
+          width: 100%;
+        }
+      }
+
+      .slick-track {
+        @include mq-max-sp {
+
+        }
+      }
+
+      .slick-arrow {
+        @include mq-max-sp {
+          position: absolute;
+          bottom: -50px;
+          z-index: 10;
+          outline: none;
+          width: 34px;
+          height: 34px;
+          background: #fff;
+          border-radius: 100%;
+          box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.16);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          transition: all .3s;
+
+          .fas {
+            color: #DCDCDC;
+            transition: all .3s;
+          }
+
+          &:hover {
+            background: $baseColor;
+
+            .fas {
+              color: $yellow;
+            }
+          }
+        }
+      }
+
+      .slick-prev {
+        @include mq-max-sp {
+          left: 50%;
+          transform: translateX(-110%);
+        }
+      }
+
+      .slick-next {
+        @include mq-max-sp {
+          right: 50%;
+          transform: translateX(110%);
+        }
+      }
+
+      .slick-disabled {
+        @include mq-max-sp {
+          // opacity: 0;
+        }
       }
     }
 
@@ -479,14 +736,13 @@
       justify-content: center;
       align-items: center;
 
-      @include mq-max-sp {
-        width: 100%;
-        margin-top: 20px;
-      }
-
       &__item {
         &:not(:first-of-type) {
           margin-left: 20px;
+
+          @include mq-max-sp {
+            margin-left: 10px;
+          }
         }
       }
 
@@ -497,6 +753,13 @@
 
           @include mq-max-sp {
             font-size: 2rem;
+          }
+        }
+
+        svg {
+          @include mq-max-sp {
+            width: auto;
+            height: 18px;
           }
         }
       }
