@@ -946,7 +946,6 @@ const jsRelatePost = function() {
     }
   }
 }
-
-
 $(window).on('resize', jsRelatePost);
+
 

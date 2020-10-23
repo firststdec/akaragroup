@@ -34,6 +34,8 @@ block append scripts
   script(src='/assets/js/waveWhiteBottom.js')
   script(src='/assets/js/waveOrangeBottom.js')
   script(src='/assets/js/waveMainVisual.js')
+  script(src='/assets/js/bundle.js')
+
 
 block outside
   // loader
@@ -95,10 +97,17 @@ block content
         .c-box-card-row-01.-reverse.-yellow-egg
           .c-wave-yellow
             canvas#canvas-yellow-02
-          figure.box-image
+          figure.box-image.js-packshot
             .c-deco-yellow-egg.animation-element.slide-top
-            img.image.animation-element.slide-right(src="/assets/img/top/img_product_01.png", alt="Akara")
-            .c-open-package.--yellow
+            .image.is-active.animation-element.slide-right
+              .p-egg-box
+                .p-egg-box__box.p-egg-box__box-01
+                  img(src='/assets/img/common/egg_1.png' alt='')
+                  img(src='/assets/img/common/egg_2.png' alt='')
+                  img(src='/assets/img/common/egg_3.png' alt='')
+                  img(src='/assets/img/common/egg_4.png' alt='')
+                  img(src='/assets/img/common/egg_5.png' alt='')
+            .c-open-package.--yellow.animation-element.slide-top.p-egg-box__button-01
           .box-content
             a.js-scroll.c-scroll-down-button(href="#scroll_yellow_egg")
               .c-scroll-down-line
@@ -119,8 +128,15 @@ block content
         .c-box-card-row-01.-green-egg
           figure.box-image
             .c-deco-green-hen.animation-element.slide-top
-            img.image.animation-element.slide-left(src="/assets/img/top/img_product_02.png", alt="Akara Group")
-            .c-open-package.--green.animation-element.slide-top
+            .image.animation-element.slide-left
+              .p-egg-box
+                .p-egg-box__box.p-egg-box__box-02
+                  img(src='/assets/img/common/egg_1.png' alt='')
+                  img(src='/assets/img/common/egg_2.png' alt='')
+                  img(src='/assets/img/common/egg_3.png' alt='')
+                  img(src='/assets/img/common/egg_4.png' alt='')
+                  img(src='/assets/img/common/egg_5.png' alt='')
+            .c-open-package.--green.animation-element.slide-top.p-egg-box__button-02
           .box-content
             .c-egg.animation-element.slide-top#scroll_yellow_egg
             .c-egg-deco-top.animation-element.slide-top
@@ -142,8 +158,15 @@ block content
             .c-hen-deco-orange.animation-element.slide-top
             .c-egg-deco-orange.animation-element.slide-top
             .c-line-deco-orange.animation-element.slide-top
-            img.image.animation-element.slide-right(src="/assets/img/top/img_product_03.png", alt="Akaragroup")
-            .c-open-package.--orange.animation-element.slide-top
+            .image.animation-element.slide-right
+              .p-egg-box
+                .p-egg-box__box.p-egg-box__box-03
+                  img(src='/assets/img/common/egg_1.png' alt='')
+                  img(src='/assets/img/common/egg_2.png' alt='')
+                  img(src='/assets/img/common/egg_3.png' alt='')
+                  img(src='/assets/img/common/egg_4.png' alt='')
+                  img(src='/assets/img/common/egg_5.png' alt='')
+            .c-open-package.--orange.animation-element.slide-top.p-egg-box__button-03
           .box-content
             .c-egg.animation-element.slide-top
             .c-mori-tama-egg.animation-element.slide-top

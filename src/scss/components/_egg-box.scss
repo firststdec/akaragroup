@@ -1,0 +1,16 @@
+.p-egg-box {
+  position: relative;
+
+  &__box {
+    position: relative;
+
+    img {
+      &:not(:first-child) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}

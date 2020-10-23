@@ -338,8 +338,9 @@
       }
 
       .image {
-        position: relative;
+        position: absolute;
         right: 150px;
+        visibility: hidden;
 
         @include mq-max-sp {
           width: 260px;
@@ -348,6 +349,10 @@
 
         @include mq-min-max-tb {
           right: get-vw(150px);
+        }
+
+        &.is-active {
+          visibility: visible;
         }
       }
     }
@@ -569,6 +574,11 @@
       @include mq-min-max-tb {
         max-width: get-vw(635px);
         margin-top: get-vw(50px);
+      }
+
+      .image {
+        top: 0;
+        position: absolute;
       }
 
       .c-deco-green-hen {
@@ -825,6 +835,11 @@
 
       @include mq-min-max-tb {
         max-width: get-vw(600px);
+      }
+
+      .image {
+        position: absolute;
+        bottom: 0;
       }
 
       .c-hen-deco-orange {
