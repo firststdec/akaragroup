@@ -91,8 +91,17 @@ get_header();
               <canvas id="canvas-yellow-02"></canvas>
             </div>
             <figure class="box-image">
-              <div class="c-deco-yellow-egg animation-element slide-top"></div><img class="image lazy animation-element slide-right" src="/assets/img/top/img_product_01.png" alt="Akara">
-              <div class="c-open-package --yellow"></div>
+              <div class="c-deco-yellow-egg animation-element slide-top"></div>
+              <div class="image is-active animation-element slide-right">
+                <div class="p-egg-box">
+                  <div class="p-egg-box__box p-egg-box__box-01">
+                    <img class="lazy" src="/assets/img/top/akara-eggs/akara-egg-01.png" alt="">
+                    <img class="lazy" src="/assets/img/top/akara-eggs/akara-egg-02.png" alt="">
+                    <img class="lazy" src="/assets/img/top/akara-eggs/akara-egg-03.png" alt="">
+                  </div>
+                  <div class="c-open-package --yellow animation-element slide-top p-egg-box__button-01"></div>
+                </div>
+              </div>
             </figure>
             <div class="box-content"><a class="js-scroll c-scroll-down-button" href="#scroll_yellow_egg">
                 <div class="c-scroll-down-line"></div></a>
@@ -113,8 +122,17 @@ get_header();
           </div>
           <div class="c-box-card-row-01 -green-egg">
             <figure class="box-image">
-              <div class="c-deco-green-hen animation-element slide-top"></div><img class="lazy image animation-element slide-left" src="/assets/img/top/img_product_02.png" alt="Akara Group">
-              <div class="c-open-package --green animation-element slide-top"></div>
+              <div class="c-deco-green-hen animation-element slide-top"></div>
+              <div class="image animation-element slide-left">
+                <div class="p-egg-box">
+                  <div class="p-egg-box__box p-egg-box__box-02">
+                    <img class="lazy" src="/assets/img/top/akara-eggology/akara-eggology-01.png" alt="">
+                    <img class="lazy" src="/assets/img/top/akara-eggology/akara-eggology-02.png" alt="">
+                    <img class="lazy" src="/assets/img/top/akara-eggology/akara-eggology-03.png" alt="">
+                  </div>
+                  <div class="c-open-package --green animation-element slide-top p-egg-box__button-02"></div>
+                </div>
+              </div>
             </figure>
             <div class="box-content">
               <div class="c-egg animation-element slide-top" id="scroll_yellow_egg"></div>
@@ -137,8 +155,15 @@ get_header();
             <figure class="box-image">
               <div class="c-hen-deco-orange animation-element slide-top"></div>
               <div class="c-egg-deco-orange animation-element slide-top"></div>
-              <div class="c-line-deco-orange animation-element slide-top"></div><img class="image lazy animation-element slide-right" src="/assets/img/top/img_product_03.png" alt="Akaragroup">
-              <div class="c-open-package --orange animation-element slide-top"></div>
+              <div class="c-line-deco-orange animation-element slide-top"></div>
+              <div class="image animation-element slide-right">
+                <div class="p-egg-box">
+                  <div class="p-egg-box__box p-egg-box__box-03">
+                    <img class="lazy" src="/assets/img/top/akara-ise/akara-ise.png" alt="">
+                  </div>
+                  <div class="c-open-package --orange animation-element slide-top p-egg-box__button-03"></div>
+                </div>
+              </div>
             </figure>
             <div class="box-content">
               <div class="c-egg animation-element slide-top"></div>
@@ -237,9 +262,9 @@ get_header();
                         </div>
                       </div>
                       <div class="c-overlay"></div>
-                      <figure class="box-image"><img class="image lazy" src="/assets/img/top/img_recipes_top_02.jpg" alt="Cheesy Breaks"></figure>
+                      <figure class="box-image"><img class="image lazy" src="/assets/img/recipes/boiler_egg.jpg" alt="ไข่ต้มยางมะตูม"></figure>
                       <div class="box-content">
-                        <div class="c-heading-cmn-01">Cheesy Breaks</div>
+                        <div class="c-heading-cmn-01">ไข่ต้มยางมะตูม</div>
                         <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
                       </div>
                     </div>
@@ -260,9 +285,9 @@ get_header();
                         </div>
                       </div>
                       <div class="c-overlay"></div>
-                      <figure class="box-image"><img class="image lazy" src="/assets/img/top/img_recipes_top_03.jpg" alt="Italian Fried Egg"></figure>
+                      <figure class="box-image"><img class="image lazy" src="/assets/img/recipes/fried_egg.jpg" alt="ไข่ดาวกรอบ"></figure>
                       <div class="box-content">
-                        <div class="c-heading-cmn-01">Italian Fried Egg</div>
+                        <div class="c-heading-cmn-01">ไข่ดาวกรอบ</div>
                         <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
                       </div>
                     </div>
@@ -283,9 +308,9 @@ get_header();
                         </div>
                       </div>
                       <div class="c-overlay"></div>
-                      <figure class="box-image"><img class="image lazy" src="/assets/img/top/img_recipes_top_04.jpg" alt="Rocky Egg Sunrise"></figure>
+                      <figure class="box-image"><img class="image lazy" src="/assets/img/recipes/omlet.jpg" alt="ไข่เจียวฟูนุ่ม"></figure>
                       <div class="box-content">
-                        <div class="c-heading-cmn-01">Rocky Egg Sunrise</div>
+                        <div class="c-heading-cmn-01">ไข่เจียวฟูนุ่ม</div>
                         <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
                       </div>
                     </div>
@@ -306,9 +331,32 @@ get_header();
                         </div>
                       </div>
                       <div class="c-overlay"></div>
-                      <figure class="box-image"><img class="image lazy" src="/assets/img/top/img_recipes_top_01.jpg" alt="Rocky Egg Salad"></figure>
+                      <figure class="box-image"><img class="image lazy" src="/assets/img/recipes/coffee_egg.jpg" alt="กาแฟไข่"></figure>
                       <div class="box-content">
-                        <div class="c-heading-cmn-01">Rocky Egg Salad</div>
+                        <div class="c-heading-cmn-01">กาแฟไข่</div>
+                        <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="article-content">
+                    <div class="c-shadow"></div>
+                    <div class="c-box-card-01 -full">
+                      <div class="c-badge__list">
+                        <div class="c-badge__item -level">
+                          <div class="icon"></div>
+                          <div class="text">Easy</div>
+                        </div>
+                        <div class="c-badge__item -time">
+                          <div class="icon"></div>
+                          <div class="text">30 mins</div>
+                        </div>
+                      </div>
+                      <div class="c-overlay"></div>
+                      <figure class="box-image"><img class="image lazy" src="/assets/img/recipes/floating_island.jpg" alt="Floating Island"></figure>
+                      <div class="box-content">
+                        <div class="c-heading-cmn-01">Floating Island</div>
                         <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
                       </div>
                     </div>
@@ -319,28 +367,7 @@ get_header();
           </div>
         </div>
       </div>
-      <div class="l-sec-cmn-01 -box-subscribe">
-        <div class="inner">
-          <div class="c-box-subscribe animation-element slide-top">
-            <div class="item -signup-text">
-              <div class="box-sign-up"></div>
-            </div>
-            <div class="item">
-              <div class="box-heading">
-                <div class="heading">FOR RECIPES, COUPONS AND OTHER NEWS</div>
-              </div>
-              <div class="box-form">
-                <div class="c-input-row">
-                  <input class="c-input -text" type="email" name="email" placeholder="Your E-Mail Address">
-                  <div class="c-box-cmn-button">
-                    <button class="c-button-cmn-01" type="submit" value=""><span class="text">SUBSCRIBE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <?php get_template_part( 'templates/subscriber'); ?>
     </div>
   </div>
 </main>

@@ -150,6 +150,46 @@ get_header();
                             <!-- Additional required wrapper-->
                             <div class="swiper-wrapper">
                               <!-- Slides-->
+                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_08.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_09.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_10.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_07.png" alt=""></div>
+                            </div>
+                            <!-- If we need navigation buttons-->
+                            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                            <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+                          </div>
+                          <div class="c-fake-nav-control">
+                            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                            <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+                          </div>
+                        </div>
+                      </div>
+                      <?php
+                        if(ICL_LANGUAGE_CODE == 'en') {
+                          $sub_heading_02 = 'Fresh chicken eggs from healthy hens.';
+                          $sub_content_02 = 'Expert in egg manufacturing with over 25 years of experience with a standard production of over 2 million eggs per day. Fresh from the farm every day Quality control at every step Therefore getting eggs that are fresh, clean, safe and meet international standards.';
+                        } elseif (ICL_LANGUAGE_CODE == 'th') {
+                          $sub_heading_02 = 'ไข่ไก่สดจากแม่ไก่สุขภาพดี';
+                          $sub_content_02 = 'ผู้เชี่ยวชาญด้านการผลิตไข่ไก่ที่มีประสบการณ์ยาวนานกว่า 25 ปี ด้วยมาตรฐานในการผลิตกว่า 2 ล้านฟองต่อวัน สดใหม่จากฟาร์มทุกวัน ควบคุมคุณภาพในทุกขั้นตอน จึงได้ไข่ไก่ที่สด สะอาด ปลอดภัยและได้มาตรฐานระดับสากล ';
+                        }
+                      ?>
+                      <div class="c-our-brand__card-content">
+                        <div class="c-our-brand__card-content-heading-logo"><img src="/assets/img/about-us/ico_logo_about_us_02.svg" alt=""></div>
+                        <div class="c-our-brand__card-content-heading-sub"><?php echo $sub_heading_02; ?></div>
+                        <div class="c-our-brand__card-content-text"><?php echo $sub_content_02; ?></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-our-brand__item animation-element slide-top">
+                    <div class="c-our-brand__card">
+                      <div class="c-our-brand__card-image">
+                        <div class="c-our-brand__card-frame">
+                          <!-- Slider main container-->
+                          <div class="swiper-container js-slider-multi">
+                            <!-- Additional required wrapper-->
+                            <div class="swiper-wrapper">
+                              <!-- Slides-->
                               <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_07.png" alt=""></div>
                               <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_08.png" alt=""></div>
                               <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_09.png" alt=""></div>
@@ -165,72 +205,19 @@ get_header();
                           </div>
                         </div>
                       </div>
+                      <?php
+                        if(ICL_LANGUAGE_CODE == 'en') {
+                          $sub_heading_01 = 'Hygienic eggs add value to every moment of your life.';
+                          $sub_content_01 = 'Fresh and hygienic chicken eggs, Akara chicken eggs that have been certified by the Department of Livestock Development, the first in Thailand, guaranteed fresh, clean, safe from hormones. And antibiotics Standardized in every bubble.';
+                        } elseif (ICL_LANGUAGE_CODE == 'th') {
+                          $sub_heading_01 = 'ไข่ไก่อนามัยเติมคุณค่าในทุกช่วงเวลาของคุณ ';
+                          $sub_content_01 = 'ไข่ไก่สดอนามัย อัครา ไข่ไก่ที่ได้รับการรับรองมาตรฐานจากกรมปศุสัตว์รายแรกในประเทศไทย การันตีความ สด สะอาด ปลอดภัยจากสารเร่งฮอร์โมน และยาปฏิชีวนะ ได้มาตรฐานในทุกฟอง';
+                        }
+                      ?>
                       <div class="c-our-brand__card-content">
                         <div class="c-our-brand__card-content-heading-logo"><img src="/assets/img/about-us/ico_logo_about_us_01.svg" alt=""></div>
-                        <div class="c-our-brand__card-content-heading-sub">เพราะทุกคำคือธรรมชาติ</div>
-                        <div class="c-our-brand__card-content-text">เป็นผลิตภัณฑ์ ที่มีการควบคุมกระบวนการผลิตตั้งแต่ต้นกระบวนการให้ปลอดภัย ปลอดสารเร่งและปลอดยาปฏิชีวนะ จนได้ผลผลิต “ไข่ไก่ออร์แกนิค ปลอดภัย” ได้การรับรองมาตรฐาน GMP/HACCP และ DLD Certificate 2016 ของกรมปศุสัตว์ รายแรกของประเทศไทยเพื่อให้ประชาชนได้บริโภคสินค้าที่มีคุณภาพและปลอดภัย</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="c-our-brand__item animation-element slide-top">
-                    <div class="c-our-brand__card">
-                      <div class="c-our-brand__card-image">
-                        <div class="c-our-brand__card-frame">
-                          <!-- Slider main container-->
-                          <div class="swiper-container js-slider-multi">
-                            <!-- Additional required wrapper-->
-                            <div class="swiper-wrapper">
-                              <!-- Slides-->
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_08.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_09.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_10.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_07.png" alt=""></div>
-                            </div>
-                            <!-- If we need navigation buttons-->
-                            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
-                            <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
-                          </div>
-                          <div class="c-fake-nav-control">
-                            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
-                            <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="c-our-brand__card-content">
-                        <div class="c-our-brand__card-content-heading-logo"><img src="/assets/img/about-us/ico_logo_about_us_02.svg" alt=""></div>
-                        <div class="c-our-brand__card-content-heading-sub">“ไข่ไก่สดจากแม่ไก่สุขภาพดี”</div>
-                        <div class="c-our-brand__card-content-text">ไข่ไก่คุณภาพดีเยี่ยม ที่เปี่ยมด้วยคุณภาพและสารอาหาร ผ่านกระบวนการผลิตภายใต้การควบคุมคุณภาพด้วยเทคโนโลยีระดับสูง เป็นที่ยอมรับในระดับสากลด้วยมาตรฐาน ISO 22000, GAP, GMP/HACCP และ Halal จึงมั่นใจได้ว่าไข่ไก่ของเรามีคุณภาพสูง</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="c-our-brand__item animation-element slide-top">
-                    <div class="c-our-brand__card">
-                      <div class="c-our-brand__card-image">
-                        <div class="c-our-brand__card-frame">
-                          <!-- Slider main container-->
-                          <div class="swiper-container js-slider-multi">
-                            <!-- Additional required wrapper-->
-                            <div class="swiper-wrapper">
-                              <!-- Slides-->
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_09.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_10.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_07.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_08.png" alt=""></div>
-                            </div>
-                            <!-- If we need navigation buttons-->
-                            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
-                            <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
-                          </div>
-                          <div class="c-fake-nav-control">
-                            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
-                            <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="c-our-brand__card-content">
-                        <div class="c-our-brand__card-content-heading-logo"><img src="/assets/img/about-us/ico_logo_about_us_03.svg" alt=""></div>
-                        <div class="c-our-brand__card-content-heading-sub">เพราะทุกคำคือธรรมชาติ</div>
-                        <div class="c-our-brand__card-content-text">ฟาร์มไข่ไท เต้าหู้ไข่ไก่แท้ที่สดใหม่ สะอาด ผ่านกระบวนการผลิตจากมือของคนไทย ด้วยมาตรฐาน ISO 22000, GMP/HACCP และ อย. สดทุกวันส่งตรงถึงมือผู้บริโภคแบบวันต่อวัน ฟาร์มไข่ไทเต้าหู้ไข่ไก่แท้เต็มหลอด อุดมไปด้วยสารอาหาร อร่อยและมีประโยชน์ต่อสุขภาพ</div>
+                        <div class="c-our-brand__card-content-heading-sub"><?php echo $sub_heading_01; ?></div>
+                        <div class="c-our-brand__card-content-text"><?php echo $sub_content_01; ?></div>
                       </div>
                     </div>
                   </div>
@@ -258,10 +245,57 @@ get_header();
                           </div>
                         </div>
                       </div>
+                      <?php
+                        if(ICL_LANGUAGE_CODE == 'en') {
+                          $sub_heading_04 = '';
+                          $sub_content_04 = 'Free premium fresh chicken eggs, Japanese style It is formed through a collaboration between AKARA Group and ISE Food, Inc., a major egg leader in Japan. Through the production process from a specific technology Resulting in fresh, clean, germ-free eggs Can be eaten raw under the brand MORI-TAMA.';
+                        } elseif (ICL_LANGUAGE_CODE == 'th') {
+                          $sub_heading_04 = '';
+                          $sub_content_04 = 'ไข่ไก่สดระดับฟรีเมี่ยมสไตล์ญี่ปุ่น เกิดขึ้นจากความร่วมมือระหว่าง AKARA Group และ ISE Food , Inc ผู้นำด้านไข่ไก่รายใหญ่ในญี่ปุ่น ผ่านกระบวนการผลิตจากเทคโนโลยีเฉพาะ ทำให้ได้ไข่ที่สด สะอาด ปราศจากเชื้อโรค สามารถทานดิบได้ ภายใต้แบรนด์ MORI-TAMA ';
+                        }
+                      ?>
                       <div class="c-our-brand__card-content">
                         <div class="c-our-brand__card-content-heading-logo"><img src="/assets/img/about-us/ico_logo_about_us_04.svg" alt=""></div>
-                        <div class="c-our-brand__card-content-heading-sub">ไข่ไก่คุณภาพมาตรฐานโลก กินดิบได้สไตล์ญี่ปุ่น</div>
-                        <div class="c-our-brand__card-content-text">ไข่ไก่สด ระดับพรีเมี่ยม สไตล์ญี่ปุ่น เป็นความร่วมมือระหว่าง AKARA GROUP กับ ISE Food , Inc ผู้นำด้านไข่ไก่ รายใหญ่ที่สุดในญี่ปุ่น ด้วยประสบการณ์ด้านไข่ไก่ยาวนานกว่า 100 ปี ภายใต้เทคโนโลยีการผลิต ที่สดสะอาด ปราศจากเชื้อโรค เราจึงมั่นใจว่าได้ส่งมอบไข่ไก่ที่มีคุณภาพระดับพรีเมี่ยมสู่ผู้บริโภค ภายใต้แบรนด์ “MORI-TAMA”</div>
+                        <div class="c-our-brand__card-content-text"><?php echo $sub_content_04; ?></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-our-brand__item animation-element slide-top">
+                    <div class="c-our-brand__card">
+                      <div class="c-our-brand__card-image">
+                        <div class="c-our-brand__card-frame">
+                          <!-- Slider main container-->
+                          <div class="swiper-container js-slider-multi">
+                            <!-- Additional required wrapper-->
+                            <div class="swiper-wrapper">
+                              <!-- Slides-->
+                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_09.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_10.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_07.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_08.png" alt=""></div>
+                            </div>
+                            <!-- If we need navigation buttons-->
+                            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                            <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+                          </div>
+                          <div class="c-fake-nav-control">
+                            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                            <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+                          </div>
+                        </div>
+                      </div>
+                      <?php
+                        if(ICL_LANGUAGE_CODE == 'en') {
+                          $sub_heading_03 = '';
+                          $sub_content_03 = 'Tofu products from real eggs, fresh and clean, through the production process of Thai people, certified by ISO 22000, GMP / HACCP and FDA, fresh produce, delivered directly to consumers on a day-to-day basis.';
+                        } elseif (ICL_LANGUAGE_CODE == 'th') {
+                          $sub_heading_03 = '';
+                          $sub_content_03 = 'ผลิตภัณฑ์เต้าหู้หลอดจากไข่ไก่แท้ ๆ ใหม่ สด สะอาด ผ่านกระบวนการผลิตจากฝีมือคนไทย ได้มาตรฐาน ISO 22000, GMP/HACCP และ อย. ผลิตสด ใหม่ ส่งตรงถึงมือผู้บริโภคแบบวันต่อวัน ';
+                        }
+                      ?>
+                      <div class="c-our-brand__card-content">
+                        <div class="c-our-brand__card-content-heading-logo"><img src="/assets/img/about-us/ico_logo_about_us_03.svg" alt=""></div>
+                        <div class="c-our-brand__card-content-text"><?php echo $sub_content_03; ?></div>
                       </div>
                     </div>
                   </div>
@@ -377,28 +411,7 @@ get_header();
                 </div>
               </div>
             </div>
-            <div class="l-sec-cmn-01 -box-subscribe">
-              <div class="inner">
-                <div class="c-box-subscribe animation-element slide-top">
-                  <div class="item -signup-text">
-                    <div class="box-sign-up"></div>
-                  </div>
-                  <div class="item">
-                    <div class="box-heading">
-                      <div class="heading">FOR RECIPES, COUPONS AND OTHER NEWS</div>
-                    </div>
-                    <div class="box-form">
-                      <div class="c-input-row">
-                        <input class="c-input -text" type="email" name="email" placeholder="Your E-Mail Address">
-                        <div class="c-box-cmn-button">
-                          <button class="c-button-cmn-01" type="submit" value=""><span class="text">SUBSCRIBE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <?php get_template_part( 'templates/subscriber'); ?>
           </div>
         </div>
       </main>

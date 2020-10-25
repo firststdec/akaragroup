@@ -97,17 +97,9 @@
 <script src="/assets/js/libs/jquery.matchHeight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
 <script src="/assets/js/common.js"></script>
+<script src="/assets/js/bundle.js"></script>
 <?php if(is_front_page()): ?>
 <script src="/assets/js/top.js"></script>
-<!-- <script src="/assets/js/topWaveYellow.js"></script>
-<script src="/assets/js/bottomWaveYellow.js"></script>
-<script src="/assets/js/topWaveYellow02.js"></script>
-<script src="/assets/js/bottomWaveYellow02.js"></script>
-<script src="/assets/js/waveGreenBottom.js"></script>
-<script src="/assets/js/waveWhiteTop.js"></script>
-<script src="/assets/js/waveWhiteBottom.js"></script>
-<script src="/assets/js/waveOrangeBottom.js"></script>
-<script src="/assets/js/waveMainVisual.js"></script> -->
 <?php endif; ?>
 <?php if(is_page_template("page-our-story.php")): ?>
 <script src="/assets/js/topWaveYellow.js"></script>

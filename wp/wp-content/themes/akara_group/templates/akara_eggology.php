@@ -112,7 +112,7 @@
             </div>
             <?php endif; ?>
             <?php if(get_field('product_benefits')!=''): ?>
-            <div class="c-product-list__box-product-content animation-element slide-top">
+            <div class="c-product-list__box-product-content animation-element slide-top" style="display: none;">
               <div class="c-product-list__box-product-content-heading">
                 <div class="c-product-list__box-product-content-icon">
                   <div class="i-handheart-white"></div>
@@ -124,13 +124,24 @@
           </div>
           <div class="c-product-list__box-product-detail animation-element slide-top">
             <div class="c-product-list__box-product-detail-inner">
+              <?php if(get_field('product_benefits')!=''): ?>
+              <div class="c-product-list__box-product-content animation-element slide-top">
+                <div class="c-product-list__box-product-content-heading">
+                  <div class="c-product-list__box-product-content-icon">
+                    <div class="i-handheart-white"></div>
+                  </div>Benefits
+                </div>
+                <div class="c-product-list__box-product-content-text"><?php echo get_field('product_benefits'); ?></div>
+              </div>
+              <?php endif; ?>
               <?php if(have_rows('product_detail_rpt')): ?>
-              <div class="c-product-list__box-product-content">
+              <div class="c-product-list__box-product-content" style="display: none;">
                 <div class="c-product-list__box-product-content-heading">
                   <div class="c-product-list__box-product-content-icon">
                     <div class="i-list-white"></div>
                   </div>Product Detail
                 </div>
+                <?php if(have_rows('product_detail_rpt')): ?>
                 <div class="c-product-list__nutrient-table">
                   <?php
                     // Loop through rows.
@@ -146,14 +157,16 @@
                   </dl>
                   <?php endwhile; ?>
                 </div>
+                <?php endif; ?>
               </div>
               <?php endif; ?>
-              <?php if(have_rows('product_certificate_rpt')): ?>
+              <?php if(have_rows('product_certificate_rpt') || get_field('product_image')!=''): ?>
               <div class="c-product-list__box-product-badge">
                 <?php if(get_field('product_image')!=''): ?>
                   <?php $product_image = get_field('product_image'); ?>
                 <div class="c-product-list__box-product-badge-image-deco"><img src="<?php echo $product_image['url']; ?>" alt="<?php echo $product_image['alt']; ?>"></div>
                 <?php endif; ?>
+                <?php if(have_rows('product_certificate_rpt')): ?>
                 <div class="c-product-list__box-product-badge-list">
                   <?php
                     // Loop through rows.
@@ -165,6 +178,7 @@
                   </div>
                   <?php endwhile; ?>
                 </div>
+                <?php endif; ?>
               </div>
               <?php endif; ?>
             </div>
@@ -183,9 +197,18 @@
                   <div class="title"><span>RECIPIE</span><span class="text-yellow">S</span></div>
                 </div>
                 <div class="box-text animation-element slide-top">
-                  <div class="text">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either!</div>
+                  <?php
+                    if(ICL_LANGUAGE_CODE == 'en') {
+                      $recipes_text = "Let 'Akara' help fill the deliciousness of every meal";
+                      $readmore = 'READ MORE';
+                    } elseif(ICL_LANGUAGE_CODE == 'th') {
+                      $recipes_text = "ให้ 'อัครา' ช่วยเติมเต็มความอร่อยในทุกมื้ออาหารของคุณ ";
+                      $readmore = 'อ่านเพิ่มเติม';
+                    }
+                  ?>
+                  <div class="text"><?php echo $recipes_text; ?></div>
                 </div>
-                <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01"><span class="text">READ MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+                <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01 --border-base"><span class="text"><?php echo $readmore; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
               </div>
             </div>
           </div>
@@ -213,9 +236,9 @@
                           </div>
                         </div>
                         <div class="c-overlay"></div>
-                        <figure class="box-image"><img class="image" src="/assets/img/top/img_recipes_top_02.jpg" alt="Cheesy Breaks"></figure>
+                        <figure class="box-image"><img class="image" src="/assets/img/recipes/boiler_egg.jpg" alt="ไข่ต้มยางมะตูม"></figure>
                         <div class="box-content">
-                          <div class="c-heading-cmn-01">Cheesy Breaks</div>
+                          <div class="c-heading-cmn-01">ไข่ต้มยางมะตูม</div>
                           <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
                         </div>
                       </div>
@@ -236,9 +259,9 @@
                           </div>
                         </div>
                         <div class="c-overlay"></div>
-                        <figure class="box-image"><img class="image" src="/assets/img/top/img_recipes_top_03.jpg" alt="Italian Fried Egg"></figure>
+                        <figure class="box-image"><img class="image" src="/assets/img/recipes/fried_egg.jpg" alt="ไข่ดาวกรอบ"></figure>
                         <div class="box-content">
-                          <div class="c-heading-cmn-01">Italian Fried Egg</div>
+                          <div class="c-heading-cmn-01">ไข่ดาวกรอบ</div>
                           <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
                         </div>
                       </div>
@@ -259,9 +282,9 @@
                           </div>
                         </div>
                         <div class="c-overlay"></div>
-                        <figure class="box-image"><img class="image" src="/assets/img/top/img_recipes_top_04.jpg" alt="Rocky Egg Sunrise"></figure>
+                        <figure class="box-image"><img class="image" src="/assets/img/recipes/omlet.jpg" alt="ไข่เจียวฟูนุ่ม"></figure>
                         <div class="box-content">
-                          <div class="c-heading-cmn-01">Rocky Egg Sunrise</div>
+                          <div class="c-heading-cmn-01">ไข่เจียวฟูนุ่ม</div>
                           <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
                         </div>
                       </div>
@@ -282,9 +305,32 @@
                           </div>
                         </div>
                         <div class="c-overlay"></div>
-                        <figure class="box-image"><img class="image" src="/assets/img/top/img_recipes_top_01.jpg" alt="Rocky Egg Salad"></figure>
+                        <figure class="box-image"><img class="image" src="/assets/img/recipes/coffee_egg.jpg" alt="กาแฟไข่"></figure>
                         <div class="box-content">
-                          <div class="c-heading-cmn-01">Rocky Egg Salad</div>
+                          <div class="c-heading-cmn-01">กาแฟไข่</div>
+                          <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="article-content">
+                      <div class="c-shadow"></div>
+                      <div class="c-box-card-01 -full">
+                        <div class="c-badge__list">
+                          <div class="c-badge__item -level">
+                            <div class="icon"></div>
+                            <div class="text">Easy</div>
+                          </div>
+                          <div class="c-badge__item -time">
+                            <div class="icon"></div>
+                            <div class="text">30 mins</div>
+                          </div>
+                        </div>
+                        <div class="c-overlay"></div>
+                        <figure class="box-image"><img class="image lazy" src="/assets/img/recipes/floating_island.jpg" alt="Floating Island"></figure>
+                        <div class="box-content">
+                          <div class="c-heading-cmn-01">Floating Island</div>
                           <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
                         </div>
                       </div>
@@ -372,28 +418,7 @@
           <?php endif; ?>
         </div>
       </div>
-      <div class="l-sec-cmn-01 -box-subscribe">
-        <div class="inner">
-          <div class="c-box-subscribe animation-element slide-top">
-            <div class="item -signup-text">
-              <div class="box-sign-up"></div>
-            </div>
-            <div class="item">
-              <div class="box-heading">
-                <div class="heading">FOR RECIPES, COUPONS AND OTHER NEWS</div>
-              </div>
-              <div class="box-form">
-                <div class="c-input-row">
-                  <input class="c-input -text" type="email" name="email" placeholder="Your E-Mail Address">
-                  <div class="c-box-cmn-button">
-                    <button class="c-button-cmn-01" type="submit" value=""><span class="text">SUBSCRIBE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <?php get_template_part( 'templates/subscriber'); ?>
     </div>
   </div>
 </main>

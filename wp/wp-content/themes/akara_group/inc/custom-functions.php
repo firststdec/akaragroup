@@ -325,6 +325,7 @@ function taxonomy_slug_rewrite($wp_rewrite) {
                   foreach ($terms as $term) {
                       $rules[$object_type . '/' . $term->slug . '/?$'] = 'index.php?' . $term->taxonomy . '=' . $term->slug;
                       $rules[$object_type . '/' . $term->slug . '-th/?$'] = 'index.php?' . $term->taxonomy . '=' . $term->slug.'-th';
+                      $rules[$object_type . '/' . $term->slug . '-en/?$'] = 'index.php?' . $term->taxonomy . '=' . $term->slug.'-en';
                       $rules[$object_type . '/' . $term->slug . '/page/?([0-9]{1,})/?'] = 'index.php?' . $term->taxonomy . '=' . $term->slug . '&paged=$matches[1]'; //FIX PAGINATION ISSUE
                   }
               }
@@ -574,10 +575,10 @@ add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
 function custom_loginlogo() {
   echo '<style>
     .login h1 a{
-      background-image: url('. get_stylesheet_directory_uri() .'/img/common/logo.svg) !important;
+      background-image: url(/assets/img/common/logo.svg) !important;
       background-size: contain;
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 70px;
     }
     body.login{
 
@@ -824,7 +825,7 @@ function my_mce_before_init_insert_formats( $init_array ) {
   
 } 
 // Attach callback to 'tiny_mce_before_init' 
-add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );  
+//add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );  
 
 /*
  * Replacement for get_adjacent_post()
@@ -1207,8 +1208,8 @@ function shigoto_change_post_object() {
     $labels->name_admin_bar = '求人';
 }
  
-add_action( 'admin_menu', 'shigoto_change_post_label' );
-add_action( 'init', 'shigoto_change_post_object' );
+//add_action( 'admin_menu', 'shigoto_change_post_label' );
+//add_action( 'init', 'shigoto_change_post_object' );
 
 // add_action( 'edit_form_after_title', 'add_content_before_editor' );
 function add_content_before_editor() {
@@ -1249,7 +1250,7 @@ function show_all_posttypes( $query ) {
       $query->set( 'post_type', array('post', 'column', 'event', 'shopping'));
     }
 }
-add_filter( 'pre_get_posts', 'show_all_posttypes' );
+// add_filter( 'pre_get_posts', 'show_all_posttypes' );
 
 function show_all_posttypes_link() {
     add_submenu_page('edit.php?post_type=page', '', 'All Post Types', 'edit_posts', '/edit.php?post_type=page&showall=true');
@@ -1285,7 +1286,7 @@ function set_post_order_in_admin( $wp_query ) {
   }
 }
   
-add_filter('pre_get_posts', 'set_post_order_in_admin', 5 );
+//add_filter('pre_get_posts', 'set_post_order_in_admin', 5 );
 
 function catch_that_image() {
   global $post, $posts;
@@ -1320,7 +1321,7 @@ function my_password_form() {
     </form>
     </div>';
 }
-add_filter('the_password_form', 'my_password_form');
+// add_filter('the_password_form', 'my_password_form');
 
 function custom_postpass_time() {
     require_once ABSPATH . 'wp-includes/class-phpass.php';

@@ -53,12 +53,12 @@ get_header();
                 <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
                 <div class="c-box-time-line__content">
                   <div class="c-box-time-line__content-heading">ปี พ.ศ. 2522</div>
-                  <div class="c-box-time-line__content-text">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.</div>
+                  <div class="c-box-time-line__content-text">The beginning of Sangthong Saha Farm Occurred during the year 2522 as the ancestors moved from China. And began to trade under the name "Seng Tong" before changing to "Sangthong" in order to comply with the ancestor Until now.</div>
                 </div>
                 <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
                 <div class="c-box-time-line__content">
                   <div class="c-box-time-line__content-heading">ปี พ.ศ. 2522</div>
-                  <div class="c-box-time-line__content-text">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 เมื่อเครื่องพิมพ์โนเนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง Lorem Ipsum อยู่ยงคงกระพันมาไม่ใช่แค่เพียงห้าศตวรรษ</div>
+                  <div class="c-box-time-line__content-text">จุดเริ่มต้นของแสงทองสหฟาร์ม เกิดขึ้นในช่วงปี พ.ศ. 2522 โดยเป็นช่วงที่บรรพบุรุษเดินทางย้ายถิ่นฐานมาจากประเทศจีน และได้เริ่มทำการค้าโดยใช้ชื่อว่า "เซ่งท้ง" ก่อนเปลี่ยนมาเป็น "แสงทอง" เพื่อให้สอดคล้องกับบรรพบุรุษ มาจนถึงปัจจุบัน </div>
                 </div>
                 <?php endif; ?>
               </div>
@@ -70,12 +70,12 @@ get_header();
                 <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
                 <div class="c-box-time-line__content">
                   <div class="c-box-time-line__content-heading">ปี พ.ศ. 2538</div>
-                  <div class="c-box-time-line__content-text">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.</div>
+                  <div class="c-box-time-line__content-text">Started a broiler farm business in the area of Ban Na District, Nakhon Nayok Province. Before turning to selling chicken eggs in the year 1995</div>
                 </div>
                 <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
                 <div class="c-box-time-line__content">
                   <div class="c-box-time-line__content-heading">ปี พ.ศ. 2538</div>
-                  <div class="c-box-time-line__content-text">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 เมื่อเครื่องพิมพ์โนเนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง Lorem Ipsum อยู่ยงคงกระพันมาไม่ใช่แค่เพียงห้าศตวรรษ</div>
+                  <div class="c-box-time-line__content-text">เริ่มต้นธุรกิจฟาร์มไก่เนื้อ ในเขตพื้นที่ อำเภอบ้านนา จังหวัดนครนายก ก่อนจะเริ่มหันมาขายไข่ไก่ในช่วงปี พ.ศ.2538</div>
                 </div>
                 <?php endif; ?>
               </div>
@@ -86,12 +86,12 @@ get_header();
                 <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
                 <div class="c-box-time-line__content">
                   <div class="c-box-time-line__content-heading">ปี พ.ศ. 2547</div>
-                  <div class="c-box-time-line__content-text">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.</div>
+                  <div class="c-box-time-line__content-text">From an outbreak of bird flu As a result, we turned to fully develop the chicken egg farm business. During the year 2004, we developed and expanded the egg farm area to Square district Chaiyaphum Province To support the growth of the market in the Northeast region Continued to the present.</div>
                 </div>
                 <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
                 <div class="c-box-time-line__content">
                   <div class="c-box-time-line__content-heading">ปี พ.ศ. 2547</div>
-                  <div class="c-box-time-line__content-text">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 เมื่อเครื่องพิมพ์โนเนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง Lorem Ipsum อยู่ยงคงกระพันมาไม่ใช่แค่เพียงห้าศตวรรษ</div>
+                  <div class="c-box-time-line__content-text">จากเหตุการณ์ไข้หวัดนกระบาด ทำให้เราหันมาพัฒนาธุรกิจฟาร์มไข่ไก่อย่างเต็มตัวในช่วงปี พ.ศ.2547 มีการพัฒนาและขยายพื้นที่ฟาร์มไข่ไก่ไปยัง เขตอำเภอจัตุรัส จังหวัดชัยภูมิ เพื่อรองรับการเติบโตของตลาดในเขตภาคตะวันออกเฉียงเหนือ สืบเนื่องมาจนถึงปัจจุบัน </div>
                 </div>
                 <?php endif; ?>
               </div>
@@ -110,7 +110,14 @@ get_header();
                 </div>
                 <div class="c-heading-egg__text">Our Eggs</div>
               </div>
-              <div class="c-heading-egg-content -lg">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy <br>tempor invidunt ut labore et dolore</div>
+              <?php
+                if(ICL_LANGUAGE_CODE == 'en'){
+                  $our_egg_content = 'We produce fresh eggs every day to make every meal a healthy one. <br>In addition, we also strive to develop a wide variety of egg products. <br>To meet the needs of consumers But still control the quality in production Pay attention <br>to every step meticulously To meet the standards in every bite you eat.';
+                } elseif(ICL_LANGUAGE_CODE == 'th') {
+                  $our_egg_content = 'เราผลิตไข่ไก่สด ใหม่ ในทุกวัน เพื่อให้ทุกมื้อของคุณเป็นมื้อที่มีคุณค่า <br>นอกจากนั้นแล้วเรายังมุ่งมั่นในการพัฒนาผลิตภัณฑ์จากไข่ไก่ที่หลากหลาย <br>เพื่อให้สอดคล้องกับความต้องการของผู้บริโภค แต่ยังคงควบคุมคุณภาพในการผลิต <br>ใส่ใจทุกขั้นตอนอย่างพิถีพิถัน เพื่อให้ได้มาตรฐานในทุกคำที่คุณทาน';
+                }
+              ?>
+              <div class="c-heading-egg-content -lg"><?php echo $our_egg_content; ?></div>
             </div>
             <div class="c-box-our-egg__list">
               <div class="c-box-our-egg__item animation-element slide-top">
@@ -287,35 +294,14 @@ get_header();
 						<?php endif; ?>
             <div class="c-box-cmn-button animation-element slide-top --center">
               <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
-              <a class="c-button-cmn-01 --border-base" href="/faq/"><span class="text">SEE MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+              <a class="c-button-cmn-01 --border-base" href="/en/faq/"><span class="text">SEE MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
               <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
-              <a class="c-button-cmn-01 --border-base" href="/th/faq/"><span class="text">อ่านเพิ่มเติม</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+              <a class="c-button-cmn-01 --border-base" href="/faq/"><span class="text">อ่านเพิ่มเติม</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
               <?php endif; ?>
             </div>
           </div>
         </div>
-        <div class="l-sec-cmn-01 -box-subscribe">
-          <div class="inner">
-            <div class="c-box-subscribe animation-element slide-top">
-              <div class="item -signup-text">
-                <div class="box-sign-up"></div>
-              </div>
-              <div class="item">
-                <div class="box-heading">
-                  <div class="heading">FOR RECIPES, COUPONS AND OTHER NEWS</div>
-                </div>
-                <div class="box-form">
-                  <div class="c-input-row">
-                    <input class="c-input -text" type="email" name="email" placeholder="Your E-Mail Address">
-                    <div class="c-box-cmn-button">
-                      <button class="c-button-cmn-01" type="submit" value=""><span class="text">SUBSCRIBE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php get_template_part( 'templates/subscriber'); ?>
       </div>
     </div>
   </main>

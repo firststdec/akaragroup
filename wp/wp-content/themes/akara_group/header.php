@@ -18,7 +18,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="format-detection" content="telephone=no">
-  <?php 
+  <?php
     $title = 'Akara Group';
     $kwd = '';
     $desc = '';
@@ -44,6 +44,30 @@
       $desc = '';
     }
 
+    if(is_tax('product_category')) {
+      $term = get_queried_object();
+      $cate = $term->name;
+      $title = $cate  . ' | ' . $title;
+      $desc = '';
+    }
+
+    if(is_single()){
+      global $post;
+      if(get_post_type($post->ID) == 'product'){
+        // $tags = get_the_terms( $post->ID, 'cate_event' );
+        // $tags = ( !empty( $tags ))? $tags : array();
+        // foreach($tags as $tag){
+        //   $cate_name = ' | ' . $tag->name;
+        // }
+        // $seo = ($cate_name!='')? $cate_name : '';
+        // $seo = '';
+        // $seo = $seo;
+      }
+
+      $title = strip_tags(get_the_title($post->ID)).  $seo  . ' | ' . $title;
+      $desc = '';
+      $kwd = '';
+    }
     // echo 'lang=>' .ICL_LANGUAGE_CODE;
   ?>
 	<title><?php echo $title; ?></title>
@@ -139,7 +163,7 @@
     </div>
   </div>
   <?php endif; ?>
-  <?php if(!is_page_template('page-faq.php') && !is_page_template('page-where-to-buy.php')): ?>
+  <?php if(!is_page_template('page-faq.php') && !is_page_template('page-where-to-buy.php') && !is_page('privacy')): ?>
   <div class="c-bg-wave-mainvisual-sub">
     <div class="c-bg-wave-mainvisual-solid">
       <canvas id="canvas-mainvisual"></canvas>
@@ -176,9 +200,9 @@
     <header class="l-header <?php echo $white_theme; ?>">
       <div class="l-header__in l-block">
       <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
-        <div class="l-header__logo"><a class="l-header__logo-link" href="/"><img class="l-header__logo-image" src="/assets/img/common/logo.svg" alt="Akara Group"><img class="l-header__logo-image white" src="/assets/img/common/logo_white.svg" alt="Akara Group"><img class="l-header__logo-image-sp" src="/assets/img/common/logo_sp.svg" alt="Akara Group"></a></div>
+        <div class="l-header__logo"><a class="l-header__logo-link" href="/en/"><img class="l-header__logo-image" src="/assets/img/common/logo.svg" alt="Akara Group"><img class="l-header__logo-image white" src="/assets/img/common/logo_white.svg" alt="Akara Group"><img class="l-header__logo-image-sp" src="/assets/img/common/logo_sp.svg" alt="Akara Group"></a></div>
       <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
-        <div class="l-header__logo"><a class="l-header__logo-link" href="/th/"><img class="l-header__logo-image" src="/assets/img/common/logo.svg" alt="Akara Group"><img class="l-header__logo-image white" src="/assets/img/common/logo_white.svg" alt="Akara Group"><img class="l-header__logo-image-sp" src="/assets/img/common/logo_sp.svg" alt="Akara Group"></a></div>
+        <div class="l-header__logo"><a class="l-header__logo-link" href="/"><img class="l-header__logo-image" src="/assets/img/common/logo.svg" alt="Akara Group"><img class="l-header__logo-image white" src="/assets/img/common/logo_white.svg" alt="Akara Group"><img class="l-header__logo-image-sp" src="/assets/img/common/logo_sp.svg" alt="Akara Group"></a></div>
       <?php endif; ?>
         <a class="l-header__menu-trigger js-hambuger" href="#" data-delay="300"><span class="l-header__menu-trigger-mark"></span></a>
         <div class="l-header__utility l-header__utility--top">
@@ -301,7 +325,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="l-header__menu-item"><a class="l-header__menu-link" href="/our-story/"><span class="l-header__menu-mark">OUR STORY</span></a></li>
+                  <li class="l-header__menu-item"><a class="l-header__menu-link" href="/en/our-story/"><span class="l-header__menu-mark">OUR STORY</span></a></li>
                   <li class="l-header__menu-item"><a class="l-header__menu-link" href="#"><span class="l-header__menu-mark">RECIPES</span></a></li>
                   <li class="l-header__menu-item nav-about js-gnavi"><a class="l-header__menu-link" data-group="menu" href="#"><span class="l-header__menu-mark">ABOUT US</span><span class="fas fa-chevron-down"></span><span class="fas fa-chevron-up"></span></a>
                     <div class="l-header__submenu -about-us">
@@ -309,12 +333,12 @@
                         <ul class="l-header__submenu-list">
                           <li class="l-header__submenu-item">
                             <ul class="l-header__submenu-list-02">
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/about-us/"><i class="circle"></i>AKARA GROUP</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/faq/"><i class="circle"></i>FAQ</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/about-us/"><i class="circle"></i>AKARA GROUP</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/faq/"><i class="circle"></i>FAQ</a></li>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="#dummy"><i class="circle"></i>MEDIA</a></li>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="#dummy"><i class="circle"></i>NEWS, ACTIVITIES, &amp; EVENT</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/career/"><i class="circle"></i>CAREERS</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/contact-us/"><i class="circle"></i>CONTACT US</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/career/"><i class="circle"></i>CAREERS</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/contact-us/"><i class="circle"></i>CONTACT US</a></li>
                             </ul>
                           </li>
                         </ul>
@@ -352,7 +376,7 @@
                                   $term_type = get_field('product_category_type', $term->taxonomy . '_' . $term->term_id);
                                   if($term_type == 'ready-to-cook'):
                               ?>
-                                <a class="l-header__submenu-list-02-link" href="/th/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
+                                <a class="l-header__submenu-list-02-link" href="/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
                                 <?php endif; // if($term_type == $product_category_type):?>
                               <?php endforeach; ?>
                               </li>
@@ -367,7 +391,7 @@
                                   $term_type = get_field('product_category_type', $term->taxonomy . '_' . $term->term_id);
                                   if($term_type == 'ready-to-eat'):
                                 ?>
-                                <a class="l-header__submenu-list-02-link" href="/th/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
+                                <a class="l-header__submenu-list-02-link" href="/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
                                 <?php endif; // if($term_type == $product_category_type):?>
                               <?php endforeach; ?>
                               </li>
@@ -440,7 +464,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="l-header__menu-item"><a class="l-header__menu-link" href="/th/our-story/"><span class="l-header__menu-mark">เรื่องราวของเรา</span></a></li>
+                  <li class="l-header__menu-item"><a class="l-header__menu-link" href="/our-story/"><span class="l-header__menu-mark">เรื่องราวของเรา</span></a></li>
                   <li class="l-header__menu-item"><a class="l-header__menu-link" href="#"><span class="l-header__menu-mark">สูตรอาหาร</span></a></li>
                   <li class="l-header__menu-item nav-about js-gnavi"><a class="l-header__menu-link" data-group="menu" href="#"><span class="l-header__menu-mark">เกี่ยวกับเรา</span><span class="fas fa-chevron-down"></span><span class="fas fa-chevron-up"></span></a>
                     <div class="l-header__submenu -about-us">
@@ -448,12 +472,12 @@
                         <ul class="l-header__submenu-list">
                           <li class="l-header__submenu-item">
                             <ul class="l-header__submenu-list-02">
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/th/about-us/"><i class="circle"></i>เกี่ยวกับอัครากรุ๊ป</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/th/faq/"><i class="circle"></i>คำถามที่พบบ่อย</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/about-us/"><i class="circle"></i>เกี่ยวกับอัครากรุ๊ป</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/faq/"><i class="circle"></i>คำถามที่พบบ่อย</a></li>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="#dummy"><i class="circle"></i>สื่อ</a></li>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="#dummy"><i class="circle"></i>ข่าวสาร, กิจกรรม, &amp; อีเวนท์</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/th/career/"><i class="circle"></i>ตำแหน่งงาน</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/th/contact-us/"><i class="circle"></i>ติดต่อเรา</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/career/"><i class="circle"></i>ตำแหน่งงาน</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/contact-us/"><i class="circle"></i>ติดต่อเรา</a></li>
                             </ul>
                           </li>
                         </ul>
@@ -479,15 +503,15 @@
                 </div>
               </div>
               <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
-              <div class="l-header__nav-trigger"><a class="l-header__nav-link c-button-middle c-button--orange -btn-where-to-buy" href="/where-to-buy/">
+              <div class="l-header__nav-trigger"><a class="l-header__nav-link c-button-middle c-button--orange -btn-where-to-buy" href="/en/where-to-buy/">
                   <div class="c-button__text -button"><i class="fa fa-map-marker-alt"></i><i class="fa fa-map-marker-alt fa--bottom"></i>WHERE TO BUY</div></a></div>
               <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
-              <div class="l-header__nav-trigger"><a class="l-header__nav-link c-button-middle c-button--orange -btn-where-to-buy" href="/th/where-to-buy/">
+              <div class="l-header__nav-trigger"><a class="l-header__nav-link c-button-middle c-button--orange -btn-where-to-buy" href="/where-to-buy/">
                   <div class="c-button__text -button"><i class="fa fa-map-marker-alt"></i><i class="fa fa-map-marker-alt fa--bottom"></i>สถานที่จำหน่ายสินค้า</div></a></div>
               <?php endif; ?>
               <div class="l-language-bar">
                 <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
-                <a class="c-link is-active" href="/th"><span class="icon -th"><img src="/assets/img/common/flag-thai.svg" alt=""></span></a>
+                <a class="c-link is-active" href="/en/"><span class="icon -th"><img src="/assets/img/common/flag-thai.svg" alt=""></span></a>
                 <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
                 <a class="c-link is-active" href="/"><span class="icon -eng"><img src="/assets/img/common/flag-eng.svg" alt=""></span></a>
                 <?php endif; ?>

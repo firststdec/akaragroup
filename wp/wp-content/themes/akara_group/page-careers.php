@@ -286,28 +286,7 @@ get_header();
                 <canvas id="canvas-cream-bottom"></canvas>
               </div>
             </div>
-            <div class="l-sec-cmn-01 -box-subscribe">
-              <div class="inner">
-                <div class="c-box-subscribe animation-element slide-top">
-                  <div class="item -signup-text">
-                    <div class="box-sign-up"></div>
-                  </div>
-                  <div class="item">
-                    <div class="box-heading">
-                      <div class="heading">FOR RECIPES, COUPONS AND OTHER NEWS</div>
-                    </div>
-                    <div class="box-form">
-                      <div class="c-input-row">
-                        <input class="c-input -text" type="email" name="email" placeholder="Your E-Mail Address">
-                        <div class="c-box-cmn-button">
-                          <button class="c-button-cmn-01" type="submit" value=""><span class="text">SUBSCRIBE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <?php get_template_part( 'templates/subscriber'); ?>
           </div>
         </div>
       </main>
