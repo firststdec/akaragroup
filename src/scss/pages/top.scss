@@ -340,14 +340,18 @@
       .image {
         position: absolute;
         right: 150px;
+        top: 20px;
         visibility: hidden;
 
         @include mq-max-sp {
           width: 260px;
           right: auto;
+          top: auto;
+          bottom: 0;
         }
 
         @include mq-min-max-tb {
+          top: get-vw(20px);
           right: get-vw(150px);
         }
 
@@ -476,8 +480,8 @@
         @include mq-max-sp {
           width: 210px;
           height: 200px;
-          bottom: -180px;
-          left: 50%;
+          bottom: -150px;
+          left: 45%;
           transform: translateX(-100%);
         }
 
@@ -1096,12 +1100,12 @@
   &.--yellow {
     background: url(/assets/img/top/open-package-yellow.svg) no-repeat center center;
     background-size: cover;
-    left: 250px;
-    bottom: -50px;
+    right: 150px;
+    bottom: 20px;
 
     @include mq-max-sp {
       left: auto;
-      bottom: -30px;
+      bottom: 10px;
       right: 50px;
     }
 
@@ -1110,8 +1114,8 @@
       right: 60px;
     }
     @include mq-min-max-tb {
-      left: get-vw(250px);
-      bottom: get-vw(-50px);
+      right: get-vw(150px);
+      bottom: get-vw(20px);
     }
   }
 
@@ -1119,7 +1123,7 @@
     background: url(/assets/img/top/open-package-green.svg) no-repeat center center;
     background-size: cover;
     left: 110px;
-    bottom: 60px;
+    bottom: 30px;
 
     @include mq-custom-min-max(426px, 896px) {
 
@@ -1132,28 +1136,28 @@
 
     @include mq-min-max-tb {
       left: get-vw(110px);
-      bottom: get-vw(60px);
+      bottom: get-vw(30px);
     }
   }
 
   &.--orange {
     background: url(/assets/img/top/open-package-orange.svg) no-repeat center center;
     background-size: cover;
-    left: 410px;
-    bottom: -30px;
+    right: 120px;
+    bottom: 10px;
 
     @include mq-custom-min-max(426px, 896px) {
 
     }
 
     @include mq-max-sp {
-      left: 180px;
-      bottom: -15px;
+      right: 80px;
+      bottom: 10px;
     }
 
     @include mq-min-max-tb {
-      left: get-vw(410px);
-      bottom: get-vw(-30px);
+      right: get-vw(120px);
+      bottom: get-vw(10px);
     }
   }
 }
