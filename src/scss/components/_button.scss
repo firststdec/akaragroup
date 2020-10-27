@@ -12,6 +12,7 @@
     border: 1px solid #fff;
     transition: all .5s;
     color: $baseColor;
+    height: 48px;
 
     &:hover {
       padding-right: 30px;
@@ -38,6 +39,7 @@
         font-size: 1.4rem;
         padding: 0 10px 0 15px;
         color: $yellow;
+        width: auto;
       }
     }
 
@@ -79,6 +81,7 @@
       font-size: 0;
       opacity: 0;
       transition: all .3s ease-out;
+      width: 0;
     }
 
     &.--green {

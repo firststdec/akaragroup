@@ -301,17 +301,17 @@
       }
 
       @include mq-max-sp {
-        width: 210px;
+        // width: 210px;
         order: 2;
         justify-content: flex-end;
         position: absolute;
         bottom: -130px;
-        right: 53%;
+        right: 63%;
         transform: translateX(100%);
       }
 
       @include mq-custom-max (425px) {
-        right: 56%;
+        right: 40%;
       }
 
       .c-deco-yellow-egg {
@@ -478,10 +478,10 @@
         backface-visibility: hidden;
 
         @include mq-max-sp {
-          width: 210px;
-          height: 200px;
-          bottom: -150px;
-          left: 45%;
+          width: 285px;
+          height: 269px;
+          bottom: -180px;
+          left: 55%;
           transform: translateX(-100%);
         }
 
@@ -843,7 +843,15 @@
 
       .image {
         position: absolute;
-        bottom: 0;
+        bottom: -40px;
+
+        @include mq-max-sp {
+          bottom: 0;
+        }
+
+        @include mq-min-max-tb {
+          bottom: get-vw(-40px);
+        }
       }
 
       .c-hen-deco-orange {
@@ -990,7 +998,7 @@
         height: 379px;
         position: absolute;
         right: -350px;
-        bottom: -10%;
+        bottom: 5%;
         transform: translateY(50%);
         background: url(/assets/img/top/img_product_03-01.png) no-repeat;
         background-size: cover;
@@ -1001,10 +1009,11 @@
           height: 269px;
           right: auto;
           left: 52%;
-          background: url(/assets/img/top/img_product_03-01_sp.svg) no-repeat;
+          background: url(/assets/img/top/img_product_03-01.png) no-repeat;
           bottom: -270px;
           z-index: 5;
           transform: translateX(-90%);
+          background-size: cover;
         }
 
         @include mq-custom-max (425px) {
@@ -1439,10 +1448,11 @@
 
         @include mq-max-sp {
           right: 0;
-          top: 20px;
+          top: 40px;
           width: 103px;
           height: 120px;
-          background: url(/assets/img/top/brown_egg.svg) no-repeat;
+          background: url(/assets/img/top/brown_egg.png) no-repeat;
+          background-size: cover;
         }
       }
 

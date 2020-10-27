@@ -1503,10 +1503,6 @@
       overflow: hidden;
       border-radius: 30px;
 
-      @include mq-max-sp {
-        padding-top: 138.33%;
-      }
-
       .c-overlay {
         top: auto;
         left: 0;
@@ -1532,11 +1528,17 @@
         .c-overlay {
           top: 0;
           opacity: 1;
+          border-radius: 30px;
         }
 
         .box-image {
+          overflow: hidden;
+
           .image {
-            transform: scale(1.1);
+            @include mq-min-tb {
+              transform: scale(1.1);
+              border-radius: 30px;
+            }
           }
         }
 
