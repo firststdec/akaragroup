@@ -210,6 +210,10 @@ $modaal-grey: #afb7bc;
 
 .modaal-content-container {
 	padding: $modaal-padding;
+
+	@media (max-width: 896px) {
+		padding: 0;
+	}
 }
 
 

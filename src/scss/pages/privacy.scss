@@ -192,14 +192,16 @@
 
     &-box {
       width: 50%;
-      
+
       @include mq-max-sp {
         width: 100%;
       }
 
       &:not(:first-of-type) {
-        border-top: 1px solid #DCDCDC;
-        margin-top: 20px;
+        @include mq-max-sp {
+          border-top: 1px solid #DCDCDC;
+          margin-top: 20px;
+        }
       }
 
       > .heading {

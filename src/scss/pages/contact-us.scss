@@ -216,6 +216,11 @@
     }
   }
 
+  .c-box-contact-form {
+    position: relative;
+    z-index: 2;
+  }
+
   .c-connect-with-us {
     margin-top: 100px;
     display: flex;

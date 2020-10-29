@@ -2429,3 +2429,8 @@ $column-12: 100% / ($grid / 12);
     @include component;
   }
 }
+
+.l-wrapper {
+  position: relative;
+  z-index: 3;
+}

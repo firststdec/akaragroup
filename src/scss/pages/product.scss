@@ -1452,6 +1452,10 @@
           }
         }
 
+        &.-time {
+          display: none;
+        }
+
         &.-time > .icon {
           background: url(/assets/img/svg/icon-clock.svg) no-repeat center center #43AB3F;
           background-size: 20px;
@@ -1545,6 +1549,7 @@
         .c-text-cmn-01 {
           opacity: 1;
           font-size: 1.6rem;
+          display: none;
 
           @include mq-min-max-tb {
             font-size: 1.5rem;

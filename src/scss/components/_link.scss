@@ -90,3 +90,30 @@
     }
   }
 }
+
+.c-link-cmn-01 {
+  transition: all 0.3s ease-in;
+  color: $baseColor;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.c-link-cmn-02 {
+  transition: all 0.3s ease-in;
+  color: $yellow;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.c-link-cmn-03 {
+  transition: all 0.3s ease-in;
+  color: #777;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
