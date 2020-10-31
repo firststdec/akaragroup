@@ -27,6 +27,17 @@
         margin-top: 100px;
       }
     }
+
+    .c-product-local-nav {
+      &__item {
+        &.is-active,
+        &:hover {
+          .c-product-local-nav__link-icon::before {
+            background: url(/assets/img/recipes/img_akara_egg_active.svg) no-repeat;
+          }
+        }
+      }
+    }
   }
 
   &.-green {
@@ -135,7 +146,6 @@
         &-icon {
           background: url(/assets/img/recipes/ico_egg_green.svg) no-repeat center center;
           background-size: cover;
-          
         }
       }
 
@@ -239,6 +249,19 @@
       @include mq-max-sp {
         display: none !important;
       }
+
+      &__item {
+        &.is-active,
+        &:hover {
+          .c-product-local-nav__link-icon::before {
+            background: url(/assets/img/recipes/img_akara_egg_green_nav_active.svg) no-repeat;
+          }
+
+          @include mq-max-sp {
+            display: none;
+          }
+        }
+      }
     }
 
     .c-product-local-nav__sp {
@@ -267,6 +290,7 @@
           color: #43AB3F;
           font-size: 1.4rem;
           padding: 0 10px;
+          text-transform: uppercase;
         }
       }
 
@@ -298,6 +322,10 @@
           $orange_02
         );
       padding-bottom: 100px;
+
+      @include mq-max-sp {
+        padding-bottom: 140px;
+      }
     }
 
     .c-product-local-nav {
@@ -449,6 +477,7 @@
           display: flex;
           flex-wrap: wrap;
           padding-left: 0;
+          justify-content: center;
         }
 
         @include mq-min-max-tb {
@@ -490,6 +519,17 @@
             transform: translateY(-50%);
             width: get-vw(397px);
             height: get-vw(396px);
+          }
+        }
+      }
+    }
+
+    .c-product-local-nav {
+      &__item {
+        &.is-active,
+        &:hover {
+          .c-product-local-nav__link-icon::before {
+            background: url(/assets/img/recipes/img_akara_egg_orange_nav_active.svg) no-repeat;
           }
         }
       }
@@ -686,6 +726,7 @@
         &-icon {
           margin-top: 10px;
           text-align: center;
+          position: relative;
 
           @include mq-min-max-tb {
             margin-top: 5px;
@@ -693,6 +734,19 @@
 
           @include mq-max-sp {
             margin-top: 3px;
+            display: none;
+          }
+
+          &::before {
+            content: '';
+            width: 50px;
+            height: 22px;
+            display: block;
+            margin: auto;
+            background: url(/assets/img/recipes/img_akara_egg_green_nav.svg) no-repeat;
+          }
+
+          img {
             display: none;
           }
         }
@@ -819,6 +873,7 @@
       @include mq-max-sp {
         width: 100%;
         order: 2;
+        text-align: center;
       }
     }
 

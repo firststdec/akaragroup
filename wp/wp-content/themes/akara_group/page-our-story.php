@@ -114,38 +114,59 @@ get_header();
                 if(ICL_LANGUAGE_CODE == 'en'){
                   $our_egg_content = 'We produce fresh eggs every day to make every meal a healthy one. <br>In addition, we also strive to develop a wide variety of egg products. <br>To meet the needs of consumers But still control the quality in production Pay attention <br>to every step meticulously To meet the standards in every bite you eat.';
                 } elseif(ICL_LANGUAGE_CODE == 'th') {
-                  $our_egg_content = 'เราผลิตไข่ไก่สด ใหม่ ในทุกวัน เพื่อให้ทุกมื้อของคุณเป็นมื้อที่มีคุณค่า <br>นอกจากนั้นแล้วเรายังมุ่งมั่นในการพัฒนาผลิตภัณฑ์จากไข่ไก่ที่หลากหลาย <br>เพื่อให้สอดคล้องกับความต้องการของผู้บริโภค แต่ยังคงควบคุมคุณภาพในการผลิต <br>ใส่ใจทุกขั้นตอนอย่างพิถีพิถัน เพื่อให้ได้มาตรฐานในทุกคำที่คุณทาน';
+                  $our_egg_content = 'เราผลิตไข่ไก่สด ใหม่ ในทุกวัน เพื่อให้ทุกมื้อของคุณเป็นมื้อที่มีคุณค่า';
                 }
               ?>
               <div class="c-heading-egg-content -lg"><?php echo $our_egg_content; ?></div>
             </div>
+            <?php
+                if(ICL_LANGUAGE_CODE == 'en'){
+                  $our_egg_title_01 = 'Farm Condo';
+                  $our_egg_text_01 = 'These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.';
+                  $our_egg_title_02 = 'Free Range';
+                  $our_egg_text_02 = 'These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.';
+                  $our_egg_title_03 = 'Organic 100%';
+                  $our_egg_text_03 = 'These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.';
+                  $our_egg_title_04 = 'พนักงานที่ใส่ใจ';
+                  $our_egg_text_04 = 'These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.';
+                } elseif(ICL_LANGUAGE_CODE == 'th') {
+                  $our_egg_title_01 = 'ตัวจริงเรื่องไข่ไก่';
+                  $our_egg_text_01 = 'ผู้เชี่ยวชาญที่มีประสบการณ์ด้านไข่ไก่ยาวนานกว่า 25 ปี โดยเน้นย้ำเรื่องคุณภาพ ความปลอดภัย และมาตรฐานเป็นสำคัญ';
+                  $our_egg_title_02 = 'ได้มาตรฐานในทุกฟอง';
+                  $our_egg_text_02 = 'ไข่ไก่เปลือกหนาสีน้ำตาลเข้ม ไข่แดงกลมสวย วุ้นไข่ขาวเหนียวข้นแสดงถึงความสดใหม่ อัดแน่นด้วยโปรตีนเต็ม ๆ ฟอง เอกลักษณ์ของไข่ไก่อัครา';
+                  $our_egg_title_03 = 'ใส่ใจทุกขั้นตอน';
+                  $our_egg_text_03 = 'ไข่ไก่จากแม่ไก่สายพันธุ์ดีคัดพิเศษจากประเทศเยอรมัน เลี้ยงในโรงเรือนที่ทันสมัย ควบคุมความเย็น พร้อมระบบป้องกันโรคอย่างเข้มงวด';
+                  $our_egg_title_04 = 'ควบคุมคุณภาพ';
+                  $our_egg_text_04 = 'ไข่ไก่จากฟาร์มทุกฟอง จะถูกส่งเข้าโรงงานโดยผ่านกระบวนการคัดแยก เพื่อให้ได้ไข่ไก่ที่สดจากฟาร์มถึงมือผู้บริโภคแบบวันต่อวัน';
+                }
+              ?>
             <div class="c-box-our-egg__list">
               <div class="c-box-our-egg__item animation-element slide-top">
                 <div class="c-box-our-egg_card">
                   <figure class="c-box-our-egg__card-image"><img src="/assets/img/our-story/img_our_egg_01.png" alt="ฟาร์มคอนโด"></figure>
-                  <div class="c-box-our-egg__card-heading">ฟาร์มคอนโด</div>
-                  <div class="c-box-our-egg__card-content">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.</div>
+                  <div class="c-box-our-egg__card-heading"><?php echo $our_egg_title_01; ?></div>
+                  <div class="c-box-our-egg__card-content"><?php echo $our_egg_text_01; ?></div>
                 </div>
               </div>
               <div class="c-box-our-egg__item animation-element slide-top">
                 <div class="c-box-our-egg_card">
                   <figure class="c-box-our-egg__card-image"><img src="/assets/img/our-story/img_our_egg_02.png" alt="Free Range"></figure>
-                  <div class="c-box-our-egg__card-heading">Free Range</div>
-                  <div class="c-box-our-egg__card-content">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.</div>
+                  <div class="c-box-our-egg__card-heading"><?php echo $our_egg_title_02; ?></div>
+                  <div class="c-box-our-egg__card-content"><?php echo $our_egg_text_02; ?></div>
                 </div>
               </div>
               <div class="c-box-our-egg__item animation-element slide-top">
                 <div class="c-box-our-egg_card">
                   <figure class="c-box-our-egg__card-image"><img src="/assets/img/our-story/img_our_egg_03.png" alt="Organic 100%"></figure>
-                  <div class="c-box-our-egg__card-heading">Organic 100%</div>
-                  <div class="c-box-our-egg__card-content">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.</div>
+                  <div class="c-box-our-egg__card-heading"><?php echo $our_egg_title_03; ?></div>
+                  <div class="c-box-our-egg__card-content"><?php echo $our_egg_text_03; ?></div>
                 </div>
               </div>
               <div class="c-box-our-egg__item animation-element slide-top">
                 <div class="c-box-our-egg_card">
                   <figure class="c-box-our-egg__card-image"><img src="/assets/img/our-story/img_our_egg_04.png" alt="พนักงานที่ใส่ใจ"></figure>
-                  <div class="c-box-our-egg__card-heading">พนักงานที่ใส่ใจ</div>
-                  <div class="c-box-our-egg__card-content">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.</div>
+                  <div class="c-box-our-egg__card-heading"><?php echo $our_egg_title_04; ?></div>
+                  <div class="c-box-our-egg__card-content"><?php echo $our_egg_text_04; ?></div>
                 </div>
               </div>
             </div>
@@ -154,6 +175,29 @@ get_header();
             <canvas id="canvas-yellow-bottom"></canvas>
           </div>
         </div>
+        <?php
+          if(ICL_LANGUAGE_CODE == 'en'){
+            $our_farm_lead = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy<br> tempor invidunt ut labore et dolore';
+            $our_farm_title_01 = 'Sang thong Farm';
+            $our_farm_text_01 = 'These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.';
+            $our_farm_title_02 = 'ใส่ใจในทุกขั้นตอนการผลิต';
+            $our_farm_text_02 = 'These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.';
+            $our_farm_title_03 = 'มาตรฐานระดับสากล';
+            $our_farm_text_03 = 'These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.';
+            $our_farm_title_04 = 'เพื่อสุขภาพที่ดีของคนไทย';
+            $our_farm_text_04 = 'These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.';
+          } elseif(ICL_LANGUAGE_CODE == 'th'){
+            $our_farm_lead = 'เรามุ่งมั่นในการพัฒนาผลิตภัณฑ์จากไข่ไก่ที่หลากหลาย เพื่อให้สอดคล้องกับความต้องการของผู้บริโภค <br>แต่ยังคงควบคุมคุณภาพในการผลิตเพื่อให้ได้มาตรฐานในทุกคำที่คุณทาน';
+            $our_farm_title_01 = 'แสงทองฟาร์ม';
+            $our_farm_text_01 = 'ผู้เชี่ยวชาญด้านการผลิตไข่ไก่ที่มีประสบการณ์ยาวนานกว่า 25 ปี ด้วยมาตรฐานในการผลิตกว่า 2 ล้านฟองต่อวัน สดใหม่จากฟาร์มทุกวัน ควบคุมคุณภาพในทุกขั้นตอน จึงได้ไข่ไก่ที่สด สะอาด ปลอดภัยและได้มาตรฐานระดับสากล';
+            $our_farm_title_02 = 'ใส่ใจในทุกขั้นตอนการผลิต';
+            $our_farm_text_02 = 'ไก่ไข่ของเราถูกเลี้ยงในโรงเรือนระบบปิด การเข้าออกฟาร์มจะต้องเป็นระบบ ผ่านการฆ่าเชื้อทุกครั้ง เน้นความปลอดภัยทางชีวภาพ (Bio-Security) แต่ยังคงรูปแบบที่เป็นธรรมชาติและเหมาะสมกับสิ่งแวดล้อม พร้อมด้วยสัตวแพทย์และสัตวบาลคอยดูแลอย่างใกล้ชิด';
+            $our_farm_title_03 = 'คำนึงถึงสิ่งแวดล้อม';
+            $our_farm_text_03 = 'นอกจากการพัฒนาคุณภาพการผลิตเรายังคำนึงถึงผลกระทบต่อสิ่งแวดล้อม โดยการเลือกใช้บรรจุภัณฑ์กระดาษที่มาจากกระดาษ เป็นมิตรต่อสิ่งแวดล้อม สามารถย่อยสลายได้ง่ายตามธรรมชาติ';
+            $our_farm_title_04 = 'ผลิตภัณฑ์ที่เข้าถึงทุกคนในครอบครัว';
+            $our_farm_text_04 = 'หลากหลายผลิตภัณฑ์ของเราที่ถูกคิดมาเพื่อคุณ ทั้ง ไข่ไก่สดอุดมด้วยคุณประโยชน์, เต้าหู้หลอดที่เหมาะสำหรับเด็ก ๆ วัยเจริญอาหาร, เต้าหู้ถ้วยสำเร็จรูปรับประทานได้ทันที';
+          }
+        ?>
         <div class="c-box-our-farm section-spy" id="our-farm">
           <div class="c-box-our-farm__inner">
             <div class="c-heading-box-egg animation-element slide-top">
@@ -163,35 +207,35 @@ get_header();
                 </div>
                 <div class="c-heading-egg__text">Our Farm</div>
               </div>
-              <div class="c-heading-egg-content -lg">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy <br>tempor invidunt ut labore et dolore</div>
+              <div class="c-heading-egg-content -lg"><?php echo $our_farm_lead; ?></div>
             </div>
             <div class="c-box-our-farm__list">
               <div class="c-box-our-farm__item animation-element slide-top">
                 <div class="c-box-our-farm__card">
                   <figure class="c-box-our-farm__card-image"><img src="/assets/img/our-story/img_our_farm_01.jpg" alt=""></figure>
-                  <div class="c-box-our-farm__card-heading">Sang thong Farm</div>
-                  <div class="c-box-our-farm__card-content">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.</div>
+                  <div class="c-box-our-farm__card-heading"><?php echo $our_egg_title_01; ?></div>
+                  <div class="c-box-our-farm__card-content"><?php echo $our_farm_text_01; ?></div>
                 </div>
               </div>
               <div class="c-box-our-farm__item animation-element slide-top">
                 <div class="c-box-our-farm__card">
                   <figure class="c-box-our-farm__card-image"><img src="/assets/img/our-story/img_our_farm_02.jpg" alt=""></figure>
-                  <div class="c-box-our-farm__card-heading">ใส่ใจในทุกขั้นตอนการผลิต</div>
-                  <div class="c-box-our-farm__card-content">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.</div>
+                  <div class="c-box-our-farm__card-heading"><?php echo $our_egg_title_02; ?></div>
+                  <div class="c-box-our-farm__card-content"><?php echo $our_farm_text_02; ?></div>
                 </div>
               </div>
               <div class="c-box-our-farm__item animation-element slide-top">
                 <div class="c-box-our-farm__card">
                   <figure class="c-box-our-farm__card-image"><img src="/assets/img/our-story/img_our_farm_03.jpg" alt=""></figure>
-                  <div class="c-box-our-farm__card-heading">มาตรฐานระดับสากล</div>
-                  <div class="c-box-our-farm__card-content">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.</div>
+                  <div class="c-box-our-farm__card-heading"><?php echo $our_egg_title_03; ?></div>
+                  <div class="c-box-our-farm__card-content"><?php echo $our_farm_text_03; ?></div>
                 </div>
               </div>
               <div class="c-box-our-farm__item animation-element slide-top">
                 <div class="c-box-our-farm__card">
-                  <figure class="c-box-our-farm__card-image"><img src="/assets/img/our-story/img_our_farm_04.jpg" alt=""></figure>
-                  <div class="c-box-our-farm__card-heading">เพื่อสุขภาพที่ดีของคนไทย</div>
-                  <div class="c-box-our-farm__card-content">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics. No hormones are used in egg production either! Best of all, they come from happy hens who are free to roam and play.</div>
+                  <figure class="c-box-our-farm__card-image"><img src="/assets/img/our-story/img_our_farm_04.png" alt=""></figure>
+                  <div class="c-box-our-farm__card-heading"><?php echo $our_egg_title_04; ?></div>
+                  <div class="c-box-our-farm__card-content"><?php echo $our_farm_text_04; ?></div>
                 </div>
               </div>
             </div>
@@ -201,22 +245,16 @@ get_header();
           <div class="c-box-certificate__inner">
             <div class="c-box-certificate__list animation-element slide-top">
               <div class="c-box-certificate__item">
-                <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_01.svg" alt=""></figure>
+                <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_01.png" alt=""></figure>
               </div>
               <div class="c-box-certificate__item">
-                <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_02.svg" alt=""></figure>
+                <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_02.png" alt=""></figure>
               </div>
               <div class="c-box-certificate__item">
-                <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_03.svg" alt=""></figure>
+                <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_03.png" alt=""></figure>
               </div>
               <div class="c-box-certificate__item">
-                <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_04.svg" alt=""></figure>
-              </div>
-              <div class="c-box-certificate__item">
-                <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_05.svg" alt=""></figure>
-              </div>
-              <div class="c-box-certificate__item">
-                <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_06.svg" alt=""></figure>
+                <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_04.png" alt=""></figure>
               </div>
             </div>
           </div>
@@ -226,20 +264,14 @@ get_header();
             <canvas id="canvas-yellow-02"></canvas>
           </div>
           <div class="c-box-video__inner">
-            <div class="c-box-video__box-text">
-              <div class="c-heading-box-egg animation-element slide-top">
-                <div class="c-heading-egg">
-                  <div class="c-heading-egg__icon -white">
-                    <div class="c-play-solid"></div>
-                  </div>
-                  <div class="c-heading-egg__text">akara video</div>
-                </div>
-                <div class="c-heading-egg-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</div>
-              </div>
-            </div>
             <div class="c-box-video__box-iframe animation-element slide-top">
               <div class="c-box-video__box-iframe-inner">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ps3kWOQRQnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                <!-- <video width="320" height="240" controls>
+                  <source src="/assets/videos/our-story-video.mp4" type="video/mp4">
+                  <source src="/assets/videos/our-story-video.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+                </video> -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8dVSeHLBYsQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
           </div>

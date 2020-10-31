@@ -8,8 +8,8 @@
               <div class="c-product-category__name">akara ISE</div>
             </div>
             <div class="c-product-local-nav animation-element slide-right">
-              <div class="c-product-local-nav__item"><a class="c-product-local-nav__link" href="#">
-                  <div class="c-product-local-nav__link-icon"><img src="/assets/img/recipes/img_akara_egg_orange_nav_active.svg" alt="Mori - Tama"></div>
+              <div class="c-product-local-nav__item is-active"><a class="c-product-local-nav__link" href="#">
+                  <div class="c-product-local-nav__link-icon"></div>
                   <div class="c-product-local-nav__link-text">Mori - Tama</div></a></div>
             </div>
           </div>

@@ -56,15 +56,21 @@
       &-inner {
         padding-top: 56.145%;
         position: relative;
+        background: #000;
 
-        > iframe {
+        @include mq-max-sp {
+          padding-top: 100%;
+        }
+
+        > iframe,
+        > video {
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
-          width: 100%;
-          height: 100%;
+          width: 100% !important;
+          height: 100% !important;
         }
       }
     }
@@ -183,6 +189,12 @@
           display: none;
         }
       }
+    }
+  }
+
+  .c-button-cmn-01.--border-base {
+    @include mq-max-sp {
+      border-color: $baseColor;
     }
   }
 }

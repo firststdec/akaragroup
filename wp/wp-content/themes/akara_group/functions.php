@@ -182,7 +182,7 @@ require get_template_directory() . '/inc/custom-css.php';
  */
 function twentytwenty_register_styles() {
 
-	$theme_version = 202010071;
+	$theme_version = 20201026;
 
 	// wp_enqueue_style( 'twentytwenty-style', get_stylesheet_uri(), array(), $theme_version );
 	wp_style_add_data( 'twentytwenty-style', 'rtl', 'replace' );

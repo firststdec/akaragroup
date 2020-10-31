@@ -1092,6 +1092,7 @@
   border-radius: 100%;
   box-shadow: 0px 3px 25px 0px rgba(0,0,0,0.16);
   transition: all .5s;
+  cursor: pointer;
 
   @include mq-max-sp {
     width: 34px;

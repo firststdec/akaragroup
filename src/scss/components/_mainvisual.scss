@@ -226,6 +226,7 @@
     color: #777;
     padding-bottom: 100px;
     position: relative;
+    margin-top: 10px;
 
     @include mq-min-max-tb {
       padding-bottom: 80px;

@@ -6,13 +6,13 @@
     display: inline-flex;
     align-items: center;
     border-radius: 30px;
-    overflow: hidden;
     backface-visibility: hidden;
     transition: all 0.3s ease;
     border: 1px solid #fff;
     transition: all .5s;
     color: $baseColor;
     height: 48px;
+    outline: none;
 
     &:hover {
       padding-right: 30px;
@@ -39,7 +39,7 @@
         font-size: 1.4rem;
         padding: 0 10px 0 15px;
         color: $yellow;
-        width: auto;
+        position: relative !important;
       }
     }
 
@@ -73,7 +73,7 @@
       position: relative;
     }
 
-    >.text {
+    .text {
       font-weight: 500;
       font-size: 1.4rem;
       color: $baseColor;
@@ -81,7 +81,8 @@
       font-size: 0;
       opacity: 0;
       transition: all .3s ease-out;
-      width: 0;
+      width: fit-content;
+      position: absolute !important;
     }
 
     &.--green {

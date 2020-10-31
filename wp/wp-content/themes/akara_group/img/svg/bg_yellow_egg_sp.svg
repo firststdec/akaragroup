@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375.734" height="647.438" viewBox="0 0 375.734 647.438">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.206" x2="0.5" y2="0.827" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fcdc66"/>
+      <stop offset="1" stop-color="#ffc416"/>
+    </linearGradient>
+  </defs>
+  <path id="bg_yellow_egg_sp" d="M374,549.62s-17.106,30.883-131.246,9.532S-1.734,549.62-1.734,549.62l.207-630.383H374Z" transform="translate(1.734 80.763)" fill="url(#linear-gradient)"/>
+</svg>

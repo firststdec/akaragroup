@@ -46,13 +46,26 @@
         color: $baseColor;
       }
 
-      &::after {
-        width: 16px;
-        height: 16px;
-        background: $yellow !important;
-        margin-right: 3px;
+      .c-box-scroll-spy__link {
+        &::after {
+          width: 16px;
+          height: 16px;
+          background: $yellow !important;
+          margin-right: 3px;
+        }
       }
     }
+
+
+  }
+
+  &__link {
+    color: #777777;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    text-align: right;
+    display: flex;
+    align-items: center;
 
     &::after {
       content: '';
@@ -65,12 +78,5 @@
       transition: all .3s ease-in;
       margin-right: 6px;
     }
-  }
-
-  &__link {
-    color: #777777;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    text-align: right;
   }
 }

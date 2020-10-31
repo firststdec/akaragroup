@@ -215,11 +215,25 @@ gulp.task('compile', gulp.parallel(
   'images'
 ));
 
+gulp.task('compile-noimg', gulp.parallel(
+  'pug',
+  'styles',
+  'scripts:main',
+  'scripts:libs'
+));
+
 gulp.task('build', gulp.series(
   'config:build',
   'clean',
   'copy-webfonts',
   'compile'
+));
+
+gulp.task('build-noimg', gulp.series(
+  'config:build',
+  'clean',
+  'copy-webfonts',
+  'compile-noimg'
 ));
 
 gulp.task('dev', gulp.series(

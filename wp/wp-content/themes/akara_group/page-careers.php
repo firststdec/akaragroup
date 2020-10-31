@@ -72,7 +72,7 @@ get_header();
                         </div>
                       </div>
                       <div class="c-box-contact">
-                        <div class="c-box-contact__heading">ติดต่อฝ่ายบุคคล:  โทร. 037-349-885</div>
+                        <div class="c-box-contact__heading">ติดต่อฝ่ายบุคคล:  โทร. <a href="tel:037349885" title="โทรหาเรา 037-349-885" class="c-link-cmn-01">037-349-885</a></div>
                         <div class="c-box-contact__list">
                           <div class="c-box-contact__list-item">
                             <div class="heading">บริษัท อัครากรุ๊ป จำกัด</div>
@@ -80,7 +80,7 @@ get_header();
                           </div>
                           <div class="c-box-contact__list-item">
                             <div class="heading">วันและเวลาทำการ</div>
-                            <div class="text">วันจันทร์ – วันเสาร์ 08.00 – 17.00</div>
+                            <div class="text">วันจันทร์ – วันเสาร์ <br>08.00 – 17.00</div>
                           </div>
                         </div>
                       </div>

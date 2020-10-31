@@ -42,6 +42,10 @@
       $title = 'Contact Us | Akara Group';
       $kwd = '';
       $desc = '';
+    } elseif (is_page('where-to-buy')) {
+      $title = 'Where to Buy | Akara Group';
+      $kwd = '';
+      $desc = '';
     }
 
     if(is_tax('product_category')) {
@@ -124,7 +128,8 @@
 	<link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/solid.css">
 	<link rel="stylesheet" href="/assets/css/libs/swiper.css">
 	<link rel="stylesheet" href="/assets/css/libs/modaal.css">
-	<link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v=27">
+  <link rel="stylesheet" href="/assets/css/libs/validationEngine.jquery.css?v=2">
 	<?php wp_head(); ?>
 </head>
 <?php
@@ -475,8 +480,8 @@
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/about-us/"><i class="circle"></i>เกี่ยวกับอัครากรุ๊ป</a></li>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/faq/"><i class="circle"></i>คำถามที่พบบ่อย</a></li>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="#dummy"><i class="circle"></i>สื่อ</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="#dummy"><i class="circle"></i>ข่าวสาร, กิจกรรม, &amp; อีเวนท์</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/career/"><i class="circle"></i>ตำแหน่งงาน</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="#dummy"><i class="circle"></i>ข่าวสาร | กิจกรรม | อีเว้นท์</a></li>
+                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/career/"><i class="circle"></i>ร่วมงานกับเรา</a></li>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/contact-us/"><i class="circle"></i>ติดต่อเรา</a></li>
                             </ul>
                           </li>
@@ -490,9 +495,13 @@
               <div class="l-search-bar"><a class="c-link no-separate c-search modaal" href="#box-search" data-modaal-type="inline" data-modaal-animation="fade" data-modaal-overlay-opacity="0.9" data-custom-class="modal-search"><span class="fas fa-search"></span></a></div>
               <div class="c-box-search__detail" id="box-search">
                 <div class="c-box-search__inner">
-                  <form class="c-search-form" action="/search" method="get">
+                  <form role="search" class="c-search-form" action="/search/" method="get">
                     <div class="c-box-search__input"><i class="fas fa-search"></i>
-                      <input class="c-input-text" name="s" type="text" placeholder="Type your keyword">
+                    <?php if(ICL_LANGUAGE_CODE == 'th'): ?>
+                      <input class="c-input-text" id="s" name="s" type="search" placeholder="ค้นหา ...">
+                    <?php elseif(ICL_LANGUAGE_CODE == 'en'): ?>
+                      <input class="c-input-text" id="s" name="s" type="search" placeholder="Type your keyword">
+                    <?php endif; ?>
                     </div>
                     <div class="c-box-search__apply">
                       <div class="c-box-cmn-button">
@@ -507,7 +516,7 @@
                   <div class="c-button__text -button"><i class="fa fa-map-marker-alt"></i><i class="fa fa-map-marker-alt fa--bottom"></i>WHERE TO BUY</div></a></div>
               <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
               <div class="l-header__nav-trigger"><a class="l-header__nav-link c-button-middle c-button--orange -btn-where-to-buy" href="/where-to-buy/">
-                  <div class="c-button__text -button"><i class="fa fa-map-marker-alt"></i><i class="fa fa-map-marker-alt fa--bottom"></i>สถานที่จำหน่ายสินค้า</div></a></div>
+                  <div class="c-button__text -button"><i class="fa fa-map-marker-alt"></i><i class="fa fa-map-marker-alt fa--bottom"></i>จุดจำหน่ายสินค้า</div></a></div>
               <?php endif; ?>
               <div class="l-language-bar">
                 <?php if(ICL_LANGUAGE_CODE == 'en'): ?>

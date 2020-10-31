@@ -52,6 +52,7 @@ get_header();
                       <div class="c-box-time-line__image-frame"><img src="/assets/img/contact-us/img_contact_us_01.png" alt="บริษัท อัครากรุ๊ป จำกัด"></div>
                     </div>
                     <div class="c-box-time-line__content">
+                      <div class="c-box-time-line__content-heading -small">บริษัท แสงทองสหฟาร์ม จำกัด</div>
                       <div class="c-box-time-line__content-heading -small">บริษัท อัครากรุ๊ป จำกัด</div>
                       <ul class="c-box-time-line__content-list">
                         <li class="c-box-time-line__content-list-item"><i class="icon-time"></i>
@@ -69,13 +70,13 @@ get_header();
                         <li class="c-box-time-line__content-list-item"><i class="icon-email"></i>
                           <div class="c-box-detail -full">
                             <div class="heading">Email</div>
-                            <div class="detail">webadmin@akaragroup.co.th</div>
+                            <div class="detail"><a href="mailto:webadmin@akaragroup.co.th" title="ติดต่อเรา" class="c-link-cmn-03">webadmin@akaragroup.co.th</a></div>
                           </div>
                         </li>
                         <li class="c-box-time-line__content-list-item"><i class="icon-tel"></i>
                           <div class="c-box-detail -full">
                             <div class="heading">เบอร์โทรศัพท์</div>
-                            <div class="detail">037-349-885, 092-3807771-3</div>
+                            <div class="detail"><a href="tel:037349888" title="โทรหาเรา 037-349-888" class="c-link-cmn-03">037-349-888</a>, <a href="tel:09238077713" title="โทรหาเรา 0923807771"" class="c-link-cmn-03">092-380-7771</a></div>
                           </div>
                         </li>
                         <li class="c-box-time-line__content-list-item"><i class="icon-fax"></i>
@@ -87,6 +88,7 @@ get_header();
                       </ul>
                     </div>
                   </div>
+                  <?php /*
                   <div class="c-box-time-line__item animation-element slide-top">
                     <div class="c-box-time-line__image">
                       <div class="c-box-time-line__image-frame"><img src="/assets/img/contact-us/img_contact_us_01.png" alt="บริษัท แสงทองสหฟาร์ม จำกัด"></div>
@@ -109,13 +111,13 @@ get_header();
                         <li class="c-box-time-line__content-list-item"><i class="icon-email"></i>
                           <div class="c-box-detail -full">
                             <div class="heading">Email</div>
-                            <div class="detail">webadmin@akaragroup.co.th</div>
+                            <div class="detail"><a href="mailto:webadmin@akaragroup.co.th" title="ติดต่อเรา" class="c-link-cmn-03">webadmin@akaragroup.co.th</a></div>
                           </div>
                         </li>
                         <li class="c-box-time-line__content-list-item"><i class="icon-tel"></i>
                           <div class="c-box-detail -full">
                             <div class="heading">เบอร์โทรศัพท์</div>
-                            <div class="detail">037-349-885, 092-3807771-3</div>
+                            <div class="detail"><a href="tel:037349888" title="โทรหาเรา 037-349-888" class="c-link-cmn-03">037-349-888</a>, <a href="tel:09238077713" title="โทรหาเรา 0923807771"" class="c-link-cmn-03">092-380-7771</a></div>
                           </div>
                         </li>
                         <li class="c-box-time-line__content-list-item"><i class="icon-fax"></i>
@@ -127,6 +129,7 @@ get_header();
                       </ul>
                     </div>
                   </div>
+                  */ ?>
                 </div>
               </div>
             </div>
@@ -140,9 +143,9 @@ get_header();
             <div class="c-connect-with-us animation-element slide-top">
               <div class="c-connect-with-us__heading">Connect with us:</div>
               <div class="c-list-sns">
-                <div class="c-list-sns__item"><a class="c-list-sns__link" href="#"><i class="fab fa-facebook"></i></a></div>
-                <div class="c-list-sns__item"><a class="c-list-sns__link" href="#"><i class="fab fa-twitter"></i></a></div>
-                <div class="c-list-sns__item"><a class="c-list-sns__link" href="#"><i class="fab fa-instagram"></i></a></div>
+                <div class="c-list-sns__item"><a class="c-list-sns__link" href="https://www.facebook.com/akaragroupTH" target="_blank"><i class="fab fa-facebook"></i></a></div>
+                <div class="c-list-sns__item"><a class="c-list-sns__link" href="https://www.youtube.com/channel/UCACP4vYwPZLgrucq-5mu1zQ" target="_blank"><i class="fab fa-youtube"></i></a></div>
+                <div class="c-list-sns__item"><a class="c-list-sns__link" href="https://www.instagram.com/akarabrand/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></div>
               </div>
             </div>
             <?php get_template_part( 'templates/subscriber'); ?>

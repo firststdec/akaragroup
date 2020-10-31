@@ -16,7 +16,8 @@
                 'post_type' => 'product',
                 'post_status' => 'publish',
                 'posts_per_page' => -1,
-                'orderby' => 'date',
+                'orderby' => 'menu_order',
+                'order' => 'DESC',
                 'paged' => $paged,
                 'tax_query' => array(
                   array(
@@ -34,9 +35,9 @@
             <div class="c-product-local-nav animation-element slide-right">
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
             <?php $slug = basename(get_permalink()); ?>
-              <div class="c-product-local-nav__item">
+              <div class="c-product-local-nav__item <?php echo ($slug == $pagename)? 'is-active':''; ?>">
                 <a class="c-product-local-nav__link" href="<?php echo get_permalink(); ?>">
-                  <div class="c-product-local-nav__link-icon"><img src="/assets/img/recipes/img_akara_egg_green_nav<?php echo ($slug == $pagename)? '_active':''; ?>.svg" alt="Organic"></div>
+                  <div class="c-product-local-nav__link-icon"></div>
                   <div class="c-product-local-nav__link-text"><?php echo get_the_title();?></div>
                 </a>
               </div>

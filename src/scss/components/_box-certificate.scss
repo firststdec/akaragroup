@@ -20,7 +20,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     @include mq-max-sp {
@@ -29,9 +29,12 @@
   }
 
   &__item {
+    margin: 0 10px;
+
     @include mq-max-sp {
       padding-left: 15px;
       padding-right: 15px;
+      margin: 0;
     }
 
     &:nth-child(n+4) {
@@ -41,7 +44,13 @@
     }
 
     @include mq-max-sp {
-      width: 33.33%;
+      width: 25%;
+      display: inline-flex;
+      justify-content: center;
+    }
+
+    @include mq-custom-max(425px) {
+      width: 50%;
       display: inline-flex;
       justify-content: center;
     }

@@ -16,12 +16,16 @@
 	<div class="c-fix-panel">
 		<div class="inner">
 			<div class="c-call">
-				<div class="icon -tel"></div>
-				<div class="text">โทรหาเรา</div>
+				<a href="tel:037349885" title="โทรหาเรา 037349885" class="c-call">
+					<div class="icon -tel"></div>
+					<div class="text">โทรหาเรา</div>
+				</a>
 			</div>
 			<div class="c-message">
-				<div class="icon -line"></div>
-				<div class="text">ส่งข้อความ</div>
+				<a href="https://line.me/R/ti/p/%40akaragroup" target="_blank" class="c-message">
+					<div class="icon -line"></div>
+					<div class="text">ส่งข้อความ</div>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -49,14 +53,14 @@
 							<div class="l-footer__menu-link c-hide-sp"></div>
 							<div class="l-footer__content">
 								<div class="txt">
-									<div>092-3807771-3</div>
+									<div><a href="tel:0923807771" class="c-link-cmn-03" title="โทรหาเรา 0923807771">092-3807771-3</div>
 								</div>
 								<div class="txt">
-									<div>037-349-886</div>
+									<div><a href="tel:037349885" class="c-link-cmn-03" title="โทรหาเรา 037-349-885">037-349-885</a></div>
 									<div class="email"><img src="/assets/img/common/fax-solid.svg" alt=""></div>
 								</div>
 								<div class="txt">
-									<div>webadmin@akaragroup.co.th</div>
+									<div><a href="mailto:webadmin@akaragroup.co.th" class="c-link-cmn-03" title="ติดต่อเรา">webadmin@akaragroup.co.th</a></div>
 									<div class="fax"><img src="/assets/img/common/envelope-solid.svg" alt=""></div>
 								</div>
 							</div>
@@ -64,15 +68,15 @@
 						<li class="l-footer__menu-item">
 							<div class="l-footer__menu-link">CUSTOMER SERVICE</div>
 							<div class="l-footer__content -tel">
-								<div class="text">037-349-885</div>
+								<div class="text"><a href="tel:037349885" class="c-link-cmn-02" title="โทรหาเรา 037-349-885">037-349-885</a></div>
 								<div class="icon-tel"><i class="fas fa-headset"></i></div>
 							</div>
 							<div class="l-footer__menu-link -sns-heading">FOLLOW US</div>
 							<div class="l-footer__content -sns">
 								<div class="c-footer-list-sns">
-									<div class="c-footer-list-sns__item"><a class="c-footer-list-sns__link" href="#"><i class="fab fa-facebook"></i></a></div>
-									<div class="c-footer-list-sns__item"><a class="c-footer-list-sns__link" href="#"><i class="fab fa-twitter"></i></a></div>
-									<div class="c-footer-list-sns__item"><a class="c-footer-list-sns__link" href="#"><i class="fab fa-instagram"></i></a></div>
+									<div class="c-footer-list-sns__item"><a class="c-footer-list-sns__link" href="https://www.facebook.com/akaragroupTH" target="_blank"><i class="fab fa-facebook"></i></a></div>
+									<div class="c-footer-list-sns__item"><a class="c-footer-list-sns__link" href="https://www.youtube.com/channel/UCACP4vYwPZLgrucq-5mu1zQ" target="_blank"><i class="fab fa-youtube"></i></a></div>
+									<div class="c-footer-list-sns__item"><a class="c-footer-list-sns__link" href="https://www.instagram.com/akarabrand/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></div>
 								</div>
 							</div>
 						</li>
@@ -96,9 +100,16 @@
 <script src="/assets/js/libs/modaal.min.js"></script>
 <script src="/assets/js/libs/jquery.matchHeight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
-<script src="/assets/js/common.js"></script>
-<script src="/assets/js/bundle.js"></script>
+<script src="/assets/js/common.js?v=13"></script>
+<script src='/assets/js/libs/jquery.validationEngine.js'></script>
+<?php if(ICL_LANGUAGE_CODE == 'en'): ?>
+<script src='/assets/js/libs/jquery.validationEngine-en.js'></script>
+<?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
+<script src='/assets/js/libs/jquery.validationEngine-th.js?v=12'></script>
+<?php endif; ?>
+<script src='/assets/js/form.js?v=14'></script>
 <?php if(is_front_page()): ?>
+<script src="/assets/js/bundle.js?v=18"></script>
 <script src="/assets/js/top.js"></script>
 <?php endif; ?>
 <?php if(is_page_template("page-our-story.php")): ?>
@@ -113,8 +124,6 @@
 <script src="/assets/js/waveWhiteTop.js"></script>
 <?php endif; ?>
 <?php if(is_page_template('page-about-us.php')): ?>
-<script src="/assets/js/topWaveYellow.js"></script>
-<script src="/assets/js/bottomWaveYellow.js"></script>
 <script src="/assets/js/topWaveYellow02.js"></script>
 <script src="/assets/js/bottomWaveYellow02.js"></script>
 <script src="/assets/js/waveMainVisualSub.js"></script>
@@ -124,7 +133,7 @@
 <script src="/assets/js/waveCreamBottom.js"></script>
 <script src="/assets/js/waveMainVisualSub.js"></script>
 <?php endif; ?>
-<?php if(is_page_template('page-contact-us.php')): ?>
+<?php if(is_page('contact-us')): ?>
 <script src="/assets/js/waveMainVisualSub.js"></script>
 <?php endif; ?>
 <?php

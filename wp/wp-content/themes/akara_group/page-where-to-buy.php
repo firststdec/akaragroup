@@ -79,18 +79,6 @@ get_header();
                   </div>
                   <div class="c-where-to-buy__list-tab-item c-trgger-02" data-tab="c-tab-02">
                     <div class="icon">
-                      <div class="c-icon-our-store"></div>
-                    </div>
-                    <div class="text">ร้านค้าของเรา</div>
-                  </div>
-                  <div class="c-where-to-buy__list-tab-item c-trgger-03" data-tab="c-tab-03">
-                    <div class="icon">
-                      <div class="c-icon-point"></div>
-                    </div>
-                    <div class="text">จุดจำหน่ายสินค้า</div>
-                  </div>
-                  <div class="c-where-to-buy__list-tab-item c-trgger-04" data-tab="c-tab-04">
-                    <div class="icon">
                       <div class="c-icon-online-store"></div>
                     </div>
                     <div class="text">ออนไลน์</div>
@@ -103,14 +91,14 @@ get_header();
                   <div class="c-triangle -tab-01"></div>
                   <div class="c-where-to-buy__list-tab-content-box-list">
                     <div class="c-where-to-buy__list-shop js-swiper-shop">
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_01.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_02.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_03.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_04.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_01.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_02.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_03.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_04.svg" alt=""></a></div>
+                      <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/tesco-logo.png" alt="Tesco Lotus"></div></div>
+                      <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/tops-logo.png" alt="Tops Market"></div></div>
+                      <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/themall-logo.png" alt="The Mall"></div></div>
+                      <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/aeon-maxvalu-logo.png" alt="Aeon Max Valu"></div></div>
+                      <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/villamarket-logo.png" alt="Villa Market"></div></div>
+                      <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/ufmfujisuper-logo.png" alt="UFM Fuji Super"></div></div>
+                      <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/cj-express-logo.png" alt="CJ Express"></div></div>
+                      <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/DONDONDONKI-logo.png" alt="Don Don Donki"></div></div>
                     </div>
                   </div>
                 </div>
@@ -118,36 +106,7 @@ get_header();
                   <div class="c-triangle -tab-02"></div>
                   <div class="c-where-to-buy__list-tab-content-box-list">
                     <div class="c-where-to-buy__list-shop js-swiper-shop">
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_02.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_03.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_04.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_01.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_02.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_03.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_04.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_01.svg" alt=""></a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-where-to-buy__list-tab-content-box c-tab-03">
-                  <div class="c-triangle -tab-03"></div>
-                  <div class="c-where-to-buy__list-tab-content-box-list">
-                    <div class="c-where-to-buy__list-shop js-swiper-shop">
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_03.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_04.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_01.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_02.svg" alt=""></a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-where-to-buy__list-tab-content-box c-tab-04">
-                  <div class="c-triangle -tab-04"></div>
-                  <div class="c-where-to-buy__list-tab-content-box-list">
-                    <div class="c-where-to-buy__list-shop js-swiper-shop">
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_04.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_01.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_02.svg" alt=""></a></div>
-                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="#"><img src="/assets/img/where-to-buy/img_where_to_buy_03.svg" alt=""></a></div>
+                      <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/freshket-logo.png" alt="Freshket"></a></div>
                     </div>
                   </div>
                 </div>

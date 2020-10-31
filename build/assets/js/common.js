@@ -599,6 +599,10 @@ var jsMainvisual = function() {
     slidesPerView: 1,
     centeredSlides: false,
     loop: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     autoplay: {
       delay: 5000,
     },
@@ -659,7 +663,7 @@ if($('.js-recipes-swiper').length){
   var mySwiper = new Swiper('.js-recipes-swiper', {
     // Optional parameters
     slidesPerView: 4,
-    spaceBetween: 10,
+    spaceBetween: 20,
     centeredSlides: true,
     loop: true,
   
@@ -682,7 +686,7 @@ if($('.js-recipes-swiper').length){
     breakpoints: {
       767: {
         slidesPerView: 2,
-        spaceBetween: 10,
+        spaceBetween: 20,
         centeredSlides: true,
         loop: true,
       }
@@ -698,9 +702,16 @@ if($('.js-recipes-swiper-normal').length){
     loop: true,
 
     breakpoints: {
+      896: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+      },
+
       425: {
         slidesPerView: 2,
-        spaceBetween: 10,
+        spaceBetween: 20,
         centeredSlides: true,
         loop: true,
       },
@@ -947,5 +958,6 @@ const jsRelatePost = function() {
   }
 }
 $(window).on('resize', jsRelatePost);
+
 
 

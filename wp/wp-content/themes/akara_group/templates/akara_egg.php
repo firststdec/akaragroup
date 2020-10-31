@@ -39,19 +39,22 @@
 
                   if($term_type == $product_category_type):
             ?>
-              <div class="c-product-local-nav__item">
+
               <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
-                <a class="c-product-local-nav__link <?php echo ($term_obj->slug == $term->slug)? 'is-active':''; ?>" href="<?php echo esc_url( '/en/product/' . $term->slug ); ?>">
-                  <div class="c-product-local-nav__link-icon"><img src="/assets/img/recipes/img_akara_egg<?php echo ($term_obj->slug == $term->slug)? '_active':''; ?>.svg" alt="<?php echo $term->name; ?>"></div>
+              <div class="c-product-local-nav__item <?php echo ($term_obj->slug == $term->slug)? 'is-active':''; ?>">
+                <a class="c-product-local-nav__link" href="<?php echo esc_url( '/en/product/' . $term->slug ); ?>">
+                  <div class="c-product-local-nav__link-icon"></div>
                   <div class="c-product-local-nav__link-text"><?php echo $term->name; ?></div>
                 </a>
-              <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
-                <a class="c-product-local-nav__link <?php echo ($term_obj->slug == $term->slug)? 'is-active':''; ?>" href="<?php echo esc_url( '/product/' . $term->slug ); ?>">
-                  <div class="c-product-local-nav__link-icon"><img src="/assets/img/recipes/img_akara_egg<?php echo ($term_obj->slug == $term->slug)? '_active':''; ?>.svg" alt="<?php echo $term->name; ?>"></div>
-                  <div class="c-product-local-nav__link-text"><?php echo $term->name; ?></div>
-                </a>
-              <?php endif; ?>
               </div>
+              <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
+              <div class="c-product-local-nav__item <?php echo ($term_obj->slug == $term->slug)? 'is-active':''; ?>">
+                <a class="c-product-local-nav__link " href="<?php echo esc_url( '/product/' . $term->slug ); ?>">
+                  <div class="c-product-local-nav__link-icon"></div>
+                  <div class="c-product-local-nav__link-text"><?php echo $term->name; ?></div>
+                </a>
+              </div>
+              <?php endif; ?>
             <?php
                   endif; // if($term_type == $product_category_type):
                 endforeach; // foreach ( $terms as $term ) :
@@ -107,7 +110,8 @@
           'post_type' => 'product',
           'post_status' => 'publish',
           'posts_per_page' => -1,
-          'orderby' => 'date',
+          'orderby' => 'menu_order',
+          'order' => 'DESC',
           'paged' => $paged,
           'tax_query' => array(
             array(

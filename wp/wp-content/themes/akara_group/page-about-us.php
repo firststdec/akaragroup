@@ -56,9 +56,10 @@ get_header();
                       <div class="c-box-time-line__content-text">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.</div>
                     </div>
                     <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
-                      <div class="c-box-time-line__content">
-                      <div class="c-box-time-line__content-text">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 เมื่อเครื่องพิมพ์โนเนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง Lorem Ipsum อยู่ยงคงกระพันมาไม่ใช่แค่เพียงห้าศตวรรษ</div>
-                      <div class="c-box-time-line__content-text">แต่อยู่มาจนถึงยุคที่พลิกโฉมเข้าสู่งานเรียงพิมพ์ด้วยวิธีทางอิเล็กทรอนิกส์ และยังคงสภาพเดิมไว้อย่างไม่มีการเปลี่ยนแปลง มันได้รับความนิยมมากขึ้นในยุค ค.ศ. 1960</div>
+                    <div class="c-box-time-line__content">
+                      <div class="c-box-time-line__content-text">กว่าจะเป็นไข่ไก่ฟาร์มแสงทอง… ทุกขั้นตอนเราพิถีพิถันใส่ใจในทุกรายละเอียด เพื่อที่จะได้ไข่ไก่ คุณภาพ ปลอดภัยและได้มาตรฐาน ซึ่งเราสามารถควบคุมการผลิตตั้งแต่ต้นน้ำจนถึงปลายน้ำ</div>
+                      <div class="c-box-time-line__content-text">ตั้งแต่คัดเลือกสายพันธุ์พ่อแม่พันธุ์ไก่ไข่ สายพันธุ์ Lohnmann จากประเทศเยอรมัน เป็นรายแรกและรายเดียวที่นำเข้าสำเร็จและผลิตจนได้ลูกไก่ที่แข็งแรงพันธุ์ “ซับใหญ่ บราวน์”เลี้ยงในโรงเรือนที่ทันสมัยสามารถควบคุมความเย็น (EVAP system)และมีระบบป้องกันโรคอย่างเข้มงวด เทคโนโลยีและอุปกรณ์ต่างๆภายในฟาร์มล้วนได้มาตรฐานนำเข้าจากยุโรป</div>
+                      <div class="c-box-time-line__content-text">จากลูกไก่เจริญเติบโตเป็นไก่สาว และพร้อมแล้วที่จะเป็นแม่ไก่สุขภาพดีที่จะออกไข่ไก่สดคุณภาพมาตรฐานแสงทองสู่มือผู้บริโภคชาวไทย</div>
                     </div>
                     <?php endif;?>
                   </div>
@@ -74,60 +75,11 @@ get_header();
                     <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
                     <div class="c-box-time-line__content">
                       <div class="c-box-time-line__content-heading -small">แสงทองฟาร์ม</div>
-                      <div class="c-box-time-line__content-text">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์ มันได้กลายมาเป็นเนื้อหาจำลองมาตรฐานของธุรกิจดังกล่าวมาตั้งแต่ศตวรรษที่ 16 เมื่อเครื่องพิมพ์โนเนมเครื่องหนึ่งนำรางตัวพิมพ์มาสลับสับตำแหน่งตัวอักษรเพื่อทำหนังสือตัวอย่าง Lorem Ipsum อยู่ยงคงกระพันมาไม่ใช่แค่เพียงห้าศตวรรษ</div>
+                      <div class="c-box-time-line__content-text">จุดเริ่มต้นจากธุรกิจฟาร์มไก่เนื้อ พัฒนาต่อยอดมาสู่ธุรกิจฟาร์มไข่ไก่สด และผลิตภัณฑ์แปรรูปจากไข่ไก่ ดำเนินการอย่างต่อเนื่องมาจนถึงปัจจุบันเป็นระยะเวลานานกว่า 25 ปี ด้วยกำลังการผลิตและส่งออกกว่า 2 ล้านฟองต่อวัน จึงมั่นใจได้ในคุณภาพ ความเชี่ยวชาญ และตัวจริงด้านไข่ไก่</div>
                     </div>
                     <?php endif; ?>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="c-box-our-egg">
-              <div class="c-wave-yellow">
-                <canvas id="canvas-yellow"></canvas>
-              </div>
-              <div class="c-box-our-egg__inner">
-                <div class="c-heading-box-egg animation-element slide-top">
-                  <div class="c-heading-egg">
-                    <div class="c-heading-egg__icon -white">
-                      <div class="c-egg-solid"></div>
-                    </div>
-                    <div class="c-heading-egg__text">Our Eggs</div>
-                  </div>
-                  <div class="c-heading-egg-content -lg">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy <br>tempor invidunt ut labore et dolore</div>
-                </div>
-                <div class="c-box-our-egg__list animation-element slide-top">
-                  <div class="c-box-our-egg__item">
-                    <div class="c-box-our-egg_card">
-                      <figure class="c-box-our-egg__card-image"><img src="/assets/img/about-us/img_about_us_03.png" alt="Quality Matter"></figure>
-                      <div class="c-box-our-egg__card-heading">Quality Matter</div>
-                      <div class="c-box-our-egg__card-content">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.</div>
-                    </div>
-                  </div>
-                  <div class="c-box-our-egg__item">
-                    <div class="c-box-our-egg_card">
-                      <figure class="c-box-our-egg__card-image"><img src="/assets/img/about-us/img_about_us_04.png" alt="We Care Our Consumer"></figure>
-                      <div class="c-box-our-egg__card-heading">We Care Our Consumer</div>
-                      <div class="c-box-our-egg__card-content">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.</div>
-                    </div>
-                  </div>
-                  <div class="c-box-our-egg__item">
-                    <div class="c-box-our-egg_card">
-                      <figure class="c-box-our-egg__card-image"><img src="/assets/img/about-us/img_about_us_05.png" alt="We Care Our Egg"></figure>
-                      <div class="c-box-our-egg__card-heading">We Care Our Egg</div>
-                      <div class="c-box-our-egg__card-content">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.</div>
-                    </div>
-                  </div>
-                  <div class="c-box-our-egg__item">
-                    <div class="c-box-our-egg_card">
-                      <figure class="c-box-our-egg__card-image"><img src="/assets/img/about-us/img_about_us_06.png" alt="Social Impact"></figure>
-                      <div class="c-box-our-egg__card-heading">Social Impact</div>
-                      <div class="c-box-our-egg__card-content">These tasty certified USDA Organic eggs come from farms that have been pesticide-free for at least three years and from free range flocks that receive no antibiotics.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="c-wave-yellow-bottom">
-                <canvas id="canvas-yellow-bottom"></canvas>
               </div>
             </div>
             <div class="c-our-brand">
@@ -391,22 +343,16 @@ get_header();
                 </div>
                 <div class="c-box-certificate__list">
                   <div class="c-box-certificate__item">
-                    <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_01.svg" alt=""></figure>
+                    <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_01.png" alt=""></figure>
                   </div>
                   <div class="c-box-certificate__item">
-                    <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_02.svg" alt=""></figure>
+                    <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_02.png" alt=""></figure>
                   </div>
                   <div class="c-box-certificate__item">
-                    <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_03.svg" alt=""></figure>
+                    <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_03.png" alt=""></figure>
                   </div>
                   <div class="c-box-certificate__item">
-                    <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_04.svg" alt=""></figure>
-                  </div>
-                  <div class="c-box-certificate__item">
-                    <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_05.svg" alt=""></figure>
-                  </div>
-                  <div class="c-box-certificate__item">
-                    <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_06.svg" alt=""></figure>
+                    <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_04.png" alt=""></figure>
                   </div>
                 </div>
               </div>

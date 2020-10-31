@@ -15,9 +15,9 @@ get_header();
 
 <?php
 
-	if ( have_posts() ) :
+	// if ( have_posts() ) :
 
-		while ( have_posts() ) :
+		// while ( have_posts() ) :
       the_post();
       $term_obj = get_queried_object();
 ?>
@@ -107,8 +107,8 @@ get_header();
         </div>
       </main>
 <?php
-		endwhile;
-	endif;
+		// endwhile;
+	// endif;
 ?>
 
 <?php get_footer(); ?>

@@ -71,6 +71,13 @@
       transform: translateY(10px);
     }
   }
+
+  &.-th {
+    &::after {
+      background: url(/assets/img/common/scroll_down_th.png) no-repeat;
+      background-size: cover;
+    }
+  }
 }
 
 
