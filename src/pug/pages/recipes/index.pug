@@ -1,0 +1,140 @@
+extends ../../layouts/master.pug
+
+block variables
+  -
+    const index = true
+    const meta = {
+      title: 'Recipes | Akara Group',
+      keyword: 'Akara Group',
+      description: '',
+      goTitle: 'Akara Group',
+      goDescription: '',
+      goImage: '/assets/img/ogp.png',
+      goUrl: '',
+      twitterTitle: 'Akara Group',
+      twitterDescription: '',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: ''
+    }
+
+    const topPage = false
+    const whiteTheme = false
+
+block prepend css
+  link(rel='stylesheet', href='/assets/css/libs/slick.css')
+block append scripts
+  script(src='/assets/js/libs/slick.min.js')
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+  script(src='/assets/js/waveCreamTop.js')
+  script(src='/assets/js/waveCreamBottom.js')
+  script(src='/assets/js/waveMainVisualSub.js')
+
+block outside
+  //- // loader
+  //- .c-loader
+  //-   .c-loader__icon
+  //-     p.c-loader__text
+  //-       img(src="/assets/img/common/logo@2x.png", alt="")
+  //-     .loader.simple-circle
+  //- // /loader
+  .c-bg-wave-mainvisual-sub
+    .c-bg-wave-mainvisual-solid
+      canvas#canvas-mainvisual
+block content
+  .p-recipes
+    .c-mv-sub-page
+      .c-mv-sub-page__inner
+        .c-mv-sub-page__box-content
+          .c-mv-sub-page__heading Akara Recipes
+          .c-mv-sub-page__sub-heading Make favorite recipes with our products.
+          .c-mv-sub-page__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscin.
+          a.c-mv-sub-page__anchor-icon.js-scroll.c-scroll-down-button__static-page(href="#scroll_timeline")
+            .c-scroll-down-line
+        .c-mv-sub-page__box-image
+          figure.c-mv-sub-page__image-frame
+            img(src="/assets/img/recipes/img_mv_recipes.png", alt="")
+
+    .c-box-recipes
+      .c-heading-box-egg.animation-element.slide-top
+        .c-heading-egg
+          .c-heading-egg__icon
+            svg(xmlns='http://www.w3.org/2000/svg' width='28.664' height='19.109' viewBox='0 0 28.664 19.109')
+              g#ico_dish(transform='translate(-262 -548.134)')
+                path#Path_968(data-name='Path 968' d='M339.821,548.134a9.555,9.555,0,1,0,9.555,9.555,9.566,9.566,0,0,0-9.555-9.555Zm0,17.915a8.36,8.36,0,1,1,8.36-8.36,8.37,8.37,0,0,1-8.36,8.36Zm0,0' transform='translate(-63.489)' fill='#fff')
+                path#Path_969(data-name='Path 969' d='M372.161,582.864a.6.6,0,0,0-.6-.6,7.174,7.174,0,0,0-7.166,7.166.6.6,0,0,0,1.195,0,5.979,5.979,0,0,1,5.972-5.972.6.6,0,0,0,.6-.6Zm0,0' transform='translate(-95.232 -31.744)' fill='#fff')
+                path#Path_970(data-name='Path 970' d='M458.863,682.7a.6.6,0,1,0,0,1.194,7.174,7.174,0,0,0,7.166-7.166.6.6,0,1,0-1.194,0,5.978,5.978,0,0,1-5.972,5.972Zm0,0' transform='translate(-182.531 -119.043)' fill='#fff')
+                path#Path_971(data-name='Path 971' d='M623.384,548.134a2.989,2.989,0,0,0-2.986,2.986v6.569a1.793,1.793,0,0,0,1.792,1.791h.6v7.166a.6.6,0,0,0,1.194,0V548.731a.6.6,0,0,0-.6-.6Zm-.6,10.152h-.6a.6.6,0,0,1-.6-.6V551.12a1.8,1.8,0,0,1,1.194-1.689v8.855Zm0,0' transform='translate(-333.317)' fill='#fff')
+                path#Path_972(data-name='Path 972' d='M266.777,548.731a.6.6,0,1,0-1.194,0v5.374a1.178,1.178,0,0,1-.6,1.011v-6.385a.6.6,0,1,0-1.194,0v6.385a1.178,1.178,0,0,1-.6-1.011v-5.374a.6.6,0,1,0-1.194,0v5.374a2.386,2.386,0,0,0,1.792,2.3v10.237a.6.6,0,0,0,1.194,0V556.409a2.386,2.386,0,0,0,1.791-2.3Zm0,0' fill='#fff')
+
+          .c-heading-egg__text Choose your favorite menu
+        .c-heading-egg-content.-lg Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+
+      .c-media
+        nav.c-media-category.u-no-sp
+          .c-media-category__list
+            .c-media-category__item.is-active
+              a.c-media-category__link(href="#")
+                .text All Recipes
+            .c-media-category__item
+              a.c-media-category__link(href="#")
+                .text Thai Menu
+            .c-media-category__item
+              a.c-media-category__link(href="#")
+                .text Japanese Menu
+            .c-media-category__item
+              a.c-media-category__link(href="#")
+                .text International Menu
+            .c-media-category__item
+              a.c-media-category__link(href="#")
+                .text Dessert & Bakery
+
+        .c-media-category-dropdown.u-no-tb.u-no-pc
+          svg(xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8')
+            path#Polygon_2(data-name='Polygon 2' d='M6,0l6,8H0Z' transform='translate(12 8) rotate(180)' fill='#777')
+
+          select.c-media-category-select(name="category")
+            option(value="") All Recipes
+            option(value="") Thai Menu
+            option(value="") Japanese Menu
+            option(value="") International Menu
+            option(value="") Dessert &amp; Bakery
+
+        .c-media-list.-recipes
+          - for (var i = 1; i <= 9; ++i)
+            .c-media-list__item.animation-element.slide-top
+              a.c-media-list__link(href="/recipes/detail.html")
+                .c-media-list__card
+                  .c-media-list__frame
+                    img.c-media-list__image(src="/assets/img/recipes/img_recipes_0" + i +".png", alt="Rocky Egg Salad")
+                    .c-badge__list
+                      .c-badge__item.-level
+                        .icon
+                        .text Easy
+                      .c-badge__item.-time
+                        .icon
+                        .text 30 mins
+                  .c-media-list__heading Rocky Egg Salad
+                  .c-media-list__text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+
+        .c-box-cmn-button.animation-element.slide-top.--center
+          a.c-button-cmn-01.--border-base
+            span.text LOAD MORE
+            span.arrow
+              i.fa.fa-arrow-right
+    .l-sec-cmn-01.-box-subscribe
+      .inner
+        .c-box-subscribe.animation-element.slide-top
+          .item.-signup-text
+            .box-sign-up
+          .item
+            .box-heading
+              .heading FOR RECIPES, COUPONS AND OTHER NEWS
+            .box-form
+              .c-input-row
+                input.c-input.-text(type="email", name="email", placeholder="Your E-Mail Address")
+                .c-box-cmn-button
+                  button.c-button-cmn-01(type="submit", value="")
+                    span.text SUBSCRIBE
+                    span.arrow
+                      i.fa.fa-arrow-right

@@ -197,7 +197,7 @@
                   </div>Product Detail
                 </div>
                 <?php if(have_rows('product_detail_rpt')): ?>
-                <div class="c-product-list__nutrient-table">
+                <div class="c-product-list__nutrient-table" style="display: none;">
                   <?php
                     // Loop through rows.
                     while( have_rows('product_detail_rpt') ) : the_row();
@@ -220,7 +220,7 @@
               <?php endif; // if(have_rows('product_detail_rpt')):?>
 
               <?php if(have_rows('product_certificate_rpt')): ?>
-              <div class="c-product-list__box-product-badge">
+              <div class="c-product-list__box-product-badge" style="display: none;">
                 <div class="c-product-list__box-product-badge-list">
                   <?php
                     // Loop through rows.

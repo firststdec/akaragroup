@@ -75,6 +75,13 @@
       @include mq-max-sp {
         width: 100%;
       }
+      &-heading-logo {
+        &.-akara {
+          @include mq-min-tb {
+            width: 170px;
+          }
+        }
+      }
     }
 
     &-content-heading-logo {

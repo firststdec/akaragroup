@@ -102,10 +102,10 @@ get_header();
                             <!-- Additional required wrapper-->
                             <div class="swiper-wrapper">
                               <!-- Slides-->
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_08.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_09.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_10.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_07.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/farm-sangtong-pic-1.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/farm-sangtong-pic-2.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/farm-sangtong-pic-3.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/farm-sangtong-pic01.png" alt=""></div>
                             </div>
                             <!-- If we need navigation buttons-->
                             <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
@@ -142,10 +142,10 @@ get_header();
                             <!-- Additional required wrapper-->
                             <div class="swiper-wrapper">
                               <!-- Slides-->
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_07.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_08.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_09.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_10.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/akara-pic-01.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/akara-pic-02.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/akara-pic-03.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/akara-pic-04.png" alt=""></div>
                             </div>
                             <!-- If we need navigation buttons-->
                             <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
@@ -167,7 +167,7 @@ get_header();
                         }
                       ?>
                       <div class="c-our-brand__card-content">
-                        <div class="c-our-brand__card-content-heading-logo"><img src="/assets/img/about-us/ico_logo_about_us_01.svg" alt=""></div>
+                        <div class="c-our-brand__card-content-heading-logo -akara"><img src="/assets/img/about-us/ico_logo_about_us_01.svg" alt=""></div>
                         <div class="c-our-brand__card-content-heading-sub"><?php echo $sub_heading_01; ?></div>
                         <div class="c-our-brand__card-content-text"><?php echo $sub_content_01; ?></div>
                       </div>
@@ -182,10 +182,10 @@ get_header();
                             <!-- Additional required wrapper-->
                             <div class="swiper-wrapper">
                               <!-- Slides-->
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_10.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_07.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_08.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/img_about_us_09.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/moritama-pic-01.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/moritama-pic-02.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/moritama-pic-03.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/moritama-pic-1.png" alt=""></div>
                             </div>
                             <!-- If we need navigation buttons-->
                             <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>

@@ -128,8 +128,8 @@
 	<link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/solid.css">
 	<link rel="stylesheet" href="/assets/css/libs/swiper.css">
 	<link rel="stylesheet" href="/assets/css/libs/modaal.css">
-  <link rel="stylesheet" href="/assets/css/style.css?v=27">
-  <link rel="stylesheet" href="/assets/css/libs/validationEngine.jquery.css?v=2">
+  <link rel="stylesheet" href="/assets/css/style.css?v=32">
+  <link rel="stylesheet" href="/assets/css/libs/validationEngine.jquery.css?v=3">
 	<?php wp_head(); ?>
 </head>
 <?php
