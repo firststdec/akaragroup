@@ -81,6 +81,27 @@
       position: relative !important;
     }
   }
+
+  .c-scroll-down-line {
+    background: url(/assets/img/recipes/img_recipes_line.png) no-repeat;
+    width: 299px;
+    height: 292px;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    background-size: cover;
+
+    @include mq-max-sp {
+      display: none;
+    }
+
+    @include mq-min-max-tb {
+      width: get-vw(299px);
+      height: get-vw(292px);
+      top: get-vw(70px);
+      left: get-vw(20px);
+    }
+  }
 }
 
 .c-box-recipes {
@@ -93,6 +114,7 @@
       justify-content: center;
       align-items: center;
       margin-bottom: 20px;
+      margin-right: 0;
     }
 
     &-content {
