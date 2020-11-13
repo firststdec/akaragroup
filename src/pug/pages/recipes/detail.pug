@@ -1,0 +1,257 @@
+extends ../../layouts/master.pug
+
+block variables
+  -
+    const index = true
+    const meta = {
+      title: 'Recipes Detail | Akara Group',
+      keyword: 'Akara Group',
+      description: '',
+      goTitle: 'Akara Group',
+      goDescription: '',
+      goImage: '/assets/img/ogp.png',
+      goUrl: '',
+      twitterTitle: 'Akara Group',
+      twitterDescription: '',
+      twitterImage: '/assets/img/ogp.png',
+      twitterUrl: ''
+    }
+
+    const topPage = false
+    const whiteTheme = true
+
+block prepend css
+  link(rel='stylesheet', href='/assets/css/libs/slick.css')
+block append scripts
+  script(src='/assets/js/libs/slick.min.js')
+  script(src='/assets/js/libs/jquery.matchHeight.js')
+  script(src='/assets/js/libs/jquery.waypoints.js')
+
+block outside
+
+block content
+  .p-recipe-detail
+    .c-mv-recipe
+      .c-mv-recipe__overlay
+      .c-mv-recipe__image
+        img.image(src="/assets/img/recipes/detail/img_recipes_01.png")
+
+    .c-box-recipe-heading
+      .c-box-recipe-heading__inner
+        .c-recipe-heading-01 Cheddar Chive Biscuits
+        .c-recipes-tag-list
+          .c-recipes-tag-list__item
+            .icon
+              img(src="/assets/img/recipes/detail/ico_chief.svg", alt="")
+            .text Level Easy
+          .c-recipes-tag-list__item
+            .icon
+              img(src="/assets/img/recipes/detail/ico_dish.svg", alt="")
+            .text Small Dish
+          .c-recipes-tag-list__item
+            .icon
+              img(src="/assets/img/recipes/detail/ico_meal.svg", alt="")
+            .text Breakfast
+          .c-recipes-tag-list__item
+            .icon
+              img(src="/assets/img/recipes/detail/ico_time.svg", alt="")
+            .text 45 mins
+      .c-box-recipe-heading__inner
+        .c-box-share-download
+          a.c-button-middle.c-button--orange.-btn-recipes(href='#')
+            .c-button__text.-button
+              i.fa.fas.fa-share-alt
+              i.fa.fas.fa-share-alt.fa--bottom
+              | SHARE RECIPES
+          a.c-button-middle.c-button--orange.-btn-recipes(href='#')
+            .c-button__text.-button
+              i.fa.fas.fa-file-pdf.
+              i.fa.fas.fa-file-pdf.fa--bottom
+              | DOWNLOAD PDF
+
+    .c-box-recipe-content
+      .c-box-recipe-content__inner
+        .c-local-fix-nav
+          .heading Cheddar Chive Biscuits
+          .list-step
+            .list-step__item.is-active
+              span Step 1
+            .list-step__item
+              span Step 2
+            .list-step__item
+              span Step 3
+            .list-step__item
+              span Step 4
+            .list-step__item
+              span Step 5
+        
+        .c-box-ingredient
+          .c-box-ingredient__inner
+            .heading-egg
+              .icon-egg
+                .i-list-white
+              .text Information per serving 1 biscuit
+            table.c-table-ingrediant-01
+              tr
+                td Name
+                td 
+                td %DV
+              tr
+                td Calories
+                td 220
+                td -
+              tr
+                td Calories from Fat
+                td 120
+                td -
+              tr
+                td Total Fat
+                td 14g
+                td 22%
+              tr
+                td Saturated Fat
+                td 8g
+                td 40%
+              tr
+                td Trans Fat
+                td 0g
+                td -
+              tr
+                td Cholesterol
+                td 40mg
+                td 13%
+              tr
+                td Sodium
+                td 340mg
+                td 14%
+              tr
+                td Total Carbohydrates
+                td 17g
+                td 6%
+              tr
+                td Dietary Fiber
+                td 1g
+                td 4%
+              tr
+                td Sugars
+                td 1g
+                td -
+              tr
+                td Protein
+                td 6g
+                td -
+
+          .c-box-ingredient__inner.-bg-cream
+            .heading-egg
+              .icon-egg
+                .i-clipboard
+              .text Ingredients for 10 servings
+            table.c-table-ingrediant-02
+              tr
+                td All-purpose flour
+                td 3 cups  |   390g
+              tr
+                td Baking powder
+                td 1 tbsp  |   12g
+              tr
+                td Baking soda
+                td 1 tsp  |   7g
+              tr
+                td Salt, kosher
+                td 2 tsp  |   8g
+              tr
+                td Butter
+                td 1 cup  |   8oz
+              tr
+                td Whole Milk Plain Greek Yogurt
+                td 1 cup  |   8oz
+              tr
+                td Milk, whole
+                td 1 cup  |   250g
+              tr
+                td Cheddar, sharp, grated
+                td 1 cup  |   250g
+              tr
+                td Chives, sliced
+                td ½ cup  |   28g
+              tr
+                td Akara Jumbo Eggs 
+                td 3 Eggs  |   100g
+
+        .c-step-cook-list
+          .c-step-cook-list__item
+            .c-step-egg
+              span.small Step
+              span.number 1
+            .c-step-detail Preheat oven to 400ºF.
+          .c-step-cook-list__item
+            .c-step-egg
+              span.small Step
+              span.number 2
+            .c-step-detail Preheat Combine dry ingredients and pulse in food processor. Add in butter cubes and pulse until coarse meal forms.
+          .c-step-cook-list__item
+            .c-step-egg
+              span.small Step
+              span.number 3
+            .c-step-detail
+              |Add to wet ingredients and fold, being careful not to overwork dough. <br>
+              |Roll out dough to 1” thickness and cut dough in half. Take one half of dough and stack it on top of the other half for tall flaky layers.
+          .c-step-cook-list__item
+            .c-step-egg
+              span.small Step
+              span.number 4
+            .c-step-detail
+              |Roll dough out again to 1” and cut out 10 biscuits with 3” circular dough cutter. Alternatively, cut squares for additional yield.
+          .c-step-cook-list__item
+            .c-step-egg
+              span.small Step
+              span.number 5
+            .c-step-detail Place biscuits on half sheet tray lined with parchment paper.
+          .c-step-cook-list__item
+            .c-step-egg
+              span.small Step
+              span.number 6
+            .c-step-detail Chill in freezer for 10 minutes, remove, and bake for 10-12 minutes, or until done.
+
+        .c-recipes-video
+          iframe(width='560', height='315', src='https://www.youtube.com/embed/8dVSeHLBYsQ', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+
+        .c-recipes-video-text Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+
+        .c-box-share-download.-bottom
+          a.c-button-middle.c-button--orange.-btn-recipes(href='#')
+            .c-button__text.-button
+              i.fa.fas.fa-share-alt
+              i.fa.fas.fa-share-alt.fa--bottom
+              | SHARE RECIPES
+          a.c-button-middle.c-button--orange.-btn-recipes(href='#')
+            .c-button__text.-button
+              i.fa.fas.fa-file-pdf.
+              i.fa.fas.fa-file-pdf.fa--bottom
+              | DOWNLOAD PDF
+
+    a.c-box-next-recipes(href="#")
+      .c-box-next-recipes__inner
+        .nav-text Next recipe
+        .heading ก๋วยเตี๋ยวต้มยำไข่ยางมะตูม
+        .box-image
+          .icon-down
+          figure.image
+            img(src="/assets/img/recipes/detail/img-recipes-02.png", alt="")
+
+    .l-sec-cmn-01.-box-subscribe
+      .inner
+        .c-box-subscribe.animation-element.slide-top
+          .item.-signup-text
+            .box-sign-up
+          .item
+            .box-heading
+              .heading FOR RECIPES, COUPONS AND OTHER NEWS
+            .box-form
+              .c-input-row
+                input.c-input.-text(type="email", name="email", placeholder="Your E-Mail Address")
+                .c-box-cmn-button
+                  button.c-button-cmn-01(type="submit", value="")
+                    span.text SUBSCRIBE
+                    span.arrow
+                      i.fa.fa-arrow-right

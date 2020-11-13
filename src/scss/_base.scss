@@ -224,7 +224,7 @@ a {
 
       @include mq-max-sp {
         background: #fff;
-        transition: all .3s ease-in;
+        transition: background-image .3s ease-in;
       }
     }
 
@@ -295,7 +295,7 @@ a {
         border-color: $baseColor;
         color: $yellow;
         background-image: none;
-        transition: all .5s ease-out;
+        transition: background-image .5s ease-out;
       }
 
       .c-button__text{

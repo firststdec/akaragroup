@@ -1,0 +1,434 @@
+@import '../_mixin';
+
+.p-recipe-detail {
+  .c-mv-recipe {
+    padding-top: 55.556%;
+    position: relative;
+    z-index: 2;
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      background: url(/assets/img/recipes/detail/bg_recipe_overlay.png);
+      background-size: cover;
+    }
+
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .c-box-recipe-heading {
+    max-width: 1290px;
+    margin: -100px auto 0;
+    position: relative;
+    z-index: 3;
+    background: $white;
+    display: flex;
+    flex-wrap: wrap;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 50px 110px;
+
+    @include mq-min-max-tb {
+      padding: get-vw(50px) get-vw(110px);
+    }
+
+    &__inner {
+      width: 50%;
+    }
+  }
+
+  .c-recipe-heading-01 {
+    font-size: 4rem;
+    line-height: 1.2;
+    color: $baseColor;
+    width: 100%;
+  }
+
+  .c-recipes-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        border: 1px solid #F7E7BC;
+        background: #FCFBF2;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .text {
+        font-size: 1.4rem;
+        color: $baseColor;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .c-box-share-download {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &.-bottom {
+      margin-top: 50px;
+      justify-content: center;
+    }
+
+    .c-box-cmn-button {
+      &:not(:first-of-type) {
+        margin-left: 20px;
+      }
+    }
+
+    .c-button-cmn-01 {
+      .text {
+        opacity: 1;
+        position: relative !important;
+        font-size: 1.4rem;
+        padding: 0 10px 0 15px;
+      }
+
+      &:hover {
+        padding-right: 20px;
+      }
+    }
+  }
+
+  .c-box-recipe-content {
+    max-width: 1070px;
+    margin: auto;
+    border-top: 2px dashed #DCDCDC;
+
+    .c-local-fix-nav {
+      margin-top: 60px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 65px;
+      padding: 20px 50px;
+      border-radius: 38px;
+      box-shadow: 10px 10px 35px 0 rgba(0,0,0,0.05);
+
+      .heading {
+        display: inline-block;
+      }
+
+      .list-step {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &__item {
+          padding: 2px 20px;
+          position: relative;
+          line-height: 1.2;
+          color: #777777;
+          transition: all 0.3s ease-in;
+          cursor: pointer;
+
+          &.is-active, &:hover {
+            color: $baseColor;
+            text-decoration: underline;
+          }
+
+          &:not(:first-of-type){
+            &::before {
+              content: '';
+              display: block;
+              width: 1px;
+              height: 100%;
+              border-right: 2px dotted #DCDCDC;
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .c-box-ingredient {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+
+    &__inner {
+      width: 48.95%;
+      padding: 50px;
+      border-radius: 20px;
+      border: 1px solid #FCF6E6;
+
+      &.-bg-cream {
+        background: #FCFBF2;
+        border: 1px solid #FCFBF2;
+      }
+
+      .c-table-ingrediant-01 {
+        width: 100%;
+        margin-top: 40px;
+
+        td {
+          &:nth-child(2) {
+            text-align: center;
+          }
+          &:nth-child(3) {
+            text-align: right;
+          }
+        }
+      }
+
+      .c-table-ingrediant-02 {
+        width: 100%;
+        margin-top: 40px;
+
+        td {
+          &:nth-child(2) {
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    .heading-egg {
+      position: relative;
+      padding-left: 70px;
+      display: flex;
+      align-items: center;
+
+      @include mq-min-max-tb {
+        padding-left: get-vw(70px);
+      }
+    }
+
+    .text {
+      font-size: 2.2rem;
+      color: $baseColor;
+    }
+
+    .icon-egg {
+      width: 52px;
+      height: 48px;
+      background: url(/assets/img/recipes/ico_product_yellow.svg) no-repeat center center;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include mq-min-max-tb {
+        width: get-vw(52px);
+        height: get-vw(48px);
+      }
+
+      @include mq-max-sp {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 0 auto 10px;
+
+      }
+
+      .i-list-white {
+        width: 14px;
+        height: 15px;
+        background: url(/assets/img/svg/icon-list-white.svg) no-repeat center center;
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .i-clipboard {
+        width: 20px;
+        height: 26px;
+        background: url(/assets/img/svg/clipboard-list-solid.svg) no-repeat center center;
+        background-size: cover;
+      }
+    }
+  }
+
+  .c-step-cook-list {
+    margin-top: 100px;
+    width: 100%;
+
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+
+      .c-step-egg {
+        width: 73px;
+        height: 68px;
+        background: url(/assets/img/recipes/ico_product_yellow.svg) no-repeat center center;
+        background-size: cover;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: -35px;
+
+        .small {
+          font-size: 1.5rem;
+          color: $white;
+          display: block;
+          width: 100%;
+          line-height: 1.1;
+          text-align: center;
+          position: relative;
+          top: 8px;
+        }
+
+        .number {
+          font-size: 3.6rem;
+          color: $white;
+          display: block;
+          width: 100%;
+          line-height: 1.1;
+          text-align: center;
+        }
+      }
+
+      .c-step-detail {
+        max-width: 960px;
+        color: #777;
+        border-top: 2px dashed #DCDCDC;
+        padding: 60px 0;
+        flex: 1;
+      }
+    }
+  }
+
+  .c-recipes-video {
+    position: relative;
+    padding-top: 48.60%;
+    width: 100%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .c-recipes-video-text {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #777777;
+    margin-top: 60px;
+  }
+}
+
+.c-box-next-recipes {
+  text-align: center;
+  margin-top: 100px;
+  display: block;
+
+  .nav-text {
+    font-size: 2.2rem;
+    color: $baseColor;
+  }
+
+  .heading{
+    font-size: 3.2rem;
+    color: $baseColor;
+  }
+
+  .icon-down {
+    outline: none;
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    border-radius: 100%;
+    box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.16);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    cursor: pointer;
+    background: url(/assets/img/recipes/detail/ico-arrow-down.svg) no-repeat center center;
+    position: absolute;
+    z-index: 3;
+    top: -28px;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      transform: scale(0.9);
+      background: url(/assets/img/recipes/detail/ico-arrow-down-yellow.svg) no-repeat center center;
+    }
+  }
+
+  .box-image {
+    position: relative;
+    padding-top: 41.667%;
+    width: 100%;
+    margin-top: 40px;
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

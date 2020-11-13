@@ -16,7 +16,7 @@
 
     &:hover {
       padding-right: 30px;
-      border: 0;
+      // border: 0;
       box-shadow: 3px 5px 15px 0px rgba(0,0,0,0.16);
 
       .arrow {
@@ -294,8 +294,6 @@ $reverse-easing: cubic-bezier(1, .51, .15, .6);
   position: relative;
   transition:
     background-color $timing $easing,
-    border-color $timing $easing,
-    color $timing $easing;
 
   &:focus {
     outline: none;
@@ -342,4 +340,49 @@ $reverse-easing: cubic-bezier(1, .51, .15, .6);
       opacity: 1;
     }
   }
+}
+.-btn-recipes {
+  background-image: none;
+  color: $baseColor;
+  width: auto;
+  padding: 15px 30px;
+  font-weight: 500;
+  border: 2px solid #DCDCDC;
+  box-shadow: none;
+
+  .fa {
+    color: $yellow;
+  }
+
+  .-button {
+    font-weight: 400;
+  }
+
+  &::after {
+    background-image: linear-gradient(to right, #211E1F, #211E1F);
+  }
+
+  &:not(:first-of-type){
+    margin-left: 20px;
+  }
+
+  &:hover {
+    background-color: #211E1F;
+    border-color: #211E1F;
+    color: #FFC416;
+
+    .fa {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+
+    .fa--bottom {
+      transform: translateY(-7px);
+      opacity: 1;
+    }
+  }
+}
+
+.c-button-cmn-02 {
+  background-image: linear-gradient(to right, #f8b900, #f8b900);
 }
