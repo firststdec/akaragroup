@@ -18,21 +18,14 @@ get_header();
 ?>
 	<?php
 
-if ( have_posts() ) {
-
-	while ( have_posts() ) {
-		the_post();
     // print_r( get_queried_object() );
     $term_obj = get_queried_object();
 
     if($term_obj->parent == 3 || $term_obj->parent == 16) {
       get_template_part( 'templates/akara_egg');
-      break;
     } else {
       get_template_part( 'template-parts','content');
     }
-	}
-}
 
 ?>
 <?php

@@ -65,7 +65,7 @@ get_header();
               <div class="c-box-time-line__item animation-element slide-top">
                 <div class="c-box-time-line__image">
                   <div class="c-deco-story"></div>
-                  <div class="c-box-time-line__image-frame"><img src="/assets/img/our-story/img_our_story_02.png" alt=""></div>
+                  <div class="c-box-time-line__image-frame"><img src="/assets/img/our-story/ourstory-2538.png" alt=""></div>
                 </div>
                 <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
                 <div class="c-box-time-line__content">
@@ -85,12 +85,12 @@ get_header();
                 </div>
                 <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
                 <div class="c-box-time-line__content">
-                  <div class="c-box-time-line__content-heading">ปี พ.ศ. 2547</div>
+                  <div class="c-box-time-line__content-heading">ปี พ.ศ. 2547 - ปัจจุบัน</div>
                   <div class="c-box-time-line__content-text">From an outbreak of bird flu As a result, we turned to fully develop the chicken egg farm business. During the year 2004, we developed and expanded the egg farm area to Square district Chaiyaphum Province To support the growth of the market in the Northeast region Continued to the present.</div>
                 </div>
                 <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
                 <div class="c-box-time-line__content">
-                  <div class="c-box-time-line__content-heading">ปี พ.ศ. 2547</div>
+                  <div class="c-box-time-line__content-heading">ปี พ.ศ. 2547 - ปัจจุบัน</div>
                   <div class="c-box-time-line__content-text">จากเหตุการณ์ไข้หวัดนกระบาด ทำให้เราหันมาพัฒนาธุรกิจฟาร์มไข่ไก่อย่างเต็มตัวในช่วงปี พ.ศ.2547 มีการพัฒนาและขยายพื้นที่ฟาร์มไข่ไก่ไปยัง เขตอำเภอจัตุรัส จังหวัดชัยภูมิ เพื่อรองรับการเติบโตของตลาดในเขตภาคตะวันออกเฉียงเหนือ สืบเนื่องมาจนถึงปัจจุบัน </div>
                 </div>
                 <?php endif; ?>
@@ -250,9 +250,9 @@ get_header();
               <div class="c-box-certificate__item">
                 <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_02.png" alt=""></figure>
               </div>
-              <div class="c-box-certificate__item">
+              <!-- <div class="c-box-certificate__item">
                 <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_03.png" alt=""></figure>
-              </div>
+              </div> -->
               <div class="c-box-certificate__item">
                 <figure class="c-box-certificate__image"><img src="/assets/img/common/img_certification_04.png" alt=""></figure>
               </div>

@@ -159,7 +159,7 @@ get_header();
               <div class="image animation-element slide-right">
                 <div class="p-egg-box">
                   <div class="p-egg-box__box p-egg-box__box-03">
-                    <img class="lazy" src="/assets/img/top/akara-ise/akara-ise.png" alt="">
+                    <img class="lazy" src="/assets/img/top/akara-ise/akara-ise.png?v=1" alt="">
                   </div>
                   <div class="c-open-package --orange p-egg-box__button-03" title="โปรดคลิกค้างไว้"></div>
                 </div>
@@ -169,7 +169,7 @@ get_header();
               <div class="c-egg animation-element slide-top"></div>
               <div class="c-mori-tama-egg animation-element slide-top"></div>
               <figure class="box-image-heading animation-element slide-left"><img class="image lazy" src="/assets/img/top/img_logo_03.png" alt="Akara ISE"></figure>
-              <div class="heading-orange animation-element slide-left">Mori-Tama</div>
+              <div class="heading-orange animation-element slide-left">MORI-TAMA</div>
               <?php if(get_field('orange_egg_content')!=''): ?>
               <div class="c-text-cmn-01 -white animation-element slide-left"><?php echo get_field('orange_egg_content', $page_id); ?></div>
               <?php endif; ?>

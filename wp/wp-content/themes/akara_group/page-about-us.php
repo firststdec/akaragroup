@@ -65,7 +65,7 @@ get_header();
                   </div>
                   <div class="c-box-time-line__item animation-element slide-top">
                     <div class="c-box-time-line__image">
-                      <div class="c-box-time-line__image-frame"><img src="/assets/img/about-us/img_about_us_02.png" alt=""></div>
+                      <div class="c-box-time-line__image-frame"><img src="/assets/img/about-us/img_about_us_02.png?v=11102020" alt=""></div>
                     </div>
                     <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
                     <div class="c-box-time-line__content">
@@ -105,7 +105,7 @@ get_header();
                               <div class="swiper-slide"><img src="/assets/img/about-us/farm-sangtong-pic-1.png" alt=""></div>
                               <div class="swiper-slide"><img src="/assets/img/about-us/farm-sangtong-pic-2.png" alt=""></div>
                               <div class="swiper-slide"><img src="/assets/img/about-us/farm-sangtong-pic-3.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/farm-sangtong-pic01.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/farm-sangtong-pic01.png?v=2" alt=""></div>
                             </div>
                             <!-- If we need navigation buttons-->
                             <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
@@ -129,7 +129,10 @@ get_header();
                       <div class="c-our-brand__card-content">
                         <div class="c-our-brand__card-content-heading-logo"><img src="/assets/img/about-us/ico_logo_about_us_02.svg" alt=""></div>
                         <div class="c-our-brand__card-content-heading-sub"><?php echo $sub_heading_02; ?></div>
-                        <div class="c-our-brand__card-content-text"><?php echo $sub_content_02; ?></div>
+                        <div class="c-our-brand__card-content-text">
+                          <div><?php echo $sub_content_02; ?></div>
+                          <div class="c-box-cmn-button"><a class="c-button-cmn-01 --border-base" href="https://www.akaragroup.co.th/stf/" target="_blank"><span class="text">READ MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -182,6 +185,46 @@ get_header();
                             <!-- Additional required wrapper-->
                             <div class="swiper-wrapper">
                               <!-- Slides-->
+                              <div class="swiper-slide"><img src="/assets/img/about-us/eggology-pic01.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/eggology-pic02.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/eggology-pic03.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/eggology-pic04.png" alt=""></div>
+                            </div>
+                            <!-- If we need navigation buttons-->
+                            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                            <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+                          </div>
+                          <div class="c-fake-nav-control">
+                            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                            <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+                          </div>
+                        </div>
+                      </div>
+                      <?php
+                        if(ICL_LANGUAGE_CODE == 'en') {
+                          $sub_heading_05 = 'Akara Eggology';
+                          $sub_content_05 = 'Free premium fresh chicken eggs, Japanese style It is formed through a collaboration between AKARA Group and ISE Food, Inc., a major egg leader in Japan. Through the production process from a specific technology Resulting in fresh, clean, germ-free eggs Can be eaten raw under the brand MORI-TAMA.';
+                        } elseif (ICL_LANGUAGE_CODE == 'th') {
+                          $sub_heading_05 = 'Akara Eggology';
+                          $sub_content_05 = 'ไข่ไก่ออแกนิค สด สะอาด ปลอดภัย ให้ประโยชน์สูง จากกระบวนการผลิตที่ควบคุมตั้งแต่ต้นกระบวนการให้ปลอดภัย ปลอดภัยจากสารเร่งฮอร์โมนและยาปฏิชีวนะ';
+                        }
+                      ?>
+                      <div class="c-our-brand__card-content">
+                        <div class="c-our-brand__card-content-heading-logo"><img src="/assets/img/about-us/akara-eggolofy-logo.svg" alt=""></div>
+                        <div class="c-our-brand__card-content-heading-sub"><?php echo $sub_heading_05; ?></div>
+                        <div class="c-our-brand__card-content-text"><?php echo $sub_content_05; ?></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-our-brand__item animation-element slide-top">
+                    <div class="c-our-brand__card">
+                      <div class="c-our-brand__card-image">
+                        <div class="c-our-brand__card-frame">
+                          <!-- Slider main container-->
+                          <div class="swiper-container js-slider-multi">
+                            <!-- Additional required wrapper-->
+                            <div class="swiper-wrapper">
+                              <!-- Slides-->
                               <div class="swiper-slide"><img src="/assets/img/about-us/moritama-pic-01.png" alt=""></div>
                               <div class="swiper-slide"><img src="/assets/img/about-us/moritama-pic-02.png" alt=""></div>
                               <div class="swiper-slide"><img src="/assets/img/about-us/moritama-pic-03.png" alt=""></div>
@@ -199,19 +242,21 @@ get_header();
                       </div>
                       <?php
                         if(ICL_LANGUAGE_CODE == 'en') {
-                          $sub_heading_04 = '';
+                          $sub_heading_04 = 'MORI-TAMA';
                           $sub_content_04 = 'Free premium fresh chicken eggs, Japanese style It is formed through a collaboration between AKARA Group and ISE Food, Inc., a major egg leader in Japan. Through the production process from a specific technology Resulting in fresh, clean, germ-free eggs Can be eaten raw under the brand MORI-TAMA.';
                         } elseif (ICL_LANGUAGE_CODE == 'th') {
-                          $sub_heading_04 = '';
+                          $sub_heading_04 = 'MORI-TAMA';
                           $sub_content_04 = 'ไข่ไก่สดระดับฟรีเมี่ยมสไตล์ญี่ปุ่น เกิดขึ้นจากความร่วมมือระหว่าง AKARA Group และ ISE Food , Inc ผู้นำด้านไข่ไก่รายใหญ่ในญี่ปุ่น ผ่านกระบวนการผลิตจากเทคโนโลยีเฉพาะ ทำให้ได้ไข่ที่สด สะอาด ปราศจากเชื้อโรค สามารถทานดิบได้ ภายใต้แบรนด์ MORI-TAMA ';
                         }
                       ?>
                       <div class="c-our-brand__card-content">
                         <div class="c-our-brand__card-content-heading-logo"><img src="/assets/img/about-us/ico_logo_about_us_04.svg" alt=""></div>
+                        <div class="c-our-brand__card-content-heading-sub"><?php echo $sub_heading_04; ?></div>
                         <div class="c-our-brand__card-content-text"><?php echo $sub_content_04; ?></div>
                       </div>
                     </div>
                   </div>
+                  <?php /*
                   <div class="c-our-brand__item animation-element slide-top">
                     <div class="c-our-brand__card">
                       <div class="c-our-brand__card-image">
@@ -251,6 +296,7 @@ get_header();
                       </div>
                     </div>
                   </div>
+                  */ ?>
                 </div>
               </div>
             </div>
@@ -333,7 +379,7 @@ get_header();
                 <canvas id="canvas-yellow-bottom-02"></canvas>
               </div>
             </div>
-            <div class="c-box-certificate animation-element slide-top">
+            <!--div class="c-box-certificate animation-element slide-top">
               <div class="c-box-certificate__inner">
                 <div class="c-heading-box-egg">
                   <div class="c-heading-egg">
@@ -356,7 +402,7 @@ get_header();
                   </div>
                 </div>
               </div>
-            </div>
+            </div -->
             <?php get_template_part( 'templates/subscriber'); ?>
           </div>
         </div>

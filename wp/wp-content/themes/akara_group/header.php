@@ -222,7 +222,7 @@
                       <div class="l-header__submenu-in">
                         <ul class="l-header__submenu-list">
                           <li class="l-header__submenu-item"><div class="l-header__submenu-link">
-                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara Eggs</span></div>
+                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara</span></div>
                             <ul class="l-header__submenu-list-02">
                             <?php
                               $args = array(
@@ -361,7 +361,7 @@
                       <div class="l-header__submenu-in">
                         <ul class="l-header__submenu-list">
                           <li class="l-header__submenu-item"><div class="l-header__submenu-link">
-                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara Eggs</span></div>
+                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara</span></div>
                             <ul class="l-header__submenu-list-02">
                             <?php
                               $args = array(

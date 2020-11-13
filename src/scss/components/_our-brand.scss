@@ -75,6 +75,11 @@
       @include mq-max-sp {
         width: 100%;
       }
+
+      .c-box-cmn-button {
+        margin: 20px auto;
+      }
+
       &-heading-logo {
         &.-akara {
           @include mq-min-tb {

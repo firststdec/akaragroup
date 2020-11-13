@@ -88,7 +88,7 @@ get_header();
                   </div>
                   <div class="c-box-time-line__item animation-element slide-top">
                     <div class="c-box-time-line__image">
-                      <div class="c-box-time-line__image-frame"><img src="/assets/img/career/img_career_02.png" alt=""></div>
+                      <div class="c-box-time-line__image-frame"><img src="/assets/img/career/img_career_02.png?v=11102020" alt=""></div>
                     </div>
                     <div class="c-box-time-line__content">
                       <div class="c-box-time-line__content-heading -small">Work @Akara</div>

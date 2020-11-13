@@ -49,7 +49,7 @@ get_header();
                 <div class="c-box-time-line__list" id="scroll_timeline">
                   <div class="c-box-time-line__item animation-element slide-top">
                     <div class="c-box-time-line__image">
-                      <div class="c-box-time-line__image-frame"><img src="/assets/img/contact-us/img_contact_us_01.png" alt="บริษัท อัครากรุ๊ป จำกัด"></div>
+                      <div class="c-box-time-line__image-frame"><img src="/assets/img/contact-us/img_contact_us_01.png?v=11102020" alt="บริษัท อัครากรุ๊ป จำกัด"></div>
                     </div>
                     <div class="c-box-time-line__content">
                       <div class="c-box-time-line__content-heading -small">บริษัท แสงทองสหฟาร์ม จำกัด</div>
