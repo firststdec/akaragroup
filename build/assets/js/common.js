@@ -30,6 +30,8 @@ $(function () {
   jsTabWhereToBuy();
   jsRelatePost();
   jsShopList();
+  jsFixNav();
+  jsFixNavSp();
 });
 
 $(window).on('load', function () {
@@ -122,10 +124,23 @@ var unlockScreen = function () {
   pageScroll
 ---------------------------------------------------------- */
 var pageScroll = function () {
+  $jsFixNav = $('.js-fix-nav');
   $('.js-scroll').on('click', function () {
     var speed = 400;
     var href= $(this).attr("href") || '';
     var minus = $('.l-header__in').height() || 0;
+
+    if($jsFixNav.length) {
+      if($jsFixNav.hasClass('is-fixed')) {
+        minus = $('.l-header__in').height() + 150 || 0;
+      } else {
+        minus = $('.l-header__in').height() + 270 || 0;
+      }
+
+      $('.list-step__item').removeClass('is-active');
+      $(this).addClass('is-active');
+    }
+
     var target = $(href == '#' || href == '' ? 'html' : href);
     var position = target.offset().top - minus;
 
@@ -959,5 +974,69 @@ const jsRelatePost = function() {
 }
 $(window).on('resize', jsRelatePost);
 
+const jsFixNav = function() {
+  $jsFixNav = $('.js-fix-nav');
+
+  if($jsFixNav.length) {
+    $(window).bind('scroll', function() {
+      var navHeight = $( window ).height() - 70;
+      if ($(window).scrollTop() > navHeight) {
+        $jsFixNav.addClass('is-fixed');
+      }
+      else {
+        $jsFixNav.removeClass('is-fixed');
+        $('.list-step__item').removeClass('is-active');
+      }
+    });
+  }
+}
+
+const jsFixNavSp = function() {
+  $jsFixNavSp = $('.c-box-local-fix-nav-select .c-media-category-select');
+  if($jsFixNavSp.length) {
+    $jsFixNavSp.on('change', function() {
+      const target = $('#' + $(this).val());
+      var speed = 400;
+      let minus = 70;
+      let position = target.offset().top - minus;
+
+      $('body, html').animate({scrollTop:position}, speed, 'swing');
+
+    });
+  }
+}
+
+let mainNavLinks = document.querySelectorAll(".list-step a");
+let mainSections = document.querySelectorAll(".c-step-cook-list .c-step-cook-list__item");
+
+let lastId;
+let cur = [];
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+if(mainNavLinks.length && mainSections.length) {
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+  
+    mainNavLinks.forEach(link => {
+      let section = document.querySelector(link.hash);
+  
+      if (
+        section.offsetTop - 200 <= fromTop &&
+        section.offsetTop + section.offsetHeight - 200 > fromTop
+      ) {
+        link.classList.add("is-active");
+      } else {
+        link.classList.remove("is-active");
+      }
+    });
+  });
+}
 
 
