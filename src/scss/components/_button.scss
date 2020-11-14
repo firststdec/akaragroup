@@ -350,6 +350,10 @@ $reverse-easing: cubic-bezier(1, .51, .15, .6);
   border: 2px solid #DCDCDC;
   box-shadow: none;
 
+  @include mq-min-max-tb {
+    padding: 15px;
+  }
+
   @include mq-max-sp {
     width: 49%;
     padding: 10px 17px;
