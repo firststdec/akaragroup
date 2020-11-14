@@ -288,7 +288,7 @@ $reverse-easing: cubic-bezier(1, .51, .15, .6);
   font-weight: 300;
   $timing: 600ms;
   $easing: cubic-bezier(.6, .15, .51, 1.25);
-  padding: 0 17px 0 03px;
+  padding: 0 17px 0 3px;
   $icon-width: 18px;
   overflow: hidden;
   position: relative;
@@ -350,12 +350,23 @@ $reverse-easing: cubic-bezier(1, .51, .15, .6);
   border: 2px solid #DCDCDC;
   box-shadow: none;
 
+  @include mq-max-sp {
+    width: 49%;
+    padding: 10px 17px;
+    min-width: auto;
+  }
+
   .fa {
     color: $yellow;
+    margin-left: 5px;
   }
 
   .-button {
     font-weight: 400;
+
+    span {
+      padding-left: 5px;
+    }
   }
 
   &::after {
@@ -364,6 +375,10 @@ $reverse-easing: cubic-bezier(1, .51, .15, .6);
 
   &:not(:first-of-type){
     margin-left: 20px;
+
+    @include mq-max-sp {
+      margin-left: 0;
+    }
   }
 
   &:hover {

@@ -19,6 +19,7 @@ block variables
 
     const topPage = false
     const whiteTheme = true
+    const noFooter = true
 
 block prepend css
   link(rel='stylesheet', href='/assets/css/libs/slick.css')
@@ -62,29 +63,48 @@ block content
             .c-button__text.-button
               i.fa.fas.fa-share-alt
               i.fa.fas.fa-share-alt.fa--bottom
-              | SHARE RECIPES
+              | SHARE 
+              span.u-no-sp RECIPES
           a.c-button-middle.c-button--orange.-btn-recipes(href='#')
             .c-button__text.-button
               i.fa.fas.fa-file-pdf.
               i.fa.fas.fa-file-pdf.fa--bottom
-              | DOWNLOAD PDF
+              | DOWNLOAD 
+              span.u-no-sp PDF
 
     .c-box-recipe-content
       .c-box-recipe-content__inner
-        .c-local-fix-nav
-          .heading Cheddar Chive Biscuits
-          .list-step
-            .list-step__item.is-active
-              span Step 1
-            .list-step__item
-              span Step 2
-            .list-step__item
-              span Step 3
-            .list-step__item
-              span Step 4
-            .list-step__item
-              span Step 5
+        .c-box-local-fix-nav.js-fix-nav
+          .c-local-fix-nav
+            .heading Cheddar Chive Biscuits
+            .list-step
+              a.list-step__item.js-scroll(href="#step-1")
+                span Step 1
+              a.list-step__item.js-scroll(href="#step-2")
+                span Step 2
+              a.list-step__item.js-scroll(href="#step-3")
+                span Step 3
+              a.list-step__item.js-scroll(href="#step-4")
+                span Step 4
+              a.list-step__item.js-scroll(href="#step-5")
+                span Step 5
+              a.list-step__item.js-scroll(href="#step-6")
+                span Step 6
         
+        .c-box-local-fix-nav-select
+          .c-media-category-dropdown.u-no-tb.u-no-pc
+            svg(xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8')
+              path#Polygon_2(data-name='Polygon 2' d='M6,0l6,8H0Z' transform='translate(12 8) rotate(180)' fill='#777')
+
+            select.c-media-category-select(name="category")
+              option(value="") Choose process
+              option(value="step-1") Step 1
+              option(value="step-2") Step 2
+              option(value="step-3") Step 3
+              option(value="step-4") Step 4
+              option(value="step-5") Step 5
+              option(value="step-6") Step 6
+
         .c-box-ingredient
           .c-box-ingredient__inner
             .heading-egg
@@ -179,35 +199,35 @@ block content
                 td 3 Eggs  |   100g
 
         .c-step-cook-list
-          .c-step-cook-list__item
+          .c-step-cook-list__item#step-1
             .c-step-egg
               span.small Step
               span.number 1
             .c-step-detail Preheat oven to 400ºF.
-          .c-step-cook-list__item
+          .c-step-cook-list__item#step-2
             .c-step-egg
               span.small Step
               span.number 2
             .c-step-detail Preheat Combine dry ingredients and pulse in food processor. Add in butter cubes and pulse until coarse meal forms.
-          .c-step-cook-list__item
+          .c-step-cook-list__item#step-3
             .c-step-egg
               span.small Step
               span.number 3
             .c-step-detail
               |Add to wet ingredients and fold, being careful not to overwork dough. <br>
               |Roll out dough to 1” thickness and cut dough in half. Take one half of dough and stack it on top of the other half for tall flaky layers.
-          .c-step-cook-list__item
+          .c-step-cook-list__item#step-4
             .c-step-egg
               span.small Step
               span.number 4
             .c-step-detail
               |Roll dough out again to 1” and cut out 10 biscuits with 3” circular dough cutter. Alternatively, cut squares for additional yield.
-          .c-step-cook-list__item
+          .c-step-cook-list__item#step-5
             .c-step-egg
               span.small Step
               span.number 5
             .c-step-detail Place biscuits on half sheet tray lined with parchment paper.
-          .c-step-cook-list__item
+          .c-step-cook-list__item#step-6
             .c-step-egg
               span.small Step
               span.number 6
@@ -223,12 +243,14 @@ block content
             .c-button__text.-button
               i.fa.fas.fa-share-alt
               i.fa.fas.fa-share-alt.fa--bottom
-              | SHARE RECIPES
+              | SHARE 
+              span.u-no-sp RECIPES
           a.c-button-middle.c-button--orange.-btn-recipes(href='#')
             .c-button__text.-button
               i.fa.fas.fa-file-pdf.
               i.fa.fas.fa-file-pdf.fa--bottom
-              | DOWNLOAD PDF
+              | DOWNLOAD 
+              span.u-no-sp PDF
 
     a.c-box-next-recipes(href="#")
       .c-box-next-recipes__inner
@@ -239,7 +261,7 @@ block content
           figure.image
             img(src="/assets/img/recipes/detail/img-recipes-02.png", alt="")
 
-    .l-sec-cmn-01.-box-subscribe
+    .l-sec-cmn-01.-box-subscribe.u-no-pc.u-no-tb
       .inner
         .c-box-subscribe.animation-element.slide-top
           .item.-signup-text
