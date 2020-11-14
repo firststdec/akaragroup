@@ -986,7 +986,6 @@ const jsFixNav = function() {
       else {
         $jsFixNav.removeClass('is-fixed');
         $('.list-step__item').removeClass('is-active');
-        $('.list-step__item').eq(0).addClass('is-active');
       }
     });
   }
