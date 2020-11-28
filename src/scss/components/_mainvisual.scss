@@ -180,6 +180,15 @@
     position: relative;
 
     &-frame {
+      mask-image: url(/assets/img/svg/mask-blog-post.svg);
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+
+      @include mq-max-sp {
+        mask-image: url(/assets/img/svg/mobile-banner-mask.svg);
+      }
+
       @include mq-min-tb {
         position: absolute;
         width: 1014px;

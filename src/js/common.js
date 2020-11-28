@@ -32,6 +32,9 @@ $(function () {
   jsShopList();
   jsFixNav();
   jsFixNavSp();
+  jsContentImg();
+  fbShare();
+  selectBoxLink();
 });
 
 $(window).on('load', function () {
@@ -1040,3 +1043,74 @@ if(mainNavLinks.length && mainSections.length) {
 }
 
 
+const jsContentImg = function() {
+  if($('.c-media-detail__content').length) {
+    // $(this).find('p').closest('p').addClass('c-cms-img');
+    $content = $('.c-media-detail__content').find('p');
+    $content.each(function(){
+      $(this).find('img').closest('p').addClass('is-img');
+    });
+  }
+}
+
+const fbShare = function(){
+  if($('.c-share-facebook').length){
+    $('.c-share-facebook').on('click', function(e){
+      const url = $('.c-share-facebook').data('share');
+      shareOnFB(url);
+      return false;
+    });
+  }
+
+  if($('.c-share-twitter').length){
+    $('.c-share-twitter').on('click', function(e){
+      const url = $('.c-share-twitter').data('share');
+      shareOntwitter(url);
+      return false;
+    });
+  }
+
+  if($('.c-share-line').length){
+    $('.c-share-line').on('click', function(e){
+      const url = $('.c-share-line').data('share');
+      shareOnLine(url);
+      return false;
+    });
+  }
+
+  
+}
+
+function share_fb(url) {
+  window.open('https://www.facebook.com/sharer/sharer.php?u='+url,'facebook-share-dialog',"width=626, height=436")
+}
+
+
+function shareOnFB(link){
+  var url = "https://www.facebook.com/sharer/sharer.php?u="+ link +"&t=Akara Group";
+  window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+  return false;
+}
+
+function shareOntwitter(link){
+  var url = 'https://twitter.com/intent/tweet?url='+ link +'&via=akaragroup&hashtags=akaragroup,fresheggs,tofucup';
+  window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+  // TwitterWindow = window.open(url, 'TwitterWindow',width=600,height=300);
+  return false;
+}
+
+function shareOnLine(link){
+  var url = 'https://social-plugins.line.me/lineit/share?url='+ link +'';
+  window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=600');
+  // TwitterWindow = window.open(url, 'TwitterWindow',width=600,height=300);
+  return false;
+}
+
+const selectBoxLink = function() {
+  if( $('.c-media-category-select').length ){
+    $('.c-media-category-select').on('change', function(){
+      const $val = $(this).val();
+      window.location.href = $val;
+    });
+  }
+}
