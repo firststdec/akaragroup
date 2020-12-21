@@ -179,6 +179,7 @@
     max-width: 1070px;
     margin: auto;
     border-top: 2px dashed #DCDCDC;
+    margin-bottom: 80px;
 
     @include mq-min-max-tb {
       width: 95%;
@@ -187,7 +188,7 @@
     @include mq-max-sp {
       padding: 0;
       width: calc(100% - 60px);
-      margin: auto;
+      margin: auto 0;
     }
 
     .c-box-local-fix-nav{
