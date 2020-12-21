@@ -127,7 +127,7 @@ get_header();
                         }
                       ?>
                       <div class="c-our-brand__card-content">
-                        <div class="c-our-brand__card-content-heading-logo"><img src="/assets/img/about-us/ico_logo_about_us_02.svg" alt=""></div>
+                        <div class="c-our-brand__card-content-heading-logo"><img src="/assets/img/about-us/stf_logo.png" alt=""></div>
                         <div class="c-our-brand__card-content-heading-sub"><?php echo $sub_heading_02; ?></div>
                         <div class="c-our-brand__card-content-text">
                           <div><?php echo $sub_content_02; ?></div>

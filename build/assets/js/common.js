@@ -32,6 +32,9 @@ $(function () {
   jsShopList();
   jsFixNav();
   jsFixNavSp();
+  jsContentImg();
+  fbShare();
+  selectBoxLink();
 });
 
 $(window).on('load', function () {
@@ -170,37 +173,6 @@ var btnPagetop = function () {
     });
   });
 };
-
-
-/* ----------------------------------------------------------
-  detect SP
----------------------------------------------------------- */
-//var spDevices = /android|blackberry|iemobile|iphone|ipod|opera mini|webos/.test(navigator.userAgent.toLowerCase())
-// var spDevices = new MobileDetect(window.navigator.userAgent)
-
-/* ----------------------------------------------------------
-  header small
----------------------------------------------------------- */
-// var headerSmall = function() {
-//   var top = 0
-//   var barHidden = 0
-//   var $header = $('.header')
-//   var clsSmall = 'is-small'
-
-//   if(!spDevices.mobile() || spDevices.tablet()) {
-//     barHidden = 220
-//   }
-
-//   $window.on('scroll', function() {
-//     top = $(this).scrollTop()
-//     if(top > barHidden && !$header.hasClass(clsSmall)) {
-//       $header.addClass(clsSmall)
-//     }
-//     else if(top == 0 && !screenFixed) {
-//       $header.removeClass(clsSmall)
-//     }
-//   })
-// }
 
 /* ----------------------------------------------------------
   header hide SP
@@ -710,28 +682,31 @@ if($('.js-recipes-swiper').length){
 }
 
 if($('.js-recipes-swiper-normal').length){
-  var mySwiperNormal = new Swiper('.js-recipes-swiper-normal', {
+  new Swiper('.js-recipes-swiper-normal', {
     // Optional parameters
     slidesPerView: 'auto',
     centeredSlides: false,
-    loop: true,
+    loop: false,
+    observer: true,
+    preloadImages: true,
 
     breakpoints: {
       896: {
         slidesPerView: 2,
         spaceBetween: 20,
-        centeredSlides: true,
-        loop: true,
+        centeredSlides: false,
+        loop: false,
       },
 
       425: {
         slidesPerView: 2,
         spaceBetween: 20,
         centeredSlides: true,
-        loop: true,
+        loop: false,
       },
     }
   });
+  var mySwiperNormal = document.querySelector('.js-recipes-swiper-normal').swiper;
 }
 
 if($('.js-product-slide-show').length) {
@@ -740,6 +715,8 @@ if($('.js-product-slide-show').length) {
     slidesPerView: 1,
     centeredSlides: false,
     loop: true,
+    observer: true,
+    preloadImages: true,
 
     // If we need pagination
     pagination: {
@@ -807,20 +784,26 @@ const customSelect = function() {
     setTextSelected(textSelected);
 
     $customSelect.on('change', function(){
+
       const textSelected = $(this).find('option:selected').text();
       const valSelected = $(this).find('option:selected').val();
       setTextSelected(textSelected);
 
       $targetSlider = '.js-' + valSelected;
       $targetDetail = '.js-' + valSelected + '__detail';
+      $targetRecipe = '.js-' + valSelected + '__slider';
 
       $('.c-product-list__box-product-detail-inner').addClass('is-product-opacity').fadeOut();
       $('.js-product-slide-show').addClass('is-product-opacity').fadeOut();
+      $('.js-recipes-swiper-normal').addClass('is-product-opacity').fadeOut();
 
       $($targetSlider)
         .fadeIn().removeClass('is-product-opacity');
       $($targetDetail)
         .fadeIn().removeClass('is-product-opacity');
+      $($targetRecipe)
+        .fadeIn().removeClass('is-product-opacity');
+
     });
 
     function setTextSelected(text) {
@@ -1040,3 +1023,74 @@ if(mainNavLinks.length && mainSections.length) {
 }
 
 
+const jsContentImg = function() {
+  if($('.c-media-detail__content').length) {
+    // $(this).find('p').closest('p').addClass('c-cms-img');
+    $content = $('.c-media-detail__content').find('p');
+    $content.each(function(){
+      $(this).find('img').closest('p').addClass('is-img');
+    });
+  }
+}
+
+const fbShare = function(){
+  if($('.c-share-facebook').length){
+    $('.c-share-facebook').on('click', function(e){
+      const url = $('.c-share-facebook').data('share');
+      shareOnFB(url);
+      return false;
+    });
+  }
+
+  if($('.c-share-twitter').length){
+    $('.c-share-twitter').on('click', function(e){
+      const url = $('.c-share-twitter').data('share');
+      shareOntwitter(url);
+      return false;
+    });
+  }
+
+  if($('.c-share-line').length){
+    $('.c-share-line').on('click', function(e){
+      const url = $('.c-share-line').data('share');
+      shareOnLine(url);
+      return false;
+    });
+  }
+
+  
+}
+
+function share_fb(url) {
+  window.open('https://www.facebook.com/sharer/sharer.php?u='+url,'facebook-share-dialog',"width=626, height=436")
+}
+
+
+function shareOnFB(link){
+  var url = "https://www.facebook.com/sharer/sharer.php?u="+ link +"&t=Akara Group";
+  window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+  return false;
+}
+
+function shareOntwitter(link){
+  var url = 'https://twitter.com/intent/tweet?url='+ link +'&via=akaragroup&hashtags=akaragroup,fresheggs,tofucup';
+  window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+  // TwitterWindow = window.open(url, 'TwitterWindow',width=600,height=300);
+  return false;
+}
+
+function shareOnLine(link){
+  var url = 'https://social-plugins.line.me/lineit/share?url='+ link +'';
+  window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=600');
+  // TwitterWindow = window.open(url, 'TwitterWindow',width=600,height=300);
+  return false;
+}
+
+const selectBoxLink = function() {
+  if( $('.c-media-category-select.js-category-change').length ){
+    $('.c-media-category-select.js-category-change').on('change', function(){
+      const $val = $(this).val();
+      window.location.href = $val;
+    });
+  }
+}

@@ -12,6 +12,7 @@
  */
 
 ?>
+
 	<div class="p-pagetop js-pagetop"><a class="p-pagetop__trigger js-scroll" href="#"><span class="fas fa-chevron-up"></span></a></div>
 	<div class="c-fix-panel">
 		<div class="inner">
@@ -29,7 +30,7 @@
 			</div>
 		</div>
 	</div>
-	<footer class="l-footer">
+	<footer class="l-footer<?php echo (is_singular('recipe'))? ' u-no-pc u-no-tb':''; ?>">
 		<div class="c-wave-footer">
 			<canvas id="canvas-footer"></canvas>
 		</div>
@@ -100,7 +101,8 @@
 <script src="/assets/js/libs/modaal.min.js"></script>
 <script src="/assets/js/libs/jquery.matchHeight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
-<script src="/assets/js/common.js?v=13"></script>
+<script src="/assets/js/common.js?v=2020-11-28-1"></script>
+<script src="/assets/js/loadmore.js?v=2020-01"></script>
 <script src='/assets/js/libs/jquery.validationEngine.js'></script>
 <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
 <script src='/assets/js/libs/jquery.validationEngine-en.js'></script>
@@ -120,7 +122,12 @@
 <script src="/assets/js/waveMainVisualSub.js"></script>
 <script src="/assets/js/our-story.js"></script>
 <?php endif; ?>
-<?php if(is_page_template('page-faq.php') || is_page_template('page-where-to-buy.php')): ?>
+<?php if(is_page_template('page-faq.php') 
+|| is_page_template('page-where-to-buy.php') 
+|| is_tax('media_category') 
+|| is_tax('news_category') 
+|| is_post_type_archive('media') 
+|| is_post_type_archive('news')): ?>
 <script src="/assets/js/waveWhiteTop.js"></script>
 <?php endif; ?>
 <?php if(is_page_template('page-about-us.php')): ?>
@@ -133,7 +140,7 @@
 <script src="/assets/js/waveCreamBottom.js"></script>
 <script src="/assets/js/waveMainVisualSub.js"></script>
 <?php endif; ?>
-<?php if(is_page('contact-us')): ?>
+<?php if(is_page('contact-us') || is_singular('news') || is_singular('media') || is_post_type_archive('recipe') || is_tax('recipe_category')): ?>
 <script src="/assets/js/waveMainVisualSub.js"></script>
 <?php endif; ?>
 <?php

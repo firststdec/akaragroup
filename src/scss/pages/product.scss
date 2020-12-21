@@ -225,6 +225,10 @@
       .fa {
         color: $white;
       }
+
+      &:hover {
+        border-color: $baseColor;
+      }
     }
 
     .swiper-slide .c-card-voice__heading {
@@ -1504,10 +1508,6 @@
           .fa-cook {
 
           }
-        }
-
-        &.-time {
-          display: none;
         }
 
         &.-time > .icon {

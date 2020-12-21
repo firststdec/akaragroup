@@ -180,6 +180,9 @@
     position: relative;
 
     &-frame {
+      mask-image: url(/assets/img/common/mask-blog-post.svg);
+      mask-size: contain;
+
       @include mq-min-tb {
         position: absolute;
         width: 1014px;

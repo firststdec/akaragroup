@@ -84,11 +84,11 @@
 
   .c-scroll-down-line {
     background: url(/assets/img/recipes/img_recipes_line.png) no-repeat;
-    width: 299px;
-    height: 292px;
+    width: 270px;
+    height: 263px;
     position: absolute;
-    top: 70px;
-    left: 20px;
+    top: 88px;
+    left: 35px;
     background-size: cover;
 
     @include mq-max-sp {
@@ -96,10 +96,10 @@
     }
 
     @include mq-min-max-tb {
-      width: get-vw(299px);
-      height: get-vw(292px);
-      top: get-vw(70px);
-      left: get-vw(20px);
+      width: get-vw(270px);
+      height: get-vw(263px);
+      top: get-vw(88px);
+      left: get-vw(35px);
     }
   }
 }

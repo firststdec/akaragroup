@@ -1,1 +1,478 @@
-.p-where-to-buy .c-hero-where-to-buy__inner{min-height:566px;margin:auto;background:url(/assets/img/where-to-buy/img_mv_where_to_buy.png) no-repeat center bottom;background-size:cover;position:relative}@media (min-width: 897px) and (max-width: 1439px){.p-where-to-buy .c-hero-where-to-buy__inner{min-height:39.30556vw}}.p-where-to-buy .c-hero-where-to-buy__text{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}@media (max-width: 896px){.p-where-to-buy .c-hero-where-to-buy__text{width:100%}}.p-where-to-buy .c-hero-where-to-buy__heading{font-size:4.8rem;line-height:1.3;text-align:center;color:#fff}@media (max-width: 896px){.p-where-to-buy .c-hero-where-to-buy__heading{font-size:4rem;width:100%;padding:0 30px}}.p-where-to-buy .c-hero-where-to-buy__sub-text{font-size:2.2rem;line-height:1.3;text-align:center;margin-top:20px;color:#fff;width:100%;padding:0 30px}.p-where-to-buy .c-where-to-buy{position:relative}.p-where-to-buy .c-where-to-buy .c-bg-wave-white-solid{top:-70px}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__box-list-tab{overflow-x:scroll;overflow-y:hidden;padding-left:100px}}.p-where-to-buy .c-where-to-buy__list-tab{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:900px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin:auto}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__list-tab{width:900px;max-width:900px;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}}.p-where-to-buy .c-where-to-buy__list-tab-item{width:250px;height:237px;background:url(/assets/img/where-to-buy/ico_big_white_egg.svg) no-repeat center center;background-size:cover;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-transition:all .3s ease-in;-o-transition:all .3s ease-in;transition:all .3s ease-in;cursor:pointer}.p-where-to-buy .c-where-to-buy__list-tab-item:hover{opacity:0.7}.p-where-to-buy .c-where-to-buy__list-tab-item:not(.is-active){margin:0 -18px}.p-where-to-buy .c-where-to-buy__list-tab-item:nth-child(3)>.icon{margin-top:24px}.p-where-to-buy .c-where-to-buy__list-tab-item.is-active .icon .c-icon-building{background:url(/assets/img/svg/icon-modern-trade-active.svg) no-repeat center center;background-size:cover}.p-where-to-buy .c-where-to-buy__list-tab-item.is-active .icon .c-icon-online-store{background:url(/assets/img/svg/icon-online-store-active.svg) no-repeat center center;background-size:cover}.p-where-to-buy .c-where-to-buy__list-tab-item.is-active .icon .c-icon-our-store{background:url(/assets/img/svg/icon-store-active.svg) no-repeat center center;background-size:cover}.p-where-to-buy .c-where-to-buy__list-tab-item.is-active .icon .c-icon-point{background:url(/assets/img/svg/icon-point-of-purchase-active.svg) no-repeat center center;background-size:cover}.p-where-to-buy .c-where-to-buy__list-tab-item>.icon .c-icon-building{width:36px;height:41px;background:url(/assets/img/svg/icon-modern-trade.svg) no-repeat center center;background-size:cover}.p-where-to-buy .c-where-to-buy__list-tab-item>.icon .c-icon-online-store{width:36px;height:41px;background:url(/assets/img/svg/icon-online-store.svg) no-repeat center center;background-size:cover}.p-where-to-buy .c-where-to-buy__list-tab-item>.icon .c-icon-our-store{width:43px;height:41px;background:url(/assets/img/svg/icon-store.svg) no-repeat center center;background-size:cover}.p-where-to-buy .c-where-to-buy__list-tab-item>.icon .c-icon-point{width:43px;height:41px;background:url(/assets/img/svg/icon-point-of-purchase.svg) no-repeat center center;background-size:cover}.p-where-to-buy .c-where-to-buy__list-tab-item>.text{font-size:2rem;line-height:1.2;color:#777;margin-top:10px;padding:0 10px}.p-where-to-buy .c-where-to-buy__list-tab-item.is-active{background:url(/assets/img/where-to-buy/ico_big_yellow_egg.svg) no-repeat center center;margin:0 -18px}.p-where-to-buy .c-where-to-buy__list-tab-item.is-active>.text{color:#211E1F}.p-where-to-buy .c-where-to-buy__list-tab-content{margin:40px auto 0;position:relative;max-width:1074px}@media (min-width: 897px) and (max-width: 1439px){.p-where-to-buy .c-where-to-buy__list-tab-content{max-width:74.58333vw}}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__list-tab-content{padding:0 30px;margin-top:0}}.p-where-to-buy .c-where-to-buy__list-tab-content-box{max-width:1074px;margin:auto;border-radius:30px;background:#FCFBF2;opacity:0;position:absolute;-webkit-transition:all .4s ease-in;-o-transition:all .4s ease-in;transition:all .4s ease-in;padding:110px 50px 80px;width:100%}@media (min-width: 897px) and (max-width: 1439px){.p-where-to-buy .c-where-to-buy__list-tab-content-box{max-width:74.58333vw;padding:7.63889vw 3.47222vw 5.55556vw}}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__list-tab-content-box{padding:60px 30px 30px;margin-bottom:60px}}.p-where-to-buy .c-where-to-buy__list-tab-content-box.is-active{opacity:1;position:relative}.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle{display:inline-block;width:0;height:0;border-style:solid;border-width:0 14px 15px 14px;border-color:transparent transparent #FCFBF2 transparent;position:absolute;top:-15px}.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-01{left:200px}@media (min-width: 897px) and (max-width: 1439px){.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-01{left:13.88889vw}}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-01{left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}}.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-02{left:410px}@media (min-width: 897px) and (max-width: 1439px){.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-02{left:28.47222vw}}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-02{left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}}.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-03{left:630px}@media (min-width: 897px) and (max-width: 1439px){.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-03{left:43.75vw}}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-03{left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}}.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-04{left:830px}@media (min-width: 897px) and (max-width: 1439px){.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-04{left:57.63889vw}}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-04{left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}}.p-where-to-buy .c-where-to-buy__list-shop{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__list-shop .slick-list{width:100%}}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__list-shop .slick-arrow{position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);z-index:10;outline:none;width:34px;height:34px;background:#fff;border-radius:100%;-webkit-box-shadow:0px 3px 20px 0px rgba(0,0,0,0.16);box-shadow:0px 3px 20px 0px rgba(0,0,0,0.16);display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}.p-where-to-buy .c-where-to-buy__list-shop .slick-arrow .fas{color:#DCDCDC;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}.p-where-to-buy .c-where-to-buy__list-shop .slick-arrow:hover{background:#211E1F}.p-where-to-buy .c-where-to-buy__list-shop .slick-arrow:hover .fas{color:#FFC416}}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__list-shop .slick-prev{left:-45px}}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__list-shop .slick-next{right:-45px}}.p-where-to-buy .c-where-to-buy__list-shop-item{width:calc(25% - 40px);margin:0 20px 30px}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__list-shop-item{margin:0 0 30px;padding:0 15px}}@media (max-width: 896px){.p-where-to-buy .c-where-to-buy__list-shop-item img{margin:auto}}.p-where-to-buy .c-where-to-buy__list-shop-link{-webkit-transition:all .3s ease-in;-o-transition:all .3s ease-in;transition:all .3s ease-in}.p-where-to-buy .c-where-to-buy__list-shop-link:hover{opacity:0.7}.p-where-to-buy .-box-subscribe .inner{background:none}.p-where-to-buy .js-swiper-shop .swiper-button-prev,.p-where-to-buy .js-swiper-shop .swiper-button-next{display:none}@media (max-width: 896px){.p-where-to-buy .js-swiper-shop .swiper-button-prev,.p-where-to-buy .js-swiper-shop .swiper-button-next{display:block}}.p-where-to-buy .js-swiper-shop .swiper-wrapper.disabled{-webkit-transform:translate3d(0px, 0, 0) !important;transform:translate3d(0px, 0, 0) !important}.p-where-to-buy .js-swiper-shop .swiper-pagination.disabled{display:none}
+.p-where-to-buy .c-hero-where-to-buy__inner {
+  min-height: 566px;
+  margin: auto;
+  background: url(/assets/img/where-to-buy/img_mv_where_to_buy.png) no-repeat center bottom;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 897px) and (max-width: 1439px) {
+  .p-where-to-buy .c-hero-where-to-buy__inner {
+    min-height: 39.30556vw;
+  }
+}
+
+.p-where-to-buy .c-hero-where-to-buy__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-hero-where-to-buy__text {
+    width: 100%;
+  }
+}
+
+.p-where-to-buy .c-hero-where-to-buy__heading {
+  font-size: 4.8rem;
+  line-height: 1.3;
+  text-align: center;
+  color: #fff;
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-hero-where-to-buy__heading {
+    font-size: 4rem;
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+.p-where-to-buy .c-hero-where-to-buy__sub-text {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  width: 100%;
+  padding: 0 30px;
+}
+
+.p-where-to-buy .c-where-to-buy {
+  position: relative;
+}
+
+.p-where-to-buy .c-where-to-buy .c-bg-wave-white-solid {
+  top: -70px;
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__box-list-tab {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-left: 100px;
+  }
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 900px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: auto;
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__list-tab {
+    width: 900px;
+    max-width: 900px;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item {
+  width: 250px;
+  height: 237px;
+  background: url(/assets/img/where-to-buy/ico_big_white_egg.svg) no-repeat center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  cursor: pointer;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item:hover {
+  opacity: 0.7;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item:not(.is-active) {
+  margin: 0 -18px;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item:nth-child(3) > .icon {
+  margin-top: 24px;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item.is-active .icon .c-icon-building {
+  background: url(/assets/img/svg/icon-modern-trade-active.svg) no-repeat center center;
+  background-size: cover;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item.is-active .icon .c-icon-online-store {
+  background: url(/assets/img/svg/icon-online-store-active.svg) no-repeat center center;
+  background-size: cover;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item.is-active .icon .c-icon-our-store {
+  background: url(/assets/img/svg/icon-store-active.svg) no-repeat center center;
+  background-size: cover;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item.is-active .icon .c-icon-point {
+  background: url(/assets/img/svg/icon-point-of-purchase-active.svg) no-repeat center center;
+  background-size: cover;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item > .icon .c-icon-building {
+  width: 36px;
+  height: 41px;
+  background: url(/assets/img/svg/icon-modern-trade.svg) no-repeat center center;
+  background-size: cover;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item > .icon .c-icon-online-store {
+  width: 36px;
+  height: 41px;
+  background: url(/assets/img/svg/icon-online-store.svg) no-repeat center center;
+  background-size: cover;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item > .icon .c-icon-our-store {
+  width: 43px;
+  height: 41px;
+  background: url(/assets/img/svg/icon-store.svg) no-repeat center center;
+  background-size: cover;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item > .icon .c-icon-point {
+  width: 43px;
+  height: 41px;
+  background: url(/assets/img/svg/icon-point-of-purchase.svg) no-repeat center center;
+  background-size: cover;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item > .text {
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #777;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item.is-active {
+  background: url(/assets/img/where-to-buy/ico_big_yellow_egg.svg) no-repeat center center;
+  margin: 0 -18px;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-item.is-active > .text {
+  color: #211E1F;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-content {
+  margin: 40px auto 0;
+  position: relative;
+  max-width: 1074px;
+}
+
+@media (min-width: 897px) and (max-width: 1439px) {
+  .p-where-to-buy .c-where-to-buy__list-tab-content {
+    max-width: 74.58333vw;
+  }
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__list-tab-content {
+    padding: 0 30px;
+    margin-top: 0;
+  }
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-content-box {
+  max-width: 1074px;
+  margin: auto;
+  border-radius: 30px;
+  background: #FCFBF2;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+  transition: all .4s ease-in;
+  padding: 110px 50px 80px;
+  width: 100%;
+}
+
+@media (min-width: 897px) and (max-width: 1439px) {
+  .p-where-to-buy .c-where-to-buy__list-tab-content-box {
+    max-width: 74.58333vw;
+    padding: 7.63889vw 3.47222vw 5.55556vw;
+  }
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__list-tab-content-box {
+    padding: 60px 30px 30px;
+    margin-bottom: 60px;
+  }
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-content-box.is-active {
+  opacity: 1;
+  position: relative;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 14px 15px 14px;
+  border-color: transparent transparent #FCFBF2 transparent;
+  position: absolute;
+  top: -15px;
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-01 {
+  left: 200px;
+}
+
+@media (min-width: 897px) and (max-width: 1439px) {
+  .p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-01 {
+    left: 13.88889vw;
+  }
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-01 {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-02 {
+  left: 410px;
+}
+
+@media (min-width: 897px) and (max-width: 1439px) {
+  .p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-02 {
+    left: 28.47222vw;
+  }
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-02 {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-03 {
+  left: 630px;
+}
+
+@media (min-width: 897px) and (max-width: 1439px) {
+  .p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-03 {
+    left: 43.75vw;
+  }
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-03 {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+.p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-04 {
+  left: 830px;
+}
+
+@media (min-width: 897px) and (max-width: 1439px) {
+  .p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-04 {
+    left: 57.63889vw;
+  }
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__list-tab-content-box .c-triangle.-tab-04 {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+.p-where-to-buy .c-where-to-buy__list-shop {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__list-shop .slick-list {
+    width: 100%;
+  }
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__list-shop .slick-arrow {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 10;
+    outline: none;
+    width: 34px;
+    height: 34px;
+    background: #fff;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.16);
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+  }
+  .p-where-to-buy .c-where-to-buy__list-shop .slick-arrow .fas {
+    color: #DCDCDC;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+  }
+  .p-where-to-buy .c-where-to-buy__list-shop .slick-arrow:hover {
+    background: #211E1F;
+  }
+  .p-where-to-buy .c-where-to-buy__list-shop .slick-arrow:hover .fas {
+    color: #FFC416;
+  }
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__list-shop .slick-prev {
+    left: -45px;
+  }
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__list-shop .slick-next {
+    right: -45px;
+  }
+}
+
+.p-where-to-buy .c-where-to-buy__list-shop-item {
+  width: calc(25% - 40px);
+  margin: 0 20px 30px;
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__list-shop-item {
+    margin: 0 0 30px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .c-where-to-buy__list-shop-item img {
+    margin: auto;
+  }
+}
+
+.p-where-to-buy .c-where-to-buy__list-shop-link {
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.p-where-to-buy .c-where-to-buy__list-shop-link:hover {
+  opacity: 0.7;
+}
+
+.p-where-to-buy .-box-subscribe .inner {
+  background: none;
+}
+
+.p-where-to-buy .js-swiper-shop .swiper-button-prev,
+.p-where-to-buy .js-swiper-shop .swiper-button-next {
+  display: none;
+}
+
+@media (max-width: 896px) {
+  .p-where-to-buy .js-swiper-shop .swiper-button-prev,
+  .p-where-to-buy .js-swiper-shop .swiper-button-next {
+    display: block;
+  }
+}
+
+.p-where-to-buy .js-swiper-shop .swiper-wrapper.disabled {
+  -webkit-transform: translate3d(0px, 0, 0) !important;
+  transform: translate3d(0px, 0, 0) !important;
+}
+
+.p-where-to-buy .js-swiper-shop .swiper-pagination.disabled {
+  display: none;
+}
+
+/*# sourceMappingURL=where-to-buy.css.map */

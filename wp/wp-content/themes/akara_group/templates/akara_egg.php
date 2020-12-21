@@ -104,28 +104,28 @@
           <canvas id="canvas-cream-bottom"></canvas>
         </div>
       </div>
-      <?php
-        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        $args = array(
-          'post_type' => 'product',
-          'post_status' => 'publish',
-          'posts_per_page' => -1,
-          'orderby' => 'menu_order',
-          'order' => 'DESC',
-          'paged' => $paged,
-          'tax_query' => array(
-            array(
-                'taxonomy' => 'product_category',
-                'field'    => 'id',
-                'terms'    => $term_obj->term_id,
-            ),
+    <?php
+      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+      $args = array(
+        'post_type' => 'product',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+        'order' => 'DESC',
+        'paged' => $paged,
+        'tax_query' => array(
+          array(
+              'taxonomy' => 'product_category',
+              'field'    => 'id',
+              'terms'    => $term_obj->term_id,
           ),
-        );
+        ),
+      );
 
-        $the_query = new WP_Query( $args );
-        // print "<pre>"; print_r($the_query); die();
-        if ( $the_query->have_posts() ) :
-      ?>
+      $the_query = new WP_Query( $args );
+      // print "<pre>"; print_r($the_query); die();
+      if ( $the_query->have_posts() ) :
+    ?>
       <div class="sec-cmn-01 c-product-list">
         <div class="c-product-list__inner">
           <div class="c-product-list__box-product-show">
@@ -251,11 +251,23 @@
 
         </div>
       </div>
-      <?php endif; //if ( $the_query->have_posts() ) : ?>
+      <?php $k = 1; ?>
+      <?php $arr_recipe = array(); ?>
+      <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+        <?php
+          $product_relate_recipes = get_field('product_relate_recipes');
+          if($product_relate_recipes!='') {
+            $arr_recipe[get_the_ID()][] = $product_relate_recipes;
+          }
+        ?>
+      <?php endwhile;?>
+      <!-- <?php print "<pre>"; print_r($arr_recipe); ?> -->
+      <?php if(!empty($arr_recipe)): ?>
       <div class="c-recipes-box">
         <div class="c-wave-yellow">
           <canvas id="canvas-yellow"></canvas>
         </div>
+
         <div class="l-sec-cmn-01 -recipes-top-heading">
           <div class="inner">
             <div class="c-box-heading-center-text">
@@ -280,138 +292,74 @@
             </div>
           </div>
         </div>
+
         <div class="l-sec-cmn-01 l-sec-box-swiper-voice --product-yellow">
           <div class="inner">
             <div class="l-swiper-recipes animation-element slide-top">
-              <!-- Slider main container-->
-              <div class="product-swiper-container js-recipes-swiper-normal">
+            <?php $j = 1; ?>
+            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <?php
+              $product_relate_recipes = get_field('product_relate_recipes');
+            ?>
+              <?php if( $product_relate_recipes ): ?>
+              <div class="product-swiper-container js-recipes-swiper-normal js-product-0<?php echo $j; ?>__slider <?php echo ($j!=1)? 'is-product-opacity':'';?> ">
                 <!-- Additional required wrapper-->
                 <div class="swiper-wrapper">
+                <?php foreach( $product_relate_recipes as $product_relate_recipe ): ?>
+                <?php
+                  $recipe_cooking_level = get_field('recipe_cooking_level', $product_relate_recipe->ID);
+                  $recipe_cooking_time = get_field('recipe_cooking_time', $product_relate_recipe->ID);
+                  $recipe_thumbnail = get_field('recipe_thumbnail', $product_relate_recipe->ID);
+                ?>
                   <!-- Slides-->
                   <div class="swiper-slide">
-                    <div class="article-content">
-                      <div class="c-shadow"></div>
-                      <div class="c-box-card-01 -full">
-                        <div class="c-badge__list">
-                          <div class="c-badge__item -level">
-                            <div class="icon"></div>
-                            <div class="text">Easy</div>
+                    <a href="<?php echo get_permalink($product_relate_recipe->ID); ?>">
+                      <div class="article-content">
+                        <div class="c-shadow"></div>
+                        <div class="c-box-card-01 -full">
+                          <div class="c-badge__list">
+                          <?php if($recipe_cooking_level!=''): ?>
+                            <div class="c-badge__item -level">
+                              <div class="icon"></div>
+                              <div class="text"><?php echo str_replace(array('Level ', 'Level'), '', $recipe_cooking_level); ?></div>
+                            </div>
+                          <?php endif; ?>
+                          <?php if($recipe_cooking_time !='' ): ?>
+                            <div class="c-badge__item -time">
+                              <div class="icon"></div>
+                              <div class="text"><?php echo $recipe_cooking_time; ?></div>
+                            </div>
+                          <?php endif; ?>
                           </div>
-                          <div class="c-badge__item -time">
-                            <div class="icon"></div>
-                            <div class="text">30 mins</div>
+                          <div class="c-overlay"></div>
+                          <?php if($recipe_thumbnail['url']!=''): ?>
+                          <figure class="box-image"><img class="image" src="<?php echo $recipe_thumbnail['url']; ?>" alt="<?php echo $recipe_thumbnail['alt']; ?>"></figure>
+                          <?php endif; ?>
+                          <div class="box-content">
+                            <div class="c-heading-cmn-01"><?php echo get_the_title($product_relate_recipe->ID); ?></div>
+                            <div class="c-text-cmn-01"><?php echo get_field('recipe_short_description', $product_relate_recipe->ID); ?></div>
                           </div>
-                        </div>
-                        <div class="c-overlay"></div>
-                        <figure class="box-image"><img class="image" src="/assets/img/recipes/boiler_egg.jpg" alt="ไข่ต้มยางมะตูม"></figure>
-                        <div class="box-content">
-                          <div class="c-heading-cmn-01">ไข่ต้มยางมะตูม</div>
-                          <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="article-content">
-                      <div class="c-shadow"></div>
-                      <div class="c-box-card-01 -full">
-                        <div class="c-badge__list">
-                          <div class="c-badge__item -level">
-                            <div class="icon"></div>
-                            <div class="text">Easy</div>
-                          </div>
-                          <div class="c-badge__item -time">
-                            <div class="icon"></div>
-                            <div class="text">30 mins</div>
-                          </div>
-                        </div>
-                        <div class="c-overlay"></div>
-                        <figure class="box-image"><img class="image" src="/assets/img/recipes/fried_egg.jpg" alt="ไข่ดาวกรอบ"></figure>
-                        <div class="box-content">
-                          <div class="c-heading-cmn-01">ไข่ดาวกรอบ</div>
-                          <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="article-content">
-                      <div class="c-shadow"></div>
-                      <div class="c-box-card-01 -full">
-                        <div class="c-badge__list">
-                          <div class="c-badge__item -level">
-                            <div class="icon"></div>
-                            <div class="text">Easy</div>
-                          </div>
-                          <div class="c-badge__item -time">
-                            <div class="icon"></div>
-                            <div class="text">30 mins</div>
-                          </div>
-                        </div>
-                        <div class="c-overlay"></div>
-                        <figure class="box-image"><img class="image" src="/assets/img/recipes/omlet.jpg" alt="ไข่เจียวฟูนุ่ม"></figure>
-                        <div class="box-content">
-                          <div class="c-heading-cmn-01">ไข่เจียวฟูนุ่ม</div>
-                          <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="article-content">
-                      <div class="c-shadow"></div>
-                      <div class="c-box-card-01 -full">
-                        <div class="c-badge__list">
-                          <div class="c-badge__item -level">
-                            <div class="icon"></div>
-                            <div class="text">Easy</div>
-                          </div>
-                          <div class="c-badge__item -time">
-                            <div class="icon"></div>
-                            <div class="text">30 mins</div>
-                          </div>
-                        </div>
-                        <div class="c-overlay"></div>
-                        <figure class="box-image"><img class="image" src="/assets/img/recipes/coffee_egg.jpg" alt="กาแฟไข่"></figure>
-                        <div class="box-content">
-                          <div class="c-heading-cmn-01">กาแฟไข่</div>
-                          <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="article-content">
-                      <div class="c-shadow"></div>
-                      <div class="c-box-card-01 -full">
-                        <div class="c-badge__list">
-                          <div class="c-badge__item -level">
-                            <div class="icon"></div>
-                            <div class="text">Easy</div>
-                          </div>
-                          <div class="c-badge__item -time">
-                            <div class="icon"></div>
-                            <div class="text">30 mins</div>
-                          </div>
-                        </div>
-                        <div class="c-overlay"></div>
-                        <figure class="box-image"><img class="image lazy" src="/assets/img/recipes/floating_island.jpg" alt="Floating Island"></figure>
-                        <div class="box-content">
-                          <div class="c-heading-cmn-01">Floating Island</div>
-                          <div class="c-text-cmn-01">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <?php endforeach; ?>
                 </div>
               </div>
+              <!-- product-swiper-container js-recipes-swiper-normal -->
+              <?php endif; // if( $product_relate_recipes ): ?>
+              <?php $j++; ?>
+            <?php endwhile; ?>
             </div>
           </div>
         </div>
         <div class="c-wave-yellow-bottom">
           <canvas id="canvas-yellow-bottom"></canvas>
         </div>
+
       </div>
+      <?php endif; ?>
+    <?php endif; //if ( $the_query->have_posts() ) : ?>
 
       <div class="c-voice-box">
         <div class="c-voice-box__inner">

@@ -1,7 +1,7 @@
 <?php
 /******** DEFINE POST PER PAGE EACH POST TYPE ********/
 define("EVENT_POSTPERPAGE_TOP", 4);
-define("EVENT_POSTPERPAGE", 30);
+define("EVENT_POSTPERPAGE", 3);
 define("TOPPAGE_ID", 88645);
 define("TERMID", 83); //大切にしたいことばたち
 define("TERMNAME", "大切にしたいことばたち");
@@ -13,74 +13,40 @@ function akara_my_load_more_scripts_dynamic(){
   $obj = get_queried_object();
   $tdd = date("Y/m/d");
   //print "<pre>"; print_r($obj);
-  $post_type = array('event', 'post', 'column', 'shopping');
+  $post_type = array('news');
   $orderby = 'date';
+
   if($obj->post_name == 'job' || is_category()){
     $post_type = 'post';
-  } elseif($obj->post_name == 'event-end') {
-    $post_type = 'event';
-    $orderby = 'meta_value';
-  } elseif($obj->query_var == 'event' || is_tax('cate_event') || $obj->post_name == 'eventtop'){
-    $post_type = 'event';
-    $orderby = 'meta_value';
-  } elseif($obj->query_var == 'column' || is_tax('cate_colunm') || $obj->post_name == 'columntop'){
-    $post_type = 'column';
-  } elseif($obj->query_var == 'shopping' || is_tax('cate_shopping')){
-    $post_type = 'shopping';
+  } elseif($obj->query_var == 'news' || is_tax('news_category')){
+    $post_type = 'news';
+  } elseif($obj->query_var == 'media' || is_tax('media_category')){
+    $post_type = 'media';
+  } elseif($obj->query_var == 'recipe' || is_tax('recipe_category')){
+    $post_type = 'recipe';
   }
   // print "<pre>"; print_r($obj);
   $args = array(
     'post_type' => $post_type,
     'post_status' => 'publish',
-    'posts_per_page' => 30,
+    'posts_per_page' => EVENT_POSTPERPAGE,
     'paged' => 1,
-    'orderby' => $orderby ,
+    'orderby' => $orderby,
     'order' => 'DESC',
-    'has_password'   => FALSE, // NO PASSWORD POST SHOW    
+    'has_password'   => FALSE, // NO PASSWORD POST SHOW
   );
 
-  if($obj->query_var == 'event' || $obj->post_name == 'event-end'){
-    $args['meta_key'] = 'eventdate';
-  }
-  if(is_tax('cate_event')){
+  if(is_tax('news_category')){
     $args = array(
-      'post_type' => $post_type,
+      'post_type' => 'news',
       'post_status' => 'publish',
       'posts_per_page' => EVENT_POSTPERPAGE,
-      'paged' => 1,
-      'orderby' => 'meta_value',
-      'meta_key' => 'eventdate',
-      'order' => 'DESC',
-      'tax_query' => array(
-        array(
-        'taxonomy' => 'cate_event',
-        'field' => 'id',
-        'terms' => $obj->term_id,
-        )
-      ),
-      'meta_query'=> array(
-        array(
-            'key' => 'eventdate',
-            'value' => $tdd,
-            'compare' => '>='
-        )
-      ),
-      'has_password'   => FALSE, // NO PASSWORD POST SHOW
-    );
-
-  }
-
-  if(is_tax('cate_colunm')){
-    $args = array(
-      'post_type' => $post_type,
-      'post_status' => 'publish',
-      'posts_per_page' => 1,
       'paged' => 1,
       'orderby' => 'date',
       'order' => 'DESC',
       'tax_query' => array(
         array(
-        'taxonomy' => 'cate_colunm',
+        'taxonomy' => 'news_category',
         'field' => 'id',
         'terms' => $obj->term_id,
         )
@@ -89,17 +55,17 @@ function akara_my_load_more_scripts_dynamic(){
     );
   }
 
-  if(is_category()){
+  if(is_tax('media_category')){
     $args = array(
-      'post_type' => $post_type,
+      'post_type' => 'media',
       'post_status' => 'publish',
-      'posts_per_page' => 30,
+      'posts_per_page' => EVENT_POSTPERPAGE,
       'paged' => 1,
       'orderby' => 'date',
       'order' => 'DESC',
       'tax_query' => array(
         array(
-        'taxonomy' => 'category',
+        'taxonomy' => 'media_category',
         'field' => 'id',
         'terms' => $obj->term_id,
         )
@@ -108,68 +74,31 @@ function akara_my_load_more_scripts_dynamic(){
     );
   }
 
-  if($obj->post_name == 'eventtop'){
+  if(is_tax('recipe_category')){
     $args = array(
-      'post_type' => 'event',
+      'post_type' => 'recipe',
       'post_status' => 'publish',
       'posts_per_page' => EVENT_POSTPERPAGE,
       'paged' => 1,
-      'orderby' => array('meta_value' => 'ASC'),
-      'meta_key' => 'eventdate', //or whatever your meta_key is
-      'meta_query'=> array(
+      'orderby' => 'date',
+      'order' => 'DESC',
+      'tax_query' => array(
         array(
-            'key' => 'eventdate',
-            'value' => $tdd,
-            'compare' => '>='
+        'taxonomy' => 'recipe_category',
+        'field' => 'id',
+        'terms' => $obj->term_id,
         )
       ),
       'has_password'   => FALSE, // NO PASSWORD POST SHOW
     );
-    if(isset($_GET['cate'])){
-      $category = $_GET['cate'];
-      $args['tax_query'] = array(
-        array(
-        'taxonomy' => 'cate_event',
-        'field' => 'slug',
-        'terms' => $category,
-        )
-      );
-    }
-  }
-
-  if($obj->post_name == 'event-end'){
-    $args = array(
-      'post_type' => 'event',
-      'post_status' => 'publish',
-      'posts_per_page' => EVENT_POSTPERPAGE,
-      'paged' => 1,
-      'orderby' => array('meta_value' => 'DESC'),
-      'meta_key' => 'eventdate', //or whatever your meta_key is
-      'meta_query'=> array(
-        array(
-            'key' => 'eventdate',
-            'value' => $tdd,
-            'compare' => '<'
-        )
-      ),
-      'has_password'   => FALSE, // NO PASSWORD POST SHOW
-    );
-    if(isset($_GET['cate'])){
-      $category = $_GET['cate'];
-      $args['tax_query'] = array(
-        array(
-        'taxonomy' => 'cate_event',
-        'field' => 'slug',
-        'terms' => $category,
-        )
-      );
-    }
   }
 
   //print "<pre>";
   $the_query = new WP_Query( $args );
-	wp_register_script( 'my_loadmore_dynamic', '' ,array());
-
+	// wp_enqueue_script('jquery');
+	// // register our main script but do not enqueue it yet
+	// wp_register_script( 'my_loadmore', get_stylesheet_directory_uri() . '/js/loadmore.js', array('jquery') );
+	wp_register_script( 'my_loadmore_dynamic', '', array());
 	wp_localize_script(
     'my_loadmore_dynamic', 'akara_loadmore_params_dynamic', array(
       'ajaxurl_dynamic' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
@@ -191,92 +120,71 @@ function akara_loadmore_ajax_handler_dynamic(){
 	$args['paged'] = $_POST['page'] + 1; // we need next page to be loaded
   $args['post_status'] = 'publish';
 	$args['post_type'] = $_POST['post_type'];
-  $args['posts_per_page'] = 30;
+  $args['posts_per_page'] = EVENT_POSTPERPAGE;
 
+  if(is_tax('news_category')){
+    $args['tax_query'] = array(
+      array(
+      'taxonomy' => 'news_category',
+      'field' => 'id',
+      'terms' => $obj->term_id,
+      )
+    );
+  }
+
+  if(is_tax('media_category')){
+    $args['tax_query'] = array(
+      array(
+      'taxonomy' => 'media_category',
+      'field' => 'id',
+      'terms' => $obj->term_id,
+      )
+    );
+  }
+
+  if(is_tax('recipe_category')){
+    $args['tax_query'] = array(
+      array(
+      'taxonomy' => 'recipe_category',
+      'field' => 'id',
+      'terms' => $obj->term_id,
+      )
+    );
+  }
+
+  $args['orderby'] = 'date';
   $args['order'] = 'DESC';
   $args['has_password'] = FALSE;
 
-  if($obj->post_name == 'eventtop'){
-    $args['orderby'] = 'meta_value';
-    $args['meta_key'] = 'eventdate';
-    $args['order'] = 'ASC';
-    $args['meta_query'] = array(
-      array(
-          'key' => 'eventdate',
-          'value' => $tdd,
-          'compare' => '>='
-      )
-    );
-  } else {
-    $args['orderby'] = 'date';
-  }
-
-  if($obj->post_name == 'event-end'){
-    $tdd = date("Y/m/d");
-    $args['post_type'] = 'event';
-    if(isset($_GET['cate'])){
-      $category = $_GET['cate'];
-      $args['tax_query'] = array(
-        array(
-        'taxonomy' => 'cate_event',
-        'field' => 'slug',
-        'terms' => $category,
-        )
-      );
-    }
-    $args['meta_key'] = 'eventdate'; //or whatever your meta_key is
-    $args['meta_query'] =array(
-      array(
-          'key' => 'eventdate',
-          'value' => $tdd,
-          'compare' => '<'
-      )
-      );
-    $args['orderby'] = 'meta_value';
-    $args['meta_key'] = 'eventdate';
-    $args['order'] = 'DESC';
-  }
-
-	$the_query_ajax = new WP_Query( $args );
+  $the_query_ajax = new WP_Query( $args );
+  // print_r($the_query_ajax); die();
   if( $the_query_ajax->have_posts()):
-    if($args['term_id'] != TERMID):
   ?>
-  <script>
-    //<![CDATA[
-  $(function(){
-    $('.column-match-height .item-recommend').matchHeight();
-  });
-  //]]>
-  </script>  
-  <div class="mod-recommend-in">
+
   <?php
     //print_r($id_banner);
     // run the loop
     while( $the_query_ajax->have_posts() ): $the_query_ajax->the_post();
-      if($_POST['post_type']=='event' || $_POST['post_type']=='event-end'){
-        get_template_part( 'template-parts/shigoto/content', 'event' );
-      } elseif($_POST['post_type']=='column'){
-        get_template_part( 'template-parts/shigoto/content', 'column' );
-      } else {
-        get_template_part( 'template-parts/shigoto/content', 'top' );
+      // if($_POST['post_type']=='event' || $_POST['post_type']=='event-end'){
+      //   get_template_part( 'template-parts/shigoto/content', 'event' );
+      // } elseif($_POST['post_type']=='column'){
+      //   get_template_part( 'template-parts/shigoto/content', 'column' );
+      // } else {
+      //   get_template_part( 'template-parts/shigoto/content', 'top' );
+      // }
+      if($_POST['post_type']=='news') {
+        get_template_part( 'templates/content', 'news' );
+      } elseif($_POST['post_type']=='media') {
+        get_template_part( 'templates/content', 'media' );
+      } elseif($_POST['post_type']=='recipe') {
+        get_template_part( 'templates/content', 'recipe' );
       }
+
       $cnt_ajax++;
     endwhile; //while( $the_query_ajax->have_posts() ): $the_query_ajax->the_post();
   ?>
-    </div><!-- /mod-recommend-in -->
 
   <?php
-    else : // if($args['term_id'] != TERMID):
-  ?>
-  <ul class="list-column-quote">
-  <?php 
-    while ( $the_query_ajax->have_posts() ) : $the_query_ajax->the_post(); 
-      get_template_part( 'template-parts/shigoto/content', 'column-01' ); 
-    endwhile; 
-  ?>
-  </ul><!-- list-column-quote -->
-  <?php
-    endif;
 	endif; //if( $the_query_ajax->have_posts() && $args['term_id'] != TERMID) :
 	die; // here we exit the script and even no wp_reset_query() required!
 }
@@ -1378,3 +1286,21 @@ function show_only_authorpost($query) {
   }
 }
 add_action('pre_get_posts', 'show_only_authorpost');
+
+
+function wpb_change_search_url() {
+  if ( is_search() && ! empty( $_GET['search_text'] ) && !is_admin()) {
+      wp_redirect( home_url( "/search/" ) . $_GET['search_text']  . '/');
+      exit();
+  }   
+}
+add_action( 'template_redirect', 'wpb_change_search_url' );
+
+function langcode_post_id($post_id){
+  global $wpdb;
+
+  $query = $wpdb->prepare('SELECT language_code FROM ' . $wpdb->prefix . 'icl_translations WHERE element_id="%d"', $post_id);
+  $query_exec = $wpdb->get_row($query);
+
+  return $query_exec->language_code;
+}
