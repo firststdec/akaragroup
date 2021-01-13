@@ -493,6 +493,14 @@
           left: get-vw(220px);
           bottom: get-vw(-130px);
         }
+
+        @include mq-custom-max(425px) {
+          left: 62%;
+        }
+
+        @include mq-custom-max(375px) {
+          left: 69%;
+        }
       }
 
       .box-image-heading {
@@ -731,6 +739,10 @@
           left: 40%;
         }
 
+        @include mq-custom-max(375px) {
+          left: 31%;
+        }
+
         @include mq-min-max-tb {
           width: get-vw(403px);
           height: get-vw(379px);
@@ -830,7 +842,7 @@
         bottom: -120px;
         right: auto;
         left: 50%;
-        z-index: 4;
+        z-index: 7;
         position: absolute;
       }
 
@@ -1012,13 +1024,17 @@
           left: 52%;
           background: url(/assets/img/top/img_product_03-01.png) no-repeat;
           bottom: -270px;
-          z-index: 5;
+          z-index: 3;
           transform: translateX(-90%);
           background-size: cover;
         }
 
         @include mq-custom-max (425px) {
           left: 50%;
+        }
+
+        @include mq-custom-max (375px) {
+          left: 61%;
         }
 
         @include mq-min-max-tb {
