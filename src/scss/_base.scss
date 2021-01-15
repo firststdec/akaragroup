@@ -1149,6 +1149,7 @@ a {
     @include mq-min-tb {
       font-size: 3.2rem;
       font-weight: 500;
+      text-transform: uppercase;
     }
   }
 
@@ -1782,6 +1783,11 @@ a[data-group="menu"] {
 
         @include mq-min-max-tb {
           padding-left: 20px;
+          text-align: center;
+        }
+
+        img {
+          width: 100px;
         }
       }
     }

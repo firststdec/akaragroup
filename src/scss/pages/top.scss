@@ -351,6 +351,10 @@
           bottom: 0;
         }
 
+        @include mq-custom-max(425px) {
+          right: 35px;
+        }
+
         @include mq-min-max-tb {
           top: get-vw(20px);
           right: get-vw(150px);
@@ -582,6 +586,10 @@
         margin-top: 0;
         bottom: -150px;
         position: absolute;
+      }
+
+      @include mq-custom-max(425px) {
+        left: 67%;
       }
 
       @include mq-min-max-tb {
@@ -847,7 +855,7 @@
       }
 
       @include mq-custom-max (425px){
-        left: 45%;
+        left: 37%;
       }
 
       @include mq-min-max-tb {
@@ -1310,6 +1318,10 @@
         z-index: 2;
       }
 
+      @include mq-custom-max(425px) {
+        padding: 120px 0 100px;
+      }
+
       .box-image {
         @include mq-max-sp {
           position: absolute;
@@ -1385,6 +1397,10 @@
         @include mq-custom-min-max(426px, 896px) {
           width: 350px;
         }
+
+        @include mq-custom-max(425px) {
+          right: -72px;
+        }
       }
 
       .box-content {
@@ -1397,6 +1413,10 @@
           width: 100%;
           padding: 100px 30px 150px;
           text-align: center;
+        }
+
+        @include mq-custom-max(425px) {
+          padding: 100px 30px 200px;
         }
 
         @include mq-min-max-tb {

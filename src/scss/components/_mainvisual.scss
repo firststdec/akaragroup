@@ -61,7 +61,11 @@
   }
 
   @include mq-custom-max (425px) {
-    right: -124px;
+    right: -63px;
+  }
+
+  @include mq-custom-max (375px) {
+    right: -62px;
   }
 
   .swiper-slide {
