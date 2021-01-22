@@ -11,7 +11,6 @@
   else {
     MQ = 'SP';
 	}
-	console.log(MQ);
 
 	var cvs, ctx;
 	var nodes = 6;
