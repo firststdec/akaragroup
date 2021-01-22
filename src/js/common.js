@@ -35,6 +35,7 @@ $(function () {
   jsContentImg();
   fbShare();
   selectBoxLink();
+  videoTop();
 });
 
 $(window).on('load', function () {
@@ -1109,5 +1110,31 @@ var jumpToHashTarget = function(){
       var position  = $(window.location.hash).offset().top - headerHeight;
       $('body,html').animate({scrollTop: position - diff}, speed, 'swing');
     }
+  }
+}
+
+let videoTop = function () {
+  let $element = $('.js-video-top');
+  let $popUpTop = $('.c-box-video-top');
+  let $overlayTop = $('.c-box-video-overlay');
+  let $closeVideoButton = $('.js-video-close');
+
+  if($element.length) {
+    $element.on('click', function (e) {
+      e.preventDefault();
+
+      if( !$popUpTop.hasClass('is-active') ) {
+        $popUpTop.addClass('is-active');
+      }
+
+      if( !$overlayTop.hasClass('is-active') ) {
+        $overlayTop.addClass('is-active');
+      }
+    });
+
+    $closeVideoButton.on('click', function (e) {
+      $popUpTop.removeClass('is-active');
+      $overlayTop.removeClass('is-active');
+    })
   }
 }

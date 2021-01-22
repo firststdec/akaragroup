@@ -62,10 +62,12 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    width: 550px;
 
     @include mq-max-sp {
       padding: 0 35px 30px;
       margin-top: 95px;
+      width: auto;
     }
 
     @include mq-min-tb {
@@ -96,7 +98,11 @@
     }
 
     svg {
-      width: 100%;
+      width: 500px;
+
+      @include mq-max-sp {
+        width: 100%;
+      }
     }
 
     .text--line {
@@ -156,6 +162,7 @@
         font-weight: 500;
         color: #211E1F;
         line-height: 1.1;
+        display: inline-block;
 
         @include mq-max-sp {
           font-size: 6rem;
@@ -196,13 +203,14 @@
     }
 
     .text {
-      width: 55%;
+      width: 100%;
       color: #777;
       font-size: 2rem;
       padding: 30px 0 0 10px;
       font-weight: 400;
 
       @include mq-max-sp {
+        width: 55%;
         font-size: 1.4rem;
         line-height: 1.5;
         padding: 20px 0 0 0;
@@ -214,7 +222,7 @@
     }
 
     .mv-swiper-nav-custom {
-      display: flex;
+      display: inline-flex;
       margin-top: 40px;
       margin-left: 10px;
 

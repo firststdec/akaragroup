@@ -48,6 +48,17 @@ block outside
   .c-bg-wave-mainvisual
     .c-bg-wave-mainvisual-solid
       canvas#canvas-mainvisual
+
+  .c-box-video-overlay
+  .c-box-video-top
+    .c-box-video-close
+      .modaal-close.js-video-close
+
+    .c-box-jobs__detail
+      .c-box-jobs__inner
+        .c-box-iframe-top
+          iframe(width='560', height='315', src='https://www.youtube.com/embed/8dVSeHLBYsQ', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+
 block content
   .p-top
     .l-sec-cmn-02
@@ -79,8 +90,9 @@ block content
                 .swiper-slide
                   .mainvisual-content
                     .box-image-wrapper
-                      figure.box-image
-                        img.image(src="/assets/img/top/banner-cooking.jpg", alt="Akara Group", data-object-fit="cover")
+                        a.js-video-top(href="#video-popup")
+                          figure.box-image
+                            img.image(src="/assets/img/top/banner-cooking.jpg", alt="Akara Group", data-object-fit="cover")
                         //- img.image.-lg(src="/assets/img/top/img_mainvisual_01@2x.png", alt="Akara Group", data-object-fit="cover")
                 .swiper-slide
                   .mainvisual-content
@@ -91,6 +103,8 @@ block content
 
               // Add Pagination
               .mv-swiper-pagination
+
+
 
     .l-sec-cmn-01
       .inner

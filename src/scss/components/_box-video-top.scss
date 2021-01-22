@@ -1,0 +1,77 @@
+@import '_variables';
+
+.c-box-video-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+
+  &.is-active {
+    opacity: 1;
+    z-index: 10;
+  }
+}
+
+.c-box-video-top {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 95%;
+  opacity: 0;
+  z-index: -1;
+
+  &.is-active {
+    opacity: 1;
+    z-index: 15;
+  }
+
+  .c-box-jobs__detail {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    .c-box-jobs__inner {
+      max-width: 900px;
+      padding: 10px;
+      border-radius: 0;
+    }
+  }
+}
+
+.c-box-video-close {
+  .modaal-close {
+    right: 0;
+
+    @include mq-max-sp {
+      right: -15px;
+    }
+  }
+}
+
+.c-box-iframe-top {
+  padding-top: 56.145%;
+  position: relative;
+  background: #000;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
