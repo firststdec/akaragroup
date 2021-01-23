@@ -45,6 +45,10 @@
       max-width: 900px;
       padding: 10px;
       border-radius: 0;
+
+      @include mq-max-sp {
+        max-width: 600px;
+      }
     }
   }
 }

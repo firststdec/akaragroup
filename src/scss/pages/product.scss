@@ -938,6 +938,15 @@
       @include mq-max-sp {
         padding-left: 0;
       }
+
+      ul {
+        margin-top: 20px;
+        margin-left: 1.5em;
+
+        li {
+          list-style-type: disc;
+        }
+      }
     }
   }
 

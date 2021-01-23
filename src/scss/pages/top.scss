@@ -299,14 +299,12 @@
     }
 
     .box-image {
-      position: relative;
       z-index: 3;
       display: inline-flex;
       align-items: flex-end;
-      max-width: 610px;
 
       @include mq-min-max-tb {
-        max-width: get-vw(610px);
+ 
       }
 
       @include mq-max-sp {
@@ -348,7 +346,7 @@
 
       .image {
         position: absolute;
-        right: 150px;
+        right: 115px;
         top: 20px;
         visibility: hidden;
 
@@ -542,6 +540,12 @@
       > * {
         position: relative;
         z-index: 2;
+      }
+
+      .c-button-cmn-01 {
+        &:hover {
+          border: 1px solid #211E1F;
+        }
       }
     }
   }
@@ -804,6 +808,8 @@
 
     .c-button-cmn-01 {
       &:hover {
+        border: 1px solid #211E1F;
+
         .arrow {
           color: $yellow;
         }
@@ -1115,6 +1121,12 @@
       }
     }
   }
+
+  .c-button-cmn-01 {
+    &:hover {
+      border: 1px solid #211E1F;
+    }
+  }
 }
 
 .c-open-package {
@@ -1244,6 +1256,10 @@
       border-color: #DCDCDC;
       border-width: 1px;
     }
+
+    &:hover {
+      border: 1px solid #211E1F;
+    }
   }
 
    > .c-wave-yellow {
@@ -1327,7 +1343,7 @@
       }
 
       @include mq-custom-max(425px) {
-        padding: 120px 0 100px;
+        padding: 50px 0 100px;
       }
 
       .box-image {
@@ -1558,5 +1574,21 @@
   .c-button-cmn-01.--border-base {
     border-color: #DCDCDC;
     border-width: 1px;
+  }
+}
+
+.l-sec-cmn-01.-video-section {
+  margin-top: 200px;
+
+  @include mq-max-sp {
+
+  }
+
+  &.p-our-story .c-box-video__box-iframe {
+    max-width: 1440px;
+
+    @include mq-min-max-tb {
+      padding: 0 20px;
+    }
   }
 }
