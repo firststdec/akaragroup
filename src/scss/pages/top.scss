@@ -1349,7 +1349,7 @@
       .box-image {
         @include mq-max-sp {
           position: absolute;
-          left: -130px;
+          left: -100px;
           bottom: -210px;
           z-index: 5;
         }
