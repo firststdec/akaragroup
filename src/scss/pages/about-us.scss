@@ -187,6 +187,8 @@
 
   .c-our-brand {
     margin-top: 200px;
+    position: relative;
+    z-index: 3;
 
     @include mq-max-sp {
       margin-top: 150px;

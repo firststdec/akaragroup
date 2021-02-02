@@ -99,6 +99,7 @@ get_header();
                       <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/ufmfujisuper-logo.png" alt="UFM Fuji Super"></div></div>
                       <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/cj-express-logo.png" alt="CJ Express"></div></div>
                       <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/DONDONDONKI-logo.png" alt="Don Don Donki"></div></div>
+                      <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/bigc-logo.png" alt="BigC"></div></div>
                     </div>
                   </div>
                 </div>
@@ -106,7 +107,9 @@ get_header();
                   <div class="c-triangle -tab-02"></div>
                   <div class="c-where-to-buy__list-tab-content-box-list">
                     <div class="c-where-to-buy__list-shop js-swiper-shop">
-                      <div class="c-where-to-buy__list-shop-item"><div class="c-where-to-buy__list-shop-link"><img src="/assets/img/where-to-buy/freshket-logo.png" alt="Freshket"></a></div>
+                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="https://www.freshket.co/marketplace?q=อัครา" target="_blank"><img src="/assets/img/where-to-buy/freshket-logo.png" alt="Freshket"></a></div>
+                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="https://shoponline.tescolotus.com/groceries/th-TH/search?query=%E0%B8%AD%E0%B8%B1%E0%B8%84%E0%B8%A3%E0%B8%B2" target="_blank"><img src="/assets/img/where-to-buy/tesco-logo.png" alt="Tesco Lotus"></a></div>
+                      <div class="c-where-to-buy__list-shop-item"><a class="c-where-to-buy__list-shop-link" href="https://www.tops.co.th/th/search/%E0%B8%AD%E0%B8%B1%E0%B8%84%E0%B8%A3%E0%B8%B2,%E0%B9%84%E0%B8%82%E0%B9%88%E0%B8%AD%E0%B8%B1%E0%B8%84%E0%B8%A3%E0%B8%B2,akara,%E0%B9%80%E0%B8%AD%E0%B8%84%E0%B9%82%E0%B8%84%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5" target="_blank"><img src="/assets/img/where-to-buy/tops-logo.png" alt="Tops Market"></a></div>
                     </div>
                   </div>
                 </div>

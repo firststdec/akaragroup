@@ -1,4 +1,11 @@
 <?php
+  if(ICL_LANGUAGE_CODE == 'en'){
+    $lang_url = '/en';
+  } elseif (ICL_LANGUAGE_CODE == 'th') {
+    $lang_url = '';
+  }
+?>
+<?php
   $term_obj = get_queried_object();
   $main_visual_image = get_field('main_visual_image', $term_obj->taxonomy . '_' . $term_obj->term_id);
   $main_visual_heading = get_field('main_visual_heading', $term_obj->taxonomy . '_' . $term_obj->term_id);
@@ -7,6 +14,7 @@
   $how_is_it_good_heading = get_field('how_is_it_good_heading', $term_obj->taxonomy . '_' . $term_obj->term_id);
   $how_is_it_good_content = get_field('how_is_it_good_content', $term_obj->taxonomy . '_' . $term_obj->term_id);
   $how_is_it_good_image = get_field('how_is_it_good_image', $term_obj->taxonomy . '_' . $term_obj->term_id);
+  $banner = get_field('category_banner', $term_obj->taxonomy . '_' . $term_obj->term_id);
 ?>
 <main class="l-container">
   <div class="l-container__inner">
@@ -15,7 +23,7 @@
         <div class="inner">
           <div class="c-product-heading">
             <div class="c-product-category animation-element slide-left">
-              <div class="c-product-category__name">akara Eggs</div>
+              <div class="c-product-category__name">akara</div>
               <?php if($product_category_type == 'ready-to-cook'): ?>
               <div class="c-product-category__icon"><img class="u-no-sp" src="/assets/img/recipes/ready_to_cook.svg" alt="Ready to Cook"><img class="u-no-tb u-no-pc" src="/assets/img/recipes/ready_to_cook_white.svg" alt="Ready to Cook"></div>
               <?php elseif($product_category_type == 'ready-to-eat'): ?>
@@ -251,6 +259,11 @@
 
         </div>
       </div>
+      <?php if( $banner['url'] != '' ): ?>
+      <div class="l-sec-cmn-01 -video-section p-our-story u-mt-0">
+        <div class="inner"><img class="image" src="<?php echo $banner['url']; ?>" alt="<?php echo $banner['alt']; ?>"></div>
+      </div>
+      <?php endif; ?>
       <?php $k = 1; ?>
       <?php $arr_recipe = array(); ?>
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -261,7 +274,6 @@
           }
         ?>
       <?php endwhile;?>
-      <!-- <?php print "<pre>"; print_r($arr_recipe); ?> -->
       <?php if(!empty($arr_recipe)): ?>
       <div class="c-recipes-box">
         <div class="c-wave-yellow">
@@ -287,7 +299,7 @@
                   ?>
                   <div class="text"><?php echo $recipes_text; ?></div>
                 </div>
-                <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01 --border-base"><span class="text"><?php echo $readmore; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+                <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01 --border-base" href="<?php echo $lang_url; ?>/recipe/"><span class="text"><?php echo $readmore; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
               </div>
             </div>
           </div>

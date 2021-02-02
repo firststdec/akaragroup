@@ -242,7 +242,7 @@ function taxonomy_slug_rewrite($wp_rewrite) {
   }
   // merge with global rules
   $wp_rewrite->rules = $rules + $wp_rewrite->rules;
-  // print "<pre>"; print_r($wp_rewrite->rules); die();
+  //print "<pre>"; print_r($wp_rewrite->rules); die();
 }
 add_filter('generate_rewrite_rules', 'taxonomy_slug_rewrite');
 
@@ -1303,4 +1303,14 @@ function langcode_post_id($post_id){
   $query_exec = $wpdb->get_row($query);
 
   return $query_exec->language_code;
+}
+
+function get_site_lang() {
+  if(ICL_LANGUAGE_CODE == 'en'){
+    $site_lang = 'en';
+  } elseif(ICL_LANGUAGE_CODE == 'th') {
+    $site_lang = 'th';
+  }
+
+  return $site_lang;
 }

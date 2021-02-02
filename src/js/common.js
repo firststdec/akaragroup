@@ -473,7 +473,7 @@ var topSlider = function(){
     $imgSlider.slick({
       arrows: false,
       autoplay: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 3000,
       pauseOnHover: false,
       fade: true,
       infinite: true,
@@ -593,7 +593,7 @@ var jsMainvisual = function() {
       crossFade: true
     },
     autoplay: {
-      delay: 5000,
+      delay: 3000,
     },
     pagination: {
       el: '.mv-swiper-pagination',
@@ -1133,6 +1133,7 @@ let videoTop = function () {
     });
 
     $closeVideoButton.on('click', function (e) {
+      unlockScreen();
       $popUpTop.removeClass('is-active');
       $overlayTop.removeClass('is-active');
     })

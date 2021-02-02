@@ -10,6 +10,10 @@
 
   &__list {
     margin-top: 100px;
+
+    @include mq-max-sp {
+      margin-top: 50px;
+    }
   }
 
   &__item {
@@ -37,7 +41,7 @@
       margin-top: 100px;
 
       @include mq-max-sp {
-        margin-top: 30px;
+        margin-top: 60px;
       }
     }
   }
@@ -85,13 +89,17 @@
           @include mq-min-tb {
             width: 170px;
           }
+
+          @include mq-max-sp {
+            width: 170px;
+          }
         }
       }
     }
 
     &-content-heading-logo {
       @include mq-max-sp {
-        margin-top: 30px;
+        margin-top: 50px;
       }
     }
 
@@ -214,6 +222,12 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+  }
+
+  .c-button-cmn-01.--border-base {
+    @include mq-max-sp {
+      border-color: #211E1F;
     }
   }
 }

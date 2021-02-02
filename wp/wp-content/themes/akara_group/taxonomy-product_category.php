@@ -23,8 +23,6 @@ get_header();
 
     if($term_obj->parent == 3 || $term_obj->parent == 16) {
       get_template_part( 'templates/akara_egg');
-    } else {
-      get_template_part( 'template-parts','content');
     }
 
 ?>

@@ -69,26 +69,28 @@ $obj = get_queried_object();
                 }
               ?>
               <?php if ( ! empty( $terms ) && ! is_wp_error( $terms ) ): ?>
-                <nav class="c-media-category u-no-sp animation-element slide-top">
-                  <div class="c-media-category__list">
-                    <div class="c-media-category__item"><a class="c-media-category__link" href="<?php echo $lang_url ?>/recipe/">
-                        <div class="text">All Recipes</div></a></div>
-                    <?php foreach ( $terms as $term ) : ?>
-                    <div class="c-media-category__item<?php echo ($obj->term_id == $term->term_id)? ' is-active':''; ?>"><a class="c-media-category__link" href="<?php echo $lang_url ?>/recipe/<?php echo $term->slug; ?>/">
-                        <div class="text"><?php echo $term->name; ?></div></a></div>
-                    <?php endforeach; ?>
+                <div id="nav">
+                  <nav class="c-media-category u-no-sp animation-element slide-top">
+                    <div class="c-media-category__list">
+                      <div class="c-media-category__item"><a class="c-media-category__link" href="<?php echo $lang_url ?>/recipe/#nav">
+                          <div class="text">All Recipes</div></a></div>
+                      <?php foreach ( $terms as $term ) : ?>
+                      <div class="c-media-category__item<?php echo ($obj->term_id == $term->term_id)? ' is-active':''; ?>"><a class="c-media-category__link" href="<?php echo $lang_url ?>/recipe/<?php echo $term->slug; ?>/#nav">
+                          <div class="text"><?php echo $term->name; ?></div></a></div>
+                      <?php endforeach; ?>
+                    </div>
+                  </nav>
+                  <div class="c-media-category-dropdown u-no-tb u-no-pc animation-element slide-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8">
+                      <path id="Polygon_2" data-name="Polygon 2" d="M6,0l6,8H0Z" transform="translate(12 8) rotate(180)" fill="#777"></path>
+                    </svg>
+                    <select class="c-media-category-select" name="category">
+                      <option value="<?php echo $lang_url ?>/recipe/#nav">All Recipes</option>
+                      <?php foreach ( $terms as $term ) : ?>
+                      <option value="<?php echo $lang_url ?>/recipe/<?php echo $term->slug; ?>/#nav"<?php echo ($obj->term_id == $term->term_id)? ' selected':''; ?>><?php echo $term->name; ?></option>
+                      <?php endforeach; ?>
+                    </select>
                   </div>
-                </nav>
-                <div class="c-media-category-dropdown u-no-tb u-no-pc animation-element slide-top">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8">
-                    <path id="Polygon_2" data-name="Polygon 2" d="M6,0l6,8H0Z" transform="translate(12 8) rotate(180)" fill="#777"></path>
-                  </svg>
-                  <select class="c-media-category-select" name="category">
-                    <option value="<?php echo $lang_url ?>/recipe/">All Recipes</option>
-                    <?php foreach ( $terms as $term ) : ?>
-                    <option value="<?php echo $lang_url ?>/recipe/<?php echo $term->slug; ?>/"<?php echo ($obj->term_id == $term->term_id)? ' selected':''; ?>><?php echo $term->name; ?></option>
-                    <?php endforeach; ?>
-                  </select>
                 </div>
               <?php endif; ?>
                 <?php

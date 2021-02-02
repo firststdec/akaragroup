@@ -181,7 +181,7 @@
 	<link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/solid.css">
 	<link rel="stylesheet" href="/assets/css/libs/swiper.css">
 	<link rel="stylesheet" href="/assets/css/libs/modaal.css">
-  <link rel="stylesheet" href="/assets/css/style.css?v=2020-11-28-5">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2021-2-2-2">
   <link rel="stylesheet" href="/assets/css/libs/validationEngine.jquery.css?v=3">
 	<?php wp_head(); ?>
 </head>
@@ -206,6 +206,21 @@
       <canvas id="canvas-mainvisual"></canvas>
     </div>
   </div>
+  <?php if( get_field( 'popup_status' ) && ( get_field( 'popup_url' ) != '' ) ): ?>
+  <div class="c-box-video-overlay is-active"></div>
+  <div class="c-box-video-top is-active">
+    <div class="c-box-video-close">
+      <div class="modaal-close js-video-close" id="js-video-close"></div>
+    </div>
+    <div class="c-box-jobs__detail">
+      <div class="c-box-jobs__inner">
+        <div class="c-box-iframe-top">
+          <iframe id="c-iframe-top-video" width="560" height="315" src="<?php echo get_field( 'popup_url' ); ?>?enablejsapi=1&autoplay=1&mute=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php endif; ?>
 <?php else: ?>
   <?php if(is_page_template('page-our-story.php')): ?>
   <div class="c-box-scroll-spy -white">
@@ -259,11 +274,11 @@
       }
     }
 
-    if(in_array('akara Eggs', $term_links)) {
+    if(in_array('akara', $term_links)) {
       $white_theme = '';
-    } elseif(in_array('akara Eggology', $term_links)) {
+    } elseif(in_array('AKARA EGGOLOGY', $term_links)) {
       $white_theme = 'whiteTheme';
-    } elseif(in_array('akara ISE', $term_links)) {
+    } elseif(in_array('AKARA ISE', $term_links)) {
       $white_theme = 'whiteTheme';
     }
   }
@@ -310,7 +325,7 @@
                                   $term_type = get_field('product_category_type', $term->taxonomy . '_' . $term->term_id);
                                   if($term_type == 'ready-to-cook'):
                               ?>
-                                <a class="l-header__submenu-list-02-link" href="/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
+                                <a class="l-header__submenu-list-02-link" href="/en/product_category/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
                                 <?php endif; // if($term_type == $product_category_type):?>
                               <?php endforeach; ?>
                               </li>
@@ -354,7 +369,7 @@
                             if ( $the_query->have_posts() ) :
                           ?>
                           <li class="l-header__submenu-item"><div class="l-header__submenu-link">
-                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_eggology.png" alt="akara EGGOLOGY"></figure><span class="l-header__submenu-text">akara EGGOLOGY</span></div>
+                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_eggology.png" alt="akara EGGOLOGY"></figure><span class="l-header__submenu-text">AKARA EGGOLOGY</span></div>
                             <ul class="l-header__submenu-list-02">
                             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
@@ -385,7 +400,7 @@
                             if ( $the_query->have_posts() ) :
                           ?>
                           <li class="l-header__submenu-item"><div class="l-header__submenu-link">
-                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_ise.png" alt="akara ISE"></figure><span class="l-header__submenu-text">akara ISE</span></div>
+                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_ise.png" alt="akara ISE"></figure><span class="l-header__submenu-text">AKARA ISE</span></div>
                             <ul class="l-header__submenu-list-02">
                             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
@@ -408,9 +423,11 @@
                             <ul class="l-header__submenu-list-02">
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/about-us/"><i class="circle"></i>AKARA GROUP</a></li>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/faq/"><i class="circle"></i>FAQ</a></li>
+                              <?php /*
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/media/"><i class="circle"></i>MEDIA</a></li>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/news/"><i class="circle"></i>NEWS, ACTIVITIES, &amp; EVENT</a></li>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/career/"><i class="circle"></i>CAREERS</a></li>
+                              */ ?>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/contact-us/"><i class="circle"></i>CONTACT US</a></li>
                             </ul>
                           </li>
@@ -429,7 +446,7 @@
                       <div class="l-header__submenu-in">
                         <ul class="l-header__submenu-list">
                           <li class="l-header__submenu-item"><div class="l-header__submenu-link">
-                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara</span></div>
+                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara"></figure><span class="l-header__submenu-text">akara</span></div>
                             <ul class="l-header__submenu-list-02">
                             <?php
                               $args = array(
@@ -493,7 +510,7 @@
                             if ( $the_query->have_posts() ) :
                           ?>
                           <li class="l-header__submenu-item"><div class="l-header__submenu-link">
-                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_eggology.png" alt="akara EGGOLOGY"></figure><span class="l-header__submenu-text">akara EGGOLOGY</span></div>
+                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/menu-akara-eggology@2x.png" alt="AKARA EGGOLOGY"></figure><span class="l-header__submenu-text">AKARA EGGOLOGY</span></div>
                             <ul class="l-header__submenu-list-02">
                             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
@@ -524,7 +541,7 @@
                             if ( $the_query->have_posts() ) :
                           ?>
                           <li class="l-header__submenu-item"><div class="l-header__submenu-link">
-                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_ise.png" alt="akara ISE"></figure><span class="l-header__submenu-text">akara ISE</span></div>
+                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/menu-akara-ise.png" alt="AKARA ISE"></figure><span class="l-header__submenu-text">AKARA ISE</span></div>
                             <ul class="l-header__submenu-list-02">
                             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
@@ -538,7 +555,7 @@
                     </div>
                   </li>
                   <li class="l-header__menu-item"><a class="l-header__menu-link" href="/our-story/"><span class="l-header__menu-mark">เรื่องราวของเรา</span></a></li>
-                  <li class="l-header__menu-item"><a class="l-header__menu-link" href="/recipe/"><span class="l-header__menu-mark">สูตรอาหาร</span></a></li>
+                  <li class="l-header__menu-item" style="display: none;"><a class="l-header__menu-link" href="/recipe/"><span class="l-header__menu-mark">สูตรอาหาร</span></a></li>
                   <li class="l-header__menu-item nav-about js-gnavi"><a class="l-header__menu-link" data-group="menu" href="#"><span class="l-header__menu-mark">เกี่ยวกับเรา</span><span class="fas fa-chevron-down"></span><span class="fas fa-chevron-up"></span></a>
                     <div class="l-header__submenu -about-us">
                       <div class="l-header__submenu-in">
@@ -547,9 +564,11 @@
                             <ul class="l-header__submenu-list-02">
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/about-us/"><i class="circle"></i>เกี่ยวกับอัครากรุ๊ป</a></li>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/faq/"><i class="circle"></i>คำถามที่พบบ่อย</a></li>
+                              <?php /*
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/media/"><i class="circle"></i>สื่อ</a></li>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/news/"><i class="circle"></i>ข่าวสาร | กิจกรรม | อีเว้นท์</a></li>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/career/"><i class="circle"></i>ร่วมงานกับเรา</a></li>
+                              */ ?>
                               <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/contact-us/"><i class="circle"></i>ติดต่อเรา</a></li>
                             </ul>
                           </li>

@@ -52,7 +52,6 @@ get_header();
                       <div class="c-box-time-line__image-frame"><img src="/assets/img/contact-us/img_contact_us_01.png?v=11102020" alt="บริษัท อัครากรุ๊ป จำกัด"></div>
                     </div>
                     <div class="c-box-time-line__content">
-                      <div class="c-box-time-line__content-heading -small">บริษัท แสงทองสหฟาร์ม จำกัด</div>
                       <div class="c-box-time-line__content-heading -small">บริษัท อัครากรุ๊ป จำกัด</div>
                       <ul class="c-box-time-line__content-list">
                         <li class="c-box-time-line__content-list-item"><i class="icon-time"></i>
@@ -63,8 +62,8 @@ get_header();
                         </li>
                         <li class="c-box-time-line__content-list-item"><i class="icon-location"></i>
                           <div class="c-box-detail">
-                            <div class="heading">ที่อยู่ | <a class="link" href="https://goo.gl/maps/jCzWrU99W5Xk2RpT8" target="_blank">คลิกดูแผนที่</a></div>
-                            <div class="detail">211 หมู่ 10 ต.ป่าขะ อ.บ้านนา จ.นครนายก 26110</div>
+                            <div class="heading">ที่อยู่ | <a class="link" href="https://goo.gl/maps/8JLnQ471f7GTyRYa8" target="_blank">คลิกดูแผนที่</a></div>
+                            <div class="detail">88 หมู่ 2 ต.ป่าขะ อ.บ้านนา จ.นครนายก 26110</div>
                           </div>
                         </li>
                         <li class="c-box-time-line__content-list-item"><i class="icon-email"></i>
@@ -76,7 +75,7 @@ get_header();
                         <li class="c-box-time-line__content-list-item"><i class="icon-tel"></i>
                           <div class="c-box-detail -full">
                             <div class="heading">เบอร์โทรศัพท์</div>
-                            <div class="detail"><a href="tel:037349888" title="โทรหาเรา 037-349-888" class="c-link-cmn-03">037-349-888</a>, <a href="tel:09238077713" title="โทรหาเรา 0923807771"" class="c-link-cmn-03">092-380-7771</a></div>
+                            <div class="detail"><a href="tel:037349885" title="โทรหาเรา 037-349-885" class="c-link-cmn-03">037-349-885</a>, <a href="tel:0923807771" title="โทรหาเรา 0923807771"" class="c-link-cmn-03">092-380-7771</a></div>
                           </div>
                         </li>
                         <li class="c-box-time-line__content-list-item"><i class="icon-fax"></i>

@@ -862,6 +862,14 @@ a {
         @include mq-min-pc {
           padding-left: 20px;
           padding-right: 20px;
+          display: block;
+          column-count: 2;
+        }
+
+        .l-header__submenu-list-02-item {
+          @include mq-min-pc {
+            width: 100%;
+          }
         }
       }
 
@@ -1219,7 +1227,7 @@ a {
     }
 
     .l-language-bar {
-
+      
     }
 
     &.is-active {
@@ -1355,7 +1363,8 @@ a {
   }
 
   .l-language-bar {
-    display: flex;
+    // display: flex;
+    display: none;
     padding: 0;
     margin-left: 10px;
 

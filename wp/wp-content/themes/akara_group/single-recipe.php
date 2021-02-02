@@ -253,10 +253,11 @@ get_header();
               </div>
             </a>
             <?php endif; ?>
-
-            <div class=" u-no-pc u-no-tb">
+            
+            <div class="<?php if(!empty($nextid)): ?>u-no-pc u-no-tb<?php endif; ?>">
             <?php get_template_part( 'templates/subscriber'); ?>
             </div>
+           
           </div>
         </div>
       </main>

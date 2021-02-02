@@ -1,3 +1,13 @@
+<?php
+  if(ICL_LANGUAGE_CODE == 'en'){
+    $lang_url = '/en';
+  } elseif (ICL_LANGUAGE_CODE == 'th') {
+    $lang_url = '';
+  }
+  $term_list = get_the_terms($post->ID, 'product_category');
+  // print "<pre>"; print_r($term_list);
+  $banner = get_field('category_banner', $term_list[0]->taxonomy . '_' . $term_list[0]->term_id);
+?>
 <main class="l-container">
   <div class="l-container__inner">
     <div class="p-product -green">
@@ -5,7 +15,7 @@
         <div class="inner">
           <div class="c-product-heading">
             <div class="c-product-category animation-element slide-left">
-              <div class="c-product-category__name">akara Eggology</div>
+              <div class="c-product-category__name">AKARA EGGOLOGY</div>
             </div>
             <?php
               $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
@@ -186,6 +196,11 @@
           </div>
         </div>
       </div>
+      <?php if( $banner['url'] != '' ): ?>
+      <div class="l-sec-cmn-01 -video-section p-our-story">
+        <div class="inner"><img class="image" src="<?php echo $banner['url']; ?>" alt="<?php echo $banner['alt']; ?>"></div>
+      </div>
+      <?php endif; ?>
       <?php
         $product_relate_recipes = get_field('product_relate_recipes');
       ?>
@@ -213,7 +228,7 @@
                   ?>
                   <div class="text"><?php echo $recipes_text; ?></div>
                 </div>
-                <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01 --border-base"><span class="text"><?php echo $readmore; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+                <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01 --border-base" href="<?php echo $lang_url; ?>/recipe/"><span class="text"><?php echo $readmore; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
               </div>
             </div>
           </div>

@@ -16,6 +16,8 @@
   }
 
   .-recipes-top-heading {
+    display: none;
+
     .c-button-cmn-01.--border-base {
       @include mq-max-sp {
         border-color: #DCDCDC;
@@ -216,6 +218,11 @@
         padding: 20px 0 0 0;
       }
 
+
+      @include mq-custom-max (425px) {
+        width: 50%;
+      }
+
       @include mq-min-max-tb {
         padding: get-vw(20px) 0 0 get-vw(10px);
       }
@@ -278,6 +285,10 @@
 }
 
 .c-box-card-row-01 {
+  @include mq-max-sp {
+    user-select: none;
+  }
+
   &.-yellow-egg {
     position: relative;
     // padding: 0 !important;
@@ -302,23 +313,26 @@
       z-index: 3;
       display: inline-flex;
       align-items: flex-end;
+      position: relative;
 
       @include mq-min-max-tb {
- 
+        max-width: get-vw(597px);
       }
 
       @include mq-max-sp {
-        // width: 210px;
+        max-width: 100%;
+        width: 240px;
+        height: 190px;
         order: 2;
         justify-content: flex-end;
         position: absolute;
         bottom: -130px;
-        right: 63%;
+        right: 52%;
         transform: translateX(100%);
       }
 
       @include mq-custom-max (425px) {
-        right: 40%;
+        right: 62%;
       }
 
       .c-deco-yellow-egg {
@@ -346,24 +360,12 @@
 
       .image {
         position: absolute;
-        right: 115px;
-        top: 20px;
         visibility: hidden;
 
         @include mq-max-sp {
-          width: 260px;
           right: auto;
           top: auto;
           bottom: 0;
-        }
-
-        @include mq-custom-max(425px) {
-          right: 35px;
-        }
-
-        @include mq-min-max-tb {
-          top: get-vw(20px);
-          right: get-vw(150px);
         }
 
         &.is-active {
@@ -390,7 +392,7 @@
       @include mq-max-sp {
         width: 100%;
         left: auto;
-        padding: 100px 0 50px;
+        padding: 100px 0 100px;
       }
 
       .c-text-cmn-01 {
@@ -585,27 +587,27 @@
       z-index: 3;
       display: inline-flex;
       align-items: flex-end;
-      max-width: 635px;
+      max-width: 597px;
       margin-top: 50px;
 
       @include mq-max-sp {
         max-width: 100%;
-        width: 293px;
-        height: 194px;
+        width: 240px;
+        height: 190px;
         order: 2;
         left: 53%;
         transform: translateX(-100%);
         margin-top: 0;
-        bottom: -150px;
+        bottom: -175px;
         position: absolute;
       }
 
       @include mq-custom-max(425px) {
-        left: 67%;
+        left: 62%;
       }
 
       @include mq-min-max-tb {
-        max-width: get-vw(635px);
+        max-width: get-vw(597px);
         margin-top: get-vw(50px);
       }
 
@@ -654,7 +656,7 @@
         width: 100%;
         max-width: 100%;
         left: auto;
-        padding: 200px 0 100px;
+        padding: 250px 0 150px;
       }
 
       .c-text-cmn-01 {
@@ -830,7 +832,7 @@
     }
 
     @include mq-max-sp {
-      padding: 200px 0 100px;
+      padding: 250px 0 150px;
       background: rgb(241,96,37);
       background: linear-gradient(0deg, rgba(241,96,37,1) 0%, rgba(241,155,37,1) 50%, rgba(241,96,37,1) 100%);
       background-size: cover;
@@ -857,8 +859,8 @@
       max-width: 600px;
 
       @include mq-max-sp {
-        width: 273px;
-        height: 120px;
+        width: 240px;
+        height: 190px;
         max-width: 100%;
         order: 2;
         bottom: -120px;
@@ -1045,7 +1047,7 @@
           right: auto;
           left: 52%;
           background: url(/assets/img/top/img_product_03-01.png) no-repeat;
-          bottom: -270px;
+          bottom: -320px;
           z-index: 3;
           transform: translateX(-90%);
           background-size: cover;
@@ -1137,10 +1139,12 @@
   box-shadow: 0px 3px 25px 0px rgba(0,0,0,0.16);
   transition: all .5s;
   cursor: pointer;
+  user-select: none;
+  -webkit-touch-callout: none;
 
   @include mq-max-sp {
-    width: 34px;
-    height: 34px;
+    width: 45px;
+    height: 45px;
   }
 
   @include mq-min-max-tb {
@@ -1185,7 +1189,7 @@
     }
 
     @include mq-max-sp {
-      left: 180px;
+      left: 95px;
       bottom: 25px;
     }
 
@@ -1232,6 +1236,7 @@
     background: none;
     padding-top: 100px !important;
     margin-top: 0 !important;
+    margin-bottom: 200px;
   }
 
   @include mq-min-max-tb {
@@ -1349,8 +1354,8 @@
       .box-image {
         @include mq-max-sp {
           position: absolute;
-          left: -100px;
-          bottom: -210px;
+          left: -130px;
+          bottom: -220px;
           z-index: 5;
         }
 
@@ -1440,7 +1445,7 @@
         }
 
         @include mq-custom-max(425px) {
-          padding: 100px 30px 200px;
+          padding: 180px 30px 200px;
         }
 
         @include mq-min-max-tb {
@@ -1541,7 +1546,7 @@
           width: get-vw(636px);
           height: get-vw(555px);
           background-size: get-vw(636px) get-vw(555px);
-          bottom: get-vw(-280px);
+          bottom: get-vw(-300px);
           right: get-vw(-200px);
         }
       }
@@ -1578,14 +1583,17 @@
 }
 
 .l-sec-cmn-01.-video-section {
-  margin-top: 200px;
+  margin-top: 150px;
+  padding: 0 20px;
 
   @include mq-max-sp {
-
+    margin-top: 230px;
+    padding: 0 15px;
+    user-select: none;
   }
 
   &.p-our-story .c-box-video__box-iframe {
-    max-width: 1440px;
+    max-width: 1280px;
 
     @include mq-min-max-tb {
       padding: 0 20px;

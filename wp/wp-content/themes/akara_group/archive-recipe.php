@@ -68,12 +68,13 @@ get_header();
                 }
               ?>
               <?php if ( ! empty( $terms ) && ! is_wp_error( $terms ) ): ?>
+              <div id="nav">
                 <nav class="c-media-category u-no-sp animation-element slide-top">
                   <div class="c-media-category__list">
-                    <div class="c-media-category__item is-active"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/recipe/">
+                    <div class="c-media-category__item is-active"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/recipe/#nav">
                         <div class="text">All Recipes</div></a></div>
                     <?php foreach ( $terms as $term ) : ?>
-                    <div class="c-media-category__item"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/recipe/<?php echo $term->slug; ?>/">
+                    <div class="c-media-category__item"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/recipe/<?php echo $term->slug; ?>/#nav">
                         <div class="text"><?php echo $term->name; ?></div></a></div>
                     <?php endforeach; ?>
                   </div>
@@ -83,12 +84,13 @@ get_header();
                     <path id="Polygon_2" data-name="Polygon 2" d="M6,0l6,8H0Z" transform="translate(12 8) rotate(180)" fill="#777"></path>
                   </svg>
                   <select class="c-media-category-select" name="category">
-                    <option value="<?php echo $lang_url; ?>/recipe/">All Recipes</option>
+                    <option value="<?php echo $lang_url; ?>/recipe/#nav">All Recipes</option>
                     <?php foreach ( $terms as $term ) : ?>
-                    <option value="<?php echo $lang_url; ?>/recipe/<?php echo $term->slug; ?>/"><?php echo $term->name; ?></option>
+                    <option value="<?php echo $lang_url; ?>/recipe/<?php echo $term->slug; ?>/#nav"><?php echo $term->name; ?></option>
                     <?php endforeach; ?>
                   </select>
                 </div>
+              </div>
               <?php endif; ?>
                 <?php
                   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

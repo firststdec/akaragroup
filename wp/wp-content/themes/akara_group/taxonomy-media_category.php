@@ -49,67 +49,68 @@ $obj = get_queried_object();
             <canvas id="canvas-white-top"></canvas>
           </div>
           <?php if ( ! empty( $terms ) && ! is_wp_error( $terms ) ): ?>
-          <nav class="c-media-category u-no-sp">
-            <div class="c-media-category__list">
-              <div class="c-media-category__item"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/media/">
-                  <div class="text u-ml-0">All</div></a></div>
-              <?php foreach ( $terms as $term ) : ?>
-                <?php if($term->slug == 'article') : ?>
-                <div class="c-media-category__item<?php echo ($obj->term_id == $term->term_id)? ' is-active':''; ?>"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/media/<?php echo $term->slug; ?>">
-                  <div class="icon -press">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
-                      <text id="ico_article" transform="translate(6 14)" fill="#777" font-size="16" font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'">
-                        <tspan x="-6" y="0"></tspan>
-                      </text>
-                    </svg>
-                  </div>
-                  <div class="text"><?php echo $term->name; ?></div></a></div>
-                <?php elseif($term->slug == 'press-release'): ?>
-                <div class="c-media-category__item<?php echo ($obj->term_id == $term->term_id)? ' is-active':''; ?>"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/media/<?php echo $term->slug; ?>">
-                  <div class="icon -print">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
-                      <text id="ico_press" transform="translate(9 14)" fill="#777" font-size="16" font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'">
-                        <tspan x="-8" y="0"></tspan>
-                      </text>
-                    </svg>
-                  </div>
-                  <div class="text"><?php echo $term->name; ?></div></a></div>
-                <?php elseif($term->slug == 'print-media'): ?>
-                <div class="c-media-category__item<?php echo ($obj->term_id == $term->term_id)? ' is-active':''; ?>"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/media/<?php echo $term->slug; ?>">
-                  <div class="icon -tv">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="16" viewBox="0 0 19 16">
-                      <text id="ico_print" transform="translate(9 14)" fill="#777" font-size="16" font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'">
-                        <tspan x="-9" y="0"></tspan>
-                      </text>
-                    </svg>
-                  </div>
-                  <div class="text"><?php echo $term->name; ?></div></a></div>
-                <?php elseif($term->slug == 'tv-commercial'): ?>
-                <div class="c-media-category__item<?php echo ($obj->term_id == $term->term_id)? ' is-active':''; ?>"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/media/<?php echo $term->slug; ?>">
-                  <div class="icon -tv">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
-                      <text id="ico_tv" transform="translate(10 14)" fill="#777" font-size="16" font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'">
-                        <tspan x="-10" y="0"></tspan>
-                      </text>
-                    </svg>
-                  </div>
-                  <div class="text"><?php echo $term->name; ?></div></a></div>
-                <?php endif; ?>
-              <?php endforeach; ?>
+          <div id="nav">
+            <nav class="c-media-category u-no-sp">
+              <div class="c-media-category__list">
+                <div class="c-media-category__item"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/media/#nav">
+                    <div class="text u-ml-0">All</div></a></div>
+                <?php foreach ( $terms as $term ) : ?>
+                  <?php if($term->slug == 'article') : ?>
+                  <div class="c-media-category__item<?php echo ($obj->term_id == $term->term_id)? ' is-active':''; ?>"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/media/<?php echo $term->slug; ?>/#nav">
+                    <div class="icon -press">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+                        <text id="ico_article" transform="translate(6 14)" fill="#777" font-size="16" font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'">
+                          <tspan x="-6" y="0"></tspan>
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="text"><?php echo $term->name; ?></div></a></div>
+                  <?php elseif($term->slug == 'press-release'): ?>
+                  <div class="c-media-category__item<?php echo ($obj->term_id == $term->term_id)? ' is-active':''; ?>"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/media/<?php echo $term->slug; ?>/#nav">
+                    <div class="icon -print">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
+                        <text id="ico_press" transform="translate(9 14)" fill="#777" font-size="16" font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'">
+                          <tspan x="-8" y="0"></tspan>
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="text"><?php echo $term->name; ?></div></a></div>
+                  <?php elseif($term->slug == 'print-media'): ?>
+                  <div class="c-media-category__item<?php echo ($obj->term_id == $term->term_id)? ' is-active':''; ?>"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/media/<?php echo $term->slug; ?>/#nav">
+                    <div class="icon -tv">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="16" viewBox="0 0 19 16">
+                        <text id="ico_print" transform="translate(9 14)" fill="#777" font-size="16" font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'">
+                          <tspan x="-9" y="0"></tspan>
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="text"><?php echo $term->name; ?></div></a></div>
+                  <?php elseif($term->slug == 'tv-commercial'): ?>
+                  <div class="c-media-category__item<?php echo ($obj->term_id == $term->term_id)? ' is-active':''; ?>"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/media/<?php echo $term->slug; ?>/#nav">
+                    <div class="icon -tv">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
+                        <text id="ico_tv" transform="translate(10 14)" fill="#777" font-size="16" font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'">
+                          <tspan x="-10" y="0"></tspan>
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="text"><?php echo $term->name; ?></div></a></div>
+                  <?php endif; ?>
+                <?php endforeach; ?>
+              </div>
+            </nav>
+            <div class="c-media-category-dropdown u-no-tb u-no-pc">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8">
+                <path id="Polygon_2" data-name="Polygon 2" d="M6,0l6,8H0Z" transform="translate(12 8) rotate(180)" fill="#777"></path>
+              </svg>
+              <select class="c-media-category-select js-category-change" name="category">
+                <option value="<?php echo $lang_url; ?>/media/#nav">All</option>
+                <?php foreach ( $terms as $term ) : ?>
+                <option value="<?php echo $lang_url; ?>/media/<?php echo $term->slug; ?>/#nav"<?php echo ($obj->term_id == $term->term_id)? ' selected':''; ?>><?php echo $term->name; ?></option>
+                <?php endforeach; ?>
+              </select>
             </div>
-          </nav>
-          <div class="c-media-category-dropdown u-no-tb u-no-pc">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8">
-              <path id="Polygon_2" data-name="Polygon 2" d="M6,0l6,8H0Z" transform="translate(12 8) rotate(180)" fill="#777"></path>
-            </svg>
-            <select class="c-media-category-select" name="category">
-              <option value="<?php echo $lang_url; ?>/media/">All</option>
-              <?php foreach ( $terms as $term ) : ?>
-              <option value="<?php echo $lang_url; ?>/media/<?php echo $term->slug; ?>"<?php echo ($obj->term_id == $term->term_id)? ' selected':''; ?>><?php echo $term->name; ?></option>
-              <?php endforeach; ?>
-            </select>
           </div>
-
           <?php endif; ?>
 
           <?php

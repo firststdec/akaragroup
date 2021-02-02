@@ -27,11 +27,11 @@ get_header();
         }
       }
 
-      if(in_array('akara Eggs', $term_links)) {
+      if(in_array('akara', $term_links)) {
         get_template_part( 'templates/akara_egg' );
-      } elseif(in_array('akara Eggology', $term_links)) {
+      } elseif(in_array('AKARA EGGOLOGY', $term_links)) {
         get_template_part( 'templates/akara_eggology' );
-      } elseif(in_array('akara ISE', $term_links)) {
+      } elseif(in_array('AKARA ISE', $term_links)) {
         get_template_part( 'templates/akara_ise' );
       }
 ?>

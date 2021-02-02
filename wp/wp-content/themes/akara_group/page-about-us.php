@@ -57,9 +57,9 @@ get_header();
                     </div>
                     <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
                     <div class="c-box-time-line__content">
-                      <div class="c-box-time-line__content-text">กว่าจะเป็นไข่ไก่ฟาร์มแสงทอง… ทุกขั้นตอนเราพิถีพิถันใส่ใจในทุกรายละเอียด เพื่อที่จะได้ไข่ไก่ คุณภาพ ปลอดภัยและได้มาตรฐาน ซึ่งเราสามารถควบคุมการผลิตตั้งแต่ต้นน้ำจนถึงปลายน้ำ</div>
+                      <div class="c-box-time-line__content-text">กว่าจะเป็นไข่ไก่คุณภาพของเรา… ทุกขั้นตอนเราพิถีพิถันใส่ใจในทุกรายละเอียด เพื่อที่จะได้ไข่ไก่ คุณภาพ ปลอดภัยและได้มาตรฐาน ซึ่งเราสามารถควบคุมการผลิตตั้งแต่ต้นน้ำจนถึงปลายน้ำ</div>
                       <div class="c-box-time-line__content-text">ตั้งแต่คัดเลือกสายพันธุ์พ่อแม่พันธุ์ไก่ไข่ สายพันธุ์ Lohnmann จากประเทศเยอรมัน เป็นรายแรกและรายเดียวที่นำเข้าสำเร็จและผลิตจนได้ลูกไก่ที่แข็งแรงพันธุ์ “ซับใหญ่ บราวน์”เลี้ยงในโรงเรือนที่ทันสมัยสามารถควบคุมความเย็น (EVAP system)และมีระบบป้องกันโรคอย่างเข้มงวด เทคโนโลยีและอุปกรณ์ต่างๆภายในฟาร์มล้วนได้มาตรฐานนำเข้าจากยุโรป</div>
-                      <div class="c-box-time-line__content-text">จากลูกไก่เจริญเติบโตเป็นไก่สาว และพร้อมแล้วที่จะเป็นแม่ไก่สุขภาพดีที่จะออกไข่ไก่สดคุณภาพมาตรฐานแสงทองสู่มือผู้บริโภคชาวไทย</div>
+                      <div class="c-box-time-line__content-text">จากลูกไก่เจริญเติบโตเป็นไก่สาว และพร้อมแล้วที่จะเป็นแม่ไก่สุขภาพดีที่จะออกไข่ไก่สดคุณภาพ ได้มาตรฐาน เพื่อสุขภาพที่ดี และพิเศษของทุกๆคน</div>
                     </div>
                     <?php endif;?>
                   </div>
@@ -74,8 +74,8 @@ get_header();
                     </div>
                     <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
                     <div class="c-box-time-line__content">
-                      <div class="c-box-time-line__content-heading -small">แสงทองฟาร์ม</div>
-                      <div class="c-box-time-line__content-text">จุดเริ่มต้นจากธุรกิจฟาร์มไก่เนื้อ พัฒนาต่อยอดมาสู่ธุรกิจฟาร์มไข่ไก่สด และผลิตภัณฑ์แปรรูปจากไข่ไก่ ดำเนินการอย่างต่อเนื่องมาจนถึงปัจจุบันเป็นระยะเวลานานกว่า 25 ปี ด้วยกำลังการผลิตและส่งออกกว่า 2 ล้านฟองต่อวัน จึงมั่นใจได้ในคุณภาพ ความเชี่ยวชาญ และตัวจริงด้านไข่ไก่</div>
+                      <div class="c-box-time-line__content-heading -small">อัครา กรุ๊ป x ฟาร์มแสงทอง</div>
+                      <div class="c-box-time-line__content-text">ผลิตภัณฑ์ไข่ไก่คุณภาพของ อัครา กรุ๊ป จะเป็นไปไม่ได้เลย ถ้าไม่มีส่วนของฟาร์มไข่ไก่ที่เชี่ยวชาญในกระบวนการผลิต และมีประสบการณ์ระดับสูงเฉพาะตัวในเรื่องของไข่ไก่ ที่เป็นตัวจริงในเรื่องไข่ไก่ที่ได้มาตรฐานระดับต้นๆ ของประเทศไทย อย่าง บริษัท แสงทองสหฟาร์ม จำกัด ด้วยกำลังการผลิตและส่งออกมากกว่า 2 ล้านฟองต่อวัน</div>
                     </div>
                     <?php endif; ?>
                   </div>
@@ -89,10 +89,11 @@ get_header();
                     <div class="c-heading-egg__icon">
                       <div class="i-barn-yellow"></div>
                     </div>
-                    <div class="c-heading-egg__text">Our Brand</div>
+                    <div class="c-heading-egg__text">Our Brands</div>
                   </div>
                 </div>
                 <div class="c-our-brand__list">
+                  <?php /*
                   <div class="c-our-brand__item animation-element slide-top">
                     <div class="c-our-brand__card">
                       <div class="c-our-brand__card-image">
@@ -136,6 +137,7 @@ get_header();
                       </div>
                     </div>
                   </div>
+                  */ ?>
                   <div class="c-our-brand__item animation-element slide-top">
                     <div class="c-our-brand__card">
                       <div class="c-our-brand__card-image">
@@ -145,10 +147,8 @@ get_header();
                             <!-- Additional required wrapper-->
                             <div class="swiper-wrapper">
                               <!-- Slides-->
-                              <div class="swiper-slide"><img src="/assets/img/about-us/akara-pic-01.png" alt=""></div>
                               <div class="swiper-slide"><img src="/assets/img/about-us/akara-pic-02.png" alt=""></div>
                               <div class="swiper-slide"><img src="/assets/img/about-us/akara-pic-03.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/akara-pic-04.png" alt=""></div>
                             </div>
                             <!-- If we need navigation buttons-->
                             <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
@@ -165,8 +165,8 @@ get_header();
                           $sub_heading_01 = 'Hygienic eggs add value to every moment of your life.';
                           $sub_content_01 = 'Fresh and hygienic chicken eggs, Akara chicken eggs that have been certified by the Department of Livestock Development, the first in Thailand, guaranteed fresh, clean, safe from hormones. And antibiotics Standardized in every bubble.';
                         } elseif (ICL_LANGUAGE_CODE == 'th') {
-                          $sub_heading_01 = 'ไข่ไก่อนามัยเติมคุณค่าในทุกช่วงเวลาของคุณ ';
-                          $sub_content_01 = 'ไข่ไก่สดอนามัย อัครา ไข่ไก่ที่ได้รับการรับรองมาตรฐานจากกรมปศุสัตว์รายแรกในประเทศไทย การันตีความ สด สะอาด ปลอดภัยจากสารเร่งฮอร์โมน และยาปฏิชีวนะ ได้มาตรฐานในทุกฟอง';
+                          $sub_heading_01 = 'ไข่ไก่อนามัย อัครา';
+                          $sub_content_01 = 'แบรนด์ไข่ไก่สดอนามัย และไข่ไก่แปรรูป อัครา คุณภาพสูง ที่ได้รับการรับรอง จากกรมปศุสัตว์ ผ่านกระบวนการผลิตที่ได้มาตรฐาน เติมเต็มความพิเศษให้กับทุกมื้ออาหารของคุณ';
                         }
                       ?>
                       <div class="c-our-brand__card-content">
@@ -185,8 +185,9 @@ get_header();
                             <!-- Additional required wrapper-->
                             <div class="swiper-wrapper">
                               <!-- Slides-->
+                              <div class="swiper-slide"><img src="/assets/img/about-us/akara-pic-01.png" alt=""></div>
                               <div class="swiper-slide"><img src="/assets/img/about-us/eggology-pic01.png" alt=""></div>
-                              <div class="swiper-slide"><img src="/assets/img/about-us/eggology-pic02.png" alt=""></div>
+                              <div class="swiper-slide"><img src="/assets/img/about-us/IMG_8126@3x.png" alt=""></div>
                               <div class="swiper-slide"><img src="/assets/img/about-us/eggology-pic03.png" alt=""></div>
                               <div class="swiper-slide"><img src="/assets/img/about-us/eggology-pic04.png" alt=""></div>
                             </div>
@@ -205,8 +206,8 @@ get_header();
                           $sub_heading_05 = 'Akara Eggology';
                           $sub_content_05 = 'Free premium fresh chicken eggs, Japanese style It is formed through a collaboration between AKARA Group and ISE Food, Inc., a major egg leader in Japan. Through the production process from a specific technology Resulting in fresh, clean, germ-free eggs Can be eaten raw under the brand MORI-TAMA.';
                         } elseif (ICL_LANGUAGE_CODE == 'th') {
-                          $sub_heading_05 = 'Akara Eggology';
-                          $sub_content_05 = 'ไข่ไก่ออแกนิค สด สะอาด ปลอดภัย ให้ประโยชน์สูง จากกระบวนการผลิตที่ควบคุมตั้งแต่ต้นกระบวนการให้ปลอดภัย ปลอดภัยจากสารเร่งฮอร์โมนและยาปฏิชีวนะ';
+                          $sub_heading_05 = 'ไข่ไก่เพื่อสุขภาพ อัครา เอคโคโลยี';
+                          $sub_content_05 = 'แบรนด์ไข่ไก่เพื่อสุขภาพ อัครา เอคโคโลยี ที่ตอบโจทย์ทุกโภชนาการ เป็นมิตรต่อสิ่งแวดล้อม รสชาติดีอย่างธรรมชาติ เพราะส่งเสริมการเลี้ยงแม่ไก่อย่างพิถีพิถัน พร้อมมาตรฐานรับรอง';
                         }
                       ?>
                       <div class="c-our-brand__card-content">
@@ -245,12 +246,12 @@ get_header();
                           $sub_heading_04 = 'MORI-TAMA';
                           $sub_content_04 = 'Free premium fresh chicken eggs, Japanese style It is formed through a collaboration between AKARA Group and ISE Food, Inc., a major egg leader in Japan. Through the production process from a specific technology Resulting in fresh, clean, germ-free eggs Can be eaten raw under the brand MORI-TAMA.';
                         } elseif (ICL_LANGUAGE_CODE == 'th') {
-                          $sub_heading_04 = 'MORI-TAMA';
-                          $sub_content_04 = 'ไข่ไก่สดระดับฟรีเมี่ยมสไตล์ญี่ปุ่น เกิดขึ้นจากความร่วมมือระหว่าง AKARA Group และ ISE Food , Inc ผู้นำด้านไข่ไก่รายใหญ่ในญี่ปุ่น ผ่านกระบวนการผลิตจากเทคโนโลยีเฉพาะ ทำให้ได้ไข่ที่สด สะอาด ปราศจากเชื้อโรค สามารถทานดิบได้ ภายใต้แบรนด์ MORI-TAMA ';
+                          $sub_heading_04 = 'ไข่ไก่สไตล์ญี่ปุ่น โมริทามะ โดย อัครา-ไอเซ';
+                          $sub_content_04 = 'แบรนด์ไข่ไก่ญี่ปุ่น ที่เกิดขึ้นจากความร่วมมือระหว่าง AKARA Group และ ISE Food, INC จนออกมาเป็นไข่ไก่ AKARA ISE ที่ผ่านกระบวนการผลิตด้วยเทคโนโลยีแบบเดียวกับในญี่ปุ่น ทำให้ได้ไข่ไก่ที่สด สะอาด สามารถทานดิบได้ ปลอดภัยจากเชื้อแบคทีเรีย ภายใต้ชื่อแบรนด์ MORI-TAMA';
                         }
                       ?>
                       <div class="c-our-brand__card-content">
-                        <div class="c-our-brand__card-content-heading-logo"><img src="/assets/img/about-us/ico_logo_about_us_04.svg" alt=""></div>
+                        <div class="c-our-brand__card-content-heading-logo -akara"><img src="/assets/img/about-us/akara-ise-moritama.png" alt=""></div>
                         <div class="c-our-brand__card-content-heading-sub"><?php echo $sub_heading_04; ?></div>
                         <div class="c-our-brand__card-content-text"><?php echo $sub_content_04; ?></div>
                       </div>

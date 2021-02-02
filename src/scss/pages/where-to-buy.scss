@@ -60,7 +60,6 @@
       @include mq-max-sp {
         overflow-x: scroll;
         overflow-y: hidden;
-        padding-left: 100px;
       }
     }
 
@@ -72,10 +71,10 @@
       margin: auto;
 
       @include mq-max-sp {
-        width: 900px;
-        max-width: 900px;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
+        // width: 900px;
+        // max-width: 900px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       &-item {
@@ -92,7 +91,8 @@
         cursor: pointer;
 
         @include mq-max-sp {
-
+          width: 180px;
+          background-size: 220px;
         }
 
         &:hover {
@@ -100,7 +100,7 @@
         }
 
         &:not(.is-active) {
-          margin: 0 -18px;
+          // margin: 0 -18px;
         }
 
         &:nth-child(3) {
@@ -177,7 +177,12 @@
 
         &.is-active {
           background: url(/assets/img/where-to-buy/ico_big_yellow_egg.svg) no-repeat center center;
-          margin: 0 -18px;
+          background-size: cover;
+          // margin: 0 -18px;
+
+          @include mq-max-sp {
+            background-size: 220px;
+          }
 
           > .text {
             color: $baseColor;

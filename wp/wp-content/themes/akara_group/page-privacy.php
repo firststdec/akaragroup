@@ -23,8 +23,8 @@ get_header();
         <div class="l-container__inner">
           <div class="p-privacy">
             <?php echo get_the_content(); ?>
-            <?php get_template_part( 'templates/subscriber'); ?>
           </div>
+          <?php get_template_part( 'templates/subscriber'); ?>
         </div>
       </main>
 <?php
