@@ -76,6 +76,7 @@ get_header();
                     <div class="c-box-time-line__content">
                       <div class="c-box-time-line__content-heading -small">อัครา กรุ๊ป x ฟาร์มแสงทอง</div>
                       <div class="c-box-time-line__content-text">ผลิตภัณฑ์ไข่ไก่คุณภาพของ อัครา กรุ๊ป จะเป็นไปไม่ได้เลย ถ้าไม่มีส่วนของฟาร์มไข่ไก่ที่เชี่ยวชาญในกระบวนการผลิต และมีประสบการณ์ระดับสูงเฉพาะตัวในเรื่องของไข่ไก่ ที่เป็นตัวจริงในเรื่องไข่ไก่ที่ได้มาตรฐานระดับต้นๆ ของประเทศไทย อย่าง บริษัท แสงทองสหฟาร์ม จำกัด ด้วยกำลังการผลิตและส่งออกมากกว่า 2 ล้านฟองต่อวัน</div>
+                      <div class="c-box-cmn-button u-mt-30"><a class="c-button-cmn-01 --border-base" href="https://www.akaragroup.co.th/stf/" target="_blank"><span class="text">อ่านเพิ่มเติม</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
                     </div>
                     <?php endif; ?>
                   </div>

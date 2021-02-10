@@ -231,6 +231,16 @@
       }
     }
 
+    .c-box-subscribe {
+      .c-button-cmn-01 {
+        border-color: $white;
+
+        .fa {
+          color: $baseColor;
+        }
+      }
+    }
+
     .swiper-slide .c-card-voice__heading {
       color: $green;
     }
@@ -790,6 +800,12 @@
     }
   }
 
+  .-video-section {
+    .image {
+      width: 100%;
+    }
+  }
+
   .c-product-image {
     margin-top: 50px;
     max-width: 1440px;
@@ -1104,6 +1120,10 @@
           top: 50%;
           transform: translateY(-50%);
 
+          @include mq-max-sp {
+            margin-top: 0;
+          }
+
           .fas {
             color: #777;
             transition: all .3s;
@@ -1158,13 +1178,13 @@
 
       &-inner {
         @include mq-min-pc {
-          height: 750px;
-          overflow-y: scroll;
+          min-height: 750px;
+          // overflow-y: scroll;
         }
 
         @include mq-min-max-tb {
-          height: get-vw(750px);
-          overflow-y: scroll;
+          min-height: get-vw(750px);
+          // overflow-y: scroll;
         }
 
         /* width */

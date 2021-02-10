@@ -519,9 +519,6 @@
         text-align: center;
 
         .image {
-          @include mq-max-sp {
-            width: 220px;
-          }
         }
 
         &::after {
@@ -1354,9 +1351,18 @@
       .box-image {
         @include mq-max-sp {
           position: absolute;
-          left: -130px;
+          left: -100px;
           bottom: -220px;
           z-index: 5;
+        }
+
+        @include mq-custom-max(425px) {
+          left: -130px;
+        }
+
+
+        @include mq-custom-max(375px) {
+          left: -120px;
         }
 
         @include mq-custom-min-max(426px, 896px) {
@@ -1417,7 +1423,7 @@
 
         @include mq-max-sp {
           position: absolute;
-          right: -130px;
+          right: 15%;
           bottom: -165px;
           width: 100%;
           z-index: 3;
@@ -1427,8 +1433,13 @@
           width: 350px;
         }
 
+        @include mq-custom-max(640px) {
+          right: 5%;
+        }
+
         @include mq-custom-max(425px) {
           right: -72px;
+          bottom: -215px;
         }
       }
 
@@ -1533,13 +1544,29 @@
         z-index: 5;
 
         @include mq-max-sp {
-          width: 234px;
-          height: 203px;
+          width: 165px;
+          height: 165px;
           background-size: cover;
-          bottom: -100px;
-          left: -50px;
-          background: url(/assets/img/top/amber_yolk.svg) no-repeat center center;
+          bottom: -130px;
+          left: 28%;
+          background: url(/assets/img/top/egg-story-02@3x.png) no-repeat center center;
           background-size: cover;
+        }
+
+        @include mq-custom-max(768px) {
+          left: 25%;
+        }
+
+        @include mq-custom-max(736px) {
+          left: 23%;
+        }
+
+        @include mq-custom-max(425px) {
+          left: -7%;
+        }
+
+        @include mq-custom-max(375px) {
+          left: -10%;
         }
 
         @include mq-min-max-tb {

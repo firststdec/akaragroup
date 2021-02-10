@@ -311,9 +311,10 @@ $reverse-easing: cubic-bezier(1, .51, .15, .6);
     opacity: 1;
     color: #fff;
     transition:
-      transform $timing * .718 $easing,
-      opacity $timing $easing;
-      transform: translateY(-50%);
+    transform $timing * .718 $easing,
+    opacity $timing $easing;
+    transform: translateY(-50%);
+    overflow: hidden;
   }
 
   .fa--bottom {

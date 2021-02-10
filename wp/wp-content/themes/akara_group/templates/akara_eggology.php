@@ -197,7 +197,7 @@
         </div>
       </div>
       <?php if( $banner['url'] != '' ): ?>
-      <div class="l-sec-cmn-01 -video-section p-our-story">
+      <div class="l-sec-cmn-01 -video-section p-our-story u-mt-sp-0">
         <div class="inner"><img class="image" src="<?php echo $banner['url']; ?>" alt="<?php echo $banner['alt']; ?>"></div>
       </div>
       <?php endif; ?>

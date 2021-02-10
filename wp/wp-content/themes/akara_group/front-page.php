@@ -202,9 +202,9 @@ get_header();
           </div>
         </div>
       </div>
-      <div class="l-sec-cmn-01 -video-section p-our-story">
+      <!-- <div class="l-sec-cmn-01 -video-section p-our-story">
         <div class="inner"><img class="image" src="/assets/img/top/KV_akara-03_rese.jpg" alt="Akara Group"></div>
-      </div>
+      </div> -->
       <div class="l-sec-cmn-01 -story-about-top">
         <div class="c-wave-yellow">
           <canvas id="canvas-yellow"></canvas>
