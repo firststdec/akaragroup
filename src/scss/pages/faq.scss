@@ -71,6 +71,11 @@
         }
       }
     }
+
+    a {
+      color: #FFC416;
+      @include hoverOpacity;
+    }
   }
 
   &__box-heading {
@@ -130,6 +135,24 @@
 
       @include mq-max-sp {
         font-size: 1.4rem;
+      }
+
+      p + p {
+        margin-top: 30px;
+
+        @include mq-max-sp {
+          margin-top: 20px;
+        }
+      }
+
+      * + ul {
+        margin-top: 30px;
+        list-style: disc;
+        padding-left: 1em;
+
+        @include mq-max-sp {
+          margin-top: 20px;
+        }
       }
     }
   }

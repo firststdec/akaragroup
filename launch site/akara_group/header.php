@@ -20,8 +20,8 @@
   <meta name="format-detection" content="telephone=no">
   <?php
     $title = 'Akara Group';
-    $kwd = '';
-    $desc = 'ผลิตภัณฑ์ไข่ไก่สด และผลิตภัณฑ์จากไข่แปรรูปคุณภาพดี ผลิตสดจากฟาร์มส่งตรงถึงมือคุณ ที่จะช่วยทำให้มื้อนี้ของคุณมีคุณค่ามากกว่าที่เคย';
+    $kwd = 'Everyday with akara - akara group';
+    $desc = 'ผลิตภัณฑ์ไข่ไก่สดอนามัย และผลิตภัณฑ์ไข่ไก่แปรรูป ของ ‘akara’ ตัวจริงเรื่องไข่ไก่ พิถีพิถันในทุกขั้นตอน เพื่อเติมคุณค่า ในทุกช่วงเวลาของคุณ';
     if(is_page('faq')) {
       $title = 'FAQ | Akara Group';
       $kwd = '';
@@ -181,7 +181,7 @@
 	<link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/solid.css">
 	<link rel="stylesheet" href="/assets/css/libs/swiper.css">
 	<link rel="stylesheet" href="/assets/css/libs/modaal.css">
-  <link rel="stylesheet" href="/assets/css/style.css?v=2021-2-7-2">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2021-2-13-6">
   <link rel="stylesheet" href="/assets/css/libs/validationEngine.jquery.css?v=3">
 	<?php wp_head(); ?>
 </head>

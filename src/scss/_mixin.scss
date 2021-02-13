@@ -114,3 +114,14 @@
   $vw-context: (1440 * 0.01) * 1px;
   @return ($target / $vw-context) * 1vw;
 }
+
+/* hover
+---------------------------------------------------------- */
+@mixin hoverOpacity($opacity: .6) {
+  transition: opacity .2s ease-out;
+  transform: translateZ(0);
+
+  &:hover {
+    opacity: $opacity;
+  }
+}

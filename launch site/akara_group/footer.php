@@ -23,7 +23,7 @@
 				</a>
 			</div>
 			<div class="c-message">
-				<a href="https://line.me/R/ti/p/%40akaragroup" target="_blank" class="c-message">
+				<a href="https://m.me/akaragroupTH" target="_blank" class="c-message">
 					<div class="icon -line"></div>
 					<div class="text">ส่งข้อความ</div>
 				</a>
