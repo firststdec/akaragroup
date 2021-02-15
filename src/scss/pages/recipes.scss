@@ -38,17 +38,19 @@
         }
       }
   
-      &.-time {
+      &.-time,
+      &.-serve {
         display: block;
       }
   
       &.-time > .icon {
         background: url(/assets/img/svg/icon-clock.svg) no-repeat center center #43AB3F;
         background-size: 20px;
+      }
   
-        .fa-clock {
-  
-        }
+      &.-serve > .icon {
+        background: url(/assets/img/recipes/detail/ico_dish.svg) no-repeat center center #FCFBF2;
+        background-size: 20px;
       }
   
       &:first-of-type {

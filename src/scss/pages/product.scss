@@ -1396,12 +1396,15 @@
     padding: 0 0 50px;
     margin: auto;
     position: relative;
-    margin-top: 50px;
-    display: none;
+    margin-top: 200px;
 
     @include mq-min-max-tb {
       margin-top: get-vw(50px);
       padding: 0;
+    }
+
+    @include mq-max-sp {
+      margin-top: 130px;
     }
 
     .-recipes-top-heading {

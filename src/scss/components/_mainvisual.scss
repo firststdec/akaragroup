@@ -188,6 +188,11 @@
       mask-image: url(/assets/img/common/mask-blog-post.svg);
       mask-size: contain;
 
+      @include mq-max-sp {
+        mask-image: url(/assets/img/common/mobile-banner-mask.svg);
+        mask-size: contain;
+      }
+
       @include mq-min-tb {
         position: absolute;
         width: 1014px;
@@ -205,7 +210,7 @@
       }
 
       > img {
-
+        width: 100%;
       }
     }
   }

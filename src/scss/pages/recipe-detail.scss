@@ -143,6 +143,12 @@
       justify-content: space-between;
     }
 
+    &.-single {
+      @include mq-max-sp {
+        justify-content: center;
+      }
+    }
+
     &.-bottom {
       margin-top: 50px;
       justify-content: center;
@@ -152,6 +158,12 @@
         text-align: left;
         margin: 40px auto 0;
         justify-content: space-between;
+      }
+
+      &.-single {
+        @include mq-max-sp {
+          justify-content: center;
+        }
       }
     }
 
@@ -188,7 +200,7 @@
     @include mq-max-sp {
       padding: 0;
       width: calc(100% - 60px);
-      margin: auto 0;
+      margin: 0 auto;
     }
 
     .c-box-local-fix-nav{
@@ -309,6 +321,11 @@
         margin-top: 40px;
 
         td {
+          &:nth-child(1) {
+            @include mq-max-sp {
+              width: 70%;
+            }
+          }
           &:nth-child(2) {
             text-align: center;
           }
@@ -323,9 +340,35 @@
         margin-top: 40px;
 
         td {
+          &:nth-child(1) {
+            @include mq-max-sp {
+              width: 70%;
+            }
+          }
+
           &:nth-child(2) {
             text-align: right;
+            vertical-align: top;
           }
+        }
+
+        th {
+          font-size: 2rem;
+          padding-top: 30px;
+          @include mq-max-sp {
+            padding-top: 20px;
+          }
+        }
+      }
+
+      > .box-content {
+        p + p {
+          margin-top: 20px;
+        }
+
+        a {
+          color: #FFC416;
+          @include hoverOpacity;
         }
       }
     }
@@ -428,18 +471,18 @@
         }
 
         .small {
-          font-size: 1.5rem;
+          font-size: 1.4rem;
           color: $white;
           display: block;
           width: 100%;
           line-height: 1.1;
           text-align: center;
           position: relative;
-          top: 8px;
+          top: 15px;
 
           @include mq-max-sp {
             font-size: 1.1rem;
-            top: 5px;
+            top: 8px;
           }
         }
 
@@ -450,9 +493,11 @@
           width: 100%;
           line-height: 1.1;
           text-align: center;
+          margin-top: 5px;
 
           @include mq-max-sp {
             font-size: 2.5rem;
+            margin-top: 0;
           }
         }
       }

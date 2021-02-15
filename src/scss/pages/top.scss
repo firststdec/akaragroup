@@ -16,8 +16,6 @@
   }
 
   .-recipes-top-heading {
-    display: none;
-
     .c-button-cmn-01.--border-base {
       @include mq-max-sp {
         border-color: #DCDCDC;
