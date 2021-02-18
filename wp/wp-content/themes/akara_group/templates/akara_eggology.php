@@ -7,6 +7,11 @@
   $term_list = get_the_terms($post->ID, 'product_category');
   // print "<pre>"; print_r($term_list);
   $banner = get_field('category_banner', $term_list[0]->taxonomy . '_' . $term_list[0]->term_id);
+    // CHECK URL
+  $root_url = '';
+  if( PRODUCTION ) {
+    $root_url = '/akara';
+  }
 ?>
 <main class="l-container">
   <div class="l-container__inner">
@@ -58,7 +63,7 @@
               <select id="select-product-green" name="select-product">
               <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <?php $slug = basename(get_permalink()); ?>
-                <option value="/product/<?php echo $slug; ?>" <?php echo ($slug == $pagename)? 'selected="selected"':''; ?>><?php echo get_the_title();?></option>
+                <option value="/akara/product/<?php echo $slug; ?>" <?php echo ($slug == $pagename)? 'selected="selected"':''; ?>><?php echo get_the_title();?></option>
               <?php endwhile; ?>
 
               </select>

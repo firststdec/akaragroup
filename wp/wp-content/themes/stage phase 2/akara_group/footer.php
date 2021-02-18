@@ -23,7 +23,7 @@
 				</a>
 			</div>
 			<div class="c-message">
-				<a href="https://line.me/R/ti/p/%40akaragroup" target="_blank" class="c-message">
+				<a href="https://m.me/akaragroupTH" target="_blank" class="c-message">
 					<div class="icon -line"></div>
 					<div class="text">ส่งข้อความ</div>
 				</a>
@@ -67,7 +67,7 @@
 			<div class="l-footer__in l-block">
 				<nav class="l-footer__menu">
 					<ul class="l-footer__menu-list">
-						<li class="l-footer__menu-item -logo-footer"><a class="l-footer__menu-link" href="/"><img src="/assets/img/common/img_logo_footer.png" alt=""></a></li>
+						<li class="l-footer__menu-item -logo-footer"><a class="l-footer__menu-link" href="/akara/"><img src="/assets/img/common/img_logo_footer.png" alt=""></a></li>
 						<li class="l-footer__menu-item -contact-detail">
 							<div class="l-footer__menu-link">CONTACT INFO</div>
 							<div class="l-footer__content">
@@ -212,12 +212,12 @@
 <script src="/assets/js/waveMainVisualSub.js"></script>
 <script src="/assets/js/our-story.js"></script>
 <?php endif; ?>
-<?php if(is_page_template('page-faq.php') 
-|| is_page_template('page-where-to-buy.php') 
-|| is_tax('media_category') 
-|| is_tax('news_category') 
-|| is_post_type_archive('media') 
-|| is_post_type_archive('news')): ?>
+<?php if(is_page_template('page-faq.php')
+	|| is_page_template('page-where-to-buy.php')
+	|| is_tax('media_category')
+	|| is_tax('news_category')
+	|| is_post_type_archive('media')
+	|| is_post_type_archive('news')): ?>
 <script src="/assets/js/waveWhiteTop.js"></script>
 <?php endif; ?>
 <?php if(is_page_template('page-about-us.php')): ?>

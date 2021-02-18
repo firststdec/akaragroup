@@ -1178,12 +1178,12 @@
 
       &-inner {
         @include mq-min-pc {
-          min-height: 750px;
+          // min-height: 750px;
           // overflow-y: scroll;
         }
 
         @include mq-min-max-tb {
-          min-height: get-vw(750px);
+          // min-height: get-vw(750px);
           // overflow-y: scroll;
         }
 

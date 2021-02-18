@@ -326,9 +326,9 @@ get_header();
 						<?php endif; ?>
             <div class="c-box-cmn-button animation-element slide-top --center">
               <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
-              <a class="c-button-cmn-01 --border-base" href="/en/faq/"><span class="text">SEE MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+              <a class="c-button-cmn-01 --border-base" href="/akara/en/faq/"><span class="text">SEE MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
               <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
-              <a class="c-button-cmn-01 --border-base" href="/faq/"><span class="text">อ่านเพิ่มเติม</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+              <a class="c-button-cmn-01 --border-base" href="/akara/faq/"><span class="text">อ่านเพิ่มเติม</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
               <?php endif; ?>
             </div>
           </div>

@@ -248,7 +248,7 @@ get_header();
                           $sub_content_04 = 'Free premium fresh chicken eggs, Japanese style It is formed through a collaboration between AKARA Group and ISE Food, Inc., a major egg leader in Japan. Through the production process from a specific technology Resulting in fresh, clean, germ-free eggs Can be eaten raw under the brand MORI-TAMA.';
                         } elseif (ICL_LANGUAGE_CODE == 'th') {
                           $sub_heading_04 = 'ไข่ไก่สไตล์ญี่ปุ่น โมริทามะ โดย อัครา-ไอเซ';
-                          $sub_content_04 = 'แบรนด์ไข่ไก่ญี่ปุ่น ที่เกิดขึ้นจากความร่วมมือระหว่าง AKARA Group และ ISE Food, INC จนออกมาเป็นไข่ไก่ AKARA ISE ที่ผ่านกระบวนการผลิตด้วยเทคโนโลยีแบบเดียวกับในญี่ปุ่น ทำให้ได้ไข่ไก่ที่สด สะอาด สามารถทานดิบได้ ปลอดภัยจากเชื้อแบคทีเรีย ภายใต้ชื่อแบรนด์ MORI-TAMA';
+                          $sub_content_04 = 'แบรนด์ไข่ไก่ญี่ปุ่น ที่เกิดขึ้นจากความร่วมมือระหว่าง AKARA Group และ ISE Food, INC จนออกมาเป็นไข่ไก่ AKARA ISE ที่ผ่านกระบวนการผลิตด้วยเทคโนโลยีแบบเดียวกับในญี่ปุ่น ทำให้ได้ไข่ไก่ที่สด สะอาด คุณภาพระดับญี่ปุ่น ปลอดภัยจากเชื้อแบคทีเรีย ภายใต้ชื่อแบรนด์ MORI-TAMA';
                         }
                       ?>
                       <div class="c-our-brand__card-content">

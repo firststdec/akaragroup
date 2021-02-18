@@ -1,8 +1,13 @@
 <?php
-  if(ICL_LANGUAGE_CODE == 'en'){
+  if( !is_th_lang() ){
     $lang_url = '/en';
-  } elseif (ICL_LANGUAGE_CODE == 'th') {
+  } elseif ( is_th_lang() ) {
     $lang_url = '';
+  }
+  // CHECK URL
+  $root_url = '';
+  if( PRODUCTION ) {
+    $root_url = '/akara';
   }
 ?>
 <?php
@@ -48,16 +53,16 @@
                   if($term_type == $product_category_type):
             ?>
 
-              <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
+              <?php if( !is_th_lang() ): ?>
               <div class="c-product-local-nav__item <?php echo ($term_obj->slug == $term->slug)? 'is-active':''; ?>">
-                <a class="c-product-local-nav__link" href="<?php echo esc_url( '/en/product/' . $term->slug ); ?>">
+                <a class="c-product-local-nav__link" href="<?php echo esc_url( $root_url .'/en/product/' . $term->slug ); ?>">
                   <div class="c-product-local-nav__link-icon"></div>
                   <div class="c-product-local-nav__link-text"><?php echo $term->name; ?></div>
                 </a>
               </div>
-              <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
+              <?php elseif( is_th_lang() ): ?>
               <div class="c-product-local-nav__item <?php echo ($term_obj->slug == $term->slug)? 'is-active':''; ?>">
-                <a class="c-product-local-nav__link " href="<?php echo esc_url( '/product/' . $term->slug ); ?>">
+                <a class="c-product-local-nav__link " href="<?php echo esc_url( $root_url . '/product/' . $term->slug ); ?>">
                   <div class="c-product-local-nav__link-icon"></div>
                   <div class="c-product-local-nav__link-text"><?php echo $term->name; ?></div>
                 </a>
@@ -289,10 +294,10 @@
                 </div>
                 <div class="box-text animation-element slide-top">
                   <?php
-                    if(ICL_LANGUAGE_CODE == 'en') {
+                    if( !is_th_lang()  ) {
                       $recipes_text = "Let 'Akara' help fill the deliciousness of every meal";
                       $readmore = 'READ MORE';
-                    } elseif(ICL_LANGUAGE_CODE == 'th') {
+                    } elseif( is_th_lang() ) {
                       $recipes_text = "ให้ 'อัครา' ช่วยเติมเต็มความอร่อยในทุกมื้ออาหารของคุณ ";
                       $readmore = 'อ่านเพิ่มเติม';
                     }
@@ -387,9 +392,9 @@
             </div>
           </div>
           <?php
-            if(ICL_LANGUAGE_CODE == 'en'):
+            if( !is_th_lang() ):
               $testimonial_id = 163;
-            elseif(ICL_LANGUAGE_CODE == 'th'):
+            elseif( is_th_lang() ):
               $testimonial_id = 159;
             endif;
           ?>

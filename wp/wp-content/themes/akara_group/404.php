@@ -10,27 +10,16 @@
 get_header();
 ?>
 
-<main id="site-content" role="main">
-
-	<div class="section-inner thin error404-content">
-
-		<h1 class="entry-title"><?php _e( 'Page Not Found', 'twentytwenty' ); ?></h1>
-
-		<div class="intro-text"><p><?php _e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'twentytwenty' ); ?></p></div>
-
-		<?php
-		get_search_form(
-			array(
-				'label' => __( '404 not found', 'twentytwenty' ),
-			)
-		);
-		?>
-
-	</div><!-- .section-inner -->
-
-</main><!-- #site-content -->
-
-<?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
+<main class="l-container">
+	<div class="l-container__inner">
+		<div class="p-search u-pt-100 u-pb-100">
+			<div class="c-search__subheading">404</div>
+			<div class="c-search u-ta-center">
+				<p>ไม่พบหน้าที่ต้องการ</p>
+			</div>
+		</div>
+	</div>
+</main>
 
 <?php
 get_footer();

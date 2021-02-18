@@ -11,104 +11,106 @@ function akara_my_load_more_scripts_dynamic(){
   //global $wp_query;
   //if($wp_query->query_vars)
   $obj = get_queried_object();
-  $tdd = date("Y/m/d");
-  //print "<pre>"; print_r($obj);
-  $post_type = array('news');
-  $orderby = 'date';
 
-  if($obj->post_name == 'job' || is_category()){
-    $post_type = 'post';
-  } elseif($obj->query_var == 'news' || is_tax('news_category')){
-    $post_type = 'news';
-  } elseif($obj->query_var == 'media' || is_tax('media_category')){
-    $post_type = 'media';
-  } elseif($obj->query_var == 'recipe' || is_tax('recipe_category')){
-    $post_type = 'recipe';
-  }
-  // print "<pre>"; print_r($obj);
-  $args = array(
-    'post_type' => $post_type,
-    'post_status' => 'publish',
-    'posts_per_page' => EVENT_POSTPERPAGE,
-    'paged' => 1,
-    'orderby' => $orderby,
-    'order' => 'DESC',
-    'has_password'   => FALSE, // NO PASSWORD POST SHOW
-  );
+  if( is_object($obj) ) {
 
-  if(is_tax('news_category')){
+    $tdd = date("Y/m/d");
+    //print "<pre>"; print_r($obj);
+    $post_type = array('news');
+    $orderby = 'date';
+
+    if($obj->query_var == 'news' || is_tax('news_category')){
+      $post_type = 'news';
+    } elseif($obj->query_var == 'media' || is_tax('media_category')){
+      $post_type = 'media';
+    } elseif($obj->query_var == 'recipe' || is_tax('recipe_category')){
+      $post_type = 'recipe';
+    }
+    // print "<pre>"; print_r($obj);
     $args = array(
-      'post_type' => 'news',
-      'post_status' => 'publish',
-      'posts_per_page' => EVENT_POSTPERPAGE,
-      'paged' => 1,
-      'orderby' => 'date',
-      'order' => 'DESC',
-      'tax_query' => array(
-        array(
-        'taxonomy' => 'news_category',
-        'field' => 'id',
-        'terms' => $obj->term_id,
-        )
-      ),
-      'has_password'   => FALSE, // NO PASSWORD POST SHOW
-    );
-  }
-
-  if(is_tax('media_category')){
-    $args = array(
-      'post_type' => 'media',
-      'post_status' => 'publish',
-      'posts_per_page' => EVENT_POSTPERPAGE,
-      'paged' => 1,
-      'orderby' => 'date',
-      'order' => 'DESC',
-      'tax_query' => array(
-        array(
-        'taxonomy' => 'media_category',
-        'field' => 'id',
-        'terms' => $obj->term_id,
-        )
-      ),
-      'has_password'   => FALSE, // NO PASSWORD POST SHOW
-    );
-  }
-
-  if(is_tax('recipe_category')){
-    $args = array(
-      'post_type' => 'recipe',
-      'post_status' => 'publish',
-      'posts_per_page' => EVENT_POSTPERPAGE,
-      'paged' => 1,
-      'orderby' => 'date',
-      'order' => 'DESC',
-      'tax_query' => array(
-        array(
-        'taxonomy' => 'recipe_category',
-        'field' => 'id',
-        'terms' => $obj->term_id,
-        )
-      ),
-      'has_password'   => FALSE, // NO PASSWORD POST SHOW
-    );
-  }
-
-  //print "<pre>";
-  $the_query = new WP_Query( $args );
-	// wp_enqueue_script('jquery');
-	// // register our main script but do not enqueue it yet
-	// wp_register_script( 'my_loadmore', get_stylesheet_directory_uri() . '/js/loadmore.js', array('jquery') );
-	wp_register_script( 'my_loadmore_dynamic', '', array());
-	wp_localize_script(
-    'my_loadmore_dynamic', 'akara_loadmore_params_dynamic', array(
-      'ajaxurl_dynamic' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
-      'posts' => json_encode( $the_query->query_vars ), // everything about your loop is here
-      'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
-      'max_page' => $the_query->max_num_pages,
       'post_type' => $post_type,
-    )
-  );
-  wp_enqueue_script( 'my_loadmore_dynamic', 'my_loadmore_dynamic' );
+      'post_status' => 'publish',
+      'posts_per_page' => EVENT_POSTPERPAGE,
+      'paged' => 1,
+      'orderby' => $orderby,
+      'order' => 'DESC',
+      'has_password'   => FALSE, // NO PASSWORD POST SHOW
+    );
+
+    if(is_tax('news_category')){
+      $args = array(
+        'post_type' => 'news',
+        'post_status' => 'publish',
+        'posts_per_page' => EVENT_POSTPERPAGE,
+        'paged' => 1,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'tax_query' => array(
+          array(
+          'taxonomy' => 'news_category',
+          'field' => 'id',
+          'terms' => $obj->term_id,
+          )
+        ),
+        'has_password'   => FALSE, // NO PASSWORD POST SHOW
+      );
+    }
+
+    if(is_tax('media_category')){
+      $args = array(
+        'post_type' => 'media',
+        'post_status' => 'publish',
+        'posts_per_page' => EVENT_POSTPERPAGE,
+        'paged' => 1,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'tax_query' => array(
+          array(
+          'taxonomy' => 'media_category',
+          'field' => 'id',
+          'terms' => $obj->term_id,
+          )
+        ),
+        'has_password'   => FALSE, // NO PASSWORD POST SHOW
+      );
+    }
+
+    if(is_tax('recipe_category')){
+      $args = array(
+        'post_type' => 'recipe',
+        'post_status' => 'publish',
+        'posts_per_page' => EVENT_POSTPERPAGE,
+        'paged' => 1,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'tax_query' => array(
+          array(
+          'taxonomy' => 'recipe_category',
+          'field' => 'id',
+          'terms' => $obj->term_id,
+          )
+        ),
+        'has_password'   => FALSE, // NO PASSWORD POST SHOW
+      );
+    }
+
+    //print "<pre>";
+    $the_query = new WP_Query( $args );
+    // wp_enqueue_script('jquery');
+    // // register our main script but do not enqueue it yet
+    // wp_register_script( 'my_loadmore', get_stylesheet_directory_uri() . '/js/loadmore.js', array('jquery') );
+    wp_register_script( 'my_loadmore_dynamic', '', array());
+    wp_localize_script(
+      'my_loadmore_dynamic', 'akara_loadmore_params_dynamic', array(
+        'ajaxurl_dynamic' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
+        'posts' => json_encode( $the_query->query_vars ), // everything about your loop is here
+        'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
+        'max_page' => $the_query->max_num_pages,
+        'post_type' => $post_type,
+      )
+    );
+    wp_enqueue_script( 'my_loadmore_dynamic', 'my_loadmore_dynamic' );
+  }
 }
 add_action( 'wp_enqueue_scripts', 'akara_my_load_more_scripts_dynamic' );
 
@@ -537,12 +539,6 @@ function is_post_type($type){
     global $wp_query;
     if($type == get_post_type($wp_query->post->ID)) return true;
     return false;
-}
-
-add_action( 'widgets_init', 'my_remove_recent_comments_style' );
-function my_remove_recent_comments_style() {
-	global $wp_widget_factory;
-	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'  ) );
 }
 
 /****************************** CUSTOM FUNCTIONS  ********************************/
@@ -1292,7 +1288,7 @@ function wpb_change_search_url() {
   if ( is_search() && ! empty( $_GET['search_text'] ) && !is_admin()) {
       wp_redirect( home_url( "/search/" ) . $_GET['search_text']  . '/');
       exit();
-  }   
+  }
 }
 add_action( 'template_redirect', 'wpb_change_search_url' );
 
@@ -1313,4 +1309,12 @@ function get_site_lang() {
   }
 
   return $site_lang;
+}
+
+function is_th_lang() {
+  if( ICL_LANGUAGE_CODE == 'th' ) {
+    return true;
+  } elseif( ICL_LANGUAGE_CODE == 'en' ) {
+    return false;
+  }
 }

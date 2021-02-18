@@ -57,22 +57,14 @@ get_header();
                         </div>
                         <div class="c-heading-egg__text -small">Jobs Opening</div>
                       </div>
-                      <ul class="c-box-time-line__content-list">
-                        <li class="c-box-time-line__content-list-item"><a class="modaal" href="#job-01" data-modaal-type="inline" data-modaal-animation="fade" data-modaal-overlay-opacity="0.9"><i class="fas fa-chevron-right"></i><span class="text">ช่างซ่อมบำรุง (ประจำฟาร์ม)</span></a></li>
-                        <li class="c-box-time-line__content-list-item"><a class="modaal" href="#job-02" data-modaal-type="inline" data-modaal-animation="fade" data-modaal-overlay-opacity="0.9"><i class="fas fa-chevron-right"></i><span class="text">เจ้าหน้าที่ฝ่ายทรัพยากรบุคคล (ปทุมธานี)</span></a></li>
-                        <li class="c-box-time-line__content-list-item"><a class="modaal" href="#job-03" data-modaal-type="inline" data-modaal-animation="fade" data-modaal-overlay-opacity="0.9"><i class="fas fa-chevron-right"></i><span class="text">เจ้าหน้าที่บัญชี (วุฒิปริญญาตรี 1อัตรา)</span></a></li>
-                        <li class="c-box-time-line__content-list-item"><a class="modaal" href="#job-04" data-modaal-type="inline" data-modaal-animation="fade" data-modaal-overlay-opacity="0.9"><i class="fas fa-chevron-right"></i><span class="text">พนักงานบัญชีรายวัน 2 อัตรา</span></a></li>
-                        <li class="c-box-time-line__content-list-item"><a class="modaal" href="#job-05" data-modaal-type="inline" data-modaal-animation="fade" data-modaal-overlay-opacity="0.9"><i class="fas fa-chevron-right"></i><span class="text">แม่บ้าน หลายอัตรา</span></a></li>
-                        <li class="c-box-time-line__content-list-item"><a class="modaal" href="#job-06" data-modaal-type="inline" data-modaal-animation="fade" data-modaal-overlay-opacity="0.9"><i class="fas fa-chevron-right"></i><span class="text">พนักงาน R&D 1 อัตรา</span></a></li>
-                        <li class="c-box-time-line__content-list-item"><a class="modaal" href="#job-07" data-modaal-type="inline" data-modaal-animation="fade" data-modaal-overlay-opacity="0.9"><i class="fas fa-chevron-right"></i><span class="text">พนักงานบันทึกข้อมูลการผลิต 3 อัตรา</span></a></li>
-                      </ul>
+                      <?php get_template_part('templates/job_th_heading'); ?>
                       <div class="c-box-time-line__link">
                         <div class="c-box-time-line__link-text">
                           <div class="c-hand-icon"></div>คลิกที่ตำแหน่งเพื่อกดส่งใบสมัคร หรือติดต่อเราตามข้อมูลด้านล่าง
                         </div>
                       </div>
                       <div class="c-box-contact">
-                        <div class="c-box-contact__heading">ติดต่อฝ่ายบุคคล:  โทร. <a href="tel:037349885" title="โทรหาเรา 037-349-885" class="c-link-cmn-01">037-349-885</a></div>
+                        <div class="c-box-contact__heading">ติดต่อฝ่ายบุคคล:  โทร. <a href="tel:037349885" title="โทรหาเรา 037-349-885" class="c-link-cmn-01">037-349-885 ต่อ 3</a></div>
                         <div class="c-box-contact__list">
                           <div class="c-box-contact__list-item">
                             <div class="heading">บริษัท อัครากรุ๊ป จำกัด</div>
@@ -80,132 +72,50 @@ get_header();
                           </div>
                           <div class="c-box-contact__list-item">
                             <div class="heading">วันและเวลาทำการ</div>
-                            <div class="text">วันจันทร์ – วันเสาร์ <br>08.00 – 17.00</div>
+                            <div class="text">วันจันทร์ – วันเสาร์ <br>08:00 – 17:00 น.</div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <?php
+                    if( !is_th_lang() ) {
+                      $content_heading_02 = 'Work @Akara';
+                      $content_sub_heading_02 = 'Lorem ipsum dolor sit amet, consetetur';
+                      $content_text_02_01 = 'We encourage all employees to improve their effectiveness that would create true understanding of job responsibility which leads to the achievement of both individual and team success.';
+                      $content_text_02_02 = 'Working environment at Akara promote good work relationship in all aspects. We treat each other the way we want to be treated and we believe that people work best when there is a foundation of trust. We encourage two-way communication throughout the organization and provide our employees good opportunity in their career paths.';
+                      $content_text_02_03 = '';
+                    } elseif( is_th_lang() ) {
+                      $content_heading_02 = 'ร่วมงานกับเรา';
+                      $content_sub_heading_02 = '';
+                      $content_text_02_01= '‘เครือบริษัท แสงทอง อัครา กรุ๊ป’ คือ ตัวจริงเรื่องไข่ไก่ และเป็นหนึ่งในผู้นำด้านการผลิตและจัดจำหน่ายไข่ไก่ อันดับต้นๆ ของประเทศไทย ซึ่งประกอบด้วย บริษัท อัครากรุ๊ป, อัครา-ไอเซ,  แสงทองสหฟาร์ม, แสงทองปศุสัตว์, อรรณพฟาร์มบ้านนา, อรรณพชัยภูมิฟาร์ม  และแสงทองอาหารสัตว์';
+                      $content_text_02_02= 'ในฐานะผู้ผลิตอาหารที่เติบโตอย่างต่อเนื่อง เราเชื่อมั่นและใส่ใจในความพิถีพิถันในทุกขั้นตอน และมุ่งมั่นพัฒนาเทคโนโลยี เพื่อให้ได้สินค้าที่ได้คุณภาพมาตรฐาน สะอาด ปลอดภัย ดีต่อสุขภาพ และมีสินค้าที่หลากหลาย ตอบโจทย์ชีวิตประจำวันของทุกๆ คน ภายใต้แบรนด์ อัครา, อัครา เอคโคโลยี, โมริทามะ และฟาร์มแสงทอง ตั้งแต่สินค้า ไข่ไก่สดอนามัย ไข่ไก่ออร์แกนิค ไข่ไก่สไตล์ญี่ปุ่น ไข่ไก่แปรรูป เต้าหู้ถ้วย ไข่ตุ๋นถ้วย พร้อมทาน และอื่นๆ อีกมากมาย';
+                      $content_text_02_03= 'มาร่วมเป็นส่วนหนึ่งขององกรณ์ที่ตั้งใจมอบสิ่งที่ดีที่สุดให้กับผู้บริโภคไปด้วยกัน เราเชื่อมั่นในบุคคลากรของเรา ที่เต็มเปี่ยมไปด้วยศักยภาพและความตั้งใจในการทำงาน เราพร้อมเปิดโอกาสให้คุณได้พัฒนาอย่างต่อเนื่อง ส่งต่อทั้งสุขภาพที่ดี และแรงบันดาลใจไปพร้อมกับครอบครัว ‘แสงทอง อัครา กรุ๊ป’';
+                    }
+                  ?>
                   <div class="c-box-time-line__item animation-element slide-top">
                     <div class="c-box-time-line__image">
                       <div class="c-box-time-line__image-frame"><img src="/assets/img/career/img_career_02.png?v=11102020" alt=""></div>
                     </div>
                     <div class="c-box-time-line__content">
-                      <div class="c-box-time-line__content-heading -small">Work @Akara</div>
-                      <div class="c-box-time-line__content-sub-heading">Lorem ipsum dolor sit amet, consetetur</div>
-                      <div class="c-box-time-line__content-text -strong">We encourage all employees to improve their effectiveness that would create true understanding of job responsibility which leads to the achievement of both individual and team success.</div>
-                      <div class="c-box-time-line__content-text">Working environment at Akara promote good work relationship in all aspects. We treat each other the way we want to be treated and we believe that people work best when there is a foundation of trust. We encourage two-way communication throughout the organization and provide our employees good opportunity in their career paths.</div>
+                      <div class="c-box-time-line__content-heading -small"><?php echo $content_heading_02; ?></div>
+                      <!-- <div class="c-box-time-line__content-sub-heading">Lorem ipsum dolor sit amet, consetetur</div> -->
+                      <?php if( $content_text_02_01 != '' ): ?>
+                      <div class="c-box-time-line__content-text"><?php echo $content_text_02_01; ?></div>
+                      <?php endif; ?>
+                      <?php if( $content_text_02_02 != '' ): ?>
+                      <div class="c-box-time-line__content-text"><?php echo $content_text_02_02; ?></div>
+                      <?php endif; ?>
+                      <?php if( $content_text_02_03 != '' ): ?>
+                      <div class="c-box-time-line__content-text"><?php echo $content_text_02_03; ?></div>
+                      <?php endif; ?>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="c-box-jobs">
-              <div class="c-box-jobs__detail" id="job-01">
-                <div class="c-box-jobs__inner">
-                  <div class="c-box-jobs__heading">
-                    <div class="title c-heading-03">ช่างซ่อมบำรุง (ประจำฟาร์ม)</div>
-                    <div class="location">นครนายก</div>
-                  </div>
-                  <div class="c-box-jobs__content">
-                    <div class="sub-title c-heading-04">รายละเอียดงาน</div>
-                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.</div>
-                  </div>
-                  <div class="c-box-jobs__apply">
-                    <div class="c-box-cmn-button"><a class="c-button-cmn-01" href="#form-job-01"><span class="text">Apply for this position</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="c-box-jobs__detail" id="job-02">
-                <div class="c-box-jobs__inner">
-                  <div class="c-box-jobs__heading">
-                    <div class="title c-heading-03">เจ้าหน้าที่ฝ่ายทรัพยากรบุคคล (ปทุมธานี)</div>
-                    <div class="location">ปทุมธานี</div>
-                  </div>
-                  <div class="c-box-jobs__content">
-                    <div class="sub-title c-heading-04">รายละเอียดงาน</div>
-                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.</div>
-                  </div>
-                  <div class="c-box-jobs__apply">
-                    <div class="c-box-cmn-button"><a class="c-button-cmn-01" href="#form-job-02"><span class="text">Apply for this position</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="c-box-jobs__detail" id="job-03">
-                <div class="c-box-jobs__inner">
-                  <div class="c-box-jobs__heading">
-                    <div class="title c-heading-03">เจ้าหน้าที่บัญชี (วุฒิปริญญาตรี 1อัตรา)</div>
-                    <div class="location">ปทุมธานี</div>
-                  </div>
-                  <div class="c-box-jobs__content">
-                    <div class="sub-title c-heading-04">รายละเอียดงาน</div>
-                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.</div>
-                  </div>
-                  <div class="c-box-jobs__apply">
-                    <div class="c-box-cmn-button"><a class="c-button-cmn-01" href="#form-job-03"><span class="text">Apply for this position</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="c-box-jobs__detail" id="job-04">
-                <div class="c-box-jobs__inner">
-                  <div class="c-box-jobs__heading">
-                    <div class="title c-heading-03">พนักงานบัญชีรายวัน 2 อัตรา</div>
-                    <div class="location">ปทุมธานี</div>
-                  </div>
-                  <div class="c-box-jobs__content">
-                    <div class="sub-title c-heading-04">รายละเอียดงาน</div>
-                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.</div>
-                  </div>
-                  <div class="c-box-jobs__apply">
-                    <div class="c-box-cmn-button"><a class="c-button-cmn-01" href="#form-job-04"><span class="text">Apply for this position</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="c-box-jobs__detail" id="job-05">
-                <div class="c-box-jobs__inner">
-                  <div class="c-box-jobs__heading">
-                    <div class="title c-heading-03">แม่บ้าน หลายอัตรา</div>
-                    <div class="location">ปทุมธานี</div>
-                  </div>
-                  <div class="c-box-jobs__content">
-                    <div class="sub-title c-heading-04">รายละเอียดงาน</div>
-                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.</div>
-                  </div>
-                  <div class="c-box-jobs__apply">
-                    <div class="c-box-cmn-button"><a class="c-button-cmn-01" href="#form-job-05"><span class="text">Apply for this position</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="c-box-jobs__detail" id="job-06">
-                <div class="c-box-jobs__inner">
-                  <div class="c-box-jobs__heading">
-                    <div class="title c-heading-03">พนักงาน R&D 1 อัตรา</div>
-                    <div class="location">ปทุมธานี</div>
-                  </div>
-                  <div class="c-box-jobs__content">
-                    <div class="sub-title c-heading-04">รายละเอียดงาน</div>
-                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.</div>
-                  </div>
-                  <div class="c-box-jobs__apply">
-                    <div class="c-box-cmn-button"><a class="c-button-cmn-01" href="#form-job-06"><span class="text">Apply for this position</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="c-box-jobs__detail" id="job-07">
-                <div class="c-box-jobs__inner">
-                  <div class="c-box-jobs__heading">
-                    <div class="title c-heading-03">พนักงานบันทึกข้อมูลการผลิต 3 อัตรา</div>
-                    <div class="location">ปทุมธานี</div>
-                  </div>
-                  <div class="c-box-jobs__content">
-                    <div class="sub-title c-heading-04">รายละเอียดงาน</div>
-                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl eget tellus congue fringilla. Nullam mattis, libero facilisis iaculis tincidunt, sem massa faucibus odio, vitae accumsan felis mi vestibulum sem. Etiam elementum leo at nulla molestie suscipit. In vitae feugiat nunc, ut semper tortor. Nunc aliquam urna orci, nec eleifend odio dignissim eget. Donec maximus et orci in egestas. Vivamus nec suscipit est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vehicula sem non elit consequat cursus. Quisque laoreet velit aliquet lorem dignissim ultricies. Vestibulum dictum arcu non tortor scelerisque laoreet.</div>
-                  </div>
-                  <div class="c-box-jobs__apply">
-                    <div class="c-box-cmn-button"><a class="c-button-cmn-01" href="#form-job-07"><span class="text">Apply for this position</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
-                  </div>
-                </div>
-              </div>
+              <?php get_template_part('templates/job_th'); ?>
             </div>
             <div class="c-voice-box">
               <div class="c-wave-cream">

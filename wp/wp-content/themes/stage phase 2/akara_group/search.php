@@ -66,18 +66,18 @@ get_header();
                         }
                       }
 
-                      $prefix = '';
+                      $prefix = '/akara';
                       if(ICL_LANGUAGE_CODE == 'en'){
-                        $prefix = '/en/';
+                        $prefix = '/akara/en/';
                       }
 
-                      if(in_array('akara Eggs', $term_links)) {
+                      if(in_array('akara', $term_links)) {
                         $link = $prefix. '/product/'. $term_slug;
 
-                      } elseif(in_array('akara Eggology', $term_links)) {
+                      } elseif(in_array('AKARA EGGOLOGY', $term_links)) {
                         $link = apply_filters( 'wpml_permalink', get_the_permalink($post_id), ICL_LANGUAGE_CODE, true );
 
-                      } elseif(in_array('akara ISE', $term_links)) {
+                      } elseif(in_array('AKARA ISE', $term_links)) {
                         $link = apply_filters( 'wpml_permalink', get_the_permalink($post_id), ICL_LANGUAGE_CODE, true );
 
                         if(ICL_LANGUAGE_CODE == 'en'){

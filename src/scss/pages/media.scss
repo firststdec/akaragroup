@@ -95,6 +95,7 @@
 
       @include mq-max-sp {
         display: block;
+        margin-top: 10px;
       }
 
       .separate {
@@ -549,31 +550,37 @@
     text-align: center;
 
     .c-button-cmn-01 {
-      @include mq-max-sp {
-        padding-right: 30px;
+      &.--border-base{
+        border: 1px solid #211E1F;
       }
 
-      &::before {
+      &:hover {
         @include mq-max-sp {
-          width: 100%;
-          background: #211E1F;
-          color: #FFC416;
+          padding-right: 30px;
         }
-      }
-
-      .text {
-        @include mq-max-sp {
-          opacity: 1;
-          font-size: 1.4rem;
-          padding: 0 10px 0 15px;
-          color: #FFC416;
+  
+        &::before {
+          @include mq-max-sp {
+            width: 100%;
+            background: #211E1F;
+            color: #FFC416;
+          }
         }
-      }
-
-      .arrow {
-        @include mq-max-sp {
-          opacity: 1;
-          color: #FFC416;
+  
+        .text {
+          @include mq-max-sp {
+            opacity: 1;
+            font-size: 1.4rem;
+            padding: 0 10px 0 15px;
+            color: #FFC416;
+          }
+        }
+  
+        .arrow {
+          @include mq-max-sp {
+            opacity: 1;
+            color: #FFC416;
+          }
         }
       }
     }

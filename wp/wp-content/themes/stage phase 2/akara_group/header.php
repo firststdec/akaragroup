@@ -20,8 +20,9 @@
   <meta name="format-detection" content="telephone=no">
   <?php
     $title = 'Akara Group';
-    $kwd = '';
-    $desc = 'ผลิตภัณฑ์ไข่ไก่สด และผลิตภัณฑ์จากไข่แปรรูปคุณภาพดี ผลิตสดจากฟาร์มส่งตรงถึงมือคุณ ที่จะช่วยทำให้มื้อนี้ของคุณมีคุณค่ามากกว่าที่เคย';
+    $kwd = 'Everyday with akara - akara group';
+    $desc = 'ผลิตภัณฑ์ไข่ไก่สดอนามัย และผลิตภัณฑ์ไข่ไก่แปรรูป ของ ‘akara’ ตัวจริงเรื่องไข่ไก่ พิถีพิถันในทุกขั้นตอน เพื่อเติมคุณค่า ในทุกช่วงเวลาของคุณ';
+
     if(is_page('faq')) {
       $title = 'FAQ | Akara Group';
       $kwd = '';
@@ -115,8 +116,8 @@
         //   $cate_name = ' | ' . $tag->name;
         // }
         // $seo = ($cate_name!='')? $cate_name : '';
-        // $seo = '';
-        // $seo = $seo;
+        $seo = '';
+        $seo = $seo;
       }
 
       $title = strip_tags(get_the_title($post->ID)).  $seo  . ' | ' . $title;
@@ -138,13 +139,13 @@
 	<meta name="twitter:description" content="<?php echo $desc; ?>">
 	<meta name="twitter:image" content="<?php echo $og_img; ?>">
 	<meta name="twitter:url" content="<?php echo $actual_link; ?>">
-	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo $root_url; ?>/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta property="og:image" content="<?php echo $og_img; ?>">
   <?php
-    if(ICL_LANGUAGE_CODE == 'en') {
+    if( !is_th_lang() ) {
       $front_page_id = 31;
-    } elseif(ICL_LANGUAGE_CODE == 'th') {
+    } elseif( is_th_lang()  ) {
       $front_page_id = 98;
     }
   ?>
@@ -181,7 +182,7 @@
 	<link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/solid.css">
 	<link rel="stylesheet" href="/assets/css/libs/swiper.css">
 	<link rel="stylesheet" href="/assets/css/libs/modaal.css">
-  <link rel="stylesheet" href="/assets/css/style.css?v=2021-2-3-12">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2021-2-14-2">
   <link rel="stylesheet" href="/assets/css/libs/validationEngine.jquery.css?v=3">
 	<?php wp_head(); ?>
 </head>
@@ -228,7 +229,7 @@
       <div class="c-box-scroll-spy__list">
         <div class="c-box-scroll-spy__item is-active"><a class="c-box-scroll-spy__link" href="#our-story" data-scroll="our-story">Our Story</a></div>
         <div class="c-box-scroll-spy__item"><a class="c-box-scroll-spy__link" href="#timeline" data-scroll="timeline">Timeline</a></div>
-        <div class="c-box-scroll-spy__item"><a class="c-box-scroll-spy__link" href="#our-egg" data-scroll="our-egg">Our Egg</a></div>
+        <div class="c-box-scroll-spy__item"><a class="c-box-scroll-spy__link" href="#our-egg" data-scroll="our-egg">Our Eggs</a></div>
         <div class="c-box-scroll-spy__item"><a class="c-box-scroll-spy__link" href="#our-farm" data-scroll="our-farm">Our Farm</a></div>
         <div class="c-box-scroll-spy__item"><a class="c-box-scroll-spy__link" href="#vdo" data-scroll="vdo">VDO</a></div>
         <div class="c-box-scroll-spy__item"><a class="c-box-scroll-spy__link" href="#faq" data-scroll="faq">FAQ</a></div>
@@ -236,17 +237,18 @@
     </div>
   </div>
   <?php endif; ?>
-  <?php 
+  <?php
   if(!is_page_template('page-faq.php')
-  && !is_page_template('page-where-to-buy.php')
-  && !is_page('privacy')
-  && !is_tax('news_category')
-  && !is_tax('media_category')
-  && !is_post_type_archive('news')
-  && !is_post_type_archive('media')
-  && !is_page_template('search.php')
-  || is_singular('media')
-  || is_singular('news')) : ?>
+    && !is_page_template('page-where-to-buy.php')
+    && !is_page('privacy')
+    && !is_tax('news_category')
+    && !is_tax('media_category')
+    && !is_post_type_archive('news')
+    && !is_post_type_archive('media')
+    && !is_page_template('search.php')
+    && !is_singular('recipe')
+    || is_singular('media')
+    || is_singular('news')) : ?>
   <div class="c-bg-wave-mainvisual-sub">
     <div class="c-bg-wave-mainvisual-solid">
       <canvas id="canvas-mainvisual"></canvas>
@@ -258,11 +260,11 @@
   $white_theme = '';
 
   if(is_page(array('faq', 'where-to-buy'))
-  || is_post_type_archive('news')
-  || is_post_type_archive('media')
-  || is_tax('news_category')
-  || is_singular('recipe')
-  || is_tax('media_category')) {
+    || is_post_type_archive('news')
+    || is_post_type_archive('media')
+    || is_tax('news_category')
+    || is_singular('recipe')
+    || is_tax('media_category')) {
     $white_theme = 'whiteTheme';
   }
 
@@ -283,310 +285,37 @@
     }
   }
 
+  // CHECK URL
+  $root_url = '';
+  if( PRODUCTION ) {
+    $root_url = '/akara';
+  }
 ?>
   <div class="l-wrapper">
     <header class="l-header <?php echo $white_theme; ?>">
       <div class="l-header__in l-block">
       <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
-        <div class="l-header__logo"><a class="l-header__logo-link" href="/en/"><img class="l-header__logo-image" src="/assets/img/common/logo.svg" alt="Akara Group"><img class="l-header__logo-image white" src="/assets/img/common/logo_white.svg" alt="Akara Group"><img class="l-header__logo-image-sp" src="/assets/img/common/logo_sp.svg" alt="Akara Group"></a></div>
+        <div class="l-header__logo"><a class="l-header__logo-link" href="<?php echo $root_url; ?>/en/"><img class="l-header__logo-image" src="/assets/img/common/logo.svg" alt="Akara Group"><img class="l-header__logo-image white" src="/assets/img/common/logo_white.svg" alt="Akara Group"><img class="l-header__logo-image-sp" src="/assets/img/common/logo_sp.svg" alt="Akara Group"></a></div>
       <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
-        <div class="l-header__logo"><a class="l-header__logo-link" href="/"><img class="l-header__logo-image" src="/assets/img/common/logo.svg" alt="Akara Group"><img class="l-header__logo-image white" src="/assets/img/common/logo_white.svg" alt="Akara Group"><img class="l-header__logo-image-sp" src="/assets/img/common/logo_sp.svg" alt="Akara Group"></a></div>
+        <div class="l-header__logo"><a class="l-header__logo-link" href="<?php echo $root_url; ?>/"><img class="l-header__logo-image" src="/assets/img/common/logo.svg" alt="Akara Group"><img class="l-header__logo-image white" src="/assets/img/common/logo_white.svg" alt="Akara Group"><img class="l-header__logo-image-sp" src="/assets/img/common/logo_sp.svg" alt="Akara Group"></a></div>
       <?php endif; ?>
         <a class="l-header__menu-trigger js-hambuger" href="#" data-delay="300"><span class="l-header__menu-trigger-mark"></span></a>
         <div class="l-header__utility l-header__utility--top">
           <div class="l-header__utility-wrap">
             <div class="l-header__utility-in">
-              <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
-              <nav class="l-header__menu">
-                <div class="l-header__menu-cover"></div>
-                <ul class="l-header__menu-list">
-                  <li class="l-header__menu-item js-gnavi"><a class="l-header__menu-link" data-group="menu" href="#"><span class="l-header__menu-mark">PRODUCTS</span><span class="fas fa-chevron-down"></span><span class="fas fa-chevron-up"></span></a>
-                    <div class="l-header__submenu">
-                      <div class="l-header__submenu-in">
-                        <ul class="l-header__submenu-list">
-                          <li class="l-header__submenu-item"><div class="l-header__submenu-link">
-                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara Eggs"></figure><span class="l-header__submenu-text">akara</span></div>
-                            <ul class="l-header__submenu-list-02">
-                            <?php
-                              $args = array(
-                                'hide_empty' => 0,
-                                'child_of' => 3,
-                              );
-                              $cate = 'product_category';
-
-                              $terms = get_terms( $cate, $args );
-                              // print "<pre>"; print_r($terms);
-                              if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
-                            ?>
-                              <li class="l-header__submenu-list-02-item">
-                                <div class="c-mobile-float-text">READY TO COOK</div>
-                              <?php
-                                foreach ( $terms as $term ) :
-                                  $term_type = get_field('product_category_type', $term->taxonomy . '_' . $term->term_id);
-                                  if($term_type == 'ready-to-cook'):
-                              ?>
-                                <a class="l-header__submenu-list-02-link" href="/en/product_category/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
-                                <?php endif; // if($term_type == $product_category_type):?>
-                              <?php endforeach; ?>
-                              </li>
-                            <?php endif; ?>
-                            <?php
-                              if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
-                            ?>
-                              <li class="l-header__submenu-list-02-item">
-                                <div class="c-mobile-float-text">READY TO EAT</div>
-                                <?php
-                                foreach ( $terms as $term ) :
-                                  $term_type = get_field('product_category_type', $term->taxonomy . '_' . $term->term_id);
-                                  if($term_type == 'ready-to-eat'):
-                                ?>
-                                <a class="l-header__submenu-list-02-link" href="/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
-                                <?php endif; // if($term_type == $product_category_type):?>
-                              <?php endforeach; ?>
-                              </li>
-                            <?php endif; ?>
-                            </ul>
-                          </li>
-                          <?php
-                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                            $args = array(
-                              'post_type' => 'product',
-                              'post_status' => 'publish',
-                              'posts_per_page' => -1,
-                              'orderby' => 'date',
-                              'paged' => $paged,
-                              'tax_query' => array(
-                                array(
-                                    'taxonomy' => 'product_category',
-                                    'field'    => 'id',
-                                    'terms'    => 14,
-                                ),
-                              ),
-                            );
-
-                            $the_query = new WP_Query( $args );
-                            // print "<pre>"; print_r($the_query); die();
-                            if ( $the_query->have_posts() ) :
-                          ?>
-                          <li class="l-header__submenu-item"><div class="l-header__submenu-link">
-                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_eggology.png" alt="akara EGGOLOGY"></figure><span class="l-header__submenu-text">AKARA EGGOLOGY</span></div>
-                            <ul class="l-header__submenu-list-02">
-                            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
-                            <?php endwhile; ?>
-                            </ul>
-                          </li>
-                          <?php endif; ?>
-                          <?php wp_reset_query(); ?>
-                          <?php
-                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                            $args = array(
-                              'post_type' => 'product',
-                              'post_status' => 'publish',
-                              'posts_per_page' => -1,
-                              'orderby' => 'date',
-                              'paged' => $paged,
-                              'tax_query' => array(
-                                array(
-                                    'taxonomy' => 'product_category',
-                                    'field'    => 'id',
-                                    'terms'    => 15,
-                                ),
-                              ),
-                            );
-
-                            $the_query = new WP_Query( $args );
-                            // print "<pre>"; print_r($the_query); die();
-                            if ( $the_query->have_posts() ) :
-                          ?>
-                          <li class="l-header__submenu-item"><div class="l-header__submenu-link">
-                              <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_ise.png" alt="akara ISE"></figure><span class="l-header__submenu-text">AKARA ISE</span></div>
-                            <ul class="l-header__submenu-list-02">
-                            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
-                            <?php endwhile; ?>
-                            </ul>
-                          </li>
-                          <?php endif; ?>
-                          <?php wp_reset_query(); ?>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="l-header__menu-item"><a class="l-header__menu-link" href="/en/our-story/"><span class="l-header__menu-mark">OUR STORY</span></a></li>
-                  <li class="l-header__menu-item"><a class="l-header__menu-link" href="/en/recipe/"><span class="l-header__menu-mark">RECIPES</span></a></li>
-                  <li class="l-header__menu-item nav-about js-gnavi"><a class="l-header__menu-link" data-group="menu" href="#"><span class="l-header__menu-mark">ABOUT US</span><span class="fas fa-chevron-down"></span><span class="fas fa-chevron-up"></span></a>
-                    <div class="l-header__submenu -about-us">
-                      <div class="l-header__submenu-in">
-                        <ul class="l-header__submenu-list">
-                          <li class="l-header__submenu-item">
-                            <ul class="l-header__submenu-list-02">
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/about-us/"><i class="circle"></i>AKARA GROUP</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/faq/"><i class="circle"></i>FAQ</a></li>
-                              <?php /*
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/media/"><i class="circle"></i>MEDIA</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/news/"><i class="circle"></i>NEWS, ACTIVITIES, &amp; EVENT</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/career/"><i class="circle"></i>CAREERS</a></li>
-                              */ ?>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/en/contact-us/"><i class="circle"></i>CONTACT US</a></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </nav>
-              <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
-              <nav class="l-header__menu">
-                <div class="l-header__menu-cover"></div>
-                <ul class="l-header__menu-list">
-                  <li class="l-header__menu-item js-gnavi"><a class="l-header__menu-link" data-group="menu" href="#"><span class="l-header__menu-mark">สินค้า</span><span class="fas fa-chevron-down"></span><span class="fas fa-chevron-up"></span></a>
-                    <div class="l-header__submenu">
-                      <div class="l-header__submenu-in">
-                        <ul class="l-header__submenu-list">
-                          <li class="l-header__submenu-item"><div class="l-header__submenu-link">
-                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/img_akara_eggs.png" alt="akara"></figure><span class="l-header__submenu-text">akara</span></div>
-                            <ul class="l-header__submenu-list-02">
-                            <?php
-                              $args = array(
-                                'hide_empty' => 0,
-                                'child_of' => 16,
-                              );
-                              $cate = 'product_category';
-
-                              $terms = get_terms( $cate, $args );
-                              // print "<pre>"; print_r($terms);
-                              if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
-                            ?>
-                              <li class="l-header__submenu-list-02-item">
-                                <div class="c-mobile-float-text">READY TO COOK</div>
-                              <?php
-                                foreach ( $terms as $term ) :
-                                  $term_type = get_field('product_category_type', $term->taxonomy . '_' . $term->term_id);
-                                  if($term_type == 'ready-to-cook'):
-                              ?>
-                                <a class="l-header__submenu-list-02-link" href="/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
-                                <?php endif; // if($term_type == $product_category_type):?>
-                              <?php endforeach; ?>
-                              </li>
-                            <?php endif; ?>
-                            <?php
-                              if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
-                            ?>
-                              <li class="l-header__submenu-list-02-item">
-                                <div class="c-mobile-float-text">READY TO EAT</div>
-                                <?php
-                                foreach ( $terms as $term ) :
-                                  $term_type = get_field('product_category_type', $term->taxonomy . '_' . $term->term_id);
-                                  if($term_type == 'ready-to-eat'):
-                                ?>
-                                <a class="l-header__submenu-list-02-link" href="/product/<?php echo $term->slug; ?>"><i class="circle"></i><?php echo $term->name; ?></a>
-                                <?php endif; // if($term_type == $product_category_type):?>
-                              <?php endforeach; ?>
-                              </li>
-                            <?php endif; ?>
-                            </ul>
-                          </li>
-                          <?php
-                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                            $args = array(
-                              'post_type' => 'product',
-                              'post_status' => 'publish',
-                              'posts_per_page' => -1,
-                              'orderby' => 'date',
-                              'paged' => $paged,
-                              'tax_query' => array(
-                                array(
-                                    'taxonomy' => 'product_category',
-                                    'field'    => 'id',
-                                    'terms'    => 14,
-                                ),
-                              ),
-                            );
-
-                            $the_query = new WP_Query( $args );
-                            // print "<pre>"; print_r($the_query); die();
-                            if ( $the_query->have_posts() ) :
-                          ?>
-                          <li class="l-header__submenu-item"><div class="l-header__submenu-link">
-                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/menu-akara-eggology@2x.png" alt="AKARA EGGOLOGY"></figure><span class="l-header__submenu-text">AKARA EGGOLOGY</span></div>
-                            <ul class="l-header__submenu-list-02">
-                            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
-                            <?php endwhile; ?>
-                            </ul>
-                          </li>
-                          <?php endif; ?>
-                          <?php wp_reset_query(); ?>
-                          <?php
-                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                            $args = array(
-                              'post_type' => 'product',
-                              'post_status' => 'publish',
-                              'posts_per_page' => -1,
-                              'orderby' => 'date',
-                              'paged' => $paged,
-                              'tax_query' => array(
-                                array(
-                                    'taxonomy' => 'product_category',
-                                    'field'    => 'id',
-                                    'terms'    => 15,
-                                ),
-                              ),
-                            );
-
-                            $the_query = new WP_Query( $args );
-                            // print "<pre>"; print_r($the_query); die();
-                            if ( $the_query->have_posts() ) :
-                          ?>
-                          <li class="l-header__submenu-item"><div class="l-header__submenu-link">
-                            <figure class="image" data-match-height="mega-menu"><img src="/assets/img/common/menu-akara-ise.png" alt="AKARA ISE"></figure><span class="l-header__submenu-text">AKARA ISE</span></div>
-                            <ul class="l-header__submenu-list-02">
-                            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo get_permalink(); ?>"><i class="circle"></i><?php echo get_the_title(); ?></a></li>
-                            <?php endwhile; ?>
-                            </ul>
-                          </li>
-                          <?php endif; ?>
-                          <?php wp_reset_query(); ?>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="l-header__menu-item"><a class="l-header__menu-link" href="/our-story/"><span class="l-header__menu-mark">เรื่องราวของเรา</span></a></li>
-                  <li class="l-header__menu-item" style="display: none;"><a class="l-header__menu-link" href="/recipe/"><span class="l-header__menu-mark">สูตรอาหาร</span></a></li>
-                  <li class="l-header__menu-item nav-about js-gnavi"><a class="l-header__menu-link" data-group="menu" href="#"><span class="l-header__menu-mark">เกี่ยวกับเรา</span><span class="fas fa-chevron-down"></span><span class="fas fa-chevron-up"></span></a>
-                    <div class="l-header__submenu -about-us">
-                      <div class="l-header__submenu-in">
-                        <ul class="l-header__submenu-list">
-                          <li class="l-header__submenu-item">
-                            <ul class="l-header__submenu-list-02">
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/about-us/"><i class="circle"></i>เกี่ยวกับอัครากรุ๊ป</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/faq/"><i class="circle"></i>คำถามที่พบบ่อย</a></li>
-                              <?php /*
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/media/"><i class="circle"></i>สื่อ</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/news/"><i class="circle"></i>ข่าวสาร | กิจกรรม | อีเว้นท์</a></li>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/career/"><i class="circle"></i>ร่วมงานกับเรา</a></li>
-                              */ ?>
-                              <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="/contact-us/"><i class="circle"></i>ติดต่อเรา</a></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </nav>
+              <?php if( !is_th_lang() ): ?>
+                <?php get_template_part('templates/gnav_en'); ?>
+              <?php elseif( is_th_lang() ): ?>
+                <?php get_template_part('templates/gnav_th'); ?>
               <?php endif; ?>
               <div class="l-search-bar"><a class="c-link no-separate c-search modaal" href="#box-search" data-modaal-type="inline" data-modaal-animation="fade" data-modaal-overlay-opacity="0.9" data-custom-class="modal-search"><span class="fas fa-search"></span></a></div>
               <div class="c-box-search__detail" id="box-search">
                 <div class="c-box-search__inner">
-                  <form role="search" class="c-search-form" action="/search" method="get">
+                  <form role="search" class="c-search-form" action="<?php echo $root_url; ?>/search" method="get">
                     <div class="c-box-search__input"><i class="fas fa-search"></i>
-                    <?php if(ICL_LANGUAGE_CODE == 'th'): ?>
+                    <?php if( is_th_lang() ): ?>
                       <input class="c-input-text" id="s" name="search_text" type="search" placeholder="ค้นหา ...">
-                    <?php elseif(ICL_LANGUAGE_CODE == 'en'): ?>
+                    <?php elseif( !is_th_lang() ): ?>
                       <input class="c-input-text" id="s" name="search_text" type="search" placeholder="Type your keyword">
                     <?php endif; ?>
                     </div>
@@ -598,18 +327,18 @@
                   </form>
                 </div>
               </div>
-              <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
-              <div class="l-header__nav-trigger"><a class="l-header__nav-link c-button-middle c-button--orange -btn-where-to-buy" href="/en/where-to-buy/">
+              <?php if( !is_th_lang() ): ?>
+              <div class="l-header__nav-trigger"><a class="l-header__nav-link c-button-middle c-button--orange -btn-where-to-buy" href="<?php echo $root_url; ?>/en/where-to-buy/">
                   <div class="c-button__text -button"><i class="fa fa-map-marker-alt"></i><i class="fa fa-map-marker-alt fa--bottom"></i>WHERE TO BUY</div></a></div>
-              <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
-              <div class="l-header__nav-trigger"><a class="l-header__nav-link c-button-middle c-button--orange -btn-where-to-buy" href="/where-to-buy/">
+              <?php elseif( is_th_lang() ): ?>
+              <div class="l-header__nav-trigger"><a class="l-header__nav-link c-button-middle c-button--orange -btn-where-to-buy" href="<?php echo $root_url; ?>/where-to-buy/">
                   <div class="c-button__text -button"><i class="fa fa-map-marker-alt"></i><i class="fa fa-map-marker-alt fa--bottom"></i>จุดจำหน่ายสินค้า</div></a></div>
               <?php endif; ?>
               <div class="l-language-bar">
-                <?php if(ICL_LANGUAGE_CODE == 'en'): ?>
-                <a class="c-link is-active" href="/"><span class="icon -th"><img src="/assets/img/common/flag-thai.svg" alt=""></span></a>
-                <?php elseif(ICL_LANGUAGE_CODE == 'th'): ?>
-                <a class="c-link is-active" href="/en/"><span class="icon -eng"><img src="/assets/img/common/flag-eng.svg" alt=""></span></a>
+                <?php if( !is_th_lang() ): ?>
+                <a class="c-link is-active" href="<?php echo $root_url; ?>/"><span class="icon -th"><img src="/assets/img/common/flag-thai.svg" alt=""></span></a>
+                <?php elseif( is_th_lang() ): ?>
+                <a class="c-link is-active" href="<?php echo $root_url; ?>/en/"><span class="icon -eng"><img src="/assets/img/common/flag-eng.svg" alt=""></span></a>
                 <?php endif; ?>
               </div>
             </div>

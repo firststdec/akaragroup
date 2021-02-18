@@ -60,6 +60,22 @@ get_header();
             </div>
             <div class="c-media-detail__content" id="scroll_timeline">
               <div class="c-media-detail__content-inner animation-element slide-top">
+                <?php if( get_field('news_video') != '' ): ?>
+                <div class="p-our-story">
+                  <div class="c-box-video__inner">
+                    <div class="c-box-video__box-iframe animation-element slide-top">
+                      <div class="c-box-video__box-iframe-inner">
+                        <!-- <video width="320" height="240" controls>
+                          <source src="/assets/videos/our-story-video.mp4" type="video/mp4">
+                          <source src="/assets/videos/our-story-video.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                        </video> -->
+                        <iframe width="560" height="315" src="<?php echo get_field('news_video'); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <?php endif; ?>
                 <?php echo wpautop(get_the_content()); ?>
               </div>
             </div>
@@ -120,7 +136,7 @@ get_header();
 
             <div class="c-relate-post animation-element slide-top">
               <div class="c-relate-post__inner">
-                <div class="c-relate-post__heading animation-element slide-top">Related News, Activity, and Events</div>
+                <div class="c-relate-post__heading animation-element slide-top"><?php echo ( is_th_lang() )? 'ข่าวสาร & บทความ' : 'Related News, Activity, and Events'; ?></div>
                 <div class="c-media-list js-relate-post-sp">
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <?php get_template_part( 'templates/content', 'news' )?>

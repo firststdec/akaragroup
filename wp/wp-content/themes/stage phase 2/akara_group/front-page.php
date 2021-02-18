@@ -23,6 +23,11 @@ get_header();
   } elseif (ICL_LANGUAGE_CODE == 'th') {
     $lang_url = '';
   }
+  // CHECK URL
+  $root_url = '';
+  if( PRODUCTION ) {
+    $root_url = '/akara';
+  }
 ?>
 <main class="l-container">
   <div class="l-container__inner">
@@ -64,8 +69,6 @@ get_header();
                   while( have_rows('mainvisual_slider_rpt') ) : the_row();
                     $mainvisual_slider_rpt_image = get_sub_field('mainvisual_slider_rpt_image');
                     $mainvisual_slider_rpt_link = get_sub_field('mainvisual_slider_rpt_link');
-
-                    //https://www.youtube.com/watch?time_continue=2&v=8dVSeHLBYsQ&feature=emb_title&ab_channel=AkaraGroup
                 ?>
                   <?php if($mainvisual_slider_rpt_image['url']!=''): ?>
                   <div class="swiper-slide">
@@ -92,6 +95,7 @@ get_header();
           </div>
         </div>
       </div>
+
       <?php
         if(ICL_LANGUAGE_CODE == 'en'):
           $readmore_text = 'READMORE';
@@ -130,7 +134,7 @@ get_header();
               <div class="c-text-cmn-01 animation-element slide-left"><?php echo get_field('yellow_egg_content', $page_id); ?></div>
               <?php endif; ?>
               <div class="c-box-cmn-button animation-element slide-left">
-                <a class="c-button-cmn-01" href="<?php echo $lang_url; ?>/product/fresh-eggs-th"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+                <a class="c-button-cmn-01" href="<?php echo $root_url; ?><?php echo $lang_url; ?>/product/fresh-eggs-th"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
               </div>
               <div class="c-product-akara-yellow animation-element slide-top"></div>
             </div>
@@ -162,7 +166,7 @@ get_header();
               <?php if(get_field('green_egg_content')!=''): ?>
               <div class="c-text-cmn-01 -white animation-element slide-right"><?php echo get_field('green_egg_content', $page_id); ?></div>
               <?php endif;?>
-              <div class="c-box-cmn-button animation-element slide-right"><a class="c-button-cmn-01 animation-element slide-top" href="<?php echo $lang_url; ?>/products/organic"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+              <div class="c-box-cmn-button animation-element slide-right"><a class="c-button-cmn-01 animation-element slide-top" href="<?php echo $root_url; ?><?php echo $lang_url; ?>/products/organic"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
               <div class="c-product-akara-green animation-element slide-top"></div>
             </div>
             <div class="c-wave-green-bottom">
@@ -193,7 +197,7 @@ get_header();
               <?php if(get_field('orange_egg_content')!=''): ?>
               <div class="c-text-cmn-01 -white animation-element slide-left"><?php echo get_field('orange_egg_content', $page_id); ?></div>
               <?php endif; ?>
-              <div class="c-box-cmn-button animation-element slide-left"><a class="c-button-cmn-01" href="/products/mori-tama"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+              <div class="c-box-cmn-button animation-element slide-left"><a class="c-button-cmn-01" href="<?php echo $root_url; ?>/products/mori-tama"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
               <div class="c-product-akara-orange animation-element slide-top"></div>
             </div>
             <div class="c-wave-orange-bottom">
@@ -202,9 +206,11 @@ get_header();
           </div>
         </div>
       </div>
-      <!-- <div class="l-sec-cmn-01 -video-section p-our-story">
+
+      <div class="l-sec-cmn-01 -video-section p-our-story">
         <div class="inner"><img class="image" src="/assets/img/top/KV_akara-03_rese.jpg" alt="Akara Group"></div>
-      </div> -->
+      </div>
+
       <div class="l-sec-cmn-01 -story-about-top">
         <div class="c-wave-yellow">
           <canvas id="canvas-yellow"></canvas>
@@ -221,12 +227,13 @@ get_header();
               <?php if(get_field('akara_story_content')!=''): ?>
               <div class="c-text-cmn-01 animation-element slide-top"><?php echo get_field('akara_story_content', $page_id); ?></div>
               <?php endif; ?>
-              <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01" href="<?php echo site_url('/our-story'); ?>"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+              <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01" href="<?php echo $root_url; ?>/our-story"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
             </div>
             <div class="c-wave-white-bottom">
               <canvas id="canvas-white-bottom"></canvas>
             </div>
           </div>
+
           <div class="c-box-card-row-01 -reverse">
             <figure class="box-image animation-element slide-top"><img class="lazy image u-no-sp" src="/assets/img/top/img_about_akara.png" alt="About akara"><img class="lazy image u-no-tb u-no-pc" src="/assets/img/top/everyday-with-akara2.png" alt="About akara"></figure>
             <div class="box-content">
@@ -236,7 +243,7 @@ get_header();
               <?php if(get_field('about_akara_content')!=''): ?>
               <div class="c-text-cmn-01 animation-element slide-top"><?php echo get_field('about_akara_content', $page_id); ?></div>
               <?php endif; ?>
-              <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01" href="<?php echo site_url('/about-us'); ?>"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+              <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01" href="<?php echo $root_url; ?>/about-us"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
             </div>
           </div>
         </div>
@@ -244,6 +251,7 @@ get_header();
           <canvas id="canvas-yellow-bottom"></canvas>
         </div>
       </div>
+
       <div class="l-sec-cmn-01 -recipes-top-heading">
         <div class="c-wave-white">
           <canvas id="canvas-white-top"></canvas>
@@ -255,6 +263,7 @@ get_header();
                 <div class="c-line-deco"></div>
                 <div class="title"><span>RECIPE</span><span class="text-yellow">S</span></div>
               </div>
+
               <?php if(get_field('recipes_text')!=''): ?>
               <div class="box-text animation-element slide-top">
                 <div class="text"><?php echo get_field('recipes_text', $page_id); ?></div>
@@ -265,6 +274,7 @@ get_header();
           </div>
         </div>
       </div>
+
       <?php
         $product_relate_recipes = get_field('recipe_pickups');
       ?>
@@ -323,6 +333,7 @@ get_header();
         </div>
       </div>
       <?php endif; ?>
+
       <?php get_template_part( 'templates/subscriber'); ?>
     </div>
   </div>

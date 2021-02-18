@@ -600,38 +600,32 @@
     @include mq-max-sp {
       display: none;
     }
-
-    // &:hover {
-    //   transform: translate3d(0, 0, 0);
-    //   transform: scale(0.9);
-    //   background: url(/assets/img/recipes/detail/ico-arrow-down-yellow.svg) no-repeat center center;
-    // }
   }
 
   .box-image {
     position: relative;
-    padding-top: 41.667%;
+    // padding-top: 41.667%;
     width: 100%;
     margin-top: 40px;
 
-    @include mq-max-sp {
-      padding-top: 64.97%;
-    }
+    // @include mq-max-sp {
+    //   padding-top: 64.97%;
+    // }
 
     .image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // right: 0;
+      // bottom: 0;
+      // width: 100%;
+      // height: 100%;
     }
 
     img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
+      // object-fit: cover;
+      // width: 100%;
+      // height: 100%;
     }
   }
 }

@@ -31,6 +31,7 @@ get_header();
       $recipe_short_description = get_field('recipe_short_description');
       $recipe_cooking_level = get_field('recipe_cooking_level');
       $recipe_cooking_dish = get_field('recipe_cooking_dish');
+      $recipe_cooking_serve = get_field('recipe_cooking_serve');
       $recipe_cooking_meal = get_field('recipe_cooking_meal');
       $recipe_cooking_time = get_field('recipe_cooking_time');
       $recipe_download_pdf = get_field('recipe_download_pdf');
@@ -58,13 +59,13 @@ get_header();
                   <?php if($recipe_cooking_level!='' && $recipe_cooking_level != 'None'): ?>
                   <div class="c-recipes-tag-list__item">
                     <div class="icon"><img src="/assets/img/recipes/detail/ico_chief.svg" alt=""></div>
-                    <div class="text">Level <?php echo $recipe_cooking_level;?></div>
+                    <div class="text"><?php echo ( is_th_lang() )? 'ระดับ':'Level'; ?> <?php echo $recipe_cooking_level;?></div>
                   </div>
                   <?php endif; ?>
-                  <?php if($recipe_cooking_dish!='' && $recipe_cooking_dish!='None'): ?>
+                  <?php if($recipe_cooking_serve!=''): ?>
                   <div class="c-recipes-tag-list__item">
                     <div class="icon"><img src="/assets/img/recipes/detail/ico_dish.svg" alt=""></div>
-                    <div class="text"><?php echo $recipe_cooking_dish; ?> Dish</div>
+                    <div class="text"><?php echo $recipe_cooking_serve; ?></div>
                   </div>
                   <?php endif; ?>
                   <?php if($recipe_cooking_meal!='' && $recipe_cooking_meal!='None'): ?>
@@ -81,8 +82,11 @@ get_header();
                   <?php endif; ?>
                 </div>
               </div>
+              <?php
+                $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+              ?>
               <div class="c-box-recipe-heading__inner">
-                <div class="c-box-share-download"><a class="c-button-middle c-button--orange -btn-recipes" href="#">
+                <div class="c-box-share-download<?php echo ($recipe_download_pdf['url'] == '')? ' -single' : ''; ?>"><a class="c-button-middle c-button--orange -btn-recipes c-share-facebook" data-share="<?php echo $actual_link; ?>" href="#">
                   <div class="c-button__text -button"><i class="fa fas fa-share-alt"></i><i class="fa fas fa-share-alt fa--bottom"></i>SHARE <span class="u-no-sp">RECIPES</span></div></a>
                   <?php if($recipe_download_pdf['url']!=''): ?>
                   <a class="c-button-middle c-button--orange -btn-recipes" href="<?php echo $recipe_download_pdf['url'];?>" target="_blank">
@@ -101,7 +105,7 @@ get_header();
                       <?php $i = 1; ?>
                     <?php while( have_rows('cooking_step_rpt') ) : the_row(); ?>
                       <a class="list-step__item js-scroll" href="#step-<?php echo $i; ?>">
-                        <span>Step <?php echo $i; ?></span>
+                        <span><?php echo ( is_th_lang() )? 'ขั้นตอนที่':'Step'; ?> <?php echo $i; ?></span>
                       </a>
                       <?php $i++; ?>
                     <?php endwhile; ?>
@@ -114,10 +118,10 @@ get_header();
                       <path id="Polygon_2" data-name="Polygon 2" d="M6,0l6,8H0Z" transform="translate(12 8) rotate(180)" fill="#777"></path>
                     </svg>
                     <select class="c-media-category-select" name="category">
-                      <option value="">Choose process</option>
+                      <option value=""><?php echo ( is_th_lang() )? 'เลือกขั้นตอน':'Choose process'; ?></option>
                       <?php $i = 1; ?>
                       <?php while( have_rows('cooking_step_rpt') ) : the_row(); ?>
-                      <option value="step-<?php echo $i; ?>">Step <?php echo $i; ?></option>
+                      <option value="step-<?php echo $i; ?>"><?php echo ( is_th_lang() )? 'ขั้นตอนที่':'Step'; ?> <?php echo $i; ?></option>
                       <?php $i++; ?>
                       <?php endwhile; ?>
                     </select>
@@ -125,7 +129,7 @@ get_header();
                 </div>
               <?php endif; ?>
                 <div class="c-box-ingredient">
-                  <?php if( have_rows('recipe_information_table_detail_rpt') ): ?>
+                  <?php if( have_rows('recipe_information_table_detail_rpt') || get_the_content() != '' ): ?>
                   <div class="c-box-ingredient__inner">
                     <?php if(get_field('recipe_information_table_title')!=''): ?>
                     <div class="heading-egg">
@@ -135,6 +139,8 @@ get_header();
                       <div class="text"><?php echo get_field('recipe_information_table_title'); ?></div>
                     </div>
                     <?php endif; ?>
+
+                    <?php if( have_rows('recipe_information_table_detail_rpt') ) : ?>
                     <table class="c-table-ingrediant-01">
                       <tr>
                         <td>Name</td>
@@ -149,8 +155,21 @@ get_header();
                       </tr>
                       <?php endwhile; ?>
                     </table>
+                    <?php endif; ?>
+
+                    <?php if( get_the_content() != '') : ?>
+                    <div class="heading-egg">
+                      <div class="icon-egg">
+                        <div class="i-list-white"></div>
+                      </div>
+                      <div class="text">ข้อมูลเมนูอาหาร</div>
+                    </div>
+                    <div class="box-content u-mt-30"><?php the_content(); ?></div>
+                    <?php endif; ?>
                   </div>
                   <?php endif; // if( have_rows('recipe_information_table_detail_rpt') ): ?>
+
+
                   <?php if( have_rows('recipe_ingredients_table_detail_rpt') ): ?>
                   <div class="c-box-ingredient__inner -bg-cream">
                     <?php if(get_field('recipe_ingredients_table_title')!=''): ?>
@@ -163,6 +182,11 @@ get_header();
                     <?php endif; ?>
                     <table class="c-table-ingrediant-02">
                     <?php while( have_rows('recipe_ingredients_table_detail_rpt') ) : the_row(); ?>
+                      <?php if( get_sub_field('recipe_ingredients_table_detail_rpt_heading')!='' ): ?>
+                      <tr>
+                        <th colspan="2"><?php echo get_sub_field('recipe_ingredients_table_detail_rpt_heading'); ?></th>
+                      </tr>
+                      <?php endif; ?>
                       <tr>
                         <td><?php echo (get_sub_field('recipe_ingredients_table_detail_rpt_col_1')!='')? get_sub_field('recipe_ingredients_table_detail_rpt_col_1'):''; ?></td>
                         <td><?php echo (get_sub_field('recipe_ingredients_table_detail_rpt_col_2')!='')? get_sub_field('recipe_ingredients_table_detail_rpt_col_2'):''; ?></td>
@@ -177,7 +201,7 @@ get_header();
                 <div class="c-step-cook-list">
                 <?php while( have_rows('cooking_step_rpt') ) : the_row(); ?>
                   <div class="c-step-cook-list__item" id="step-<?php echo $i; ?>">
-                    <div class="c-step-egg"><span class="small">Step</span><span class="number"><?php echo $i; ?></span></div>
+                    <div class="c-step-egg"><span class="small"><?php echo ( is_th_lang() )? 'ขั้นตอนที่':'Step'; ?></span><span class="number"><?php echo $i; ?></span></div>
                     <div class="c-step-detail"><?php echo get_sub_field('cooking_step_rpt_detail'); ?></div>
                   </div>
                   <?php $i++; ?>
@@ -192,8 +216,8 @@ get_header();
                 <?php if($recipe_video_content!=''): ?>
                 <div class="c-recipes-video-text"><?php echo $recipe_video_content; ?></div>
                 <?php endif; ?>
-                <div class="c-box-share-download -bottom">
-                  <a class="c-button-middle c-button--orange -btn-recipes" href="#">
+                <div class="c-box-share-download -bottom<?php echo ($recipe_download_pdf['url'] == '')? ' -single' : ''; ?>">
+                  <a class="c-button-middle c-button--orange -btn-recipes c-share-facebook" href="#" data-share="<?php echo $actual_link; ?>">
                     <div class="c-button__text -button"><i class="fa fas fa-share-alt"></i><i
                         class="fa fas fa-share-alt fa--bottom"></i>SHARE <span class="u-no-sp">RECIPES</span></div>
                   </a>

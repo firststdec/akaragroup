@@ -7,6 +7,11 @@
   $term_list = get_the_terms($post->ID, 'product_category');
   // print "<pre>"; print_r($term_list);
   $banner = get_field('category_banner', $term_list[0]->taxonomy . '_' . $term_list[0]->term_id);
+    // CHECK URL
+  $root_url = '';
+  if( PRODUCTION ) {
+    $root_url = '/akara';
+  }
 ?>
 <main class="l-container">
   <div class="l-container__inner">
@@ -160,8 +165,8 @@
       ?>
       <?php if( $product_relate_recipes ): ?>
       <div class="c-recipes-box">
-        <div class="c-wave-green">
-          <canvas id="canvas-green"></canvas>
+        <div class="c-wave-orange">
+          <canvas id="canvas-orange"></canvas>
         </div>
         <div class="l-sec-cmn-01 -recipes-top-heading">
           <div class="inner">
@@ -241,8 +246,8 @@
           </div>
         </div>
 
-        <div class="c-wave-green-bottom">
-          <canvas id="canvas-green-bottom"></canvas>
+        <div class="c-wave-orange-bottom">
+          <canvas id="canvas-orange-bottom"></canvas>
         </div>
       </div>
       <?php endif; ?>

@@ -221,7 +221,8 @@
     line-height: 1.2;
 
     @include mq-max-sp {
-      font-size: 4rem;
+      font-size: 3.6rem;
+      width: 80%;
     }
   }
 

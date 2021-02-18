@@ -22,10 +22,21 @@ $obj = get_queried_object();
           <div class="p-recipes">
             <div class="c-mv-sub-page">
               <div class="c-mv-sub-page__inner">
+              <?php
+                if( is_th_lang() ) {
+                  $mv_heading = 'เมนูสูตรเด็ด ฉบับอัครา';
+                  $mv_subcontent = '';
+                  $mv_content = 'เติมคุณค่าในทุกมื้ออาหารไปกับเมนูไข่สูตรเด็ด หลากรสชาติ<br>ทำตามง่าย พร้อมวิธีทำ อร่อย สะดวก  ที่ช่วยสร้างสีสันให้กับมื้อโปรดของคุณ';
+                } elseif( !is_th_lang() ) {
+                  $mv_heading = 'Akara Recipes';
+                  $mv_subcontent = 'Make favorite recipes with our products.';
+                  $mv_content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscin.';
+                }
+              ?>
                 <div class="c-mv-sub-page__box-content">
-                  <div class="c-mv-sub-page__heading">Akara Recipes</div>
-                  <div class="c-mv-sub-page__sub-heading">Make favorite recipes with our products.</div>
-                  <div class="c-mv-sub-page__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscin.</div><a class="c-mv-sub-page__anchor-icon js-scroll c-scroll-down-button__static-page" href="#scroll_timeline">
+                  <div class="c-mv-sub-page__heading"><?php echo $mv_heading; ?></div>
+                  <!-- <div class="c-mv-sub-page__sub-heading">Make favorite recipes with our products.</div> -->
+                  <div class="c-mv-sub-page__text"><?php echo $mv_content; ?></div><a class="c-mv-sub-page__anchor-icon js-scroll c-scroll-down-button__static-page" href="#scroll_timeline">
                     <div class="c-scroll-down-line"></div></a>
                 </div>
                 <div class="c-mv-sub-page__box-image">
@@ -41,6 +52,14 @@ $obj = get_queried_object();
 
               $terms = get_terms( $cate, $args );
               // print "<pre>"; print_r($terms);
+
+              if( is_th_lang() ) {
+                $sub_heading = 'เลือกเมนูโปรดของคุณ';
+                $sub_content = 'เปลี่ยนเมนูธรรมดาให้กลายเป็นเมนูสุดสร้างสรรค์ ด้วยสารพัดเคล็ดลับเมนูไข่จาก อัครา ที่จะช่วยเปลี่ยนเมนูธรรมดาให้กลายเป็นเมนูสุดพิเศษประจำบ้าน';
+              } elseif( !is_th_lang() ){
+                $sub_heading = 'Choose your favorite menu';
+                $sub_content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim';
+              }
             ?>
             <div class="c-box-recipes">
               <div class="c-heading-box-egg animation-element slide-top">
@@ -56,16 +75,18 @@ $obj = get_queried_object();
                       </g>
                     </svg>
                   </div>
-                  <div class="c-heading-egg__text">Choose your favorite menu</div>
+                  <div class="c-heading-egg__text"><?php echo $sub_heading; ?></div>
                 </div>
-                <div class="c-heading-egg-content -lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</div>
+                <div class="c-heading-egg-content -lg"><?php echo $sub_content; ?></div>
               </div>
               <div class="c-media">
               <?php
                 if(ICL_LANGUAGE_CODE == 'en'){
                   $lang_url = '/en';
+                  $all_recipes = 'All Recipes';
                 } elseif (ICL_LANGUAGE_CODE == 'th') {
                   $lang_url = '';
+                  $all_recipes = 'เมนูทั้งหมด';
                 }
               ?>
               <?php if ( ! empty( $terms ) && ! is_wp_error( $terms ) ): ?>
@@ -73,7 +94,7 @@ $obj = get_queried_object();
                   <nav class="c-media-category u-no-sp animation-element slide-top">
                     <div class="c-media-category__list">
                       <div class="c-media-category__item"><a class="c-media-category__link" href="<?php echo $lang_url ?>/recipe/#nav">
-                          <div class="text">All Recipes</div></a></div>
+                          <div class="text"><?php echo $all_recipes; ?></div></a></div>
                       <?php foreach ( $terms as $term ) : ?>
                       <div class="c-media-category__item<?php echo ($obj->term_id == $term->term_id)? ' is-active':''; ?>"><a class="c-media-category__link" href="<?php echo $lang_url ?>/recipe/<?php echo $term->slug; ?>/#nav">
                           <div class="text"><?php echo $term->name; ?></div></a></div>
@@ -85,7 +106,7 @@ $obj = get_queried_object();
                       <path id="Polygon_2" data-name="Polygon 2" d="M6,0l6,8H0Z" transform="translate(12 8) rotate(180)" fill="#777"></path>
                     </svg>
                     <select class="c-media-category-select" name="category">
-                      <option value="<?php echo $lang_url ?>/recipe/#nav">All Recipes</option>
+                      <option value="<?php echo $lang_url ?>/recipe/#nav"><?php echo $all_recipes; ?></option>
                       <?php foreach ( $terms as $term ) : ?>
                       <option value="<?php echo $lang_url ?>/recipe/<?php echo $term->slug; ?>/#nav"<?php echo ($obj->term_id == $term->term_id)? ' selected':''; ?>><?php echo $term->name; ?></option>
                       <?php endforeach; ?>

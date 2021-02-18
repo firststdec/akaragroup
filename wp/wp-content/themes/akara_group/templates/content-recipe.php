@@ -1,6 +1,7 @@
 <?php
   $recipe_cooking_level = get_field('recipe_cooking_level');
   $recipe_cooking_time = get_field('recipe_cooking_time');
+  $recipe_cooking_serve = get_field('recipe_cooking_serve');
   $recipe_thumbnail = get_field('recipe_thumbnail');
 ?>
 <div class="c-media-list__item">
@@ -19,6 +20,12 @@
           <div class="c-badge__item -time">
             <div class="icon"></div>
             <div class="text"><?php echo $recipe_cooking_time; ?></div>
+          </div>
+          <?php endif; ?>
+          <?php if($recipe_cooking_serve !='' ): ?>
+          <div class="c-badge__item -serve">
+            <div class="icon"></div>
+            <div class="text"><?php echo $recipe_cooking_serve; ?></div>
           </div>
           <?php endif; ?>
         </div>
