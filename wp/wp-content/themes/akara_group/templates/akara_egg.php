@@ -290,7 +290,7 @@
             <div class="c-box-heading-center-text">
               <div class="inner">
                 <div class="box-heading animation-element slide-top">
-                  <div class="title"><span>RECIPIE</span><span class="text-yellow">S</span></div>
+                  <div class="title"><span>RECIPE</span><span class="text-yellow">S</span></div>
                 </div>
                 <div class="box-text animation-element slide-top">
                   <?php
@@ -298,7 +298,9 @@
                       $recipes_text = "Let 'Akara' help fill the deliciousness of every meal";
                       $readmore = 'READ MORE';
                     } elseif( is_th_lang() ) {
-                      $recipes_text = "ให้ 'อัครา' ช่วยเติมเต็มความอร่อยในทุกมื้ออาหารของคุณ ";
+                      // $recipes_text = "ให้ 'อัครา' ช่วยเติมเต็มความอร่อยในทุกมื้ออาหารของคุณ ";
+                      $top_th_id = 98;
+                      $recipes_text = get_field('recipes_text', $top_th_id);
                       $readmore = 'อ่านเพิ่มเติม';
                     }
                   ?>

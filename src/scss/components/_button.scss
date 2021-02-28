@@ -68,6 +68,17 @@
       }
     }
 
+    &.-is-active {
+      padding-right: 30px;
+
+      .text {
+        opacity: 1;
+        font-size: 1.4rem;
+        padding: 0 10px 0 15px;
+        position: relative !important;
+      }
+    }
+
     .arrow {
       transition: all .3s ease 0s;
       position: relative;
@@ -75,14 +86,19 @@
 
     .text {
       font-weight: 500;
-      font-size: 1.4rem;
       color: $baseColor;
       position: relative;
       font-size: 0;
       opacity: 0;
       transition: all .3s ease-out;
       width: fit-content;
-      position: absolute !important;
+      // position: absolute !important;
+
+      &.-is-active {
+        font-size: 1.4rem;
+        opacity: 1;
+        padding: 0 10px;
+      }
     }
 
     &.--green {
@@ -317,6 +333,21 @@ $reverse-easing: cubic-bezier(1, .51, .15, .6);
     overflow: hidden;
   }
 
+  .fab {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    opacity: 1;
+    color: #fff;
+    transition:
+    transform $timing * .718 $easing,
+    opacity $timing $easing;
+    transform: translateY(-50%);
+    overflow: hidden;
+    line-height: 16px;
+    font-size: 1.3rem;
+  }
+
   .fa--bottom {
     transform: translateY(-25px);
     color: #211E1F;
@@ -366,6 +397,11 @@ $reverse-easing: cubic-bezier(1, .51, .15, .6);
     margin-left: 5px;
   }
 
+  .fab {
+    color: $yellow;
+    margin-left: 5px;
+  }
+
   .-button {
     font-weight: 400;
 
@@ -392,6 +428,11 @@ $reverse-easing: cubic-bezier(1, .51, .15, .6);
     color: #FFC416;
 
     .fa {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+
+    .fab {
       transform: translateY(50px);
       opacity: 0;
     }

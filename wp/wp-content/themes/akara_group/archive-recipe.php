@@ -120,7 +120,7 @@ get_header();
                 'post_status' => 'publish',
                 'posts_per_page' => EVENT_POSTPERPAGE,
                 'paged' => 1,
-                'orderby' => array('date' => 'DESC'),
+                'orderby' => array('menu_order' => 'ASC'),
                 'has_password'   => FALSE, // NO PASSWORD POST SHOW
               );
               $the_query = new WP_Query( $args );
@@ -135,7 +135,7 @@ get_header();
             <?php if (  $the_query->max_num_pages > 1 ): ?>
               <div class="c-box-cmn-button animation-element slide-top --center">
                 <div class="loading" style="display: none;">Loading...</div>
-                <div class="c-button-cmn-01 --border-base akara_loadmore_dynamic" data-post-type="recipe"><span class="text">SEE MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></div>
+                <div class="c-button-cmn-01 --border-base akara_loadmore_dynamic -is-active" data-post-type="recipe"><span class="text"><?php echo (is_th_lang())? 'อ่านเพิ่มเติม' : 'SEE MORE'; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></div>
               </div>
             <?php
               wp_reset_query();

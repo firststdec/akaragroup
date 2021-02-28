@@ -398,11 +398,12 @@ function remove_menu()
 {
   remove_menu_page('edit-comments.php');
   remove_menu_page('link-manager.php');
-  //remove_menu_page('edit.php');
+  remove_menu_page('edit.php?post_type=media');
   //remove_submenu_page('edit.php', 'edit-tags.php?taxonomy=post_tag');
-  //remove_menu_page('themes.php');
-  //remove_menu_page('edit.php?post_type=acf-field-group');
+  remove_menu_page('themes.php');
+  // remove_menu_page('edit.php?post_type=acf-field-group');
   //remove_menu_page('tools.php');
+  remove_menu_page('admin.php?page=cptui_manage_post_types');
   remove_submenu_page( 'index.php', 'update-core.php' );
   
   //remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag' );
@@ -1206,13 +1207,6 @@ function catch_that_image() {
   return $first_img;
 }
 
-  //管理画面の「見出し１」等を削除する
-function custom_editor_settings( $initArray ){
-  $initArray['block_formats'] = "段落=p; 見出し2=h2; 見出し3=h3;";
-  return $initArray;
-  }
-// add_filter( 'tiny_mce_before_init', 'custom_editor_settings' );
-
 add_filter('xmlrpc_enabled', '__return_false');
 
 function my_password_form() {
@@ -1318,3 +1312,9 @@ function is_th_lang() {
     return false;
   }
 }
+
+function my_format_TinyMCE( $in ) {
+        $in['block_formats'] = "Paragraph=p; Heading 2=h2; Heading 3=h3;";
+    return $in;
+}
+add_filter( 'tiny_mce_before_init', 'my_format_TinyMCE' );

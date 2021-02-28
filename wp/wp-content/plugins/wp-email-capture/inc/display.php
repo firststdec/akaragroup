@@ -34,9 +34,9 @@ function wp_email_capture_form( $error = "" ) {
 			<?php do_action( 'wp_email_capture_form_echo_form_before_submit_button' ); ?>
 
 			<input type="hidden" name="wp_capture_action" value="1" />
-
-			<!-- <input name="Submit" type="submit" value="<?php _e('Submit','wp-email-capture'); ?>" class="wp-email-capture-submit wp-email-capture-widget-worldwide" /> -->
-
+			<?php /*
+			<input name="Submit" type="submit" value="<?php _e('Submit','wp-email-capture'); ?>" class="wp-email-capture-submit wp-email-capture-widget-worldwide" />
+			*/ ?>
 			<div class="c-box-cmn-button">
 				<button class="c-button-cmn-01" type="submit" value="<?php _e('Submit','wp-email-capture'); ?>"><span class="text">SUBSCRIBE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></button>
 			</div>

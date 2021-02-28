@@ -38,7 +38,10 @@ get_header();
                   <a class="c-mv-sub-page__anchor-icon js-scroll c-scroll-down-button__static-page" href="#scroll_timeline"><div class="c-scroll-down-line"></div></a>
                 </div>
                 <div class="c-mv-sub-page__box-image">
-                  <figure class="c-mv-sub-page__image-frame"><img src="/assets/img/career/img_mv_career.png" alt=""></figure>
+                  <figure class="c-mv-sub-page__image-frame">
+                    <img class="u-no-sp" src="/assets/img/career/Q12A2093@3x.png" alt="">
+                    <img clas="u-no-pc u-no-tb" src="/assets/img/career/Q12A2093@3x.png" alt="">
+                  </figure>
                 </div>
               </div>
             </div>

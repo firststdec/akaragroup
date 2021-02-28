@@ -208,7 +208,7 @@ get_header();
       </div>
 
       <div class="l-sec-cmn-01 -video-section p-our-story">
-        <div class="inner"><img class="image" src="/assets/img/top/img_kv_top_01.jpg" alt="Akara Group"></div>
+        <div class="inner"><img class="image" src="/assets/img/top/KV1-akara-01-resized.jpg" alt="Akara Group"></div>
       </div>
 
       <div class="l-sec-cmn-01 -story-about-top">
@@ -269,7 +269,7 @@ get_header();
                 <div class="text"><?php echo get_field('recipes_text', $page_id); ?></div>
               </div>
               <?php endif; ?>
-              <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01 --border-base" href="<?php echo $lang_url; ?>/recipe/"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
+              <div class="c-box-cmn-button animation-element slide-top"><a class="c-button-cmn-01 --border-base -is-active" href="<?php echo $lang_url; ?>/recipe/"><span class="text"><?php echo $readmore_text; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></a></div>
             </div>
           </div>
         </div>

@@ -22,6 +22,7 @@
     $title = 'Akara Group';
     $kwd = 'Everyday with akara - akara group';
     $desc = 'ผลิตภัณฑ์ไข่ไก่สดอนามัย และผลิตภัณฑ์ไข่ไก่แปรรูป ของ ‘akara’ ตัวจริงเรื่องไข่ไก่ พิถีพิถันในทุกขั้นตอน เพื่อเติมคุณค่า ในทุกช่วงเวลาของคุณ';
+    $og_img = '/wp/wp-content/uploads/2020/11/img_news_activites_mv.png';
 
     if(is_page('faq')) {
       $title = 'FAQ | Akara Group';
@@ -123,10 +124,54 @@
       $title = strip_tags(get_the_title($post->ID)).  $seo  . ' | ' . $title;
       $desc = '';
       $kwd = '';
+
+      if(get_post_type($post->ID) == 'recipe'){
+        $recipe_thumbnail = get_field('recipe_thumbnail', $post->ID);
+        $og_img = $recipe_thumbnail['url'];
+
+        if(get_field('meta_title', $post->ID)) {
+          $title = get_field('meta_title', $post->ID);
+        }
+
+        if(get_field('meta_keywords', $post->ID)) {
+          $kwd = get_field('meta_keywords', $post->ID);
+        }
+
+        if(get_field('meta_description', $post->ID)) {
+          $desc = get_field('meta_description', $post->ID);
+        }
+
+        if(get_field('og_image', $post->ID)) {
+          $og_image = get_field('og_image', $post->ID);
+          $og_img = $og_image['url'];
+        }
+      }
+
+      if(get_post_type($post->ID) == 'news'){
+        $recipe_thumbnail = get_field('news_thumbnail', $post->ID);
+        $og_img = $recipe_thumbnail['url'];
+
+        if(get_field('meta_title', $post->ID)) {
+          $title = get_field('meta_title', $post->ID);
+        }
+
+        if(get_field('meta_keywords', $post->ID)) {
+          $kwd = get_field('meta_keywords', $post->ID);
+        }
+
+        if(get_field('meta_description', $post->ID)) {
+          $desc = get_field('meta_description', $post->ID);
+        }
+
+        if(get_field('og_image', $post->ID)) {
+          $og_image = get_field('og_image', $post->ID);
+          $og_img = $og_image['url'];
+        }
+      }
     }
     // echo 'lang=>' .ICL_LANGUAGE_CODE;
     $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    $og_img = 'http://staging.akaragroup.co.th/wp/wp-content/uploads/2020/11/img_news_activites_mv.png';
+    
   ?>
 	<title><?php echo $title; ?></title>
 	<meta name="keyword" content="Akara Group">
@@ -182,7 +227,7 @@
 	<link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/solid.css">
 	<link rel="stylesheet" href="/assets/css/libs/swiper.css">
 	<link rel="stylesheet" href="/assets/css/libs/modaal.css">
-  <link rel="stylesheet" href="/assets/css/style.css?v=2021-2-18-2">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2021-2-28-7">
   <link rel="stylesheet" href="/assets/css/libs/validationEngine.jquery.css?v=3">
 	<?php wp_head(); ?>
 </head>

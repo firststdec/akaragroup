@@ -523,6 +523,7 @@
     position: relative;
     padding-top: 48.60%;
     width: 100%;
+    margin-top: 100px;
 
     @include mq-max-sp {
       margin: 50px auto 0;
@@ -541,10 +542,11 @@
   }
 
   .c-recipes-video-text {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     text-align: center;
     color: #777777;
     margin-top: 60px;
+    font-style: italic;
 
     @include mq-max-sp {
       font-size: 1.4rem;
@@ -589,7 +591,7 @@
     justify-content: center;
     transition: all .3s;
     cursor: pointer;
-    background: url(/assets/img/recipes/detail/ico-arrow-down.svg) no-repeat center center;
+    background: url(/assets/img/recipes/detail/ico-arrow-down.png) no-repeat center center;
     position: absolute;
     z-index: 3;
     top: -28px;
@@ -608,24 +610,32 @@
     width: 100%;
     margin-top: 40px;
 
+    @include mq-min-tb {
+      padding-top: 41.667%;
+    }
+
     // @include mq-max-sp {
     //   padding-top: 64.97%;
     // }
 
     .image {
-      // position: absolute;
-      // top: 0;
-      // left: 0;
-      // right: 0;
-      // bottom: 0;
-      // width: 100%;
-      // height: 100%;
+      @include mq-min-tb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     img {
-      // object-fit: cover;
-      // width: 100%;
-      // height: 100%;
+      @include mq-min-tb {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

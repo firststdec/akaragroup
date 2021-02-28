@@ -63,7 +63,7 @@
               <select id="select-product-green" name="select-product">
               <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <?php $slug = basename(get_permalink()); ?>
-                <option value="/akara/product/<?php echo $slug; ?>" <?php echo ($slug == $pagename)? 'selected="selected"':''; ?>><?php echo get_the_title();?></option>
+                <option value="<?php echo $root_url; ?>/product/<?php echo $slug; ?>" <?php echo ($slug == $pagename)? 'selected="selected"':''; ?>><?php echo get_the_title();?></option>
               <?php endwhile; ?>
 
               </select>
@@ -219,7 +219,7 @@
             <div class="c-box-heading-center-text">
               <div class="inner">
                 <div class="box-heading animation-element slide-top">
-                  <div class="title"><span>RECIPIE</span><span class="text-yellow">S</span></div>
+                  <div class="title"><span>RECIPE</span><span class="text-yellow">S</span></div>
                 </div>
                 <div class="box-text animation-element slide-top">
                   <?php
@@ -227,7 +227,9 @@
                       $recipes_text = "Let 'Akara' help fill the deliciousness of every meal";
                       $readmore = 'READ MORE';
                     } elseif(ICL_LANGUAGE_CODE == 'th') {
-                      $recipes_text = "ให้ 'อัครา' ช่วยเติมเต็มความอร่อยในทุกมื้ออาหารของคุณ ";
+                      // $recipes_text = "ให้ 'อัครา' ช่วยเติมเต็มความอร่อยในทุกมื้ออาหารของคุณ ";
+                      $top_th_id = 98;
+                      $recipes_text = get_field('recipes_text', $top_th_id);
                       $readmore = 'อ่านเพิ่มเติม';
                     }
                   ?>

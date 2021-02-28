@@ -23,6 +23,12 @@
       }
     }
   }
+
+  .l-sec-box-swiper-voice {
+    @include mq-max-sp {
+      margin-top: 20px;
+    }
+  }
 }
 
 .c-box-swiper-mv {
@@ -1608,7 +1614,7 @@
 }
 
 .l-sec-cmn-01.-video-section {
-  margin-top: 150px;
+  margin-top: 250px;
   padding: 0 20px;
 
   @include mq-max-sp {
@@ -1623,5 +1629,9 @@
     @include mq-min-max-tb {
       padding: 0 20px;
     }
+  }
+
+  .image {
+    box-shadow: -10px 35px 65px 0px rgba(0, 0, 0, 0.3);
   }
 }

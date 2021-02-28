@@ -130,13 +130,15 @@ get_header();
                   )
                 ),
               );
+
+              $cate_name = $tags[0]->name;
               $the_query = new WP_Query( $args );
               if ( $the_query->have_posts() ) :
             ?>
 
             <div class="c-relate-post animation-element slide-top">
               <div class="c-relate-post__inner">
-                <div class="c-relate-post__heading animation-element slide-top"><?php echo ( is_th_lang() )? 'ข่าวสาร & บทความ' : 'Related News, Activity, and Events'; ?></div>
+                <div class="c-relate-post__heading animation-element slide-top"><?php echo ( is_th_lang() )? $cate_name .' อื่นๆ' : 'Related News, Activity, and Events'; ?></div>
                 <div class="c-media-list js-relate-post-sp">
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <?php get_template_part( 'templates/content', 'news' )?>

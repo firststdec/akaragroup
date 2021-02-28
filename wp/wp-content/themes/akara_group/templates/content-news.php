@@ -50,6 +50,15 @@
             </text>
           </svg>
         </div>
+        <?php elseif($tags[0]->slug == 'article'): ?>
+        <div class="icon -press">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+            <text id="ico_article" transform="translate(6 14)" fill="#777" font-size="16"
+              font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'">
+              <tspan x="-6" y="0"></tspan>
+            </text>
+          </svg>
+        </div>
         <?php endif; ?>
 
         <div class="text"><?php echo $tags[0]->name; ?></div>

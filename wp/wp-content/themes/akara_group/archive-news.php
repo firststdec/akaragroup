@@ -22,7 +22,7 @@ get_header();
       $mv_content = 'Follow us for all the latest AKARA news, photos, videos, events coverage, new products, and much more.';
     } elseif( is_th_lang() ) {
       $mv_heading = 'ข่าวสาร & บทความ';
-      $mv_content = 'ติดตามข่าวสารและกิจกรรม ของอัคราได้จากที่นี่...';
+      $mv_content = 'ติดตามข่าวสารและกิจกรรม ของอัคราได้ที่นี่...';
     }
   ?>
   <main class="l-container">
@@ -103,6 +103,16 @@ get_header();
                       </svg>
                     </div>
                     <div class="text"><?php echo $term->name; ?></div></a></div>
+                  <?php elseif($term->slug == 'article'): ?>
+                  <div class="c-media-category__item"><a class="c-media-category__link" href="<?php echo $lang_url; ?>/news/<?php echo $term->slug; ?>/#nav">
+                    <div class="icon -tv">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+                        <text id="ico_article" transform="translate(6 14)" fill="#777" font-size="16" font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'">
+                          <tspan x="-6" y="0"></tspan>
+                        </text>
+                      </svg>
+                    </div>
+                    <div class="text"><?php echo $term->name; ?></div></a></div>
                   <?php endif; ?>
                 <?php endforeach; ?>
               </div>
@@ -143,7 +153,7 @@ get_header();
           <?php if (  $the_query->max_num_pages > 1 ): ?>
           <div class="c-box-cmn-button animation-element slide-top --center">
             <div class="loading" style="display: none;">Loading...</div>
-            <div class="c-button-cmn-01 --border-base akara_loadmore_dynamic" data-post-type="news"><span class="text">SEE MORE</span><span class="arrow"><i class="fa fa-arrow-right"></i></span></div>
+            <div class="c-button-cmn-01 --border-base akara_loadmore_dynamic -is-active" data-post-type="news"><span class="text"><?php echo (is_th_lang())? 'อ่านเพิ่มเติม' : 'SEE MORE'; ?></span><span class="arrow"><i class="fa fa-arrow-right"></i></span></div>
           </div>
           <?php
             wp_reset_query();

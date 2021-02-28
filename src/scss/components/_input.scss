@@ -58,6 +58,10 @@
       height: 9px;
       transform: translateY(-50%);
       background: url(/assets/img/common/ico_dropdown.png) no-repeat;
+
+      @include mq-max-sp {
+        right: 16px;
+      }
     }
     &__error{
       select{

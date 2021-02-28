@@ -14,7 +14,7 @@
       }
 
       &.-news {
-        background: url(/assets/img/news/img_news_activites_mv.png) no-repeat center bottom;
+        background: url(/assets/img/news/img_mainvisual_news@3x.png) no-repeat center bottom;
         background-size: cover;
       }
     }
@@ -191,6 +191,30 @@
               margin-top: 10px !important;
               margin-bottom: 0 !important;
             }
+          }
+
+          ol {
+            margin-top: 50px !important;
+            margin-bottom: 0 !important;
+            list-style: decimal;
+            padding-left: 1.5em;
+
+            @include mq-max-sp {
+              margin-top: 30px !important;
+            }
+
+            li {
+              margin-top: 10px !important;
+              margin-bottom: 0 !important;
+            }
+          }
+
+          strong {
+            font-weight: bold;
+          }
+
+          em {
+            font-style: italic;
           }
 
           img{
@@ -789,6 +813,10 @@
 
   &__item {
     margin: 0 10px;
+
+    @include mq-min-tb {
+      margin-bottom: 15px;
+    }
 
     &.is-active,
     &:hover {

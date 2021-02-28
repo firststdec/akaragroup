@@ -87,7 +87,7 @@ get_header();
               ?>
               <div class="c-box-recipe-heading__inner">
                 <div class="c-box-share-download<?php echo ($recipe_download_pdf['url'] == '')? ' -single' : ''; ?>"><a class="c-button-middle c-button--orange -btn-recipes c-share-facebook" data-share="<?php echo $actual_link; ?>" href="#">
-                  <div class="c-button__text -button"><i class="fa fas fa-share-alt"></i><i class="fa fas fa-share-alt fa--bottom"></i>SHARE <span class="u-no-sp">RECIPES</span></div></a>
+                  <div class="c-button__text -button"><i class="fab fa-facebook"></i><i class="fab fa-facebook fa--bottom"></i>SHARE <span class="u-no-sp">RECIPES</span></div></a>
                   <?php if($recipe_download_pdf['url']!=''): ?>
                   <a class="c-button-middle c-button--orange -btn-recipes" href="<?php echo $recipe_download_pdf['url'];?>" target="_blank">
                   <div class="c-button__text -button"><i class="fa fas fa-file-pdf"></i><i class="fa fas fa-file-pdf fa--bottom"></i>DOWNLOAD <span class="u-no-sp">PDF</span></div></a>
@@ -218,8 +218,8 @@ get_header();
                 <?php endif; ?>
                 <div class="c-box-share-download -bottom<?php echo ($recipe_download_pdf['url'] == '')? ' -single' : ''; ?>">
                   <a class="c-button-middle c-button--orange -btn-recipes c-share-facebook" href="#" data-share="<?php echo $actual_link; ?>">
-                    <div class="c-button__text -button"><i class="fa fas fa-share-alt"></i><i
-                        class="fa fas fa-share-alt fa--bottom"></i>SHARE <span class="u-no-sp">RECIPES</span></div>
+                    <div class="c-button__text -button"><i class="fab fa-facebook"></i><i
+                        class="fab fa-facebook fa--bottom"></i>SHARE <span class="u-no-sp">RECIPES</span></div>
                   </a>
                   <?php if($recipe_download_pdf['url']!=''): ?>
                   <a class="c-button-middle c-button--orange -btn-recipes" href="<?php echo $recipe_download_pdf['url']; ?>" target="_blank">
@@ -235,8 +235,8 @@ get_header();
               $args = array(
                 'post_type' => array('recipe'),
                 'post_status' => 'publish',
-                'orderby'=> 'date',
-                'order' => 'DESC',
+                'orderby'=> 'menu_order',
+                'order' => 'ASC',
                 'posts_per_page' => -1,
                 );
                 $the_query = new WP_Query( $args );
@@ -250,6 +250,7 @@ get_header();
                 //print "<pre>"; print_r($ids);
                 // get and echo previous and next post in the same taxonomy
                 $thisindex = array_search( $current_post_id, $ids);
+                $firstPost = $ids[count($ids) - 1];
                 $previd = $ids[$thisindex+1];
                 $nextid = $ids[$thisindex-1];
               // 	echo '=>'.$previd;
@@ -276,9 +277,25 @@ get_header();
                 <?php endif; ?>
               </div>
             </a>
+            <?php else: ?>
+            <a class="c-box-next-recipes" href="<?php echo esc_url(get_the_permalink($firstPost)); ?>">
+              <div class="c-box-next-recipes__inner">
+                <div class="nav-text">Next recipe</div>
+                <div class="heading"><?php echo get_the_title($firstPost); ?></div>
+                <?php
+                  $next_recipe_mainvisual = get_field('recipe_mainvisual', $firstPost);
+                ?>
+                <?php if($next_recipe_mainvisual['url'] !=''): ?>
+                <div class="box-image">
+                  <div class="icon-down"></div>
+                  <figure class="image"><img src="<?php echo $next_recipe_mainvisual['url']; ?>" alt=""></figure>
+                </div>
+                <?php endif; ?>
+              </div>
+            </a>
             <?php endif; ?>
-            
-            <div class="<?php if(!empty($nextid)): ?>u-no-pc u-no-tb<?php endif; ?>">
+
+            <div class="u-no-pc u-no-tb">
             <?php get_template_part( 'templates/subscriber'); ?>
             </div>
            

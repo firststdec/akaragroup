@@ -38,8 +38,8 @@
 			$args = array(
 				'post_type' => array('recipe'),
 				'post_status' => 'publish',
-				'orderby'=> 'date',
-				'order' => 'DESC',
+				'orderby'=> 'menu_order',
+				'order' => 'ASC',
 				'posts_per_page' => -1,
 				);
 				$the_query = new WP_Query( $args );
@@ -59,7 +59,7 @@
 	?>
 	<?php // if(!empty($nextid) || !empty($previd)): ?>
 
-	<footer data-next="<?php echo $nextid. ' '. $current_post_id; ?>" class="l-footer<?php echo (is_singular('recipe') && !empty($nextid))? ' u-no-pc u-no-tb':''; ?>">
+	<footer data-next="<?php echo $nextid. ' '. $current_post_id; ?>" class="l-footer<?php echo (is_singular('recipe'))? ' u-no-pc u-no-tb':''; ?>">
 		<div class="c-wave-footer">
 			<canvas id="canvas-footer"></canvas>
 		</div>
