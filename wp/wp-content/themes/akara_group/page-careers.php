@@ -39,8 +39,8 @@ get_header();
                 </div>
                 <div class="c-mv-sub-page__box-image">
                   <figure class="c-mv-sub-page__image-frame">
-                    <img class="u-no-sp" src="/assets/img/career/Q12A2093@3x.png" alt="">
-                    <img clas="u-no-pc u-no-tb" src="/assets/img/career/Q12A2093@3x.png" alt="">
+                    <img class="u-no-sp" src="/assets/img/career/Q12A2093@3x_pc.png" alt="">
+                    <img clas="u-no-pc u-no-tb" src="/assets/img/career/Q12A2093@3x_sp.png" alt="">
                   </figure>
                 </div>
               </div>

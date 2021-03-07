@@ -119,7 +119,7 @@ get_header();
                 'post_status' => 'publish',
                 'posts_per_page' => 4,
                 'paged' => 1,
-                'orderby' => array('meta_value' => 'DESC'),
+                'orderby' => array('menu_order' => 'ASC'),
                 'has_password'   => FALSE, // NO PASSWORD POST SHOW
                 'post__not_in' => array(get_the_ID()),
                 'tax_query' => array(

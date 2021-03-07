@@ -133,7 +133,7 @@
                 <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo $root_url; ?>/faq/"><i class="circle"></i>คำถามที่พบบ่อย</a></li>
                 <!-- <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo $root_url; ?>/media/"><i class="circle"></i>สื่อ</a></li> -->
                 <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo $root_url; ?>/news/"><i class="circle"></i>ข่าวสาร & บทความ</a></li>
-                <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo $root_url; ?>/career/"><i class="circle"></i>ร่วมงานกับเรา</a></li>
+                <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo $root_url; ?>/careers/"><i class="circle"></i>ร่วมงานกับเรา</a></li>
                 <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo $root_url; ?>/contact-us/"><i class="circle"></i>ติดต่อเรา</a></li>
               </ul>
             </li>

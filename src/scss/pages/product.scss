@@ -1559,6 +1559,11 @@
           }
         }
 
+        &.-serve > .icon {
+          background: url(/assets/img/recipes/detail/ico_dish.svg) no-repeat center center #FCFBF2;
+          background-size: 20px;
+        }
+
         &:first-of-type {
           margin-right: 10px;
         }

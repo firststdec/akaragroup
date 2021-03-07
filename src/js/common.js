@@ -1100,17 +1100,21 @@ const selectBoxLink = function() {
 /* ----------------------------------------------------------
   jumpToHashTarget
 ---------------------------------------------------------- */
-var jumpToHashTarget = function(){
-  var speed = 400;
-  var headerHeight = MQ=='PC'?40:50;
-  var diff = MQ=='PC'?20:0;
-  if (window.location.hash) {
-    window.scrollTo(0,0);
-    if($(window.location.hash).length) {
-      var position  = $(window.location.hash).offset().top - headerHeight;
-      $('body,html').animate({scrollTop: position - diff}, speed, 'swing');
-    }
+const jumpToHashTarget = function(){
+  const speed = 400;
+  var href= window.location.hash;
+  var minus = $('.l-header__in').height() || 0;
+
+  var target = $(href == '#' || href == '' ? 'html' : href);
+  var position = target.offset().top - minus - 50;
+
+  if(href == '#'){
+    $('body, html').animate({scrollTop: 0}, speed, 'swing');
+  } else {
+    $('body, html').animate({scrollTop: position}, speed, 'swing');
   }
+
+  return false;
 }
 
 let videoTop = function () {

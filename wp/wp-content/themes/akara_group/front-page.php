@@ -207,7 +207,7 @@ get_header();
         </div>
       </div>
 
-      <div class="l-sec-cmn-01 -video-section p-our-story">
+      <div class="l-sec-cmn-01 -video-section p-our-story animation-element slide-top">
         <div class="inner"><img class="image" src="/assets/img/top/KV1-akara-01-resized.jpg" alt="Akara Group"></div>
       </div>
 
@@ -290,6 +290,7 @@ get_header();
                 <?php
                   $recipe_cooking_level = get_field('recipe_cooking_level', $product_relate_recipe->ID);
                   $recipe_cooking_time = get_field('recipe_cooking_time', $product_relate_recipe->ID);
+                  $recipe_cooking_serve = get_field('recipe_cooking_serve', $product_relate_recipe->ID);
                   $recipe_thumbnail = get_field('recipe_thumbnail', $product_relate_recipe->ID);
                 ?>
 
@@ -310,6 +311,12 @@ get_header();
                           <div class="c-badge__item -time">
                             <div class="icon"></div>
                             <div class="text"><?php echo $recipe_cooking_time; ?></div>
+                          </div>
+                        <?php endif; ?>
+                        <?php if($recipe_cooking_serve !='' ): ?>
+                          <div class="c-badge__item -serve">
+                            <div class="icon"></div>
+                            <div class="text"><?php echo $recipe_cooking_serve; ?></div>
                           </div>
                         <?php endif; ?>
                         </div>

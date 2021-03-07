@@ -105,7 +105,7 @@ $obj = get_queried_object();
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8">
                       <path id="Polygon_2" data-name="Polygon 2" d="M6,0l6,8H0Z" transform="translate(12 8) rotate(180)" fill="#777"></path>
                     </svg>
-                    <select class="c-media-category-select" name="category">
+                    <select class="c-media-category-select js-category-change" name="category">
                       <option value="<?php echo $lang_url ?>/recipe/#nav"><?php echo $all_recipes; ?></option>
                       <?php foreach ( $terms as $term ) : ?>
                       <option value="<?php echo $lang_url ?>/recipe/<?php echo $term->slug; ?>/#nav"<?php echo ($obj->term_id == $term->term_id)? ' selected':''; ?>><?php echo $term->name; ?></option>

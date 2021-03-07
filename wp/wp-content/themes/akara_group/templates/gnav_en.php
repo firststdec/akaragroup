@@ -133,7 +133,7 @@
                 <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo $root_url; ?>/en/faq/"><i class="circle"></i>FAQ</a></li>
                 <!-- <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo $root_url; ?>/en/media/"><i class="circle"></i>MEDIA</a></li> -->
                 <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo $root_url; ?>/en/news/"><i class="circle"></i>NEWS, ACTIVITIES, &amp; EVENT</a></li>
-                <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo $root_url; ?>/en/career/"><i class="circle"></i>CAREERS</a></li>
+                <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo $root_url; ?>/en/careers/"><i class="circle"></i>CAREERS</a></li>
                 <li class="l-header__submenu-list-02-item"><a class="l-header__submenu-list-02-link" href="<?php echo $root_url; ?>/en/contact-us/"><i class="circle"></i>CONTACT US</a></li>
               </ul>
             </li>

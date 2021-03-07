@@ -265,7 +265,7 @@
         </div>
       </div>
       <?php if( $banner['url'] != '' ): ?>
-      <div class="l-sec-cmn-01 -video-section p-our-story u-mt-0">
+      <div class="l-sec-cmn-01 -video-section p-our-story u-mt-0 animation-element slide-top">
         <div class="inner"><img class="image" src="<?php echo $banner['url']; ?>" alt="<?php echo $banner['alt']; ?>"></div>
       </div>
       <?php endif; ?>
@@ -328,6 +328,7 @@
                 <?php
                   $recipe_cooking_level = get_field('recipe_cooking_level', $product_relate_recipe->ID);
                   $recipe_cooking_time = get_field('recipe_cooking_time', $product_relate_recipe->ID);
+                  $recipe_cooking_serve = get_field('recipe_cooking_serve', $product_relate_recipe->ID);
                   $recipe_thumbnail = get_field('recipe_thumbnail', $product_relate_recipe->ID);
                 ?>
                   <!-- Slides-->
@@ -347,6 +348,12 @@
                             <div class="c-badge__item -time">
                               <div class="icon"></div>
                               <div class="text"><?php echo $recipe_cooking_time; ?></div>
+                            </div>
+                          <?php endif; ?>
+                          <?php if($recipe_cooking_serve !='' ): ?>
+                            <div class="c-badge__item -serve">
+                              <div class="icon"></div>
+                              <div class="text"><?php echo $recipe_cooking_serve; ?></div>
                             </div>
                           <?php endif; ?>
                           </div>

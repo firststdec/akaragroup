@@ -138,7 +138,7 @@ get_header();
 							'post_status' => 'publish',
 							'posts_per_page' => EVENT_POSTPERPAGE,
 							'paged' => 1,
-							'orderby' => array('date' => 'DESC'),
+							'orderby' => array('menu_order' => 'ASC'),
               'has_password'   => FALSE, // NO PASSWORD POST SHOW
 						);
 						$the_query = new WP_Query( $args );

@@ -26,6 +26,7 @@
       z-index: 5;
       background: url(/assets/img/recipes/detail/bg_recipe_overlay.png);
       background-size: cover;
+      opacity: .5;
     }
 
     &__image {
@@ -66,7 +67,7 @@
     @include mq-max-sp {
       padding: 20px 0;
       width: calc(100% - 60px);
-      margin: -100px auto 0;
+      margin: -40px auto 0;
     }
 
     &__inner {
@@ -89,12 +90,20 @@
     line-height: 1.2;
     color: $baseColor;
     width: 100%;
+
+    @include mq-max-sp {
+      font-size: 3rem;
+    }
   }
 
   .c-recipes-tag-list {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
+
+    @include mq-max-sp {
+      margin-top: 20px;
+    }
 
     &__item {
       display: flex;
