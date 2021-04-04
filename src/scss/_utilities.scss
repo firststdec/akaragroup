@@ -138,3 +138,11 @@ $widthValues: (100, 120, 195, 200, 300, 400, 500);
     width: #{$widthValue}px !important;
   }
 }
+
+.u-lowercase-letter {
+  text-transform: lowercase !important;
+}
+
+.u-obj-contain {
+  object-fit: contain !important;
+}

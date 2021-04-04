@@ -1,0 +1,68 @@
+2020-10-24T03:45:10+00:00 INFO Doing Task:set_settings
+2020-10-24T03:45:10+00:00 INFO Task Done:set_settings
+2020-10-24T03:45:10+00:00 INFO Doing Task:create_default_lists
+2020-10-24T03:45:10+00:00 INFO Task Done:create_default_lists
+2020-10-24T03:45:10+00:00 INFO Doing Task:create_contacts_and_add_to_list
+2020-10-24T03:45:10+00:00 INFO Task Done:create_contacts_and_add_to_list
+2020-10-24T03:45:10+00:00 INFO Doing Task:add_workflow_for_user_registration
+2020-10-24T03:45:10+00:00 INFO Task Done:add_workflow_for_user_registration
+2020-10-24T03:45:10+00:00 INFO Doing Task:create_default_newsletter_broadcast
+2020-10-24T03:45:10+00:00 INFO Task Done:create_default_newsletter_broadcast
+2020-10-24T03:45:10+00:00 INFO Doing Task:create_default_post_notification
+2020-10-24T03:45:10+00:00 INFO Task Done:create_default_post_notification
+2020-10-24T03:45:10+00:00 INFO Doing Task:create_default_subscription_form
+2020-10-24T03:45:10+00:00 INFO Task Done:create_default_subscription_form
+2020-10-24T03:45:10+00:00 INFO Doing Task:add_widget_to_sidebar
+2020-10-24T03:45:10+00:00 INFO Task Done:add_widget_to_sidebar
+2020-10-24T03:45:11+00:00 INFO Doing Task:queue_default_broadcast_newsletter
+2020-10-24T03:45:11+00:00 INFO Task Done:queue_default_broadcast_newsletter
+2020-10-24T03:45:11+00:00 INFO Doing Task:queue_default_broadcast_newsletter
+2020-10-24T03:45:11+00:00 INFO Task Done:queue_default_broadcast_newsletter
+2020-10-24T03:45:12+00:00 INFO Doing Task:dispatch_emails_from_server
+2020-10-24T03:45:12+00:00 INFO Doing Task:dispatch_emails_from_server
+2020-10-24T03:45:12+00:00 INFO Doing Task:dispatch_emails_from_server
+2020-10-24T03:45:12+00:00 INFO Doing Task:dispatch_emails_from_server
+2020-10-24T03:45:15+00:00 INFO Task Done:dispatch_emails_from_server
+2020-10-24T03:45:15+00:00 INFO Task Done:dispatch_emails_from_server
+2020-10-24T03:45:15+00:00 INFO Task Done:dispatch_emails_from_server
+2020-10-24T03:45:16+00:00 INFO Task Done:dispatch_emails_from_server
+2020-10-24T03:45:26+00:00 INFO Doing Task:check_test_email_on_server
+2020-10-24T03:45:26+00:00 INFO Doing Task:check_test_email_on_server
+2020-10-24T03:45:26+00:00 INFO Doing Task:check_test_email_on_server
+2020-10-24T03:45:26+00:00 INFO Doing Task:check_test_email_on_server
+2020-10-24T03:45:26+00:00 INFO Doing Task:check_test_email_on_server
+2020-10-24T03:45:26+00:00 INFO Doing Task:check_test_email_on_server
+2020-10-24T03:45:27+00:00 INFO Task Done:check_test_email_on_server
+2020-10-24T03:45:27+00:00 INFO Task Done:check_test_email_on_server
+2020-10-24T03:45:27+00:00 INFO Task Done:check_test_email_on_server
+2020-10-24T03:45:28+00:00 INFO Task Done:check_test_email_on_server
+2020-10-24T03:45:28+00:00 INFO Task Done:check_test_email_on_server
+2020-10-24T03:45:28+00:00 INFO Task Done:check_test_email_on_server
+2020-10-24T03:45:28+00:00 INFO Task already done:check_test_email_on_server
+2020-10-24T03:45:28+00:00 INFO Task already done:check_test_email_on_server
+2020-10-24T03:45:28+00:00 INFO Doing Task:evaluate_email_delivery
+2020-10-24T03:45:28+00:00 INFO Task Done:evaluate_email_delivery
+2020-10-24T03:45:29+00:00 INFO Doing Task:evaluate_email_delivery
+2020-10-24T03:45:29+00:00 INFO Task Done:evaluate_email_delivery
+2020-10-24T03:45:29+00:00 INFO Doing Task:evaluate_email_delivery
+2020-10-24T03:45:29+00:00 INFO Task Done:evaluate_email_delivery
+2020-10-24T03:45:29+00:00 INFO Doing Task:evaluate_email_delivery
+2020-10-24T03:45:29+00:00 INFO Task Done:evaluate_email_delivery
+2020-10-24T03:45:29+00:00 INFO Doing Task:evaluate_email_delivery
+2020-10-24T03:45:29+00:00 INFO Task Done:evaluate_email_delivery
+2020-10-24T03:45:29+00:00 INFO Doing Task:evaluate_email_delivery
+2020-10-24T03:45:29+00:00 INFO Task Done:evaluate_email_delivery
+2020-10-24T03:45:30+00:00 INFO Task already done:evaluate_email_delivery
+2020-10-24T03:45:30+00:00 INFO Task already done:evaluate_email_delivery
+2020-10-24T03:45:30+00:00 INFO Task already done:evaluate_email_delivery
+2020-10-24T03:45:30+00:00 INFO Task already done:evaluate_email_delivery
+2020-10-24T03:45:30+00:00 INFO Task already done:evaluate_email_delivery
+2020-10-24T03:45:30+00:00 INFO Task already done:evaluate_email_delivery
+2020-10-24T03:45:30+00:00 INFO Task already done:evaluate_email_delivery
+2020-10-24T03:45:30+00:00 INFO Task already done:evaluate_email_delivery
+2020-10-24T03:45:30+00:00 INFO Task already done:evaluate_email_delivery
+2020-10-24T03:45:31+00:00 INFO Task already done:evaluate_email_delivery
+2020-10-24T03:46:08+00:00 INFO Doing Task:subscribe_to_klawoo
+2020-10-24T03:46:10+00:00 INFO Task Done:subscribe_to_klawoo
+2020-10-24T03:46:10+00:00 INFO Doing Task:save_final_configuration
+2020-10-24T03:46:10+00:00 INFO Task Done:save_final_configuration

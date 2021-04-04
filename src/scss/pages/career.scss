@@ -142,7 +142,8 @@
       }
 
       &-list {
-        margin-top: 3location0px;
+        margin-top: 30px;
+        padding-left: 1em;
 
         @include mq-max-sp {
           margin-top: 20px;
@@ -164,10 +165,18 @@
           .fas, i {
             padding-right: 20px;
             color: #777;
+            position: absolute;
+            left: 0;
+            top: 0;
+            line-height: 2;
           }
 
           .text {
             color: #777;
+
+            @include mq-max-sp {
+              padding-left: 20px;
+            }
           }
         }
       }
@@ -319,6 +328,7 @@
           @include mq-max-sp {
             width: auto;
             font-size: 1.2rem;
+            display: block;
           }
         }
 

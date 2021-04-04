@@ -1048,13 +1048,15 @@ a {
           &-link {
             display: inline-block;
             padding-left: 20px;
-            background: url(/assets/img/svg/circle-green.svg) no-repeat center left;
+            background: url(/assets/img/svg/circle-green.svg) no-repeat left 6px;
             background-size: 14px;
             color: $baseColor;
             text-transform: uppercase;
 
             @include mq-min-max-tb {
               display: block;
+              background: url(/assets/img/svg/circle-green.svg) no-repeat left 4px;
+              background-size: 14px;
             }
 
             @include mq-max-sp {
@@ -1363,8 +1365,8 @@ a {
   }
 
   .l-language-bar {
-    // display: flex;
-    display: none;
+    display: flex;
+    // display: none;
     padding: 0;
     margin-left: 10px;
 

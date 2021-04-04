@@ -24,6 +24,12 @@
     $desc = 'ผลิตภัณฑ์ไข่ไก่สดอนามัย และผลิตภัณฑ์ไข่ไก่แปรรูป ของ ‘akara’ ตัวจริงเรื่องไข่ไก่ พิถีพิถันในทุกขั้นตอน เพื่อเติมคุณค่า ในทุกช่วงเวลาของคุณ';
     $og_img = '/wp/wp-content/uploads/2020/11/img_news_activites_mv.png';
 
+    // CHECK URL
+    $root_url = '';
+    if( PRODUCTION ) {
+      $root_url = '/akara';
+    }
+
     if(is_page('faq')) {
       $title = 'FAQ | Akara Group';
       $kwd = '';
@@ -171,7 +177,6 @@
     }
     // echo 'lang=>' .ICL_LANGUAGE_CODE;
     $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    
   ?>
 	<title><?php echo $title; ?></title>
 	<meta name="keyword" content="Akara Group">
@@ -227,7 +232,7 @@
 	<link rel="stylesheet" href="/assets/css/libs/font-awesome/scss/solid.css">
 	<link rel="stylesheet" href="/assets/css/libs/swiper.css">
 	<link rel="stylesheet" href="/assets/css/libs/modaal.css">
-  <link rel="stylesheet" href="/assets/css/style.css?v=2021-2-28-7">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20210314-01">
   <link rel="stylesheet" href="/assets/css/libs/validationEngine.jquery.css?v=3">
 	<?php wp_head(); ?>
 </head>
@@ -328,12 +333,6 @@
     } elseif(in_array('AKARA ISE', $term_links)) {
       $white_theme = 'whiteTheme';
     }
-  }
-
-  // CHECK URL
-  $root_url = '';
-  if( PRODUCTION ) {
-    $root_url = '/akara';
   }
 ?>
   <div class="l-wrapper">

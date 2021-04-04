@@ -745,7 +745,7 @@
         right: -200px;
         bottom: -90px;
         transform: translateY(50%);
-        background: url(/assets/img/top/img_product_02-2.png) no-repeat;
+        background: url(/assets/img/top/akara-eggology-recipes@3x.png) no-repeat;
         background-size: cover;
         z-index: 1;
         backface-visibility: hidden;
@@ -1513,17 +1513,18 @@
       }
 
       .c-orange-egg {
-        width: 422px;
+        width: 451px;
         height: 468px;
-        background: url(/assets/img/top/img_orange_egg.png) no-repeat;
+        background: url(/assets/img/top/egg_top@3x.png) no-repeat;
+        background-size: cover;
         position: absolute;
         top: -400px;
         right: 100px;
 
         @include mq-min-max-tb {
-          width: get-vw(422px);
+          width: get-vw(451px);
           height: get-vw(468px);
-          background-size: get-vw(422px) get-vw(468px);
+          background-size: cover;
           top: get-vw(-300px);
           right: get-vw(100px);
         }

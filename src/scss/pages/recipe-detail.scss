@@ -358,6 +358,11 @@
           &:nth-child(2) {
             text-align: right;
             vertical-align: top;
+            width: 120px;
+
+            @include mq-max-sp {
+              width: 30%;
+            }
           }
         }
 
@@ -522,7 +527,12 @@
           padding: 30px 0 30px 15px;
           border-top: 0;
           display: flex;
+          flex-wrap: wrap;
           align-items: center;
+        }
+
+        p + p {
+          margin-top: 20px;
         }
       }
     }

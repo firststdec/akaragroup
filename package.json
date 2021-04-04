@@ -22,7 +22,7 @@
     "@cxteam/browsersync-ssi": "^0.2.8",
     "ansi-colors": "^4.1.1",
     "autoprefixer": "^9.6.1",
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-if": "^3.0.0",

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="116" height="116" viewBox="0 0 116 116">
+  <defs>
+    <filter id="Rectangle" x="0" y="0" width="116" height="116" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="ico-arrow-down" transform="translate(30.328 14.515)">
+    <g transform="matrix(1, 0, 0, 1, -30.33, -14.51)" filter="url(#Rectangle)">
+      <rect id="Rectangle-2" data-name="Rectangle" width="56" height="56" rx="28" transform="translate(30 27)" fill="#211E1F"/>
+    </g>
+    <g id="map_mark_bottom" data-name="map mark bottom" transform="translate(-129.328 17.486)">
+      <text id="_" data-name="" transform="translate(157 30)" fill="#FFC416" font-size="18" font-family="FontAwesome5Free-Solid, 'Font Awesome 5 Free'"><tspan x="-4.5" y="0"></tspan></text>
+    </g>
+  </g>
+</svg>

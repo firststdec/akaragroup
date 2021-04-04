@@ -562,8 +562,6 @@
   position: relative;
 
   .c-bg-wave-white-solid {
-    top: -71px;
-
     @include mq-max-sp {
       top: -140px;
     }

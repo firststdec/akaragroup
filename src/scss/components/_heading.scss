@@ -50,6 +50,10 @@
     &.-small {
       font-size: 4rem;
 
+      @include mq-min-max-tb {
+        font-size: 3.2rem;
+      }
+
       @include mq-max-sp {
         font-size: 3.2rem;
         margin-top: 10px;
