@@ -50,18 +50,6 @@ get_header();
                   </div>
                   <div class="c-where-to-buy__list-tab-item c-trgger-02" data-tab="c-tab-02">
                     <div class="icon">
-                      <div class="c-icon-our-store"></div>
-                    </div>
-                    <div class="text">Our Store</div>
-                  </div>
-                  <div class="c-where-to-buy__list-tab-item c-trgger-03" data-tab="c-tab-03">
-                    <div class="icon">
-                      <div class="c-icon-point"></div>
-                    </div>
-                    <div class="text">Point of <br>Purchase</div>
-                  </div>
-                  <div class="c-where-to-buy__list-tab-item c-trgger-04" data-tab="c-tab-04">
-                    <div class="icon">
                       <div class="c-icon-online-store"></div>
                     </div>
                     <div class="text">Online</div>

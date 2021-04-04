@@ -1557,7 +1557,7 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        width: 60px;
+        width: 50px;
 
         &.-level > .icon {
           background: url(/assets/img/svg/icon-chef-hat.svg) no-repeat center center $yellow;
@@ -1575,6 +1575,10 @@
           .fa-clock {
 
           }
+        }
+
+        &.-serve {
+          width: 60px;
         }
 
         &.-serve > .icon {

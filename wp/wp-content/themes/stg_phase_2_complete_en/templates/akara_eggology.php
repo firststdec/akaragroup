@@ -224,7 +224,8 @@
                 <div class="box-text animation-element slide-top">
                   <?php
                     if(ICL_LANGUAGE_CODE == 'en') {
-                      $recipes_text = "Let 'Akara' help fill the deliciousness of every meal";
+                      $top_th_id = 31;
+                      $recipes_text = get_field('recipes_text', $top_th_id);
                       $readmore = 'READ MORE';
                     } elseif(ICL_LANGUAGE_CODE == 'th') {
                       // $recipes_text = "ให้ 'อัครา' ช่วยเติมเต็มความอร่อยในทุกมื้ออาหารของคุณ ";
