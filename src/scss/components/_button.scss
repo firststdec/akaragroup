@@ -65,7 +65,13 @@
 
       @include mq-max-sp {
         border-color: #fff;
-        border-width: 2px;
+        border-width: 1px;
+      }
+
+      &:hover {
+        @include mq-max-sp {
+          border-color: $baseColor;
+        }
       }
     }
 
