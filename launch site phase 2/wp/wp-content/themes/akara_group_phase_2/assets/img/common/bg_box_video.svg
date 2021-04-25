@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="1091.994" viewBox="0 0 1440 1091.994">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffc416"/>
+      <stop offset="0.507" stop-color="#ffe86a"/>
+      <stop offset="1" stop-color="#ffc416"/>
+    </linearGradient>
+  </defs>
+  <path id="bg_box_video" d="M0,8.124S147.016-75.44,434.938-18.218,941.806-90.48,1162.582-80.176c136.643,5.349,276.965,72.261,276.965,72.261V950.547s-64.581,57.231-299.937,21.591-543.369,39.093-759.009,39.093c-250.851,0-381.054-60.683-381.054-60.683Z" transform="translate(0.453 80.763)" fill="url(#linear-gradient)"/>
+</svg>

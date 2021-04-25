@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Contact Form 7 Confirm\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-17 20:03+0900\n"
+"PO-Revision-Date: 2014-02-17 20:10+0900\n"
+"Last-Translator: Yuichiro ABE <y.abe@eyeta.jp>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_c\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: contact-form-7-confirm\n"
+
+#: contact-form-7-confirm/modules/back.php:28
+msgid "Backedit"
+msgstr "戻って編集"
+
+#: contact-form-7-confirm/modules/back.php:49
+msgid "Back button"
+msgstr "戻って編集ボタン"
+
+#: contact-form-7-confirm/modules/back.php:59
+#: contact-form-7-confirm/modules/back.php:62
+#: contact-form-7-confirm/modules/back.php:67
+#: contact-form-7-confirm/modules/confirm.php:59
+#: contact-form-7-confirm/modules/confirm.php:62
+#: contact-form-7-confirm/modules/confirm.php:67
+msgid "optional"
+msgstr ""
+
+#: contact-form-7-confirm/modules/back.php:67
+#: contact-form-7-confirm/modules/confirm.php:67
+msgid "Label"
+msgstr ""
+
+#: contact-form-7-confirm/modules/back.php:74
+#: contact-form-7-confirm/modules/confirm.php:74
+msgid "Copy this code and paste it into the form left."
+msgstr ""
+
+#: contact-form-7-confirm/modules/confirm.php:28
+msgid "Confirm"
+msgstr "確認"
+
+#: contact-form-7-confirm/modules/confirm.php:49
+msgid "Confirm button"
+msgstr "確認ボタン"
+
+msgid "Add confirm step to contact form 7"
+msgstr "Contact Form 7プラグインに確認画面をつけるプラグイン"
