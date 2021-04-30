@@ -719,6 +719,7 @@ if($('.js-product-slide-show').length) {
     loop: true,
     observer: true,
     preloadImages: true,
+    autoHeight: true,
 
     // If we need pagination
     pagination: {

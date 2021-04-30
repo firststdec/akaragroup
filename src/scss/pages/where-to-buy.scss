@@ -306,15 +306,6 @@
     &__list-shop {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-
-      @include mq-min-max-tb {
-
-      }
-
-      @include mq-max-sp {
-
-      }
 
       .slick-list {
         @include mq-max-sp {
